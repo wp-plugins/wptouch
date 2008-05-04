@@ -1,6 +1,6 @@
 <?php
   /*
-   Plugin Name: WPtouch Theme & Plugin
+   Plugin Name: WPtouch iPhone Theme
    Plugin URI: http://bravenewcode.com/wptouch/
    Description: A plugin which formats your site when viewing with an <a href="http://www.apple.com/iphone/">iPhone</a> / <a href="http://www.apple.com/ipodtouch/">iPod touch</a>. Set header, page, and icon options for the theme by visiting the WPtouch admin panel under Options (wp2.1-3) or Settings (wp2.5) tab. You'll also find a compatibility suite for aspects of your WordPress configuration. &nbsp;
    Author: Dale Mugford & Duane Storey
