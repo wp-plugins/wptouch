@@ -1,7 +1,7 @@
 === Plugin Name ===
 Contributors: bravenewcode
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=paypal%40bravenewcode%2ecom&item_name=WPtouch%20Beer%20Fund&no_shipping=0&no_note=1&tax=0&currency_code=CAD&lc=CA&bn=PP%2dDonationsBF&charset=UTF%2d8
-Tags: wptouch, iphone, ipod tough, theme, apple, bravenewcode
+Tags: wptouch, iphone, ipod tough, theme, apple, bravenewcode, AJAX
 Requires at least: 2.0
 Tested up to: 2.5.1
 Stable tag: 1.0.2
@@ -9,6 +9,9 @@ Stable tag: 1.0.2
 WPtouch is a complimentary theme on that will format your WordPress blog with an Apple-inspired theme when viewed from an iPhone or iPod touch.
 
 == Description ==
+
+WPtouch is a complimentary theme on that will format your WordPress blog with
+an Apple-inspired theme when viewed from an iPhone or iPod touch.
 
 Please visit http://www.bravenewcode.com/wptouch/ for a full description of the WPtouch plugin.
 
