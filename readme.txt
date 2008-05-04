@@ -10,6 +10,9 @@ WPtouch is a complimentary theme on that will format your WordPress blog with an
 
 == Description ==
 
+WPtouch is a complimentary theme on that will format your WordPress blog with
+an Apple-inspired theme when viewed from an iPhone or iPod touch.
+
 Please visit http://www.bravenewcode.com/wptouch/ for a full description of the WPtouch plugin.
 
 == Installation ==
