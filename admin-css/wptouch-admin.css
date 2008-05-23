@@ -1,0 +1,254 @@
+/* 
+WPtouch Admin Panel Stylesheet for WordPress 2.3.3 and below
+*/
+
+/* @group General */
+
+.wptouch-version {
+	font-size: 16px;
+	float: right;
+	color: #ccc;
+	position: relative;
+	bottom: 20px;
+}
+
+#wptouch-theme {
+	font-family: "Lucida Grande", Georgia, Arial, sans-serif;
+	margin-top: 25px;
+	margin: 0 auto;
+}
+
+#wptouch-theme #wptouch-title img {
+	position: relative;
+	top: 56px;
+	margin-top: -60px;
+	right: 11px;
+	margin-right: -20px;
+}
+
+#wptouch-theme a {
+	color: #3c627f;
+}
+
+#wptouch-theme #wptouch-title {
+	letter-spacing: -2px;
+	color: #3890ca;
+	font: bold 34px "Lucida Grande", Arial, Verdana, sans-serif;
+	padding-bottom: 55px;
+	border-bottom: 1px solid #CCC;
+	position: relative;
+}
+
+#wptouch-theme .wptouch-thhead {
+	font-size: 16px;
+	display: block;
+	color: #12456a;
+	text-align: left;
+	letter-spacing: -1px;
+}
+
+#wptouch-theme .wptouch-thtext {
+	font-weight: normal;
+	font-style: normal;
+	font-size: 11px;
+	text-align: left;
+	margin-top: 15px;
+	color: #333;
+	margin-right: 25px;
+}
+
+
+
+/* @end */
+
+/* @group Available Icons Table */
+
+#wptouch-theme .wptouch-diff {
+	display: inline;
+	color: #12456a;
+	position: relative;
+}
+
+#wptouch-theme #wptouch-available {
+	margin-bottom: 15px;
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 20px;
+	margin-top: 25px;
+}
+
+#wptouch-theme #wptouch-available th {
+	border-right: 1px solid #ccc;
+	width: 215px;
+	float: left;
+	margin-right: 30px;
+	padding-bottom: 30px;
+}
+
+#wptouch-theme .wptouch-iconblock {
+	text-align: center;
+	width: 101px;
+	padding-bottom: 15px;
+	float: left;
+}
+
+#wptouch-theme p.wptouch-icon-name {
+	margin: 0;
+	font-size: 11px;
+	color: #adadad;
+	padding: 0;
+}
+
+#wptouch-theme #wptouch-available img {
+	margin: 2px;
+	width: 33px;
+	height: 33px;
+}
+
+
+
+/* @end */
+
+/* @group Active Pages & Icons Table */
+
+#wptouch-theme #wptouch-active {
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 20px;
+	margin-bottom: 15px;
+}
+
+#wptouch-theme #wptouch-active th {
+	border-right: 1px solid #ccc;
+	width: 215px;
+	margin-right: 30px;
+	float: left;
+}
+
+#wptouch-theme td#wptouch-page-choices {
+}
+
+#wptouch-theme table.wptouch-select-wrap-headicon {
+	width: 100%;
+	border: 1px solid #8aceff;
+	background-color: #cbf4ff;
+	padding-top: 2px;
+	margin-bottom: 15px;
+}
+
+#wptouch-theme table.wptouch-select-wrap {
+	width: 100%;
+}
+
+#wptouch-theme td.wptouch-select-left {
+}
+
+#wptouch-theme td.wptouch-select-left label {
+	padding-left: 10px;
+}
+
+#wptouch-theme td.wptouch-select-right {
+	float: right;
+	padding-left: 25px;
+}
+
+#wptouch-theme td.wptouch-select-right select {
+
+}
+
+
+
+/* @end */
+
+/* @group Button */
+
+#wptouch-theme input#wptouch-button {
+	border: 1px solid #adadad;
+	background-color: #ccc;
+	color: #666;
+	-webkit-border-radius:5px;
+	padding: 7px;
+	font-weight: bold;
+	font-size: 12px;
+}
+
+#wptouch-theme input#wptouch-button:active {
+	border: 1px solid #adadad;
+	background-color: #12456a;
+	color: #eee;
+	-webkit-border-radius:5px;
+	padding: 7px;
+	font-weight: bold;
+	font-size: 12px;
+}
+
+
+
+/* @end */
+
+/* @group Companion Plugins */
+
+#wptouch-theme #wptouch-plugins {
+	margin-bottom: 15px;
+	border-bottom: 2px solid #ccc;
+	clear: both;
+	padding-bottom: 15px;
+}
+
+#wptouch-theme #wptouch-plugins h4 {
+	padding-left: 25px;
+	color: #333;
+	font-size: 12px;
+	font-weight: bold;
+	margin: 10px;
+}
+
+#wptouch-theme #wptouch-plugins img {
+	position: relative;
+	top: 3px;
+}
+
+#wptouch-theme #wptouch-plugins th {
+	border-right: 1px solid #ccc;
+	width: 215px;
+	padding-bottom: 255px;
+	float: left;
+	margin-right: 15px;
+}
+
+#wptouch-theme td#wptouch-plugins-active {
+	width: 100%;
+	font-size: 12px;
+	color: #333;
+	text-indent: -20px;
+}
+
+#wptouch-theme .all-good {
+	border: 1px solid #8aceff;
+	background-color: #cbf4ff;
+	padding: 1px 3px 4px 25px;
+	display: block;
+	margin-left: 15px;
+	margin-bottom: 5px;
+	margin-right: -4px;
+}
+
+#wptouch-theme .sort-of {
+	border: 1px solid #ffc900;
+	background-color: #fee8b9;
+	padding: 1px 3px 4px 25px;
+	display: block;
+	margin-left: 15px;
+	margin-bottom: 5px;
+	margin-right: -4px;
+}
+
+#wptouch-theme .too-bad {
+	border: 1px solid #f96764;
+	background-color: #ffaab1;
+	padding: 1px 3px 4px 25px;
+	display: block;
+	margin-left: 15px;
+	margin-bottom: 5px;
+	margin-right: -4px;
+}
+
+/* @end */
