@@ -1,13 +1,16 @@
-/* @override 
-	http://24.150.116.198:9098/wp-content/plugins/wptouch/wptouch-admin.css
-	http://24.150.116.198:9098/wp-content/plugins/wptouch-enabler/wptouch-admin.css
-*/
-
 /* 
 WPtouch Admin Panel Stylesheet for WordPress 2.3.3 and below
 */
 
 /* @group General */
+
+.wptouch-version {
+	font-size: 16px;
+	float: right;
+	color: #ccc;
+	position: relative;
+	bottom: 20px;
+}
 
 #wptouch-theme {
 	font-family: "Lucida Grande", Georgia, Arial, sans-serif;

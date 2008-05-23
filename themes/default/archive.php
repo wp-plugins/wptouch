@@ -118,10 +118,10 @@
                           the_ID();
 ?>', {display:'none'} );" style="display:none"></a>
       <div class="calendar" style="background: url(<?php
-                          bloginfo('template_directory');
-?>/images/cal/<?php
-                          the_time('M')
-?>-cal.png) no-repeat;">
+  bloginfo('template_directory');
+?>/images/cal/month<?php
+  the_time('n')
+?>.png) no-repeat;">
       <div class="cal-month"><?php
                           the_time('M')
 ?></div>
@@ -141,11 +141,11 @@
         
         <?php
                           the_time('Y')
-?> | <?php
+?> <?php
                           if (function_exists('wp_tag_cloud')) {
 ?><?php
                               if (get_the_tags())
-                                  the_tags('Tagged: ', ', ', '');
+                                  the_tags(' | Tagged: ', ', ', '');
 ?> 
 <?php
                               } else

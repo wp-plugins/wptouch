@@ -2,9 +2,9 @@
   /*
    Plugin Name: WPtouch iPhone Theme
    Plugin URI: http://bravenewcode.com/wptouch/
-   Description: A plugin which formats your site when viewing with an <a href="http://www.apple.com/iphone/">iPhone</a> / <a href="http://www.apple.com/ipodtouch/">iPod touch</a>. Set header, page, and icon options for the theme by visiting the WPtouch admin panel under Options (wp2.1-3) or Settings (wp2.5) tab. You'll also find a compatibility suite for aspects of your WordPress configuration. &nbsp;
+   Description: A plugin which formats your site when viewing with an <a href="http://www.apple.com/iphone/">iPhone</a> / <a href="http://www.apple.com/ipodtouch/">iPod touch</a>. Set header, page, and icon options for the theme by visiting the WPtouch admin panel under Options (WordPress 2.1+) or (in 2.5) the Settings tab. You'll also find a compatibility suite for aspects of your WordPress configuration. &nbsp;
    Author: Dale Mugford & Duane Storey
-   Version: 1.0.2
+   Version: 1.0.4
    Author URI: http://www.bravenewcode.com
    
    # Special thanks to ContentRobot and the iWPhone theme/plugin
@@ -25,11 +25,16 @@
    # License along with this plugin; if not, write to the Free Software
    # Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
    */
-  
+ 
+ function WPtouch() {
+		$version = '1.0.4';
+		echo '<div class="wptouch-version">WPtouch version ' . $version . ' </div>';
+}
+ 
   //WP Admin stylesheets, detect if we're using WordPress 2.5 or lower, and serve up a slightly different layout for each:
   function wptouch_admin_css()
   {
-      $url = get_settings('url');
+      $url = get_bloginfo('wpurl');
       $version = (float)get_bloginfo('version');
       if ($version >= 2.5) {
           $url = $url . '/wp-content/plugins/wptouch/admin-css/wptouch25-admin.css';
@@ -61,7 +66,7 @@
       
       function bnc_filter_iphone()
       {
-          $key = 'bnc_mobile_' . md5(get_bloginfo('url'));
+          $key = 'bnc_mobile_' . md5(get_bloginfo('wpurl'));
           if (isset($_GET['bnc_view'])) {
               if ($_GET['bnc_view'] == 'mobile') {
                   setcookie($key, 'mobile', 0);
@@ -69,7 +74,7 @@
                   setcookie($key, 'normal', 0);
               }
               
-              header('Location: ' . get_bloginfo('url'));
+              header('Location: ' . get_bloginfo('wpurl'));
               die;
           }
           
@@ -140,7 +145,7 @@
       function theme_root_uri($url)
       {
           if ($this->applemobile && $this->desired_view === 'mobile') {
-              $dir = get_bloginfo('url') . "/wp-content/plugins/wptouch/themes";
+              $dir = get_bloginfo('wpurl') . "/wp-content/plugins/wptouch/themes";
               return $dir;
           } else {
               
@@ -227,8 +232,8 @@
   
   function bnc_get_icon_list()
   {
-      $a = preg_match('#(.*)/wp-content/(.*)#', __FILE__, $matches);
-      $dir = opendir($matches[1] . '/wp-content/plugins/wptouch/images/icon-pool/');
+      $a = preg_match('#(.*)wptouch.php#', __FILE__, $matches);
+	$dir = opendir($matches[1] . 'images/icon-pool/');
       $files = array();
       if ($dir) {
           while (false !== ($file = readdir($dir))) {
@@ -238,7 +243,7 @@
               $names = explode('.', $file);
               $icon['friendly'] = ucfirst($names[0]);
               $icon['name'] = $file;
-              $icon['url'] = get_bloginfo('url') . '/wp-content/plugins/wptouch/images/icon-pool/' . $file;
+              $icon['url'] = get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/icon-pool/' . $file;
               $files[$icon['name']] = $icon;
           }
       }
@@ -253,11 +258,13 @@
       if (isset($_POST['submit'])) {
           echo('<div class="updated"><p>Options changes saved.</p></div>');
           echo('<div class="wrap"><div id="wptouch-theme">');
-          echo('<div id="wptouch-title"><img src="' . get_bloginfo('url') . '/wp-content/plugins/wptouch/images/wptouch-logo.png" alt="" /><div class="wptouch-diff">WPtouch</div> Options</div>');
+          echo('<div id="wptouch-title"><img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/wptouch-logo.png" alt="" /><div class="wptouch-diff">WPtouch</div> Options</div>');
+	  echo('' . WPtouch() . '');
       } else {
           
           echo('<div class="wrap"><div id="wptouch-theme">');
-          echo('<div id="wptouch-title"><img src="' . get_bloginfo('url') . '/wp-content/plugins/wptouch/images/wptouch-logo.png" alt="" /><div class="wptouch-diff">WPtouch</div> (&bull;)ptions</div>');
+          echo('<div id="wptouch-title"><img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/wptouch-logo.png" alt="" /><div class="wptouch-diff">WPtouch</div> Options</div>');
+		  echo('' . WPtouch() . '');
       }
 ?>
 
@@ -268,11 +275,12 @@
   <form method="post" action="<?php
       echo $_SERVER['REQUEST_URI'];
 ?>">
+
   <div id="wptouch-available">  
   <table class="wptouch-form-table">
     
     <tr valign="top">
-  <th scope="row"><div class="wptouch-thhead">Available Page Icons</div><div class="wptouch-thtext">You can select which of these icons will be displayed beside the corresponding pages enabled below.<br /><br />To add icons yourself, simply drop images (60x60 is recommended - .jpg or .png) into the <strong>icon-pool</strong> folder inside the wptouch/images directory, and refresh this page to select them.<br /><br />Also in that folder is a <strong>.psd template file</strong> which you can build your icons from to match the style of the included package.</div></th>  
+  <th scope="row"><div class="wptouch-thhead">Available Page Icons</div><div class="wptouch-thtext">You can select which icons will be displayed beside corresponding pages enabled below.<br /><br />To add icons to the pool simply drop 60x60 (recommended) - .jpg or .png images into the <strong>icon-pool</strong> folder inside the wptouch/images directory, then refresh this page to select them.<br /><br />Also in the folder is a <strong>.psd template</strong> which you can use to build icons yourself.<br /><br />More official icons are available for download on the <a href="http://www.bravenewcode.com/wptouch/">WPtouch homepage</a>.</div></th>  
       <td>
       <?php
       foreach ($icons as $icon) {
@@ -295,13 +303,15 @@
           <table class="wptouch-form-table">
 
     <tr valign="top">
-<th scope="row"><div class="wptouch-thhead">Logo, Pages &amp; Icons</div><div class="wptouch-thtext">Choose the logo displayed in the header (also your bookmark icon), and which published pages are shown on the theme's drop-down menu.<br /><br /><strong>Remember, only those checked will be shown on the menu.</strong><br /><br />Then select the icons you want to pair with each page.</div></th>      
+<th scope="row"><div class="wptouch-thhead">Logo, Pages &amp; Icons</div><div class="wptouch-thtext">Choose the logo displayed in the header (also your bookmark icon), and which published pages are shown on the WPtouch drop-down menu.<br /><br /><strong>Remember, only those checked will be shown.</strong><br /><br />Next, select the icons from the drop list that you want to pair with each page/menu item.</div></th>      
 
 <td id="wptouch-page-choices">
         <?php
       if (isset($_POST['submit'])) {
           // let's rock and roll
+
           unset($_POST['submit']);
+
           $a = array();
           foreach ($_POST as $k => $v) {
               if ($k == 'enable_main_title') {
@@ -323,7 +333,7 @@
       
       echo("<table class=\"wptouch-select-wrap-headicon\">");
       // do top header icon 
-      echo("<tr><td class=\"wptouch-select-left\">Logo & Bookmark Icon</td><td class=\"wptouch-select-right\"><select name=\"enable_main_title\">");
+      echo("<tr><td class=\"wptouch-select-left\">Logo &amp; Home Screen Bookmark Icon</td><td class=\"wptouch-select-right\"><select name=\"enable_main_title\">");
       foreach ($icons as $icon) {
           echo('<option value="' . $icon['name'] . '" ');
           if (isset($v['main_title']) && $icon['name'] == $v['main_title'])
@@ -424,15 +434,20 @@
 ?>
               
           <?php
-          
-           
-           // Blip.it Plugin Check
+		   //Blip-it Check
            if (function_exists('bnc_blipit_head')) { ?>
-           <div class="all-good"><img src="<?php bloginfo('url'); ?>/wp-content/plugins/wptouch/images/good.png" alt="" /> Cool! <a href="http://www.bravenewcode.com/blipit/" target="_blank">Blip.it</a>: Your videos will automatically show on your posts in iPhone version.</div>
+         <div class="all-good"><img src="<?php bloginfo('url'); ?>/wp-content/plugins/wptouch/images/good.png" alt="" /> Cool! <a href="http://www.bravenewcode.com/blipit/" target="_blank">Blip.it</a>: Your videos will automatically show on your posts in iPhone version.</div>
            <?php } else { ?>
            <div class="sort-of"><img src="<?php bloginfo('url'); ?>/wp-content/plugins/wptouch/images/sortof.png" alt="" /> You don't have <a href="http://www.bravenewcode.com/blipit/" target="_blank">Blip.it</a> installed: (No automatic iPhone compatible video support)</div>
-           <?php }         
-?>
+            <?php } ?>
+			
+			      <?php
+				  //CodeBox Check
+           if (function_exists('codebox_header')) { ?>
+         <div class="all-good"><img src="<?php bloginfo('url'); ?>/wp-content/plugins/wptouch/images/good.png" alt="" /> Gravy. <a href="http://wordpress.org/extend/plugins/wp-codebox/" target="_blank">CodeBox</a> is <em>not</em> installed. If it was, things would look ugly.</div>
+           <?php } else { ?>
+           <div class="too-bad"><img src="<?php bloginfo('url'); ?>/wp-content/plugins/wptouch/images/good.png" alt="" /> D'oh, <a href="http://wordpress.org/extend/plugins/wp-codebox/" target="_blank">CodeBox</a> <strong>is</strong> installed. WPtouch <em>does not</em> currently support it, so things will look ugly until it does, sorry.</div>
+            <?php } ?>
               
         <?php
           //WP-Cache Plugin Check
@@ -441,16 +456,28 @@
      <div class="sort-of"><img src="<?php
               bloginfo('url');
 ?>/wp-content/plugins/wptouch/images/sortof.png" alt="" /> Achtung! <a href="http://mnm.uib.es/gallir/wp-cache-2/" target="_blank">WP-Cache</a>. If active, <strong>it requires configuration.</strong> Visit the <a href="http://www.bravenewcode.com/wptouch/">WPtouch homepage</a> for help using WP-Cache.</div>
-      <?php
-              } else
-              {
-?>
+      
+	  <?php } else { ?>
+	  
     <div class="all-good"><img src="<?php
                   bloginfo('url');
 ?>/wp-content/plugins/wptouch/images/good.png" alt="" /> Whew. No <a href="http://mnm.uib.es/gallir/wp-cache-2/" target="_blank">WP-Cache</a>. If installed, <strong>it requires configuration.</strong> Visit the <a href="http://www.bravenewcode.com/wptouch/">WPtouch homepage</a> for help using WP-Cache.</div>
-            <?php
-              }
+            <?php } ?>
+			
+			       <?php
+          //Super-Cache Plugin Check
+          if (function_exists('wp_super_cache_footer')) {
 ?>
+     <div class="too-bad"><img src="<?php
+              bloginfo('url');
+?>/wp-content/plugins/wptouch/images/bad.png" alt="" /> Yikes! <a href="http://ocaoimh.ie/wp-super-cache/" target="_blank">WP Super Cache</a>. <strong>Currently, it does work correctly with WPtouch.</strong> We're working on it, though. Visit the <a href="http://www.bravenewcode.com/wptouch/">WPtouch homepage</a> for updates.</div>
+      
+	  <?php } else { ?>
+	  
+    <div class="all-good"><img src="<?php
+                  bloginfo('url');
+?>/wp-content/plugins/wptouch/images/good.png" alt="" /> Whew. No <a href="http://mnm.uib.es/gallir/wp-cache-2/" target="_blank">WP-Cache</a>. If installed, <strong>it requires configuration.</strong> Visit the <a href="http://www.bravenewcode.com/wptouch/">WPtouch homepage</a> for help using WP-Cache.</div>
+            <?php } ?>
               
               <br /><br />
                           
@@ -464,10 +491,8 @@
           <div class="all-good"><img src="<?php
                   bloginfo('url');
 ?>/wp-content/plugins/wptouch/images/good.png" alt="" /> The tag cloud for WordPress will automatically show on a page called 'Archives' if you have one.</div>
-              <?php
-                  } else
-                  {
-?>
+              <?php } else { ?>
+			  
                    <div class="too-bad"><img src="<?php
                       bloginfo('url');
 ?>/wp-content/plugins/wptouch/images/bad.png" alt="" /> Since you're using a pre-tag version of WordPress, your categories will be listed on a page called 'Archives', if you have it.</div>
@@ -485,10 +510,10 @@
                   //WordPress Links Page Support
                   $links_page_check = new WP_Query('pagename=links');
                   if ($links_page_check->post->ID) {
-                      echo '<div class="all-good"><img src="' . get_bloginfo('url') . '/wp-content/plugins/wptouch/images/good.png" alt="" /> All of your WP links will automatically show on your page called \'Links\'.</div>';
+                      echo '<div class="all-good"><img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/good.png" alt="" /> All of your WP links will automatically show on your page called \'Links\'.</div>';
                   } else {
                       
-                      echo '<div class="too-bad"><img src="' . get_bloginfo('url') . '/wp-content/plugins/wptouch/images/bad.png" alt="" /> If you create a page called \'Links\', all your WP links would display in <em>WPtouch</em> style.</div>';
+                      echo '<div class="too-bad"><img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/bad.png" alt="" /> If you create a page called \'Links\', all your WP links would display in <em>WPtouch</em> style.</div>';
                   }
 ?>
                         
@@ -496,14 +521,14 @@
                   //WordPress Photos Page with and without FlickRSS Support  
                   $links_page_check = new WP_Query('pagename=photos');
                   if ($links_page_check->post->ID && function_exists('get_flickrRSS')) {
-                      echo '<div class="all-good"><img src="' . get_bloginfo('url') . '/wp-content/plugins/wptouch/images/good.png" alt="" /> All your <a href="http://eightface.com/wordpress/flickrrss/" target="_blank">FlickrRSS</a> images will automatically show on your page called \'Photos\'.</div>';
+                      echo '<div class="all-good"><img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/good.png" alt="" /> All your <a href="http://eightface.com/wordpress/flickrrss/" target="_blank">FlickrRSS</a> images will automatically show on your page called \'Photos\'.</div>';
                   } elseif ($links_page_check->post->ID && !function_exists('get_flickrRSS')) {
-                      echo '<div class="sort-of"><img src="' . get_bloginfo('url') . '/wp-content/plugins/wptouch/images/sortof.png" alt="" /> You have a page called \'Photos\', but don\'t have <a href="http://eightface.com/wordpress/flickrrss/" target="_blank">FlickrRSS</a> installed.</div>';
+                      echo '<div class="sort-of"><img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/sortof.png" alt="" /> You have a page called \'Photos\', but don\'t have <a href="http://eightface.com/wordpress/flickrrss/" target="_blank">FlickrRSS</a> installed.</div>';
                   } elseif (!$links_page_check->post->ID && function_exists('get_flickrRSS')) {
-                      echo '<div class="sort-of"><img src="' . get_bloginfo('url') . '/wp-content/plugins/wptouch/images/sortof.png" alt="" /> If you create a page called \'Photos\', all your <a href="http://eightface.com/wordpress/flickrrss/" target="_blank">FlickrRSS</a> photos would display in <em>WPtouch</em> style.</div>';
+                      echo '<div class="sort-of"><img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/sortof.png" alt="" /> If you create a page called \'Photos\', all your <a href="http://eightface.com/wordpress/flickrrss/" target="_blank">FlickrRSS</a> photos would display in <em>WPtouch</em> style.</div>';
                   } else {
                       
-                      echo '<div class="too-bad"><img src="' . get_bloginfo('url') . '/wp-content/plugins/wptouch/images/bad.png" alt="" /> If you create a page called \'Photos\', and install the <a href="http://eightface.com/wordpress/flickrrss/" target="_blank">FlickrRSS</a> plugin, your photos would display in <em>WPtouch</em> style.</div>';
+                      echo '<div class="too-bad"><img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/bad.png" alt="" /> If you create a page called \'Photos\', and install the <a href="http://eightface.com/wordpress/flickrrss/" target="_blank">FlickrRSS</a> plugin, your photos would display in <em>WPtouch</em> style.</div>';
                   }
 ?>
 
@@ -511,12 +536,12 @@
                   //WordPress Archives Page Support with checks for Tags Support or Not
                   $links_page_check = new WP_Query('pagename=archives');
                   if ($links_page_check->post->ID && function_exists('wp_tag_cloud')) {
-                      echo '<div class="all-good"><img src="' . get_bloginfo('url') . '/wp-content/plugins/wptouch/images/good.png" alt="" /> Your tags and your monthly listings will automatically show on your page called \'Archives\'.</div>';
+                      echo '<div class="all-good"><img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/good.png" alt="" /> Your tags and your monthly listings will automatically show on your page called \'Archives\'.</div>';
                   } elseif ($links_page_check->post->ID && !function_exists('wp_tag_cloud')) {
-                      echo '<div class="sort-of"><img src="' . get_bloginfo('url') . '/wp-content/plugins/wptouch/images/good.png" alt="" /> You don\'t have WordPress 2.3 or above, so no Tags will show, but your categories and monthly listings will automatically show on your page called \'Archives\'.</div>';
+                      echo '<div class="sort-of"><img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/good.png" alt="" /> You don\'t have WordPress 2.3 or above, so no Tags will show, but your categories and monthly listings will automatically show on your page called \'Archives\'.</div>';
                   } else {
                       
-                      echo '<div class="too-bad"><img src="' . get_bloginfo('url') . '/wp-content/plugins/wptouch/images/bad.png" alt="" /> If you create a page called \'Archives\', your tags/categories and monthly listings would display in <em>WPtouch</em> style.</div>';
+                      echo '<div class="too-bad"><img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/bad.png" alt="" /> If you create a page called \'Archives\', your tags/categories and monthly listings would display in <em>WPtouch</em> style.</div>';
                   }
 ?>
       </td>

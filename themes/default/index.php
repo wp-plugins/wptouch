@@ -56,9 +56,9 @@
           
       <div class="calendar" style="background: url(<?php
   bloginfo('template_directory');
-?>/images/cal/<?php
-  the_time('M')
-?>-cal.png) no-repeat;">
+?>/images/cal/month<?php
+  the_time('n')
+?>.png) no-repeat;">
       <div class="cal-month"><?php
   the_time('M')
 ?></div>
@@ -78,11 +78,14 @@
   else
       the_title();
 ?></a></h2>
-        <div class="post-author">by <?php
+        <div class="post-author"><!--by <?php
   the_author()
-?><!--<br /><a onclick="new Effect.toggle($('entry-<?php
-  the_ID();
-?>'),'Appear', {duration: 0.5});" href="#">Read Excerpt &darr;</a>--></div>
+?>-->
+<?php if (function_exists('wp_tag_cloud')) { ?>
+<?php if (get_the_tags()) the_tags('Tagged: ', ', ', ''); ?> 
+<?php } else { ?>
+Filed:<?php the_category(', '); ?><?php } ?>
+</div>
         <div class="clearer"></div>
 
             <div id="entry-<?php

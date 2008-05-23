@@ -5,7 +5,7 @@ make your site look gorgeous on an iPhone/iPod touch
 
 By Dale Mugford & Duane Sotrey
 bravenewcode.com
-Version: 1.0.2
+Version: 1.0.4
 
 
 Complete and regularly updated information & installation instructions available at:

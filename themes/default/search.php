@@ -30,6 +30,19 @@
           : the_post();
 ?>
 
+  <?php
+                          if (isset($post->comment_count) && $post->comment_count > 0) {
+?>
+        <div class="comment-bubble<?php
+                              if ($post->comment_count > 99)
+                                  echo('-big');
+?>"><?php
+                              comments_number('0', '1', '%');
+?></div>
+      <?php
+                          }
+?>
+
         <div class="post" id="post-<?php
       the_ID();
 ?>">
@@ -57,10 +70,10 @@
       the_ID();
 ?>', {display:'none'} );" style="display:none"></a>
       <div class="calendar" style="background: url(<?php
-      bloginfo('template_directory');
-?>/images/cal/<?php
-      the_time('M')
-?>-cal.png) no-repeat;">
+  bloginfo('template_directory');
+?>/images/cal/month<?php
+  the_time('n')
+?>.png) no-repeat;">
       <div class="cal-month"><?php
       the_time('M')
 ?></div>
@@ -86,12 +99,10 @@
 ?>-->
         <?php
       the_time('Y')
-?> | <?php
-      comments_number('No Comments', '1 Comment', '% Comments');
-?>
-        <!--<br /><a onclick="new Effect.toggle($('entry-<?php
-      the_ID();
-?>'),'Appear', {duration: 0.5});" href="#">Read Excerpt &darr;</a>-->
+?><?php if (function_exists('wp_tag_cloud')) { ?>
+<?php if (get_the_tags()) the_tags(' | Tagged: ', ', ', ''); ?> 
+<?php } else { ?>
+Filed:<?php the_category(', '); ?><?php } ?>
         </div>
         <div class="clearer"></div>
 

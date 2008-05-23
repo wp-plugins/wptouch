@@ -2,11 +2,11 @@
 Theme Name: WPtouch Theme
 Theme URI: http://www.bravenewcode.com/wptouch/
 Description: A slick theme for your blog or website that is shown only when using an iPhone/iPod touch.
-Version: 1.0.2
+Version: 1.0.3
 Author: Dale Mugford and Duane Storey
 Author URI: http://www.bravenewcode.com/
 
-	Wptouch Theme 1.0.2
+	Wptouch Theme 1.0.4
 	http://www.bravenewcode.com/wptouch/
 	
 	This theme was designed and built by Dale Mugford and Duane Storey,
@@ -388,7 +388,7 @@ a.h2 {
 .mainentry {
 	color: #444;
 	text-align: justify;
-	padding: 10px 0 0;
+	padding: 7px 0 0;
 	font-size: 13px;
 	line-height: 16px;
 	display: block;
@@ -449,8 +449,8 @@ a.h2 {
 	float: left;
 	margin-right: 5px;
 	position: relative;
-	bottom: 2px;
-	margin-bottom: 6px;
+	bottom: 4px;
+	margin-bottom: 7px;
 }
 
 .cal-month {
@@ -470,20 +470,23 @@ a.h2 {
 
 .post-author {
 	color: #777;
-	font-size: 10px;
-	display: block;
-	line-height: 15px;
+	font-size: 9px;
+	line-height: 10px;
 	position: relative;
 	float: left;
 	font-weight: bold;
 	letter-spacing: 0;
+	text-align: left;
+	width: 80%;
 }
 
 .post-author a {
 	color: #666;
 	padding-top: 1px;
 	padding-bottom: 10px;
-	font-weight: bold;}
+	font-weight: bold;
+	text-align: left;
+}
 
 .post-dropper {
 	position: relative;

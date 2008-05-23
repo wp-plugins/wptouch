@@ -1,15 +1,16 @@
-/* @override 
-	http://24.150.116.198:9098/wp-content/plugins/wptouch/wptouch-admin.css
-	http://24.150.116.198:9098/wp-content/plugins/wptouch-enabler/wptouch-admin.css
-	http://duanestorey.com/wp-content/plugins/wptouch-enabler/wptouch25-admin.css
-	http://www.bravenewcode.com/minimalia/wp-content/plugins/wptouch/wptouch25-admin.css
-*/
-
 /* 
 WPtouch Admin Panel Stylesheet for WordPress 2.3.3 and below
 */
 
 /* @group General */
+
+.wptouch-version {
+	font-size: 16px;
+	float: right;
+	color: #ccc;
+	position: relative;
+	bottom: 20px;
+}
 
 #wptouch-theme {
 	font-family: "Lucida Grande", Georgia, Arial, sans-serif;
@@ -31,10 +32,11 @@ WPtouch Admin Panel Stylesheet for WordPress 2.3.3 and below
 
 #wptouch-theme #wptouch-title {
 	letter-spacing: -2px;
-	color: #2583ad;
-	font: bold 32px "Lucida Grande", Arial, Verdana, sans-serif;
-	padding-bottom: 30px;
+	color: #CCC;
+	font: bold 34px "Lucida Grande", Arial, Verdana, sans-serif;
+	padding-bottom: 65px;
 	border-bottom: 1px solid #b9d6de;
+	text-shadow: #999 1px 2px 2px;
 }
 
 #wptouch-theme .wptouch-thhead {
@@ -117,11 +119,10 @@ WPtouch Admin Panel Stylesheet for WordPress 2.3.3 and below
 }
 
 #wptouch-theme table.wptouch-select-wrap-headicon {
-	width: 94%;
 	border: 1px solid #8aceff;
 	background-color: #cbf4ff;
 	padding-top: 2px;
-	margin-bottom: 15px;
+	margin-bottom: 5px;
 	margin-left: 15px;
 }
 
@@ -140,6 +141,7 @@ WPtouch Admin Panel Stylesheet for WordPress 2.3.3 and below
 #wptouch-theme td.wptouch-select-right {
 	float: right;
 	padding-left: 25px;
+	margin-left: 50px;
 }
 
 #wptouch-theme td.wptouch-select-right select {
