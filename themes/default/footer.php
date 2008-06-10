@@ -6,9 +6,9 @@
 				<a href="<?php get_bloginfo('home'); ?>/wp-admin/">Admin</a> | <a href="<?php bloginfo('url'); ?>/wp-login.php?action=logout">Logout</a>
 				<?php elseif (current_user_can('read_posts')) : ?>
 				<a href="<?php get_bloginfo('home'); ?>/wp-admin/profile.php">Account Profile</a> | 
-				<a href="<?php bloginfo('url'); ?>/wp-login.php?action=logout">Logout</a>
+				<a href="<?php bloginfo('wpurl'); ?>/wp-login.php?action=logout">Logout</a>
 				<?php else : ?>
-				<a href="<?php bloginfo('url'); ?>/wp-login.php">Login to <?php bloginfo('name'); ?></a><?php if (get_option('comment_registration')) { ?> | <a href="<?php bloginfo('url'); ?>/wp-register.php">Register</a><?php } ?>
+				<a href="<?php bloginfo('wpurl'); ?>/wp-login.php">Login to <?php bloginfo('name'); ?></a><?php if (get_option('comment_registration')) { ?> | <a href="<?php bloginfo('wpurl'); ?>/wp-register.php">Register</a><?php } ?>
 				<?php  endif; ?>
 			<br /><br />
 			Proudly powered by <a href="http://wordpress.org/">WordPress</a>, and <a href="http://www.bravenewcode.com/wptouch/">WPtouch</a>

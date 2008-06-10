@@ -11,7 +11,7 @@
 <!--Strict viewport options to control how the content is shown. Increase the maximum-scale number to allow for zooming if you wish-->
 <meta name="viewport" content="maximum-scale=1.0 width=device-width initial-scale=1.0 user-scalable=no" />
 <!--This makes the iPhone/iPod touch look in the theme directory for a bookmark icon (your header logo choice), add yours to the 'wptouch/themes/default' directory to customize-->
-<link rel="apple-touch-icon" href="<?php bloginfo('url'); ?>/wp-content/plugins/wptouch/images/icon-pool/<?php echo bnc_get_title_image(); ?>"/>
+<link rel="apple-touch-icon" href="<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/images/icon-pool/<?php echo bnc_get_title_image(); ?>"/>
 <script src="<?php bloginfo('template_directory'); ?>/js/global.js" type="text/javascript"></script>
 <?php wp_head(); ?>
 <style type="text/css">
@@ -34,11 +34,11 @@
 <div id="menubar">
 <div  id="blogtitle">
 <img src="<?php
-  bloginfo('url');
+  bloginfo('wpurl');
 ?>/wp-content/plugins/wptouch/images/icon-pool/<?php
   echo bnc_get_title_image();
 ?>" alt="" /> <a href="<?php
-  bloginfo('url');
+  bloginfo('wpurl');
 ?>"><?php
   bloginfo('name');
 ?></a></div>
@@ -79,7 +79,7 @@
         <div id="wptouch-search" style="display:none">
         <div id="wptouch-search-inner">
         <form method="get" id="searchform" action="<?php
-  bloginfo('url');
+  bloginfo('wpurl');
 ?>/">
 <div><input type="text" value="<?php
   the_search_query();
@@ -121,17 +121,17 @@
 <?php
   $pages = bnc_wp_touch_get_pages();
   foreach ($pages as $p) {
-      $image = get_bloginfo('url') . '/wp-content/plugins/wptouch/images/icon-pool/' . $p['icon'];
+      $image = get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/icon-pool/' . $p['icon'];
       echo('<li><a href="' . get_permalink($p['ID']) . '"><img src="' . $image . '" />' . $p['post_title'] . '</a></li>');
   }
 ?>
 <li><a href="<?php bloginfo('rss2_url'); ?>"><img src="<?php
-  bloginfo('url');
+  bloginfo('wpurl');
 ?>/wp-content/plugins/wptouch/images/icon-pool/RSS.png" alt="" />RSS Feed</a></li>
 <li class="noborder"><a href="mailto:<?php
   bloginfo('admin_email');
 ?>"><img src="<?php
-  bloginfo('url');
+  bloginfo('wpurl');
 ?>/wp-content/plugins/wptouch/images/icon-pool/Mail.png" alt="" />E-Mail</a></li>
 </ul>
 </div>
