@@ -6,7 +6,7 @@ Requires at least: 2.0
 Tested up to: 2.5.1
 Stable tag: 1.0.7
 
-WPtouch is a complimentary theme on that will format your WordPress blog with an Apple-inspired theme when viewed from an iPhone or iPod touch.
+WPtouch is a complimentary theme on that will format your WordPress blog with an Apple-inspired theme when viewed from an iPhone or iPod touch. 
 
 == Description ==
 
