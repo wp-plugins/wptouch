@@ -18,7 +18,7 @@
 #menubar {
 	width: 100%;
 	height: 45px;
-	background: #<?php echo bnc_get_header_background(); ?> url(<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/themes/default/images/head-fade-bk.png) repeat-x;
+	background: #<?php echo bnc_get_header_background(); ?> url(<?php bloginfo('template_directory'); ?>/images/head-fade-bk.png) repeat-x;
 }
 #blogtitle a {
 	text-decoration: none;
@@ -38,7 +38,7 @@
 ?>/wp-content/plugins/wptouch/images/icon-pool/<?php
   echo bnc_get_title_image();
 ?>" alt="" /> <a href="<?php
-  bloginfo('wpurl');
+  bloginfo('siteurl');
 ?>"><?php
   bloginfo('name');
 ?></a></div>
@@ -79,7 +79,7 @@
         <div id="wptouch-search" style="display:none">
         <div id="wptouch-search-inner">
         <form method="get" id="searchform" action="<?php
-  bloginfo('wpurl');
+  bloginfo('siteurl');
 ?>/">
 <div><input type="text" value="<?php
   the_search_query();
@@ -116,7 +116,7 @@
 <li><a href="<?php
   bloginfo('url');
 ?>"><img src="<?php
-  bloginfo('url');
+  bloginfo('wpurl');
 ?>/wp-content/plugins/wptouch/images/icon-pool/Home.png" alt="" />Home</a></li>
 <?php
   $pages = bnc_wp_touch_get_pages();
