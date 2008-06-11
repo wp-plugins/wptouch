@@ -4,7 +4,7 @@
    Plugin URI: http://bravenewcode.com/wptouch/
    Description: A plugin which formats your site when viewing with an <a href="http://www.apple.com/iphone/">iPhone</a> / <a href="http://www.apple.com/ipodtouch/">iPod touch</a>. Set header, page, and icon options for the theme by visiting the WPtouch admin panel under Options (WordPress 2.1+) or (in 2.5) the Settings tab. You'll also find a compatibility suite for aspects of your WordPress configuration. &nbsp;
    Author: Dale Mugford & Duane Storey
-   Version: 1.0.4
+   Version: 1.0.7
    Author URI: http://www.bravenewcode.com
    
    # Special thanks to ContentRobot and the iWPhone theme/plugin
@@ -27,7 +27,7 @@
    */
  
  function WPtouch() {
-		$version = '1.0.4';
+		$version = '1.0.7';
 		echo '<div class="wptouch-version">WPtouch version ' . $version . ' </div>';
 }
  
@@ -210,9 +210,10 @@
           if ($k == 'main_title') {
               //$a['main_title'] = $v;
           } else
-              $keys[] = $k;
+		if (is_numeric($k)) {
+              		$keys[] = $k;
+		}
       }
-      
       
       $query = "select * from {$table_prefix}posts where ID in (" . implode(',', $keys) . ") order by post_title asc";
       $con = @mysql_connect(DB_HOST, DB_USER, DB_PASSWORD);
@@ -228,8 +229,23 @@
       
       return $a;
   }
+
+function bnc_get_header_background()
+{
+$v = unserialize(get_option('bnc_iphone_pages'));
+if (!isset($v['header-background-color'])) {
+$v['header-background-color'] = '222222';
+}
+return $v['header-background-color'];
+}
   
-  
+function bnc_get_header_color()
+{
+$v = unserialize(get_option('bnc_iphone_pages')); if (!isset($v['header-text-color'])) { $v['header-text-color'] = 'eeeeee';
+}
+return $v['header-text-color'];
+}
+
   function bnc_get_icon_list()
   {
       $a = preg_match('#(.*)wptouch.php#', __FILE__, $matches);
@@ -270,17 +286,66 @@
 
 <?php
       $icons = bnc_get_icon_list();
-      print_r($d);
 ?>
+        <?php
+      if (isset($_POST['submit'])) {
+          // let's rock and roll
+
+          unset($_POST['submit']);
+
+          $a = array();
+          foreach ($_POST as $k => $v) {
+              if ($k == 'enable_main_title') {
+                  $a['main_title'] = $v;
+              } else {
+                  if (preg_match('#enable_(.*)#', $k, $matches)) {
+                      $id = $matches[1];
+                      if (!isset($a[$id]))
+                          $a[$id] = $_POST['icon_' . $id];
+                  }
+              }
+          }
+
+	  $a['header-background-color'] = $_POST['header-background-color'];
+	  $a['header-text-color'] = $_POST['header-text-color'];
+          
+          $values = serialize($a);
+          update_option('bnc_iphone_pages', $values);
+      }
+      
+      	$v = unserialize(get_option('bnc_iphone_pages'));
+	if (!isset($v['header-background-color'])) {
+		$v['header-background-color'] = '222222';
+	}
+
+	if (!isset($v['header-text-color'])) {
+		$v['header-text-color'] = 'eeeeee';
+	}
+
+	?>
   <form method="post" action="<?php
       echo $_SERVER['REQUEST_URI'];
 ?>">
+		<div id="wptouch-preview"><div style="background: #<?php echo bnc_get_header_background(); ?> url(<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/themes/default/images/head-fade-bk.png) repeat-x; color:#<?php echo bnc_get_header_color(); ?>" id="head-prev"><?php bloginfo('title'); ?></div>		</div>
+
+	<div id="wptouch-header-css">
+  	<table class="wptouch-form-table">
+	<tr valign="top">
+		<th scope="row"><div class="wptouch-thhead">Header Styling</div><div class="wptouch-thtext">You can use this section to customize the look of the WPtouch header.</div></th>
+		<td>
+			<div class="header-item-desc">Header Background Color</div><div class="header-input">#<input text="text" name="header-background-color" type="text" value="<?php echo $v['header-background-color']; ?>" /></div>
+			<div class="header-item-desc">Header Text Color</div><div class="header-input">#<input type="text" name="header-text-color" type="text" value="<?php echo $v['header-text-color']; ?>" /></div>
+					
+		</td>
+	</tr>
+	</table>
+	
+	</div>
 
   <div id="wptouch-available">  
-  <table class="wptouch-form-table">
-    
-    <tr valign="top">
-  <th scope="row"><div class="wptouch-thhead">Available Page Icons</div><div class="wptouch-thtext">You can select which icons will be displayed beside corresponding pages enabled below.<br /><br />To add icons to the pool simply drop 60x60 (recommended) - .jpg or .png images into the <strong>icon-pool</strong> folder inside the wptouch/images directory, then refresh this page to select them.<br /><br />Also in the folder is a <strong>.psd template</strong> which you can use to build icons yourself.<br /><br />More official icons are available for download on the <a href="http://www.bravenewcode.com/wptouch/">WPtouch homepage</a>.</div></th>  
+  	<table class="wptouch-form-table">
+	<tr valign="top">
+  	<th scope="row"><div class="wptouch-thhead">Available Page Icons</div><div class="wptouch-thtext">You can select which icons will be displayed beside corresponding pages enabled below.<br /><br />To add icons to the pool simply drop 60x60 (recommended) - .jpg or .png images into the <strong>icon-pool</strong> folder inside the wptouch/images directory, then refresh this page to select them.<br /><br />Also in the folder is a <strong>.psd template</strong> which you can use to build icons yourself.<br /><br />More official icons are available for download on the <a href="http://www.bravenewcode.com/wptouch/">WPtouch homepage</a>.</div></th>  
       <td>
       <?php
       foreach ($icons as $icon) {
@@ -306,31 +371,7 @@
 <th scope="row"><div class="wptouch-thhead">Logo, Pages &amp; Icons</div><div class="wptouch-thtext">Choose the logo displayed in the header (also your bookmark icon), and which published pages are shown on the WPtouch drop-down menu.<br /><br /><strong>Remember, only those checked will be shown.</strong><br /><br />Next, select the icons from the drop list that you want to pair with each page/menu item.</div></th>      
 
 <td id="wptouch-page-choices">
-        <?php
-      if (isset($_POST['submit'])) {
-          // let's rock and roll
-
-          unset($_POST['submit']);
-
-          $a = array();
-          foreach ($_POST as $k => $v) {
-              if ($k == 'enable_main_title') {
-                  $a['main_title'] = $v;
-              } else {
-                  if (preg_match('#enable_(.*)#', $k, $matches)) {
-                      $id = $matches[1];
-                      if (!isset($a[$id]))
-                          $a[$id] = $_POST['icon_' . $id];
-                  }
-              }
-          }
-          
-          $values = serialize($a);
-          update_option('bnc_iphone_pages', $values);
-      }
-      
-      $v = unserialize(get_option('bnc_iphone_pages'));
-      
+     <?php 
       echo("<table class=\"wptouch-select-wrap-headicon\">");
       // do top header icon 
       echo("<tr><td class=\"wptouch-select-left\">Logo &amp; Home Screen Bookmark Icon</td><td class=\"wptouch-select-right\"><select name=\"enable_main_title\">");
@@ -441,13 +482,13 @@
            <div class="sort-of"><img src="<?php bloginfo('url'); ?>/wp-content/plugins/wptouch/images/sortof.png" alt="" /> You don't have <a href="http://www.bravenewcode.com/blipit/" target="_blank">Blip.it</a> installed: (No automatic iPhone compatible video support)</div>
             <?php } ?>
 			
-			      <?php
+	<?php /*?>		      <?php
 				  //CodeBox Check
            if (function_exists('codebox_header')) { ?>
          <div class="all-good"><img src="<?php bloginfo('url'); ?>/wp-content/plugins/wptouch/images/good.png" alt="" /> Gravy. <a href="http://wordpress.org/extend/plugins/wp-codebox/" target="_blank">CodeBox</a> is <em>not</em> installed. If it was, things would look ugly.</div>
            <?php } else { ?>
            <div class="too-bad"><img src="<?php bloginfo('url'); ?>/wp-content/plugins/wptouch/images/good.png" alt="" /> D'oh, <a href="http://wordpress.org/extend/plugins/wp-codebox/" target="_blank">CodeBox</a> <strong>is</strong> installed. WPtouch <em>does not</em> currently support it, so things will look ugly until it does, sorry.</div>
-            <?php } ?>
+            <?php } ?><?php */?>
               
         <?php
           //WP-Cache Plugin Check
@@ -476,7 +517,7 @@
 	  
     <div class="all-good"><img src="<?php
                   bloginfo('url');
-?>/wp-content/plugins/wptouch/images/good.png" alt="" /> Whew. No <a href="http://mnm.uib.es/gallir/wp-cache-2/" target="_blank">WP-Cache</a>. If installed, <strong>it requires configuration.</strong> Visit the <a href="http://www.bravenewcode.com/wptouch/">WPtouch homepage</a> for help using WP-Cache.</div>
+?>/wp-content/plugins/wptouch/images/good.png" alt="" /> Whew. No <a href="http://mnm.uib.es/gallir/wp-cache-2/" target="_blank">WP Super Cache</a>. <strong>Currently, it does work correctly with WPtouch.</strong> We're working on it, though. Visit the <a href="http://www.bravenewcode.com/wptouch/">WPtouch homepage</a> for updates.</div>
             <?php } ?>
               
               <br /><br />
