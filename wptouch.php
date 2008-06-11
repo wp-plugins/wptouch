@@ -4,7 +4,7 @@
    Plugin URI: http://bravenewcode.com/wptouch/
    Description: A plugin which formats your site when viewing with an <a href="http://www.apple.com/iphone/">iPhone</a> / <a href="http://www.apple.com/ipodtouch/">iPod touch</a>. Set header, page, and icon options for the theme by visiting the WPtouch admin panel under Options (WordPress 2.1+) or (in 2.5) the Settings tab. You'll also find a compatibility suite for aspects of your WordPress configuration. &nbsp;
    Author: Dale Mugford & Duane Storey
-   Version: 1.0.6
+   Version: 1.0.7
    Author URI: http://www.bravenewcode.com
    
    # Special thanks to ContentRobot and the iWPhone theme/plugin
@@ -27,7 +27,7 @@
    */
  
  function WPtouch() {
-		$version = '1.0.6';
+		$version = '1.0.7';
 		echo '<div class="wptouch-version">WPtouch version ' . $version . ' </div>';
 }
  
@@ -210,9 +210,10 @@
           if ($k == 'main_title') {
               //$a['main_title'] = $v;
           } else
-              $keys[] = $k;
+		if (is_numeric($k)) {
+              		$keys[] = $k;
+		}
       }
-      
       
       $query = "select * from {$table_prefix}posts where ID in (" . implode(',', $keys) . ") order by post_title asc";
       $con = @mysql_connect(DB_HOST, DB_USER, DB_PASSWORD);
@@ -285,7 +286,6 @@ return $v['header-text-color'];
 
 <?php
       $icons = bnc_get_icon_list();
-      print_r($d);
 ?>
         <?php
       if (isset($_POST['submit'])) {
