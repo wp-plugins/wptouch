@@ -1,3 +1,9 @@
+/* @override 
+	http://24.150.116.198:9098/wp-content/plugins/wptouch/wptouch-admin.css
+	http://24.150.116.198:9098/wp-content/plugins/wptouch-enabler/wptouch-admin.css
+	http://24.150.116.198:9098/wp-content/plugins/wptouch/admin-css/wptouch25-admin.css
+*/
+
 /* 
 WPtouch Admin Panel Stylesheet for WordPress 2.3.3 and below
 */
@@ -249,6 +255,98 @@ WPtouch Admin Panel Stylesheet for WordPress 2.3.3 and below
 	margin-left: 15px;
 	margin-bottom: 5px;
 	margin-right: -4px;
+}
+
+/* @end */
+
+/* @group Donate */
+
+#wptouch-theme #wptouch-donate {
+	border-bottom: 1px solid #b9d6de;
+	padding-bottom: 25px;
+	padding-top: 25px;
+}
+
+#wptouch-theme #wptouch-donate th {
+	border-right: 1px solid #b9d6de;
+	width: 215px;
+}
+
+#wptouch-theme #wptouch-donate td {
+	padding-left: 25px;
+}
+
+#wptouch-theme #donate-button {
+	padding-top: 15px;
+}
+
+
+
+/* @end */
+
+#wptouch-preview {
+	background-image: url(../images/iphone-head-bk.png);
+	width: 395px;
+	height: 284px;
+	position: relative;
+	float: right;
+	left: 180px;
+}
+
+#head-prev {
+	top: 129px;
+	position: relative;
+	left: 39px;
+	height: 33px;
+	width: 310px;
+	padding-left: 10px;
+	padding-top: 10px;
+	font-size: 20px;
+	font-weight: bold;
+	letter-spacing: -1px;
+}
+
+/* @group Header-CSS */
+
+#wptouch-theme #wptouch-header-css {
+	border-bottom: 1px solid #b9d6de;
+	padding-top: 25px;
+	margin-bottom: 25px;
+	height: 259px;
+}
+
+#wptouch-theme #wptouch-header-css th {
+	border-right: 1px solid #b9d6de;
+	width: 100%;
+}
+
+#wptouch-theme #wptouch-header-css td {
+	padding-left: 10px;
+	padding-bottom: 100px;
+}
+
+#wptouch-theme #wptouch-header-css input.header-input {
+	margin-bottom: 25px;
+	display: inline;
+}
+
+#wptouch-theme #wptouch-header-css .header-item-desc {
+	color: #666;
+	margin-bottom: 5px;
+}
+
+#wptouch-theme #wptouch-header-css .hexboxes {
+	position: relative;
+	font-weight: bold;
+	font-size: 20px;
+	height: 30px;
+	margin-top: 15px;
+	margin-left: 15px;
+	padding-top: 8px;
+	padding-bottom: 5px;
+	padding-left: 10px;
+	width: 312px;
+	float: right;
 }
 
 /* @end */
