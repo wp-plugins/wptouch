@@ -1,7 +1,7 @@
-
+/* @override http://24.150.116.198:9098/wp-content/plugins/wptouch/admin-css/wptouch25-admin.css */
 
 /* 
-WPtouch Admin Panel Stylesheet for WordPress 2.3.3 and below
+WPtouch Admin Panel Stylesheet for WordPress 2.5
 */
 
 /* @group General */
@@ -259,22 +259,25 @@ WPtouch Admin Panel Stylesheet for WordPress 2.3.3 and below
 
 #wptouch-theme #wptouch-header-css th {
 	border-right: 1px solid #b9d6de;
-	width: 100%;
+	width: 215px;
 }
 
 #wptouch-theme #wptouch-header-css td {
-	padding-left: 10px;
 	padding-bottom: 100px;
 }
 
-#wptouch-theme #wptouch-header-css input.header-input {
+#wptouch-theme #wptouch-header-css .header-input {
 	margin-bottom: 25px;
-	display: inline;
+	width: 185px;
+	position: relative;
+	left: 15px;
 }
 
 #wptouch-theme #wptouch-header-css .header-item-desc {
 	color: #666;
 	margin-bottom: 5px;
+	position: relative;
+	left: 23px;
 }
 
 #wptouch-theme #wptouch-header-css .hexboxes {
@@ -289,6 +292,38 @@ WPtouch Admin Panel Stylesheet for WordPress 2.3.3 and below
 	padding-left: 10px;
 	width: 312px;
 	float: right;
+}
+
+#wptouch-theme #wptouch-preview {
+	background-image: url(../images/iphone-head-bk.png);
+	width: 395px;
+	height: 284px;
+	position: relative;
+	float: right;
+	left: 180px;
+}
+
+#wptouch-theme #head-prev {
+	top: 129px;
+	position: relative;
+	left: 39px;
+	height: 33px;
+	width: 310px;
+	padding-left: 10px;
+	font-size: 20px;
+	font-weight: bold;
+	letter-spacing: -1px;
+	margin: 0;
+	padding-bottom: 4px;
+	padding-top: 6px;
+}
+
+#wptouch-theme #wptouch-preview img {
+	width: 32px;
+	height: 32px;
+	position: relative;
+	vertical-align: middle;
+	bottom: 1px;
 }
 
 /* @end */
@@ -317,25 +352,3 @@ WPtouch Admin Panel Stylesheet for WordPress 2.3.3 and below
 
 
 /* @end */
-
-#wptouch-preview {
-	background-image: url(../images/iphone-head-bk.png);
-	width: 395px;
-	height: 284px;
-	position: relative;
-	float: right;
-	left: 180px;
-}
-
-#head-prev {
-	top: 129px;
-	position: relative;
-	left: 39px;
-	height: 33px;
-	width: 310px;
-	padding-left: 10px;
-	padding-top: 10px;
-	font-size: 20px;
-	font-weight: bold;
-	letter-spacing: -1px;
-}

@@ -326,16 +326,19 @@ return $v['header-text-color'];
   <form method="post" action="<?php
       echo $_SERVER['REQUEST_URI'];
 ?>">
-		<div id="wptouch-preview"><div style="background: #<?php echo bnc_get_header_background(); ?> url(<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/themes/default/images/head-fade-bk.png) repeat-x; color:#<?php echo bnc_get_header_color(); ?>" id="head-prev"><?php bloginfo('title'); ?></div>		</div>
+		<div id="wptouch-preview"><div style="background: #<?php echo bnc_get_header_background(); ?> url(<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/themes/default/images/head-fade-bk.png) repeat-x; color:#<?php echo bnc_get_header_color(); ?>" id="head-prev"><img src="<?php
+  bloginfo('wpurl');
+?>/wp-content/plugins/wptouch/images/icon-pool/<?php
+  echo bnc_get_title_image();
+?>" alt="" /> <?php bloginfo('title'); ?></div>		</div>
 
 	<div id="wptouch-header-css">
   	<table class="wptouch-form-table">
 	<tr valign="top">
-		<th scope="row"><div class="wptouch-thhead">Header Styling</div><div class="wptouch-thtext">You can use this section to customize the look of the WPtouch header.</div></th>
+		<th scope="row"><div class="wptouch-thhead">Header Styling</div><div class="wptouch-thtext">You can use this section to customize the look of the WPtouch header.<br /><br />Choose a home screen bookmark/header icon in the <em>Logo, Pages &amp; Icons</em> pane below.</div></th>
 		<td>
-			<div class="header-item-desc">Header Background Color</div><div class="header-input">#<input text="text" name="header-background-color" type="text" value="<?php echo $v['header-background-color']; ?>" /></div>
+			<div class="header-item-desc">Header Background Color</div><div class="header-input">#<input text="text" name="header-background-color" type="text" value="<?php echo $v['header-background-color']; ?>" id="testola" /></div>
 			<div class="header-item-desc">Header Text Color</div><div class="header-input">#<input type="text" name="header-text-color" type="text" value="<?php echo $v['header-text-color']; ?>" /></div>
-					
 		</td>
 	</tr>
 	</table>
