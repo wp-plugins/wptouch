@@ -2,9 +2,9 @@
   global $comment, $comments, $post, $wpdb, $user_ID, $user_identity, $user_email, $user_url;
   //echo __FILE__;
   //print_r($_SERVER);
-  preg_match('#(.*)/wp-content#', $_SERVER['SCRIPT_FILENAME'], $rootdir);
+  //preg_match('#(.*)/wp-content#', $_SERVER['SCRIPT_FILENAME'], $rootdir);
   //print_r ($rootdir);
-  require($rootdir[1] . '/wp-blog-header.php');
+  require('../../../../../wp-blog-header.php');
   function fail($s)
   {
       header('HTTP/1.0 500 Internal Server Error');
