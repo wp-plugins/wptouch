@@ -440,9 +440,9 @@ return $v['header-text-color'];
       } elseif ($version >= 2.1) {
           echo 'WordPress installed: ' . get_bloginfo('version') . '<br />(Upgrade Recommended)';
       } elseif ($version >= 2.0) {
-          echo 'WordPress installed: ' . get_bloginfo('version') . '<br />(Upgrade Recommended)';
+          echo 'WordPress installed: ' . get_bloginfo('version') . '<br />(NOT Supported! Upgrade Required)';
       } elseif ($version >= 1.5) {
-          echo 'WordPress installed: ' . get_bloginfo('version') . '<br />(Upgrade Required)';
+          echo 'WordPress installed: ' . get_bloginfo('version') . '<br />(NOT Supported! Upgrade Required)';
       }
 ?>  
 </strong>
@@ -456,7 +456,75 @@ return $v['header-text-color'];
         </th>  
       
             <td  id="wptouch-plugins-active">
-            <h4>Plugin Support</h4>
+
+              <h4>WordPress Built-in Functions Support</h4>
+
+              <?php
+              //Start WordPress functions support checks here
+              //WordPress Built-In Tags Support Check 
+              if (function_exists('wp_tag_cloud')) {
+?>
+          <div class="all-good"><img src="<?php
+                  bloginfo('url');
+?>/wp-content/plugins/wptouch/images/good.png" alt="" /> The tag cloud for WordPress will automatically show on a page called 'Archives' if you have one.</div>
+              <?php } else { ?>
+			  
+                   <div class="too-bad"><img src="<?php
+                      bloginfo('url');
+?>/wp-content/plugins/wptouch/images/bad.png" alt="" /> Since you're using a pre-tag version of WordPress, your categories will be listed on a page called 'Archives', if you have it.</div>
+              <?php
+                  }
+?>
+               
+                           <br /><br />
+                           
+                <h4>WordPress Pages &amp; Feature Support</h4>
+          
+                      <?php
+                  //Start Pages support checks here
+                  
+                  //WordPress Links Page Support
+                  $links_page_check = new WP_Query('pagename=links');
+                  if ($links_page_check->post->ID) {
+                      echo '<div class="all-good"><img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/good.png" alt="" /> All of your WP links will automatically show on your page called \'Links\'.</div>';
+                  } else {
+                      
+                      echo '<div class="too-bad"><img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/bad.png" alt="" /> If you create a page called \'Links\', all your WP links would display in <em>WPtouch</em> style.</div>';
+                  }
+?>
+                        
+          <?php
+                  //WordPress Photos Page with and without FlickRSS Support  
+                  $links_page_check = new WP_Query('pagename=photos');
+                  if ($links_page_check->post->ID && function_exists('get_flickrRSS')) {
+                      echo '<div class="all-good"><img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/good.png" alt="" /> All your <a href="http://eightface.com/wordpress/flickrrss/" target="_blank">FlickrRSS</a> images will automatically show on your page called \'Photos\'.</div>';
+                  } elseif ($links_page_check->post->ID && !function_exists('get_flickrRSS')) {
+                      echo '<div class="sort-of"><img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/sortof.png" alt="" /> You have a page called \'Photos\', but don\'t have <a href="http://eightface.com/wordpress/flickrrss/" target="_blank">FlickrRSS</a> installed.</div>';
+                  } elseif (!$links_page_check->post->ID && function_exists('get_flickrRSS')) {
+                      echo '<div class="sort-of"><img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/sortof.png" alt="" /> If you create a page called \'Photos\', all your <a href="http://eightface.com/wordpress/flickrrss/" target="_blank">FlickrRSS</a> photos would display in <em>WPtouch</em> style.</div>';
+                  } else {
+                      
+                      echo '<div class="too-bad"><img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/bad.png" alt="" /> If you create a page called \'Photos\', and install the <a href="http://eightface.com/wordpress/flickrrss/" target="_blank">FlickrRSS</a> plugin, your photos would display in <em>WPtouch</em> style.</div>';
+                  }
+?>
+
+            <?php
+                  //WordPress Archives Page Support with checks for Tags Support or Not
+                  $links_page_check = new WP_Query('pagename=archives');
+                  if ($links_page_check->post->ID && function_exists('wp_tag_cloud')) {
+                      echo '<div class="all-good"><img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/good.png" alt="" /> Your tags and your monthly listings will automatically show on your page called \'Archives\'.</div>';
+                  } elseif ($links_page_check->post->ID && !function_exists('wp_tag_cloud')) {
+                      echo '<div class="sort-of"><img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/good.png" alt="" /> You don\'t have WordPress 2.3 or above, so no Tags will show, but your categories and monthly listings will automatically show on your page called \'Archives\'.</div>';
+                  } else {
+                      
+                      echo '<div class="too-bad"><img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/bad.png" alt="" /> If you create a page called \'Archives\', your tags/categories and monthly listings would display in <em>WPtouch</em> style.</div>';
+                  }
+?>
+
+
+              <br /><br />
+
+          <h4>Other Plugin Support &amp; Compatibility</h4>
       <?php
       //Start plugin support checks here
       
@@ -523,71 +591,6 @@ return $v['header-text-color'];
 ?>/wp-content/plugins/wptouch/images/good.png" alt="" /> Whew. No <a href="http://mnm.uib.es/gallir/wp-cache-2/" target="_blank">WP Super Cache</a>. <strong>Currently, it does work correctly with WPtouch.</strong> We're working on it, though. Visit the <a href="http://www.bravenewcode.com/wptouch/">WPtouch homepage</a> for updates.</div>
             <?php } ?>
               
-              <br /><br />
-                          
-              <h4>WordPress Built-in Functions Support</h4>
-
-              <?php
-              //Start WordPress functions support checks here
-              //WordPress Built-In Tags Support Check 
-              if (function_exists('wp_tag_cloud')) {
-?>
-          <div class="all-good"><img src="<?php
-                  bloginfo('url');
-?>/wp-content/plugins/wptouch/images/good.png" alt="" /> The tag cloud for WordPress will automatically show on a page called 'Archives' if you have one.</div>
-              <?php } else { ?>
-			  
-                   <div class="too-bad"><img src="<?php
-                      bloginfo('url');
-?>/wp-content/plugins/wptouch/images/bad.png" alt="" /> Since you're using a pre-tag version of WordPress, your categories will be listed on a page called 'Archives', if you have it.</div>
-              <?php
-                  }
-?>
-               
-                           <br /><br />
-                           
-                <h4>WordPress Pages &amp; Feature Support</h4>
-          
-                      <?php
-                  //Start Pages support checks here
-                  
-                  //WordPress Links Page Support
-                  $links_page_check = new WP_Query('pagename=links');
-                  if ($links_page_check->post->ID) {
-                      echo '<div class="all-good"><img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/good.png" alt="" /> All of your WP links will automatically show on your page called \'Links\'.</div>';
-                  } else {
-                      
-                      echo '<div class="too-bad"><img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/bad.png" alt="" /> If you create a page called \'Links\', all your WP links would display in <em>WPtouch</em> style.</div>';
-                  }
-?>
-                        
-          <?php
-                  //WordPress Photos Page with and without FlickRSS Support  
-                  $links_page_check = new WP_Query('pagename=photos');
-                  if ($links_page_check->post->ID && function_exists('get_flickrRSS')) {
-                      echo '<div class="all-good"><img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/good.png" alt="" /> All your <a href="http://eightface.com/wordpress/flickrrss/" target="_blank">FlickrRSS</a> images will automatically show on your page called \'Photos\'.</div>';
-                  } elseif ($links_page_check->post->ID && !function_exists('get_flickrRSS')) {
-                      echo '<div class="sort-of"><img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/sortof.png" alt="" /> You have a page called \'Photos\', but don\'t have <a href="http://eightface.com/wordpress/flickrrss/" target="_blank">FlickrRSS</a> installed.</div>';
-                  } elseif (!$links_page_check->post->ID && function_exists('get_flickrRSS')) {
-                      echo '<div class="sort-of"><img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/sortof.png" alt="" /> If you create a page called \'Photos\', all your <a href="http://eightface.com/wordpress/flickrrss/" target="_blank">FlickrRSS</a> photos would display in <em>WPtouch</em> style.</div>';
-                  } else {
-                      
-                      echo '<div class="too-bad"><img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/bad.png" alt="" /> If you create a page called \'Photos\', and install the <a href="http://eightface.com/wordpress/flickrrss/" target="_blank">FlickrRSS</a> plugin, your photos would display in <em>WPtouch</em> style.</div>';
-                  }
-?>
-
-            <?php
-                  //WordPress Archives Page Support with checks for Tags Support or Not
-                  $links_page_check = new WP_Query('pagename=archives');
-                  if ($links_page_check->post->ID && function_exists('wp_tag_cloud')) {
-                      echo '<div class="all-good"><img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/good.png" alt="" /> Your tags and your monthly listings will automatically show on your page called \'Archives\'.</div>';
-                  } elseif ($links_page_check->post->ID && !function_exists('wp_tag_cloud')) {
-                      echo '<div class="sort-of"><img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/good.png" alt="" /> You don\'t have WordPress 2.3 or above, so no Tags will show, but your categories and monthly listings will automatically show on your page called \'Archives\'.</div>';
-                  } else {
-                      
-                      echo '<div class="too-bad"><img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/bad.png" alt="" /> If you create a page called \'Archives\', your tags/categories and monthly listings would display in <em>WPtouch</em> style.</div>';
-                  }
-?>
       </td>
   </tr>
 </table>
