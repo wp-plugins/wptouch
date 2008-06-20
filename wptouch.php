@@ -440,9 +440,9 @@ return $v['header-text-color'];
       } elseif ($version >= 2.1) {
           echo 'WordPress installed: ' . get_bloginfo('version') . '<br />(Upgrade Recommended)';
       } elseif ($version >= 2.0) {
-          echo 'WordPress installed: ' . get_bloginfo('version') . '<br />(Upgrade Recommended)';
+          echo 'WordPress installed: ' . get_bloginfo('version') . '<br />(NOT Supported! Upgrade Recommended)';
       } elseif ($version >= 1.5) {
-          echo 'WordPress installed: ' . get_bloginfo('version') . '<br />(Upgrade Required)';
+          echo 'WordPress installed: ' . get_bloginfo('version') . '<br />(NOT Supported! Upgrade Required)';
       }
 ?>  
 </strong>
