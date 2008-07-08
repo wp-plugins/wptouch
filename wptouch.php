@@ -590,7 +590,7 @@ return $v['header-text-color'];
     
     </div>
   <input type="submit" name="submit" value="<?php
-                  _e('Save Settings', 'submit')
+                  _e('Save Options', 'submit')
 ?>" id="wptouch-button" />
   </form>
 <?php echo('</div></div>'); } add_action('admin_menu', 'bnc_options_menu');
