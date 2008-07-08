@@ -4,7 +4,7 @@
    Plugin URI: http://bravenewcode.com/wptouch/
    Description: A plugin which formats your site when viewing with an <a href="http://www.apple.com/iphone/">iPhone</a> / <a href="http://www.apple.com/ipodtouch/">iPod touch</a>. Set header, page, and icon options for the theme by visiting the WPtouch admin panel under Options (WordPress 2.1+) or (in 2.5) the Settings tab. You'll also find a compatibility suite for aspects of your WordPress configuration. &nbsp;
    Author: Dale Mugford & Duane Storey
-   Version: 1.0.7
+   Version: 1.0.8
    Author URI: http://www.bravenewcode.com
    
    # Special thanks to ContentRobot and the iWPhone theme/plugin
@@ -27,7 +27,7 @@
    */
  
  function WPtouch() {
-		$version = '1.0.7';
+		$version = '1.0.8';
 		echo '<div class="wptouch-version">WPtouch version ' . $version . ' </div>';
 }
  
@@ -429,16 +429,16 @@ return $v['header-text-color'];
   
 <strong>
 <?php
-      //Let's do some WordPress version check to provide more information for the user about what they can expect using the theme
+      //Let's do some WordPress version checks to provide more information for the user about what they can expect using the plugin
       $version = (float)get_bloginfo('version');
       if ($version >= 2.5) {
           echo 'WordPress installed: ' . get_bloginfo('version') . '<br />(Fully Supported)';
       } elseif ($version >= 2.3) {
-          echo 'WordPress installed: ' . get_bloginfo('version') . '<br />(Fully Supported)';
+          echo 'WordPress installed: ' . get_bloginfo('version') . '<br />(Supported, Upgrade Recommended)';
       } elseif ($version >= 2.2) {
-          echo 'WordPress installed: ' . get_bloginfo('version') . '<br />(Mostly Supported)';
+          echo 'WordPress installed: ' . get_bloginfo('version') . '<br />(Supported, Upgrade Recommended)';
       } elseif ($version >= 2.1) {
-          echo 'WordPress installed: ' . get_bloginfo('version') . '<br />(Upgrade Recommended)';
+          echo 'WordPress installed: ' . get_bloginfo('version') . '<br />(Supported, Upgrade Recommended)';
       } elseif ($version >= 2.0) {
           echo 'WordPress installed: ' . get_bloginfo('version') . '<br />(NOT Supported! Upgrade Required)';
       } elseif ($version >= 1.5) {
@@ -515,12 +515,10 @@ return $v['header-text-color'];
                       echo '<div class="all-good"><img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/good.png" alt="" /> Your tags and your monthly listings will automatically show on your page called \'Archives\'.</div>';
                   } elseif ($links_page_check->post->ID && !function_exists('wp_tag_cloud')) {
                       echo '<div class="sort-of"><img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/good.png" alt="" /> You don\'t have WordPress 2.3 or above, so no Tags will show, but your categories and monthly listings will automatically show on your page called \'Archives\'.</div>';
-                  } else {
-                      
+                  } else {         
                       echo '<div class="too-bad"><img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/bad.png" alt="" /> If you create a page called \'Archives\', your tags/categories and monthly listings would display in <em>WPtouch</em> style.</div>';
                   }
 ?>
-
 
               <br /><br />
 
@@ -534,16 +532,11 @@ return $v['header-text-color'];
              <div class="all-good"><img src="<?php
           bloginfo('url');
 ?>/wp-content/plugins/wptouch/images/good.png" alt="" /> Cool! <a href="http://eightface.com/wordpress/flickrrss/" target="_blank">FlickrRSS</a>: Your photos will automatically show on a page called 'Photos'.</div>
-              <?php
-          } else
-          {
-?>
+              <?php } else { ?>
           <div class="too-bad"><img src="<?php
               bloginfo('url');
 ?>/wp-content/plugins/wptouch/images/bad.png" alt="" /> You don't have <a href="http://eightface.com/wordpress/flickrrss/" target="_blank">FlickrRSS</a> installed (No automatic photos page support)</div>
-              <?php
-          }
-?>
+              <?php } ?>
               
           <?php
 		   //Blip-it Check
@@ -600,10 +593,6 @@ return $v['header-text-color'];
                   _e('Save Settings', 'submit')
 ?>" id="wptouch-button" />
   </form>
-<?php
-                  echo('</div></div>');
-              }
-              
-              add_action('admin_menu', 'bnc_options_menu');
+<?php echo('</div></div>'); } add_action('admin_menu', 'bnc_options_menu');
               //End
 ?>

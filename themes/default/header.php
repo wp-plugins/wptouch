@@ -10,9 +10,10 @@
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 <!--Strict viewport options to control how the content is shown. Increase the maximum-scale number to allow for zooming if you wish-->
 <meta name="viewport" content="maximum-scale=1.0 width=device-width initial-scale=1.0 user-scalable=no" />
-<!--This makes the iPhone/iPod touch look in the theme directory for a bookmark icon (your header logo choice), add yours to the 'wptouch/themes/default' directory to customize-->
+<!--This makes the iPhone/iPod touch look in the  wptouch/images directory for a bookmark icon (your header logo choice), add yours to the 'wptouch/images' directory to customize in the wptouch admin-->
 <link rel="apple-touch-icon" href="<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/images/icon-pool/<?php echo bnc_get_title_image(); ?>"/>
 <script src="<?php bloginfo('template_directory'); ?>/js/global.js" type="text/javascript"></script>
+<script src="<?php bloginfo('template_directory'); ?>/js/scriptaculous.js?load=effects" type="text/javascript" charset="utf-8"></script>
 <?php wp_head(); ?>
 <style type="text/css">
 #menubar {
@@ -143,15 +144,10 @@
   <div class="content post">
   <a href="#" class="h2">Warning</a>
   <div class="mainentry">
-  Sorry, this theme is only meant for use on Apple iPhones and iPod Touch compatible devices.  </div>
+  Sorry, this theme is only meant for use with WordPress on Apple's iPhone and iPod Touch.  </div>
   </div>
   
-  <?php
-      get_footer();
-?></body> 
-<?php
-      die;
-  }
-?>
+  <?php get_footer(); ?></body> 
+<?php die; } ?>
 <!--End of the Header-->
 <div class="post-spacer"></div>

@@ -1,22 +1,9 @@
-<?php
-  global $is_ajax;
-  $is_ajax = isset($_SERVER['HTTP_X_REQUESTED_WITH']);
-  if (!$is_ajax)
-      get_header();
-?>
+<?php global $is_ajax; $is_ajax = isset($_SERVER['HTTP_X_REQUESTED_WITH']); if (!$is_ajax) get_header(); ?>
 
-  <div id="content<?php
-  echo md5($_SERVER['REQUEST_URI']);
-?>" class="content">
+  <div id="content<?php echo md5($_SERVER['REQUEST_URI']); ?>" class="content">
       
-      <?php
-  global $is_ajax;
-  if ($is_ajax) {
-?>
-        <?php
-      } else
-      {
-?>
+      <?php global $is_ajax; if ($is_ajax) { ?>
+        <?php } else { ?>
         <div class="result-text">Search results for &lsquo;<?php
           the_search_query();
 ?>&rsquo;:</div>
@@ -177,8 +164,4 @@ Filed:<?php the_category(', '); ?><?php } ?>
           endif;
 ?>
   </div>
-<?php
-          global $is_ajax;
-          if (!$is_ajax)
-              get_footer();
-?>
+<?php global $is_ajax; if (!$is_ajax) get_footer(); ?>
