@@ -3,9 +3,9 @@
   			<h3>iPhone View | <a href="<?php echo get_bloginfo('home') . '/?bnc_view=normal'; ?>">Normal View</a></h3>
 
 				  <?php if (current_user_can('edit_posts')) : ?>      
-				<a href="<?php get_bloginfo('home'); ?>/wp-admin/">Admin</a> | <a href="<?php bloginfo('url'); ?>/wp-login.php?action=logout">Logout</a>
+				<a href="<?php get_bloginfo('wpurl'); ?>/wp-admin/">Admin</a> | <a href="<?php bloginfo('wpurl'); ?>/wp-login.php?action=logout">Logout</a>
 				<?php elseif (current_user_can('read_posts')) : ?>
-				<a href="<?php get_bloginfo('home'); ?>/wp-admin/profile.php">Account Profile</a> | 
+				<a href="<?php get_bloginfo('wpurl'); ?>/wp-admin/profile.php">Account Profile</a> | 
 				<a href="<?php bloginfo('wpurl'); ?>/wp-login.php?action=logout">Logout</a>
 				<?php else : ?>
 				<a href="<?php bloginfo('wpurl'); ?>/wp-login.php">Login to <?php bloginfo('name'); ?></a><?php if (get_option('comment_registration')) { ?> | <a href="<?php bloginfo('wpurl'); ?>/wp-register.php">Register</a><?php } ?>
