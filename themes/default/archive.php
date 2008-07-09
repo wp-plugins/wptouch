@@ -130,13 +130,7 @@
 ?></div>
       </div>
       
-      <a class="h2" href="<?php
-                          the_permalink()
-?>" rel="bookmark" title="Permanent Link to <?php
-                          the_title_attribute();
-?>"><?php
-                          the_title();
-?></a></h2>
+      <a class="h2" href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php if (function_exists('the_title_attribute')) the_title_attribute(); else the_title(); ?>">
           <div class="post-author">
         
         <?php

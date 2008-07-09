@@ -67,11 +67,7 @@
 ?></div>
       </div>
       
-      <a class="h2" href="<?php
-  the_permalink()
-?>" rel="bookmark" title="Permanent Link to <?php
-  the_title_attribute();
-?>">
+      <a class="h2" href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php if (function_exists('the_title_attribute')) the_title_attribute(); else the_title(); ?>">
       <?php
   if (function_exists('bnc_the_title'))
       bnc_the_title();
