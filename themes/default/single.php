@@ -42,9 +42,7 @@
       the_category();
 ?>
     <?php
-  if (get_the_tags())
-      the_tags('<br />Tags: ', ', ', '');
-?> 
+  if (function_exists('get_the_tags')) the_tags('<br />Tags: ', ', ', ''); ?>  
     </div>
     
         <div class="single-links">

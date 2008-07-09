@@ -82,9 +82,7 @@
         <form method="get" id="searchform" action="<?php
   bloginfo('siteurl');
 ?>/">
-<div><input type="text" value="<?php
-  the_search_query();
-?>" name="s" id="s" /> <input name="submit" type="submit" id="ssubmit" tabindex="5" value="Search" />
+<div><input type="text" value="<?php the_search_query(); ?>" name="s" id="s" /> <input name="submit" type="submit" id="ssubmit" tabindex="5" value="Search" />
 </div>
 </form>
         </div>
