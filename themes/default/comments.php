@@ -45,73 +45,48 @@
     <div class="comwrap">
       <div class="comtop">
             <?php if (function_exists('gravatar')) { ?>
-              <img class='gravatar' src="<?php gravatar("R", 22, "' . get_bloginfo('url') . '/wp-content/plugins/wptouch/images/blank_gravatar.png'"); ?>" alt='' />
+              <img class='gravatar' src="<?php gravatar("R", 28, "' . get_bloginfo('url') . '/wp-content/plugins/wptouch/images/blank_gravatar.png'"); ?>" alt='' />
               
 			  <?php } elseif (function_exists('get_avatar')) { 
-					 echo get_avatar( $comment, $size = '22', $default = '' . get_bloginfo('url') . '/wp-content/plugins/wptouch/images/blank_gravatar.png' ); 
+					 echo get_avatar( $comment, $size = '28', $default = '' . get_bloginfo('url') . '/wp-content/plugins/wptouch/images/blank_gravatar.png' ); 
 			  } else { ?>
 			  <?php } ?>
-		<a href="<?php
-              comment_author_url(); ?>"><?php
-              comment_author(); ?></a> said:
+		<a href="<?php comment_author_url(); ?>"><?php comment_author(); ?></a> said:
+			<div class="comdater"><?php comment_time('m / d / H:i'); ?></div>  
       </div>
     <div class="combody">  
-      <?php
-              if (function_exists('bnc_comment_text'))
-                  bnc_comment_text();
-              else
-                  comment_text()
-?>
+      <?php  if (function_exists('bnc_comment_text')) bnc_comment_text(); else comment_text(); ?>
     </div>
-	<div class="comdater"><?php
-              comment_time('m / d / H:i'); ?></div>  
   </div>
 </li>
 
   <?php
                   /* Changes every other comment to a different class */
-                  if ('alt' == $oddcomment)
-                      $oddcomment = '';
-                  else
-                      $oddcomment = 'alt'; ?>
-   <?php
-          }
-?>
+                  if ('alt' == $oddcomment) $oddcomment = '';  else $oddcomment = 'alt'; ?>
+   <?php } ?>
   <?php
   endforeach;
   /* end for each comment */
 ?>
   </ol>
 
-  <?php
-  else
-      : // this is displayed if there are no comments so far 
-?>
-  <?php
-      if ('open' == $post->comment_status)
-          : ?>
+  <?php  else : // this is displayed if there are no comments so far  ?>
+  <?php if ('open' == $post->comment_status) : ?>
   <!-- If comments are open, but there are no comments. -->
   <li id="hidelist" style="display:none"></li>
   </ol>
-  <?php
-          else
-              : // comments are closed 
-?>
+  <?php else : // comments are closed  ?>
   <!-- If comments are closed. -->
   <li style="display:none"></li>
   </ol>
   <h3 class="closed">Comments are closed on this post.</h3>
   
 
-  <?php
-              endif; ?>
+  <?php endif; ?>
 
-  <?php
-  endif; ?>
+  <?php endif; ?>
   <div id="textinputwrap">
-  <?php
-  if ('open' == $post->comment_status)
-      : ?>
+  <?php if ('open' == $post->comment_status) : ?>
   
   <?php
       if (get_option('comment_registration') && !$user_ID)
@@ -124,16 +99,10 @@
   else
       : ?>
 
-<form id="commentform" action="<?php
-      echo get_option('url'); ?>/wp-comments-post.php" method="post" onsubmit="new Ajax.Updater({success: 'commentlist'}, '<?php
-  bloginfo('template_directory')
-?>/comments-ajax.php', {asynchronous: true, evalScripts: true, insertion: Insertion.Bottom, onComplete: function(request){complete(request); new Effect.Appear('refresher');}, onFailure: function(request){failure(request)}, onLoading: function(request){loading()}, parameters: Form.serialize(this)}); return false;">
-<div id="refresher" style="display:none">&raquo; <a href="javascript:this.location.reload();">Refresh this page</a> to post a new comment.</div>
- <?php
-  if ($user_ID)
-      : ?>
+<form id="commentform" action="<?php echo get_option('url'); ?>/wp-comments-post.php" method="post" onsubmit="new Ajax.Updater({success: 'commentlist'}, '<?php bloginfo('template_directory'); ?>/comments-ajax.php', {asynchronous: true, evalScripts: true, insertion: Insertion.Bottom, onComplete: function(request){complete(request); new Effect.Appear('refresher');}, onFailure: function(request){failure(request)}, onLoading: function(request){loading()}, parameters: Form.serialize(this)}); return false;">
+<div id="refresher" style="display:none">&raquo; <a href="javascript:this.location.reload();">Refresh the page</a> to post a new comment.</div>
+ <?php if ($user_ID) : ?>
  
-
   <p class="logged"  id="respond">Logged in as <a href="<?php
       bloginfo('url'); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a></p>
   <?php else : ?>
@@ -156,7 +125,7 @@
 
   <?php endif; ?>
 
-  <p><textarea name="comment" id="comment" cols="70" rows="13" tabindex="4"></textarea></p>
+  <p><textarea name="comment" id="comment" tabindex="4"></textarea></p>
   
   <p style="padding-bottom:10px"><input name="submit" type="submit" id="submit" tabindex="5" value="Publish" />
   <input type="hidden" name="comment_post_ID" value="<?php echo $id; ?>" />

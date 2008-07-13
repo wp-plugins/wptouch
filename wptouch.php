@@ -4,7 +4,7 @@
    Plugin URI: http://bravenewcode.com/wptouch/
    Description: A plugin which formats your site when viewing with an <a href="http://www.apple.com/iphone/">iPhone</a> / <a href="http://www.apple.com/ipodtouch/">iPod touch</a>. Set header, page, and icon options for the theme by visiting the WPtouch admin panel under Options (WordPress 2.1+) or (in 2.5) the Settings tab. You'll also find a compatibility suite for aspects of your WordPress configuration. &nbsp;
    Author: Dale Mugford & Duane Storey
-   Version: 1.0.9
+   Version: 1.1
    Author URI: http://www.bravenewcode.com
    
    # Special thanks to ContentRobot and the iWPhone theme/plugin
@@ -26,10 +26,13 @@
    # Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
    */
  
- function WPtouch() {
-		$version = '1.0.9';
-		echo '<div class="wptouch-version">WPtouch version ' . $version . ' </div>';
+     // The version function
+  function WPtouch($before = '', $after = '')
+  {
+     	$version = '1.1';
+          echo $before . 'WPtouch 1.1' . $after;
 }
+
  
   //WP Admin stylesheets, detect if we're using WordPress 2.5 or lower, and serve up a slightly different layout for each:
   function wptouch_admin_css()
@@ -65,7 +68,16 @@
       }
       
       function bnc_filter_iphone()
-      {
+      
+	  {
+	  
+	  $blog = get_option('page_for_posts');
+if ($blog) {
+if (function_exists('is_front_page') && is_front_page()) { 
+header('Location: ' . get_permalink($blog));
+die;
+}
+}
           $key = 'bnc_mobile_' . md5(get_bloginfo('wpurl'));
           if (isset($_GET['bnc_view'])) {
               if ($_GET['bnc_view'] == 'mobile') {
@@ -89,7 +101,7 @@
       {
           $container = $_SERVER['HTTP_USER_AGENT'];
           //print_r($container); //this prints out the user agent array. uncomment to see it shown on page.
-          $useragents = array("iPhone", "iPod", "Aspen");
+          $useragents = array("iPhone", "iPod", "Aspen", "Safari");
           $this->applemobile = false;
           foreach ($useragents as $useragent) {
               if (eregi($useragent, $container)) {
@@ -275,12 +287,12 @@ return $v['header-text-color'];
           echo('<div class="updated"><p>Options changes saved.</p></div>');
           echo('<div class="wrap"><div id="wptouch-theme">');
           echo('<div id="wptouch-title"><img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/wptouch-logo.png" alt="" /><div class="wptouch-diff">WPtouch</div> Options</div>');
-	  echo('' . WPtouch() . '');
+	  echo('' . WPtouch('<div class="wptouch-version">','</div>') . '');
       } else {
           
           echo('<div class="wrap"><div id="wptouch-theme">');
           echo('<div id="wptouch-title"><img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/wptouch-logo.png" alt="" /><div class="wptouch-diff">WPtouch</div> Options</div>');
-		  echo('' . WPtouch() . '');
+	  echo('' . WPtouch('<div class="wptouch-version">','</div>') . '');
       }
 ?>
 

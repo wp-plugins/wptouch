@@ -25,7 +25,12 @@
   the_time('F jS, Y - g:ia')
 ?> &rsaquo; By <?php
   the_author()
-?><br /><a href="#comments">&darr; Skip to comments</a></div>
+?><br /><?php
+  if (function_exists('disqus_recent_comments')) { ?>
+ <a href="#dsq-add-new-comment">&darr; Skip to comments</a></div>
+<?php } else { ?>
+       <a href="#comments">&darr; Skip to comments</a></div>
+<?php } ?>
         <div class="clearer"></div>
           <div id="singlentry">
             <?php

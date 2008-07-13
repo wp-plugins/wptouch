@@ -18,17 +18,15 @@
 ?>
 
   <?php
-                          if (isset($post->comment_count) && $post->comment_count > 0) {
-?>
-        <div class="comment-bubble<?php
-                              if ($post->comment_count > 99)
-                                  echo('-big');
-?>"><?php
-                              comments_number('0', '1', '%');
-?></div>
-      <?php
-                          }
-?>
+  if (function_exists('disqus_recent_comments')) { ?>
+ 
+<?php } else { ?>
+       <?php if (isset($post->comment_count) && $post->comment_count > 0) { ?>
+        <div class="comment-bubble<?php if ($post->comment_count > 99) echo('-big'); ?>">
+		<?php comments_number('0', '1', '%'); ?>
+		</div>
+      <?php } ?>
+<?php } ?>
 
         <div class="post" id="post-<?php
       the_ID();
@@ -151,7 +149,9 @@ Filed:<?php the_category(', '); ?><?php } ?>
           } else
           {
 ?>
-  <div class="result-text">No search results found. Try a different query.</div>
+<div class="post">
+  No search results found. Try a different query.
+</div>
 <?php
           }
 ?>

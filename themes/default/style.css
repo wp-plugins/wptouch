@@ -1,12 +1,14 @@
+/* @override http://24.150.116.198:9098/wp-content/plugins/wptouch/themes/default/style.css */
+
 /*  
 Theme Name: WPtouch Theme
 Theme URI: http://www.bravenewcode.com/wptouch/
 Description: A slick theme for your blog or website that is shown only when using an iPhone/iPod touch.
-Version: 1.0.9
+Version: 1.1
 Author: Dale Mugford and Duane Storey
 Author URI: http://www.bravenewcode.com/
 
-	Wptouch Theme 1.0.9
+	Wptouch Theme 1.1
 	http://www.bravenewcode.com/wptouch/
 	
 	This theme was designed and built by Dale Mugford and Duane Storey,
@@ -217,6 +219,7 @@ blockquote {
 	border-bottom: 8px solid #444;
 	padding: 0;
 	margin: 0;
+	opacity: 0.85;
 }
 
 #wptouch-search-inner {
@@ -254,6 +257,7 @@ input#ssubmit {
 	bottom: 1px;
 	background: #111 no-repeat;
 	border-bottom: 8px solid #444;
+	opacity: 0.97;
 }
 
 #dropmenu-inner {
@@ -271,6 +275,7 @@ input#ssubmit {
 #dropmenu-inner li {
 	border-bottom: 1px solid #1a1a1a;
 	margin: 0;
+	background: url(images/arrow.png) no-repeat right center;
 	padding: 0;
 }
 
@@ -279,9 +284,7 @@ input#ssubmit {
 	font-weight: bold;
 	color: #eee;
 	display: block;
-	padding-top: 12px;
-	padding-bottom: 12px;
-	padding-left: 12px;
+	padding: 12px 20px 12px 12px;
 }
 
 #dropmenu-inner a:hover {
@@ -292,7 +295,7 @@ input#ssubmit {
 	padding-top: 12px;
 	padding-bottom: 12px;
 	padding-left: 12px;
-	background-color: #333;
+	background-color: #222;
 }
 
 #dropmenu-inner img {
@@ -302,6 +305,7 @@ input#ssubmit {
 	width: 28px;
 	padding-right: 10px;
 	right: 1px;
+	margin-bottom: 3%;
 }
 
 #drop-fade {
@@ -429,14 +433,19 @@ a.h2 {
 }
 
 .calendar {
-	width: 46px;
-	height: 48px;
 	text-align: center;
 	float: left;
 	margin-right: 5px;
 	position: relative;
 	bottom: 4px;
-	margin-bottom: 7px;
+	margin-bottom: 4px;
+	height: 47px;
+	width: 46px;
+}
+
+.calendar img {
+	width: 40px;
+	height: 40px;
 }
 
 .cal-month {
@@ -455,15 +464,15 @@ a.h2 {
 	padding-right: 1px;}
 
 .post-author {
-	color: #777;
+	color: #555;
 	font-size: 9px;
-	line-height: 10px;
+	line-height: 11px;
 	position: relative;
 	float: left;
 	font-weight: bold;
 	letter-spacing: 0;
 	text-align: left;
-	width: 80%;
+	width: 75%;
 }
 
 .post-author a {
@@ -511,14 +520,15 @@ a.ajax {
 
 /* @group Single Post Page */
 
-.sh2 {
+a.sh2 {
 	font-size: 20px;
 	letter-spacing: -1px;
-	display: block;
-	margin-top: 5px;
 	text-align: left;
+	line-height: 26px;
+	font-weight: normal;
+	font-style: normal;
+	margin: 0;
 	padding: 0;
-	margin-bottom: 0;
 }
 
 #singlentry {
@@ -632,6 +642,28 @@ img.small {
 /* @end */
 
 /* @group Pages */
+
+.page h2 {
+	font-size: 20px;
+	letter-spacing: -1px;
+	text-align: left;
+	line-height: 26px;
+	font-weight: normal;
+	font-style: normal;
+	padding-right: 0;
+	padding-top: 0;
+	padding-bottom: 0;
+	margin-bottom: 0;
+	margin-right: 0;
+	margin-left: 42px;
+}
+
+.page-title-icon {
+	float: left;
+	margin-right: 10px;
+	position: relative;
+	bottom: 11px;
+}
 
 .pageentry {
 	color: #444;
@@ -817,11 +849,11 @@ img.pageicon {
 	padding: 5px;}
 
 .comtop {
-	font-size: 12px;
+	font-size: 14px;
 	font-weight: bold;
 	position: relative;
 	padding: 0 5px;
-	margin: 0;
+	margin: 5px 0 0;
 }
 
 .combody {
@@ -829,17 +861,17 @@ img.pageicon {
 	margin: 0;
 	position: relative;
 	bottom: 4px;
+	text-align: justify;
+	font-size: 13px;
 }
 
 .comdater {
-	float: right;
 	font-size: 12px;
 	color: #adadad;
 	letter-spacing: 0;
 	font-weight: normal;
 	font-style: normal;
-	position: relative;
-	bottom: 17px;
+	margin-left: 35px;
 }
 
 .gravatar {
@@ -853,9 +885,9 @@ img.pageicon {
 .avatar {
 	border: 1px solid #ccc;
 	position: relative;
-	top: 7px;
-	margin-right: 2px;
+	margin-right: 5px;
 	padding: 0;
+	float: left;
 }
 
 /* @end */
@@ -889,7 +921,7 @@ textarea#comment {
 	border: 1px solid #adadad;
 	font-size: 13px;
 	color: #444;
-	height: 100px;}
+	height: 110px;}
 
 #loading {
 	position: relative;
@@ -899,12 +931,13 @@ textarea#comment {
 	opacity: 0.75;
 	z-index: 9;
 	margin: 0;
-	bottom: 161px;
+	bottom: 173px;
 	text-align: center;
 	width: 100%;
-	height: 63px;
-	padding-top: 40px;
-	max-width: 453px;}
+	height: 62px;
+	max-width: 453px;
+	padding-top: 51px;
+}
 
 form#commentform input#submit {
 	background-color: #475d79;
@@ -916,10 +949,17 @@ form#commentform input#submit {
 form#commentform input {
 	-webkit-border-radius: 10px;
 	border: 1px solid #adadad;
-	padding: 2px;
+	padding: 3px;
 	margin: 0;
-	font-size: 12px;
+	font-size: 13px;
 	color: #444;}
+
+form#commentform small {
+	color: #475d79;
+	text-shadow: #eee 2px 2px 0;
+	font-size: 12px;
+	font-weight: bold;
+}
 
 #refresher {
 	-webkit-border-radius: 10px;
@@ -960,5 +1000,48 @@ p.subscribe-to-comments input#subscribe {
 
 #footer p {
 	}
+
+/* @end */
+
+/* @group Plugin Compatibility CSS */
+
+/* @group Disqus */
+
+#disqus_thread .dsq-auth-header {
+	margin-top: -35px;
+}
+
+h3#dsq-add-new-comment {
+	color: #475d79;
+	text-shadow: #eee 2px 2px 0;
+	letter-spacing: -1px;
+	font-size: 17px;
+	position: relative;
+	bottom: 10px;
+}
+
+.dsq-by img {
+	display: none;
+}
+
+#disqus_thread {
+	-webkit-border-radius: 10px;
+	border: 1px solid #adadad;
+	background-color: #fff;
+	padding: 10px;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-top: 50px;
+}
+
+ #disqus_thread a#dsq-options-toggle {
+	float: right;
+}
+
+
+
+/* @end */
+
+
 
 /* @end */
