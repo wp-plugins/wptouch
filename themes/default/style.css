@@ -916,6 +916,11 @@ h3#comments, h3#respond {
 	margin: 0;
 	padding: 7px;}
 
+#comment_wrapper form#commentform input#submit {
+	color: #555;
+	font-weight: bold;
+}
+
 textarea#comment {
 	width: 96%;
 	-webkit-border-radius: 10px;
@@ -938,14 +943,6 @@ textarea#comment {
 	height: 62px;
 	max-width: 453px;
 	padding-top: 51px;
-}
-
-#comment_wrapper form#commentform input#submit {
-	color: #eee;
-	font-weight: bold;
-	border: 1px solid #adadad;
-	height: 35px;
-	background-color: #475d79;
 }
 
 form#commentform input {

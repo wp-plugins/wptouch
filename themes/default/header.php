@@ -69,8 +69,7 @@ if  (is_single() && !function_exists('disqus_recent_comments')) { ?>
 <?php
   endif;
 ?><?php */?>
-<a href="javascript:new Effect.toggle($('wptouch-search'),'Appear', {duration: 0.4});"><img src="<?php bloginfo('template_directory'); ?>/images/menu/search-touchmenu.png" alt="" /></a><a href="javascript:new Effect.toggle($('dropmenu'),'Appear', {duration: 0.6});"><img src="<?php bloginfo('template_directory'); ?>/images/menu/touchmenu.png" alt="" /></a>
-</div>
+<a href="javascript:new Effect.toggle($('wptouch-search'),'Appear', {duration: 0.4});"><img src="<?php bloginfo('template_directory'); ?>/images/menu/search-touchmenu.png" alt="" /></a><a href="javascript:new Effect.toggle($('dropmenu'),'Appear', {duration: 0.6});"><img src="<?php bloginfo('template_directory'); ?>/images/menu/touchmenu.png" alt="" /></a></div>
 
 		<div id="wptouch-search" style="display:none">
 		<div id="wptouch-search-inner">
@@ -125,7 +124,7 @@ if  (is_single() && !function_exists('disqus_recent_comments')) { ?>
   Sorry, this theme is only meant for use with WordPress on Apple's iPhone and iPod Touch.  </div>
   </div>
   
-  <?php get_footer(); ?>
+  <?php get_footer(); ?></body> 
 <?php die; } ?>
 <!--End of the Header-->
 <div class="post-spacer"></div>
