@@ -28,9 +28,11 @@
 <a class="h2" href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php if (function_exists('the_title_attribute')) the_title_attribute(); else the_title(); ?>">
 
       <?php if (function_exists('bnc_the_title')) bnc_the_title(); else the_title(); ?></a></h2>
-			<div class="post-author"><!--by <?php the_author() ?>-->
+			<div class="post-author">
+			<?php if (bnc_show_author()) the_author() ?>
 			<?php if (function_exists('wp_tag_cloud')) { ?>
-			<?php if (get_the_tags()) the_tags('Tags: ', ', ', ''); ?> 
+			<?php if (bnc_show_categories()) { echo('<div>Categories: '); the_category(', '); echo('</div>'); } ?> 
+			<?php if (bnc_show_tags() && get_the_tags()) echo('<div>'); the_tags('Tags: ', ', ', ''); echo('</div>'); ?> 
 			<?php } else { ?>
 			Filed:<?php the_category(', '); ?><?php } ?>
 			</div>

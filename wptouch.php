@@ -101,7 +101,7 @@ die;
       {
           $container = $_SERVER['HTTP_USER_AGENT'];
           //print_r($container); //this prints out the user agent array. uncomment to see it shown on page.
-          $useragents = array("iPhone", "iPod", "Aspen", "Safari");
+          $useragents = array("iPhone", "iPod", "Aspen");
           $this->applemobile = false;
           foreach ($useragents as $useragent) {
               if (eregi($useragent, $container)) {
@@ -230,6 +230,36 @@ die;
 		return $ids['enable-main-rss'];
 	}	
 
+	function bnc_show_author() {
+      $ids = bnc_wp_touch_get_menu_pages();
+
+      if (!isset($ids['enable-main-name'])) {
+			return true;
+		}
+
+		return $ids['enable-main-name'];
+	}
+
+	function bnc_show_tags() {
+      $ids = bnc_wp_touch_get_menu_pages();
+
+      if (!isset($ids['enable-main-tags'])) {
+			return true;
+		}
+
+		return $ids['enable-main-tags'];
+	}
+
+	function bnc_show_categories() {
+      $ids = bnc_wp_touch_get_menu_pages();
+
+      if (!isset($ids['enable-main-categories'])) {
+			return true;
+		}
+
+		return $ids['enable-main-categories'];
+	}
+
 	function bnc_is_email_enabled() {
       $ids = bnc_wp_touch_get_menu_pages();
 
@@ -250,7 +280,7 @@ die;
       global $table_prefix;
       $keys = array();
       foreach ($ids as $k => $v) {
-          if ($k == 'main_title' || $k == 'enable-main-home' || $k == 'enable-main-rss' || $k == 'enable-main-email') {
+          if ($k == 'main_title' || $k == 'enable-main-home' || $k == 'enable-main-rss' || $k == 'enable-main-email' || $k == 'enable-main-name' || $k == 'enable-main-tags' || $k == 'enable-main-categories') {
 				// do nothing
           } else {
 				if (is_numeric($k)) {
@@ -364,6 +394,23 @@ function bnc_get_header_color()
 				$a['enable-main-email'] = 0;
 			}
 
+			if (isset($_POST['enable-main-name'])) {
+				$a['enable-main-name'] = 1;
+			} else {
+				$a['enable-main-name'] = 0;
+			}
+
+			if (isset($_POST['enable-main-tags'])) {
+				$a['enable-main-tags'] = 1;
+			} else {
+				$a['enable-main-tags'] = 0;
+			}
+
+         if (isset($_POST['enable-main-categories'])) {
+            $a['enable-main-categories'] = 1;
+         } else {
+            $a['enable-main-categories'] = 0;
+         }
 
           foreach ($_POST as $k => $v) {
               if ($k == 'enable_main_title') {
@@ -385,13 +432,38 @@ function bnc_get_header_color()
       }
       
       	$v = unserialize(get_option('bnc_iphone_pages'));
-	if (!isset($v['header-background-color'])) {
-		$v['header-background-color'] = '222222';
-	}
 
-	if (!isset($v['header-text-color'])) {
-		$v['header-text-color'] = 'eeeeee';
-	}
+			if (!isset($v['header-background-color'])) {
+				$v['header-background-color'] = '222222';
+			}
+
+			if (!isset($v['header-text-color'])) {
+				$v['header-text-color'] = 'eeeeee';
+			}
+
+			if (!isset($v['enable-main-home'])) {
+            $v['enable-main-home'] = 1;
+			}
+
+			if (!isset($v['enable-main-rss'])) {
+            $v['enable-main-rss'] = 1;
+			}
+
+			if (!isset($v['enable-main-email'])) {
+            $v['enable-main-email'] = 1;
+			}
+
+			if (!isset($v['enable-main-name'])) {
+            $v['enable-main-name'] = 0;
+			}
+
+			if (!isset($v['enable-main-tags'])) {
+            $v['enable-main-tags'] = 0;
+			}
+
+			if (!isset($v['enable-main-categories'])) {
+            $v['enable-main-categories'] = 1;
+			}
 
 	?>
   <form method="post" action="<?php
@@ -426,11 +498,11 @@ function bnc_get_header_color()
 				<tr valign="top">
 		<th scope="row"><div class="wptouch-thhead">Main Post Options</div><div class="wptouch-thtext">You can select which items will be shown beneath post titles on the index, search &amp; archive pages here. </div></th>
 		
-		<td><input type="checkbox" name="enable-main-home" <?php if (isset($v['enable-main-home']) && $v['enable-main-home'] == 1) echo('checked'); ?>><label for="enable-authorname"> Show Author's Name</label><br /><br />
+		<td><input type="checkbox" name="enable-main-name" <?php if (isset($v['enable-main-name']) && $v['enable-main-name'] == 1) echo('checked'); ?>><label for="enable-authorname"> Show Author's Name</label><br /><br />
 		
-		<input type="checkbox" name="enable-main-rss" <?php if (isset($v['enable-main-rss']) && $v['enable-main-rss'] == 1) echo('checked'); ?>><label for="enable-tags"> Show Tags</label><br /><br />
+		<input type="checkbox" name="enable-main-tags" <?php if (isset($v['enable-main-tags']) && $v['enable-main-tags'] == 1) echo('checked'); ?>><label for="enable-tags"> Show Tags</label><br /><br />
 		
-		<input type="checkbox" name="enable-main-email" <?php if (isset($v['enable-main-email']) && $v['enable-main-email'] == 1) echo('checked'); ?>><label for="enable-categories"> Show Categories</label></td>
+		<input type="checkbox" name="enable-main-categories" <?php if (isset($v['enable-main-categories']) && $v['enable-main-categories'] == 1) echo('checked'); ?>><label for="enable-categories"> Show Categories</label></td>
 				</tr>
 	</table>
 	</div>
