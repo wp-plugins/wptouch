@@ -404,6 +404,8 @@ function bnc_get_header_color()
 ?>" alt="" /> <?php bloginfo('title'); ?></div>		</div>
 
 	<div id="wptouch-header-css">
+	
+	
   	<table class="wptouch-form-table">
 	<tr valign="top">
 		<th scope="row"><div class="wptouch-thhead">Header Styling</div><div class="wptouch-thtext">You can use this section to customize the look of the WPtouch header.<br /><br />Choose a home screen bookmark/header icon in the <em>Logo, Pages &amp; Icons</em> pane below.</div></th>
@@ -415,6 +417,24 @@ function bnc_get_header_color()
 	</table>
 	
 	</div>
+	<?php
+	// Here's Where the new options are hooray
+	?>
+	
+	<div id="wptouch-active">  
+		  <table class="wptouch-form-table">
+				<tr valign="top">
+		<th scope="row"><div class="wptouch-thhead">Main Post Options</div><div class="wptouch-thtext">You can select which items will be shown beneath post titles on the index, search &amp; archive pages here. </div></th>
+		
+		<td><input type="checkbox" name="enable-main-home" <?php if (isset($v['enable-main-home']) && $v['enable-main-home'] == 1) echo('checked'); ?>><label for="enable-authorname"> Show Author's Name</label><br /><br />
+		
+		<input type="checkbox" name="enable-main-rss" <?php if (isset($v['enable-main-rss']) && $v['enable-main-rss'] == 1) echo('checked'); ?>><label for="enable-tags"> Show Tags</label><br /><br />
+		
+		<input type="checkbox" name="enable-main-email" <?php if (isset($v['enable-main-email']) && $v['enable-main-email'] == 1) echo('checked'); ?>><label for="enable-categories"> Show Categories</label></td>
+				</tr>
+	</table>
+	</div>
+	
 
   <div id="wptouch-available">  
   	<table class="wptouch-form-table">
