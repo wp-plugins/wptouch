@@ -46,7 +46,7 @@ if (!$is_ajax) get_header();
 			<?php } ?>
 			<?php } ?>
 
-		<div class="post" id="post-<?php the_ID(); ?>">
+<div class="post" id="post-<?php the_ID(); ?>">
 
 					<a class="post-arrow" id="arrow-<?php the_ID(); ?>" href="javascript:new Effect.toggle($('entry-<?php the_ID(); ?>'),'Appear', {duration: 0.5});new Effect.toggle($('entry-<?php the_ID(); ?>'),'Appear', {duration: 0.5});Element.setStyle('arrow-<?php the_ID(); ?>', {display:'none'} );Element.setStyle('arrow-down-<?php the_ID(); ?>', {display:'block'} );"></a>
 					
@@ -57,22 +57,27 @@ if (!$is_ajax) get_header();
 						<div class="cal-date"><?php the_time('j') ?></div>
 						</div>
       
-					<a class="h2" href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php if (function_exists('the_title_attribute')) the_title_attribute(); else the_title(); ?>">
-					
-						<div class="post-author">
-						<?php the_time('Y') ?> <?php if (function_exists('wp_tag_cloud')) { ?><?php if (get_the_tags()) the_tags(' | Tagged: ', ', ', ''); ?> 
-						<?php } else { ?>Filed:<?php the_category(', '); ?><?php } ?>
-						<!--<br /><a onclick="new Effect.toggle($('entry-<?php the_ID(); ?>'),'Appear', {duration: 0.5});" href="#">Read Excerpt &darr;</a>-->
-						</div>
+<a class="h2" href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php if (function_exists('the_title_attribute')) the_title_attribute(); else the_title(); ?>">
 
-<div class="clearer"></div>
+      <?php if (function_exists('bnc_the_title')) bnc_the_title(); else the_title(); ?></a></h2>
+			<div class="post-author">
+			<?php if (bnc_show_author()) { ?><span class="lead">Author:</span> <?php the_author(); ?><br /><?php } ?>
+			<?php if (function_exists('wp_tag_cloud')) { ?>
+			<?php if (bnc_show_categories()) { echo('<span class="lead">Categories:</span> '); the_category(', '); echo('<br />'); } ?> 
+			<?php if (bnc_show_tags() && get_the_tags()) { echo(''); the_tags('<span class="lead">Tags:</span> ', ', ', ''); echo(''); } ?> 
+			<?php } else { ?>
+			Filed:<?php the_category(', '); ?><?php } ?>
+			</div>
+					<div class="clearer"></div>
 
-				<div id="entry-<?php the_ID(); ?>" style="display:none" class="mainentry">
-				<?php the_content_rss('', false, '', 50); ?><a href="<?php the_permalink(); ?>">Read More &raquo;</a>
-				</div>  
-		</div>
-	
-<?php endwhile; ?>
+            <div id="entry-<?php the_ID(); ?>" style="display:none" class="mainentry">
+            <?php if (function_exists('bnc_translate_start')) bnc_translate_start(); ?>
+            <?php the_content_rss('', false, '', 50); ?>
+            <?php if (function_exists('bnc_translate_stop')) bnc_translate_stop(); ?>
+            <a href="<?php the_permalink() ?>">Read More &raquo;</a>
+        </div>  
+      </div>
+    <?php endwhile; ?>
 
 				<div id="call<?php echo md5($_SERVER['REQUEST_URI']); ?>">
 				<a class="ajax" href="javascript:new Effect.Appear('spinner<?php echo md5($_SERVER['REQUEST_URI']); ?>', {duration:0.2});new Ajax.Updater('ajaxentries<?php

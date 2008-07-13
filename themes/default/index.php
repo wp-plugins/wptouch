@@ -29,15 +29,14 @@
 
       <?php if (function_exists('bnc_the_title')) bnc_the_title(); else the_title(); ?></a></h2>
 			<div class="post-author">
-			<?php if (bnc_show_author()) the_author() ?>
+			<?php if (bnc_show_author()) { ?><span class="lead">Author:</span> <?php the_author(); ?><br /><?php } ?>
 			<?php if (function_exists('wp_tag_cloud')) { ?>
-			<?php if (bnc_show_categories()) { echo('<div>Categories: '); the_category(', '); echo('</div>'); } ?> 
-			<?php if (bnc_show_tags() && get_the_tags()) { echo('<div>'); the_tags('Tags: ', ', ', ''); echo('</div>'); } ?> 
+			<?php if (bnc_show_categories()) { echo('<span class="lead">Categories:</span> '); the_category(', '); echo('<br />'); } ?> 
+			<?php if (bnc_show_tags() && get_the_tags()) { echo(''); the_tags('<span class="lead">Tags:</span> ', ', ', ''); echo(''); } ?> 
 			<?php } else { ?>
 			Filed:<?php the_category(', '); ?><?php } ?>
 			</div>
-        
-		<div class="clearer"></div>
+					<div class="clearer"></div>
 
             <div id="entry-<?php the_ID(); ?>" style="display:none" class="mainentry">
             <?php if (function_exists('bnc_translate_start')) bnc_translate_start(); ?>

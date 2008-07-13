@@ -39,7 +39,8 @@ body {
 
 a {
 	text-decoration: none;
-	color: #006bb3;}
+	color: #006bb3;
+}
 
 a:active {
 	}
@@ -256,8 +257,8 @@ input#ssubmit {
 	position: relative;
 	bottom: 1px;
 	background: #111 no-repeat;
-	border-bottom: 8px solid #444;
 	opacity: 0.97;
+	border-bottom: 3px solid #666;
 }
 
 #dropmenu-inner {
@@ -267,7 +268,7 @@ input#ssubmit {
 
 #dropmenu-inner ul {
 	margin: 0;
-	padding: 5px 0 0;
+	padding: 2px 0 0;
 	list-style-type: none;
 	position: relative;
 }
@@ -284,8 +285,8 @@ input#ssubmit {
 	font-weight: bold;
 	color: #eee;
 	display: block;
-	padding: 12px 20px 12px 12px;
 	width: 85%;
+	padding: 12px 20px 12px 12px;
 }
 
 #dropmenu-inner a:hover {
@@ -293,10 +294,8 @@ input#ssubmit {
 	font-weight: bold;
 	color: #EEE;
 	display: block;
-	padding-top: 12px;
-	padding-bottom: 12px;
-	padding-left: 12px;
 	background-color: #222;
+	width: 100%;
 }
 
 #dropmenu-inner img {
@@ -474,10 +473,16 @@ a.h2 {
 	letter-spacing: 0;
 	text-align: left;
 	width: 75%;
+	height: auto;
+}
+
+.post-author span.lead {
+	font-weight: normal;
+	font-style: normal;
 }
 
 .post-author a {
-	color: #666;
+	color: #006bb3;
 	padding-top: 1px;
 	padding-bottom: 10px;
 	font-weight: bold;
