@@ -940,12 +940,13 @@ textarea#comment {
 	padding-top: 51px;
 }
 
-form#commentform input#submit {
-	background-color: #475d79;
+#comment_wrapper form#commentform input#submit {
 	color: #eee;
 	font-weight: bold;
 	border: 1px solid #adadad;
-	height: 35px;}
+	height: 35px;
+	background-color: #475d79;
+}
 
 form#commentform input {
 	-webkit-border-radius: 10px;

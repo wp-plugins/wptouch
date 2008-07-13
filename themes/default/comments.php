@@ -23,19 +23,10 @@
 <div id="comment_wrapper">
 
   <ol class="commentlist" id="commentlist">
-  <?php
-  if ($comments)
-      : ?>
-<?php
-      foreach ($comments as $comment)
-          : ?>
-  <?php
-          if (get_comment_type() == "comment") {
-?>
-<li class="<?php
-              echo $oddcomment; ?>" id="comment-<?php
-              comment_ID()
-?>">
+  <?php if ($comments) : ?>
+<?php foreach ($comments as $comment) : ?>
+  <?php if (get_comment_type() == "comment") { ?>
+<li class="<?php echo $oddcomment; ?>" id="comment-<?php comment_ID(); ?>">
       <?php
               if ($comment->comment_approved == '0')
                   : ?>
@@ -130,7 +121,8 @@
   <p style="padding-bottom:10px"><input name="submit" type="submit" id="submit" tabindex="5" value="Publish" />
   <input type="hidden" name="comment_post_ID" value="<?php echo $id; ?>" />
    <div id="loading"  style="display:none">
-   <img src="<?php bloginfo('template_directory'); ?>/images/comment-ajax-loader.gif" alt="" /></div>
+   <img src="<?php bloginfo('template_directory'); ?>/images/comment-ajax-loader.gif" alt="" />
+   </div>
   </p>
   <div id="errors" style="display:none">There was an error. Please refresh the page and try again.</div>
   <?php do_action('comment_form', $post->ID); ?>

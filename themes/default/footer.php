@@ -6,19 +6,18 @@
 					<br />
 					Powered by <a href="http://wordpress.org/">WordPress</a> with <a href="http://www.bravenewcode.com/wptouch/"><?php WPtouch(); ?></a>
 					<br />
-					All content Copyright &copy; <?php the_date('Y'); ?> <?php bloginfo('name'); ?></a>
+					All content Copyright &copy; <?php the_date('Y'); ?> <?php bloginfo('name'); ?>
 					<br />
-									  <?php if (current_user_can('edit_posts')) : ?>      
+			
+			<?php if (current_user_can('edit_posts')) : ?>      
 				<a href="<?php get_bloginfo('wpurl'); ?>/wp-admin/">Admin</a> | <a href="<?php bloginfo('wpurl'); ?>/wp-login.php?action=logout">Logout</a>
 				<?php elseif (current_user_can('read_posts')) : ?>
-				<a href="<?php get_bloginfo('wpurl'); ?>/wp-admin/profile.php">Account Profile</a> | 
-				<a href="<?php bloginfo('wpurl'); ?>/wp-login.php?action=logout">Logout</a>
+				<a href="<?php get_bloginfo('wpurl'); ?>/wp-admin/profile.php">Account Profile</a> | <a href="<?php bloginfo('wpurl'); ?>/wp-login.php?action=logout">Logout</a>
 				<?php else : ?>
 				<a href="<?php bloginfo('wpurl'); ?>/wp-login.php">Login to <?php bloginfo('name'); ?></a><?php if (get_option('comment_registration')) { ?> | <a href="<?php bloginfo('wpurl'); ?>/wp-register.php">Register</a><?php } ?>
 				<?php  endif; ?>
  		 </p>
 	</div>
-</div>
   <?php
   //WPtouch theme designed & developed by Dale Mugford & Duane Storey for BraveNewCode.com
   //Licensed under GPL
