@@ -241,17 +241,18 @@ die;
   function bnc_wp_touch_get_pages()
   {
       $ids = bnc_wp_touch_get_menu_pages();
-      
+
       $a = array();
       
       global $table_prefix;
       $keys = array();
       foreach ($ids as $k => $v) {
-          if ($k == 'main_title' || $k = 'enable-main-home' || $k = 'enable-main-rss' || $k='enable-main-email') {
+          if ($k == 'main_title' || $k == 'enable-main-home' || $k == 'enable-main-rss' || $k == 'enable-main-email') {
 				// do nothing
-          } else
-		if (is_numeric($k)) {
-              		$keys[] = $k;
+          } else {
+				if (is_numeric($k)) {
+           		$keys[] = $k;
+				}
 			}
       }
       
