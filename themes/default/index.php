@@ -32,7 +32,7 @@
 			<?php if (bnc_show_author()) the_author() ?>
 			<?php if (function_exists('wp_tag_cloud')) { ?>
 			<?php if (bnc_show_categories()) { echo('<div>Categories: '); the_category(', '); echo('</div>'); } ?> 
-			<?php if (bnc_show_tags() && get_the_tags()) echo('<div>'); the_tags('Tags: ', ', ', ''); echo('</div>'); ?> 
+			<?php if (bnc_show_tags() && get_the_tags()) { echo('<div>'); the_tags('Tags: ', ', ', ''); echo('</div>'); } ?> 
 			<?php } else { ?>
 			Filed:<?php the_category(', '); ?><?php } ?>
 			</div>
