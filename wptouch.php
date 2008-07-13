@@ -211,29 +211,32 @@ die;
   }
 
 	function bnc_is_home_enabled() {
+      $ids = bnc_wp_touch_get_menu_pages();
+
       if (!isset($ids['enable-main-home']))  {
 			return true;
 		}
 
-      $ids = bnc_wp_touch_get_menu_pages();
 		return $ids['enable-main-home'];
 	}	
 
 	function bnc_is_rss_enabled() {
+      $ids = bnc_wp_touch_get_menu_pages();
+
       if (!isset($ids['enable-main-rss'])) {
 			return true;
 		}
 
-      $ids = bnc_wp_touch_get_menu_pages();
 		return $ids['enable-main-rss'];
 	}	
 
 	function bnc_is_email_enabled() {
+      $ids = bnc_wp_touch_get_menu_pages();
+
       if (!isset($ids['enable-main-email'])) {
 			return true;
 		}
 
-      $ids = bnc_wp_touch_get_menu_pages();
 		return $ids['enable-main-email'];
 	}	
   
