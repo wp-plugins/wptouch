@@ -26,19 +26,20 @@ WPtouch Admin Panel Stylesheet for WordPress 2.5
 	color: #3c627f;
 }
 
+#wptouch-theme #wptouch-title {
+	padding-bottom: 43px;
+	border-bottom: 1px solid #dedede;
+}
+
 #wptouch-theme #wptouch-title img {
 	position: relative;
-	top: 55px;
 	margin-top: -35px;
 }
 
-#wptouch-theme #wptouch-title {
-	letter-spacing: -2px;
-	color: #CCC;
-	font: bold 34px "Lucida Grande", Arial, Verdana, sans-serif;
-	padding-bottom: 65px;
-	border-bottom: 1px solid #b9d6de;
-	text-shadow: #999 1px 2px 2px;
+#wptouch-theme #wptouch-title img.logo {
+	position: relative;
+	top: 43px;
+	margin-right: -20px;
 }
 
 #wptouch-theme .wptouch-thhead {
@@ -300,7 +301,7 @@ WPtouch Admin Panel Stylesheet for WordPress 2.5
 	height: 284px;
 	position: relative;
 	float: right;
-	left: 180px;
+	left: 95px;
 }
 
 #wptouch-theme #head-prev {

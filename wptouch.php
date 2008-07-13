@@ -286,12 +286,12 @@ return $v['header-text-color'];
       if (isset($_POST['submit'])) {
           echo('<div class="updated"><p>Options changes saved.</p></div>');
           echo('<div class="wrap"><div id="wptouch-theme">');
-          echo('<div id="wptouch-title"><img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/wptouch-logo.png" alt="" /><div class="wptouch-diff">WPtouch</div> Options</div>');
+          echo('<div id="wptouch-title"><img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/wptouch-logo.png" class="logo" alt="" /><img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/wptouch-title.jpg" alt="" /></div>');
 	  echo('' . WPtouch('<div class="wptouch-version">','</div>') . '');
       } else {
           
           echo('<div class="wrap"><div id="wptouch-theme">');
-          echo('<div id="wptouch-title"><img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/wptouch-logo.png" alt="" /><div class="wptouch-diff">WPtouch</div> Options</div>');
+          echo('<div id="wptouch-title"><img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/wptouch-logo.png" class="logo" alt="" /><img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/wptouch-title.jpg" alt="" /></div>');
 	  echo('' . WPtouch('<div class="wptouch-version">','</div>') . '');
       }
 ?>
