@@ -63,6 +63,10 @@ WPtouch Admin Panel Stylesheet for WordPress 2.5
 
 /* @end */
 
+.show-hide td {
+	height: 25px;
+}
+
 /* @group Available Icons Table */
 
 #wptouch-theme .wptouch-diff {
@@ -196,6 +200,19 @@ WPtouch Admin Panel Stylesheet for WordPress 2.5
 	font-size: 12px;
 	font-weight: bold;
 	margin: 10px;
+}
+
+#wptouch-theme #wptouch-page-choices h4 {
+	color: #333;
+	font-size: 12px;
+	font-weight: bold;
+	margin: 10px;
+}
+
+#wptouch-theme #wptouch-page-choices #show-hide-sep {
+	border-top: 1px solid #b9d6de;
+	padding-top: 5px;
+	margin-top: 10px;
 }
 
 #wptouch-theme #wptouch-plugins img {

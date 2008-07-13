@@ -209,6 +209,34 @@ die;
           return 'Default.png';
       }
   }
+
+	function bnc_is_home_enabled() {
+      $ids = bnc_wp_touch_get_menu_pages();
+      if (isset($ids['enable-main-home'])) {
+			return $ids['enable-main-home'];
+      } else {
+			return false;
+		}
+	}	
+
+	function bnc_is_rss_enabled() {
+      $ids = bnc_wp_touch_get_menu_pages();
+      if (isset($ids['enable-main-rss'])) {
+			return $ids['enable-main-rss'];
+      } else {
+			return false;
+		}
+	}	
+
+	function bnc_is_email_enabled() {
+      $ids = bnc_wp_touch_get_menu_pages();
+      if (isset($ids['enable-main-email'])) {
+			return $ids['enable-main-email'];
+      } else {
+			return false;
+		}
+	}	
+  
   
   function bnc_wp_touch_get_pages()
   {
@@ -219,12 +247,12 @@ die;
       global $table_prefix;
       $keys = array();
       foreach ($ids as $k => $v) {
-          if ($k == 'main_title') {
-              //$a['main_title'] = $v;
+          if ($k == 'main_title' || $k = 'enable-main-home' || $k = 'enable-main-rss' || $k='enable-main-email') {
+				// do nothing
           } else
 		if (is_numeric($k)) {
               		$keys[] = $k;
-		}
+			}
       }
       
       $query = "select * from {$table_prefix}posts where ID in (" . implode(',', $keys) . ") order by post_title asc";
@@ -253,15 +281,15 @@ return $v['header-background-color'];
   
 function bnc_get_header_color()
 {
-$v = unserialize(get_option('bnc_iphone_pages')); if (!isset($v['header-text-color'])) { $v['header-text-color'] = 'eeeeee';
-}
-return $v['header-text-color'];
+	$v = unserialize(get_option('bnc_iphone_pages')); 
+	if (!isset($v['header-text-color'])) { $v['header-text-color'] = 'eeeeee'; }
+	return $v['header-text-color'];
 }
 
   function bnc_get_icon_list()
   {
-      $a = preg_match('#(.*)wptouch.php#', __FILE__, $matches);
-	$dir = opendir($matches[1] . 'images/icon-pool/');
+		$a = preg_match('#(.*)wptouch.php#', __FILE__, $matches);
+		$dir = opendir($matches[1] . 'images/icon-pool/');
       $files = array();
       if ($dir) {
           while (false !== ($file = readdir($dir))) {
@@ -279,7 +307,15 @@ return $v['header-text-color'];
       ksort($files);
       return $files;
   }
-  
+
+	function bnc_output_icons($icons) {
+      foreach ($icons as $icon) {
+          echo('<option value="' . $icon['name'] . '" ');
+          if (isset($v['main_title']) && $icon['name'] == $v['main_title'])
+              echo('selected');
+          echo(">{$icon['friendly']}</option>");
+      }
+	}	
   
   function bnc_wp_touch_page()
   {
@@ -304,8 +340,27 @@ return $v['header-text-color'];
           // let's rock and roll
 
           unset($_POST['submit']);
+			$a = array();
 
-          $a = array();
+			if (isset($_POST['enable-main-home'])) {
+				$a['enable-main-home'] = 1;
+			} else {
+				$a['enable-main-home'] = 0;
+			}
+
+			if (isset($_POST['enable-main-rss'])) {
+				$a['enable-main-rss'] = 1;
+			} else {
+				$a['enable-main-rss'] = 0;
+			}
+
+			if (isset($_POST['enable-main-email'])) {
+				$a['enable-main-email'] = 1;
+			} else {
+				$a['enable-main-email'] = 0;
+			}
+
+
           foreach ($_POST as $k => $v) {
               if ($k == 'enable_main_title') {
                   $a['main_title'] = $v;
@@ -422,9 +477,12 @@ return $v['header-text-color'];
               }
           }
       }
-      
-      echo("</table>");
 ?>
+		<tr><td colspan="2"><div id="show-hide-sep"><h4>Default Icons</h4></div></td></tr>
+		<tr class="show-hide"><td class="wptouch-select-left"><input type="checkbox" name="enable-main-home" <?php if (isset($v['enable-main-home']) && $v['enable-main-home'] == 1) echo('checked'); ?>><label for="enable-main-home">Enable Home Icon</label></td><td></td></tr>
+		<tr class="show-hide"><td class="wptouch-select-left"><input type="checkbox" name="enable-main-rss" <?php if (isset($v['enable-main-rss']) && $v['enable-main-rss'] == 1) echo('checked'); ?>><label for="enable-main-rss">Enable RSS Icon</label></td><td></td></tr>
+		<tr class="show-hide"><td class="wptouch-select-left"><input type="checkbox" name="enable-main-email" <?php if (isset($v['enable-main-email']) && $v['enable-main-email'] == 1) echo('checked'); ?>><label for="enable-main-email">Enable Email Icon</label></td><td></td></tr>
+		</table>
       </td>
     </tr>
     
