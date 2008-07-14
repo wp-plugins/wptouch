@@ -42,7 +42,13 @@
           $url = $url . '/wp-content/plugins/wptouch/admin-css/wptouch-admin.css';
       }
       echo '<link rel="stylesheet" type="text/css" href="' . $url . '" />';
+		$version = (float)get_bloginfo('version');
+		if ($version < 2.2) {
+			echo '<script src="http://www.google.com/jsapi"></script>';
+			echo '<script type="text/javascript">google.load("jquery", "1"); jQuery.noConflict( ); </script>';
+		}
   }
+
   add_action('admin_head', 'wptouch_admin_css');
   
   
