@@ -530,7 +530,7 @@ The Style Section
 <div class="wptouch-itemrow wptouchbump">
 	<div class="wptouch-item-desc">
 	<h2>Style Options</h2>
-	<p>Select the foreground and background colors for the header, and your site-wide link colour using hex values.<br /><br /><a href="http://www.colorpicker.com/" target="_blank">Click here</a> to view a color picker to help you select your colors.</p>
+	<p>Select the foreground and background colors for the header, and your site-wide link color using hex values.<br /><br /><a href="http://www.colorpicker.com/" target="_blank">Click here</a> to view a color picker to help you select your colors.</p>
 	</div>
 		
 	<div class="wptouch-item-content-box1" id="wptouchstyle">
@@ -558,7 +558,7 @@ The Post Listings Section
 <div class="wptouch-itemrow">
 	<div class="wptouch-item-desc">
 	<h2>Post Listings Options</h2>
-	<p>Select which post-meta items will be shown beneath post titles on the index, search &amp; archive pages here. </p>
+	<p>Select which post-meta items will be shown beneath post titles on the index, search &amp; archive pages. </p>
 	</div>
 	
 		<div class="wptouch-item-content-box1">
