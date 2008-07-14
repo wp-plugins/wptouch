@@ -37,7 +37,7 @@
       $url = get_bloginfo('wpurl');
       $version = (float)get_bloginfo('version');
       if ($version >= 2.5) {
-          $url = $url . '/wp-content/plugins/wptouch/admin-css/wptouch25-admin.css';
+          $url = $url . '/wp-content/plugins/wptouch/admin-css/wptouch-admin.css';
       } else {
           $url = $url . '/wp-content/plugins/wptouch/admin-css/wptouch-admin.css';
       }
