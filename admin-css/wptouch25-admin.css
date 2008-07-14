@@ -150,14 +150,13 @@ WPtouch Admin Panel Stylesheet for WordPress 2.5
 	float: left;
 	list-style-type: circle;
 	width: 100%;
-	border-bottom: 1px solid #dedede;
 	margin: 0;
 	padding: 0;
 }
 
 #wptouch-news li h2 {
 	border-bottom-style: none;
-	margin: 0 0 5px;
+	margin: 0 0 1px;
 	padding: 0;
 }
 
