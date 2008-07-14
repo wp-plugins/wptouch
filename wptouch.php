@@ -98,7 +98,7 @@ die;
       {
           $container = $_SERVER['HTTP_USER_AGENT'];
           //print_r($container); //this prints out the user agent array. uncomment to see it shown on page.
-          $useragents = array("iPhone", "iPod", "Aspen");
+          $useragents = array("iPhone", "iPod", "Safari");
           $this->applemobile = false;
           foreach ($useragents as $useragent) {
               if (eregi($useragent, $container)) {
@@ -484,11 +484,23 @@ return $v['link-color'];
 	<div id="wptouch-preview" style="display:none">
 		<div style="background: #<?php echo bnc_get_header_background(); ?> url(<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/themes/default/images/head-fade-bk.png) repeat-x; color:#<?php echo bnc_get_header_color(); ?>" id="head-prev"><img src="<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/images/icon-pool/<?php echo bnc_get_title_image(); ?>" alt="" /> <?php bloginfo('title'); ?>
 		</div>				
-	</div>
+	</div>	
+	
 
-<h2>WPtouch News</h2>
-<div id="wptouch-news-frame" style="display: none;">
-</div>
+<?php
+/*
+The News Section
+*/
+?>
+
+<div class="wptouch-itemrow">
+	<div class="wptouch-item-desc">
+	<h2>News and Support</h2>
+	<p>Here you'll find dynamic information on WPtouch and future changes, as well as support entries and FAQ notes.<br /><br />For now you'll find the latest entries tagged WPtouch on BraveNewCode.com</p>
+	</div>
+		
+	<div class="wptouch-item-content-box1">
+	<div id="wptouch-news-frame" style="display: none;"></div>
 
 <script type="text/javascript">
 	jQuery.ajax({
@@ -497,138 +509,165 @@ return $v['link-color'];
 			jQuery("#wptouch-news-frame").html(data).fadeIn();
 		}});
 </script>
+	</div>
+	
+	<div class="wptouch-clearer"></div>
+</div>
 
-<div id="wptouch-header-css">
-  	<table class="wptouch-form-table">
-		<tr valign="top">
-			<th scope="row">
-			<div class="wptouch-thtext">You can use this section to customize the look of WPtouch links, header logo and colors, and post options.
-			<br /><br /></div>
-			</th>
+
+<?php
+/*
+The Style Section
+*/
+?>
+
+<div class="wptouch-itemrow wptouchbump">
+	<div class="wptouch-item-desc">
+	<h2>Style Options</h2>
+	<p>Select the foreground and background colors for the header, and your sitewide link colour using hex values.<br /><br /><a href="http://www.colorpicker.com/" target="_blank">Click here</a> to view an color picker to help you select your colors.</p>
+	</div>
 		
-				<td>
-				<div class="header-item-desc">Header Background Color</div>
-				<div class="header-input">#<input text="text" name="header-background-color" type="text" value="<?php echo $v['header-background-color']; ?>" /></div>
+	<div class="wptouch-item-content-box1" id="wptouchstyle">
 				
-				<div class="header-item-desc">Header Text Color</div>
-				<div class="header-input">#<input type="text" name="header-text-color" type="text" value="<?php echo $v['header-text-color']; ?>" /></div>
+<div class="header-item-desc">Header Background Color</div>
+<div class="header-input">#<input text="text" name="header-background-color" type="text" value="<?php echo $v['header-background-color']; ?>" /></div>
+
+<div class="header-item-desc">Header Text Color</div>
+<div class="header-input">#<input type="text" name="header-text-color" type="text" value="<?php echo $v['header-text-color']; ?>" /></div>
+
+<div class="header-item-desc">Link Color</div>
+<div class="header-input">#<input type="text" name="link-color" type="text" value="<?php echo $v['link-color']; ?>" /></div>
 				
-				<div class="header-item-desc">Link Color</div>
-				<div class="header-input">#<input type="text" name="link-color" type="text" value="<?php echo $v['link-color']; ?>" /></div>
-				</td>
-				
-				<td><input type="checkbox" name="enable-main-home" <?php if (isset($v['enable-main-home']) && $v['enable-main-home'] == 1) echo('checked'); ?>><label for="enable-main-home">Enable Home Icon</label></td>
-	
-				<td><input type="checkbox" name="enable-main-rss" <?php if (isset($v['enable-main-rss']) && $v['enable-main-rss'] == 1) echo('checked'); ?>><label for="enable-main-rss">Enable RSS Icon</label></td>
-	
-				<td><input type="checkbox" name="enable-main-email" <?php if (isset($v['enable-main-email']) && $v['enable-main-email'] == 1) echo('checked'); ?>><label for="enable-main-email">Enable Email Icon</label>
-				</td>
-				</tr>
-				</table>
+		</div>
+	<div class="wptouch-clearer"></div>
 </div>
-	<?php
-	// Here's Where the new options are hooray
-	?>
+
+
+<?php
+/*
+The Post Listings Section
+*/
+?>
+
+<div class="wptouch-itemrow">
+	<div class="wptouch-item-desc">
+	<h2>Post Listings Options</h2>
+	<p>Select which post-meta items will be shown beneath post titles on the index, search &amp; archive pages here. </p>
+	</div>
 	
-<div id="wptouch-active">  
-	<table class="wptouch-form-table">
-		<tr valign="top">
-			<th scope="row">
-			<div class="wptouch-thhead">Main Post Options</div><div class="wptouch-thtext">You can select which items will be shown beneath post titles on the index, search &amp; archive pages here. </div>
-			</th>
-
-			<td>
-			<input type="checkbox" name="enable-main-name" <?php if (isset($v['enable-main-name']) && $v['enable-main-name'] == 1) echo('checked'); ?>><label for="enable-authorname"> Show Author's Name</label><br /><br />
-
-<input type="checkbox" name="enable-main-categories" <?php if (isset($v['enable-main-categories']) && $v['enable-main-categories'] == 1) echo('checked'); ?>><label for="enable-categories"> Show Categories</label><br /><br />
-
-<input type="checkbox" name="enable-main-tags" <?php if (isset($v['enable-main-tags']) && $v['enable-main-tags'] == 1) echo('checked'); ?>><label for="enable-tags"> Show Tags</label>
-			</td>
-		</tr>
-	</table>
+		<div class="wptouch-item-content-box1">
+			<div class="wptouch-checkbox-row"><input type="checkbox" name="enable-main-name" <?php if (isset($v['enable-main-name']) && $v['enable-main-name'] == 1) echo('checked'); ?>><label for="enable-authorname"> Show Author's Name</label></div>
+			
+			<div class="wptouch-checkbox-row"><input type="checkbox" name="enable-main-categories" <?php if (isset($v['enable-main-categories']) && $v['enable-main-categories'] == 1) echo('checked'); ?>><label for="enable-categories"> Show Categories</label></div>
+			
+			<div class="wptouch-checkbox-row"><input type="checkbox" name="enable-main-tags" <?php if (isset($v['enable-main-tags']) && $v['enable-main-tags'] == 1) echo('checked'); ?>><label for="enable-tags"> Show Tags</label></div>
+				
+		</div>
+	<div class="wptouch-clearer"></div>
 </div>
-	
 
-<div id="wptouch-available">  
-	<table class="wptouch-form-table">
-		<tr valign="top">
-			<th scope="row">
-			<div class="wptouch-thhead">Available Page Icons</div><div class="wptouch-thtext">You can select which icons will be displayed beside corresponding pages enabled below.<br /><br />To add icons to the pool simply drop 60x60 (recommended) - .jpg or .png images into the <strong>icon-pool</strong> folder inside the wptouch/images directory, then refresh this page to select them.<br /><br />Also in the folder is a <strong>.psd template</strong> which you can use to build icons yourself.<br /><br />More official icons are available for download on the <a href="http://www.bravenewcode.com/wptouch/">WPtouch homepage</a>.
-			</div>
-			</th>  
-				<td>
-				<?php foreach ($icons as $icon) { ?>
+
+<?php
+/*
+The Availabe Icons Section
+*/
+?>
+
+<div class="wptouch-itemrow">
+	<div class="wptouch-item-desc">
+	<h2>Available Icons</h2>
+	<p>You can select which icons will be displayed beside corresponding pages enabled below.<br /><br />To add icons to the pool simply drop 60x60 (recommended) - .jpg or .png images into the <strong>icon-pool</strong> folder inside the wptouch/images directory, then refresh this page to select them.<br /><br />Also in the folder is a <strong>.psd template</strong> which you can use to build icons yourself.<br /><br />More official icons are available for download on the <a href="http://www.bravenewcode.com/wptouch/">WPtouch homepage</a>.</p>
+	</div>
+		
+	<div class="wptouch-item-content-box1">
+	<?php foreach ($icons as $icon) { ?>
 				<div class="wptouch-iconblock">
 				<img src="<?php echo($icon['url']); ?>" title="<?php echo($icon['name']); ?>" />
 				<br /><p class="wptouch-icon-name"><?php echo($icon['friendly']); ?></p>
 				</div>
 				<?php } ?>
-				</td>
-			</tr>
-	</table>
+		</div>
+	<div class="wptouch-clearer"></div>
 </div>
-	
-<div id="wptouch-active">  
-	<table class="wptouch-form-table">
-		<tr valign="top">
-			<th scope="row">
-			<div class="wptouch-thhead">Logo, Pages &amp; Icons</div><div class="wptouch-thtext">Choose the logo displayed in the header (also your bookmark icon), and which published pages are shown on the WPtouch drop-down menu.<br /><br /><strong>Remember, only those checked will be shown.</strong><br /><br />Next, select the icons from the drop list that you want to pair with each page/menu item.
-			</div>
-			</th>      
 
-				<td id="wptouch-page-choices">
-				<?php echo("<table class=\"wptouch-select-wrap-headicon\">");
-				// do top header icon 
-				echo("<tr><td class=\"wptouch-select-left\">Logo &amp; Home Screen Bookmark Icon</td><td class=\"wptouch-select-right\"><select name=\"enable_main_title\">");
-				foreach ($icons as $icon) {
-				echo('<option value="' . $icon['name'] . '" ');
-				if (isset($v['main_title']) && $icon['name'] == $v['main_title'])
-				echo('selected');
-				echo(">{$icon['friendly']}</option>");
-				}
-				echo("</select></td></tr><tr></table><table class=\"wptouch-select-wrap\">");
-				
-				global $table_prefix;
-				$query = "select * from {$table_prefix}posts where post_type = 'page' and post_status = 'publish' order by post_title asc";
-				$con = mysql_connect(DB_HOST, DB_USER, DB_PASSWORD);
-				if ($con) {
-				if (mysql_select_db(DB_NAME, $con)) {
-				$result = mysql_query($query);
-				while ($row = mysql_fetch_assoc($result)) {
-				echo("<tr><td class=\"wptouch-select-left\"><input type=\"checkbox\" name=\"enable_{$row['ID']}\"");
-				if (isset($v[$row['ID']]))
-				echo('checked />');
-				else
-				echo(' />');
-				echo("<label for=\"check_{$row['ID']}\">{$row['post_title']}</label></td>");
-				echo("<td class=\"wptouch-select-right\"><select name=\"icon_{$row['ID']}\">");
-				foreach ($icons as $icon) {
-				echo('<option value="' . $icon['name'] . '" ');
-				if (isset($v[$row['ID']]) && $icon['name'] == $v[$row['ID']])
-				  echo('selected');
-				echo(">{$icon['friendly']}</option>");
-				}
-				echo("</select></td></tr>");
-				}
-				}
-				}
-				?>
-	
-				</table>
-				</td>
-			</tr>
-	</table>
-</div>
-  
+
 <?php
-      //Let's do some checks to see what's installed for plugins, built-in WordPress functions, and Pages
-?>  
-  <div id="wptouch-plugins">  
-<table class="wptouch-form-table">
-    <tr valign="top">
-      <th scope="row"><div class="wptouch-thhead">Companion Support</div><div class="wptouch-thtext">
-  
-<strong>
+/*
+The Menu Section
+*/
+?>
+
+<div class="wptouch-itemrow">
+	<div class="wptouch-item-desc">
+	<h2>Logo/Bookmark, Page &amp; Menu Icons</h2>
+	<p>Choose the logo displayed in the header (also your bookmark icon), and which published pages are shown on the WPtouch drop-down menu.<br /><br /><strong>Remember, only those checked will be shown.</strong><br /><br />Next, select the icons from the drop list that you want to pair with each page/menu item.</p>
+	</div>
+		
+	<div class="wptouch-item-content-box1">
+		<div class="wptouch-select-row">
+			<?php
+			// do top header icon 
+			echo("<div class=\"wptouch-select-left\">Logo &amp; Home Screen Bookmark Icon</div>");
+			echo("<div class=\"wptouch-select-right\"><select name=\"enable_main_title\">");
+			foreach ($icons as $icon) {
+			echo('<option value="' . $icon['name'] . '" ');
+			if (isset($v['main_title']) && $icon['name'] == $v['main_title'])
+			echo('selected');
+			echo(">{$icon['friendly']}</option>");
+			}
+			echo("</select></div>");
+			?>
+		</div>
+		
+
+			<?php
+			global $table_prefix;
+			$query = "select * from {$table_prefix}posts where post_type = 'page' and post_status = 'publish' order by post_title asc";
+			$con = mysql_connect(DB_HOST, DB_USER, DB_PASSWORD);
+			if ($con) {
+			if (mysql_select_db(DB_NAME, $con)) {
+			$result = mysql_query($query);
+			while ($row = mysql_fetch_assoc($result)) {
+			echo("<div class=\"wptouch-select-row\"><div class=\"wptouch-select-left\"><input type=\"checkbox\" name=\"enable_{$row['ID']}\"");
+			if (isset($v[$row['ID']]))
+			echo('checked />');
+			else
+			echo(' />');
+			echo("<label for=\"check_{$row['ID']}\">{$row['post_title']}</label></div>");
+			echo("<div class=\"wptouch-select-right\"><select name=\"icon_{$row['ID']}\">");
+			foreach ($icons as $icon) {
+			echo('<option value="' . $icon['name'] . '" ');
+			if (isset($v[$row['ID']]) && $icon['name'] == $v[$row['ID']])
+			  echo('selected');
+			echo(">{$icon['friendly']}</option>");
+			}
+			echo("</select></div></div>");
+			}
+			}
+			}
+			?>
+	
+		<h4>Default Menu Items</h4>
+				<div class="wptouch-checkbox-row"><input type="checkbox" name="enable-main-home" <?php if (isset($v['enable-main-home']) && $v['enable-main-home'] == 1) echo('checked'); ?>><label for="enable-main-home">Enable Home Icon</label></div>
+	
+				<div class="wptouch-checkbox-row"><input type="checkbox" name="enable-main-rss" <?php if (isset($v['enable-main-rss']) && $v['enable-main-rss'] == 1) echo('checked'); ?>><label for="enable-main-rss">Enable RSS Icon</label></div>
+	
+				<div class="wptouch-checkbox-row"><input type="checkbox" name="enable-main-email" <?php if (isset($v['enable-main-email']) && $v['enable-main-email'] == 1) echo('checked'); ?>><label for="enable-main-email">Enable Email Icon</label></div>
+		</div>
+	<div class="wptouch-clearer"></div>
+</div>
+
+
+<?php
+/*
+The Plugin Section
+*/
+?>
+
+<div class="wptouch-itemrow">
+	<div class="wptouch-item-desc">
+	<h2>Plugin Support &amp; Compatibility</h2>
+	<p><strong>
 <?php
       //Let's do some WordPress version checks to provide more information for the user about what they can expect using the plugin
       $version = (float)get_bloginfo('version');
@@ -641,41 +680,32 @@ return $v['link-color'];
       } elseif ($version >= 2.1) {
           echo 'WordPress installed: ' . get_bloginfo('version') . '<br />(Supported, Upgrade Recommended)';
       } elseif ($version >= 2.0) {
-          echo 'WordPress installed: ' . get_bloginfo('version') . '<br />(NOT Supported! Upgrade Required)';
+          echo 'WordPress installed: ' . get_bloginfo('version') . '<br />(NOT Supported! Upgrade <u>Required</u>)';
       } elseif ($version >= 1.5) {
-          echo 'WordPress installed: ' . get_bloginfo('version') . '<br />(NOT Supported! Upgrade Required)';
+          echo 'WordPress installed: ' . get_bloginfo('version') . '<br />(NOT Supported! Upgrade <u>Required</u>)';
       }
 ?>  
 </strong>
   
   <br /><br  />
-  To the right you'll find information on other theme features activated through companion plugins &amp; WordPress versions.
-  <br /><br />
-  For further documentation visit <a href="http://www.bravenewcode.com/wptouch/">BraveNewCode</a>.
-  <br /><br />
-  To report an incompatible plugin, send an e-mail to <a href="mailto:wptouch@bravenewcode.com">wptouch@bravenewcode.com</a></div>
-        </th>  
-      
-            <td  id="wptouch-plugins-active">
+  To the right you'll find information on other theme features activated through companion plugins &amp; WordPress versions.<br /><br />
+  For further documentation visit <a href="http://www.bravenewcode.com/wptouch/">BraveNewCode</a>.<br /><br />
+  To report an incompatible plugin, send an e-mail to <a href="mailto:wptouch@bravenewcode.com">wptouch@bravenewcode.com</a></p>
+	</div>
+		
+	<div class="wptouch-item-content-box1 wptouch-admin-plugins">
 
               <h4>WordPress Built-in Functions Support</h4>
 
               <?php
               //Start WordPress functions support checks here
               //WordPress Built-In Tags Support Check 
-              if (function_exists('wp_tag_cloud')) {
-?>
-          <div class="all-good"><img src="<?php
-                  bloginfo('url');
-?>/wp-content/plugins/wptouch/images/good.png" alt="" /> The tag cloud for WordPress will automatically show on a page called 'Archives' if you have one.</div>
+              if (function_exists('wp_tag_cloud')) { ?>
+          <div class="all-good"><img src="<?php bloginfo('url'); ?>/wp-content/plugins/wptouch/images/good.png" alt="" /> The tag cloud for WordPress will automatically show on a page called 'Archives' if you have one.</div>
               <?php } else { ?>
 			  
-                   <div class="too-bad"><img src="<?php
-                      bloginfo('url');
-?>/wp-content/plugins/wptouch/images/bad.png" alt="" /> Since you're using a pre-tag version of WordPress, your categories will be listed on a page called 'Archives', if you have it.</div>
-              <?php
-                  }
-?>
+                   <div class="too-bad"><img src="<?php bloginfo('url'); ?>/wp-content/plugins/wptouch/images/bad.png" alt="" /> Since you're using a pre-tag version of WordPress, your categories will be listed on a page called 'Archives', if you have it.</div>
+              <?php } ?>
                
                            <br /><br />
                            
@@ -730,13 +760,9 @@ return $v['link-color'];
       //FlickrRSS Plugin check 
       if (function_exists('get_flickrRSS')) {
 ?>
-             <div class="all-good"><img src="<?php
-          bloginfo('url');
-?>/wp-content/plugins/wptouch/images/good.png" alt="" /> Cool! <a href="http://eightface.com/wordpress/flickrrss/" target="_blank">FlickrRSS</a>: Your photos will automatically show on a page called 'Photos'.</div>
+             <div class="all-good"><img src="<?php bloginfo('url'); ?>/wp-content/plugins/wptouch/images/good.png" alt="" /> Cool! <a href="http://eightface.com/wordpress/flickrrss/" target="_blank">FlickrRSS</a>: Your photos will automatically show on a page called 'Photos'.</div>
               <?php } else { ?>
-          <div class="too-bad"><img src="<?php
-              bloginfo('url');
-?>/wp-content/plugins/wptouch/images/bad.png" alt="" /> You don't have <a href="http://eightface.com/wordpress/flickrrss/" target="_blank">FlickrRSS</a> installed (No automatic photos page support)</div>
+          <div class="too-bad"><img src="<?php bloginfo('url'); ?>/wp-content/plugins/wptouch/images/bad.png" alt="" /> You don't have <a href="http://eightface.com/wordpress/flickrrss/" target="_blank">FlickrRSS</a> installed (No automatic photos page support)</div>
               <?php } ?>
               
           <?php
@@ -757,39 +783,33 @@ return $v['link-color'];
               
         <?php
           //WP-Cache Plugin Check
-          if (function_exists('wp_cache_is_enabled')) {
-?>
-     <div class="sort-of"><img src="<?php
-              bloginfo('url');
-?>/wp-content/plugins/wptouch/images/sortof.png" alt="" /> Achtung! <a href="http://mnm.uib.es/gallir/wp-cache-2/" target="_blank">WP-Cache</a>. If active, <strong>it requires configuration.</strong> Visit the <a href="http://www.bravenewcode.com/wptouch/">WPtouch homepage</a> for help using WP-Cache.</div>
+          if (function_exists('wp_cache_is_enabled')) { ?>
+     <div class="sort-of"><img src="<?php bloginfo('url'); ?>/wp-content/plugins/wptouch/images/sortof.png" alt="" /> Achtung! <a href="http://mnm.uib.es/gallir/wp-cache-2/" target="_blank">WP-Cache</a>. If active, <strong>it requires configuration.</strong> Visit the <a href="http://www.bravenewcode.com/wptouch/">WPtouch homepage</a> for help using WP-Cache.</div>
       
 	  <?php } else { ?>
 	  
-    <div class="all-good"><img src="<?php
-                  bloginfo('url');
-?>/wp-content/plugins/wptouch/images/good.png" alt="" /> Whew. No <a href="http://mnm.uib.es/gallir/wp-cache-2/" target="_blank">WP-Cache</a>. If installed, <strong>it requires configuration.</strong> Visit the <a href="http://www.bravenewcode.com/wptouch/">WPtouch homepage</a> for help using WP-Cache.</div>
+    <div class="all-good"><img src="<?php bloginfo('url'); ?>/wp-content/plugins/wptouch/images/good.png" alt="" /> Whew. No <a href="http://mnm.uib.es/gallir/wp-cache-2/" target="_blank">WP-Cache</a>. If installed, <strong>it requires configuration.</strong> Visit the <a href="http://www.bravenewcode.com/wptouch/">WPtouch homepage</a> for help using WP-Cache.</div>
             <?php } ?>
 			
 			       <?php
           //Super-Cache Plugin Check
-          if (function_exists('wp_super_cache_footer')) {
-?>
-     <div class="too-bad"><img src="<?php
-              bloginfo('url');
-?>/wp-content/plugins/wptouch/images/bad.png" alt="" /> Yikes! <a href="http://ocaoimh.ie/wp-super-cache/" target="_blank">WP Super Cache</a>. <strong>Currently, it does work correctly with WPtouch.</strong> We're working on it, though. Visit the <a href="http://www.bravenewcode.com/wptouch/">WPtouch homepage</a> for updates.</div>
+          if (function_exists('wp_super_cache_footer')) { ?>
+     <div class="too-bad"><img src="<?php bloginfo('url'); ?>/wp-content/plugins/wptouch/images/bad.png" alt="" /> Yikes! <a href="http://ocaoimh.ie/wp-super-cache/" target="_blank">WP Super Cache</a>. <strong>Currently, it does <em>not</em> work correctly with WPtouch.</strong> We're working on it, though. Visit the <a href="http://www.bravenewcode.com/wptouch/">WPtouch homepage</a> for updates.</div>
       
 	  <?php } else { ?>
 	  
-    <div class="all-good"><img src="<?php
-                  bloginfo('url');
-?>/wp-content/plugins/wptouch/images/good.png" alt="" /> Whew. No <a href="http://mnm.uib.es/gallir/wp-cache-2/" target="_blank">WP Super Cache</a>. <strong>Currently, it does work correctly with WPtouch.</strong> We're working on it, though. Visit the <a href="http://www.bravenewcode.com/wptouch/">WPtouch homepage</a> for updates.</div>
+    <div class="all-good"><img src="<?php bloginfo('url'); ?>/wp-content/plugins/wptouch/images/good.png" alt="" /> Whew. No <a href="http://mnm.uib.es/gallir/wp-cache-2/" target="_blank">WP Super Cache</a>. <strong>Currently, it does <em>not</em> work correctly with WPtouch.</strong> We're working on it, though. Visit the <a href="http://www.bravenewcode.com/wptouch/">WPtouch homepage</a> for updates.</div>
             <?php } ?>
-              
-      </td>
-  </tr>
-</table>
     
-    </div>
+    	</div>
+	</div>
   <input type="submit" name="submit" value="<?php _e('Save Options', 'submit'); ?>" id="wptouch-button" />
   </form>
-<?php echo('</div></div>'); } add_action('admin_menu', 'bnc_options_menu'); ?>
+</div>
+
+
+
+<?php 
+echo('</div></div>'); } 
+add_action('admin_menu', 'bnc_options_menu'); 
+?>
