@@ -599,8 +599,8 @@ The Menu Section
 
 <div class="wptouch-itemrow">
 	<div class="wptouch-item-desc">
-	<h2>Logo/Bookmark, Page &amp; Menu Icons</h2>
-	<p>Choose the logo displayed in the header (also your bookmark icon), and which published pages are shown on the WPtouch drop-down menu.<br /><br /><strong>Remember, only those checked will be shown.</strong><br /><br />Next, select the icons from the drop list that you want to pair with each page/menu item.</p>
+	<h2>Logo/Bookmark<br />Page &amp; Menu Icons</h2>
+	<p>Choose the logo displayed in the header (also your bookmark icon), and which published pages are shown on the WPtouch drop-down menu.<br /><br /><strong>Remember, only those checked<br />will be shown.</strong><br /><br />Next, select the icons from the drop list that you want to pair with each page/menu item.</p>
 	</div>
 		
 	<div class="wptouch-item-content-box1">
@@ -646,8 +646,23 @@ The Menu Section
 			}
 			}
 			?>
+		</div>
+	<div class="wptouch-clearer"></div>
+</div>
 	
-		<h4>Default Menu Items</h4>
+<?php
+/*
+The Default Menu Item Section
+*/
+?>
+	
+	<div class="wptouch-itemrow">
+	<div class="wptouch-item-desc">
+	<h2>Default Menu Items</h2>
+	<p>Enable/Disable these items from appearing in the WPtouch dropdown menu.</p>
+	</div>
+		
+	<div class="wptouch-item-content-box1">
 				<div class="wptouch-checkbox-row"><input type="checkbox" name="enable-main-home" <?php if (isset($v['enable-main-home']) && $v['enable-main-home'] == 1) echo('checked'); ?>><label for="enable-main-home">Enable Home Icon</label></div>
 	
 				<div class="wptouch-checkbox-row"><input type="checkbox" name="enable-main-rss" <?php if (isset($v['enable-main-rss']) && $v['enable-main-rss'] == 1) echo('checked'); ?>><label for="enable-main-rss">Enable RSS Icon</label></div>
