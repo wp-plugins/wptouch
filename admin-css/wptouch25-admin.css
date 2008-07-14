@@ -215,6 +215,28 @@ WPtouch Admin Panel Stylesheet for WordPress 2.5
 	margin-top: 10px;
 }
 
+#wptouch-news-frame {
+	width: 500px;
+	height: 200px;
+}
+
+#wptouch-news-frame h2 {
+	font-size: 1.2em;
+	border: 0px;
+	margin: 0px;
+	padding: 0px;
+}
+
+#wptouch-news-frame a {
+	text-decoration: none;
+}
+
+
+#wptouch-news-frame li, ul {
+	border: 0px;
+}
+
+
 #wptouch-theme #wptouch-plugins img {
 	position: relative;
 	top: 3px;

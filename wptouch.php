@@ -486,6 +486,17 @@ return $v['link-color'];
 		</div>				
 	</div>
 
+<h2>WPtouch News</h2>
+<div id="wptouch-news-frame" style="display: none;">
+</div>
+
+<script type="text/javascript">
+	jQuery.ajax({
+		url: "<?php bloginfo('home'); ?>/wp-content/plugins/wptouch/load-news.php",
+		success: function(data) {
+			jQuery("#wptouch-news-frame").html(data).fadeIn();
+		}});
+</script>
 
 <div id="wptouch-header-css">
   	<table class="wptouch-form-table">
