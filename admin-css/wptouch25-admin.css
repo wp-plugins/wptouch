@@ -28,6 +28,10 @@ WPtouch Admin Panel Stylesheet for WordPress 2.5
 	color: #3c627f;
 }
 
+#wptouch-theme a:hover {
+	color: #d54e21;
+}
+
 #wptouch-theme .wptouch-clearer {
 	clear: both;
 }
@@ -312,6 +316,7 @@ WPtouch Admin Panel Stylesheet for WordPress 2.5
 	font-weight: bold;
 	font-size: 12px;
 	margin-top: 10px;
+	cursor: pointer;
 }
 
 #wptouch-theme input#wptouch-button:active {
