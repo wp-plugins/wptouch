@@ -138,7 +138,8 @@ WPtouch Admin Panel Stylesheet for WordPress 2.5
 }
 
 #wptouch-news ul {
-	
+	margin: 0;
+	padding: 0;
 }
 
 #wptouch-news li {
