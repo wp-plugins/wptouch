@@ -33,6 +33,10 @@ if  (is_single() && !function_exists('disqus_recent_comments')) { ?>
 	position: relative;
 	color: #<?php echo bnc_get_header_color(); ?>
 }
+a {
+	text-decoration: none;
+	color: #<?php echo bnc_get_link_color(); ?>
+}
 </style>
 </head>
 <body>

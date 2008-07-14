@@ -4,12 +4,9 @@
 Theme Name: WPtouch Theme
 Theme URI: http://www.bravenewcode.com/wptouch/
 Description: A slick theme for your blog or website that is shown only when using an iPhone/iPod touch.
-Version: 1.0.9
+Version: 1.1
 Author: Dale Mugford and Duane Storey
 Author URI: http://www.bravenewcode.com/
-
-	Wptouch Theme 1.0.9
-	http://www.bravenewcode.com/wptouch/
 	
 	This theme was designed and built by Dale Mugford and Duane Storey,
 	whose site you will find at http://www.bravenewcode.com/
@@ -37,13 +34,9 @@ body {
 	background: url(images/pinstripes.png) repeat;
 }
 
-a {
-	text-decoration: none;
-	color: #006bb3;
-}
-
 a:active {
-	}
+	color: #bf0000;
+}
 
 ul {
 	margin: 0;
@@ -76,6 +69,7 @@ h1 {
 
 h2 {
 	font-size: 14px;
+	text-align: left;
 }
 
 h3 {
@@ -482,7 +476,6 @@ a.h2 {
 }
 
 .post-author a {
-	color: #006bb3;
 	padding-top: 1px;
 	padding-bottom: 10px;
 	font-weight: bold;

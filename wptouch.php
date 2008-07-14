@@ -2,7 +2,7 @@
   /*
    Plugin Name: WPtouch iPhone Theme
    Plugin URI: http://bravenewcode.com/wptouch/
-   Description: A plugin which formats your site when viewing with an <a href="http://www.apple.com/iphone/">iPhone</a> / <a href="http://www.apple.com/ipodtouch/">iPod touch</a>. Set header, page, and icon options for the theme by visiting the WPtouch admin panel under Options (WordPress 2.1+) or (in 2.5) the Settings tab. You'll also find a compatibility suite for aspects of your WordPress configuration. &nbsp;
+   Description: A plugin which formats your site when viewing with an <a href="http://www.apple.com/iphone/">iPhone</a> / <a href="http://www.apple.com/ipodtouch/">iPod touch</a>. Set styling, page, menu and icon options for the theme by visiting the <a href="options-general.php?page=wptouch/wptouch.php">WPtouch Options admin panel</a>. You'll also find help for using WPtouch with your WordPress setup. &nbsp;
    Author: Dale Mugford & Duane Storey
    Version: 1.1
    Author URI: http://www.bravenewcode.com
@@ -21,9 +21,6 @@
    # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
    # Lesser General Public License for more details.
    #
-   # You should have received a copy of the GNU Lesser General Public
-   # License along with this plugin; if not, write to the Free Software
-   # Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
    */
  
      // The version function
@@ -320,6 +317,15 @@ function bnc_get_header_color()
 	return $v['header-text-color'];
 }
 
+function bnc_get_link_color()
+{
+$v = unserialize(get_option('bnc_iphone_pages'));
+if (!isset($v['link-color'])) {
+$v['link-color'] = '006bb3';
+}
+return $v['link-color'];
+}
+
   function bnc_get_icon_list()
   {
 		$a = preg_match('#(.*)wptouch.php#', __FILE__, $matches);
@@ -426,6 +432,7 @@ function bnc_get_header_color()
 
 	  $a['header-background-color'] = $_POST['header-background-color'];
 	  $a['header-text-color'] = $_POST['header-text-color'];
+	  $a['link-color'] = $_POST['link-color'];
           
           $values = serialize($a);
           update_option('bnc_iphone_pages', $values);
@@ -439,6 +446,10 @@ function bnc_get_header_color()
 
 			if (!isset($v['header-text-color'])) {
 				$v['header-text-color'] = 'eeeeee';
+			}
+			
+		if (!isset($v['link-color'])) {
+				$v['link-color'] = '006bb3';
 			}
 
 			if (!isset($v['enable-main-home'])) {
@@ -466,126 +477,137 @@ function bnc_get_header_color()
 			}
 
 	?>
-  <form method="post" action="<?php
-      echo $_SERVER['REQUEST_URI'];
-?>">
-		<div id="wptouch-preview"><div style="background: #<?php echo bnc_get_header_background(); ?> url(<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/themes/default/images/head-fade-bk.png) repeat-x; color:#<?php echo bnc_get_header_color(); ?>" id="head-prev"><img src="<?php
-  bloginfo('wpurl');
-?>/wp-content/plugins/wptouch/images/icon-pool/<?php
-  echo bnc_get_title_image();
-?>" alt="" /> <?php bloginfo('title'); ?></div>		</div>
-
-	<div id="wptouch-header-css">
 	
+  <form method="post" action="<?php echo $_SERVER['REQUEST_URI']; ?>">
+  
 	
-  	<table class="wptouch-form-table">
-	<tr valign="top">
-		<th scope="row"><div class="wptouch-thhead">Header Styling</div><div class="wptouch-thtext">You can use this section to customize the look of the WPtouch header.<br /><br />Choose a home screen bookmark/header icon in the <em>Logo, Pages &amp; Icons</em> pane below.</div></th>
-		<td>
-			<div class="header-item-desc">Header Background Color</div><div class="header-input">#<input text="text" name="header-background-color" type="text" value="<?php echo $v['header-background-color']; ?>" id="testola" /></div>
-			<div class="header-item-desc">Header Text Color</div><div class="header-input">#<input type="text" name="header-text-color" type="text" value="<?php echo $v['header-text-color']; ?>" /></div>
-		</td>
-	</tr>
-	</table>
-	
+	<div id="wptouch-preview" style="display:none">
+		<div style="background: #<?php echo bnc_get_header_background(); ?> url(<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/themes/default/images/head-fade-bk.png) repeat-x; color:#<?php echo bnc_get_header_color(); ?>" id="head-prev"><img src="<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/images/icon-pool/<?php echo bnc_get_title_image(); ?>" alt="" /> <?php bloginfo('title'); ?>
+		</div>				
 	</div>
+
+
+<div id="wptouch-header-css">
+  	<table class="wptouch-form-table">
+		<tr valign="top">
+			<th scope="row">
+			<div class="wptouch-thtext">You can use this section to customize the look of WPtouch links, header logo and colors, and post options.
+			<br /><br /></div>
+			</th>
+		
+				<td>
+				<div class="header-item-desc">Header Background Color</div>
+				<div class="header-input">#<input text="text" name="header-background-color" type="text" value="<?php echo $v['header-background-color']; ?>" /></div>
+				
+				<div class="header-item-desc">Header Text Color</div>
+				<div class="header-input">#<input type="text" name="header-text-color" type="text" value="<?php echo $v['header-text-color']; ?>" /></div>
+				
+				<div class="header-item-desc">Link Color</div>
+				<div class="header-input">#<input type="text" name="link-color" type="text" value="<?php echo $v['link-color']; ?>" /></div>
+				</td>
+				
+				<td><input type="checkbox" name="enable-main-home" <?php if (isset($v['enable-main-home']) && $v['enable-main-home'] == 1) echo('checked'); ?>><label for="enable-main-home">Enable Home Icon</label></td>
+	
+				<td><input type="checkbox" name="enable-main-rss" <?php if (isset($v['enable-main-rss']) && $v['enable-main-rss'] == 1) echo('checked'); ?>><label for="enable-main-rss">Enable RSS Icon</label></td>
+	
+				<td><input type="checkbox" name="enable-main-email" <?php if (isset($v['enable-main-email']) && $v['enable-main-email'] == 1) echo('checked'); ?>><label for="enable-main-email">Enable Email Icon</label>
+				</td>
+				</tr>
+				</table>
+</div>
 	<?php
 	// Here's Where the new options are hooray
 	?>
 	
-	<div id="wptouch-active">  
-		  <table class="wptouch-form-table">
-				<tr valign="top">
-		<th scope="row"><div class="wptouch-thhead">Main Post Options</div><div class="wptouch-thtext">You can select which items will be shown beneath post titles on the index, search &amp; archive pages here. </div></th>
-		
-		<td><input type="checkbox" name="enable-main-name" <?php if (isset($v['enable-main-name']) && $v['enable-main-name'] == 1) echo('checked'); ?>><label for="enable-authorname"> Show Author's Name</label><br /><br />
-		
-		<input type="checkbox" name="enable-main-categories" <?php if (isset($v['enable-main-categories']) && $v['enable-main-categories'] == 1) echo('checked'); ?>><label for="enable-categories"> Show Categories</label><br /><br />
-		
-			<input type="checkbox" name="enable-main-tags" <?php if (isset($v['enable-main-tags']) && $v['enable-main-tags'] == 1) echo('checked'); ?>><label for="enable-tags"> Show Tags</label>
-			
+<div id="wptouch-active">  
+	<table class="wptouch-form-table">
+		<tr valign="top">
+			<th scope="row">
+			<div class="wptouch-thhead">Main Post Options</div><div class="wptouch-thtext">You can select which items will be shown beneath post titles on the index, search &amp; archive pages here. </div>
+			</th>
+
+			<td>
+			<input type="checkbox" name="enable-main-name" <?php if (isset($v['enable-main-name']) && $v['enable-main-name'] == 1) echo('checked'); ?>><label for="enable-authorname"> Show Author's Name</label><br /><br />
+
+<input type="checkbox" name="enable-main-categories" <?php if (isset($v['enable-main-categories']) && $v['enable-main-categories'] == 1) echo('checked'); ?>><label for="enable-categories"> Show Categories</label><br /><br />
+
+<input type="checkbox" name="enable-main-tags" <?php if (isset($v['enable-main-tags']) && $v['enable-main-tags'] == 1) echo('checked'); ?>><label for="enable-tags"> Show Tags</label>
 			</td>
 		</tr>
 	</table>
-	</div>
+</div>
 	
 
-  <div id="wptouch-available">  
-  	<table class="wptouch-form-table">
-	<tr valign="top">
-  	<th scope="row"><div class="wptouch-thhead">Available Page Icons</div><div class="wptouch-thtext">You can select which icons will be displayed beside corresponding pages enabled below.<br /><br />To add icons to the pool simply drop 60x60 (recommended) - .jpg or .png images into the <strong>icon-pool</strong> folder inside the wptouch/images directory, then refresh this page to select them.<br /><br />Also in the folder is a <strong>.psd template</strong> which you can use to build icons yourself.<br /><br />More official icons are available for download on the <a href="http://www.bravenewcode.com/wptouch/">WPtouch homepage</a>.</div></th>  
-      <td>
-      <?php
-      foreach ($icons as $icon) {
-?>
-        <div class="wptouch-iconblock"><img src="<?php
-          echo($icon['url']);
-?>" title="<?php
-          echo($icon['name']);
-?>" /><br /><p class="wptouch-icon-name"><?php
-          echo($icon['friendly']);
-?></p></div>
-      <?php
-      }
-?>
-      </td>
-    </tr>
-    </table>
-    </div>
-        <div id="wptouch-active">  
-          <table class="wptouch-form-table">
+<div id="wptouch-available">  
+	<table class="wptouch-form-table">
+		<tr valign="top">
+			<th scope="row">
+			<div class="wptouch-thhead">Available Page Icons</div><div class="wptouch-thtext">You can select which icons will be displayed beside corresponding pages enabled below.<br /><br />To add icons to the pool simply drop 60x60 (recommended) - .jpg or .png images into the <strong>icon-pool</strong> folder inside the wptouch/images directory, then refresh this page to select them.<br /><br />Also in the folder is a <strong>.psd template</strong> which you can use to build icons yourself.<br /><br />More official icons are available for download on the <a href="http://www.bravenewcode.com/wptouch/">WPtouch homepage</a>.
+			</div>
+			</th>  
+				<td>
+				<?php foreach ($icons as $icon) { ?>
+				<div class="wptouch-iconblock">
+				<img src="<?php echo($icon['url']); ?>" title="<?php echo($icon['name']); ?>" />
+				<br /><p class="wptouch-icon-name"><?php echo($icon['friendly']); ?></p>
+				</div>
+				<?php } ?>
+				</td>
+			</tr>
+	</table>
+</div>
+	
+<div id="wptouch-active">  
+	<table class="wptouch-form-table">
+		<tr valign="top">
+			<th scope="row">
+			<div class="wptouch-thhead">Logo, Pages &amp; Icons</div><div class="wptouch-thtext">Choose the logo displayed in the header (also your bookmark icon), and which published pages are shown on the WPtouch drop-down menu.<br /><br /><strong>Remember, only those checked will be shown.</strong><br /><br />Next, select the icons from the drop list that you want to pair with each page/menu item.
+			</div>
+			</th>      
 
-    <tr valign="top">
-<th scope="row"><div class="wptouch-thhead">Logo, Pages &amp; Icons</div><div class="wptouch-thtext">Choose the logo displayed in the header (also your bookmark icon), and which published pages are shown on the WPtouch drop-down menu.<br /><br /><strong>Remember, only those checked will be shown.</strong><br /><br />Next, select the icons from the drop list that you want to pair with each page/menu item.</div></th>      
-
-<td id="wptouch-page-choices">
-     <?php 
-      echo("<table class=\"wptouch-select-wrap-headicon\">");
-      // do top header icon 
-      echo("<tr><td class=\"wptouch-select-left\">Logo &amp; Home Screen Bookmark Icon</td><td class=\"wptouch-select-right\"><select name=\"enable_main_title\">");
-      foreach ($icons as $icon) {
-          echo('<option value="' . $icon['name'] . '" ');
-          if (isset($v['main_title']) && $icon['name'] == $v['main_title'])
-              echo('selected');
-          echo(">{$icon['friendly']}</option>");
-      }
-      echo("</select></td></tr><tr></table><table class=\"wptouch-select-wrap\">");
-      
-      global $table_prefix;
-      $query = "select * from {$table_prefix}posts where post_type = 'page' and post_status = 'publish' order by post_title asc";
-      $con = mysql_connect(DB_HOST, DB_USER, DB_PASSWORD);
-      if ($con) {
-          if (mysql_select_db(DB_NAME, $con)) {
-              $result = mysql_query($query);
-              while ($row = mysql_fetch_assoc($result)) {
-                  echo("<tr><td class=\"wptouch-select-left\"><input type=\"checkbox\" name=\"enable_{$row['ID']}\"");
-                  if (isset($v[$row['ID']]))
-                      echo('checked />');
-                  else
-                      echo(' />');
-                  echo("<label for=\"check_{$row['ID']}\">{$row['post_title']}</label></td>");
-                  echo("<td class=\"wptouch-select-right\"><select name=\"icon_{$row['ID']}\">");
-                  foreach ($icons as $icon) {
-                      echo('<option value="' . $icon['name'] . '" ');
-                      if (isset($v[$row['ID']]) && $icon['name'] == $v[$row['ID']])
-                          echo('selected');
-                      echo(">{$icon['friendly']}</option>");
-                  }
-                  echo("</select></td></tr>");
-              }
-          }
-      }
-?>
-		<tr><td colspan="2"><div id="show-hide-sep"><h4>Default Icons</h4></div></td></tr>
-		<tr class="show-hide"><td class="wptouch-select-left"><input type="checkbox" name="enable-main-home" <?php if (isset($v['enable-main-home']) && $v['enable-main-home'] == 1) echo('checked'); ?>><label for="enable-main-home">Enable Home Icon</label></td><td></td></tr>
-		<tr class="show-hide"><td class="wptouch-select-left"><input type="checkbox" name="enable-main-rss" <?php if (isset($v['enable-main-rss']) && $v['enable-main-rss'] == 1) echo('checked'); ?>><label for="enable-main-rss">Enable RSS Icon</label></td><td></td></tr>
-		<tr class="show-hide"><td class="wptouch-select-left"><input type="checkbox" name="enable-main-email" <?php if (isset($v['enable-main-email']) && $v['enable-main-email'] == 1) echo('checked'); ?>><label for="enable-main-email">Enable Email Icon</label></td><td></td></tr>
-		</table>
-      </td>
-    </tr>
-    
-  </table>
-  </div>
+				<td id="wptouch-page-choices">
+				<?php echo("<table class=\"wptouch-select-wrap-headicon\">");
+				// do top header icon 
+				echo("<tr><td class=\"wptouch-select-left\">Logo &amp; Home Screen Bookmark Icon</td><td class=\"wptouch-select-right\"><select name=\"enable_main_title\">");
+				foreach ($icons as $icon) {
+				echo('<option value="' . $icon['name'] . '" ');
+				if (isset($v['main_title']) && $icon['name'] == $v['main_title'])
+				echo('selected');
+				echo(">{$icon['friendly']}</option>");
+				}
+				echo("</select></td></tr><tr></table><table class=\"wptouch-select-wrap\">");
+				
+				global $table_prefix;
+				$query = "select * from {$table_prefix}posts where post_type = 'page' and post_status = 'publish' order by post_title asc";
+				$con = mysql_connect(DB_HOST, DB_USER, DB_PASSWORD);
+				if ($con) {
+				if (mysql_select_db(DB_NAME, $con)) {
+				$result = mysql_query($query);
+				while ($row = mysql_fetch_assoc($result)) {
+				echo("<tr><td class=\"wptouch-select-left\"><input type=\"checkbox\" name=\"enable_{$row['ID']}\"");
+				if (isset($v[$row['ID']]))
+				echo('checked />');
+				else
+				echo(' />');
+				echo("<label for=\"check_{$row['ID']}\">{$row['post_title']}</label></td>");
+				echo("<td class=\"wptouch-select-right\"><select name=\"icon_{$row['ID']}\">");
+				foreach ($icons as $icon) {
+				echo('<option value="' . $icon['name'] . '" ');
+				if (isset($v[$row['ID']]) && $icon['name'] == $v[$row['ID']])
+				  echo('selected');
+				echo(">{$icon['friendly']}</option>");
+				}
+				echo("</select></td></tr>");
+				}
+				}
+				}
+				?>
+	
+				</table>
+				</td>
+			</tr>
+	</table>
+</div>
   
 <?php
       //Let's do some checks to see what's installed for plugins, built-in WordPress functions, and Pages
@@ -757,10 +779,6 @@ function bnc_get_header_color()
 </table>
     
     </div>
-  <input type="submit" name="submit" value="<?php
-                  _e('Save Options', 'submit')
-?>" id="wptouch-button" />
+  <input type="submit" name="submit" value="<?php _e('Save Options', 'submit'); ?>" id="wptouch-button" />
   </form>
-<?php echo('</div></div>'); } add_action('admin_menu', 'bnc_options_menu');
-              //End
-?>
+<?php echo('</div></div>'); } add_action('admin_menu', 'bnc_options_menu'); ?>
