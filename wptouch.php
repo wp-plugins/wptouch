@@ -295,8 +295,6 @@
       $ids = bnc_wp_touch_get_menu_pages();
 
       $a = array();
-		if ($ids == null) return $a;
-
       
       global $table_prefix;
       $keys = array();
@@ -469,7 +467,8 @@ return $v['link-color'];
 	  $a['header-background-color'] = $_POST['header-background-color'];
 	  $a['header-text-color'] = $_POST['header-text-color'];
 	  $a['link-color'] = $_POST['link-color'];
-         
+        
+			$values = serialize($a);
           	update_option('bnc_iphone_pages', $values);
       }
       
