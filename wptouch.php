@@ -73,14 +73,7 @@
       function bnc_filter_iphone()
       
 	  {
-	  
-	  $blog = get_option('page_for_posts');
-if ($blog) {
-if (function_exists('is_front_page') && is_front_page()) { 
-header('Location: ' . get_permalink($blog));
-die;
-}
-}
+
           $key = 'bnc_mobile_' . md5(get_bloginfo('wpurl'));
           if (isset($_GET['bnc_view'])) {
               if ($_GET['bnc_view'] == 'mobile') {
@@ -98,6 +91,17 @@ die;
           } else {
               $this->desired_view = 'mobile';
           }
+
+			// check static home page problem
+			if ($this->desired_view == 'mobile') {
+	  			$blog = get_option('page_for_posts');
+				if ($blog) {
+					if (function_exists('is_front_page') && is_front_page()) { 
+						header('Location: ' . get_permalink($blog));
+						die;
+					}
+				}
+			}
       }
       
       function detectAppleMobile($query = '')
