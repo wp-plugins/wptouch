@@ -22,6 +22,14 @@
    # Lesser General Public License for more details.
    #
    */
+//	update_option('bnc_iphone_pages', serialize(''));
+
+	$bnc_option = get_option('bnc_iphone_pages');
+	if ($bnc_option == null) {
+		$defaults = array();
+		$defaults['header-background-color'] = '222222';
+	//	update_option('bnc_iphone_pages', serialize($defaults));
+	}
  
      // The version function
   function WPtouch($before = '', $after = '')
@@ -198,13 +206,17 @@
   
   function bnc_wp_touch_get_menu_pages()
   {
-     	$a = get_option('bnc_iphone_pages');
-     	if ($a != null) {
-     		return unserialize($a);
-	} else {
-		$a = array();
-		return $a;
-	}
+		$v = get_option('bnc_iphone_pages');
+		if (!is_array($v)) {
+        	$v = unserialize($v);
+    	}
+
+     	if ($v != null) {
+     		return $v;
+		} else {
+			$v = array();
+			return $a;
+		}
   }
   
   function bnc_get_title_image()
@@ -313,23 +325,35 @@
 
 function bnc_get_header_background()
 {
-$v = unserialize(get_option('bnc_iphone_pages'));
-if (!isset($v['header-background-color'])) {
-$v['header-background-color'] = '222222';
-}
-return $v['header-background-color'];
+	$v = get_option('bnc_iphone_pages');
+	if (!is_array($v)) {
+		$v = unserialize($v);
+	}
+
+	if (!isset($v['header-background-color'])) {
+		$v['header-background-color'] = '222222';
+	}
+	return $v['header-background-color'];
 }
   
 function bnc_get_header_color()
 {
-	$v = unserialize(get_option('bnc_iphone_pages')); 
+    $v = get_option('bnc_iphone_pages');
+    if (!is_array($v)) {
+        $v = unserialize($v);
+    }
+
 	if (!isset($v['header-text-color'])) { $v['header-text-color'] = 'eeeeee'; }
 	return $v['header-text-color'];
 }
 
 function bnc_get_link_color()
 {
-$v = unserialize(get_option('bnc_iphone_pages'));
+    $v = get_option('bnc_iphone_pages');
+    if (!is_array($v)) {
+        $v = unserialize($v);
+    }
+
 if (!isset($v['link-color'])) {
 $v['link-color'] = '006bb3';
 }
@@ -443,12 +467,14 @@ return $v['link-color'];
 	  $a['header-background-color'] = $_POST['header-background-color'];
 	  $a['header-text-color'] = $_POST['header-text-color'];
 	  $a['link-color'] = $_POST['link-color'];
-          
-          $values = serialize($a);
-          update_option('bnc_iphone_pages', $values);
+         
+          	update_option('bnc_iphone_pages', $values);
       }
       
-      	$v = unserialize(get_option('bnc_iphone_pages'));
+    		$v = get_option('bnc_iphone_pages');
+    		if (!is_array($v)) {
+        		$v = unserialize($v);
+    		}
 
 			if (!isset($v['header-background-color'])) {
 				$v['header-background-color'] = '222222';
