@@ -295,6 +295,8 @@
       $ids = bnc_wp_touch_get_menu_pages();
 
       $a = array();
+		if ($ids == null) return $a;
+
       
       global $table_prefix;
       $keys = array();
