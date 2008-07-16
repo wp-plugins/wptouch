@@ -17,7 +17,7 @@ Please visit http://www.bravenewcode.com/wptouch/ for a full description of the 
 
 == What's New ==
 
-In version 1.1(1), we've added the following features:
+In version 1.1(2), we've added the following features:
 
 * the ability to enable/disable the default home, rss and email menu items
 * support for WordPress installations that have static home pages
