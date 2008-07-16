@@ -399,16 +399,14 @@ return $v['link-color'];
           echo('<div id="wptouch-title"><img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/wptouch-logo.png" class="logo" alt="" /><img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/wptouch-title.jpg" alt="" /></div>');
 	  echo('' . WPtouch('<div class="wptouch-version">','</div>') . '');
       } else {
-          
           echo('<div class="wrap"><div id="wptouch-theme">');
           echo('<div id="wptouch-title"><img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/wptouch-logo.png" class="logo" alt="" /><img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/wptouch-title.jpg" alt="" /></div>');
 	  echo('' . WPtouch('<div class="wptouch-version">','</div>') . '');
       }
 ?>
 
-<?php
-      $icons = bnc_get_icon_list();
-?>
+<?php $icons = bnc_get_icon_list(); ?>
+
         <?php
       if (isset($_POST['submit'])) {
           // let's rock and roll
@@ -517,13 +515,11 @@ return $v['link-color'];
 	
   <form method="post" action="<?php echo $_SERVER['REQUEST_URI']; ?>">
   
-	
 	<div id="wptouch-preview" style="display:none">
 		<div style="background: #<?php echo bnc_get_header_background(); ?> url(<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/themes/default/images/head-fade-bk.png) repeat-x; color:#<?php echo bnc_get_header_color(); ?>" id="head-prev"><img src="<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/images/icon-pool/<?php echo bnc_get_title_image(); ?>" alt="" /> <?php bloginfo('title'); ?>
 		</div>				
 	</div>	
 	
-
 <?php
 /*
 The News Section
@@ -550,7 +546,6 @@ The News Section
 	
 	<div class="wptouch-clearer"></div>
 </div>
-
 
 <?php
 /*
@@ -579,7 +574,6 @@ The Style Section
 	<div class="wptouch-clearer"></div>
 </div>
 
-
 <?php
 /*
 The Post Listings Section
@@ -603,7 +597,6 @@ The Post Listings Section
 	<div class="wptouch-clearer"></div>
 </div>
 
-
 <?php
 /*
 The Availabe Icons Section
@@ -626,7 +619,6 @@ The Availabe Icons Section
 		</div>
 	<div class="wptouch-clearer"></div>
 </div>
-
 
 <?php
 /*
@@ -708,7 +700,6 @@ The Default Menu Item Section
 		</div>
 	<div class="wptouch-clearer"></div>
 </div>
-
 
 <?php
 /*
@@ -802,7 +793,6 @@ The Plugin Section
                       echo '<div class="too-bad"><img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/bad.png" alt="" /> If you create a page called \'Archives\', your tags/categories and monthly listings would display in <em>WPtouch</em> style.</div>';
                   }
 ?>
-
               <br /><br />
 
           <h4>Other Plugin Support &amp; Compatibility</h4>
@@ -858,8 +848,6 @@ The Plugin Section
   <input type="submit" name="submit" value="<?php _e('Save Options', 'submit'); ?>" id="wptouch-button" />
   </form>
 </div>
-
-
 
 <?php 
 echo('</div></div>'); } 
