@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=paypa
 Tags: wptouch, iphone, ipod touch, theme, apple, mac, bravenewcode, AJAX
 Requires at least: 2.1
 Tested up to: 2.5.1
-Stable tag: 1.1
+Stable tag: 1.1.1
 
 WPtouch is a complimentary theme on that will format your WordPress blog with an Apple-inspired theme when viewed from an iPhone or iPod touch. 
 
