@@ -31,31 +31,28 @@
 	//	update_option('bnc_iphone_pages', serialize($defaults));
 	}
  
-     // The version function
-  function WPtouch($before = '', $after = '')
-  {
-     	$version = '1.1.3';
-          echo $before . 'WPtouch 1.1.3' . $after;
-}
+// WPtouch Theme Options
+    $bnc_wptouch_version = '1.1.3';
+ 
+    function WPtouch($before = '', $after = '')
+    {
+        global $bnc_wptouch_version;
+        echo $before . 'WPtouch ' . $bnc_wptouch_version . $after;
+    }
 
  
-  //WP Admin stylesheets, detect if we're using WordPress 2.5 or lower, and serve up a slightly different layout for each:
-  function wptouch_admin_css()
-  {
-      $url = get_bloginfo('wpurl');
-      $version = (float)get_bloginfo('version');
-      if ($version >= 2.5) {
-          $url = $url . '/wp-content/plugins/wptouch/admin-css/wptouch-admin.css';
-      } else {
-          $url = $url . '/wp-content/plugins/wptouch/admin-css/wptouch-admin.css';
-      }
-      echo '<link rel="stylesheet" type="text/css" href="' . $url . '" />';
-		$version = (float)get_bloginfo('version');
-		if ($version < 2.2) {
-			echo '<script src="http://www.google.com/jsapi"></script>';
-			echo '<script type="text/javascript">google.load("jquery", "1"); jQuery.noConflict( ); </script>';
-		}
-  }
+    // WP Admin stylesheets, detect if we're using WordPress 2.5 or lower, and serve up a slightly different layout for each:
+    function wptouch_admin_css()
+    {
+        $url = get_bloginfo('wpurl');
+        $version = (float)get_bloginfo('version');
+        echo '<link rel="stylesheet" type="text/css" href="' . get_bloginfo('home') . '/wp-content/plugins/wptouch/admin-css/wptouch-admin.css" />';
+        $version = (float)get_bloginfo('version');
+        if ($version < 2.2) {
+            echo '<script src="http://www.google.com/jsapi"></script>';
+            echo '<script type="text/javascript">google.load("jquery", "1"); jQuery.noConflict( ); </script>';
+        }
+    }
 
   add_action('admin_head', 'wptouch_admin_css');
   
@@ -116,7 +113,7 @@
       {
           $container = $_SERVER['HTTP_USER_AGENT'];
           //print_r($container); //this prints out the user agent array. uncomment to see it shown on page.
-          $useragents = array("iPhone", "iPod", "Safari");
+          $useragents = array("iPhone", "iPod", "Aspen");
           $this->applemobile = false;
           foreach ($useragents as $useragent) {
               if (eregi($useragent, $container)) {
