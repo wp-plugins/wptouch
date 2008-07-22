@@ -106,7 +106,7 @@ blockquote {
 
 .result-text {
 	color: #475d79;
-	text-shadow: #eee 2px 2px 0;
+	text-shadow: #eee 1px 1px 0;
 	letter-spacing: -1px;
 	font-size: 15px;
 	font-weight: bold;
@@ -116,7 +116,7 @@ blockquote {
 
 .result-text-page {
 	color: #475d79;
-	text-shadow: #eee 2px 2px 0;
+	text-shadow: #eee 1px 1px 0;
 	letter-spacing: -1px;
 	font-size: 16px;
 	font-weight: bold;
@@ -231,13 +231,13 @@ input#s {
 
 input#ssubmit {
 	-webkit-border-radius: 10px;
-	border: 1px solid #adadad;
 	font-size: 13px;
 	color: #222;
 	background-color: #fff;
 	padding: 3px;
 	width: 67px;
-	height: 25px;}
+	height: 25px;
+}
 
 /* @end */
 
@@ -506,7 +506,7 @@ img.spin {
 
 a.ajax {
 	color: #475d79;
-	text-shadow: #eee 2px 2px 0;
+	text-shadow: #eee 1px 1px 0;
 	font-size: 14px;
 	font-weight: bold;
 	margin-right: 10px;
@@ -894,7 +894,7 @@ img.pageicon {
 
 h3#comments, h3#respond {
 	color: #475d79;
-	text-shadow: #eee 2px 2px 0;
+	text-shadow: #eee 1px 1px 0;
 	letter-spacing: -1px;
 	font-size: 17px;
 	padding-left: 10px;
@@ -952,7 +952,7 @@ form#commentform input {
 
 form#commentform small {
 	color: #475d79;
-	text-shadow: #eee 2px 2px 0;
+	text-shadow: #eee 1px 1px 0;
 	font-size: 12px;
 	font-weight: bold;
 }
@@ -989,7 +989,7 @@ p.subscribe-to-comments input#subscribe {
 	color: #475d79;
 	font-size: 11px;
 	font-weight: bold;
-	text-shadow: #eee 2px 2px 0;
+	text-shadow: #eee 1px 1px 0;
 	padding-bottom: 5px;
 	margin-top: 50px;
 }
@@ -1000,6 +1000,16 @@ p.subscribe-to-comments input#subscribe {
 /* @end */
 
 /* @group Plugin Compatibility CSS */
+
+/* @group YouTube */
+
+object {
+	max-width: 277px;
+max-height: 224px;}
+
+
+
+/* @end */
 
 /* @group Disqus */
 

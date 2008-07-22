@@ -34,7 +34,7 @@
   }
   function bnc_get_local_icon_url()
   {
-      return get_bloginfo('url') . '/wp-content/plugins/wptouch/images/';
+      return get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/';
   }
   function bnc_get_favicon_for_site($site)
   {

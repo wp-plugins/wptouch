@@ -1,9 +1,8 @@
 <?php global $is_ajax; $is_ajax = isset($_SERVER['HTTP_X_REQUESTED_WITH']); if (!$is_ajax) get_header(); ?>
-
+<div id="ajaxsinglepage<?php echo md5($_SERVER['REQUEST_URI']); ?>">
   <div class="content" id="content<?php echo md5($_SERVER['REQUEST_URI']); ?>">
 
   <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-	
 	<?php if (function_exists('disqus_recent_comments')) { ?>
  
 			<?php } else { ?>
@@ -36,13 +35,22 @@
 			<?php } else { ?>
 			Filed:<?php the_category(', '); ?><?php } ?>
 			</div>
-					<div class="clearer"></div>
+					
+			<div class="clearer"></div>
 
             <div id="entry-<?php the_ID(); ?>" style="display:none" class="mainentry">
             <?php if (function_exists('bnc_translate_start')) bnc_translate_start(); ?>
             <?php the_content_rss('', false, '', 50); ?>
-            <?php if (function_exists('bnc_translate_stop')) bnc_translate_stop(); ?>
-            <a href="<?php the_permalink() ?>">Read More &raquo;</a>
+            <?php if (function_exists('bnc_translate_stop')) bnc_translate_stop(); ?>		
+		    <a href="<?php the_permalink() ?>">Read More &raquo;</a>
+	
+	<?php /*?>
+			<div id="entrycall<?php echo md5($_SERVER['REQUEST_URI']); ?>">
+			<img id="pagespinner<?php echo md5($_SERVER['REQUEST_URI']); ?>" src="<?php bloginfo('template_directory'); ?>/images/main-ajax-loader.gif" style="display:none" alt="" /> <a class="entryajax" href="javascript:new Effect.Appear('pagespinner<?php echo md5($_SERVER['REQUEST_URI']); ?>', {duration:0.2});new Ajax.Updater('ajaxsinglepage<?php
+				echo md5($_SERVER['REQUEST_URI']); ?>', '<?php echo the_permalink(); ?>', {onComplete:function(){ new Effect.ScrollTo('header', {delay:0, duration:.1});}, asynchronous:true});">Read More &raquo;</a>
+				</div>
+	<?php */?>
+				
         </div>  
       </div>
     <?php endwhile; ?>
@@ -55,16 +63,14 @@
 				</div>
 
 <div id="ajaxentries<?php echo md5($_SERVER['REQUEST_URI']); ?>"></div>
+</div>
 
 <?php else : ?>
-
 <?php global $is_ajax; if ($is_ajax) { ?>
   <div class="result-text">No more entries to display.</div>
   <?php } else { ?>
   <div class="result-text">No entries found. Try using the search to find what you were looking for.</div>
 <?php } ?>
   <?php endif; ?>
-
-  </div>
-  
+</div>
 <?php global $is_ajax; if (!$is_ajax) get_footer(); ?>

@@ -1,6 +1,5 @@
-<?php
-  get_header();
-?>
+<?php global $is_ajax; $is_ajax = isset($_SERVER['HTTP_X_REQUESTED_WITH']); if (!$is_ajax) get_header(); ?>
+<div id="ajaxsinglepage<?php echo md5($_SERVER['REQUEST_URI']); ?>">
   <div class="content" id="content<?php
   echo md5($_SERVER['REQUEST_URI']);
 ?>">
@@ -146,6 +145,5 @@
   endif;
 ?>
   </div>
-<?php
-  get_footer();
-?>
+  </div>
+<?php global $is_ajax; if (!$is_ajax) get_footer(); ?>

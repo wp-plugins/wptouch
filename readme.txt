@@ -6,18 +6,17 @@ Requires at least: 2.1
 Tested up to: 2.6
 Stable tag: 1.1.2
 
-WPtouch is a complimentary theme on that will format your WordPress blog with an Apple-inspired theme when viewed from an iPhone or iPod touch. 
+WPtouch is a complimentary theme that formats your WordPress blog with an Apple native application style theme, complete with ajax loading articles and effects. The theme only shows when viewed from an iPhone or iPod touch. 
 
 == Description ==
 
-WPtouch is a complimentary theme on that will format your WordPress blog with
-an Apple-inspired theme when viewed from an iPhone or iPod touch.
+WPtouch is a complimentary theme that formats your WordPress blog with an Apple native application style theme, complete with ajax loading articles and effects. The theme only shows when viewed from an iPhone or iPod touch. 
 
 Please visit http://www.bravenewcode.com/wptouch/ for a full description of the WPtouch plugin.
 
 == What's New ==
 
-In version 1.1(2), we've added the following features:
+In version 1.1(3), we've added the following features:
 
 * the ability to enable/disable the default home, rss and email menu items
 * support for WordPress installations that have static home pages
@@ -27,6 +26,8 @@ In version 1.1(2), we've added the following features:
 * the ability to enable/disable tags, categories and author names on the index, search and author pages
 * support for DISQUS commenting
 * CSS refinements for comments, the drop-down menu, and overall appearance
+* styling for YouTube embedded videos
+* bug fixes for blogs installed in directories other than root
 
 == Installation ==
 
