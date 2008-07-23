@@ -224,7 +224,7 @@ input#s {
 	-webkit-border-radius: 10px;
 	border: 1px solid #adadad;
 	padding: 3px;
-	width: 69%;
+	width: 65%;
 	font-size: 13px;
 	color: #222;
 	margin-right: 3px;}
@@ -235,8 +235,9 @@ input#ssubmit {
 	color: #222;
 	background-color: #fff;
 	padding: 3px;
-	width: 67px;
 	height: 25px;
+	width: 63px;
+	text-align: center;
 }
 
 /* @end */
@@ -271,6 +272,13 @@ input#ssubmit {
 	margin: 0;
 	background: url(images/arrow.png) no-repeat right center;
 	padding: 0;
+}
+
+#dropmenu-inner li.noarrow img {
+	width: 20px;
+	height: 20px;
+	margin-top: 5px;
+	margin-left: 5px;
 }
 
 #dropmenu-inner a {
@@ -333,7 +341,6 @@ input#ssubmit {
 	margin-left: 10px;
 	margin-right: 10px;
 	padding: 10px;
-	text-align: justify;
 	margin-bottom: 10px;
 }
 
@@ -1047,6 +1054,51 @@ h3#dsq-add-new-comment {
 
 
 /* @end */
+
+
+
+/* @end */
+
+/* @group Javascript Off */
+
+a.search-close {
+	float:right;
+	margin-top: 3px;
+	padding: 2px;
+	border: 1px solid #555;
+	background:#444;
+	-webkit-border-radius:2px;
+	margin-right: 3px;
+}
+
+#dropmenu-inner li.noarrow {
+	border-bottom: 1px solid #1a1a1a;
+	margin: 0;
+	padding: 0;
+	background-image: none;
+}
+
+.main-navigation {
+	display: block;
+	-webkit-border-radius: 10px;
+	border: 1px solid #adadad;
+	background: #fff repeat-x;
+	margin: 10px;
+	clear: both;
+	height: 30px;
+	padding: 4px;
+}
+
+.main-navigation a {
+	color: #222;
+	font-size: 12px;
+	font-weight: bold;
+	padding-bottom: 10px;
+	padding-top: 2px;}
+
+.main-navigation img {
+	position: relative;
+	top: 6px;}
 
 
 

@@ -4,7 +4,7 @@
    Plugin URI: http://bravenewcode.com/wptouch/
    Description: A plugin which formats your site when viewing with an <a href="http://www.apple.com/iphone/">iPhone</a> / <a href="http://www.apple.com/ipodtouch/">iPod touch</a>. Set styling, page, menu and icon options for the theme by visiting the <a href="options-general.php?page=wptouch/wptouch.php">WPtouch Options admin panel</a>. You'll also find help for using WPtouch with your WordPress setup. &nbsp;
    Author: Dale Mugford & Duane Storey
-   Version: 1.1.3
+   Version: 1.2
    Author URI: http://www.bravenewcode.com
    
    # Special thanks to ContentRobot and the iWPhone theme/plugin
@@ -32,7 +32,7 @@
 	}
  
 // WPtouch Theme Options
-    $bnc_wptouch_version = '1.1.3';
+    $bnc_wptouch_version = '1.2';
  
     function WPtouch($before = '', $after = '')
     {
@@ -79,7 +79,7 @@
       
 	  {
 
-          $key = 'bnc_mobile_' . md5(get_bloginfo('wpurl'));
+          $key = 'bnc_mobile_' . md5(get_bloginfo('siteurl'));
           if (isset($_GET['bnc_view'])) {
               if ($_GET['bnc_view'] == 'mobile') {
                   setcookie($key, 'mobile', 0);
@@ -87,7 +87,7 @@
                   setcookie($key, 'normal', 0);
               }
               
-              header('Location: ' . get_bloginfo('wpurl'));
+              header('Location: ' . get_bloginfo('siteurl'));
               die;
           }
           
@@ -113,7 +113,7 @@
       {
           $container = $_SERVER['HTTP_USER_AGENT'];
           //print_r($container); //this prints out the user agent array. uncomment to see it shown on page.
-          $useragents = array("iPhone", "iPod", "Aspen");
+          $useragents = array("iPhone", "iPod", "Safari");
           $this->applemobile = false;
           foreach ($useragents as $useragent) {
               if (eregi($useragent, $container)) {
@@ -192,7 +192,7 @@
   {
       global $wptouch_plugin;
       if ($wptouch_plugin->applemobile) {
-          echo $before . '<a href="' . get_bloginfo('home') . '/?bnc_view=mobile">iPhone View</a> | Normal View' . $after;
+          echo $before . '<a href="' . get_bloginfo('siteurl') . '/?bnc_view=mobile">iPhone View</a> | Normal View' . $after;
   }
 }
   
@@ -226,6 +226,16 @@
       }
   }
 
+	function bnc_is_js_enabled() {
+      $ids = bnc_wp_touch_get_menu_pages();
+
+      if (!isset($ids['enable-js-header']))  {
+			return true;
+		}
+			return $ids['enable-js-header'];
+	}	
+	
+	
 	function bnc_is_home_enabled() {
       $ids = bnc_wp_touch_get_menu_pages();
 
@@ -296,7 +306,7 @@
       global $table_prefix;
       $keys = array();
       foreach ($ids as $k => $v) {
-          if ($k == 'main_title' || $k == 'enable-main-home' || $k == 'enable-main-rss' || $k == 'enable-main-email' || $k == 'enable-main-name' || $k == 'enable-main-tags' || $k == 'enable-main-categories') {
+          if ($k == 'main_title' || $k == 'enable-js-header' || $k == 'enable-main-home' || $k == 'enable-main-rss' || $k == 'enable-main-email' || $k == 'enable-main-name' || $k == 'enable-main-tags' || $k == 'enable-main-categories') {
 				// do nothing
           } else {
 				if (is_numeric($k)) {
@@ -411,6 +421,12 @@ return $v['link-color'];
           unset($_POST['submit']);
 			$a = array();
 
+			if (isset($_POST['enable-js-header'])) {
+				$a['enable-js-header'] = 1;
+			} else {
+				$a['enable-js-header'] = 0;
+			}
+			
 			if (isset($_POST['enable-main-home'])) {
 				$a['enable-main-home'] = 1;
 			} else {
@@ -484,6 +500,10 @@ return $v['link-color'];
 				$v['link-color'] = '006bb3';
 			}
 
+			if (!isset($v['enable-js-header'])) {
+            $v['enable-js-header'] = 1;
+			}	
+			
 			if (!isset($v['enable-main-home'])) {
             $v['enable-main-home'] = 1;
 			}
@@ -534,7 +554,7 @@ The News Section
 
 <script type="text/javascript">
 	jQuery.ajax({
-		url: "<?php bloginfo('home'); ?>/wp-content/plugins/wptouch/load-news.php",
+		url: "<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/load-news.php",
 		success: function(data) {
 			jQuery("#wptouch-news-frame").html(data).fadeIn();
 		}});
@@ -543,6 +563,35 @@ The News Section
 	
 	<div class="wptouch-clearer"></div>
 </div>
+
+<?php
+/*
+The Javascript Section
+*/
+?>
+
+<div class="wptouch-itemrow">
+	<div class="wptouch-item-desc">
+	<h2>Javascript Options</h2>
+	<p>Choose whether WPtouch uses advanced Prototype Javascript functions or not.</p>
+	</div>
+	
+		<div class="wptouch-item-content-box1">
+			<div class="wptouch-checkbox-row"><input type="checkbox" name="enable-js-header" <?php if (isset($v['enable-js-header']) && $v['enable-js-header'] == 1) echo('checked'); ?>><label for="enable-authorname"> Use Advanced <a href="http://www.prototypejs.org/" target="_blank">Prototype</a> Javascript Effects (ajax entries, ajax comments, smooth effects)</label></div>
+            
+      		
+            <h4 id="wptouch-js">When Disabled:</h4>
+            <ul id="wptouch-small-menu">
+            <li>Your site loads faster on EDGE and 3G connections</li>
+            <li>Close icons will appear on the search and menu drop downs</li>
+            <li>Comments will not be posted by ajax, and the page will refresh</li>
+            <li>The 'Load More Entries' link will not be displayed, and instead regular blog navigation links will be shown</li>
+           </ul>
+	
+		</div>
+	<div class="wptouch-clearer"></div>
+</div>
+
 
 <?php
 /*
@@ -584,7 +633,8 @@ The Post Listings Section
 	</div>
 	
 		<div class="wptouch-item-content-box1">
-			<div class="wptouch-checkbox-row"><input type="checkbox" name="enable-main-name" <?php if (isset($v['enable-main-name']) && $v['enable-main-name'] == 1) echo('checked'); ?>><label for="enable-authorname"> Show Author's Name</label></div>
+            
+      		<div class="wptouch-checkbox-row"><input type="checkbox" name="enable-main-name" <?php if (isset($v['enable-main-name']) && $v['enable-main-name'] == 1) echo('checked'); ?>><label for="enable-authorname"> Show Author's Name</label></div>
 			
 			<div class="wptouch-checkbox-row"><input type="checkbox" name="enable-main-categories" <?php if (isset($v['enable-main-categories']) && $v['enable-main-categories'] == 1) echo('checked'); ?>><label for="enable-categories"> Show Categories</label></div>
 			

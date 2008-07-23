@@ -12,13 +12,17 @@
 <meta name="viewport" content="maximum-scale=1.0 width=device-width initial-scale=1.0 user-scalable=no" />
 <!--This makes the iPhone/iPod touch look in the  wptouch/images directory for a bookmark icon (your header logo choice), add yours to the 'wptouch/images' directory to customize in the wptouch admin-->
 <link rel="apple-touch-icon" href="<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/images/icon-pool/<?php echo bnc_get_title_image(); ?>"/>
-<script src="<?php bloginfo('template_directory'); ?>/js/global.js" type="text/javascript"></script>
+<?php if (bnc_is_js_enabled()) { ?>
+<script src="<?php bloginfo('template_directory'); ?>/js/global.js" type="text/javascript" charset="utf-8"></script>
+<script src="<?php bloginfo('template_directory'); ?>/js/scriptaculous.js?load=effects" type="text/javascript" charset="utf-8"></script>
+<?php } ?>
 <?php
 //Disqus commenting check for Ajax Coms JS Need  
 if  (is_single() && !function_exists('disqus_recent_comments')) { ?>
+<?php if (bnc_is_js_enabled()) { ?>
 <script src="<?php bloginfo('template_directory'); ?>/js/ajaxcoms.js" type="text/javascript"></script>
 <?php } ?>
-<script src="<?php bloginfo('template_directory'); ?>/js/scriptaculous.js?load=effects" type="text/javascript" charset="utf-8"></script>
+<?php } ?>
 <?php wp_head(); ?>
 <style type="text/css">
 #menubar {
@@ -46,65 +50,38 @@ a {
 <img src="<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/images/icon-pool/<?php echo bnc_get_title_image(); ?>" alt="" /> <a href="<?php bloginfo('siteurl'); ?>"><?php bloginfo('name'); ?></a></div>
 </div>
 
-<div id="drop-fade">
-  <?php 
-  // Taken out for now, until we add admin options for login controls
-  /*?><?php
-  get_currentuserinfo();
-  if (current_user_can('edit_posts'))
-      :
-?>        
-<a href="javascript:new Effect.toggle($('wptouch-login'),'Appear', {duration: 0.6});">
-<img src="<?php
-      bloginfo('template_directory');
-?>/images/menu/touchmenu-login.png" alt="" />
-</a>
-<?php
-  else
-      :
-?>
-<a href="<?php
-      bloginfo('url');
-?>/wp-login.php?action=logout">
-<img src="<?php
-  bloginfo('template_directory');
-?>/images/menu/touchmenu-logout.png" alt="" />
-</a>
-<?php
-  endif;
-?><?php */?>
-<a href="javascript:new Effect.toggle($('wptouch-search'),'Appear', {duration: 0.4});"><img src="<?php bloginfo('template_directory'); ?>/images/menu/search-touchmenu.png" alt="" /></a><a href="javascript:new Effect.toggle($('dropmenu'),'Appear', {duration: 0.6});"><img src="<?php bloginfo('template_directory'); ?>/images/menu/touchmenu.png" alt="" /></a></div>
+        <div id="drop-fade">
+		<?php if (bnc_is_js_enabled()) { ?>
+        <a href="javascript:new Effect.toggle($('wptouch-search'),'Appear', {duration: 0.4});">
+        <? } else { ?>
+        <a href="javascript:document.getElementById('wptouch-search').style.display = 'block';">
+        <?php } ?>
+        <img src="<?php bloginfo('template_directory'); ?>/images/menu/search-touchmenu.png" alt="" />
+        </a>
+        
+	<?php if (bnc_is_js_enabled()) { ?>
+        <a href="javascript:new Effect.toggle($('dropmenu'),'Appear', {duration: 0.4});">
+        <? } else { ?>
+        <a href="javascript:document.getElementById('dropmenu').style.display = 'block';">
+        <?php } ?>        
+        <img src="<?php bloginfo('template_directory'); ?>/images/menu/touchmenu.png" alt="" />
+        </a>
+        </div>
 
 		<div id="wptouch-search" style="display:none">
 		<div id="wptouch-search-inner">
 		<form method="get" id="searchform" action="<?php bloginfo('siteurl'); ?>/">
-		<div>
 		<input type="text" value="<?php the_search_query(); ?>" name="s" id="s" /> <input name="submit" type="submit" id="ssubmit" tabindex="5" value="Search" />
-		</div>
-		</form>
-		</div>
-		</div>
-    
-<?php 
-//Disabled for now, until admin login options are available.
+	        	<?php if (!bnc_is_js_enabled()) { ?>
+            <a class="search-close" href="javascript:document.getElementById('wptouch-search').style.display = 'none';">
+        <img src="<?php bloginfo('template_directory'); ?>/images/cross.png" alt="" />
+        </a>
+        <?php } ?>
+    	</form>
 
-/*?>            <div id="wptouch-login" style="display:none">
-        <div id="wptouch-login-inner">
-  <form name="loginform" id="loginform" action="<?php
-  echo get_settings('url');
-?>/wp-login.php" method="post">
-    <label><input type="text" name="log" id="log" onfocus="if (this.value == 'username') {this.value = ''}" value="username" /></label>
-    <label><input type="password" name="pwd"  onfocus="if (this.value == 'password') {this.value = ''}" id="pwd" value="password" /></label>
-    <input type="hidden" name="rememberme" value="forever" />
-    <input type="submit" id="logsub" name="submit" value="<?php
-  _e('Login');
-?>" tabindex="9" />
-    <input type="hidden" name="redirect_to" value="<?php
-  echo $_SERVER['REQUEST_URI'];
-?>"/>
-    </form>
-        </div>
-        </div><?php */?>
+		</div>
+		</div>
+
 
 <div id="dropmenu" style="display:none">
 <div id="dropmenu-inner">
@@ -117,6 +94,10 @@ a {
 	  echo('<li><a href="' . get_permalink($p['ID']) . '"><img src="' . $image . '" />' . $p['post_title'] . '</a></li>'); } ?>
 <?php if (bnc_is_rss_enabled()) { ?><li><a href="<?php bloginfo('rss2_url'); ?>"><img src="<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/images/icon-pool/RSS.png" alt="" />RSS Feed</a></li><?php } ?>
 <?php if (bnc_is_email_enabled()) { ?><li class="noborder"><a href="mailto:<?php bloginfo('admin_email'); ?>"><img src="<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/images/icon-pool/Mail.png" alt="" />E-Mail</a></li><?php } ?>
+        	<?php if (!bnc_is_js_enabled()) { ?>
+            <li class="noarrow"><a class="menu-close" href="javascript:document.getElementById('dropmenu').style.display = 'none';">
+        <img src="<?php bloginfo('template_directory'); ?>/images/cross.png" alt="" /> Close Menu</a></li>
+        <?php } ?>
 </ul>
 </div>
 </div>
