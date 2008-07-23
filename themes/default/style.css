@@ -106,7 +106,7 @@ blockquote {
 
 .result-text {
 	color: #475d79;
-	text-shadow: #eee 2px 2px 0;
+	text-shadow: #eee 1px 1px 0;
 	letter-spacing: -1px;
 	font-size: 15px;
 	font-weight: bold;
@@ -116,7 +116,7 @@ blockquote {
 
 .result-text-page {
 	color: #475d79;
-	text-shadow: #eee 2px 2px 0;
+	text-shadow: #eee 1px 1px 0;
 	letter-spacing: -1px;
 	font-size: 16px;
 	font-weight: bold;
@@ -224,20 +224,21 @@ input#s {
 	-webkit-border-radius: 10px;
 	border: 1px solid #adadad;
 	padding: 3px;
-	width: 69%;
+	width: 65%;
 	font-size: 13px;
 	color: #222;
 	margin-right: 3px;}
 
 input#ssubmit {
 	-webkit-border-radius: 10px;
-	border: 1px solid #adadad;
 	font-size: 13px;
 	color: #222;
 	background-color: #fff;
 	padding: 3px;
-	width: 67px;
-	height: 25px;}
+	height: 25px;
+	width: 63px;
+	text-align: center;
+}
 
 /* @end */
 
@@ -271,6 +272,13 @@ input#ssubmit {
 	margin: 0;
 	background: url(images/arrow.png) no-repeat right center;
 	padding: 0;
+}
+
+#dropmenu-inner li.noarrow img {
+	width: 20px;
+	height: 20px;
+	margin-top: 5px;
+	margin-left: 5px;
 }
 
 #dropmenu-inner a {
@@ -333,7 +341,6 @@ input#ssubmit {
 	margin-left: 10px;
 	margin-right: 10px;
 	padding: 10px;
-	text-align: justify;
 	margin-bottom: 10px;
 }
 
@@ -506,7 +513,7 @@ img.spin {
 
 a.ajax {
 	color: #475d79;
-	text-shadow: #eee 2px 2px 0;
+	text-shadow: #eee 1px 1px 0;
 	font-size: 14px;
 	font-weight: bold;
 	margin-right: 10px;
@@ -894,7 +901,7 @@ img.pageicon {
 
 h3#comments, h3#respond {
 	color: #475d79;
-	text-shadow: #eee 2px 2px 0;
+	text-shadow: #eee 1px 1px 0;
 	letter-spacing: -1px;
 	font-size: 17px;
 	padding-left: 10px;
@@ -952,7 +959,7 @@ form#commentform input {
 
 form#commentform small {
 	color: #475d79;
-	text-shadow: #eee 2px 2px 0;
+	text-shadow: #eee 1px 1px 0;
 	font-size: 12px;
 	font-weight: bold;
 }
@@ -989,7 +996,7 @@ p.subscribe-to-comments input#subscribe {
 	color: #475d79;
 	font-size: 11px;
 	font-weight: bold;
-	text-shadow: #eee 2px 2px 0;
+	text-shadow: #eee 1px 1px 0;
 	padding-bottom: 5px;
 	margin-top: 50px;
 }
@@ -1000,6 +1007,16 @@ p.subscribe-to-comments input#subscribe {
 /* @end */
 
 /* @group Plugin Compatibility CSS */
+
+/* @group YouTube */
+
+object {
+	max-width: 277px;
+max-height: 224px;}
+
+
+
+/* @end */
 
 /* @group Disqus */
 
@@ -1037,6 +1054,51 @@ h3#dsq-add-new-comment {
 
 
 /* @end */
+
+
+
+/* @end */
+
+/* @group Javascript Off */
+
+a.search-close {
+	float:right;
+	margin-top: 3px;
+	padding: 2px;
+	border: 1px solid #555;
+	background:#444;
+	-webkit-border-radius:2px;
+	margin-right: 3px;
+}
+
+#dropmenu-inner li.noarrow {
+	border-bottom: 1px solid #1a1a1a;
+	margin: 0;
+	padding: 0;
+	background-image: none;
+}
+
+.main-navigation {
+	display: block;
+	-webkit-border-radius: 10px;
+	border: 1px solid #adadad;
+	background: #fff repeat-x;
+	margin: 10px;
+	clear: both;
+	height: 30px;
+	padding: 4px;
+}
+
+.main-navigation a {
+	color: #222;
+	font-size: 12px;
+	font-weight: bold;
+	padding-bottom: 10px;
+	padding-top: 2px;}
+
+.main-navigation img {
+	position: relative;
+	top: 6px;}
 
 
 

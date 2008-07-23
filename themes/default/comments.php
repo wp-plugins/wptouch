@@ -84,12 +84,15 @@
           echo get_option('url'); ?>/wp-login.php">login</a> or <a href="<?php
   echo get_option('url'); ?>/wp-register.php">register</a> to comment.</h1></center>
 
-  <?php
-  else
-      : ?>
-
+  <?php else : ?>
+  
+<?php if (bnc_is_js_enabled()) { ?>
 <form id="commentform" action="<?php echo get_option('url'); ?>/wp-comments-post.php" method="post" onsubmit="new Ajax.Updater({success: 'commentlist'}, '<?php bloginfo('template_directory'); ?>/comments-ajax.php', {asynchronous: true, evalScripts: true, insertion: Insertion.Bottom, onComplete: function(request){complete(request); new Effect.Appear('refresher');}, onFailure: function(request){failure(request)}, onLoading: function(request){loading()}, parameters: Form.serialize(this)}); return false;">
 <div id="refresher" style="display:none">&raquo; <a href="javascript:this.location.reload();">Refresh the page</a> to post a new comment.</div>
+<?php } else { ?>
+<form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" id="commentform">
+<?php } ?>
+
  <?php if ($user_ID) : ?>
  
   <p class="logged"  id="respond">Logged in as <a href="<?php
