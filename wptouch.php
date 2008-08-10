@@ -4,7 +4,7 @@
    Plugin URI: http://bravenewcode.com/wptouch/
    Description: A plugin which formats your site when viewing with an <a href="http://www.apple.com/iphone/">iPhone</a> / <a href="http://www.apple.com/ipodtouch/">iPod touch</a>. Set styling, page, menu and icon options for the theme by visiting the <a href="options-general.php?page=wptouch/wptouch.php">WPtouch Options admin panel</a>. You'll also find help for using WPtouch with your WordPress setup. &nbsp;
    Author: Dale Mugford & Duane Storey
-   Version: 1.2
+   Version: 1.2.1
    Author URI: http://www.bravenewcode.com
    
    # Special thanks to ContentRobot and the iWPhone theme/plugin
@@ -32,7 +32,7 @@
 	}
  
 // WPtouch Theme Options
-    $bnc_wptouch_version = '1.2';
+    $bnc_wptouch_version = '1.2.1';
  
     function WPtouch($before = '', $after = '')
     {
@@ -235,6 +235,15 @@
 			return $ids['enable-js-header'];
 	}	
 	
+	function bnc_is_gravatars_enabled() {
+      $ids = bnc_wp_touch_get_menu_pages();
+
+      if (!isset($ids['enable-gravatars']))  {
+			return true;
+		}
+			return $ids['enable-gravatars'];
+	}	
+	
 	
 	function bnc_is_home_enabled() {
       $ids = bnc_wp_touch_get_menu_pages();
@@ -306,7 +315,7 @@
       global $table_prefix;
       $keys = array();
       foreach ($ids as $k => $v) {
-          if ($k == 'main_title' || $k == 'enable-js-header' || $k == 'enable-main-home' || $k == 'enable-main-rss' || $k == 'enable-main-email' || $k == 'enable-main-name' || $k == 'enable-main-tags' || $k == 'enable-main-categories') {
+          if ($k == 'main_title' || $k == 'enable-js-header' || $k == 'enable-gravatars' || $k == 'enable-main-home' || $k == 'enable-main-rss' || $k == 'enable-main-email' || $k == 'enable-main-name' || $k == 'enable-main-tags' || $k == 'enable-main-categories') {
 				// do nothing
           } else {
 				if (is_numeric($k)) {
@@ -427,6 +436,12 @@ return $v['link-color'];
 				$a['enable-js-header'] = 0;
 			}
 			
+		if (isset($_POST['enable-gravatars'])) {
+				$a['enable-gravatars'] = 1;
+			} else {
+				$a['enable-gravatars'] = 0;
+			}
+			
 			if (isset($_POST['enable-main-home'])) {
 				$a['enable-main-home'] = 1;
 			} else {
@@ -504,6 +519,10 @@ return $v['link-color'];
             $v['enable-js-header'] = 1;
 			}	
 			
+		if (!isset($v['enable-gravatars'])) {
+            $v['enable-gravatars'] = 1;
+			}	
+			
 			if (!isset($v['enable-main-home'])) {
             $v['enable-main-home'] = 1;
 			}
@@ -572,20 +591,27 @@ The Javascript Section
 
 <div class="wptouch-itemrow">
 	<div class="wptouch-item-desc">
-	<h2>Javascript Options</h2>
-	<p>Choose whether WPtouch uses advanced Prototype Javascript functions or not.</p>
+	<h2>Optimization Options</h2>
+	<p>Choose to enable/disable advanced Javascript &amp; Gravatars features</p>
 	</div>
 	
 		<div class="wptouch-item-content-box1">
-			<div class="wptouch-checkbox-row"><input type="checkbox" name="enable-js-header" <?php if (isset($v['enable-js-header']) && $v['enable-js-header'] == 1) echo('checked'); ?>><label for="enable-authorname"> Use Advanced <a href="http://www.prototypejs.org/" target="_blank">Prototype</a> Javascript Effects (ajax entries, ajax comments, smooth effects)</label></div>
+			<div class="wptouch-checkbox-row"><input type="checkbox" name="enable-js-header" <?php if (isset($v['enable-js-header']) && $v['enable-js-header'] == 1) echo('checked'); ?>><label for="enable-js-header"> Use Advanced <a href="http://www.prototypejs.org/" target="_blank">Prototype</a> Javascript Effects (ajax entries, ajax comments, smooth effects)</label></div>
             
+		<div class="wptouch-checkbox-row"><input type="checkbox" name="enable-gravatars" <?php if (isset($v['enable-gravatars']) && $v['enable-gravatars'] == 1) echo('checked'); ?>><label for="enable-gravatars"> Enable Gravatars in Comments</label></div>
       		
-            <h4 id="wptouch-js">When Disabled:</h4>
-            <ul id="wptouch-small-menu">
+            <h4 id="wptouch-js">When Advanced Javascript Is Disabled:</h4>
+            <ul class="wptouch-small-menu">
             <li>Your site loads faster on EDGE and 3G connections</li>
             <li>Close icons will appear on the search and menu drop downs</li>
             <li>Comments will not be posted by ajax, and the page will refresh</li>
             <li>The 'Load More Entries' link will not be displayed, and instead regular blog navigation links will be shown</li>
+			</ul>
+
+		    <h4 id="wptouch-js">When Gravatars Are Disabled:</h4>		
+            <ul class="wptouch-small-menu">
+            <li>Single post pages load faster on EDGE and 3G connections</li>
+            <li>Gravatar.com images will <strong>not</strong> be shown beside commenter's names on single posts</li>
            </ul>
 	
 		</div>

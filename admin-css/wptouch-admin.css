@@ -1,8 +1,3 @@
-/* @override 
-	http://24.150.116.198:9098/wp-content/plugins/wptouch/admin-css/wptouch25-admin.css
-	http://24.150.116.198:9098/wp-content/plugins/wptouch/admin-css/wptouch-admin.css
-*/
-
 /* 
 WPtouch Admin Panel Stylesheet for WordPress 2.5
 */
@@ -340,12 +335,12 @@ WPtouch Admin Panel Stylesheet for WordPress 2.5
 #wptouch-theme h4#wptouch-js {
 }
 
-#wptouch-theme ul#wptouch-small-menu {
-	margin-left: 30%;
+#wptouch-theme ul.wptouch-small-menu {
 	list-style-type: circle;
 	font-size: 12px;
 	color: #444;
 	padding: 0;
+	margin-left: 30%;
 }
 
 

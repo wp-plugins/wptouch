@@ -1,15 +1,10 @@
-<?php
-   $ch = curl_init('http://www.bravenewcode.com/custom/wptouch-news.php');
-
-   curl_setopt($ch, CURLOPT_VERBOSE, 1);
-   curl_setopt($ch, CURLOPT_NOBODY, 0);
-   curl_setopt($ch, CURLOPT_HEADER, 0);
-   curl_setopt($ch, CURLOPT_USERAGENT, 'WPtouch 1.1');
-   curl_setopt($ch, CURLOPT_FOLLOWLOCATION,1);
-   curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-
-   $response = curl_exec($ch);
-	curl_close($ch);
-
+<?php	
+	if ( defined('ABSPATH') )
+		require_once( ABSPATH . '/wp-includes/class-snoopy.php');
+	else
+		require_once( '../../../wp-includes/class-snoopy.php');
+	$snoopy = new Snoopy;
+	$snoopy->fetch('http://www.bravenewcode.com/custom/wptouch-news.php');
+	$response = $snoopy->results;
 	echo $response;
 ?>

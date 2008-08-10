@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=paypa
 Tags: wptouch, iphone, ipod touch, theme, apple, mac, bravenewcode, AJAX
 Requires at least: 2.1
 Tested up to: 2.6
-Stable tag: 1.2
+Stable tag: 1.2.1
 
 WPtouch is a complimentary theme that formats your WordPress blog with an Apple native application style theme, complete with ajax loading articles and effects. The theme only shows when viewed from an iPhone or iPod touch. 
 
@@ -15,7 +15,14 @@ WPtouch is a complimentary theme that formats your WordPress blog with an Apple 
 Please visit http://www.bravenewcode.com/wptouch/ for a full description of the WPtouch plugin.
 
 == What's New ==
-In version 1.2, we've added:
+In version 1.2.1, we've added/changed:
+
+* The ability to disable Gravatars in comments (more control over optimization & speed)
+* Redundant, unused template file cleanups (archive.php, search.php & page.php are now all just index.php)
+* More style enhancements and tweaks, fixes
+* Switched to Snoopy from CURL for the admin news section (thanks to Joost de Valk (yoast.com)
+
+Version 1.2 added/changed the following features:
 
 * The ability to disable advanced javascript effects (fixes effects not working for some, speeds up the load time considerably)
 * Proper styling of embedded YouTube videos on mobileSafari in iPhone 2.0
@@ -23,7 +30,7 @@ In version 1.2, we've added:
 * Redundant, unused code cleanups
 * More style enhancements and tweaks, fixes
 
-In version 1.1.(1,2), we added the following features:
+Version 1.1.(1,2) added/changed the following features:
 
 * the ability to enable/disable the default home, rss and email menu items
 * support for WordPress installations that have static home pages

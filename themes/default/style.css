@@ -1,5 +1,3 @@
-/* @override http://24.150.116.198:9098/wp-content/plugins/wptouch/themes/default/style.css */
-
 /*  
 Theme Name: WPtouch Theme
 Theme URI: http://www.bravenewcode.com/wptouch/
@@ -876,7 +874,6 @@ img.pageicon {
 	letter-spacing: 0;
 	font-weight: normal;
 	font-style: normal;
-	margin-left: 35px;
 }
 
 .gravatar {
