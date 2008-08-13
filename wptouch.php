@@ -101,7 +101,7 @@
 			if ($this->desired_view == 'mobile') {
 	  			$blog = get_option('page_for_posts');
 				if ($blog) {
-					if (function_exists('is_front_page') && is_front_page()) { 
+					if (function_exists('is_front_page') && is_front_page() && $this->applemobile) { 
 						header('Location: ' . get_permalink($blog));
 						die;
 					}
