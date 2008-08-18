@@ -179,13 +179,13 @@ Page ifs closed, start the rest of things
 -->
 	
 					<?php if (bnc_is_js_enabled()) { ?>
-                    <a class="post-arrow" id="arrow-<?php the_ID(); ?>" href="javascript:new Effect.toggle($('entry-<?php the_ID(); ?>'),'Appear', {duration: 0.5});Element.setStyle('arrow-<?php the_ID(); ?>', {display:'none'} );Element.setStyle('arrow-down-<?php the_ID(); ?>', {display:'block'} );"></a>
+                    <a class="post-arrow" id="arrow-<?php the_ID(); ?>" href="javascript:$('#entry-<?php the_ID(); ?>').fadeIn(500); $('#arrow-<?php the_ID(); ?>').hide(); $('#arrow-down-<?php the_ID(); ?>').show();"></a>
 					<?php } else { ?>
                     <a class="post-arrow" id="arrow-<?php the_ID(); ?>" href="javascript:document.getElementById('entry-<?php the_ID(); ?>').style.display = 'block';document.getElementById('arrow-<?php the_ID(); ?>').style.display = 'none';document.getElementById('arrow-down-<?php the_ID(); ?>').style.display = 'block';"></a>
 					<?php } ?>
 					
                     <?php if (bnc_is_js_enabled()) { ?>
-					<a class="post-arrow-down" id="arrow-down-<?php the_ID(); ?>" href="javascript:new Effect.toggle($('entry-<?php the_ID(); ?>'),'Appear', {duration: 0.5});Element.setStyle('arrow-<?php the_ID(); ?>', {display:'block'} );Element.setStyle('arrow-down-<?php the_ID(); ?>', {display:'none'} );" style="display:none"></a>
+					<a class="post-arrow-down" id="arrow-down-<?php the_ID(); ?>" href="javascript:$('#entry-<?php the_ID(); ?>').fadeOut(500); $('#arrow-<?php the_ID(); ?>').show(); $('#arrow-down-<?php the_ID(); ?>').hide();" style="display:none"></a>
                     <?php } else { ?>
 					 <a style="display:none" class="post-arrow-down" id="arrow-down-<?php the_ID(); ?>" href="javascript:document.getElementById('entry-<?php the_ID(); ?>').style.display = 'none';document.getElementById('arrow-<?php the_ID(); ?>').style.display = 'block';document.getElementById('arrow-down-<?php the_ID(); ?>').style.display = 'none';"></a>
                     <?php } ?>
@@ -225,8 +225,8 @@ End of the if page or else code-->
 
 				<?php if (bnc_is_js_enabled()) { ?>
 				<div id="call<?php echo md5($_SERVER['REQUEST_URI']); ?>">
-				<a class="ajax" href="javascript:new Effect.Appear('spinner<?php echo md5($_SERVER['REQUEST_URI']); ?>', {duration:0.2});new Ajax.Updater('ajaxentries<?php
-				echo md5($_SERVER['REQUEST_URI']); ?>', '<?php echo get_next_posts_page_link(); ?>', {onComplete:function(){ new Effect.Fade('call<?php echo md5($_SERVER['REQUEST_URI']); ?>', {delay:1, duration:.5});}, asynchronous:true});">Load more entries...</a> <img id="spinner<?php echo md5($_SERVER['REQUEST_URI']); ?>" class="spin" src="<?php bloginfo('template_directory'); ?>/images/main-ajax-loader.gif" style="display:none" alt="" />
+				<a class="ajax" href="javascript:$('#spinner<?php echo md5($_SERVER['REQUEST_URI']); ?>').fadeIn(200); $('#ajaxentries<?php
+				echo md5($_SERVER['REQUEST_URI']); ?>').load('<?php echo get_next_posts_page_link(); ?>', {}, function(){ $('#call<?php echo md5($_SERVER['REQUEST_URI']); ?>').fadeOut();})">Load more entries...</a> <img id="spinner<?php echo md5($_SERVER['REQUEST_URI']); ?>" class="spin" src="<?php bloginfo('template_directory'); ?>/images/main-ajax-loader.gif" style="display:none" alt="" />
 				<div class="post-spacer"></div>
 				<div class="clearer"></div>
 				</div>				

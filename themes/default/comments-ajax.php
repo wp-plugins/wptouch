@@ -14,10 +14,10 @@
       echo $s;
       exit;
   }
-  foreach ($_POST as $k => $v) {
-      $_POST[$k] = urldecode($v);
+  foreach ($_GET as $k => $v) {
+      $_GET[$k] = urldecode($v);
   }
-  $comment_post_ID = (int)$_POST['comment_post_ID'];
+  $comment_post_ID = (int)$_GET['comment_post_ID'];
   $post_status = $wpdb->get_var("SELECT comment_status FROM $wpdb->posts WHERE ID = '$comment_post_ID'");
   if (empty($post_status)) {
       do_action('comment_id_not_found', $comment_post_ID);
@@ -26,10 +26,10 @@
       do_action('comment_closed', $comment_post_ID);
       fail(__('Sorry, comments are closed for this item.'));
   }
-  $comment_author = trim($_POST['author']);
-  $comment_author_email = trim($_POST['email']);
-  $comment_author_url = trim($_POST['url']);
-  $comment_content = trim($_POST['comment']);
+  $comment_author = trim($_GET['author']);
+  $comment_author_email = trim($_GET['email']);
+  $comment_author_url = trim($_GET['url']);
+  $comment_content = trim($_GET['comment']);
   // If the user is logged in
   get_currentuserinfo();
   if ($user_ID)

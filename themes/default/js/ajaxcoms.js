@@ -1,5 +1,6 @@
 // Ajax Comments
-function commentAdded(request){if($('errors')){Element.remove('errors');}
+function commentAdded(request) {
+    if ($('errors')) {Element.remove('errors');}
 new Effect.Appear($('commentlist').lastChild)
 $('comment').value=''
 $('comment').disabled=true
