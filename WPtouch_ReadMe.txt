@@ -1,7 +1,7 @@
 ReadMe
 
 WPtouch WordPress Theme & Plugin
-make your site look gorgeous on an iPhone/iPod touch
+Make your site look gorgeous on an iPhone/iPod touch
 
 By Dale Mugford & Duane Sotrey
 bravenewcode.com

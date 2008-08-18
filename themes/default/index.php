@@ -1,16 +1,37 @@
+<!--
+There's a lot going on in this file, as we've condensed several templates into the one index.php file. 
+We'll separate each section with  a '/////////////' commented line, to help you sift through the code... let's rock...
+-->
+
+<!--
+////////////////////////////
+HEADER
+Here we're establishing whether the page was loaded via Ajax or not, for dynamic purposes. If it's ajax, we're not bringing in header.php
+-->
 <?php global $is_ajax; $is_ajax = isset($_SERVER['HTTP_X_REQUESTED_WITH']); if (!$is_ajax) get_header(); ?>
-<div id="ajaxsinglepage<?php echo md5($_SERVER['REQUEST_URI']); ?>">
-  <div class="content" id="content<?php echo md5($_SERVER['REQUEST_URI']); ?>">
 
+<!--
+////////////////////////////
+IN THE BIGNINNING
+Here we're making sure that each ajax div will have a unique ID. 
+When posts are fetched via ajax they'll get one and we can interact with it.
+-->
+<div class="content" id="content<?php echo md5($_SERVER['REQUEST_URI']); ?>">
 
-		<!--If this is a search page, let's remind people, and help them out-->
-			<?php global $is_ajax; if (is_search() && ($is_ajax)) { ?>
-        <?php } elseif (is_search()) { ?>
+<!--
+If this is a search page, let's remind people, and help them out
+-->
+		<?php global $is_ajax; if (is_search() && ($is_ajax)) { ?>
+        <!--do nothing-->
+		<?php } elseif (is_search()) { ?>
         <div class="result-text">Search results for &lsquo;<?php the_search_query(); ?>&rsquo;:</div>
  	    <?php } ?>
 		
-		<!--If this is an archive page, let's remind people, and help them out-->
+<!--
+If this is an archive/tag/category/author archive page, let's remind people, and help them out
+-->
 		<?php global $is_ajax; if ($is_ajax) { ?>
+        <!--do nothing-->
 		<?php } elseif (is_archive()) { ?>
 
 		<div class="result-text">Browsing <?php if (is_category()) { ?>
@@ -41,7 +62,10 @@
 
   <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 	
-		<!--If It's NOT A Page, Let's Do The Comment Bubble Thing-->
+<!--
+/////////////////////////
+If It's NOT A Page, Let's Do The Comment Bubble Thing
+-->
  		<?php if (!is_page()) { ?>
 	
 		<?php if (function_exists('disqus_recent_comments')) { ?>
@@ -57,7 +81,10 @@
 
  <div class="post" id="post-<?php the_ID(); ?>">
  
-<!--If it's a page, we want things to be a little different, especially on photo, archive and links pages-->
+<!--
+////////////////////////////
+If it's a page, we want things to be a little different here, especially on photo, archive and links pages
+-->
 <?php if (is_page()) { ?>
 <div class="page">
 	<div class="page-title-icon">
@@ -80,10 +107,11 @@
 <div class="clearer"></div>
   
     <div id="entry-<?php the_ID(); ?>" class="pageentry">
-        <?php if (function_exists('bnc_the_content')) bnc_the_content(); else the_content(); ?>  
-            <?php if (is_page('archives')) {
-      // If you have a page named 'Archives', the WP tag cloud will be displayed below your content. Simply remove this wrapper. 
-	  		?>
+        <?php the_content(); ?>  
+
+<?php if (is_page('archives')) {
+// If you have a page named 'Archives', the WP tag cloud will be displayed below your content. Simply remove this wrapper. 
+?>
           </div>
   </div>
           
@@ -105,23 +133,25 @@
           <div id="wptouch-archives">
            <?php wp_get_archives(); // This will print out the default WordPress Monthly Archives Listing. ?> 
           </div>
-            <?php } ?>    
+		  
+<?php } ?><!-- end if archives page-->
             
-                <?php if (is_page('photos')) {
-          // If you have a page named 'Photos', and the FlickrRSS activated and configured your photos will be displayed here.
-          // It will override other number of images settings and fetch 20 from the ID.
+<?php if (is_page('photos')) {
+// If you have a page named 'Photos', and the FlickrRSS activated and configured your photos will be displayed here.
+// It will override other number of images settings and fetch 20 from the ID.
 ?>
-              <div id="wptouch-flickr">
+              
               <?php if (function_exists('get_flickrRSS')) { ?>
+			  <div id="wptouch-flickr">
               <?php get_flickrRSS(20); ?>
+			  </div>
               <?php } else { ?>
-            You need to install the <a href="http://eightface.com/wordpress/flickrrss/" rel="nofollow">FlickrRSS plugin</a> to unlock the beauty of this page.        
-             Edit the theme file page.php to remove this message.
+			  <!-- do nothing... maybe they have a different look for the photos page themselves-->
               <?php } ?>
-              </div>
-			  <?php } ?>    
-
+              
+<?php } ?><!-- end if photos page-->
             
+			
 <?php if (is_page('links')) {
 // If you have a page named 'Links', a default listing of your Links will be displayed here.
 ?>
@@ -136,11 +166,17 @@
                   echo('<a href="' . $bm->link_url . '">' . $bm->link_name . '</a>');
                   echo('</li>'); } ?>
                 </div>
-            <?php } ?>    		
+				
+<?php } ?><!-- end if links page-->    	
+	
 	</div>    
 </div>
   
-			<?php } else { ?><!--Page close, start the rest of things-->
+			<?php } else { ?>
+<!--
+//////////////////////
+Page ifs closed, start the rest of things
+-->
 	
 					<?php if (bnc_is_js_enabled()) { ?>
                     <a class="post-arrow" id="arrow-<?php the_ID(); ?>" href="javascript:new Effect.toggle($('entry-<?php the_ID(); ?>'),'Appear', {duration: 0.5});Element.setStyle('arrow-<?php the_ID(); ?>', {display:'none'} );Element.setStyle('arrow-down-<?php the_ID(); ?>', {display:'block'} );"></a>
@@ -177,11 +213,15 @@
 					
         </div>  
       </div>
-<?php } ?> <!--End of the if page or else code-->
+<?php } ?> 
+<!--
+/////////////////
+End of the if page or else code-->
 
     <?php endwhile; ?>
 
-<?php if (!is_page()) { ?><!--If it's an index page, let's do these things-->
+<?php if (!is_page()) { ?>
+<!--If it's an index page, let's do these things-->
 
 				<?php if (bnc_is_js_enabled()) { ?>
 				<div id="call<?php echo md5($_SERVER['REQUEST_URI']); ?>">
@@ -208,7 +248,10 @@
 				<?php } ?>
 		<?php } ?>
 
-<?php else : ?><!--If this was a bogus 404 page, the end of entry results, or a search -->
+<?php else : ?>
+<!--
+/////////////////////
+If this was a bogus 404 page, the end of entry results, or a search -->
 
 	<?php global $is_ajax; if (($is_ajax) && !is_search()) { ?>
 	  <div class="result-text">No more entries to display.</div>
@@ -221,5 +264,10 @@
 	<?php } ?>
 
   <?php endif; ?>
-</div>
+
+<!--
+////////////////////////////
+FOOTER
+Here we're establishing whether the page was loaded via Ajax or not, for dynamic purposes. If it's ajax, we're not bringing in footer.php
+-->
 <?php global $is_ajax; if (!$is_ajax) get_footer(); ?>

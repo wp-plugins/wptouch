@@ -1,4 +1,7 @@
 <?php
+////////////////////////////
+// AJAX COMMENTS
+//No need to modify this file, it works under all installations, if activated by using advanced javascript
   global $comment, $comments, $post, $wpdb, $user_ID, $user_identity, $user_email, $user_url;
   //echo __FILE__;
   //print_r($_SERVER);
