@@ -83,7 +83,7 @@ The toggles work with JS different ways, one with prototype/scriptaculous, the o
 	<?php if (bnc_is_js_enabled()) { ?>
 		    <a href="javascript:$('#wptouch-search').slideToggle(300);">
 		<?php } else { ?>
-		    <a href="javascript:document.getElementById('wptouch-search').style.display = 'block';">
+		    <a href="javascript:document.getElementById('wptouch-search').style.display='block';">
 		<?php } ?>
 		    <img src="<?php bloginfo('template_directory'); ?>/images/menu/search-touchmenu.png" alt="" />
 		</a>
@@ -91,7 +91,7 @@ The toggles work with JS different ways, one with prototype/scriptaculous, the o
 	<?php if (bnc_is_js_enabled()) { ?>
 		<a href="javascript:$('#dropmenu').slideToggle(300);">
 		<?php } else { ?>
-		<a href="javascript:document.getElementById('dropmenu').style.display = 'block';">
+		<a href="javascript:document.getElementById('dropmenu').style.display='block';">
 		<?php } ?>        
 		<img src="<?php bloginfo('template_directory'); ?>/images/menu/touchmenu.png" alt="" />
 		</a>

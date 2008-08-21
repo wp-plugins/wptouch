@@ -348,7 +348,7 @@ a.post-arrow {
 	float: right;
 	margin-top: 3px;
 	padding: 0;
-	background: url(images/post-arrow.png) no-repeat;
+	background: url(images/post-arrow.jpg) no-repeat;
 }
 
 a.post-arrow-down {
@@ -357,7 +357,7 @@ a.post-arrow-down {
 	float: right;
 	margin-top: 3px;
 	padding: 0;
-	background: url(images/post-arrow-down.png) no-repeat;
+	background: url(images/post-arrow-down.jpg) no-repeat;
 }
 
 a.h2 {

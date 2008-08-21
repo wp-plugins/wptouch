@@ -190,7 +190,7 @@ Page ifs closed, start the rest of things
 					 <a style="display:none" class="post-arrow-down" id="arrow-down-<?php the_ID(); ?>" href="javascript:document.getElementById('entry-<?php the_ID(); ?>').style.display = 'none';document.getElementById('arrow-<?php the_ID(); ?>').style.display = 'block';document.getElementById('arrow-down-<?php the_ID(); ?>').style.display = 'none';"></a>
                     <?php } ?>
                     
-						<div class="calendar" style="background: url(<?php bloginfo('template_directory'); ?>/images/cal/month<?php the_time('n') ?>.png) no-repeat;">
+						<div class="calendar" style="background: url(<?php bloginfo('template_directory'); ?>/images/cal/month<?php the_time('n') ?>.jpg) no-repeat;">
 						<div class="cal-month"><?php the_time('M') ?></div>
 						<div class="cal-date"><?php the_time('j') ?></div>
 						</div>
