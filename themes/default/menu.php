@@ -24,4 +24,3 @@ We're checking the pages that are enabled in the admin, and the icons which were
             <?php } ?>
             </ul>
         </div>
-
