@@ -18,23 +18,14 @@ Please visit http://www.bravenewcode.com/wptouch/ for a full description of the 
 
 In version 1.3, we've added / changed:
 * Switch from Prototype to the more WordPress-native jQuery for javascript (much faster!)
-
 * Fix for wrong re-directs happening unintentionally if you use a static home page 
-
 * Elimination of unneeded images, javascript (shaving more than 100KB!)
-
 * More template file cleanups, image & code optimizations
-
 * The addition of more comments in code templates to help you make custom modifications
-
 * Option to enable comments on pages
-
 * Option to manually enter in a new blog title (fixes cases where the blog title runs the length of the header and wraps)
-
 * Option to hide/show excerpts by default on the home, search, and archive pages
-
 * Switch code links are automatically injected into your regular theme's footer now, and is only seen on the iPhone/ipod touch
-
 * In all, despite the addition of new features we've cut load times for WPtouch in half with this release over 1.2.x releases!
 
 
