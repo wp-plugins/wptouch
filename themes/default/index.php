@@ -242,8 +242,12 @@ End of the if page or else code-->
 				<?php } elseif (!bnc_is_js_enabled() && !is_search()) { ?>
 				
 				<div class="main-navigation">
-				<div class="alignleft"><?php previous_posts_link('<img src="' . get_bloginfo('template_directory') . '/images/blue_arrow_l.jpg" alt="" /> Newer Entries') ?></div>
-				<div class="alignright"><?php next_posts_link('Older Entries <img src="' . get_bloginfo('template_directory') . '/images/blue_arrow_r.jpg" alt="" />') ?></div>
+					<div class="alignleft">
+					<?php previous_posts_link('<img src="' . get_bloginfo('template_directory') . '/images/blue_arrow_l.jpg" alt="" /> Newer Entries') ?>
+					</div>
+					<div class="alignright">
+					<?php next_posts_link('Older Entries <img src="' . get_bloginfo('template_directory') . '/images/blue_arrow_r.jpg" alt="" />') ?>
+					</div>
 				</div>
 				<?php } ?>
 		<?php } ?>

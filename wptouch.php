@@ -34,13 +34,11 @@
  
 // WPtouch Theme Options
     $bnc_wptouch_version = '1.3';
- 
     function WPtouch($before = '', $after = '')
     {
         global $bnc_wptouch_version;
         echo $before . 'WPtouch ' . $bnc_wptouch_version . $after;
     }
-
  
     // WP Admin stylesheets, detect if we're using WordPress 2.5 or lower, and serve up a slightly different layout for each:
     function wptouch_admin_css()
@@ -113,8 +111,9 @@
       function detectAppleMobile($query = '')
       {
           $container = $_SERVER['HTTP_USER_AGENT'];
-          //print_r($container); //this prints out the user agent array. uncomment to see it shown on page.
-          $useragents = array("iPhone", "iPod", "Aspen", "Firefox", "Safari");
+          //print_r($container); //this prints out the user agent array
+		  // Add whatever user agents you want here if you want to make this show on a Blackberry or something. No guarantees it'll look pretty, though!
+          $useragents = array("iPhone", "iPod", "Aspen");
           $this->applemobile = false;
           foreach ($useragents as $useragent) {
               if (eregi($useragent, $container)) {
