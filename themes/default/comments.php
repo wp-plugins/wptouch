@@ -109,11 +109,8 @@ Checking to see if Gravatars are enabled for WPtouch
   Let's check for advanced JS setting, and if it's enabled do fancy ajax comments
   -->
 	<?php if (bnc_is_js_enabled()) { ?>
-	<form id="commentform" action="<?php echo get_option('url'); ?>/wp-comments-post.php" method="post" onsubmit="var list = $('#new_comment'); var html = list.html(); var param = $('form').serialize(); $.ajax({url: '<?php bloginfo('template_directory'); ?>/comments-ajax.php?' + param, success: function(data, status){ list.html(data); }, type: 'get' }); $('#refresher').fadeIn(200); return false;">
-    <div id="new_comment">
-
-    </div>
 	<div id="refresher" style="display:none">&raquo; <a href="javascript:this.location.reload();">Refresh the page</a> to post a new comment.</div>
+	<form id="commentform" action="<?php echo get_option('url'); ?>/wp-comments-post.php" method="post" onsubmit="var list = $('#commentlist'); var html = list.html(); var param = $('form').serialize(); $.ajax({url: '<?php bloginfo('template_directory'); ?>/comments-ajax.php?' + param, success: function(data, status){ list.append(data); commentAdded(); }, type: 'get' }); return false;">
 	<?php } else { ?>
 	<form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" id="commentform">
 	<?php } ?>

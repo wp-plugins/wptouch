@@ -63,5 +63,5 @@
   include(TEMPLATEPATH . '/comments.php');
   $commentout = ob_get_clean();
   preg_match('#<li(.*?)>(.*)</li>#ims', $commentout, $matches);
-  echo "<li style=\"display:none\"" . $matches[1] . ">" . $matches[2] . "</li>";
+  echo "<li id=\"some-new-comment\" style=\"display:none\"" . $matches[1] . ">" . $matches[2] . "</li>";
 ?>
