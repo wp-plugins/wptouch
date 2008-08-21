@@ -68,8 +68,8 @@ Hidden bookmark box code (activated by the above link)
 <!--
 Single post navigation links
 -->
-      <div class="alignleft"><?php next_post_link('<img src="' . get_bloginfo('template_directory') . '/images/blue_arrow_l.png" alt="" /> %link') ?></div>
-      <div class="alignright"><?php previous_post_link('%link <img src="' . get_bloginfo('template_directory') . '/images/blue_arrow_r.png" alt="" />') ?></div>
+      <div class="alignleft"><?php next_post_link('<img src="' . get_bloginfo('template_directory') . '/images/blue_arrow_l.jpg" alt="" /> %link') ?></div>
+      <div class="alignright"><?php previous_post_link('%link <img src="' . get_bloginfo('template_directory') . '/images/blue_arrow_r.jpg" alt="" />') ?></div>
 
       <div class="clearer"></div>
     </div>

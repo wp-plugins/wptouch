@@ -5,29 +5,6 @@
 <title><?php bloginfo('name'); ?></title>
 <meta name="generator" content="WordPress <?php bloginfo('version'); ?>" /> <!-- leave this for stats -->
 <meta name="description" content="<?php bloginfo('description'); ?>" />
-<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
-<!--
-In order to have some dynamic user-selected CSS, we've written the below. 
-We could pull it out into a css.php file, but it's just a small block and easy to add or modify this way.
--->
-<style type="text/css">
-#menubar {
-	width: 100%;
-	height: 45px;
-	background: #<?php echo bnc_get_header_background(); ?> url(<?php bloginfo('template_directory'); ?>/images/head-fade-bk.png) repeat-x;
-}
-#blogtitle a {
-	text-decoration: none;
-	font: bold 20px Helvetica, sans-serif;
-	letter-spacing: -1px;
-	position: relative;
-	color: #<?php echo bnc_get_header_color(); ?>
-}
-a {
-	text-decoration: none;
-	color: #<?php echo bnc_get_link_color(); ?>
-}
-</style>
 <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php bloginfo('rss2_url'); ?>" />
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 <!--
@@ -55,6 +32,29 @@ if  (is_single() && !function_exists('disqus_recent_comments')) { ?>
 <?php } ?>
 <?php } ?>
 <?php wp_head(); ?>
+<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
+<!--
+In order to have some dynamic user-selected CSS, we've written the below. 
+We could pull it out into a css.php file, but it's just a small block and easy to add or modify this way.
+-->
+<style type="text/css">
+#menubar {
+	width: 100%;
+	height: 45px;
+	background: #<?php echo bnc_get_header_background(); ?> url(<?php bloginfo('template_directory'); ?>/images/head-fade-bk.png) repeat-x;
+}
+#blogtitle a {
+	text-decoration: none;
+	font: bold 20px Helvetica, sans-serif;
+	letter-spacing: -1px;
+	position: relative;
+	color: #<?php echo bnc_get_header_color(); ?>
+}
+a {
+	text-decoration: none;
+	color: #<?php echo bnc_get_link_color(); ?>
+}
+</style>
 </head>
 <body>
 <!--

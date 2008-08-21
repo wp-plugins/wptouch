@@ -1,3 +1,5 @@
+/* @override http://24.150.116.198:9098/wp-content/plugins/wptouch/themes/default/style.css */
+
 /*  
 Theme Name: WPtouch Theme
 Theme URI: http://www.bravenewcode.com/wptouch/
@@ -28,7 +30,7 @@ body {
 	padding: 0;
 	font: 12px Helvetica;
 	-webkit-text-size-adjust: none;
-	background: url(images/pinstripes.png) repeat;
+	background: url(images/pinstripes.jpg) repeat;
 }
 
 a:active {
@@ -310,13 +312,14 @@ input#ssubmit {
 #drop-fade {
 	width: 100%;
 	height: 16px;
-	background: url(images/choice-bk.png) repeat-x;
 	display: block;
 	text-align: right;
 	position: relative;
 	bottom: 1px;
 	margin: 0;
 	padding: 0;
+	background-color: #222;
+	opacity: 0.98;
 }
 
 #drop-fade img {
