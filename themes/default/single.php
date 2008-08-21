@@ -90,7 +90,7 @@ Dynamic test for what page this is. A little redundant, but so what?
 			<?php } elseif (is_search()) { ?>
 			<div class="result-text">No search results results found. Try another query.</div>
 			<?php } else { ?>
-			<div class="result-text">No entries found. Try using the search to find what you were looking for.</div>
+		    <div class="post"><img src="<?php bloginfo('template_directory'); ?>/images/404.jpg" alt="404 Not Found" /></div>
 			<?php } ?>
 	
 		<?php endif; ?>
