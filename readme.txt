@@ -69,7 +69,7 @@ Yes, that's true for the most part (minus flash support). However, first of all 
 
 = Well, what if my users don't like it and want to see my regular site? =
 
-There's an option in the footer on WPtouch for your users to easily switch between the WPtouch view and your site's regular appearance. It's that easy. You put a little snippet of code into your current theme which will be shown only to iPhone/iPod touch users and give them the ability to switch between the two easily, but we'll get into that later in the instructions.
+There's an option in the footer on WPtouch for your users to easily switch between the WPtouch view and your site's regular appearance. It's that easy. We even put a little snippet of code into your current theme which will be shown only to iPhone/iPod touch users and give them the ability to switch between the two easily.
 
 = Will it slow down my blog? =
 
