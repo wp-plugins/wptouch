@@ -565,7 +565,7 @@ The News Section
 <div class="wptouch-itemrow">
 	<div class="wptouch-item-desc">
 	<h2>News and Support</h2>
-	<p>Here you'll find dynamic information on WPtouch and future changes, as well as support entries and FAQ notes.<br /><br />For now you'll find the latest entries tagged WPtouch on BraveNewCode.com</p>
+	<p>BraveNewCode.com entries tagged 'WPtouch'. This list dynamically updates to provide you with the latest information about the plugin's development.</p>
 	</div>
 		
 	<div class="wptouch-item-content-box1">
