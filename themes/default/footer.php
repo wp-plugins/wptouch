@@ -22,11 +22,12 @@ Here the switch code is very important, as well as the php code which deals with
 				<a href="<?php bloginfo('wpurl'); ?>/wp-login.php">Login to <?php bloginfo('name'); ?></a><?php if (get_option('comment_registration')) { ?> | <a href="<?php bloginfo('wpurl'); ?>/wp-register.php">Register</a><?php } ?>
 				<?php  endif; ?>
  		 </p>
-	</div>
+	
   <?php
   //WPtouch theme designed & developed by Dale Mugford & Duane Storey for BraveNewCode.com
   //Licensed under GPL
   //If you modify it, please, give us credit, that's all we ask
   wp_footer(); ?>
+  </div>
 </body>
 </html>

@@ -13,7 +13,7 @@ Here we're establishing whether the page was loaded via Ajax or not, for dynamic
 
     <a class="sh2" href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php if (function_exists('the_title_attribute')) the_title_attribute(); else the_title(); ?>"><?php the_title(); ?></a>
 	
-        <div class="single-post-meta-top"><?php the_time('F jS, Y - g:ia') ?> &rsaquo; By <?php the_author() ?><br />
+        <div class="single-post-meta-top"><?php the_time('M / d / y - g:ia') ?> &rsaquo; <?php the_author() ?><br />
 <!--
 Let's check for DISQUS... we need to skip to a different div if it's installed and active
 -->		
@@ -77,6 +77,7 @@ Single post navigation links
 <!--
 Let's rock the comments
 -->
+
   <?php comments_template(); ?>
   
  		 <?php endwhile; else : ?>

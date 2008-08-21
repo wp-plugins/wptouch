@@ -29,6 +29,7 @@
 	if ($bnc_option == null) {
 		$defaults = array();
 		$defaults['header-background-color'] = '222222';
+		$defaults['header-title'] = '' . get_bloginfo('title') . '';
 	//	update_option('bnc_iphone_pages', serialize($defaults));
 	}
  
@@ -40,7 +41,7 @@
         echo $before . 'WPtouch ' . $bnc_wptouch_version . $after;
     }
  
-    // WP Admin stylesheets, detect if we're using WordPress 2.5 or lower, and serve up a slightly different layout for each:
+    // WP Admin stylesheet, Javascript
     function wptouch_admin_css()
     {
         $url = get_bloginfo('wpurl');
@@ -96,7 +97,7 @@
               $this->desired_view = 'mobile';
           }
 
-			// check static home page problem
+			// check for a static home page, serve up the posts page as WPtouch home
 			if ($this->desired_view == 'mobile') {
 	  			$blog = get_option('page_for_posts');
 				if ($blog) {
@@ -113,7 +114,7 @@
           $container = $_SERVER['HTTP_USER_AGENT'];
           //print_r($container); //this prints out the user agent array
 		  // Add whatever user agents you want here if you want to make this show on a Blackberry or something. No guarantees it'll look pretty, though!
-          $useragents = array("iPhone", "iPod", "Aspen");
+          $useragents = array("iPhone", "iPod", "Safari");
           $this->applemobile = false;
           foreach ($useragents as $useragent) {
               if (eregi($useragent, $container)) {
@@ -188,13 +189,17 @@
   }
   
     // The template switch code, now works on PHP4, hooray
-  function wptouch_switch($before = '', $after = '')
+	//**************UPDATED**************** 
+	//Now injects into the wp_footer hook automatically (new in 1.3)
+	//H3#ID is just hidden in WPtouch, showing the manual switch instead
+  function wptouch_switch()
   {
       global $wptouch_plugin;
       if ($wptouch_plugin->applemobile) {
-          echo $before . '<a href="' . get_bloginfo('siteurl') . '/?bnc_view=mobile">iPhone View</a> | Normal View' . $after;
+          echo '<h2 id="switch-footer-links" style="margin-top:50px;margin-bottom:75px"><a href="' . get_bloginfo('siteurl') . '/?bnc_view=mobile" style="color: #06c">iPhone View</a> | Normal View</h2>';
+ 	 }
   }
-}
+
   
   function bnc_options_menu()
   {
@@ -226,6 +231,24 @@
       }
   }
 
+function bnc_excerpt_enabled() {
+      $ids = bnc_wp_touch_get_menu_pages();
+
+      if (!isset($ids['enable-post-excerpts']))  {
+			return true;
+		}
+			return $ids['enable-post-excerpts'];
+	}	
+
+function bnc_is_page_coms_enabled() {
+      $ids = bnc_wp_touch_get_menu_pages();
+
+      if (!isset($ids['enable-page-coms']))  {
+			return true;
+		}
+			return $ids['enable-page-coms'];
+	}		
+	
 	function bnc_is_js_enabled() {
       $ids = bnc_wp_touch_get_menu_pages();
 
@@ -315,7 +338,7 @@
       global $table_prefix;
       $keys = array();
       foreach ($ids as $k => $v) {
-          if ($k == 'main_title' || $k == 'enable-js-header' || $k == 'enable-gravatars' || $k == 'enable-main-home' || $k == 'enable-main-rss' || $k == 'enable-main-email' || $k == 'enable-main-name' || $k == 'enable-main-tags' || $k == 'enable-main-categories') {
+          if ($k == 'main_title' || $k == 'enable-post-excerpts' || $k == 'enable-page-coms' || $k == 'enable-js-header' || $k == 'enable-gravatars' || $k == 'enable-main-home' || $k == 'enable-main-rss' || $k == 'enable-main-email' || $k == 'enable-main-name' || $k == 'enable-main-tags' || $k == 'enable-main-categories') {
 				// do nothing
           } else {
 				if (is_numeric($k)) {
@@ -338,6 +361,19 @@
       
       return $a;
   }
+
+function bnc_get_header_title()
+{
+	$v = get_option('bnc_iphone_pages');
+	if (!is_array($v)) {
+		$v = unserialize($v);
+	}
+
+	if (!isset($v['header-title'])) {
+		$v['header-title'] = '' . get_bloginfo('title') . '';
+	}
+	return $v['header-title'];
+}
 
 function bnc_get_header_background()
 {
@@ -430,6 +466,18 @@ return $v['link-color'];
           unset($_POST['submit']);
 			$a = array();
 
+			if (isset($_POST['enable-post-excerpts'])) {
+				$a['enable-post-excerpts'] = 1;
+			} else {
+				$a['enable-post-excerpts'] = 0;
+			}
+			
+			if (isset($_POST['enable-page-coms'])) {
+				$a['enable-page-coms'] = 1;
+			} else {
+				$a['enable-page-coms'] = 0;
+			}
+			
 			if (isset($_POST['enable-js-header'])) {
 				$a['enable-js-header'] = 1;
 			} else {
@@ -490,6 +538,7 @@ return $v['link-color'];
               }
           }
 
+	  $a['header-title'] = $_POST['header-title'];
 	  $a['header-background-color'] = $_POST['header-background-color'];
 	  $a['header-text-color'] = $_POST['header-text-color'];
 	  $a['link-color'] = $_POST['link-color'];
@@ -503,6 +552,10 @@ return $v['link-color'];
         		$v = unserialize($v);
     		}
 
+			if (!isset($v['header-title'])) {
+				$v['header-title'] = '' . get_bloginfo('title') . '';
+			}
+			
 			if (!isset($v['header-background-color'])) {
 				$v['header-background-color'] = '222222';
 			}
@@ -515,6 +568,14 @@ return $v['link-color'];
 				$v['link-color'] = '006bb3';
 			}
 
+			if (!isset($v['enable-post-excerpts'])) {
+            $v['enable-post-excerpts'] = 1;
+			}	
+			
+			if (!isset($v['enable-page-coms'])) {
+            $v['enable-page-coms'] = 0;
+			}	
+			
 			if (!isset($v['enable-js-header'])) {
             $v['enable-js-header'] = 1;
 			}	
@@ -591,27 +652,29 @@ The Javascript Section
 
 <div class="wptouch-itemrow">
 	<div class="wptouch-item-desc">
-	<h2>Optimization Options</h2>
-	<p>Choose to enable/disable advanced Javascript &amp; Gravatars features</p>
+	<h2>Optimization &<br />Template Options</h2>
+	<p>Choose to enable/disable advanced Javascript &amp; Gravatars features, enable/disable comments on pages</p>
 	</div>
 	
 		<div class="wptouch-item-content-box1">
 			<div class="wptouch-checkbox-row"><input type="checkbox" name="enable-js-header" <?php if (isset($v['enable-js-header']) && $v['enable-js-header'] == 1) echo('checked'); ?>><label for="enable-js-header"> Use Advanced <a href="http://www.prototypejs.org/" target="_blank">Prototype</a> Javascript Effects (ajax entries, ajax comments, smooth effects)</label></div>
             
 		<div class="wptouch-checkbox-row"><input type="checkbox" name="enable-gravatars" <?php if (isset($v['enable-gravatars']) && $v['enable-gravatars'] == 1) echo('checked'); ?>><label for="enable-gravatars"> Enable Gravatars in Comments</label></div>
+		
+		<div class="wptouch-checkbox-row"><input type="checkbox" name="enable-page-coms" <?php if (isset($v['enable-page-coms']) && $v['enable-page-coms'] == 1) echo('checked'); ?>><label for="enable-page-coms"> Enable Comments For Pages (will add the comment form to <strong>all</strong> pages by default)</label></div>
       		
             <h4 id="wptouch-js">When Advanced Javascript Is Disabled:</h4>
             <ul class="wptouch-small-menu">
             <li>Your site loads faster on EDGE and 3G connections</li>
             <li>Close icons will appear on the search and menu drop downs</li>
-            <li>Comments will not be posted by ajax, and the page will refresh</li>
-            <li>The 'Load More Entries' link will not be displayed, and instead regular blog navigation links will be shown</li>
+            <li>Comments will not be posted by ajax, and the page will refresh instead</li>
+            <li>The 'Load More Entries' link is not displayed, instead regular blog navigation links are shown</li>
 			</ul>
 
 		    <h4 id="wptouch-js">When Gravatars Are Disabled:</h4>		
             <ul class="wptouch-small-menu">
-            <li>Single post pages load faster on EDGE and 3G connections</li>
-            <li>Gravatar.com images will <strong>not</strong> be shown beside commenter's names on single posts</li>
+            <li>Gravatar.com images are <strong>not</strong> shown beside commenter's names</li>
+            <li>As a result, single post pages load faster on EDGE and 3G connections</li>
            </ul>
 	
 		</div>
@@ -633,6 +696,10 @@ The Style Section
 		
 	<div class="wptouch-item-content-box1" id="wptouchstyle">
 				
+<div class="header-item-desc">Header Title (here you can override your site title to fit the WPtouch header space)</div>
+<div class="header-input">&nbsp; <input text="text" name="header-title" type="text" value="<?php echo $v['header-title']; ?>" /></div>
+
+
 <div class="header-item-desc">Header Background Color</div>
 <div class="header-input">#<input text="text" name="header-background-color" type="text" value="<?php echo $v['header-background-color']; ?>" /></div>
 
@@ -655,7 +722,7 @@ The Post Listings Section
 <div class="wptouch-itemrow">
 	<div class="wptouch-item-desc">
 	<h2>Post Listings Options</h2>
-	<p>Select which post-meta items will be shown beneath post titles on the index, search &amp; archive pages. </p>
+	<p>Select which post-meta items will be shown beneath post titles on the index, search &amp; archive pages, and choose whether the post excerpts are shown by default on those pages.</p>
 	</div>
 	
 		<div class="wptouch-item-content-box1">
@@ -665,6 +732,8 @@ The Post Listings Section
 			<div class="wptouch-checkbox-row"><input type="checkbox" name="enable-main-categories" <?php if (isset($v['enable-main-categories']) && $v['enable-main-categories'] == 1) echo('checked'); ?>><label for="enable-categories"> Show Categories</label></div>
 			
 			<div class="wptouch-checkbox-row"><input type="checkbox" name="enable-main-tags" <?php if (isset($v['enable-main-tags']) && $v['enable-main-tags'] == 1) echo('checked'); ?>><label for="enable-tags"> Show Tags</label></div>
+			
+			<div class="wptouch-checkbox-row"><input type="checkbox" name="enable-post-excerpts" <?php if (isset($v['enable-post-excerpts']) && $v['enable-post-excerpts'] == 1) echo('checked'); ?>><label for="enable-excerpts">Hide Excerpts (if unchecked the excerpts will be shown, and the drop arrows will be hidden)</label></div>
 				
 		</div>
 	<div class="wptouch-clearer"></div>
@@ -925,4 +994,5 @@ The Plugin Section
 <?php 
 echo('</div></div>'); } 
 add_action('admin_menu', 'bnc_options_menu'); 
+add_action('wp_footer', 'wptouch_switch');
 ?>

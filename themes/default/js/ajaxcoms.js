@@ -16,4 +16,3 @@ function commentAdded() {
         $('#hidelist').hide();
     }
 }
-

@@ -8,4 +8,3 @@ function bnc_load_menu(loc) {
     }
     menu_loaded = 1;
 }
-
