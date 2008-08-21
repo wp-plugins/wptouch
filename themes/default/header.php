@@ -116,7 +116,7 @@ Our search dropdown
 
 	<div id="dropmenu" style="display:none">
         <?php if (!bnc_is_js_enabled()) { ?>
-        <?php require_once('menu.php'); ?>
+        <?php include('menu.php'); ?>
         <?php } ?>
 	</div>
 
