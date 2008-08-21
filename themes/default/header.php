@@ -27,8 +27,10 @@ This check to see if advanced JS is enabled in the WPtouch admin.
 Disqus commenting check for Ajax Coms JS Need 
 -->
 <?php
-if  (is_single() && !function_exists('disqus_recent_comments')) { ?>
-<?php if (bnc_is_js_enabled()) { ?>
+if  (!function_exists('disqus_recent_comments')) { ?>
+<?php if (is_single() && bnc_is_js_enabled()) { ?>
+<script src="<?php bloginfo('template_directory'); ?>/js/ajaxcoms.js" type="text/javascript"></script>
+<?php } elseif (is_page() && bnc_is_page_coms_enabled()) { ?>
 <script src="<?php bloginfo('template_directory'); ?>/js/ajaxcoms.js" type="text/javascript"></script>
 <?php } ?>
 <?php } ?>
@@ -46,7 +48,7 @@ We could pull it out into a css.php file, but it's just a small block and easy t
 }
 #blogtitle a {
 	text-decoration: none;
-	font: bold 20px Helvetica, sans-serif;
+	font: 21px HelveticaNeue-Bold, sans-serif;
 	letter-spacing: -1px;
 	position: relative;
 	color: #<?php echo bnc_get_header_color(); ?>
@@ -73,7 +75,7 @@ We've commented below to let you know what works what, so if you do go messing a
 This fetches the admin selection logo icon for the header, which is also the bookmark icon
 -->
 <div  id="blogtitle">
-<img src="<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/images/icon-pool/<?php echo bnc_get_title_image(); ?>" alt="" /> <a href="<?php bloginfo('siteurl'); ?>"><?php bloginfo('name'); ?></a></div>
+<img src="<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/images/icon-pool/<?php echo bnc_get_title_image(); ?>" alt="" /> <a href="<?php bloginfo('siteurl'); ?>"><?php echo bnc_get_header_title(); ?></a></div>
 </div>
 
 <!--
@@ -82,7 +84,7 @@ The toggles work with JS different ways, one with prototype/scriptaculous, the o
 -->
 	<div id="drop-fade">
 	<?php if (bnc_is_js_enabled()) { ?>
-		    <a href="javascript:$('#wptouch-search').slideToggle(300);">
+		    <a href="javascript:$('#wptouch-search').slideToggle(200);">
 		<?php } else { ?>
 		    <a href="javascript:document.getElementById('wptouch-search').style.display='block';">
 		<?php } ?>

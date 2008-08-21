@@ -171,6 +171,10 @@ If it's a page, we want things to be a little different here, especially on phot
 	
 	</div>    
 </div>
+         <!--If comments are enabled for pages in the WPtouch admin-->
+		 <?php if (bnc_is_page_coms_enabled()) { ?>
+        <?php comments_template(); ?>
+        <?php } ?>
   
 			<?php } else { ?>
 <!--
@@ -178,17 +182,16 @@ If it's a page, we want things to be a little different here, especially on phot
 Page ifs closed, start the rest of things
 -->
 	
-					<?php if (bnc_is_js_enabled()) { ?>
-                    <a class="post-arrow" id="arrow-<?php the_ID(); ?>" href="javascript:$('#entry-<?php the_ID(); ?>').fadeIn(500); $('#arrow-<?php the_ID(); ?>').hide(); $('#arrow-down-<?php the_ID(); ?>').show();"></a>
-					<?php } else { ?>
-                    <a class="post-arrow" id="arrow-<?php the_ID(); ?>" href="javascript:document.getElementById('entry-<?php the_ID(); ?>').style.display = 'block';document.getElementById('arrow-<?php the_ID(); ?>').style.display = 'none';document.getElementById('arrow-down-<?php the_ID(); ?>').style.display = 'block';"></a>
-					<?php } ?>
+
 					
-                    <?php if (bnc_is_js_enabled()) { ?>
-					<a class="post-arrow-down" id="arrow-down-<?php the_ID(); ?>" href="javascript:$('#entry-<?php the_ID(); ?>').fadeOut(500); $('#arrow-<?php the_ID(); ?>').show(); $('#arrow-down-<?php the_ID(); ?>').hide();" style="display:none"></a>
-                    <?php } else { ?>
-					 <a style="display:none" class="post-arrow-down" id="arrow-down-<?php the_ID(); ?>" href="javascript:document.getElementById('entry-<?php the_ID(); ?>').style.display = 'none';document.getElementById('arrow-<?php the_ID(); ?>').style.display = 'block';document.getElementById('arrow-down-<?php the_ID(); ?>').style.display = 'none';"></a>
-                    <?php } ?>
+<?php if (bnc_excerpt_enabled()) { ?>
+
+							<?php if (bnc_is_js_enabled()) { ?>
+							<a class="post-arrow" id="arrow-<?php the_ID(); ?>" href="javascript:$('#entry-<?php the_ID(); ?>').fadeIn(500); $('#arrow-<?php the_ID(); ?>').hide(); $('#arrow-down-<?php the_ID(); ?>').show();"></a>		
+							<?php } elseif (!bnc_is_js_enabled()) { ?>
+							<a style="display:none" class="post-arrow-down" id="arrow-down-<?php the_ID(); ?>" href="javascript:document.getElementById('entry-<?php the_ID(); ?>').style.display = 'none';document.getElementById('arrow-<?php the_ID(); ?>').style.display = 'block';document.getElementById('arrow-down-<?php the_ID(); ?>').style.display = 'none';"></a>
+							<?php } ?>
+<?php } ?>
                     
 						<div class="calendar" style="background: url(<?php bloginfo('template_directory'); ?>/images/cal/month<?php the_time('n') ?>.jpg) no-repeat;">
 						<div class="cal-month"><?php the_time('M') ?></div>
@@ -206,8 +209,7 @@ Page ifs closed, start the rest of things
 			</div>
 					
 			<div class="clearer"></div>
-
-            <div id="entry-<?php the_ID(); ?>" style="display:none" class="mainentry">
+            <div id="entry-<?php the_ID(); ?>" <?php if (bnc_excerpt_enabled()) { ?>style="display:none"<?php } ?> class="mainentry">
             <?php the_content_rss('', false, '', 50); ?>
 		    <a href="<?php the_permalink() ?>">Read More &raquo;</a>
 					

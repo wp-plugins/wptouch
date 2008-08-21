@@ -1,22 +1,23 @@
+/* @override http://24.150.116.198:9098/wp-content/plugins/wptouch/admin-css/wptouch-admin.css */
+
 /* 
 WPtouch Admin Styles for WordPress 2.1+
 */
 
 #wptouch-theme {
 	font-family: "Lucida Grande", Georgia, Arial, sans-serif;
-	margin-top: 25px;
-	margin: 0 auto;
 	width: 100%;
+	margin-bottom: 0;
+	margin-top: 0;
+	margin-right: auto;
 }
 
 #wptouch-theme h3 {
-	margin-left: 30%;
 	font-size: 13px;
 	margin-top: 4%;
 }
 
 #wptouch-theme h4 {
-	margin-left: 30%;
 	font-size: 13px;
 	margin-top: 4%;
 }
@@ -103,7 +104,7 @@ WPtouch Admin Styles for WordPress 2.1+
 	width: 25%;
 	margin-right: 3%;
 	padding-top: 15px;
-	padding-bottom: 60px;
+	padding-bottom: 65px;
 	padding-right: 2%;
 	margin-bottom: 1px;
 	display: block;
@@ -117,6 +118,7 @@ WPtouch Admin Styles for WordPress 2.1+
 	padding-top: 15px;
 	padding-bottom: 15px;
 	display: block;
+	margin-left: 30%;
 }
 
 
@@ -129,7 +131,6 @@ WPtouch Admin Styles for WordPress 2.1+
 }
 
 #wptouch-news {
-	margin-left: 30%;
 }
 
 #wptouch-news a {
@@ -163,7 +164,7 @@ WPtouch Admin Styles for WordPress 2.1+
 
 /* @group Style */
 
-#wptouch-theme .wptouchstyle .header-item-desc {
+#wptouch-theme #wptouchstyle .header-item-desc {
 	
 }
 
@@ -232,7 +233,6 @@ WPtouch Admin Styles for WordPress 2.1+
 	margin-bottom: 5px;
 	margin-top: 5px;
 	padding: 6px 5px 24px;
-	margin-left: 30%;
 }
 
 .wptouch-select-row input {
@@ -249,7 +249,6 @@ WPtouch Admin Styles for WordPress 2.1+
 }
 
 .wptouch-checkbox-row {
-	margin-left: 30%;
 }
 
 .wptouch-checkbox-row label {
@@ -272,7 +271,6 @@ WPtouch Admin Styles for WordPress 2.1+
 	background-color: #cbf4ff;
 	padding: 0 3px 7px 5px;
 	display: block;
-	margin-left: 30%;
 	margin-bottom: 5px;
 	font-size: 11px;
 }
@@ -282,7 +280,6 @@ WPtouch Admin Styles for WordPress 2.1+
 	background-color: #fee8b9;
 	padding: 0 3px 7px 5px;
 	display: block;
-	margin-left: 30%;
 	margin-bottom: 5px;
 	font-size: 11px;
 }
@@ -292,7 +289,6 @@ WPtouch Admin Styles for WordPress 2.1+
 	background-color: #ffaab1;
 	padding: 0 3px 7px 5px;
 	display: block;
-	margin-left: 30%;
 	margin-bottom: 5px;
 	font-size: 11px;
 }
@@ -340,7 +336,6 @@ WPtouch Admin Styles for WordPress 2.1+
 	font-size: 12px;
 	color: #444;
 	padding: 0;
-	margin-left: 30%;
 }
 
 
