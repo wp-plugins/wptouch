@@ -110,7 +110,7 @@ Checking to see if Gravatars are enabled for WPtouch
   -->
 	<?php if (bnc_is_js_enabled()) { ?>
 	<div id="refresher" style="display:none">&raquo; <a href="javascript:this.location.reload();">Refresh the page</a> to post a new comment.</div>
-	<form id="commentform" action="<?php echo get_option('url'); ?>/wp-comments-post.php" method="post" onsubmit="var list = $('#commentlist'); var html = list.html(); var param = $('form').serialize(); $.ajax({url: '<?php bloginfo('template_directory'); ?>/comments-ajax.php?' + param, success: function(data, status){ list.append(data); commentAdded(); }, type: 'get' }); return false;">
+	<form id="commentform" action="<?php echo get_option('url'); ?>/wp-comments-post.php" method="post" onsubmit="$('#loading').fadeIn(100);var list = $('#commentlist'); var html = list.html(); var param = $('form').serialize(); $.ajax({url: '<?php bloginfo('template_directory'); ?>/comments-ajax.php?' + param, success: function(data, status){ list.append(data); commentAdded(); }, type: 'get' }); return false;">
 	<?php } else { ?>
 	<form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" id="commentform">
 	<?php } ?>
@@ -118,7 +118,7 @@ Checking to see if Gravatars are enabled for WPtouch
 <?php if ($user_ID) : ?>
 
 		<p class="logged"  id="respond">Logged in as <a href="<?php
-		bloginfo('url'); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a></p>
+		bloginfo('url'); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a>:</p>
 	
 	<?php else : ?>
 	

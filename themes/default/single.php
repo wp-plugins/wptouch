@@ -4,15 +4,16 @@ HEADER
 Here we're establishing whether the page was loaded via Ajax or not, for dynamic purposes. If it's ajax, we're not bringing in header.php and footer.php
 -->
 <?php global $is_ajax; $is_ajax = isset($_SERVER['HTTP_X_REQUESTED_WITH']); if (!$is_ajax) get_header(); ?>
-<div id="ajaxsinglepage<?php echo md5($_SERVER['REQUEST_URI']); ?>">
   <div class="content" id="content<?php echo md5($_SERVER['REQUEST_URI']); ?>">
  
   <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-  <div class="post" id="post-<?php the_ID(); ?>">
+  <div class="post">
 
     <a class="sh2" href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php if (function_exists('the_title_attribute')) the_title_attribute(); else the_title(); ?>"><?php the_title(); ?></a>
 	
+    
+    
         <div class="single-post-meta-top"><?php the_time('M / d / y - g:ia') ?> &rsaquo; <?php the_author() ?><br />
 <!--
 Let's check for DISQUS... we need to skip to a different div if it's installed and active
@@ -24,6 +25,8 @@ Let's check for DISQUS... we need to skip to a different div if it's installed a
 		<?php } ?>
 		
         <div class="clearer"></div>
+        </div>
+         <div class="post singlecut" id="post-<?php the_ID(); ?>">
         
 		  <div id="singlentry">
             <?php the_content(); ?>
@@ -54,13 +57,13 @@ Hidden bookmark box code (activated by the above link)
   <div id="bookmark-box" style="display:none">
         <ul>
         <li><a  href="http://del.icio.us/post?url=<?php echo get_permalink()
-?>&title=<?php the_title(); ?>" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/bookmarks/delicious.png" alt="" /> Del.icio.us</a></li>
+?>&title=<?php the_title(); ?>" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/bookmarks/delicious.jpg" alt="" /> Del.icio.us</a></li>
         <li><a href="http://digg.com/submit?phase=2&url=<?php echo get_permalink()
-?>&title=<?php the_title(); ?>" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/bookmarks/digg.png" alt="" /> Digg</a></li>
-        <li><a href="http://technorati.com/faves?add=<?php the_permalink() ?>" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/bookmarks/technorati.png" alt="" /> Technorati</a></li>
-        <li><a href="http://ma.gnolia.com/bookmarklet/add?url=<?php echo get_permalink() ?>&title=<?php the_title(); ?>" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/bookmarks/magnolia.png" alt="" /> Magnolia</a></li>
-        <li><a href="http://www.newsvine.com/_wine/save?popoff=0&u=<?php echo get_permalink() ?>&h=<?php the_title(); ?>" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/bookmarks/newsvine.png" target="_blank"> Newsvine</a></li>
-        <li class="noborder"><a href="http://reddit.com/submit?url=<?php echo get_permalink() ?>&title=<?php the_title(); ?>" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/bookmarks/reddit.png" alt="" /> Reddit</a></li>
+?>&title=<?php the_title(); ?>" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/bookmarks/digg.jpg" alt="" /> Digg</a></li>
+        <li><a href="http://technorati.com/faves?add=<?php the_permalink() ?>" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/bookmarks/technorati.jpg" alt="" /> Technorati</a></li>
+        <li><a href="http://ma.gnolia.com/bookmarklet/add?url=<?php echo get_permalink() ?>&title=<?php the_title(); ?>" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/bookmarks/magnolia.jpg" alt="" /> Magnolia</a></li>
+        <li><a href="http://www.newsvine.com/_wine/save?popoff=0&u=<?php echo get_permalink() ?>&h=<?php the_title(); ?>" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/bookmarks/newsvine.jpg" target="_blank"> Newsvine</a></li>
+        <li class="noborder"><a href="http://reddit.com/submit?url=<?php echo get_permalink() ?>&title=<?php the_title(); ?>" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/bookmarks/reddit.jpg" alt="" /> Reddit</a></li>
         </ul>
         </div>
         
@@ -96,7 +99,6 @@ Dynamic test for what page this is. A little redundant, but so what?
 	
 		<?php endif; ?>
 	</div>
-</div>
 <!--
 Do the footer things
 -->

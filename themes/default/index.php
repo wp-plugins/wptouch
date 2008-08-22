@@ -182,16 +182,18 @@ If it's a page, we want things to be a little different here, especially on phot
 Page ifs closed, start the rest of things
 -->
 	
-
-					
-<?php if (bnc_excerpt_enabled()) { ?>
-
-							<?php if (bnc_is_js_enabled()) { ?>
+							<?php if (bnc_is_js_enabled() && bnc_excerpt_enabled()) { ?>
 							<a class="post-arrow" id="arrow-<?php the_ID(); ?>" href="javascript:$('#entry-<?php the_ID(); ?>').fadeIn(500); $('#arrow-<?php the_ID(); ?>').hide(); $('#arrow-down-<?php the_ID(); ?>').show();"></a>		
-							<?php } elseif (!bnc_is_js_enabled()) { ?>
-							<a style="display:none" class="post-arrow-down" id="arrow-down-<?php the_ID(); ?>" href="javascript:document.getElementById('entry-<?php the_ID(); ?>').style.display = 'none';document.getElementById('arrow-<?php the_ID(); ?>').style.display = 'block';document.getElementById('arrow-down-<?php the_ID(); ?>').style.display = 'none';"></a>
+							
+							<a style="display:none" class="post-arrow-down" id="arrow-down-<?php the_ID(); ?>" href="javascript:$('#entry-<?php the_ID(); ?>').fadeOut(500); $('#arrow-<?php the_ID(); ?>').show(); $('#arrow-down-<?php the_ID(); ?>').hide();"></a>	
+							
+							
+							<?php } elseif (!bnc_is_js_enabled() && bnc_excerpt_enabled()) { ?>
+							
+					<a class="post-arrow" id="arrow-<?php the_ID(); ?>" href="javascript:document.getElementById('entry-<?php the_ID(); ?>').style.display = 'block';document.getElementById('arrow-<?php the_ID(); ?>').style.display = 'none';document.getElementById('arrow-down-<?php the_ID(); ?>').style.display = 'block';"></a>
+					 <a style="display:none" class="post-arrow-down" id="arrow-down-<?php the_ID(); ?>" href="javascript:document.getElementById('entry-<?php the_ID(); ?>').style.display = 'none';document.getElementById('arrow-<?php the_ID(); ?>').style.display = 'block';document.getElementById('arrow-down-<?php the_ID(); ?>').style.display = 'none';"></a>
+					 
 							<?php } ?>
-<?php } ?>
                     
 						<div class="calendar" style="background: url(<?php bloginfo('template_directory'); ?>/images/cal/month<?php the_time('n') ?>.jpg) no-repeat;">
 						<div class="cal-month"><?php the_time('M') ?></div>

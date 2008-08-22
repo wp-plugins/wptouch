@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=paypa
 Tags: wptouch, iphone, ipod touch, theme, apple, mac, bravenewcode, AJAX
 Requires at least: 2.1
 Tested up to: 2.6.1
-Stable tag: 1.3
+Stable tag: 1.3.2
 
 WPtouch is a complimentary theme that formats your WordPress blog with an Apple native application style theme, complete with ajax loading articles and effects. The theme only shows when viewed from an iPhone or iPod touch. 
 
@@ -16,9 +16,21 @@ Please visit http://www.bravenewcode.com/wptouch/ for a full description of the 
 
 == What's New ==
 
-In version 1.3, we've added / changed:
+In version 1.3.2, we've added / changed:
+
+* Fix for Menu not working on some installations
+* Style enhancements for the menu, search, drop downs
+* Style enhancements for comments, logged in users
+* Font adjustments for titles
+* Style changes for single post page heading, for better clarity
+* Admin wording changes
+
+
+In version 1.3(.1), we've added / changed:
+
+* Fix for the theme appearing in Safari browsers
 * Switch from Prototype to the more WordPress-native jQuery for javascript (much faster!)
-* Fix for wrong re-directs happening unintentionally if you use a static home page 
+* Fix for wrong re-directs happening unintentionally if you use a static home page
 * Elimination of unneeded images, javascript (shaving more than 100KB!)
 * More template file cleanups, image & code optimizations
 * The addition of more comments in code templates to help you make custom modifications
@@ -36,6 +48,7 @@ In version 1.2.1, we've added/changed:
 * More style enhancements and tweaks, fixes
 * Switched to Snoopy from CURL for the admin news section (thanks to Joost de Valk (yoast.com)
 
+
 Version 1.2 added/changed the following features:
 
 * The ability to disable advanced javascript effects (fixes effects not working for some, speeds up the load time considerably)
@@ -43,6 +56,7 @@ Version 1.2 added/changed the following features:
 * Fix for the switch code not working on some blog installations
 * Redundant, unused code cleanups
 * More style enhancements and tweaks, fixes
+
 
 Version 1.1.(1,2) added/changed the following features:
 
