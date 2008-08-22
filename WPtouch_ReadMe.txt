@@ -5,7 +5,7 @@ Make your site look gorgeous on an iPhone/iPod touch
 
 By Dale Mugford & Duane Sotrey
 bravenewcode.com
-Version: 1.3
+Version: 1.3.1
 
 Complete and regularly updated information & installation instructions available at:
 http://www.bravenewcode.com/wptouch/
