@@ -114,7 +114,7 @@
           $container = $_SERVER['HTTP_USER_AGENT'];
           //print_r($container); //this prints out the user agent array
 		  // Add whatever user agents you want here if you want to make this show on a Blackberry or something. No guarantees it'll look pretty, though!
-          $useragents = array("iPhone", "iPod", "Safari");
+          $useragents = array("iPhone", "iPod", "Aspen");
           $this->applemobile = false;
           foreach ($useragents as $useragent) {
               if (eregi($useragent, $container)) {
