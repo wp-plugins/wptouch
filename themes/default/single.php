@@ -4,15 +4,16 @@ HEADER
 Here we're establishing whether the page was loaded via Ajax or not, for dynamic purposes. If it's ajax, we're not bringing in header.php and footer.php
 -->
 <?php global $is_ajax; $is_ajax = isset($_SERVER['HTTP_X_REQUESTED_WITH']); if (!$is_ajax) get_header(); ?>
-<div id="ajaxsinglepage<?php echo md5($_SERVER['REQUEST_URI']); ?>">
   <div class="content" id="content<?php echo md5($_SERVER['REQUEST_URI']); ?>">
  
   <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-  <div class="post" id="post-<?php the_ID(); ?>">
+  <div class="post">
 
     <a class="sh2" href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php if (function_exists('the_title_attribute')) the_title_attribute(); else the_title(); ?>"><?php the_title(); ?></a>
 	
+    
+    
         <div class="single-post-meta-top"><?php the_time('M / d / y - g:ia') ?> &rsaquo; <?php the_author() ?><br />
 <!--
 Let's check for DISQUS... we need to skip to a different div if it's installed and active
@@ -24,6 +25,8 @@ Let's check for DISQUS... we need to skip to a different div if it's installed a
 		<?php } ?>
 		
         <div class="clearer"></div>
+        </div>
+         <div class="post singlecut" id="post-<?php the_ID(); ?>">
         
 		  <div id="singlentry">
             <?php the_content(); ?>
@@ -96,7 +99,6 @@ Dynamic test for what page this is. A little redundant, but so what?
 	
 		<?php endif; ?>
 	</div>
-</div>
 <!--
 Do the footer things
 -->

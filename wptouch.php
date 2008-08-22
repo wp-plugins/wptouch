@@ -4,7 +4,7 @@
    Plugin URI: http://bravenewcode.com/wptouch/
    Description: A plugin which formats your site when viewing with an <a href="http://www.apple.com/iphone/">iPhone</a> / <a href="http://www.apple.com/ipodtouch/">iPod touch</a>. Set styling, page, menu and icon options for the theme by visiting the <a href="options-general.php?page=wptouch/wptouch.php">WPtouch Options admin panel</a>. You'll also find help for using WPtouch with your WordPress setup. &nbsp;
    Author: Dale Mugford & Duane Storey
-   Version: 1.3.1
+   Version: 1.3.2
    Author URI: http://www.bravenewcode.com
    
    # Special thanks to ContentRobot and the iWPhone theme/plugin
@@ -34,7 +34,7 @@
 	}
  
 // WPtouch Theme Options
-    $bnc_wptouch_version = '1.3.1';
+    $bnc_wptouch_version = '1.3.2';
     function WPtouch($before = '', $after = '')
     {
         global $bnc_wptouch_version;
@@ -657,7 +657,7 @@ The Javascript Section
 	</div>
 	
 		<div class="wptouch-item-content-box1">
-			<div class="wptouch-checkbox-row"><input type="checkbox" name="enable-js-header" <?php if (isset($v['enable-js-header']) && $v['enable-js-header'] == 1) echo('checked'); ?>><label for="enable-js-header"> Use Advanced <a href="http://www.prototypejs.org/" target="_blank">Prototype</a> Javascript Effects (ajax entries, ajax comments, smooth effects)</label></div>
+			<div class="wptouch-checkbox-row"><input type="checkbox" name="enable-js-header" <?php if (isset($v['enable-js-header']) && $v['enable-js-header'] == 1) echo('checked'); ?>><label for="enable-js-header"> Use Advanced <a href="http://www.jquery.com/" target="_blank">jQuery</a> Javascript Effects (ajax entries, ajax comments, smooth effects)</label></div>
             
 		<div class="wptouch-checkbox-row"><input type="checkbox" name="enable-gravatars" <?php if (isset($v['enable-gravatars']) && $v['enable-gravatars'] == 1) echo('checked'); ?>><label for="enable-gravatars"> Enable Gravatars in Comments</label></div>
 		
