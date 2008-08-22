@@ -114,7 +114,7 @@
           $container = $_SERVER['HTTP_USER_AGENT'];
           //print_r($container); //this prints out the user agent array
 		  // Add whatever user agents you want here if you want to make this show on a Blackberry or something. No guarantees it'll look pretty, though!
-          $useragents = array("iPhone", "iPod", "Safari");
+          $useragents = array("iPhone", "iPod", "Aspen");
           $this->applemobile = false;
           foreach ($useragents as $useragent) {
               if (eregi($useragent, $container)) {
@@ -191,12 +191,12 @@
     // The template switch code, now works on PHP4, hooray
 	//**************UPDATED**************** 
 	//Now injects into the wp_footer hook automatically (new in 1.3)
-	//H3#ID is just hidden in WPtouch, showing the manual switch instead
+	//H3#ID is hidden in WPtouch, showing the manual switch in the footer.php file instead
   function wptouch_switch()
   {
       global $wptouch_plugin;
       if ($wptouch_plugin->applemobile) {
-          echo '<h2 id="switch-footer-links" style="margin-top:50px;margin-bottom:75px"><a href="' . get_bloginfo('siteurl') . '/?bnc_view=mobile" style="color: #06c">iPhone View</a> | Normal View</h2>';
+          echo '<h2 id="switch-footer-links" style="margin-top:50px;margin-bottom:75px"><a href="' . get_bloginfo('siteurl') . '/?bnc_view=mobile">iPhone View</a> | Normal View</h2>';
  	 }
   }
 
