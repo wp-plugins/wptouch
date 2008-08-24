@@ -1,7 +1,5 @@
 <?php header("Content-type:text/html; charset=utf-8"); ?>
-<?php $f = dirname(__FILE__); ?>
-<?php $s = explode('/wp-content', $f); ?>
-<?php require_once($s[0] . '/wp-blog-header.php'); ?>
+<?php require_once('../../../../../wp-blog-header.php'); ?>
 
 <!--
 Here's the  drop-down menu.

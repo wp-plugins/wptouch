@@ -53,6 +53,9 @@ We could pull it out into a css.php file, but it's just a small block and easy t
 	position: relative;
 	color: #<?php echo bnc_get_header_color(); ?>
 }
+#drop-fade {
+background: #<?php echo bnc_get_header_border_color(); ?>
+}
 a {
 	text-decoration: none;
 	color: #<?php echo bnc_get_link_color(); ?>
@@ -75,7 +78,8 @@ We've commented below to let you know what works what, so if you do go messing a
 This fetches the admin selection logo icon for the header, which is also the bookmark icon
 -->
 <div  id="blogtitle">
-<img src="<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/images/icon-pool/<?php echo bnc_get_title_image(); ?>" alt="" /> <a href="<?php bloginfo('siteurl'); ?>"><?php echo bnc_get_header_title(); ?></a></div>
+<img src="<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/images/icon-pool/<?php echo bnc_get_title_image(); ?>" alt="" /> <a href="<?php bloginfo('siteurl'); ?>">
+<?php $str = bnc_get_header_title(); echo stripslashes($str); ?></a></div>
 </div>
 
 <!--

@@ -4,7 +4,7 @@
    Plugin URI: http://bravenewcode.com/wptouch/
    Description: A plugin which formats your site when viewing with an <a href="http://www.apple.com/iphone/">iPhone</a> / <a href="http://www.apple.com/ipodtouch/">iPod touch</a>. Set styling, page, menu and icon options for the theme by visiting the <a href="options-general.php?page=wptouch/wptouch.php">WPtouch Options admin panel</a>. You'll also find help for using WPtouch with your WordPress setup. &nbsp;
    Author: Dale Mugford & Duane Storey
-   Version: 1.3.2
+   Version: 1.3.3
    Author URI: http://www.bravenewcode.com
    
    # Special thanks to ContentRobot and the iWPhone theme/plugin
@@ -34,7 +34,7 @@
 	}
  
 // WPtouch Theme Options
-    $bnc_wptouch_version = '1.3.2';
+    $bnc_wptouch_version = '1.3.3';
     function WPtouch($before = '', $after = '')
     {
         global $bnc_wptouch_version;
@@ -388,6 +388,19 @@ function bnc_get_header_background()
 	return $v['header-background-color'];
 }
   
+function bnc_get_header_border_color()
+{
+    $v = get_option('bnc_iphone_pages');
+    if (!is_array($v)) {
+        $v = unserialize($v);
+    }
+
+	if (!isset($v['header-border-color'])) { 
+	$v['header-border-color'] = '222222'; 
+	}
+	return $v['header-border-color'];
+}
+
 function bnc_get_header_color()
 {
     $v = get_option('bnc_iphone_pages');
@@ -395,7 +408,9 @@ function bnc_get_header_color()
         $v = unserialize($v);
     }
 
-	if (!isset($v['header-text-color'])) { $v['header-text-color'] = 'eeeeee'; }
+	if (!isset($v['header-text-color'])) { 
+	$v['header-text-color'] = 'eeeeee'; 
+	}
 	return $v['header-text-color'];
 }
 
@@ -404,12 +419,12 @@ function bnc_get_link_color()
     $v = get_option('bnc_iphone_pages');
     if (!is_array($v)) {
         $v = unserialize($v);
-    }
+}
 
 if (!isset($v['link-color'])) {
 $v['link-color'] = '006bb3';
-}
-return $v['link-color'];
+    }
+	return $v['link-color'];
 }
 
   function bnc_get_icon_list()
@@ -540,6 +555,7 @@ return $v['link-color'];
 
 	  $a['header-title'] = $_POST['header-title'];
 	  $a['header-background-color'] = $_POST['header-background-color'];
+	  $a['header-border-color'] = $_POST['header-border-color'];
 	  $a['header-text-color'] = $_POST['header-text-color'];
 	  $a['link-color'] = $_POST['link-color'];
         
@@ -560,6 +576,10 @@ return $v['link-color'];
 				$v['header-background-color'] = '222222';
 			}
 
+			if (!isset($v['header-border-color'])) {
+				$v['header-border-color'] = '222222';
+			}
+			
 			if (!isset($v['header-text-color'])) {
 				$v['header-text-color'] = 'eeeeee';
 			}
@@ -666,9 +686,7 @@ The Javascript Section
             <h4 id="wptouch-js">When Advanced Javascript Is Disabled:</h4>
             <ul class="wptouch-small-menu">
             <li>Your site loads faster on EDGE and 3G connections</li>
-            <li>Close icons will appear on the search and menu drop downs</li>
-            <li>Comments will not be posted by ajax, and the page will refresh instead</li>
-            <li>The 'Load More Entries' link is not displayed, instead regular blog navigation links are shown</li>
+            <li>Ajax & jQuery are not loaded & used for comments, entries, excerpts or drop-down menu</li>
 			</ul>
 
 		    <h4 id="wptouch-js">When Gravatars Are Disabled:</h4>		
@@ -691,22 +709,25 @@ The Style Section
 <div class="wptouch-itemrow wptouchbump">
 	<div class="wptouch-item-desc">
 	<h2>Style Options</h2>
-	<p>Select the foreground and background colors for the header, and your site-wide link color using hex values.<br /><br /><a href="http://www.colorpicker.com/" target="_blank">Click here</a> to view a color picker to help you select your colors.</p>
+	<p>Select the colors, title text, &amp; link color for the WPtouch header, and set your site-wide link color.<br /><br /><a href="http://www.colorpicker.com/" target="_blank">Click here</a> to view a color picker to help you select your colors.</p>
 	</div>
 		
 	<div class="wptouch-item-content-box1" id="wptouchstyle">
-				
-<div class="header-item-desc">Header Title (here you can override your site title to fit the WPtouch header space)</div>
-<div class="header-input">&nbsp; <input text="text" name="header-title" type="text" value="<?php echo $v['header-title']; ?>" /></div>
+<h3>Header Style</h3>				
+<div class="header-item-desc">Header Title (here you can override your site title to fit the WPtouch header)</div>
+<div class="header-input">&nbsp; <input text="text" name="header-title" type="text" value="<?php $str = $v['header-title']; echo stripslashes($str); ?>" /></div>
 
 
 <div class="header-item-desc">Header Background Color</div>
 <div class="header-input">#<input text="text" name="header-background-color" type="text" value="<?php echo $v['header-background-color']; ?>" /></div>
 
+<div class="header-item-desc">Header 'Search &amp; Menu' Links Bottom Border Color (dark colors work best)</div>
+<div class="header-input">#<input text="text" name="header-border-color" type="text" value="<?php echo $v['header-border-color']; ?>" /></div>
+
 <div class="header-item-desc">Header Text Color</div>
 <div class="header-input">#<input type="text" name="header-text-color" type="text" value="<?php echo $v['header-text-color']; ?>" /></div>
-
-<div class="header-item-desc">Link Color</div>
+<h3>Other</h3>
+<div class="header-item-desc">Site-wide Link Color (the color for most of the links in WPtouch)</div>
 <div class="header-input">#<input type="text" name="link-color" type="text" value="<?php echo $v['link-color']; ?>" /></div>
 				
 		</div>
@@ -722,7 +743,7 @@ The Post Listings Section
 <div class="wptouch-itemrow">
 	<div class="wptouch-item-desc">
 	<h2>Post Listings Options</h2>
-	<p>Select which post-meta items will be shown beneath post titles on the index, search &amp; archive pages, and choose whether the post excerpts are shown by default on those pages.</p>
+	<p>Select which post-meta items will be shown beneath titles on the index, search &amp; archive pages.<br />Choose whether excerpts are shown on those pages (default is hidden).</p>
 	</div>
 	
 		<div class="wptouch-item-content-box1">
@@ -731,7 +752,7 @@ The Post Listings Section
 			
 			<div class="wptouch-checkbox-row"><input type="checkbox" name="enable-main-categories" <?php if (isset($v['enable-main-categories']) && $v['enable-main-categories'] == 1) echo('checked'); ?>><label for="enable-categories"> Show Categories</label></div>
 			
-			<div class="wptouch-checkbox-row"><input type="checkbox" name="enable-main-tags" <?php if (isset($v['enable-main-tags']) && $v['enable-main-tags'] == 1) echo('checked'); ?>><label for="enable-tags"> Show Tags</label></div>
+			<div class="wptouch-checkbox-row withhr"><input type="checkbox" name="enable-main-tags" <?php if (isset($v['enable-main-tags']) && $v['enable-main-tags'] == 1) echo('checked'); ?>><label for="enable-tags"> Show Tags</label></div>
 			
 			<div class="wptouch-checkbox-row"><input type="checkbox" name="enable-post-excerpts" <?php if (isset($v['enable-post-excerpts']) && $v['enable-post-excerpts'] == 1) echo('checked'); ?>><label for="enable-excerpts">Hide Excerpts (if unchecked the excerpts will be shown, and the drop arrows will be hidden)</label></div>
 				

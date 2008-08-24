@@ -1,4 +1,7 @@
-/* @override http://24.150.116.198:9098/wp-content/plugins/wptouch/admin-css/wptouch-admin.css */
+/* @override 
+	http://24.150.116.198:9098/wp-content/plugins/wptouch/admin-css/wptouch-admin.css
+	http://www.duanestorey.com/wp-content/plugins/wptouch/admin-css/wptouch-admin.css
+*/
 
 /* 
 WPtouch Admin Styles for WordPress 2.1+
@@ -97,6 +100,11 @@ WPtouch Admin Styles for WordPress 2.1+
 #wptouch-theme .wptouch-itemrow {
 	display: block;
 	border-bottom: 1px solid #dedede;
+	margin-top: 10px;
+}
+
+* {
+	
 }
 
 #wptouch-theme .wptouch-item-desc {
@@ -148,7 +156,7 @@ WPtouch Admin Styles for WordPress 2.1+
 	float: left;
 	list-style-type: circle;
 	width: 100%;
-	margin: 0;
+	margin: -1px 0;
 	padding: 0;
 }
 
@@ -190,6 +198,12 @@ WPtouch Admin Styles for WordPress 2.1+
 	margin-top: 2px;
 }
 
+#wptouch-theme .withhr {
+	border-bottom: 1px solid #dedede;
+	padding-bottom: 15px;
+	margin-bottom: 10px;
+}
+
 
 
 /* @end */
@@ -227,12 +241,16 @@ WPtouch Admin Styles for WordPress 2.1+
 
 .wptouch-select-row {
 	display: block;
-	width: 50%;
-	background-color: #cbf4ff;
+	width: 70%;
+	background-color: #e2f5fe;
 	border: 1px solid #8aceff;
 	margin-bottom: 5px;
 	margin-top: 5px;
-	padding: 6px 5px 24px;
+	padding: 7px 5px 26px;
+	border-radius: 3px;
+	-mox-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	font-weight: bold;
 }
 
 .wptouch-select-row input {
@@ -246,6 +264,10 @@ WPtouch Admin Styles for WordPress 2.1+
 	float: right;
 	position: relative;
 	bottom: 4px;
+}
+
+.wptouch-select-right select {
+	width: 120px;
 }
 
 .wptouch-checkbox-row {
@@ -268,29 +290,41 @@ WPtouch Admin Styles for WordPress 2.1+
 
 #wptouch-theme .all-good {
 	border: 1px solid #8aceff;
-	background-color: #cbf4ff;
-	padding: 0 3px 7px 5px;
+	background-color: #e2f5fe;
+	padding: 0 3px 5px 5px;
 	display: block;
 	margin-bottom: 5px;
 	font-size: 11px;
+	line-height: 15px;
+	border-radius: 3px;
+	-mox-border-radius: 3px;
+	-webkit-border-radius: 3px;
 }
 
 #wptouch-theme .sort-of {
 	border: 1px solid #ffc900;
 	background-color: #fee8b9;
-	padding: 0 3px 7px 5px;
+	padding: 0 3px 6px 5px;
 	display: block;
 	margin-bottom: 5px;
 	font-size: 11px;
+	line-height: 15px;
+	border-radius: 3px;
+	-mox-border-radius: 3px;
+	-webkit-border-radius: 3px;
 }
 
 #wptouch-theme .too-bad {
 	border: 1px solid #f96764;
 	background-color: #ffaab1;
-	padding: 0 3px 7px 5px;
+	padding: 0 3px 6px 5px;
 	display: block;
 	margin-bottom: 5px;
 	font-size: 11px;
+	line-height: 15px;
+	border-radius: 3px;
+	-mox-border-radius: 3px;
+	-webkit-border-radius: 3px;
 }
 
 
