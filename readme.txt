@@ -20,7 +20,7 @@ Please visit http://www.bravenewcode.com/wptouch/ for a full description & more 
 
 == What's New ==
 
-In version 1.3.2, we've added / changed:
+In version 1.3.3, we've added / changed:
 
 * Another fix for drop-down Menu not working
 * Added ability to change the header border background color
