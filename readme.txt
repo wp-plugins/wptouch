@@ -16,7 +16,7 @@ Please visit http://www.bravenewcode.com/wptouch/ for a full description of the 
 
 == What's New ==
 
-In version 1.3.2, we've added / changed:
+In version 1.3.3, we've added / changed:
 
 * Fix for Menu not working on some installations
 * Style enhancements for the menu, search, drop downs
