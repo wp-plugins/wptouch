@@ -188,7 +188,7 @@
       return $wptouch_plugin->applemobile;
   }
   
-    // The template switch code, now works on PHP4, hooray
+    // The Template Switch Code
 	//**************UPDATED**************** 
 	//Now injects into the wp_footer hook automatically (new in 1.3)
 	//H3#ID is hidden in WPtouch, showing the manual switch in the footer.php file instead
@@ -199,6 +199,16 @@
           echo '<h2 id="switch-footer-links" style="margin-top:50px;margin-bottom:75px"><a href="' . get_bloginfo('siteurl') . '/?bnc_view=mobile">iPhone View</a> | Normal View</h2>';
  	 }
   }
+  
+// OLD Switch Code (uncomment below (205-211) and comment above (195-201) and line 1028 to use it instead)
+//
+//  function wptouch_switch($before = '', $after = '')
+//  {
+//      global $wptouch_plugin;
+//      if ($wptouch_plugin->applemobile) {
+//          echo $before . '<a href="' . get_bloginfo('siteurl') . '/?bnc_view=mobile">iPhone View</a> | Normal View' . $after;
+//   }
+// }
 
   
   function bnc_options_menu()
