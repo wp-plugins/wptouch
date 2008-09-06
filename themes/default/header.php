@@ -27,14 +27,23 @@ This check to see if advanced JS is enabled in the WPtouch admin.
 Disqus commenting check for Ajax Coms JS Need 
 -->
 <?php
-if  (!function_exists('disqus_recent_comments')) { ?>
-<?php if (is_single() && bnc_is_js_enabled()) { ?>
-<script src="<?php bloginfo('template_directory'); ?>/js/ajaxcoms.js" type="text/javascript"></script>
-<?php } elseif (is_page() && bnc_is_page_coms_enabled()) { ?>
-<script src="<?php bloginfo('template_directory'); ?>/js/ajaxcoms.js" type="text/javascript"></script>
+if  (!function_exists('dsq_comments_template')) { ?>
+	<?php if (is_single() && bnc_is_js_enabled()) { ?>
+	<script src="<?php bloginfo('template_directory'); ?>/js/ajaxcoms.js" type="text/javascript"></script>
+	<?php } elseif (is_page() && bnc_is_page_coms_enabled()) { ?>
+	<script src="<?php bloginfo('template_directory'); ?>/js/ajaxcoms.js" type="text/javascript"></script>
+	<?php } ?>
 <?php } ?>
-<?php } ?>
+
 <?php wp_head(); ?>
+<!--
+This should fix javascript conflict issues for good. 
+We call it after wp_head() to make sure any plugin's scripts are loaded and jQuery can handle the workaround for them.
+-->
+<script type="text/javascript" charset="utf-8">
+ var $J = jQuery.noConflict();
+</script>
+
 <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
 <!--
 In order to have some dynamic user-selected CSS, we've written the below. 
@@ -88,7 +97,7 @@ The toggles work with JS different ways, one with prototype/scriptaculous, the o
 -->
 	<div id="drop-fade">
 	<?php if (bnc_is_js_enabled()) { ?>
-		    <a href="javascript:$('#wptouch-search').slideToggle(200);">
+		    <a href="javascript:$J('#wptouch-search').slideToggle(200);">
 		<?php } else { ?>
 		    <a href="javascript:document.getElementById('wptouch-search').style.display='block';">
 		<?php } ?>

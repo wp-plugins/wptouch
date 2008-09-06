@@ -68,7 +68,7 @@ If It's NOT A Page, Let's Do The Comment Bubble Thing
 -->
  		<?php if (!is_page()) { ?>
 	
-		<?php if (function_exists('disqus_recent_comments')) { ?>
+		<?php if (function_exists('dsq_comments_template')) { ?>
 		<!--We don't want DISQUS to show anything here, it doesn't look nice-->
 			<?php } else { ?>
 			<!--Show the Comment Bubble (not on pages, this exists for index. archive, tag and category stuff)-->
@@ -183,9 +183,9 @@ Page ifs closed, start the rest of things
 -->
 	
 							<?php if (bnc_is_js_enabled() && bnc_excerpt_enabled()) { ?>
-							<a class="post-arrow" id="arrow-<?php the_ID(); ?>" href="javascript:$('#entry-<?php the_ID(); ?>').fadeIn(500); $('#arrow-<?php the_ID(); ?>').hide(); $('#arrow-down-<?php the_ID(); ?>').show();"></a>		
+							<a class="post-arrow" id="arrow-<?php the_ID(); ?>" href="javascript:$J('#entry-<?php the_ID(); ?>').fadeIn(500); $J('#arrow-<?php the_ID(); ?>').hide(); $J('#arrow-down-<?php the_ID(); ?>').show();"></a>		
 							
-							<a style="display:none" class="post-arrow-down" id="arrow-down-<?php the_ID(); ?>" href="javascript:$('#entry-<?php the_ID(); ?>').fadeOut(500); $('#arrow-<?php the_ID(); ?>').show(); $('#arrow-down-<?php the_ID(); ?>').hide();"></a>	
+							<a style="display:none" class="post-arrow-down" id="arrow-down-<?php the_ID(); ?>" href="javascript:$J('#entry-<?php the_ID(); ?>').fadeOut(500); $J('#arrow-<?php the_ID(); ?>').show(); $J('#arrow-down-<?php the_ID(); ?>').hide();"></a>	
 							
 							
 							<?php } elseif (!bnc_is_js_enabled() && bnc_excerpt_enabled()) { ?>
@@ -229,8 +229,8 @@ End of the if page or else code-->
 
 				<?php if (bnc_is_js_enabled()) { ?>
 				<div id="call<?php echo md5($_SERVER['REQUEST_URI']); ?>">
-				<a class="ajax" href="javascript:$('#spinner<?php echo md5($_SERVER['REQUEST_URI']); ?>').fadeIn(200); $('#ajaxentries<?php
-				echo md5($_SERVER['REQUEST_URI']); ?>').load('<?php echo get_next_posts_page_link(); ?>', {}, function(){ $('#call<?php echo md5($_SERVER['REQUEST_URI']); ?>').fadeOut();})">Load more entries...</a> <img id="spinner<?php echo md5($_SERVER['REQUEST_URI']); ?>" class="spin" src="<?php bloginfo('template_directory'); ?>/images/main-ajax-loader.gif" style="display:none" alt="" />
+				<a class="ajax" href="javascript:$J('#spinner<?php echo md5($_SERVER['REQUEST_URI']); ?>').fadeIn(200); $J('#ajaxentries<?php
+				echo md5($_SERVER['REQUEST_URI']); ?>').load('<?php echo get_next_posts_page_link(); ?>', {}, function(){ $J('#call<?php echo md5($_SERVER['REQUEST_URI']); ?>').fadeOut();})">Load more entries...</a> <img id="spinner<?php echo md5($_SERVER['REQUEST_URI']); ?>" class="spin" src="<?php bloginfo('template_directory'); ?>/images/main-ajax-loader.gif" style="display:none" alt="" />
 				<div class="post-spacer"></div>
 				<div class="clearer"></div>
 				</div>				
