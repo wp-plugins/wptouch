@@ -18,7 +18,7 @@ Here we're establishing whether the page was loaded via Ajax or not, for dynamic
 <!--
 Let's check for DISQUS... we need to skip to a different div if it's installed and active
 -->		
-		<?php if (function_exists('disqus_recent_comments')) { ?>
+		<?php if (function_exists('dsq_comments_template')) { ?>
  			<a href="#dsq-add-new-comment">&darr; Skip to comments</a></div>
 			<?php } else { ?>
    		    <a href="#comments">&darr; Skip to comments</a></div>

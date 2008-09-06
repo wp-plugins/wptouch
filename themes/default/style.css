@@ -214,6 +214,7 @@ blockquote {
 	opacity: 0.89;
 	background-color: #333;
 	-webkit-box-shadow: #555 -5px 2px 5px;
+	z-index: 99;
 }
 
 #wptouch-search-inner {
@@ -234,12 +235,13 @@ input#s {
 input#ssubmit {
 	-webkit-border-radius: 10px;
 	font-size: 12px;
-	color: #222;
-	background-color: #fff;
+	color: #FFF;
+	background-color: #777;
 	padding: 3px;
-	height: 25px;
+	height: 24px;
 	width: 63px;
 	text-align: center;
+	font-weight: bold;
 }
 
 /* @end */
@@ -317,7 +319,7 @@ input#ssubmit {
 	position: relative;
 	bottom: 1px;
 	margin: 0;
-	padding: 2px 0;
+	padding: 2px 0 3px;
 	opacity: 0.98;
 	-webkit-box-shadow: #555 -5px 2px 5px;
 	height: 16px;
@@ -332,7 +334,7 @@ input#ssubmit {
 /* @group Index Page */
 
 .content {
-	margin: 0;
+	margin: 5px 0 0;
 	padding: 0;
 }
 

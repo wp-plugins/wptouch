@@ -2,9 +2,9 @@
   /*
    Plugin Name: WPtouch iPhone Theme
    Plugin URI: http://bravenewcode.com/wptouch/
-   Description: A plugin which formats your site when viewing with an <a href="http://www.apple.com/iphone/">iPhone</a> / <a href="http://www.apple.com/ipodtouch/">iPod touch</a>. Set styling, page, menu and icon options for the theme by visiting the <a href="options-general.php?page=wptouch/wptouch.php">WPtouch Options admin panel</a>. You'll also find help for using WPtouch with your WordPress setup. &nbsp;
+   Description: A plugin which reformats your site with a mobile theme when viewing with an <a href="http://www.apple.com/iphone/">iPhone</a> / <a href="http://www.apple.com/ipodtouch/">iPod touch</a>. Set styling, page, menu, icon and more options for the theme by visiting the <a href="options-general.php?page=wptouch/wptouch.php">WPtouch Options admin panel</a>. &nbsp;
    Author: Dale Mugford & Duane Storey
-   Version: 1.3.3
+   Version: 1.3.4
    Author URI: http://www.bravenewcode.com
    
    # Special thanks to ContentRobot and the iWPhone theme/plugin
@@ -34,7 +34,7 @@
 	}
  
 // WPtouch Theme Options
-    $bnc_wptouch_version = '1.3.3';
+    $bnc_wptouch_version = '1.3.4';
     function WPtouch($before = '', $after = '')
     {
         global $bnc_wptouch_version;
@@ -46,6 +46,7 @@
     {
         $url = get_bloginfo('wpurl');
         $version = (float)get_bloginfo('version');
+		// We had two stylesheets, one for earlier versions of WordPress, but this one does just fine now
         echo '<link rel="stylesheet" type="text/css" href="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/admin-css/wptouch-admin.css" />';
         $version = (float)get_bloginfo('version');
         if ($version < 2.2) {
@@ -55,7 +56,6 @@
     }
 
   add_action('admin_head', 'wptouch_admin_css');
-  
   
   class WPtouchPlugin
   {
@@ -200,7 +200,7 @@
  	 }
   }
   
-// OLD Switch Code (uncomment below (205-211) and comment above (195-201) and line 1028 to use it instead)
+// OLD Switch Code (uncomment below (205-211) and comment above (195-201) *** AND line 1028 to use it instead)
 //
 //  function wptouch_switch($before = '', $after = '')
 //  {
@@ -406,7 +406,7 @@ function bnc_get_header_border_color()
     }
 
 	if (!isset($v['header-border-color'])) { 
-	$v['header-border-color'] = '222222'; 
+	$v['header-border-color'] = '333333'; 
 	}
 	return $v['header-border-color'];
 }
@@ -587,7 +587,7 @@ $v['link-color'] = '006bb3';
 			}
 
 			if (!isset($v['header-border-color'])) {
-				$v['header-border-color'] = '222222';
+				$v['header-border-color'] = '333333';
 			}
 			
 			if (!isset($v['header-text-color'])) {
@@ -656,7 +656,7 @@ The News Section
 <div class="wptouch-itemrow">
 	<div class="wptouch-item-desc">
 	<h2>News and Support</h2>
-	<p>BraveNewCode.com entries tagged 'WPtouch'. This list dynamically updates to provide you with the latest information about the plugin's development.</p>
+	<p>BraveNewCode.com entries tagged 'WPtouch'. This list updates to provide you with the latest information about the plugin's development.</p>
 	</div>
 		
 	<div class="wptouch-item-content-box1">
@@ -696,7 +696,8 @@ The Javascript Section
             <h4 id="wptouch-js">When Advanced Javascript Is Disabled:</h4>
             <ul class="wptouch-small-menu">
             <li>Your site loads faster on EDGE and 3G connections</li>
-            <li>Ajax & jQuery are not loaded & used for comments, entries, excerpts or drop-down menu</li>
+            <li>Ajax &amp; jQuery are not loaded &amp; used for comments, entries, excerpts etc.</li>
+			<li>*Fixes javascript conflict issues where the WPtouch menu drop-down doesn't work</li>
 			</ul>
 
 		    <h4 id="wptouch-js">When Gravatars Are Disabled:</h4>		
@@ -719,7 +720,10 @@ The Style Section
 <div class="wptouch-itemrow wptouchbump">
 	<div class="wptouch-item-desc">
 	<h2>Style Options</h2>
-	<p>Select the colors, title text, &amp; link color for the WPtouch header, and set your site-wide link color.<br /><br /><a href="http://www.colorpicker.com/" target="_blank">Click here</a> to view a color picker to help you select your colors.</p>
+		<p>
+		Select the colors, title text, &amp; link color for the WPtouch header, and set your site-wide link color.<br /><br />
+		<a href="http://www.colorpicker.com/" target="_blank">Click here</a> to view a color picker to help you select your colors.
+		</p>
 	</div>
 		
 	<div class="wptouch-item-content-box1" id="wptouchstyle">
@@ -753,7 +757,10 @@ The Post Listings Section
 <div class="wptouch-itemrow">
 	<div class="wptouch-item-desc">
 	<h2>Post Listings Options</h2>
-	<p>Select which post-meta items will be shown beneath titles on the index, search &amp; archive pages.<br />Choose whether excerpts are shown on those pages (default is hidden).</p>
+		<p>
+		Select which post-meta items will be shown beneath titles on the index, search &amp; archive pages.<br />
+		Choose whether excerpts are shown on those pages (default is hidden).
+		</p>
 	</div>
 	
 		<div class="wptouch-item-content-box1">
@@ -779,7 +786,12 @@ The Availabe Icons Section
 <div class="wptouch-itemrow">
 	<div class="wptouch-item-desc">
 	<h2>Available Icons</h2>
-	<p>You can select which icons will be displayed beside corresponding pages enabled below.<br /><br />To add icons to the pool simply drop 60x60 (recommended) - .jpg or .png images into the <strong>icon-pool</strong> folder inside the wptouch/images directory, then refresh this page to select them.<br /><br />Also in the folder is a <strong>.psd template</strong> which you can use to build icons yourself.<br /><br />More official icons are available for download on the <a href="http://www.bravenewcode.com/wptouch/">WPtouch homepage</a>.</p>
+		<p>
+		You can select which icons will be displayed beside corresponding pages enabled below.<br /><br />
+		To add icons to the pool simply drop 60x60 (recommended) - .jpg or .png images into the <strong>icon-pool</strong> folder inside the wptouch/images directory, then refresh this page to select them.<br /><br />
+		Also in the folder is a <strong>.psd template</strong> which you can use to build icons yourself.<br /><br />
+		More official icons are available for download on the <a href="http://www.bravenewcode.com/wptouch/">WPtouch homepage</a>.
+		</p>
 	</div>
 		
 	<div class="wptouch-item-content-box1">
@@ -802,7 +814,12 @@ The Menu Section
 <div class="wptouch-itemrow">
 	<div class="wptouch-item-desc">
 	<h2>Logo/Bookmark<br />Page &amp; Menu Icons</h2>
-	<p>Choose the logo displayed in the header (also your bookmark icon), and which published pages are shown on the WPtouch drop-down menu.<br /><br /><strong>Remember, only those checked<br />will be shown.</strong><br /><br />Next, select the icons from the drop list that you want to pair with each page/menu item.</p>
+		<p>
+		Choose the logo displayed in the header (also your bookmark icon), and which published pages are shown on the WPtouch drop-down menu.<br /><br />
+		<strong>Remember, only those checked<br />
+		will be shown.</strong><br /><br />
+		Next, select the icons from the drop list that you want to pair with each page/menu item.
+		</p>
 	</div>
 		
 	<div class="wptouch-item-content-box1">
@@ -861,7 +878,9 @@ The Default Menu Item Section
 	<div class="wptouch-itemrow">
 	<div class="wptouch-item-desc">
 	<h2>Default Menu Items</h2>
-	<p>Enable/Disable these items from appearing in the WPtouch dropdown menu.</p>
+		<p>
+		Enable/Disable these items from appearing in the WPtouch dropdown menu.
+		</p>
 	</div>
 		
 	<div class="wptouch-item-content-box1">
@@ -883,30 +902,30 @@ The Plugin Section
 <div class="wptouch-itemrow">
 	<div class="wptouch-item-desc">
 	<h2>Plugin Support &amp; Compatibility</h2>
-	<p><strong>
-<?php
-      //Let's do some WordPress version checks to provide more information for the user about what they can expect using the plugin
-      $version = (float)get_bloginfo('version');
-      if ($version >= 2.5) {
-          echo 'WordPress installed: ' . get_bloginfo('version') . '<br />(Fully Supported)';
-      } elseif ($version >= 2.3) {
-          echo 'WordPress installed: ' . get_bloginfo('version') . '<br />(Supported, Upgrade Recommended)';
-      } elseif ($version >= 2.2) {
-          echo 'WordPress installed: ' . get_bloginfo('version') . '<br />(Supported, Upgrade Recommended)';
-      } elseif ($version >= 2.1) {
-          echo 'WordPress installed: ' . get_bloginfo('version') . '<br />(Supported, Upgrade Recommended)';
-      } elseif ($version >= 2.0) {
-          echo 'WordPress installed: ' . get_bloginfo('version') . '<br />(NOT Supported! Upgrade <u>Required</u>)';
-      } elseif ($version >= 1.5) {
-          echo 'WordPress installed: ' . get_bloginfo('version') . '<br />(NOT Supported! Upgrade <u>Required</u>)';
-      }
-?>  
-</strong>
-  
-  <br /><br  />
-  To the right you'll find information on other theme features activated through companion plugins &amp; WordPress versions.<br /><br />
-  For further documentation visit <a href="http://www.bravenewcode.com/wptouch/">BraveNewCode</a>.<br /><br />
-  To report an incompatible plugin, send an e-mail to <a href="mailto:wptouch@bravenewcode.com">wptouch@bravenewcode.com</a></p>
+			<p>
+			<strong>
+			<?php
+			//Let's do some WordPress version checks to provide more information for the user about what they can expect using the plugin
+			$version = (float)get_bloginfo('version');
+			if ($version >= 2.5) {
+			echo 'WordPress installed: ' . get_bloginfo('version') . '<br />(Fully Supported)';
+			} elseif ($version >= 2.3) {
+			echo 'WordPress installed: ' . get_bloginfo('version') . '<br />(Supported, Upgrade Recommended)';
+			} elseif ($version >= 2.2) {
+			echo 'WordPress installed: ' . get_bloginfo('version') . '<br />(Supported, Upgrade Recommended)';
+			} elseif ($version >= 2.1) {
+			echo 'WordPress installed: ' . get_bloginfo('version') . '<br />(Supported, Upgrade Recommended)';
+			} elseif ($version >= 2.0) {
+			echo 'WordPress installed: ' . get_bloginfo('version') . '<br />(NOT Supported! Upgrade <u>Required</u>)';
+			} elseif ($version >= 1.5) {
+			echo 'WordPress installed: ' . get_bloginfo('version') . '<br />(NOT Supported! Upgrade <u>Required</u>)';
+			}
+			?>  
+			</strong><br /><br  />
+			To the right you'll find information on other theme features activated through companion plugins &amp; WordPress versions.<br /><br />
+			For further documentation visit <a href="http://www.bravenewcode.com/wptouch/">BraveNewCode</a>.<br /><br />
+			To report an incompatible plugin, send an e-mail to <a href="mailto:wptouch@bravenewcode.com">wptouch@bravenewcode.com</a>
+			</p>
 	</div>
 		
 	<div class="wptouch-item-content-box1 wptouch-admin-plugins">
