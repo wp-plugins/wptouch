@@ -24,7 +24,7 @@ You can start editing here.
 
 <ol class="commentlist" id="commentlist">
 <?php if ($comments) : ?>
-
+<?php $comment_num = 0; ?>
 	<?php foreach ($comments as $comment) : ?>
 		<?php if (get_comment_type() == "comment") { ?>
 
@@ -55,10 +55,13 @@ Checking to see if Gravatars are enabled for WPtouch
 			<?php } ?><!--end grav option-->
 			
 	<?php } ?><!--end grav check -->
-			
+		
+      <!--  <a class="post-arrow" id="comment-num-<?php echo $comment_num; ?>" href="#" onclick="bnc_scroll_comment('<?php echo $comment_num; ?>'); return false"></a>	 -->
 		<a href="<?php comment_author_url(); ?>"><?php comment_author(); ?></a> said:
 		<div class="comdater"><?php comment_time('m / d / H:i'); ?></div>  
 		</div><!--end comtop-->
+
+        <?php $comment_num++; ?>
 	  
 		<div class="combody">  
 		<?php comment_text(); ?>

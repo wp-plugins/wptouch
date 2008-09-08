@@ -21,6 +21,7 @@ This check to see if advanced JS is enabled in the WPtouch admin.
 -->
 <?php if (bnc_is_js_enabled()) { ?>
 <script src="<?php bloginfo('template_directory'); ?>/js/jquery-1.2.6.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="<?php bloginfo('template_directory'); ?>/js/jquery.dimensions.js" type="text/javascript" charset="utf-8"></script>
 <script src="<?php bloginfo('template_directory'); ?>/js/menu.js" type="text/javascript" charset="utf-8"></script>
 <?php } ?>
 <!--
@@ -105,7 +106,7 @@ The toggles work with JS different ways, one with prototype/scriptaculous, the o
 		</a>
 	
 	<?php if (bnc_is_js_enabled()) { ?>
-		<a href="#" onclick="bnc_load_menu('<?php bloginfo('template_directory'); ?>/menu.php'); ">
+		<a href="#" onclick="bnc_load_menu('<?php bloginfo('template_directory'); ?>/menu.php'); return false;">
 		<?php } else { ?>
 		<a href="javascript:document.getElementById('dropmenu').style.display='block';">
 		<?php } ?>        

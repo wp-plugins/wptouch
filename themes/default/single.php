@@ -43,7 +43,7 @@ Categories and Tags post footer
 Mail and Bookmark code
 -->	
         <div class="single-links">
-          <div class="single-bookmark-right"><a href="javascript:$('#bookmark-box').slideToggle(300);"><img src="<?php bloginfo('template_directory'); ?>/images/bookmarkit.png" class="small" alt="" /> Bookmark It</a></div>
+          <div class="single-bookmark-right"><a href="javascript:$J('#bookmark-box').slideToggle(300);"><img src="<?php bloginfo('template_directory'); ?>/images/bookmarkit.png" class="small" alt="" /> Bookmark It</a></div>
           <div class="single-mail-left"><a href="mailto:?subject=<?php
   bloginfo('name'); ?>- <?php the_title();?>&body=Check out this post: <?php the_permalink() ?>"><img src="<?php bloginfo('template_directory'); ?>/images/mailit.png" class="small" alt="" /> Mail It</a></div>
           <div class="clearer"></div>
