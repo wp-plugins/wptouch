@@ -23,9 +23,6 @@ Please visit http://www.bravenewcode.com/wptouch/ for a full description & more 
 In version 1.3.5, we've added / changed:
 
 * Tweaks for the jQuery bugs. Everything should be working smoothly now.
-
-In version 1.3.4, we've added / changed:
-
 * No conflict setting added for jQuery, should fix 99% of errors relating to menu, effects, and WPtouch not showing up
 * Support for DISQUS 2.0.2-x Plugin
 * Minor style edits and enhancements for the search dropdown
