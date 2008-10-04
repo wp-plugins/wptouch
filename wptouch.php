@@ -565,14 +565,18 @@ $v['link-color'] = '006bb3';
               }
           }
 
-	  $a['header-title'] = $_POST['header-title'];
-	  $a['header-background-color'] = $_POST['header-background-color'];
-	  $a['header-border-color'] = $_POST['header-border-color'];
-	  $a['header-text-color'] = $_POST['header-text-color'];
-	  $a['link-color'] = $_POST['link-color'];
+	      $a['header-title'] = $_POST['header-title'];
+         if (!isset($a['header-title']) || (isset($a['header-title']) && strlen($a['header-title']) == 0)) {
+            $a['header-title'] = get_bloginfo('title');
+         }
+
+         $a['header-background-color'] = $_POST['header-background-color'];
+         $a['header-border-color'] = $_POST['header-border-color'];
+         $a['header-text-color'] = $_POST['header-text-color'];
+         $a['link-color'] = $_POST['link-color'];
         
 			$values = serialize($a);
-          	update_option('bnc_iphone_pages', $values);
+         update_option('bnc_iphone_pages', $values);
       }
       
     		$v = get_option('bnc_iphone_pages');
@@ -730,6 +734,7 @@ The Style Section
 		
 	<div class="wptouch-item-content-box1" id="wptouchstyle">
 <h3>Header Style</h3>				
+
 <div class="header-item-desc">Header Title (here you can override your site title to fit the WPtouch header)</div>
 <div class="header-input">&nbsp; <input text="text" name="header-title" type="text" value="<?php $str = $v['header-title']; echo stripslashes($str); ?>" /></div>
 

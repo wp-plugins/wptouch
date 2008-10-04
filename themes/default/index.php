@@ -43,15 +43,15 @@ If this is an archive/tag/category/author archive page, let's remind people, and
 		
 		<?php
 		} elseif (is_day()) { ?> 
-		the archive for <?php echo the_time('F jS, Y'); ?>
+		the archive for <?php echo get_the_time('F jS, Y'); ?>
 		
 		<?php 
 		} elseif (is_month()) { ?>
-		the archive for <?php echo the_time('F, Y'); ?>
+		the archive for <?php echo get_the_time('F, Y'); ?>
 		
 		<?php
 		} elseif (is_year()) { ?>
-		the archive for <?php echo the_time('Y'); ?>
+		the archive for <?php echo get_the_time('Y'); ?>
 		
 		<?php
 		} elseif (is_author()) { ?>
@@ -195,9 +195,9 @@ Page ifs closed, start the rest of things
 					 
 							<?php } ?>
                     
-						<div class="calendar" style="background: url(<?php bloginfo('template_directory'); ?>/images/cal/month<?php echo the_time('n') ?>.jpg) no-repeat;">
-						<div class="cal-month"><?php echo the_time('M') ?></div>
-						<div class="cal-date"><?php echo the_time('j') ?></div>
+						<div class="calendar" style="background: url(<?php bloginfo('template_directory'); ?>/images/cal/month<?php echo get_the_time('n') ?>.jpg) no-repeat;">
+						<div class="cal-month"><?php echo get_the_time('M') ?></div>
+						<div class="cal-date"><?php echo get_the_time('j') ?></div>
 						</div>
       
 <a class="h2" href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php if (function_exists('the_title_attribute')) the_title_attribute(); else the_title(); ?>"><?php if (function_exists('bnc_the_title')) bnc_the_title(); else the_title(); ?></a>

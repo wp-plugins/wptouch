@@ -14,7 +14,7 @@ Here we're establishing whether the page was loaded via Ajax or not, for dynamic
 	
     
     
-        <div class="single-post-meta-top"><?php echo the_time('M / d / y - g:ia') ?> &rsaquo; <?php the_author() ?><br />
+        <div class="single-post-meta-top"><?php echo get_the_time('M / d / y - g:ia') ?> &rsaquo; <?php the_author() ?><br />
 <!--
 Let's check for DISQUS... we need to skip to a different div if it's installed and active
 -->		
