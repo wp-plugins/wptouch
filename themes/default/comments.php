@@ -113,7 +113,7 @@ Checking to see if Gravatars are enabled for WPtouch
   -->
 	<?php if (bnc_is_js_enabled()) { ?>
 	<div id="refresher" style="display:none">&raquo; <a href="javascript:this.location.reload();">Refresh the page</a> to post a new comment.</div>
-	<form id="commentform" action="<?php echo get_option('url'); ?>/wp-comments-post.php" method="post" onsubmit="$J('#loading').fadeIn(100);var list = $J('#commentlist'); var html = list.html(); var param = $J('form').serialize(); $J.ajax({url: '<?php bloginfo('template_directory'); ?>/comments-ajax.php?' + param, success: function(data, status){ list.append(data); commentAdded(); }, type: 'get' }); return false;">
+	<form id="commentform" action="<?php echo get_option('url'); ?>/wp-comments-post.php" method="post" onsubmit="$wptouch('#loading').fadeIn(100);var list = $wptouch('#commentlist'); var html = list.html(); var param = $wptouch('form').serialize(); $wptouch.ajax({url: '<?php bloginfo('template_directory'); ?>/comments-ajax.php?' + param, success: function(data, status){ list.append(data); commentAdded(); }, type: 'get' }); return false;">
 	<?php } else { ?>
 	<form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" id="commentform">
 	<?php } ?>
