@@ -183,9 +183,9 @@ Page ifs closed, start the rest of things
 -->
 	
 							<?php if (bnc_is_js_enabled() && bnc_excerpt_enabled()) { ?>
-							<a class="post-arrow" id="arrow-<?php the_ID(); ?>" href="javascript:$J('#entry-<?php the_ID(); ?>').fadeIn(500); $J('#arrow-<?php the_ID(); ?>').hide(); $J('#arrow-down-<?php the_ID(); ?>').show();"></a>		
+							<a class="post-arrow" id="arrow-<?php the_ID(); ?>" href="javascript:$wptouch('#entry-<?php the_ID(); ?>').fadeIn(500); $wptouch('#arrow-<?php the_ID(); ?>').hide(); $wptouch('#arrow-down-<?php the_ID(); ?>').show();"></a>		
 							
-							<a style="display:none" class="post-arrow-down" id="arrow-down-<?php the_ID(); ?>" href="javascript:$J('#entry-<?php the_ID(); ?>').fadeOut(500); $J('#arrow-<?php the_ID(); ?>').show(); $J('#arrow-down-<?php the_ID(); ?>').hide();"></a>	
+							<a style="display:none" class="post-arrow-down" id="arrow-down-<?php the_ID(); ?>" href="javascript:$wptouch('#entry-<?php the_ID(); ?>').fadeOut(500); $wptouch('#arrow-<?php the_ID(); ?>').show(); $wptouch('#arrow-down-<?php the_ID(); ?>').hide();"></a>	
 							
 							
 							<?php } elseif (!bnc_is_js_enabled() && bnc_excerpt_enabled()) { ?>
@@ -229,8 +229,8 @@ End of the if page or else code-->
 
 				<?php if (bnc_is_js_enabled()) { ?>
 				<div id="call<?php echo md5($_SERVER['REQUEST_URI']); ?>">
-				<a class="ajax" href="javascript:$J('#spinner<?php echo md5($_SERVER['REQUEST_URI']); ?>').fadeIn(200); $J('#ajaxentries<?php
-				echo md5($_SERVER['REQUEST_URI']); ?>').load('<?php echo get_next_posts_page_link(); ?>', {}, function(){ $J('#call<?php echo md5($_SERVER['REQUEST_URI']); ?>').fadeOut();})">Load more entries...</a> <img id="spinner<?php echo md5($_SERVER['REQUEST_URI']); ?>" class="spin" src="<?php bloginfo('template_directory'); ?>/images/main-ajax-loader.gif" style="display:none" alt="" />
+				<a class="ajax" href="javascript:$wptouch('#spinner<?php echo md5($_SERVER['REQUEST_URI']); ?>').fadeIn(200); $wptouch('#ajaxentries<?php
+				echo md5($_SERVER['REQUEST_URI']); ?>').load('<?php echo get_next_posts_page_link(); ?>', {}, function(){ $wptouch('#call<?php echo md5($_SERVER['REQUEST_URI']); ?>').fadeOut();})">Load more entries...</a> <img id="spinner<?php echo md5($_SERVER['REQUEST_URI']); ?>" class="spin" src="<?php bloginfo('template_directory'); ?>/images/main-ajax-loader.gif" style="display:none" alt="" />
 				<div class="post-spacer"></div>
 				<div class="clearer"></div>
 				</div>				

@@ -17,17 +17,16 @@ This makes the iPhone/iPod touch ask for the same icon the user chooses for a lo
 -->
 <link rel="apple-touch-icon" href="<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/images/icon-pool/<?php echo bnc_get_title_image(); ?>"/>
 
-<!---->
+<!--
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta names="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-
+-->
 <!--
 This check to see if advanced JS is enabled in the WPtouch admin.
 -->
+<?php wp_head(); ?>
 <?php if (bnc_is_js_enabled()) { ?>
-<script src="<?php bloginfo('template_directory'); ?>/js/jquery-1.2.6.min.js" type="text/javascript" charset="utf-8"></script>
-<script src="<?php bloginfo('template_directory'); ?>/js/jquery.dimensions.js" type="text/javascript" charset="utf-8"></script>
-<script src="<?php bloginfo('template_directory'); ?>/js/menu.js" type="text/javascript" charset="utf-8"></script>
+<script src="<?php bloginfo('template_directory'); ?>/js/global.js" type="text/javascript" charset="utf-8"></script>
 <?php } ?>
 <!--
 Disqus commenting check for Ajax Coms JS Need 
@@ -41,21 +40,16 @@ if  (!function_exists('dsq_comments_template')) { ?>
 	<?php } ?>
 <?php } ?>
 
-<?php wp_head(); ?>
-<!--
-This should fix javascript conflict issues for good. 
-We call it after wp_head() to make sure any plugin's scripts are loaded and jQuery can handle the workaround for them.
--->
-<script type="text/javascript" charset="utf-8">
- var $J = jQuery.noConflict();
-</script>
-
 <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
 <!--
 In order to have some dynamic user-selected CSS, we've written the below. 
 We could pull it out into a css.php file, but it's just a small block and easy to add or modify this way.
 -->
 <style type="text/css">
+/*Un-comment this and change the highlight-color to whatever you want if you want to change the way the highlight color looks when links are pressed in WPtouch */
+/*body{
+-webkit-tap-highlight-color:#CCCCCC;
+}*/
 #menubar {
 	width: 100%;
 	height: 45px;
@@ -103,7 +97,7 @@ The toggles work with JS different ways, one with prototype/scriptaculous, the o
 -->
 	<div id="drop-fade">
 	<?php if (bnc_is_js_enabled()) { ?>
-		    <a href="javascript:$J('#wptouch-search').slideToggle(200);">
+		    <a href="javascript:$wptouch('#wptouch-search').slideToggle(200);">
 		<?php } else { ?>
 		    <a href="javascript:document.getElementById('wptouch-search').style.display='block';">
 		<?php } ?>
