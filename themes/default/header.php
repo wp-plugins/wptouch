@@ -16,6 +16,11 @@ Increase the maximum-scale number to allow for zooming if you wish
 This makes the iPhone/iPod touch ask for the same icon the user chooses for a logo to be the bookmark icon as well.
 -->
 <link rel="apple-touch-icon" href="<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/images/icon-pool/<?php echo bnc_get_title_image(); ?>"/>
+
+<!---->
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta names="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
 <!--
 This check to see if advanced JS is enabled in the WPtouch admin.
 -->
