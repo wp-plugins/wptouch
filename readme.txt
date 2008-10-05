@@ -4,9 +4,11 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=paypa
 Tags: wptouch, iphone, ipod touch, theme, apple, mac, bravenewcode, AJAX, mobile, wordpress on iphone, iphone wordpress
 Requires at least: 2.1
 Tested up to: 2.6.2
-Stable tag: 1.3.6
+Stable tag: 1.3.5
 
 WPtouch formats your WordPress blog with an iPhone application-style theme, complete with ajax loading articles and effects. The theme only shows when viewed from an iPhone or iPod touch.
+
+Downloaded over 20,000 times (bravenewcode.com + wordpress.org) since April 2008. 
 
 == Description ==
 
@@ -20,10 +22,23 @@ Please visit http://www.bravenewcode.com/wptouch/ for a full description & more 
 
 == What's New ==
 
+In version 1.3.6, we've added / changed:
+
+* More tweaks of jQuery, now loads with wp_enqueue_script() if available (WordPress < 2.5)
+* Changed $J to $wptouch to help with collisions using jQuery
+* Offloaded jQuery loading from our folder to Google instead for WP > 2.5 sites
+* Fixed a bug in wptouch.php on line 232, fixing drop-down menu display issue
+* Fixed a bug where blank admin options were allowed instead of refused
+* Fixed a bug with overriding the site title in the WPtouch admin
+* Fixed some instances where ajax comments would not work
+* Fixed a bug where the loading of javascript files would happen even for your regular site's theme
+* More compatibility with other plugins
+* Code cleanups and optimizations
+
 In version 1.3.5, we've added / changed:
 
-* Tweaks for the jQuery bugs. Everything should be working smoothly now.
-* No conflict setting added for jQuery, should fix 99% of errors relating to menu, effects, and WPtouch not showing up
+* Tweaks for the jQuery bugs
+* No conflict setting added for jQuery
 * Support for DISQUS 2.0.2-x Plugin
 * Minor style edits and enhancements for the search dropdown
 
