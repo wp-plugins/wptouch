@@ -253,7 +253,7 @@ input#ssubmit {
 	width: 100%;
 	position: relative;
 	bottom: 1px;
-	background: #111 no-repeat;
+	background: #181818 no-repeat;
 	opacity: 0.97;
 	-webkit-box-shadow: #555 -5px 2px 5px;	padding: 0;
 }
@@ -271,7 +271,7 @@ input#ssubmit {
 }
 
 #dropmenu-inner li {
-	border-bottom: 1px solid #222;
+	border-bottom: 1px solid #2d2d2d;
 	margin: 0;
 	background: url(images/arrow.png) no-repeat right center;
 	padding: 0;
@@ -287,19 +287,15 @@ input#ssubmit {
 #dropmenu-inner a {
 	font-size: 15px;
 	font-weight: bold;
-	color: #eee;
 	display: block;
 	width: 85%;
 	padding: 12px 20px 12px 12px;
+	text-shadow: #000 1px 1px 0;
+	color: #eee;
 }
 
 #dropmenu-inner a:hover {
-	font-size: 15px;
-	font-weight: bold;
-	color: #EEE;
-	display: block;
-	background-color: #222;
-	width: 100%;
+	color: #999;
 }
 
 #dropmenu-inner img {
