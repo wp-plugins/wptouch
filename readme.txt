@@ -32,6 +32,7 @@ In version 1.4, we've added / changed:
 * Fixed a bug with overriding the site title in the WPtouch admin
 * Fixed some instances where ajax comments would not work
 * Fixed a bug where the loading of javascript files would happen even for your regular site's theme
+* Enhanced drop-down menu appearance
 * More compatibility with other plugins
 * Code cleanups and optimizations
 

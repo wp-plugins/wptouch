@@ -56,6 +56,9 @@ We could pull it out into a css.php file, but it's just a small block and easy t
 	position: relative;
 	color: #<?php echo bnc_get_header_color(); ?>
 }
+#dropmenu-inner a:hover {
+	color: #<?php echo bnc_get_link_color(); ?>;
+}
 #drop-fade {
 background: #<?php echo bnc_get_header_border_color(); ?>
 }
