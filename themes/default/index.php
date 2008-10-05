@@ -1,18 +1,7 @@
-<!--
-There's a lot going on in this file, as we've condensed several templates into the one index.php file. 
-We'll separate each section with  a '/////////////' commented line, to help you sift through the code... let's rock...
--->
-
-<!--
-////////////////////////////
-HEADER
-Here we're establishing whether the page was loaded via Ajax or not, for dynamic purposes. If it's ajax, we're not bringing in header.php
--->
 <?php global $is_ajax; $is_ajax = isset($_SERVER['HTTP_X_REQUESTED_WITH']); if (!$is_ajax) get_header(); ?>
-
 <!--
-////////////////////////////
-IN THE BIGNINNING
+There's a lot going on in this file, as we've condensed several templates into the one index.php file... let's rock...
+
 Here we're making sure that each ajax div will have a unique ID. 
 When posts are fetched via ajax they'll get one and we can interact with it.
 -->

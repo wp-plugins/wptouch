@@ -1,7 +1,4 @@
 <?php
-if (bnc_is_js_enabled()) {
-wp_enqueue_script('jquery');
-} 
  
   //Favicon fetch and convert script
   //This script will convert favicons for the links listed on your Links page (if you have one).

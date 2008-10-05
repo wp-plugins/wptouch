@@ -22,10 +22,15 @@ This makes the iPhone/iPod touch ask for the same icon the user chooses for a lo
 <meta names="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 -->
 <!--
-This check to see if advanced JS is enabled in the WPtouch admin.
+This checks to see if advanced JS is enabled in the WPtouch admin.
 -->
-<?php wp_head(); ?>
 <?php if (bnc_is_js_enabled()) { ?>
+	<?php $version = (float)get_bloginfo('version'); if ($version >= 2.5) { ?>
+		<?php wp_enqueue_script('jquery'); ?>
+	<?php } else) { ?>
+		<script src="http://www.google.com/jsapi"></script>
+		<script type="text/javascript">google.load("jquery", "1");</script>
+	<?php } ?>
 <script src="<?php bloginfo('template_directory'); ?>/js/global.js" type="text/javascript" charset="utf-8"></script>
 <?php } ?>
 <!--
@@ -39,7 +44,7 @@ if  (!function_exists('dsq_comments_template')) { ?>
 	<script src="<?php bloginfo('template_directory'); ?>/js/ajaxcoms.js" type="text/javascript"></script>
 	<?php } ?>
 <?php } ?>
-
+<?php wp_head(); ?>
 <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
 <!--
 In order to have some dynamic user-selected CSS, we've written the below. 

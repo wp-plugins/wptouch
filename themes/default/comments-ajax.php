@@ -7,6 +7,8 @@
   //print_r($_SERVER);
   //preg_match('#(.*)/wp-content#', $_SERVER['SCRIPT_FILENAME'], $rootdir);
   //print_r ($rootdir);
+  
+  // This relative path will find what we need... kinda dirty, but it's a failsafe
   require('../../../../../wp-blog-header.php');
   function fail($s)
   {
@@ -51,8 +53,8 @@
       fail(__('Error: please type a comment.'));
   $commentdata = compact('comment_post_ID', 'comment_author', 'comment_author_email', 'comment_author_url', 'comment_content', 'comment_type', 'user_ID');
   $new_comment_ID = wp_new_comment($commentdata);
-  if (!$user_ID)
-      : setcookie('comment_author_' . COOKIEHASH, stripslashes($comment_author), time() + 30000000, COOKIEPATH, COOKIE_DOMAIN);
+  if (!$user_ID) : 
+  setcookie('comment_author_' . COOKIEHASH, stripslashes($comment_author), time() + 30000000, COOKIEPATH, COOKIE_DOMAIN);
   setcookie('comment_author_email_' . COOKIEHASH, stripslashes($comment_author_email), time() + 30000000, COOKIEPATH, COOKIE_DOMAIN);
   setcookie('comment_author_url_' . COOKIEHASH, stripslashes($comment_author_url), time() + 30000000, COOKIEPATH, COOKIE_DOMAIN);
   endif;
