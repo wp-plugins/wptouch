@@ -4,9 +4,11 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=paypa
 Tags: wptouch, iphone, ipod touch, theme, apple, mac, bravenewcode, AJAX, mobile, wordpress on iphone, iphone wordpress
 Requires at least: 2.1
 Tested up to: 2.6.2
-Stable tag: 1.3.6
+Stable tag: 1.4
 
 WPtouch formats your WordPress blog with an iPhone application-style theme, complete with ajax loading articles and effects. The theme only shows when viewed from an iPhone or iPod touch.
+
+Downloaded over 20,000 times (bravenewcode.com + wordpress.org) since April 2008. 
 
 == Description ==
 
@@ -20,23 +22,31 @@ Please visit http://www.bravenewcode.com/wptouch/ for a full description & more 
 
 == What's New ==
 
-In version 1.3.5, we've added / changed:
+In version 1.4, we've added / changed:
 
-* Tweaks for the jQuery bugs. Everything should be working smoothly now.
-* No conflict setting added for jQuery, should fix 99% of errors relating to menu, effects, and WPtouch not showing up
+* More jQuery tune-ups, now loads through wp_enqueue_script() or Google to prevent collisions
+* Changed $J to $wptouch to prevent collisions using jQuery
+* Offloaded jQuery loading from our folder to Google instead for WP > 2.5 sites
+* Fixed a bug in wptouch.php on line 232, fixing drop-down menu display issue
+* Fixed a bug where blank admin options were allowed instead of refused
+* Fixed a bug with overriding the site title in the WPtouch admin
+* Fixed some instances where ajax comments would not work
+* Fixed a bug where the loading of javascript files would load in your site's default theme
+* Enhanced drop-down menu appearance
+* More compatibility with other plugins
+* Code cleanups and optimizations
+
+In version 1.3.x - 1.3.5, we've added / changed:
+
+* Tweaks for the jQuery bugs
+* No conflict setting added for jQuery
 * Support for DISQUS 2.0.2-x Plugin
 * Minor style edits and enhancements for the search dropdown
-
-In version 1.3.3, we've added / changed:
-
 * Another fix for drop-down Menu not working
 * Added ability to change the header border background color
 * Fix for slashes appearing before apostrophes in the header title
 * Admin wording changes, styling changes
 * Minor style enhancements to the theme
-
-In version 1.3.2, we've added / changed:
-
 * Fix for Menu not working on some installations
 * Style enhancements for the menu, search, drop downs
 * Style enhancements for comments, logged in users
@@ -45,7 +55,7 @@ In version 1.3.2, we've added / changed:
 * Admin wording changes
 
 
-In version 1.3(.1), we've added / changed:
+In version 1.2.x - 1.3, we've added / changed:
 
 * Fix for the theme appearing in Safari browsers
 * Switch from Prototype to the more WordPress-native jQuery for javascript (much faster!)
@@ -58,27 +68,19 @@ In version 1.3(.1), we've added / changed:
 * Option to hide/show excerpts by default on the home, search, and archive pages
 * Switch code links are automatically injected into your regular theme's footer now, and is only seen on the iPhone/ipod touch
 * In all, despite the addition of new features we've cut load times for WPtouch in half with this release over 1.2.x releases!
-
-
-In version 1.2.1, we've added/changed:
-
 * The ability to disable Gravatars in comments (more control over optimization & speed)
 * Redundant, unused template file cleanups (archive.php, search.php & page.php are now all just index.php)
 * More style enhancements and tweaks, fixes
 * Switched to Snoopy from CURL for the admin news section (thanks to Joost de Valk (yoast.com)
 
 
-Version 1.2 added/changed the following features:
+Version 1.1.x - 1.2 added/changed the following features:
 
 * The ability to disable advanced javascript effects (fixes effects not working for some, speeds up the load time considerably)
 * Proper styling of embedded YouTube videos on mobileSafari in iPhone 2.0
 * Fix for the switch code not working on some blog installations
 * Redundant, unused code cleanups
 * More style enhancements and tweaks, fixes
-
-
-Version 1.1.(1,2) added/changed the following features:
-
 * the ability to enable/disable the default home, rss and email menu items
 * support for WordPress installations that have static home pages
 * dynamic WPtouch news in the administration panel
@@ -91,6 +93,8 @@ Version 1.1.(1,2) added/changed the following features:
 * bug fixes for blogs installed in directories other than root
 
 == Installation ==
+
+Unzip, and upload the 'wptouch' folder and all its contents to your WordPress wp-content/plugins folder using FTP. Visit the plugin tab in the WordPress admin, and activate WPtouch. You can then setup your plugin options by visiting the Settings - >WPtouch tab.
 
 Please visit http://www.bravenewcode.com/wptouch/ for comprehensive installation instructions.
 
@@ -112,11 +116,11 @@ Not bloody likely! Unless of course you're getting slammed with all sorts of tra
 
 1. Posts on the front page
 2. Drop down menu navigation
-3. Single post page
-4. Post meta data and navigation
-5. Comment box
-6. Links with favicon support
-7. Archives page with tag cloud
-8. Sample post with images
+3. Single post page w/ YouTube video
+4. Post meta data, mail, social bookmarking and navigation
+5. Comment box (ajax powered)
+6. Links with automatic favicon support
+7. Archives page with tag cloud & monthly list 
+8. Sample post with image auto-size
 9. Built-in 'e-mail post' capability
-10. Drop down bookmarking buttons
+

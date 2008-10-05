@@ -1,6 +1,16 @@
-<?php
-  //Favicon fetch and convert script
-  //This script will convert favicons for the links listed on your Links page (if you have one).
+<?php 
+
+// This checks to see if advanced JS is enabled in the WPtouch admin and then loads jQuery without collisions if possible (2.5 or higher)
+function wptouch_enqueue() {
+	$version = get_bloginfo('version'); 
+		if ($version >= 2.5 && bnc_is_js_enabled()) { 
+			echo	 '' . wp_enqueue_script('jquery') . '';
+		} elseif (bnc_is_js_enabled()) { 
+			echo '<script src="http://www.google.com/jsapi"></script>';
+			echo '<script type="text/javascript">google.load("jquery", "1");</script>';
+		}
+}
+  //Favicon fetch and convert script // This script will convert favicons for the links listed on your Links page (if you have one).
   function bnc_url_exists($url)
   {
       // Version 4.x supported
@@ -38,7 +48,7 @@
   }
   function bnc_get_favicon_for_site($site)
   {
-  // Yes we know this goes remote to handle things, but we do this to ensure that it works for everyone. No data is collected, as you can see.
+  // Yes we know this goes remote to handle things, but we do this to ensure that it works for everyone. No data is collected, as you can see
       $i = 'http://keira-anne.com/test2.php?site=' . urlencode($site) . '&default=' . urlencode(bnc_get_local_icon_url() . '/icon-pool/default.png');
       return $i;
   }

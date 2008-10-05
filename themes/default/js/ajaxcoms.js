@@ -1,18 +1,18 @@
 // Ajax Comments
 function commentAdded() {
-    if ($('#errors')) {
-        $('#errors').hide();
+    if ($wptouch('#errors')) {
+        $wptouch('#errors').hide();
     }
 
-    $("#commentform").hide();
-    $("#some-new-comment").fadeIn(2000);
-    $("#refresher").fadeIn(2000);
+    $wptouch("#commentform").hide();
+    $wptouch("#some-new-comment").fadeIn(2000);
+    $wptouch("#refresher").fadeIn(2000);
 
-    if ($('#nocomment')) {
-        $('#nocomment').hide();
+    if ($wptouch('#nocomment')) {
+        $wptouch('#nocomment').hide();
     }
     
-    if($('#hidelist')) {
-        $('#hidelist').hide();
+    if($wptouch('#hidelist')) {
+        $wptouch('#hidelist').hide();
     }
 }

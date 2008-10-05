@@ -1,20 +1,8 @@
-<!--
-There's a lot going on in this file, as we've condensed several templates into the one index.php file. 
-We'll separate each section with  a '/////////////' commented line, to help you sift through the code... let's rock...
--->
-
-<!--
-////////////////////////////
-HEADER
-Here we're establishing whether the page was loaded via Ajax or not, for dynamic purposes. If it's ajax, we're not bringing in header.php
--->
 <?php global $is_ajax; $is_ajax = isset($_SERVER['HTTP_X_REQUESTED_WITH']); if (!$is_ajax) get_header(); ?>
-
 <!--
-////////////////////////////
-IN THE BIGNINNING
+There's a lot going on in this file, as we've condensed several templates into the one index.php file... let's rock...
+
 Here we're making sure that each ajax div will have a unique ID. 
-When posts are fetched via ajax they'll get one and we can interact with it.
 -->
 <div class="content" id="content<?php echo md5($_SERVER['REQUEST_URI']); ?>">
 
@@ -33,28 +21,22 @@ If this is an archive/tag/category/author archive page, let's remind people, and
 		<?php global $is_ajax; if ($is_ajax) { ?>
         <!--do nothing-->
 		<?php } elseif (is_archive()) { ?>
-
 		<div class="result-text">Browsing <?php if (is_category()) { ?>
 		the category &lsquo;<?php echo single_cat_title(); ?>&rsquo;
 		
-		<?php
-		} elseif (is_tag()) { ?>
+		<?php } elseif (is_tag()) { ?>
 		the tag archive for &lsquo;<?php echo single_tag_title(); ?>&rsquo;
 		
-		<?php
-		} elseif (is_day()) { ?> 
+		<?php } elseif (is_day()) { ?> 
 		the archive for <?php echo get_the_time('F jS, Y'); ?>
 		
-		<?php 
-		} elseif (is_month()) { ?>
+		<?php } elseif (is_month()) { ?>
 		the archive for <?php echo get_the_time('F, Y'); ?>
 		
-		<?php
-		} elseif (is_year()) { ?>
+		<?php } elseif (is_year()) { ?>
 		the archive for <?php echo get_the_time('Y'); ?>
 		
-		<?php
-		} elseif (is_author()) { ?>
+		<?php } elseif (is_author()) { ?>
 		<?php the_author(); ?>'s archive
 		<?php } ?>
 		</div>
@@ -63,7 +45,6 @@ If this is an archive/tag/category/author archive page, let's remind people, and
   <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 	
 <!--
-/////////////////////////
 If It's NOT A Page, Let's Do The Comment Bubble Thing
 -->
  		<?php if (!is_page()) { ?>
@@ -82,7 +63,6 @@ If It's NOT A Page, Let's Do The Comment Bubble Thing
  <div class="post" id="post-<?php the_ID(); ?>">
  
 <!--
-////////////////////////////
 If it's a page, we want things to be a little different here, especially on photo, archive and links pages
 -->
 <?php if (is_page()) { ?>
@@ -178,14 +158,13 @@ If it's a page, we want things to be a little different here, especially on phot
   
 			<?php } else { ?>
 <!--
-//////////////////////
 Page ifs closed, start the rest of things
 -->
 	
 							<?php if (bnc_is_js_enabled() && bnc_excerpt_enabled()) { ?>
-							<a class="post-arrow" id="arrow-<?php the_ID(); ?>" href="javascript:$J('#entry-<?php the_ID(); ?>').fadeIn(500); $J('#arrow-<?php the_ID(); ?>').hide(); $J('#arrow-down-<?php the_ID(); ?>').show();"></a>		
+							<a class="post-arrow" id="arrow-<?php the_ID(); ?>" href="javascript:$wptouch('#entry-<?php the_ID(); ?>').fadeIn(500); $wptouch('#arrow-<?php the_ID(); ?>').hide(); $wptouch('#arrow-down-<?php the_ID(); ?>').show();"></a>		
 							
-							<a style="display:none" class="post-arrow-down" id="arrow-down-<?php the_ID(); ?>" href="javascript:$J('#entry-<?php the_ID(); ?>').fadeOut(500); $J('#arrow-<?php the_ID(); ?>').show(); $J('#arrow-down-<?php the_ID(); ?>').hide();"></a>	
+							<a style="display:none" class="post-arrow-down" id="arrow-down-<?php the_ID(); ?>" href="javascript:$wptouch('#entry-<?php the_ID(); ?>').fadeOut(500); $wptouch('#arrow-<?php the_ID(); ?>').show(); $wptouch('#arrow-down-<?php the_ID(); ?>').hide();"></a>	
 							
 							
 							<?php } elseif (!bnc_is_js_enabled() && bnc_excerpt_enabled()) { ?>
@@ -219,7 +198,6 @@ Page ifs closed, start the rest of things
       </div>
 <?php } ?> 
 <!--
-/////////////////
 End of the if page or else code-->
 
     <?php endwhile; ?>
@@ -229,8 +207,8 @@ End of the if page or else code-->
 
 				<?php if (bnc_is_js_enabled()) { ?>
 				<div id="call<?php echo md5($_SERVER['REQUEST_URI']); ?>">
-				<a class="ajax" href="javascript:$J('#spinner<?php echo md5($_SERVER['REQUEST_URI']); ?>').fadeIn(200); $J('#ajaxentries<?php
-				echo md5($_SERVER['REQUEST_URI']); ?>').load('<?php echo get_next_posts_page_link(); ?>', {}, function(){ $J('#call<?php echo md5($_SERVER['REQUEST_URI']); ?>').fadeOut();})">Load more entries...</a> <img id="spinner<?php echo md5($_SERVER['REQUEST_URI']); ?>" class="spin" src="<?php bloginfo('template_directory'); ?>/images/main-ajax-loader.gif" style="display:none" alt="" />
+				<a class="ajax" href="javascript:$wptouch('#spinner<?php echo md5($_SERVER['REQUEST_URI']); ?>').fadeIn(200); $wptouch('#ajaxentries<?php
+				echo md5($_SERVER['REQUEST_URI']); ?>').load('<?php echo get_next_posts_page_link(); ?>', {}, function(){ $wptouch('#call<?php echo md5($_SERVER['REQUEST_URI']); ?>').fadeOut();})">Load more entries...</a> <img id="spinner<?php echo md5($_SERVER['REQUEST_URI']); ?>" class="spin" src="<?php bloginfo('template_directory'); ?>/images/main-ajax-loader.gif" style="display:none" alt="" />
 				<div class="post-spacer"></div>
 				<div class="clearer"></div>
 				</div>				
@@ -243,8 +221,7 @@ End of the if page or else code-->
 				<div class="alignright"><?php next_posts_link('Older In Search <img src="' . get_bloginfo('template_directory') . '/images/blue_arrow_r.jpg" alt="" />') ?></div>
 				</div>
 
-				<?php } elseif (!bnc_is_js_enabled() && !is_search()) { ?>
-				
+				<?php } elseif (!bnc_is_js_enabled() && !is_search()) { ?>		
 				<div class="main-navigation">
 					<div class="alignleft">
 					<?php previous_posts_link('<img src="' . get_bloginfo('template_directory') . '/images/blue_arrow_l.jpg" alt="" /> Newer Entries') ?>
@@ -258,7 +235,6 @@ End of the if page or else code-->
 
 <?php else : ?>
 <!--
-/////////////////////
 If this was a bogus 404 page, the end of entry results, or a search -->
 
 	<?php global $is_ajax; if (($is_ajax) && !is_search()) { ?>
@@ -266,7 +242,7 @@ If this was a bogus 404 page, the end of entry results, or a search -->
 	 <?php } elseif (is_search() && ($is_ajax)) { ?>
 	<div class="result-text">No more search results to display.</div>
 	 <?php } elseif (is_search()) { ?>
-	 <div class="result-text">No search results results found. Try another query.</div>
+	 <div class="result-text" style="padding-bottom:127px">No search results results found.<br />Try another query.</div>
 	<?php } else { ?>
 	  <div class="post"><img src="<?php bloginfo('template_directory'); ?>/images/404.jpg" alt="404 Not Found" /></div>
 	<?php } ?>
@@ -274,8 +250,6 @@ If this was a bogus 404 page, the end of entry results, or a search -->
   <?php endif; ?>
 
 <!--
-////////////////////////////
-FOOTER
 Here we're establishing whether the page was loaded via Ajax or not, for dynamic purposes. If it's ajax, we're not bringing in footer.php
 -->
 <?php global $is_ajax; if (!$is_ajax) get_footer(); ?>

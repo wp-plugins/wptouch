@@ -1,9 +1,9 @@
 /* @override http://24.150.116.198:9098/wp-content/plugins/wptouch/themes/default/style.css */
 
 /*  
-Theme Name: WPtouch Theme
+Theme Name: WPtouch iPhone & iPod touch Plugin / Theme
 Theme URI: http://www.bravenewcode.com/wptouch/
-Description: A slick theme for your blog or website that is shown only when using an iPhone/iPod touch.
+Description: A slick theme for your blog or website that is shown only when visitors are using an iPhone/iPod touch.
 Author: Dale Mugford and Duane Storey
 Author URI: http://www.bravenewcode.com/
 	
@@ -253,7 +253,7 @@ input#ssubmit {
 	width: 100%;
 	position: relative;
 	bottom: 1px;
-	background: #111 no-repeat;
+	background: #181818 no-repeat;
 	opacity: 0.97;
 	-webkit-box-shadow: #555 -5px 2px 5px;	padding: 0;
 }
@@ -271,7 +271,7 @@ input#ssubmit {
 }
 
 #dropmenu-inner li {
-	border-bottom: 1px solid #222;
+	border-bottom: 1px solid #2d2d2d;
 	margin: 0;
 	background: url(images/arrow.png) no-repeat right center;
 	padding: 0;
@@ -287,19 +287,11 @@ input#ssubmit {
 #dropmenu-inner a {
 	font-size: 15px;
 	font-weight: bold;
-	color: #eee;
 	display: block;
 	width: 85%;
 	padding: 12px 20px 12px 12px;
-}
-
-#dropmenu-inner a:hover {
-	font-size: 15px;
-	font-weight: bold;
-	color: #EEE;
-	display: block;
-	background-color: #222;
-	width: 100%;
+	text-shadow: #000 1px 1px 0;
+	color: #eee;
 }
 
 #dropmenu-inner img {

@@ -11,8 +11,6 @@ Here we're establishing whether the page was loaded via Ajax or not, for dynamic
   <div class="post">
 
     <a class="sh2" href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php if (function_exists('the_title_attribute')) the_title_attribute(); else the_title(); ?>"><?php the_title(); ?></a>
-	
-    
     
         <div class="single-post-meta-top"><?php echo get_the_time('M / d / y - g:ia') ?> &rsaquo; <?php the_author() ?><br />
 <!--
@@ -43,7 +41,7 @@ Categories and Tags post footer
 Mail and Bookmark code
 -->	
         <div class="single-links">
-          <div class="single-bookmark-right"><a href="javascript:$J('#bookmark-box').slideToggle(300);"><img src="<?php bloginfo('template_directory'); ?>/images/bookmarkit.png" class="small" alt="" /> Bookmark It</a></div>
+          <div class="single-bookmark-right"><a href="javascript:$wptouch('#bookmark-box').slideToggle(300);"><img src="<?php bloginfo('template_directory'); ?>/images/bookmarkit.png" class="small" alt="" /> Bookmark It</a></div>
           <div class="single-mail-left"><a href="mailto:?subject=<?php
   bloginfo('name'); ?>- <?php the_title();?>&body=Check out this post: <?php the_permalink() ?>"><img src="<?php bloginfo('template_directory'); ?>/images/mailit.png" class="small" alt="" /> Mail It</a></div>
           <div class="clearer"></div>
@@ -89,10 +87,6 @@ Dynamic test for what page this is. A little redundant, but so what?
 -->
 			<?php global $is_ajax; if (($is_ajax) && !is_search()) { ?>
 			<div class="result-text">No more entries to display.</div>
-			<?php } elseif (is_search() && ($is_ajax)) { ?>
-			<div class="result-text">No more search results to display.</div>
-			<?php } elseif (is_search()) { ?>
-			<div class="result-text">No search results results found. Try another query.</div>
 			<?php } else { ?>
 		    <div class="post"><img src="<?php bloginfo('template_directory'); ?>/images/404.jpg" alt="404 Not Found" /></div>
 			<?php } ?>
