@@ -22,7 +22,7 @@ Please visit http://www.bravenewcode.com/wptouch/ for a full description & more 
 
 == What's New ==
 
-In version 1.3.6, we've added / changed:
+In version 1.4, we've added / changed:
 
 * More tweaks of jQuery, now loads with wp_enqueue_script() if available (WordPress < 2.5)
 * Changed $J to $wptouch to help with collisions using jQuery

@@ -3,7 +3,6 @@
 There's a lot going on in this file, as we've condensed several templates into the one index.php file... let's rock...
 
 Here we're making sure that each ajax div will have a unique ID. 
-When posts are fetched via ajax they'll get one and we can interact with it.
 -->
 <div class="content" id="content<?php echo md5($_SERVER['REQUEST_URI']); ?>">
 
@@ -52,7 +51,6 @@ If this is an archive/tag/category/author archive page, let's remind people, and
   <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 	
 <!--
-/////////////////////////
 If It's NOT A Page, Let's Do The Comment Bubble Thing
 -->
  		<?php if (!is_page()) { ?>
@@ -71,7 +69,6 @@ If It's NOT A Page, Let's Do The Comment Bubble Thing
  <div class="post" id="post-<?php the_ID(); ?>">
  
 <!--
-////////////////////////////
 If it's a page, we want things to be a little different here, especially on photo, archive and links pages
 -->
 <?php if (is_page()) { ?>
@@ -167,7 +164,6 @@ If it's a page, we want things to be a little different here, especially on phot
   
 			<?php } else { ?>
 <!--
-//////////////////////
 Page ifs closed, start the rest of things
 -->
 	
@@ -208,7 +204,6 @@ Page ifs closed, start the rest of things
       </div>
 <?php } ?> 
 <!--
-/////////////////
 End of the if page or else code-->
 
     <?php endwhile; ?>
@@ -247,7 +242,6 @@ End of the if page or else code-->
 
 <?php else : ?>
 <!--
-/////////////////////
 If this was a bogus 404 page, the end of entry results, or a search -->
 
 	<?php global $is_ajax; if (($is_ajax) && !is_search()) { ?>
@@ -255,7 +249,7 @@ If this was a bogus 404 page, the end of entry results, or a search -->
 	 <?php } elseif (is_search() && ($is_ajax)) { ?>
 	<div class="result-text">No more search results to display.</div>
 	 <?php } elseif (is_search()) { ?>
-	 <div class="result-text">No search results results found. Try another query.</div>
+	 <div class="result-text" style="padding-bottom:127px">No search results results found.<br />Try another query.</div>
 	<?php } else { ?>
 	  <div class="post"><img src="<?php bloginfo('template_directory'); ?>/images/404.jpg" alt="404 Not Found" /></div>
 	<?php } ?>
@@ -263,8 +257,6 @@ If this was a bogus 404 page, the end of entry results, or a search -->
   <?php endif; ?>
 
 <!--
-////////////////////////////
-FOOTER
 Here we're establishing whether the page was loaded via Ajax or not, for dynamic purposes. If it's ajax, we're not bringing in footer.php
 -->
 <?php global $is_ajax; if (!$is_ajax) get_footer(); ?>

@@ -4,7 +4,7 @@
    Plugin URI: http://bravenewcode.com/wptouch/
    Description: A plugin which reformats your site with a mobile theme when viewing with an <a href="http://www.apple.com/iphone/">iPhone</a> / <a href="http://www.apple.com/ipodtouch/">iPod touch</a>. Set styling, page, menu, icon and more options for the theme by visiting the <a href="options-general.php?page=wptouch/wptouch.php">WPtouch Options admin panel</a>. &nbsp;
    Author: Dale Mugford & Duane Storey
-   Version: 1.3.6
+   Version: 1.4
    Author URI: http://www.bravenewcode.com
    
    # Special thanks to ContentRobot and the iWPhone theme/plugin
@@ -22,421 +22,343 @@
    # See the GNU lesser General Public License for more details.
    */
    
-// Let's begin with something we don't need anymore... hee hee	
 //update_option('bnc_iphone_pages', serialize(''));
-
-	$bnc_option = get_option('bnc_iphone_pages');
+//	update_option('bnc_iphone_pages', serialize($defaults));
+$bnc_option = get_option('bnc_iphone_pages');
 	if ($bnc_option == null) {
-		$defaults = array();
-		$defaults['header-background-color'] = '222222';
-		$defaults['header-title'] = '' . get_bloginfo('title') . '';
-	//	update_option('bnc_iphone_pages', serialize($defaults));
-	}
+	$defaults = array();
+	$defaults['header-background-color'] = '222222';
+	$defaults['header-title'] = '' . get_bloginfo('title') . '';
+}
  
 // WPtouch Theme Options
-    $bnc_wptouch_version = '1.3.6';
-    function WPtouch($before = '', $after = '')
-    {
-        global $bnc_wptouch_version;
-        echo $before . 'WPtouch ' . $bnc_wptouch_version . $after;
-    }
+$bnc_wptouch_version = '1.4';
+	function WPtouch($before = '', $after = '') {
+		global $bnc_wptouch_version;
+			echo $before . 'WPtouch ' . $bnc_wptouch_version . $after;
+}
  
     // WP Admin stylesheet, Javascript
-    function wptouch_admin_css()
-    {
-        $url = get_bloginfo('wpurl');
-        $version = (float)get_bloginfo('version');
-		// We had two stylesheets, one for earlier versions of WordPress, but this one does just fine now
-        echo '<link rel="stylesheet" type="text/css" href="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/admin-css/wptouch-admin.css" />';
-        $version = (float)get_bloginfo('version');
-        if ($version < 2.2) {
-            echo '<script src="http://www.google.com/jsapi"></script>';
-            echo '<script type="text/javascript">google.load("jquery", "1"); jQuery.noConflict( ); </script>';
-        }
-    }
-
-  add_action('admin_head', 'wptouch_admin_css');
-  
-  class WPtouchPlugin
-  {
-      var $applemobile;
-      var $desired_view;
-      
-      function WPtouchPlugin()
-      {
-          $this->applemobile = false;
-          add_action('plugins_loaded', array(&$this, 'detectAppleMobile'));
-          add_filter('stylesheet', array(&$this, 'get_stylesheet'));
-          add_filter('theme_root', array(&$this, 'theme_root'));
-          add_filter('theme_root_uri', array(&$this, 'theme_root_uri'));
-          add_filter('template', array(&$this, 'get_template'));
-          add_filter('init', array(&$this, 'bnc_filter_iphone'));
-          
-          $this->detectAppleMobile();
-      }
-      
-      function bnc_filter_iphone()
-      
-	  {
-
-          $key = 'bnc_mobile_' . md5(get_bloginfo('siteurl'));
-          if (isset($_GET['bnc_view'])) {
-              if ($_GET['bnc_view'] == 'mobile') {
-                  setcookie($key, 'mobile', 0);
-              } elseif ($_GET['bnc_view'] == 'normal') {
-                  setcookie($key, 'normal', 0);
-              }
-              
-              header('Location: ' . get_bloginfo('siteurl'));
-              die;
-          }
-          
-          if (isset($_COOKIE[$key])) {
-              $this->desired_view = $_COOKIE[$key];
-          } else {
-              $this->desired_view = 'mobile';
-          }
-
-			// check for a static home page, serve up the posts page as WPtouch home
-			if ($this->desired_view == 'mobile') {
-	  			$blog = get_option('page_for_posts');
-				if ($blog) {
-					if (function_exists('is_front_page') && is_front_page() && $this->applemobile) { 
-						header('Location: ' . get_permalink($blog));
-						die;
-					}
-				}
+function wptouch_admin_css() {
+	$url = get_bloginfo('wpurl');
+	$version = (float)get_bloginfo('version');
+		echo '<link rel="stylesheet" type="text/css" href="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/admin-css/wptouch-admin.css" />';
+	$version = (float)get_bloginfo('version');
+		if ($version < 2.2) {
+			echo '<script src="http://www.google.com/jsapi"></script>';
+			echo '<script type="text/javascript">google.load("jquery", "1"); jQuery.noConflict( ); </script>';
 			}
-      }
-      
-      function detectAppleMobile($query = '')
-      {
-          $container = $_SERVER['HTTP_USER_AGENT'];
-          //print_r($container); //this prints out the user agent array. uncomment to see it shown on page.
-          $useragents = array("iPhone", "iPod", "Aspen");
-          //print_r($container); //this prints out the user agent array
-		  // Add whatever user agents you want here if you want to make this show on a Blackberry or something. No guarantees it'll look pretty, though!
-          $useragents = array("iPhone", "iPod", "Aspen");
-          $this->applemobile = false;
-          foreach ($useragents as $useragent) {
-              if (eregi($useragent, $container)) {
-                  $this->applemobile = true;
-              }
-          }
-      }
-      
-      function get_stylesheet($stylesheet)
-      {
-          if ($this->applemobile && $this->desired_view == 'mobile') {
-              return 'default';
-          } else {
-              
-              return $stylesheet;
-          }
-      }
-      
-      function get_template($template)
-      {
-          $this->bnc_filter_iphone();
-          
-          if ($this->applemobile && $this->desired_view === 'mobile') {
-              return 'default';
-          } else {
-              
-              return $template;
-          }
-      }
-      
-      function get_template_directory($value)
-      {
-          $theme_root = dirname(__FILE__);
-          if ($this->applemobile && $this->desired_view === 'mobile') {
-              return $theme_root . '/themes';
-          } else {
-              
-              return $value;
-          }
-      }
-      
-      function theme_root($path)
-      {
-          $theme_root = dirname(__FILE__);
-          if ($this->applemobile && $this->desired_view === 'mobile') {
-              return $theme_root . '/themes';
-          } else {
-              
-              return $path;
-          }
-      }
-      
-      function theme_root_uri($url)
-      {
-          if ($this->applemobile && $this->desired_view === 'mobile') {
-              $dir = get_bloginfo('wpurl') . "/wp-content/plugins/wptouch/themes";
-              return $dir;
-          } else {
-              
-              return $url;
-          }
-      }
-  }
+}
   
-  global $wptouch_plugin;
-  $wptouch_plugin = new WPtouchPlugin();
+class WPtouchPlugin {
+		var $applemobile;
+		var $desired_view;
+		
+	function WPtouchPlugin() {
+		$this->applemobile = false;
+			add_action('plugins_loaded', array(&$this, 'detectAppleMobile'));
+			add_filter('stylesheet', array(&$this, 'get_stylesheet'));
+			add_filter('theme_root', array(&$this, 'theme_root'));
+			add_filter('theme_root_uri', array(&$this, 'theme_root_uri'));
+			add_filter('template', array(&$this, 'get_template'));
+			add_filter('init', array(&$this, 'bnc_filter_iphone'));
+		$this->detectAppleMobile();
+}
+      
+function bnc_filter_iphone() {
+	$key = 'bnc_mobile_' . md5(get_bloginfo('siteurl'));
+		if (isset($_GET['bnc_view'])) {
+		if ($_GET['bnc_view'] == 'mobile') {
+			setcookie($key, 'mobile', 0);} 
+		elseif ($_GET['bnc_view'] == 'normal') {
+			setcookie($key, 'normal', 0);}
+		header('Location: ' . get_bloginfo('siteurl'));
+	die;
+}
+		if (isset($_COOKIE[$key])) {
+			$this->desired_view = $_COOKIE[$key];
+		} else {
+			$this->desired_view = 'mobile';}
+
+// check for a static home page, serve up the posts page as WPtouch home
+		if ($this->desired_view == 'mobile') {
+			$blog = get_option('page_for_posts');
+		if ($blog) {
+		if (function_exists('is_front_page') && is_front_page() && $this->applemobile) { 
+			header('Location: ' . get_permalink($blog));
+	die;
+			}
+		}
+	}
+}
+
+function detectAppleMobile($query = '') {
+	$container = $_SERVER['HTTP_USER_AGENT'];
+	//print_r($container); //this prints out the user agent array. uncomment to see it shown on page.
+	$useragents = array("iPhone", "iPod", "Aspen");
+	//print_r($container); //this prints out the user agent array
+	// Add whatever user agents you want here if you want to make this show on a Blackberry or something. No guarantees it'll look pretty, though!
+	$useragents = array("iPhone", "iPod", "Aspen");
+		$this->applemobile = false;
+			foreach ($useragents as $useragent) {
+			if (eregi($useragent, $container)) {
+		$this->applemobile = true;
+		}
+	}
+}
+      
+function get_stylesheet($stylesheet) {
+	if ($this->applemobile && $this->desired_view == 'mobile') {
+		return 'default';
+	} else {
+		return $stylesheet;
+	}
+}
+      
+function get_template($template) {
+	$this->bnc_filter_iphone();
+		if ($this->applemobile && $this->desired_view === 'mobile') {
+		return 'default';
+	} else {      
+		return $template;
+	}
+}
+      
+function get_template_directory($value) {
+	$theme_root = dirname(__FILE__);
+		if ($this->applemobile && $this->desired_view === 'mobile') {
+			return $theme_root . '/themes';
+		} else {
+			return $value;
+	}
+}
+      
+function theme_root($path) {
+	$theme_root = dirname(__FILE__);
+		if ($this->applemobile && $this->desired_view === 'mobile') {
+			return $theme_root . '/themes';
+		} else {
+			return $path;
+	}
+}
+      
+function theme_root_uri($url) {
+	if ($this->applemobile && $this->desired_view === 'mobile') {
+		$dir = get_bloginfo('wpurl') . "/wp-content/plugins/wptouch/themes";
+		return $dir;
+	} else {
+		return $url;
+		}
+	}
+}
   
-  function bnc_is_iphone()
-  {
-      global $wptouch_plugin;
-      return $wptouch_plugin->applemobile;
-  }
+	global $wptouch_plugin;
+		$wptouch_plugin = new WPtouchPlugin();
+
+function bnc_is_iphone() {
+	global $wptouch_plugin;
+		return $wptouch_plugin->applemobile;
+}
   
     // The Template Switch Code
-	//**************UPDATED**************** 
-	//Now injects into the wp_footer hook automatically (new in 1.3)
-	//H3#ID is hidden in WPtouch, showing the manual switch in the footer.php file instead
-  function wptouch_switch()
-  {
-      global $wptouch_plugin;
-      if ($wptouch_plugin->applemobile) {
-          echo '<h2 id="switch-footer-links" style="margin-top:50px;margin-bottom:75px"><a href="' . get_bloginfo('siteurl') . '/?bnc_view=mobile">iPhone View</a> | Normal View</h2>';
- 	 }
-  }
+function wptouch_switch() {
+	global $wptouch_plugin;
+		if ($wptouch_plugin->applemobile) {
+			echo '<h2 id="switch-footer-links" style="margin-top:50px;margin-bottom:75px"><a href="' . get_bloginfo('siteurl') . '/?bnc_view=mobile">iPhone View</a> | Normal View</h2>';
+	}
+}
   
-// OLD Switch Code (uncomment below (205-211) and comment above (195-201) *** AND line 1028 to use it instead)
-//
-//  function wptouch_switch($before = '', $after = '')
-//  {
-//      global $wptouch_plugin;
-//      if ($wptouch_plugin->applemobile) {
-//          echo $before . '<a href="' . get_bloginfo('siteurl') . '/?bnc_view=mobile">iPhone View</a> | Normal View' . $after;
-//   }
-// }
+function bnc_options_menu() {
+	add_options_page('WPtouch Theme', 'WPtouch', 9, __FILE__, bnc_wp_touch_page);
+}
 
-  
-  function bnc_options_menu()
-  {
-      add_options_page('WPtouch Theme', 'WPtouch', 9, __FILE__, bnc_wp_touch_page);
-  }
-  
-  function bnc_wp_touch_get_menu_pages()
-  {
-		$v = get_option('bnc_iphone_pages');
+function bnc_wp_touch_get_menu_pages() {
+	$v = get_option('bnc_iphone_pages');
 		if (!is_array($v)) {
-        	$v = unserialize($v);
-    	}
+	$v = unserialize($v);
+}
 
-     	if ($v != null) {
-     		return $v;
+if ($v != null) {
+	return $v;
 		} else {
-			$v = array();
-			return $v;
-		}
-  }
+	$v = array();
+	return $v;
+	}
+}
   
-  function bnc_get_title_image()
-  {
-      $ids = bnc_wp_touch_get_menu_pages();
-      if (isset($ids['main_title'])) {
-          return $ids['main_title'];
-      } else {
-          return 'Default.png';
-      }
-  }
+function bnc_get_title_image() {
+	$ids = bnc_wp_touch_get_menu_pages();
+		if (isset($ids['main_title'])) {
+		return $ids['main_title'];
+	} else {
+		return 'Default.png';
+	}
+}
 
 function bnc_excerpt_enabled() {
-      $ids = bnc_wp_touch_get_menu_pages();
-
-      if (!isset($ids['enable-post-excerpts']))  {
-			return true;
+	$ids = bnc_wp_touch_get_menu_pages();
+		if (!isset($ids['enable-post-excerpts'])) {
+		return true;
 		}
-			return $ids['enable-post-excerpts'];
-	}	
+	return $ids['enable-post-excerpts'];
+}	
 
 function bnc_is_page_coms_enabled() {
-      $ids = bnc_wp_touch_get_menu_pages();
-
-      if (!isset($ids['enable-page-coms']))  {
-			return true;
+	$ids = bnc_wp_touch_get_menu_pages();
+		if (!isset($ids['enable-page-coms']))  {
+		return true;
 		}
-			return $ids['enable-page-coms'];
-	}		
+	return $ids['enable-page-coms'];
+}		
 	
-	function bnc_is_js_enabled() {
-      $ids = bnc_wp_touch_get_menu_pages();
-
-      if (!isset($ids['enable-js-header']))  {
-			return true;
+function bnc_is_js_enabled() {
+	$ids = bnc_wp_touch_get_menu_pages();
+		if (!isset($ids['enable-js-header']))  {
+		return true;
 		}
-			return $ids['enable-js-header'];
-	}	
+	return $ids['enable-js-header'];
+}	
 	
-	function bnc_is_gravatars_enabled() {
-      $ids = bnc_wp_touch_get_menu_pages();
-
-      if (!isset($ids['enable-gravatars']))  {
-			return true;
+function bnc_is_gravatars_enabled() {
+	$ids = bnc_wp_touch_get_menu_pages();
+		if (!isset($ids['enable-gravatars']))  {
+		return true;
 		}
-			return $ids['enable-gravatars'];
-	}	
+	return $ids['enable-gravatars'];
+}	
 	
-	
-	function bnc_is_home_enabled() {
-      $ids = bnc_wp_touch_get_menu_pages();
-
-      if (!isset($ids['enable-main-home']))  {
-			return true;
+function bnc_is_home_enabled() {
+	$ids = bnc_wp_touch_get_menu_pages();
+		if (!isset($ids['enable-main-home']))  {
+		return true;
 		}
+	return $ids['enable-main-home'];
+}	
 
-		return $ids['enable-main-home'];
-	}	
-
-	function bnc_is_rss_enabled() {
-      $ids = bnc_wp_touch_get_menu_pages();
-
-      if (!isset($ids['enable-main-rss'])) {
-			return true;
+function bnc_is_rss_enabled() {
+	$ids = bnc_wp_touch_get_menu_pages();
+		if (!isset($ids['enable-main-rss'])) {
+		return true;
 		}
+	return $ids['enable-main-rss'];
+}	
 
-		return $ids['enable-main-rss'];
-	}	
-
-	function bnc_show_author() {
-      $ids = bnc_wp_touch_get_menu_pages();
-
-      if (!isset($ids['enable-main-name'])) {
-			return true;
+function bnc_show_author() {
+	$ids = bnc_wp_touch_get_menu_pages();
+		if (!isset($ids['enable-main-name'])) {
+		return true;
 		}
+	return $ids['enable-main-name'];
+}
 
-		return $ids['enable-main-name'];
-	}
-
-	function bnc_show_tags() {
-      $ids = bnc_wp_touch_get_menu_pages();
-
-      if (!isset($ids['enable-main-tags'])) {
-			return true;
+function bnc_show_tags() {
+	$ids = bnc_wp_touch_get_menu_pages();
+		if (!isset($ids['enable-main-tags'])) {
+		return true;
 		}
+	return $ids['enable-main-tags'];
+}
 
-		return $ids['enable-main-tags'];
-	}
-
-	function bnc_show_categories() {
-      $ids = bnc_wp_touch_get_menu_pages();
-
-      if (!isset($ids['enable-main-categories'])) {
-			return true;
+function bnc_show_categories() {
+	$ids = bnc_wp_touch_get_menu_pages();
+		if (!isset($ids['enable-main-categories'])) {
+		return true;
 		}
+	return $ids['enable-main-categories'];
+}
 
-		return $ids['enable-main-categories'];
-	}
-
-	function bnc_is_email_enabled() {
-      $ids = bnc_wp_touch_get_menu_pages();
-
-      if (!isset($ids['enable-main-email'])) {
-			return true;
+function bnc_is_email_enabled() {
+	$ids = bnc_wp_touch_get_menu_pages();
+		if (!isset($ids['enable-main-email'])) {
+		return true;
 		}
+	return $ids['enable-main-email'];
+}	
 
-		return $ids['enable-main-email'];
-	}	
   
-  
-  function bnc_wp_touch_get_pages()
-  {
-      $ids = bnc_wp_touch_get_menu_pages();
-
-      $a = array();
+function bnc_wp_touch_get_pages() {
+	$ids = bnc_wp_touch_get_menu_pages();
+	$a = array();
+		global $table_prefix;
+			$keys = array();
+				foreach ($ids as $k => $v) {
+					if ($k == 'main_title' || $k == 'enable-post-excerpts' || $k == 'enable-page-coms' || $k == 'enable-js-header' || $k == 'enable-gravatars' || $k == 'enable-main-home' || $k == 'enable-main-rss' || $k == 'enable-main-email' || $k == 'enable-main-name' || $k == 'enable-main-tags' || $k == 'enable-main-categories') {
+// do nothing
+					} else {
+					if (is_numeric($k)) {
+			$keys[] = $k;
+		}
+	}
+}
       
-      global $table_prefix;
-      $keys = array();
-      foreach ($ids as $k => $v) {
-          if ($k == 'main_title' || $k == 'enable-post-excerpts' || $k == 'enable-page-coms' || $k == 'enable-js-header' || $k == 'enable-gravatars' || $k == 'enable-main-home' || $k == 'enable-main-rss' || $k == 'enable-main-email' || $k == 'enable-main-name' || $k == 'enable-main-tags' || $k == 'enable-main-categories') {
-				// do nothing
-          } else {
-				if (is_numeric($k)) {
-           		$keys[] = $k;
-				}
+$query = "select * from {$table_prefix}posts where ID in (" . implode(',', $keys) . ") order by post_title asc";
+$con = @mysql_connect(DB_HOST, DB_USER, DB_PASSWORD);
+	if ($con) {
+		if (@mysql_select_db(DB_NAME, $con)) {
+			$result = @mysql_query($query);
+		while ($row = @mysql_fetch_assoc($result)) {
+			$row['icon'] = $ids[$row['ID']];
+			$a[$row['ID']] = $row;
 			}
-      }
-      
-      $query = "select * from {$table_prefix}posts where ID in (" . implode(',', $keys) . ") order by post_title asc";
-      $con = @mysql_connect(DB_HOST, DB_USER, DB_PASSWORD);
-      if ($con) {
-          if (@mysql_select_db(DB_NAME, $con)) {
-              $result = @mysql_query($query);
-              while ($row = @mysql_fetch_assoc($result)) {
-                  $row['icon'] = $ids[$row['ID']];
-                  $a[$row['ID']] = $row;
-              }
-          }
-      }
-      
-      return $a;
-  }
-
-function bnc_get_header_title()
-{
-	$v = get_option('bnc_iphone_pages');
-	if (!is_array($v)) {
-		$v = unserialize($v);
-	}
-
-	if (!isset($v['header-title'])) {
-		$v['header-title'] = '' . get_bloginfo('title') . '';
-	}
-	return $v['header-title'];
+		}
+	} 
+return $a;
 }
 
-function bnc_get_header_background()
-{
+function bnc_get_header_title() {
 	$v = get_option('bnc_iphone_pages');
-	if (!is_array($v)) {
-		$v = unserialize($v);
-	}
+		if (!is_array($v)) {
+	$v = unserialize($v);
+}
 
-	if (!isset($v['header-background-color'])) {
-		$v['header-background-color'] = '222222';
-	}
-	return $v['header-background-color'];
+		if (!isset($v['header-title'])) {
+			$v['header-title'] = '' . get_bloginfo('title') . '';
+}
+return $v['header-title'];
+}
+
+function bnc_get_header_background() {
+	$v = get_option('bnc_iphone_pages');
+		if (!is_array($v)) {
+	$v = unserialize($v);
+}
+		if (!isset($v['header-background-color'])) {
+	$v['header-background-color'] = '222222';
+}
+return $v['header-background-color'];
 }
   
-function bnc_get_header_border_color()
-{
-    $v = get_option('bnc_iphone_pages');
-    if (!is_array($v)) {
-        $v = unserialize($v);
-    }
-
-	if (!isset($v['header-border-color'])) { 
+function bnc_get_header_border_color() {
+	$v = get_option('bnc_iphone_pages');
+		if (!is_array($v)) {
+	$v = unserialize($v);
+}
+		if (!isset($v['header-border-color'])) { 
 	$v['header-border-color'] = '333333'; 
-	}
-	return $v['header-border-color'];
+}
+return $v['header-border-color'];
 }
 
-function bnc_get_header_color()
-{
-    $v = get_option('bnc_iphone_pages');
-    if (!is_array($v)) {
-        $v = unserialize($v);
-    }
-
-	if (!isset($v['header-text-color'])) { 
+function bnc_get_header_color() {
+	$v = get_option('bnc_iphone_pages');
+		if (!is_array($v)) {
+	$v = unserialize($v);
+}
+		if (!isset($v['header-text-color'])) { 
 	$v['header-text-color'] = 'eeeeee'; 
-	}
-	return $v['header-text-color'];
+}
+return $v['header-text-color'];
 }
 
-function bnc_get_link_color()
-{
-    $v = get_option('bnc_iphone_pages');
-    if (!is_array($v)) {
-        $v = unserialize($v);
+function bnc_get_link_color() {
+	$v = get_option('bnc_iphone_pages');
+		if (!is_array($v)) {
+	$v = unserialize($v);
 }
-
-if (!isset($v['link-color'])) {
-$v['link-color'] = '006bb3';
-    }
-	return $v['link-color'];
+		if (!isset($v['link-color'])) {
+	$v['link-color'] = '006bb3';
+}
+return $v['link-color'];
 }
 
   function bnc_get_icon_list()
@@ -1050,6 +972,7 @@ The Plugin Section
 
 <?php 
 echo('</div></div>'); } 
+add_action('admin_head', 'wptouch_admin_css');
 add_action('admin_menu', 'bnc_options_menu'); 
 add_action('wp_footer', 'wptouch_switch');
 ?>
