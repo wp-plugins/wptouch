@@ -91,7 +91,6 @@ Checking to see if Gravatars are enabled for WPtouch
   <li style="display:none"></li>
   </ol>
   <h3 class="closed">Comments are closed on this post.</h3>
-  
 
   <?php endif; ?><!--end comment status-->
 

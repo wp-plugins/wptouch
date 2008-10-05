@@ -21,28 +21,22 @@ If this is an archive/tag/category/author archive page, let's remind people, and
 		<?php global $is_ajax; if ($is_ajax) { ?>
         <!--do nothing-->
 		<?php } elseif (is_archive()) { ?>
-
 		<div class="result-text">Browsing <?php if (is_category()) { ?>
 		the category &lsquo;<?php echo single_cat_title(); ?>&rsquo;
 		
-		<?php
-		} elseif (is_tag()) { ?>
+		<?php } elseif (is_tag()) { ?>
 		the tag archive for &lsquo;<?php echo single_tag_title(); ?>&rsquo;
 		
-		<?php
-		} elseif (is_day()) { ?> 
+		<?php } elseif (is_day()) { ?> 
 		the archive for <?php echo get_the_time('F jS, Y'); ?>
 		
-		<?php 
-		} elseif (is_month()) { ?>
+		<?php } elseif (is_month()) { ?>
 		the archive for <?php echo get_the_time('F, Y'); ?>
 		
-		<?php
-		} elseif (is_year()) { ?>
+		<?php } elseif (is_year()) { ?>
 		the archive for <?php echo get_the_time('Y'); ?>
 		
-		<?php
-		} elseif (is_author()) { ?>
+		<?php } elseif (is_author()) { ?>
 		<?php the_author(); ?>'s archive
 		<?php } ?>
 		</div>
@@ -227,8 +221,7 @@ End of the if page or else code-->
 				<div class="alignright"><?php next_posts_link('Older In Search <img src="' . get_bloginfo('template_directory') . '/images/blue_arrow_r.jpg" alt="" />') ?></div>
 				</div>
 
-				<?php } elseif (!bnc_is_js_enabled() && !is_search()) { ?>
-				
+				<?php } elseif (!bnc_is_js_enabled() && !is_search()) { ?>		
 				<div class="main-navigation">
 					<div class="alignleft">
 					<?php previous_posts_link('<img src="' . get_bloginfo('template_directory') . '/images/blue_arrow_l.jpg" alt="" /> Newer Entries') ?>
