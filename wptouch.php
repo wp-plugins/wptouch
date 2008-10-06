@@ -625,7 +625,6 @@ The Javascript Section
             <ul class="wptouch-small-menu">
             <li>Your site loads faster on EDGE and 3G connections</li>
             <li>Ajax &amp; jQuery are not loaded &amp; used for comments, entries, excerpts etc.</li>
-			<li>*Fixes javascript conflict issues where the WPtouch menu drop-down doesn't work</li>
 			</ul>
 
 		    <h4 id="wptouch-js">When Gravatars Are Disabled:</h4>		
