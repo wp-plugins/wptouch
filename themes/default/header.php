@@ -40,14 +40,10 @@ In order to have some dynamic user-selected CSS, we've written the below.
 We could pull it out into a css.php file, but it's just a small block and easy to add or modify this way.
 -->
 <style type="text/css">
-/*Un-comment this and change the highlight-color to whatever you want if you want to change the way the highlight color looks when links are pressed in WPtouch */
-/*body{
--webkit-tap-highlight-color:#CCCCCC;
-}*/
 #menubar {
 	width: 100%;
 	height: 45px;
-	background: #<?php echo bnc_get_header_background(); ?> url(<?php bloginfo('template_directory'); ?>/images/head-fade-bk.png) repeat-x;
+	background: #<?php echo bnc_get_header_background(); ?> url(<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/themes/default/images/head-fade-bk.png) repeat-x;
 }
 #blogtitle a {
 	text-decoration: none;

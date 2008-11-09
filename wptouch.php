@@ -4,7 +4,7 @@
    Plugin URI: http://bravenewcode.com/wptouch/
    Description: A plugin which reformats your site with a mobile theme when viewing with an <a href="http://www.apple.com/iphone/">iPhone</a> / <a href="http://www.apple.com/ipodtouch/">iPod touch</a>. Set styling, page, menu, icon and more options for the theme by visiting the <a href="options-general.php?page=wptouch/wptouch.php">WPtouch Options admin panel</a>. &nbsp;
    Author: Dale Mugford & Duane Storey
-   Version: 1.4
+   Version: 1.5
    Author URI: http://www.bravenewcode.com
    
    # Special thanks to ContentRobot and the iWPhone theme/plugin
@@ -32,7 +32,7 @@ $bnc_option = get_option('bnc_iphone_pages');
 }
  
 // WPtouch Theme Options
-$bnc_wptouch_version = '1.4';
+$bnc_wptouch_version = '1.5';
 	function WPtouch($before = '', $after = '') {
 		global $bnc_wptouch_version;
 			echo $before . 'WPtouch ' . $bnc_wptouch_version . $after;
@@ -397,11 +397,11 @@ return $v['link-color'];
       if (isset($_POST['submit'])) {
           echo('<div class="updated"><p>Options changes saved.</p></div>');
           echo('<div class="wrap"><div id="wptouch-theme">');
-          echo('<div id="wptouch-title"><img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/wptouch-logo.png" class="logo" alt="" /><img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/wptouch-title.jpg" alt="" /></div>');
+          echo('<div id="wptouch-title"><img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/wptouch-logo.jpg" class="logo" alt="" /><img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/wptouch-title.jpg" alt="" /></div>');
 	  echo('' . WPtouch('<div class="wptouch-version">','</div>') . '');
       } else {
           echo('<div class="wrap"><div id="wptouch-theme">');
-          echo('<div id="wptouch-title"><img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/wptouch-logo.png" class="logo" alt="" /><img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/wptouch-title.jpg" alt="" /></div>');
+          echo('<div id="wptouch-title"><img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/wptouch-logo.jpg" class="logo" alt="" /><img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/wptouch-title.jpg" alt="" /></div>');
 	  echo('' . WPtouch('<div class="wptouch-version">','</div>') . '');
       }
 ?>
@@ -581,9 +581,9 @@ The News Section
 */
 ?>
 
-<div class="wptouch-itemrow">
+<div class="wptouch-itemrow newsblock">
 	<div class="wptouch-item-desc">
-	<h2>News and Support</h2>
+	<h2>News &amp; Updates</h2>
 	<p>BraveNewCode.com entries tagged 'WPtouch'. This list updates to provide you with the latest information about the plugin's development.</p>
 	</div>
 		
@@ -598,8 +598,15 @@ The News Section
 		}});
 </script>
 	</div>
+   <div id="wptouch-news-donate">
+      <h3>Donate To WPtouch</h3> 
+      WPtouch represents hundreds of hours of development work.  If you'd like to support the project, please head on over and <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=paypal%40bravenewcode%2ecom&item_name=WPtouch%20Beer%20Fund&no_shipping=1&tax=0&currency_code=CAD&lc=CA&bn=PP%2dDonationsBF&charset=UTF%2d8">donate to WPtouch.</a><br /><br />
+
+      Everyone who donates will be added to our <a href="http://www.bravenewcode.com/wptouch-friends-and-family/">WPtouch friends and family page</a>, in appreciation for the support.
+   </div>
 	
 	<div class="wptouch-clearer"></div>
+   <div class="donate-spacer"></div>
 </div>
 
 <?php
