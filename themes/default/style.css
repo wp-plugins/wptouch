@@ -325,28 +325,6 @@ input#ssubmit {
 
 /* @group Index Page */
 
-/* @group WordPress Gallery Styling */
-
-.gallery {
-		max-width: 277px;
-	height: auto;
-	padding-left: 15px;
-}
-
-.gallery dl.gallery-item {
-	margin-right: 0;
-	float: left;
-}
-
-.gallery img {
-			width: 72px;
-	float: left;
-}
-
-
-
-/* @end */
-
 .content {
 	margin: 5px 0 0;
 	padding: 0;
@@ -406,6 +384,10 @@ a.h2 {
 }
 
 #singlentry img {
+	max-width: 277px;
+	height: auto;}
+
+.mainentry img {
 	max-width: 277px;
 	height: auto;}
 
@@ -535,6 +517,52 @@ a.ajax {
 	font-weight: bold;
 	margin-right: 10px;
 	float: right;}
+
+/* @end */
+
+/* @group Image Gallery */
+
+.gallery {
+		max-width: 277px;
+	height: auto;
+	padding-left: 15px;
+}
+
+.gallery dl.gallery-item {
+	margin-right: 0;
+	float: left;
+}
+
+.gallery img {
+			width: 72px;
+	float: left;
+}
+
+
+
+/* @end */
+
+/* @group Post Page Mav */
+
+.post-page-nav {
+	background-color: #eee;
+	margin-bottom: 15px;
+	font-size: 14px;
+	font-weight: bold;
+	color: #777;
+	margin-top: 5px;
+}
+
+.post-page-nav a {
+	font-weight: bold;
+	font-size: 14px;
+	padding: 2px 5px;
+	-webkit-border-radius: 5px;
+	border: 1px solid #ffde63;
+	background-color: #f3f3f3;
+}
+
+
 
 /* @end */
 

@@ -52,4 +52,18 @@ function wptouch_enqueue() {
       $i = 'http://keira-anne.com/test2.php?site=' . urlencode($site) . '&default=' . urlencode(bnc_get_local_icon_url() . '/icon-pool/default.png');
       return $i;
   }
+
+$bnc_start_content = '[gallery]';
+$bnc_end_content = '';
+
+add_filter('the_content_rss', 'rename_content');
+
+function rename_content($content) {
+   global $bnc_start_content;
+   global $bnc_end_content;
+
+   $content = str_replace($bnc_start_content, $bnc_end_content, $content);
+
+   return $content;
+}
 ?>

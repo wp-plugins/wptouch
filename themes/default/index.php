@@ -94,7 +94,6 @@ If it's a page, we want things to be a little different here, especially on phot
   
     <div id="entry-<?php the_ID(); ?>" class="pageentry">
         <?php the_content(); ?>  
-
 <?php if (is_page('archives')) {
 // If you have a page named 'Archives', the WP tag cloud will be displayed below your content. Simply remove this wrapper. 
 ?>
@@ -154,7 +153,8 @@ If it's a page, we want things to be a little different here, especially on phot
                 </div>
 				
 <?php } ?><!-- end if links page-->    	
-	
+	<?php wp_link_pages('Pages in this article: ', '', 'number'); ?>
+
 	</div>    
 </div>
          <!--If comments are enabled for pages in the WPtouch admin-->
@@ -197,8 +197,8 @@ Page ifs closed, start the rest of things
 					
 			<div class="clearer"></div>
             <div id="entry-<?php the_ID(); ?>" <?php if (bnc_excerpt_enabled()) { ?>style="display:none"<?php } ?> class="mainentry">
-            <?php the_content_rss('', false, '', 50); ?>
-		    <a href="<?php the_permalink() ?>">Read More &raquo;</a>
+ 				<?php the_content_rss('', true, '', 50); ?>
+ 		    <a href="<?php the_permalink() ?>">Read More &raquo;</a>
 					
         </div>  
       </div>
