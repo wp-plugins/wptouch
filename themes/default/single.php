@@ -29,12 +29,13 @@ Let's check for DISQUS... we need to skip to a different div if it's installed a
          <div class="post singlecut" id="post-<?php the_ID(); ?>">
         
 		  <div id="singlentry">
-            <?php the_content(); ?>
-          </div>  
+            <?php the_content(); ?>				
+			</div>  
 <!--
 Categories and Tags post footer
 -->        
     <div class="single-post-meta-bottom">
+	<?php link_pages('<div class="post-page-nav">Article Pages: ', '</div>', 'number', ' &raquo;', '&laquo; '); ?>          
     Categories: <?php if (the_category(', ')) the_category(); ?>
     <?php if (function_exists('get_the_tags')) the_tags('<br />Tags: ', ', ', ''); ?>  
     </div>

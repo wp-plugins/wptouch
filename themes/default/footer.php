@@ -5,7 +5,7 @@ Here the switch code is very important, as well as the php code which deals with
 -->
 <div id="footer">
 			<p>
-				<h3>iPhone View | <a href="<?php echo get_bloginfo('home') . '/?bnc_view=normal'; ?>">Normal View</a></h3>
+				<h3>iPhone View | <a href="<?php echo bloginfo('home') . '/?bnc_view=normal'; ?>">Normal View</a></h3>
 				
 					<br />
 					<br />
