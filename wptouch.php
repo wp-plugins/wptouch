@@ -95,10 +95,8 @@ function bnc_filter_iphone() {
 function detectAppleMobile($query = '') {
 	$container = $_SERVER['HTTP_USER_AGENT'];
 	//print_r($container); //this prints out the user agent array. uncomment to see it shown on page.
-	$useragents = array("iPhone", "iPod", "Aspen");
-	//print_r($container); //this prints out the user agent array
 	// Add whatever user agents you want here if you want to make this show on a Blackberry or something. No guarantees it'll look pretty, though!
-	$useragents = array("iPhone", "iPod", "Aspen");
+	$useragents = array("iPhone", "iPod", "Aspen", "Android");
 		$this->applemobile = false;
 			foreach ($useragents as $useragent) {
 			if (eregi($useragent, $container)) {
@@ -570,10 +568,10 @@ return $v['link-color'];
 	
   <form method="post" action="<?php echo $_SERVER['REQUEST_URI']; ?>">
   
-	<div id="wptouch-preview" style="display:none">
+	<!-- <div id="wptouch-preview" style="display:none">
 		<div style="background: #<?php echo bnc_get_header_background(); ?> url(<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/themes/default/images/head-fade-bk.png) repeat-x; color:#<?php echo bnc_get_header_color(); ?>" id="head-prev"><img src="<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/images/icon-pool/<?php echo bnc_get_title_image(); ?>" alt="" /> <?php bloginfo('title'); ?>
 		</div>				
-	</div>	
+	</div>	 -->
 	
 <?php
 /*
@@ -731,10 +729,9 @@ The Availabe Icons Section
 		
 	<div class="wptouch-item-content-box1">
 	<?php foreach ($icons as $icon) { ?>
-				<div class="wptouch-iconblock">
-				<img src="<?php echo($icon['url']); ?>" title="<?php echo($icon['name']); ?>" />
-				<br /><p class="wptouch-icon-name"><?php echo($icon['friendly']); ?></p>
-				</div>
+				<ul class="wptouch-iconblock">
+				<li><img src="<?php echo($icon['url']); ?>" title="<?php echo($icon['name']); ?>" /> <?php echo($icon['friendly']); ?></li>
+				</ul>
 				<?php } ?>
 		</div>
 	<div class="wptouch-clearer"></div>
@@ -762,7 +759,7 @@ The Menu Section
 			<?php
 			// do top header icon 
 			echo("<div class=\"wptouch-select-left\">Logo &amp; Home Screen Bookmark Icon</div>");
-			echo("<div class=\"wptouch-select-right\"><select name=\"enable_main_title\">");
+			echo("<div class=\"wptouch-select-right\"><select name=\"enable_main_title\"></div>");
 			foreach ($icons as $icon) {
 			echo('<option value="' . $icon['name'] . '" ');
 			if (isset($v['main_title']) && $icon['name'] == $v['main_title'])

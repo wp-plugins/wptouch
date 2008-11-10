@@ -325,6 +325,28 @@ input#ssubmit {
 
 /* @group Index Page */
 
+/* @group WordPress Gallery Styling */
+
+.gallery {
+		max-width: 277px;
+	height: auto;
+	padding-left: 15px;
+}
+
+.gallery dl.gallery-item {
+	margin-right: 0;
+	float: left;
+}
+
+.gallery img {
+			width: 72px;
+	float: left;
+}
+
+
+
+/* @end */
+
 .content {
 	margin: 5px 0 0;
 	padding: 0;

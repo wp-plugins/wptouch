@@ -116,10 +116,8 @@ float: left;
 
 
 /* @end */
-/* @override 
-	http://24.150.116.198:9098/wp-content/plugins/wptouch/admin-css/wptouch-admin.css
-	http://www.duanestorey.com/wp-content/plugins/wptouch/admin-css/wptouch-admin.css
-*/
+
+/* @override http://24.150.116.198:9098/wp-content/plugins/wptouch/admin-css/wptouch-admin.css */
 
 /* 
 WPtouch Admin Styles for WordPress 2.1+
@@ -365,23 +363,29 @@ WPtouch Admin Styles for WordPress 2.1+
 
 /* @group Available Icons */
 
-#wptouch-theme .wptouch-iconblock {
-	text-align: center;
-	width: 75px;
+#wptouch-theme ul.wptouch-iconblock {
 	float: left;
+	padding: 0 14px 10px 0;
+	border-bottom: 1px solid #eee;
+	margin: 0 0 20px;
 }
 
-#wptouch-theme p.wptouch-icon-name {
-	margin: 0;
+#wptouch-theme ul.wptouch-iconblock li {
 	font-size: 11px;
 	color: #999;
-	padding: 0 0 25px;
+	width: 95px;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
 }
 
-#wptouch-theme .wptouch-iconblock img {
-	margin: 5px;
-	width: 30px;
-	height: 30px;
+#wptouch-theme ul.wptouch-iconblock li img {
+	width: 26px;
+	height: 26px;
+	float: left;
+	margin-right: 5px;
+	position: relative;
+	bottom: 5px;
 }
 
 
@@ -394,7 +398,7 @@ WPtouch Admin Styles for WordPress 2.1+
 	margin-left: 5px;
 }
 
-.wptouch-select-row {
+#wptouch-theme .wptouch-select-row {
 	display: block;
 	width: 70%;
 	background-color: #e2f5fe;
@@ -408,27 +412,28 @@ WPtouch Admin Styles for WordPress 2.1+
 	font-weight: bold;
 }
 
-.wptouch-select-row input {
+#wptouch-theme .wptouch-select-row .logohome {
+	background-color: #ffe7c2;
 }
 
-.wptouch-select-left {
+#wptouch-theme .wptouch-select-left {
 	float: left;
 }
 
-.wptouch-select-right {
+#wptouch-theme .wptouch-select-right {
 	float: right;
 	position: relative;
 	bottom: 4px;
 }
 
-.wptouch-select-right select {
+#wptouch-theme .wptouch-select-right select {
 	width: 120px;
 }
 
-.wptouch-checkbox-row {
+#wptouch-theme .wptouch-checkbox-row {
 }
 
-.wptouch-checkbox-row label {
+#wptouch-theme .wptouch-checkbox-row label {
 	margin-left: 5px;
 }
 
