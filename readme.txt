@@ -22,6 +22,16 @@ Please visit http://www.bravenewcode.com/wptouch/ for a full description & more 
 
 == What's New ==
 
+In version 1.5, we've added / changed:
+
+* Added support for WordPress image galleries
+* Added support for single post page split navigation
+* Fixed admin footer links which did not locate WordPress install correctly
+* Added basic Google Android support
+* Changes in WPtouch admin appearance and styling
+* Added donate message in WPtouch admin
+
+
 In version 1.4, we've added / changed:
 
 * More jQuery tune-ups, now loads through wp_enqueue_script() or Google to prevent collisions
@@ -123,4 +133,5 @@ Not bloody likely! Unless of course you're getting slammed with all sorts of tra
 7. Archives page with tag cloud & monthly list 
 8. Sample post with image auto-size
 9. Built-in 'e-mail post' capability
+10. WordPress Photo Gallery & Post Nav Support
 
