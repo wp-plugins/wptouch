@@ -4,12 +4,12 @@
    Plugin URI: http://bravenewcode.com/wptouch/
    Description: A plugin which reformats your site with a mobile theme when viewing with an <a href="http://www.apple.com/iphone/">iPhone</a> / <a href="http://www.apple.com/ipodtouch/">iPod touch</a>. Set styling, page, menu, icon and more options for the theme by visiting the <a href="options-general.php?page=wptouch/wptouch.php">WPtouch Options admin panel</a>. &nbsp;
    Author: Dale Mugford & Duane Storey
-   Version: 1.5
+   Version: 1.5.1
    Author URI: http://www.bravenewcode.com
    
    # Special thanks to ContentRobot and the iWPhone theme/plugin
-   #(http://iwphone.contentrobot.com/) which the detection feature
-   #of the plugin was based on.
+   # (http://iwphone.contentrobot.com/) which the detection feature
+   # of the plugin was based on.
    
    # This plugin is free software; you can redistribute it and/or
    # modify it under the terms of the GNU Lesser General Public
@@ -38,7 +38,7 @@ $bnc_wptouch_version = '1.5';
 			echo $before . 'WPtouch ' . $bnc_wptouch_version . $after;
 }
  
-    // WP Admin stylesheet, Javascript
+	// WP Admin stylesheet, Javascript
 function wptouch_admin_css() {
 	$url = get_bloginfo('wpurl');
 	$version = (float)get_bloginfo('version');
@@ -64,7 +64,7 @@ class WPtouchPlugin {
 			add_filter('init', array(&$this, 'bnc_filter_iphone'));
 		$this->detectAppleMobile();
 }
-      
+	  
 function bnc_filter_iphone() {
 	$key = 'bnc_mobile_' . md5(get_bloginfo('siteurl'));
 		if (isset($_GET['bnc_view'])) {
@@ -83,10 +83,10 @@ function bnc_filter_iphone() {
 // check for a static home page, serve up the posts page as WPtouch home
 		if ($this->desired_view == 'mobile') {
 			$blog = get_option('page_for_posts');
-		if ($blog) {
-		if (function_exists('is_front_page') && is_front_page() && $this->applemobile) { 
-			header('Location: ' . get_permalink($blog));
-	die;
+				if ($blog) {
+					if (function_exists('is_front_page') && is_front_page() && $this->applemobile) { 
+				header('Location: ' . get_permalink($blog));
+			die;
 			}
 		}
 	}
@@ -104,7 +104,7 @@ function detectAppleMobile($query = '') {
 		}
 	}
 }
-      
+	  
 function get_stylesheet($stylesheet) {
 	if ($this->applemobile && $this->desired_view == 'mobile') {
 		return 'default';
@@ -112,16 +112,16 @@ function get_stylesheet($stylesheet) {
 		return $stylesheet;
 	}
 }
-      
+	  
 function get_template($template) {
 	$this->bnc_filter_iphone();
 		if ($this->applemobile && $this->desired_view === 'mobile') {
 		return 'default';
-	} else {      
+	} else {	   
 		return $template;
 	}
 }
-      
+	  
 function get_template_directory($value) {
 	$theme_root = dirname(__FILE__);
 		if ($this->applemobile && $this->desired_view === 'mobile') {
@@ -130,7 +130,7 @@ function get_template_directory($value) {
 			return $value;
 	}
 }
-      
+	  
 function theme_root($path) {
 	$theme_root = dirname(__FILE__);
 		if ($this->applemobile && $this->desired_view === 'mobile') {
@@ -139,7 +139,7 @@ function theme_root($path) {
 			return $path;
 	}
 }
-      
+	  
 function theme_root_uri($url) {
 	if ($this->applemobile && $this->desired_view === 'mobile') {
 		$dir = get_bloginfo('wpurl') . "/wp-content/plugins/wptouch/themes";
@@ -158,7 +158,7 @@ function bnc_is_iphone() {
 		return $wptouch_plugin->applemobile;
 }
   
-    // The Template Switch Code
+	// The Template Switch Code
 function wptouch_switch() {
 	global $wptouch_plugin;
 		if ($wptouch_plugin->applemobile) {
@@ -203,7 +203,7 @@ function bnc_excerpt_enabled() {
 
 function bnc_is_page_coms_enabled() {
 	$ids = bnc_wp_touch_get_menu_pages();
-		if (!isset($ids['enable-page-coms']))  {
+		if (!isset($ids['enable-page-coms']))	 {
 		return true;
 		}
 	return $ids['enable-page-coms'];
@@ -211,7 +211,7 @@ function bnc_is_page_coms_enabled() {
 	
 function bnc_is_js_enabled() {
 	$ids = bnc_wp_touch_get_menu_pages();
-		if (!isset($ids['enable-js-header']))  {
+		if (!isset($ids['enable-js-header']))	 {
 		return true;
 		}
 	return $ids['enable-js-header'];
@@ -219,7 +219,7 @@ function bnc_is_js_enabled() {
 	
 function bnc_is_gravatars_enabled() {
 	$ids = bnc_wp_touch_get_menu_pages();
-		if (!isset($ids['enable-gravatars']))  {
+		if (!isset($ids['enable-gravatars']))	 {
 		return true;
 		}
 	return $ids['enable-gravatars'];
@@ -227,7 +227,7 @@ function bnc_is_gravatars_enabled() {
 	
 function bnc_is_home_enabled() {
 	$ids = bnc_wp_touch_get_menu_pages();
-		if (!isset($ids['enable-main-home']))  {
+		if (!isset($ids['enable-main-home']))	 {
 		return true;
 		}
 	return $ids['enable-main-home'];
@@ -288,7 +288,7 @@ function bnc_wp_touch_get_pages() {
 		}
 	}
 }
-      
+	  
 $query = "select * from {$table_prefix}posts where ID in (" . implode(',', $keys) . ") order by post_title asc";
 $con = @mysql_connect(DB_HOST, DB_USER, DB_PASSWORD);
 	if ($con) {
@@ -363,54 +363,54 @@ return $v['link-color'];
   {
 		$a = preg_match('#(.*)wptouch.php#', __FILE__, $matches);
 		$dir = opendir($matches[1] . 'images/icon-pool/');
-      $files = array();
-      if ($dir) {
-          while (false !== ($file = readdir($dir))) {
-              if ($file == '.' || $file == '..' || $file == '.svn' || $file == 'template.psd' || $file == '.DS_Store' || $file == 'more')
-                  continue;
-              $icon = array();
-              $names = explode('.', $file);
-              $icon['friendly'] = ucfirst($names[0]);
-              $icon['name'] = $file;
-              $icon['url'] = get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/icon-pool/' . $file;
-              $files[$icon['name']] = $icon;
-          }
-      }
-      
-      ksort($files);
-      return $files;
+	  $files = array();
+	  if ($dir) {
+		  while (false !== ($file = readdir($dir))) {
+			  if ($file == '.' || $file == '..' || $file == '.svn' || $file == 'template.psd' || $file == '.DS_Store' || $file == 'more')
+				  continue;
+			  $icon = array();
+			  $names = explode('.', $file);
+			  $icon['friendly'] = ucfirst($names[0]);
+			  $icon['name'] = $file;
+			  $icon['url'] = get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/icon-pool/' . $file;
+			  $files[$icon['name']] = $icon;
+		  }
+	  }
+	  
+	  ksort($files);
+	  return $files;
   }
 
 	function bnc_output_icons($icons) {
-      foreach ($icons as $icon) {
-          echo('<option value="' . $icon['name'] . '" ');
-          if (isset($v['main_title']) && $icon['name'] == $v['main_title'])
-              echo('selected');
-          echo(">{$icon['friendly']}</option>");
-      }
+	  foreach ($icons as $icon) {
+		  echo('<option value="' . $icon['name'] . '" ');
+		  if (isset($v['main_title']) && $icon['name'] == $v['main_title'])
+			  echo('selected');
+		  echo(">{$icon['friendly']}</option>");
+	  }
 	}	
   
   function bnc_wp_touch_page()
   {
-      if (isset($_POST['submit'])) {
-          echo('<div class="updated"><p>Options changes saved.</p></div>');
-          echo('<div class="wrap"><div id="wptouch-theme">');
-          echo('<div id="wptouch-title"><img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/wptouch-logo.jpg" class="logo" alt="" /><img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/wptouch-title.jpg" alt="" /></div>');
+	  if (isset($_POST['submit'])) {
+		  echo('<div class="updated"><p>Options changes saved.</p></div>');
+		  echo('<div class="wrap"><div id="wptouch-theme">');
+		  echo('<div id="wptouch-title"><img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/wptouch-logo.jpg" class="logo" alt="" /><img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/wptouch-title.jpg" alt="" /></div>');
 	  echo('' . WPtouch('<div class="wptouch-version">','</div>') . '');
-      } else {
-          echo('<div class="wrap"><div id="wptouch-theme">');
-          echo('<div id="wptouch-title"><img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/wptouch-logo.jpg" class="logo" alt="" /><img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/wptouch-title.jpg" alt="" /></div>');
+	  } else {
+		  echo('<div class="wrap"><div id="wptouch-theme">');
+		  echo('<div id="wptouch-title"><img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/wptouch-logo.jpg" class="logo" alt="" /><img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/wptouch-title.jpg" alt="" /></div>');
 	  echo('' . WPtouch('<div class="wptouch-version">','</div>') . '');
-      }
+	  }
 ?>
 
 <?php $icons = bnc_get_icon_list(); ?>
 
-        <?php
-      if (isset($_POST['submit'])) {
-          // let's rock and roll
+		<?php
+	  if (isset($_POST['submit'])) {
+		  // let's rock and roll
 
-          unset($_POST['submit']);
+		  unset($_POST['submit']);
 			$a = array();
 
 			if (isset($_POST['enable-post-excerpts'])) {
@@ -467,42 +467,42 @@ return $v['link-color'];
 				$a['enable-main-tags'] = 0;
 			}
 
-         if (isset($_POST['enable-main-categories'])) {
-            $a['enable-main-categories'] = 1;
-         } else {
-            $a['enable-main-categories'] = 0;
-         }
+		 if (isset($_POST['enable-main-categories'])) {
+			$a['enable-main-categories'] = 1;
+		 } else {
+			$a['enable-main-categories'] = 0;
+		 }
 
-          foreach ($_POST as $k => $v) {
-              if ($k == 'enable_main_title') {
-                  $a['main_title'] = $v;
-              } else {
-                  if (preg_match('#enable_(.*)#', $k, $matches)) {
-                      $id = $matches[1];
-                      if (!isset($a[$id]))
-                          $a[$id] = $_POST['icon_' . $id];
-                  }
-              }
-          }
+		  foreach ($_POST as $k => $v) {
+			  if ($k == 'enable_main_title') {
+				  $a['main_title'] = $v;
+			  } else {
+				  if (preg_match('#enable_(.*)#', $k, $matches)) {
+					  $id = $matches[1];
+					  if (!isset($a[$id]))
+						  $a[$id] = $_POST['icon_' . $id];
+				  }
+			  }
+		  }
 
-	      $a['header-title'] = $_POST['header-title'];
-         if (!isset($a['header-title']) || (isset($a['header-title']) && strlen($a['header-title']) == 0)) {
-            $a['header-title'] = get_bloginfo('title');
-         }
+		   $a['header-title'] = $_POST['header-title'];
+		 if (!isset($a['header-title']) || (isset($a['header-title']) && strlen($a['header-title']) == 0)) {
+			$a['header-title'] = get_bloginfo('title');
+		 }
 
-         $a['header-background-color'] = $_POST['header-background-color'];
-         $a['header-border-color'] = $_POST['header-border-color'];
-         $a['header-text-color'] = $_POST['header-text-color'];
-         $a['link-color'] = $_POST['link-color'];
-        
+		 $a['header-background-color'] = $_POST['header-background-color'];
+		 $a['header-border-color'] = $_POST['header-border-color'];
+		 $a['header-text-color'] = $_POST['header-text-color'];
+		 $a['link-color'] = $_POST['link-color'];
+		
 			$values = serialize($a);
-         update_option('bnc_iphone_pages', $values);
-      }
-      
-    		$v = get_option('bnc_iphone_pages');
-    		if (!is_array($v)) {
-        		$v = unserialize($v);
-    		}
+		 update_option('bnc_iphone_pages', $values);
+	  }
+	  
+			$v = get_option('bnc_iphone_pages');
+			if (!is_array($v)) {
+				$v = unserialize($v);
+			}
 
 			if (!isset($v['header-title'])) {
 				$v['header-title'] = '' . get_bloginfo('title') . '';
@@ -525,43 +525,43 @@ return $v['link-color'];
 			}
 
 			if (!isset($v['enable-post-excerpts'])) {
-            $v['enable-post-excerpts'] = 1;
+			$v['enable-post-excerpts'] = 1;
 			}	
 			
 			if (!isset($v['enable-page-coms'])) {
-            $v['enable-page-coms'] = 0;
+			$v['enable-page-coms'] = 0;
 			}	
 			
 			if (!isset($v['enable-js-header'])) {
-            $v['enable-js-header'] = 1;
+			$v['enable-js-header'] = 1;
 			}	
 			
 		if (!isset($v['enable-gravatars'])) {
-            $v['enable-gravatars'] = 1;
+			$v['enable-gravatars'] = 1;
 			}	
 			
 			if (!isset($v['enable-main-home'])) {
-            $v['enable-main-home'] = 1;
+			$v['enable-main-home'] = 1;
 			}
 
 			if (!isset($v['enable-main-rss'])) {
-            $v['enable-main-rss'] = 1;
+			$v['enable-main-rss'] = 1;
 			}
 
 			if (!isset($v['enable-main-email'])) {
-            $v['enable-main-email'] = 1;
+			$v['enable-main-email'] = 1;
 			}
 
 			if (!isset($v['enable-main-name'])) {
-            $v['enable-main-name'] = 0;
+			$v['enable-main-name'] = 0;
 			}
 
 			if (!isset($v['enable-main-tags'])) {
-            $v['enable-main-tags'] = 0;
+			$v['enable-main-tags'] = 0;
 			}
 
 			if (!isset($v['enable-main-categories'])) {
-            $v['enable-main-categories'] = 1;
+			$v['enable-main-categories'] = 1;
 			}
 
 	?>
@@ -597,10 +597,10 @@ The News Section
 </script>
 	</div>
    <div id="wptouch-news-donate">
-      <h3>Donate To WPtouch</h3> 
-      WPtouch represents hundreds of hours of development work.  If you'd like to support the project, please head on over and <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=paypal%40bravenewcode%2ecom&item_name=WPtouch%20Beer%20Fund&no_shipping=1&tax=0&currency_code=CAD&lc=CA&bn=PP%2dDonationsBF&charset=UTF%2d8">donate to WPtouch.</a><br /><br />
+	  <h3>Donate To WPtouch</h3> 
+	  WPtouch represents hundreds of hours of development work.	 If you'd like to support the project, please head on over and <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=paypal%40bravenewcode%2ecom&item_name=WPtouch%20Beer%20Fund&no_shipping=1&tax=0&currency_code=CAD&lc=CA&bn=PP%2dDonationsBF&charset=UTF%2d8">donate to WPtouch.</a><br /><br />
 
-      Everyone who donates will be added to our <a href="http://www.bravenewcode.com/wptouch-friends-and-family/">WPtouch friends and family page</a>, in appreciation for the support.
+	  Everyone who donates will be added to our <a href="http://www.bravenewcode.com/wptouch-friends-and-family/">WPtouch friends and family page</a>, in appreciation for the support.
    </div>
 	
 	<div class="wptouch-clearer"></div>
@@ -621,22 +621,22 @@ The Javascript Section
 	
 		<div class="wptouch-item-content-box1">
 			<div class="wptouch-checkbox-row"><input type="checkbox" name="enable-js-header" <?php if (isset($v['enable-js-header']) && $v['enable-js-header'] == 1) echo('checked'); ?>><label for="enable-js-header"> Use Advanced <a href="http://www.jquery.com/" target="_blank">jQuery</a> Javascript Effects (ajax entries, ajax comments, smooth effects)</label></div>
-            
+			
 		<div class="wptouch-checkbox-row"><input type="checkbox" name="enable-gravatars" <?php if (isset($v['enable-gravatars']) && $v['enable-gravatars'] == 1) echo('checked'); ?>><label for="enable-gravatars"> Enable Gravatars in Comments</label></div>
 		
 		<div class="wptouch-checkbox-row"><input type="checkbox" name="enable-page-coms" <?php if (isset($v['enable-page-coms']) && $v['enable-page-coms'] == 1) echo('checked'); ?>><label for="enable-page-coms"> Enable Comments For Pages (will add the comment form to <strong>all</strong> pages by default)</label></div>
-      		
-            <h4 id="wptouch-js">When Advanced Javascript Is Disabled:</h4>
-            <ul class="wptouch-small-menu">
-            <li>Your site loads faster on EDGE and 3G connections</li>
-            <li>Ajax &amp; jQuery are not loaded &amp; used for comments, entries, excerpts etc.</li>
+			
+			<h4 id="wptouch-js">When Advanced Javascript Is Disabled:</h4>
+			<ul class="wptouch-small-menu">
+			<li>Your site loads faster on EDGE and 3G connections</li>
+			<li>Ajax &amp; jQuery are not loaded &amp; used for comments, entries, excerpts etc.</li>
 			</ul>
 
-		    <h4 id="wptouch-js">When Gravatars Are Disabled:</h4>		
-            <ul class="wptouch-small-menu">
-            <li>Gravatar.com images are <strong>not</strong> shown beside commenter's names</li>
-            <li>As a result, single post pages load faster on EDGE and 3G connections</li>
-           </ul>
+			  <h4 id="wptouch-js">When Gravatars Are Disabled:</h4>		
+			<ul class="wptouch-small-menu">
+			<li>Gravatar.com images are <strong>not</strong> shown beside commenter's names</li>
+			<li>As a result, single post pages load faster on EDGE and 3G connections</li>
+		   </ul>
 	
 		</div>
 	<div class="wptouch-clearer"></div>
@@ -697,8 +697,8 @@ The Post Listings Section
 	</div>
 	
 		<div class="wptouch-item-content-box1">
-            
-      		<div class="wptouch-checkbox-row"><input type="checkbox" name="enable-main-name" <?php if (isset($v['enable-main-name']) && $v['enable-main-name'] == 1) echo('checked'); ?>><label for="enable-authorname"> Show Author's Name</label></div>
+			
+			<div class="wptouch-checkbox-row"><input type="checkbox" name="enable-main-name" <?php if (isset($v['enable-main-name']) && $v['enable-main-name'] == 1) echo('checked'); ?>><label for="enable-authorname"> Show Author's Name</label></div>
 			
 			<div class="wptouch-checkbox-row"><input type="checkbox" name="enable-main-categories" <?php if (isset($v['enable-main-categories']) && $v['enable-main-categories'] == 1) echo('checked'); ?>><label for="enable-categories"> Show Categories</label></div>
 			
@@ -789,7 +789,7 @@ The Menu Section
 			foreach ($icons as $icon) {
 			echo('<option value="' . $icon['name'] . '" ');
 			if (isset($v[$row['ID']]) && $icon['name'] == $v[$row['ID']])
-			  echo('selected');
+				 echo('selected');
 			echo(">{$icon['friendly']}</option>");
 			}
 			echo("</select></div></div>");
@@ -852,8 +852,8 @@ The Plugin Section
 			} elseif ($version >= 1.5) {
 			echo 'WordPress installed: ' . get_bloginfo('version') . '<br />(NOT Supported! Upgrade <u>Required</u>)';
 			}
-			?>  
-			</strong><br /><br  />
+			?>	
+			</strong><br /><br	/>
 			To the right you'll find information on other theme features activated through companion plugins &amp; WordPress versions.<br /><br />
 			For further documentation visit <a href="http://www.bravenewcode.com/wptouch/">BraveNewCode</a>.<br /><br />
 			To report an incompatible plugin, send an e-mail to <a href="mailto:wptouch@bravenewcode.com">wptouch@bravenewcode.com</a>
@@ -862,112 +862,112 @@ The Plugin Section
 		
 	<div class="wptouch-item-content-box1 wptouch-admin-plugins">
 
-              <h4>WordPress Built-in Functions Support</h4>
+			  <h4>WordPress Built-in Functions Support</h4>
 
-              <?php
-              //Start WordPress functions support checks here
-              //WordPress Built-In Tags Support Check 
-              if (function_exists('wp_tag_cloud')) { ?>
-          <div class="all-good"><img src="<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/images/good.png" alt="" /> The tag cloud for WordPress will automatically show on a page called 'Archives' if you have one.</div>
-              <?php } else { ?>
+			  <?php
+			  //Start WordPress functions support checks here
+			  //WordPress Built-In Tags Support Check 
+			  if (function_exists('wp_tag_cloud')) { ?>
+		  <div class="all-good"><img src="<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/images/good.png" alt="" /> The tag cloud for WordPress will automatically show on a page called 'Archives' if you have one.</div>
+			  <?php } else { ?>
+				 
+				   <div class="too-bad"><img src="<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/images/bad.png" alt="" /> Since you're using a pre-tag version of WordPress, your categories will be listed on a page called 'Archives', if you have it.</div>
+			  <?php } ?>
+			   
+						   <br /><br />
+						   
+				<h4>WordPress Pages &amp; Feature Support</h4>
+		  
+					  <?php
+				  //Start Pages support checks here
+				  
+				  //WordPress Links Page Support
+				  $links_page_check = new WP_Query('pagename=links');
+				  if ($links_page_check->post->ID) {
+					  echo '<div class="all-good"><img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/good.png" alt="" /> All of your WP links will automatically show on your page called \'Links\'.</div>';
+				  } else {
+					  
+					  echo '<div class="too-bad"><img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/bad.png" alt="" /> If you create a page called \'Links\', all your WP links would display in <em>WPtouch</em> style.</div>';
+				  }
+?>
+						
+		  <?php
+				  //WordPress Photos Page with and without FlickRSS Support	 
+				  $links_page_check = new WP_Query('pagename=photos');
+				  if ($links_page_check->post->ID && function_exists('get_flickrRSS')) {
+					  echo '<div class="all-good"><img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/good.png" alt="" /> All your <a href="http://eightface.com/wordpress/flickrrss/" target="_blank">FlickrRSS</a> images will automatically show on your page called \'Photos\'.</div>';
+				  } elseif ($links_page_check->post->ID && !function_exists('get_flickrRSS')) {
+					  echo '<div class="sort-of"><img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/sortof.png" alt="" /> You have a page called \'Photos\', but don\'t have <a href="http://eightface.com/wordpress/flickrrss/" target="_blank">FlickrRSS</a> installed.</div>';
+				  } elseif (!$links_page_check->post->ID && function_exists('get_flickrRSS')) {
+					  echo '<div class="sort-of"><img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/sortof.png" alt="" /> If you create a page called \'Photos\', all your <a href="http://eightface.com/wordpress/flickrrss/" target="_blank">FlickrRSS</a> photos would display in <em>WPtouch</em> style.</div>';
+				  } else {
+					  
+					  echo '<div class="too-bad"><img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/bad.png" alt="" /> If you create a page called \'Photos\', and install the <a href="http://eightface.com/wordpress/flickrrss/" target="_blank">FlickrRSS</a> plugin, your photos would display in <em>WPtouch</em> style.</div>';
+				  }
+?>
+
+			<?php
+				  //WordPress Archives Page Support with checks for Tags Support or Not
+				  $links_page_check = new WP_Query('pagename=archives');
+				  if ($links_page_check->post->ID && function_exists('wp_tag_cloud')) {
+					  echo '<div class="all-good"><img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/good.png" alt="" /> Your tags and your monthly listings will automatically show on your page called \'Archives\'.</div>';
+				  } elseif ($links_page_check->post->ID && !function_exists('wp_tag_cloud')) {
+					  echo '<div class="sort-of"><img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/good.png" alt="" /> You don\'t have WordPress 2.3 or above, so no Tags will show, but your categories and monthly listings will automatically show on your page called \'Archives\'.</div>';
+				  } else {		   
+					  echo '<div class="too-bad"><img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/bad.png" alt="" /> If you create a page called \'Archives\', your tags/categories and monthly listings would display in <em>WPtouch</em> style.</div>';
+				  }
+?>
+			  <br /><br />
+
+		  <h4>Other Plugin Support &amp; Compatibility</h4>
+	  <?php
+	  //Start plugin support checks here
+	  
+	  //FlickrRSS Plugin check 
+	  if (function_exists('get_flickrRSS')) {
+?>
+			 <div class="all-good"><img src="<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/images/good.png" alt="" /> Cool! <a href="http://eightface.com/wordpress/flickrrss/" target="_blank">FlickrRSS</a>: Your photos will automatically show on a page called 'Photos'.</div>
+			  <?php } else { ?>
+		  <div class="too-bad"><img src="<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/images/bad.png" alt="" /> You don't have <a href="http://eightface.com/wordpress/flickrrss/" target="_blank">FlickrRSS</a> installed (No automatic photos page support)</div>
+			  <?php } ?>
 			  
-                   <div class="too-bad"><img src="<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/images/bad.png" alt="" /> Since you're using a pre-tag version of WordPress, your categories will be listed on a page called 'Archives', if you have it.</div>
-              <?php } ?>
-               
-                           <br /><br />
-                           
-                <h4>WordPress Pages &amp; Feature Support</h4>
-          
-                      <?php
-                  //Start Pages support checks here
-                  
-                  //WordPress Links Page Support
-                  $links_page_check = new WP_Query('pagename=links');
-                  if ($links_page_check->post->ID) {
-                      echo '<div class="all-good"><img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/good.png" alt="" /> All of your WP links will automatically show on your page called \'Links\'.</div>';
-                  } else {
-                      
-                      echo '<div class="too-bad"><img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/bad.png" alt="" /> If you create a page called \'Links\', all your WP links would display in <em>WPtouch</em> style.</div>';
-                  }
-?>
-                        
-          <?php
-                  //WordPress Photos Page with and without FlickRSS Support  
-                  $links_page_check = new WP_Query('pagename=photos');
-                  if ($links_page_check->post->ID && function_exists('get_flickrRSS')) {
-                      echo '<div class="all-good"><img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/good.png" alt="" /> All your <a href="http://eightface.com/wordpress/flickrrss/" target="_blank">FlickrRSS</a> images will automatically show on your page called \'Photos\'.</div>';
-                  } elseif ($links_page_check->post->ID && !function_exists('get_flickrRSS')) {
-                      echo '<div class="sort-of"><img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/sortof.png" alt="" /> You have a page called \'Photos\', but don\'t have <a href="http://eightface.com/wordpress/flickrrss/" target="_blank">FlickrRSS</a> installed.</div>';
-                  } elseif (!$links_page_check->post->ID && function_exists('get_flickrRSS')) {
-                      echo '<div class="sort-of"><img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/sortof.png" alt="" /> If you create a page called \'Photos\', all your <a href="http://eightface.com/wordpress/flickrrss/" target="_blank">FlickrRSS</a> photos would display in <em>WPtouch</em> style.</div>';
-                  } else {
-                      
-                      echo '<div class="too-bad"><img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/bad.png" alt="" /> If you create a page called \'Photos\', and install the <a href="http://eightface.com/wordpress/flickrrss/" target="_blank">FlickrRSS</a> plugin, your photos would display in <em>WPtouch</em> style.</div>';
-                  }
-?>
-
-            <?php
-                  //WordPress Archives Page Support with checks for Tags Support or Not
-                  $links_page_check = new WP_Query('pagename=archives');
-                  if ($links_page_check->post->ID && function_exists('wp_tag_cloud')) {
-                      echo '<div class="all-good"><img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/good.png" alt="" /> Your tags and your monthly listings will automatically show on your page called \'Archives\'.</div>';
-                  } elseif ($links_page_check->post->ID && !function_exists('wp_tag_cloud')) {
-                      echo '<div class="sort-of"><img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/good.png" alt="" /> You don\'t have WordPress 2.3 or above, so no Tags will show, but your categories and monthly listings will automatically show on your page called \'Archives\'.</div>';
-                  } else {         
-                      echo '<div class="too-bad"><img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/bad.png" alt="" /> If you create a page called \'Archives\', your tags/categories and monthly listings would display in <em>WPtouch</em> style.</div>';
-                  }
-?>
-              <br /><br />
-
-          <h4>Other Plugin Support &amp; Compatibility</h4>
-      <?php
-      //Start plugin support checks here
-      
-      //FlickrRSS Plugin check 
-      if (function_exists('get_flickrRSS')) {
-?>
-             <div class="all-good"><img src="<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/images/good.png" alt="" /> Cool! <a href="http://eightface.com/wordpress/flickrrss/" target="_blank">FlickrRSS</a>: Your photos will automatically show on a page called 'Photos'.</div>
-              <?php } else { ?>
-          <div class="too-bad"><img src="<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/images/bad.png" alt="" /> You don't have <a href="http://eightface.com/wordpress/flickrrss/" target="_blank">FlickrRSS</a> installed (No automatic photos page support)</div>
-              <?php } ?>
-              
-          <?php
-		   //Blip-it Check
-           if (function_exists('bnc_blipit_head')) { ?>
-         <div class="all-good"><img src="<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/images/good.png" alt="" /> Cool! <a href="http://www.bravenewcode.com/blipit/" target="_blank">Blip.it</a>: Your videos will automatically show on your posts in iPhone version.</div>
-           <?php } else { ?>
-           <div class="sort-of"><img src="<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/images/sortof.png" alt="" /> You don't have <a href="http://www.bravenewcode.com/blipit/" target="_blank">Blip.it</a> installed: (No automatic iPhone compatible video support)</div>
-            <?php } ?>
+		  <?php
+			 //Blip-it Check
+		   if (function_exists('bnc_blipit_head')) { ?>
+		 <div class="all-good"><img src="<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/images/good.png" alt="" /> Cool! <a href="http://www.bravenewcode.com/blipit/" target="_blank">Blip.it</a>: Your videos will automatically show on your posts in iPhone version.</div>
+		   <?php } else { ?>
+		   <div class="sort-of"><img src="<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/images/sortof.png" alt="" /> You don't have <a href="http://www.bravenewcode.com/blipit/" target="_blank">Blip.it</a> installed: (No automatic iPhone compatible video support)</div>
+			<?php } ?>
 			
-	<?php /*?>		      <?php
+	<?php /*?>			   <?php
 				  //CodeBox Check
-           if (function_exists('codebox_header')) { ?>
-         <div class="all-good"><img src="<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/images/good.png" alt="" /> Gravy. <a href="http://wordpress.org/extend/plugins/wp-codebox/" target="_blank">CodeBox</a> is <em>not</em> installed. If it was, things would look ugly.</div>
-           <?php } else { ?>
-           <div class="too-bad"><img src="<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/images/good.png" alt="" /> D'oh, <a href="http://wordpress.org/extend/plugins/wp-codebox/" target="_blank">CodeBox</a> <strong>is</strong> installed. WPtouch <em>does not</em> currently support it, so things will look ugly until it does, sorry.</div>
-            <?php } ?><?php */?>
-              
-        <?php
-          //WP-Cache Plugin Check
-          if (function_exists('wp_cache_is_enabled')) { ?>
-     <div class="sort-of"><img src="<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/images/sortof.png" alt="" /> Achtung! <a href="http://mnm.uib.es/gallir/wp-cache-2/" target="_blank">WP-Cache</a>. If active, <strong>it requires configuration.</strong> Visit the <a href="http://www.bravenewcode.com/wptouch/">WPtouch homepage</a> for help using WP-Cache.</div>
-      
+		   if (function_exists('codebox_header')) { ?>
+		 <div class="all-good"><img src="<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/images/good.png" alt="" /> Gravy. <a href="http://wordpress.org/extend/plugins/wp-codebox/" target="_blank">CodeBox</a> is <em>not</em> installed. If it was, things would look ugly.</div>
+		   <?php } else { ?>
+		   <div class="too-bad"><img src="<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/images/good.png" alt="" /> D'oh, <a href="http://wordpress.org/extend/plugins/wp-codebox/" target="_blank">CodeBox</a> <strong>is</strong> installed. WPtouch <em>does not</em> currently support it, so things will look ugly until it does, sorry.</div>
+			<?php } ?><?php */?>
+			  
+		<?php
+		  //WP-Cache Plugin Check
+		  if (function_exists('wp_cache_is_enabled')) { ?>
+	 <div class="sort-of"><img src="<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/images/sortof.png" alt="" /> Achtung! <a href="http://mnm.uib.es/gallir/wp-cache-2/" target="_blank">WP-Cache</a>. If active, <strong>it requires configuration.</strong> Visit the <a href="http://www.bravenewcode.com/wptouch/">WPtouch homepage</a> for help using WP-Cache.</div>
+	  
 	  <?php } else { ?>
 	  
-    <div class="all-good"><img src="<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/images/good.png" alt="" /> Whew. No <a href="http://mnm.uib.es/gallir/wp-cache-2/" target="_blank">WP-Cache</a>. If installed, <strong>it requires configuration.</strong> Visit the <a href="http://www.bravenewcode.com/wptouch/">WPtouch homepage</a> for help using WP-Cache.</div>
-            <?php } ?>
+	<div class="all-good"><img src="<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/images/good.png" alt="" /> Whew. No <a href="http://mnm.uib.es/gallir/wp-cache-2/" target="_blank">WP-Cache</a>. If installed, <strong>it requires configuration.</strong> Visit the <a href="http://www.bravenewcode.com/wptouch/">WPtouch homepage</a> for help using WP-Cache.</div>
+			<?php } ?>
 			
-			       <?php
-          //Super-Cache Plugin Check
-          if (function_exists('wp_super_cache_footer')) { ?>
-     <div class="too-bad"><img src="<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/images/bad.png" alt="" /> Yikes! <a href="http://ocaoimh.ie/wp-super-cache/" target="_blank">WP Super Cache</a>. <strong>Currently, it does <em>not</em> work fully with WPtouch.</strong> Visit the <a href="http://www.bravenewcode.com/wptouch/">WPtouch homepage</a> for updates.</div>
-      
+					  <?php
+		  //Super-Cache Plugin Check
+		  if (function_exists('wp_super_cache_footer')) { ?>
+	 <div class="too-bad"><img src="<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/images/bad.png" alt="" /> Yikes! <a href="http://ocaoimh.ie/wp-super-cache/" target="_blank">WP Super Cache</a>. <strong>Currently, it does <em>not</em> work fully with WPtouch.</strong> Visit the <a href="http://www.bravenewcode.com/wptouch/">WPtouch homepage</a> for updates.</div>
+	  
 	  <?php } else { ?>
 	  
-    <div class="all-good"><img src="<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/images/good.png" alt="" /> Whew. No <a href="http://mnm.uib.es/gallir/wp-cache-2/" target="_blank">WP Super Cache</a>. <strong>Currently, it does <em>not</em> work fully with WPtouch.</strong>Visit the <a href="http://www.bravenewcode.com/wptouch/">WPtouch homepage</a> for updates.</div>
-            <?php } ?>
-    
-    	</div>
+	<div class="all-good"><img src="<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/images/good.png" alt="" /> Whew. No <a href="http://mnm.uib.es/gallir/wp-cache-2/" target="_blank">WP Super Cache</a>. <strong>Currently, it does <em>not</em> work fully with WPtouch.</strong>Visit the <a href="http://www.bravenewcode.com/wptouch/">WPtouch homepage</a> for updates.</div>
+			<?php } ?>
+	
+		</div>
 	</div>
   <input type="submit" name="submit" value="<?php _e('Save Options', 'submit'); ?>" id="wptouch-button" />
   </form>
