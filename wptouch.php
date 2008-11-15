@@ -95,8 +95,10 @@ function bnc_filter_iphone() {
 
 function detectAppleMobile($query = '') {
 	$container = $_SERVER['HTTP_USER_AGENT'];
-	//print_r($container); //this prints out the user agent array. uncomment to see it shown on page.
-	// Add whatever user agents you want here if you want to make this show on a Blackberry or something. No guarantees it'll look pretty, though!
+//print_r($container); //this prints out the user agent array. uncomment to see it shown on the page.
+
+// Add whatever user agents you want here to the array if you want to make this show on a Blackberry 
+// or something. No guarantees it'll look pretty, though!
 	$useragents = array("iphone", "ipod", "aspen", "dream");
 		$this->applemobile = false;
 			foreach ($useragents as $useragent) {
@@ -151,8 +153,8 @@ function theme_root_uri($url) {
 	}
 }
   
-	global $wptouch_plugin;
-		$wptouch_plugin = new WPtouchPlugin();
+global $wptouch_plugin;
+	$wptouch_plugin = new WPtouchPlugin();
 
 function bnc_is_iphone() {
 	global $wptouch_plugin;
@@ -569,10 +571,12 @@ return $v['link-color'];
 	
   <form method="post" action="<?php echo $_SERVER['REQUEST_URI']; ?>">
   
-	<!-- <div id="wptouch-preview" style="display:none">
+	<!-- 
+	<div id="wptouch-preview" style="display:none">
 		<div style="background: #<?php echo bnc_get_header_background(); ?> url(<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/themes/default/images/head-fade-bk.png) repeat-x; color:#<?php echo bnc_get_header_color(); ?>" id="head-prev"><img src="<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/images/icon-pool/<?php echo bnc_get_title_image(); ?>" alt="" /> <?php bloginfo('title'); ?>
 		</div>				
-	</div>	 -->
+	</div>	
+	 -->
 	
 <?php
 /*
