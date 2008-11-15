@@ -1,5 +1,5 @@
 <?php
-  /*
+/*
    Plugin Name: WPtouch iPhone Theme
    Plugin URI: http://bravenewcode.com/wptouch/
    Description: A plugin which reformats your site with a mobile theme when viewing with an <a href="http://www.apple.com/iphone/">iPhone</a> / <a href="http://www.apple.com/ipodtouch/">iPod touch</a>. Set styling, page, menu, icon and more options for the theme by visiting the <a href="options-general.php?page=wptouch/wptouch.php">WPtouch Options admin panel</a>. &nbsp;
@@ -20,7 +20,7 @@
    # but WITHOUT ANY WARRANTY; without even the implied warranty of
    # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. 
    # See the GNU lesser General Public License for more details.
-   */
+*/
    
 //update_option('bnc_iphone_pages', serialize(''));
 //	update_option('bnc_iphone_pages', serialize($defaults));
@@ -78,7 +78,8 @@ function bnc_filter_iphone() {
 		if (isset($_COOKIE[$key])) {
 			$this->desired_view = $_COOKIE[$key];
 		} else {
-			$this->desired_view = 'mobile';}
+			$this->desired_view = 'mobile';
+}
 
 // check for a static home page, serve up the posts page as WPtouch home
 		if ($this->desired_view == 'mobile') {
