@@ -32,7 +32,7 @@ $bnc_option = get_option('bnc_iphone_pages');
 }
  
 // WPtouch Theme Options
-$bnc_wptouch_version = '1.5';
+$bnc_wptouch_version = '1.5.1';
 	function WPtouch($before = '', $after = '') {
 		global $bnc_wptouch_version;
 			echo $before . 'WPtouch ' . $bnc_wptouch_version . $after;
@@ -620,8 +620,8 @@ The Javascript Section
 
 <div class="wptouch-itemrow">
 	<div class="wptouch-item-desc">
-	<h2>Optimization &<br />Template Options</h2>
-	<p>Choose to enable/disable advanced Javascript &amp; Gravatars features, enable/disable comments on pages</p>
+	<h2>Optimization &amp;<br />Template Options</h2>
+	<p>Choose to enable/disable enhanced javascript, gravatars, comments on pages, and login in the header</p>
 	</div>
 	
 		<div class="wptouch-item-content-box1">
@@ -632,17 +632,15 @@ The Javascript Section
 		<div class="wptouch-checkbox-row"><input type="checkbox" name="enable-page-coms" <?php if (isset($v['enable-page-coms']) && $v['enable-page-coms'] == 1) echo('checked'); ?>><label for="enable-page-coms"> Enable Comments For Pages (will add the comment form to <strong>all</strong> pages by default)</label></div>
 			
 			<h4 id="wptouch-js">When Advanced Javascript Is Disabled:</h4>
-			<ul class="wptouch-small-menu">
-			<li>Your site loads faster on EDGE and 3G connections</li>
-			<li>Ajax &amp; jQuery are not loaded &amp; used for comments, entries, excerpts etc.</li>
-			</ul>
-
-			  <h4 id="wptouch-js">When Gravatars Are Disabled:</h4>		
-			<ul class="wptouch-small-menu">
-			<li>Gravatar.com images are <strong>not</strong> shown beside commenter's names</li>
-			<li>As a result, single post pages load faster on EDGE and 3G connections</li>
-		   </ul>
-	
+				<ul class="wptouch-small-menu">
+					<li>Your site loads faster on EDGE and 3G connections</li>
+					<li>Ajax &amp; jQuery are not loaded &amp; used for comments, entries, excerpts etc.</li>
+				</ul>
+		  <h4 id="wptouch-js">When Gravatars Are Disabled:</h4>		
+				<ul class="wptouch-small-menu">
+					<li>Gravatar.com images are <strong>not</strong> shown beside commenter's names</li>
+					<li>As a result, single post pages load faster on EDGE and 3G connections</li>
+		   		</ul>
 		</div>
 	<div class="wptouch-clearer"></div>
 </div>
@@ -666,22 +664,21 @@ The Style Section
 	<div class="wptouch-item-content-box1" id="wptouchstyle">
 <h3>Header Style</h3>				
 
-<div class="header-item-desc">Header Title (here you can override your site title to fit the WPtouch header)</div>
-<div class="header-input">&nbsp; <input text="text" name="header-title" type="text" value="<?php $str = $v['header-title']; echo stripslashes($str); ?>" /></div>
+	<div class="header-item-desc">Header Title (here you can override your site title to fit the WPtouch header)</div>
+		<div class="header-input">&nbsp; <input text="text" name="header-title" type="text" value="<?php $str = $v['header-title']; echo stripslashes($str); ?>" /></div>
 
+	<div class="header-item-desc">Header Background Color</div>
+		<div class="header-input">#<input text="text" name="header-background-color" type="text" value="<?php echo $v['header-background-color']; ?>" /></div>
 
-<div class="header-item-desc">Header Background Color</div>
-<div class="header-input">#<input text="text" name="header-background-color" type="text" value="<?php echo $v['header-background-color']; ?>" /></div>
+	<div class="header-item-desc">Header 'Search &amp; Menu' Links Bottom Border Color (dark colors work best)</div>
+		<div class="header-input">#<input text="text" name="header-border-color" type="text" value="<?php echo $v['header-border-color']; ?>" /></div>
 
-<div class="header-item-desc">Header 'Search &amp; Menu' Links Bottom Border Color (dark colors work best)</div>
-<div class="header-input">#<input text="text" name="header-border-color" type="text" value="<?php echo $v['header-border-color']; ?>" /></div>
+	<div class="header-item-desc">Header Text Color</div>
+		<div class="header-input">#<input type="text" name="header-text-color" type="text" value="<?php echo $v['header-text-color']; ?>" /></div>
 
-<div class="header-item-desc">Header Text Color</div>
-<div class="header-input">#<input type="text" name="header-text-color" type="text" value="<?php echo $v['header-text-color']; ?>" /></div>
 <h3>Other</h3>
-<div class="header-item-desc">Site-wide Link Color (the color for most of the links in WPtouch)</div>
-<div class="header-input">#<input type="text" name="link-color" type="text" value="<?php echo $v['link-color']; ?>" /></div>
-				
+				<div class="header-item-desc">Site-wide Link Color (the color for most of the links in WPtouch)</div>
+			<div class="header-input">#<input type="text" name="link-color" type="text" value="<?php echo $v['link-color']; ?>" /></div>		
 		</div>
 	<div class="wptouch-clearer"></div>
 </div>
@@ -763,46 +760,46 @@ The Menu Section
 		<div class="wptouch-select-row">
 			<?php
 			// do top header icon 
-			echo("<div class=\"wptouch-select-left\">Logo &amp; Home Screen Bookmark Icon</div>");
-			echo("<div class=\"wptouch-select-right\"><select name=\"enable_main_title\"></div>");
-			foreach ($icons as $icon) {
-			echo('<option value="' . $icon['name'] . '" ');
-			if (isset($v['main_title']) && $icon['name'] == $v['main_title'])
-			echo('selected');
-			echo(">{$icon['friendly']}</option>");
-			}
-			echo("</select></div>");
+				echo("<div class=\"wptouch-select-left\">Logo &amp; Home Screen Bookmark Icon</div>");
+					echo("<div class=\"wptouch-select-right\"><select name=\"enable_main_title\"></div>");
+						foreach ($icons as $icon) {
+							echo('<option value="' . $icon['name'] . '" ');
+								if (isset($v['main_title']) && $icon['name'] == $v['main_title'])
+							echo('selected');
+						echo(">{$icon['friendly']}</option>");
+					}
+				echo("</select></div>");
 			?>
 		</div>
 		
 
 			<?php
-			global $table_prefix;
-			$query = "select * from {$table_prefix}posts where post_type = 'page' and post_status = 'publish' order by post_title asc";
-			$con = mysql_connect(DB_HOST, DB_USER, DB_PASSWORD);
-			if ($con) {
-			if (mysql_select_db(DB_NAME, $con)) {
-			$result = mysql_query($query);
-			while ($row = mysql_fetch_assoc($result)) {
-			echo("<div class=\"wptouch-select-row\"><div class=\"wptouch-select-left\"><input type=\"checkbox\" name=\"enable_{$row['ID']}\"");
-			if (isset($v[$row['ID']]))
-			echo('checked />');
-			else
-			echo(' />');
-			echo("<label for=\"check_{$row['ID']}\">{$row['post_title']}</label></div>");
-			echo("<div class=\"wptouch-select-right\"><select name=\"icon_{$row['ID']}\">");
-			foreach ($icons as $icon) {
-			echo('<option value="' . $icon['name'] . '" ');
-			if (isset($v[$row['ID']]) && $icon['name'] == $v[$row['ID']])
-				 echo('selected');
-			echo(">{$icon['friendly']}</option>");
+				global $table_prefix;
+					$query = "select * from {$table_prefix}posts where post_type = 'page' and post_status = 'publish' order by post_title asc";
+						$con = mysql_connect(DB_HOST, DB_USER, DB_PASSWORD);
+							if ($con) {
+								if (mysql_select_db(DB_NAME, $con)) {
+									$result = mysql_query($query);
+										while ($row = mysql_fetch_assoc($result)) {
+											echo("<div class=\"wptouch-select-row\"><div class=\"wptouch-select-left\"><input type=\"checkbox\" name=\"enable_{$row['ID']}\"");
+												if (isset($v[$row['ID']]))
+													echo('checked />');
+														else
+															echo(' />');
+														echo("<label for=\"check_{$row['ID']}\">{$row['post_title']}</label></div>");
+													echo("<div class=\"wptouch-select-right\"><select name=\"icon_{$row['ID']}\">");
+												foreach ($icons as $icon) {
+											echo('<option value="' . $icon['name'] . '" ');
+										if (isset($v[$row['ID']]) && $icon['name'] == $v[$row['ID']])
+				 					echo('selected');
+								echo(">{$icon['friendly']}</option>");
+							}
+						echo("</select></div></div>");
+					}
+				}
 			}
-			echo("</select></div></div>");
-			}
-			}
-			}
-			?>
-		</div>
+		?>
+</div>
 	<div class="wptouch-clearer"></div>
 </div>
 	
