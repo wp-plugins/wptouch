@@ -18,6 +18,7 @@ This makes the iPhone/iPod touch ask for the same icon the user chooses for a lo
 <link rel="apple-touch-icon" href="<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/images/icon-pool/<?php echo bnc_get_title_image(); ?>"/>
 
 <!--
+(Future Consideration)
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta names="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 -->
@@ -67,7 +68,7 @@ a {
 <body>
 <!--
 ////////////////////////////
-Alright, before we get rocking and rolling, you want not want to touch this code so much, as it holds everything required for the drop down-menu. Users can customize icons, colors, and the title in the header itself, which doesn't leave much room for changing things yourself. 
+Before we get rocking and rolling, you want not want to touch this code so much, as it holds everything required for the drop down-menu. Users can customize icons, colors, and the title in the header itself, which doesn't leave much room for changing things yourself. 
 
 That said, if you want to get funky with the look of it, you could always change the way the glossy bar looks, by editing 'menu-bk.png' and 'head-fade-bk.png', both of which are in the default/images/ folder.
 
@@ -89,6 +90,22 @@ This check to see if they've disabled advanced JS and loads it if not.
 The toggles work with JS different ways, one with prototype/scriptaculous, the other with just the document.getelement routine...
 -->
 	<div id="drop-fade">
+	<?php get_currentuserinfo();
+  		if (!current_user_can('edit_posts') && bnc_is_js_enabled()) : ?>
+		    <a href="javascript:$wptouch('#wptouch-login').slideToggle(200);">
+				<img src="<?php bloginfo('template_directory'); ?>/images/menu/touchmenu-login.png" alt="" />
+			</a>	
+		<?php elseif (!current_user_can('edit_posts') && !bnc_is_js_enabled()) : ?>
+		    <a href="javascript:document.getElementById('wptouch-login').style.display='block';">
+				<img src="<?php bloginfo('template_directory'); ?>/images/menu/touchmenu-login.png" alt="" />
+			</a>	
+		<?php else : ?>		
+			<a href="<?php bloginfo('siteurl'); ?>/wp-login.php?action=logout">
+				<img src="<?php bloginfo('template_directory'); ?>/images/menu/touchmenu-logout.png" alt="" />
+			</a>
+
+	<?php endif; ?>
+	
 	<?php if (bnc_is_js_enabled()) { ?>
 		    <a href="javascript:$wptouch('#wptouch-search').slideToggle(200);">
 		<?php } else { ?>
@@ -105,6 +122,24 @@ The toggles work with JS different ways, one with prototype/scriptaculous, the o
 		<img src="<?php bloginfo('template_directory'); ?>/images/menu/touchmenu.png" alt="" />
 		</a>
 	</div>
+
+<!--
+Our login dropdown
+-->
+	<div id="wptouch-login" style="display:none">
+		<div id="wptouch-login-inner">
+			<form name="loginform" id="loginform" action="<?php echo get_settings('url'); ?>/wp-login.php" method="post">
+				<label>
+					<input type="text" name="log" id="log" onfocus="if (this.value == 'username') {this.value = ''}" value="username" />
+				</label>
+				<label>
+					<input type="password" name="pwd"  onfocus="if (this.value == 'password') {this.value = ''}" id="pwd" value="password" /></label>
+					<input type="hidden" name="rememberme" value="forever" />
+					<input type="submit" id="logsub" name="submit" value="<?php _e('Login'); ?>" tabindex="9" />
+					<input type="hidden" name="redirect_to" value="<?php echo $_SERVER['REQUEST_URI']; ?>"/>
+				</form>
+			</div>
+		</div>
 
 <!--
 Our search dropdown
