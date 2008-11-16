@@ -90,6 +90,7 @@ This check to see if they've disabled advanced JS and loads it if not.
 The toggles work with JS different ways, one with prototype/scriptaculous, the other with just the document.getelement routine...
 -->
 	<div id="drop-fade">
+<?php if (bnc_is_login_button_enabled()) { ?>
 	<?php get_currentuserinfo();
   		if (!current_user_can('edit_posts') && bnc_is_js_enabled()) : ?>
 		    <a href="javascript:$wptouch('#wptouch-login').slideToggle(200);">
@@ -103,8 +104,8 @@ The toggles work with JS different ways, one with prototype/scriptaculous, the o
 			<a href="<?php bloginfo('siteurl'); ?>/wp-login.php?action=logout">
 				<img src="<?php bloginfo('template_directory'); ?>/images/menu/touchmenu-logout.png" alt="" />
 			</a>
-
-	<?php endif; ?>
+		<?php endif; ?>
+<?php } ?>
 	
 	<?php if (bnc_is_js_enabled()) { ?>
 		    <a href="javascript:$wptouch('#wptouch-search').slideToggle(200);">

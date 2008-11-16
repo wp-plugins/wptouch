@@ -211,6 +211,14 @@ function bnc_is_page_coms_enabled() {
 		}
 	return $ids['enable-page-coms'];
 }		
+
+function bnc_is_login_button_enabled() {
+	$ids = bnc_wp_touch_get_menu_pages();
+		if (!isset($ids['enable-login-button']))	 {
+		return true;
+		}
+	return $ids['enable-login-button'];
+}		
 	
 function bnc_is_js_enabled() {
 	$ids = bnc_wp_touch_get_menu_pages();
@@ -283,7 +291,7 @@ function bnc_wp_touch_get_pages() {
 		global $table_prefix;
 			$keys = array();
 				foreach ($ids as $k => $v) {
-					if ($k == 'main_title' || $k == 'enable-post-excerpts' || $k == 'enable-page-coms' || $k == 'enable-js-header' || $k == 'enable-gravatars' || $k == 'enable-main-home' || $k == 'enable-main-rss' || $k == 'enable-main-email' || $k == 'enable-main-name' || $k == 'enable-main-tags' || $k == 'enable-main-categories') {
+					if ($k == 'main_title' || $k == 'enable-post-excerpts' || $k == 'enable-page-coms' || $k == 'enable-login-button' || $k == 'enable-js-header' || $k == 'enable-gravatars' || $k == 'enable-main-home' || $k == 'enable-main-rss' || $k == 'enable-main-email' || $k == 'enable-main-name' || $k == 'enable-main-tags' || $k == 'enable-main-categories') {
 // do nothing
 					} else {
 					if (is_numeric($k)) {
@@ -428,6 +436,12 @@ return $v['link-color'];
 				$a['enable-page-coms'] = 0;
 			}
 			
+			if (isset($_POST['enable-login-button'])) {
+				$a['enable-login-button'] = 1;
+			} else {
+				$a['enable-login-button'] = 0;
+			}
+			
 			if (isset($_POST['enable-js-header'])) {
 				$a['enable-js-header'] = 1;
 			} else {
@@ -535,6 +549,10 @@ return $v['link-color'];
 			$v['enable-page-coms'] = 0;
 			}	
 			
+			if (!isset($v['enable-login-button'])) {
+			$v['enable-login-button'] = 0;
+			}	
+	
 			if (!isset($v['enable-js-header'])) {
 			$v['enable-js-header'] = 1;
 			}	
@@ -603,7 +621,7 @@ The News Section
 	</div>
    <div id="wptouch-news-donate">
 	  <h3>Donate To WPtouch</h3> 
-	  WPtouch represents hundreds of hours of development work.	 If you'd like to support the project, please head on over and <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=paypal%40bravenewcode%2ecom&item_name=WPtouch%20Beer%20Fund&no_shipping=1&tax=0&currency_code=CAD&lc=CA&bn=PP%2dDonationsBF&charset=UTF%2d8">donate to WPtouch.</a><br /><br />
+	  WPtouch represents hundreds of hours of development work. If you'd like to support the project, please head on over and <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=paypal%40bravenewcode%2ecom&item_name=WPtouch%20Beer%20Fund&no_shipping=1&tax=0&currency_code=CAD&lc=CA&bn=PP%2dDonationsBF&charset=UTF%2d8">donate to WPtouch.</a><br /><br />
 
 	  Everyone who donates will be added to our <a href="http://www.bravenewcode.com/wptouch-friends-and-family/">WPtouch friends and family page</a>, in appreciation for the support.
    </div>
@@ -629,7 +647,9 @@ The Javascript Section
 			
 		<div class="wptouch-checkbox-row"><input type="checkbox" name="enable-gravatars" <?php if (isset($v['enable-gravatars']) && $v['enable-gravatars'] == 1) echo('checked'); ?>><label for="enable-gravatars"> Enable Gravatars in Comments</label></div>
 		
-		<div class="wptouch-checkbox-row"><input type="checkbox" name="enable-page-coms" <?php if (isset($v['enable-page-coms']) && $v['enable-page-coms'] == 1) echo('checked'); ?>><label for="enable-page-coms"> Enable Comments For Pages (will add the comment form to <strong>all</strong> pages by default)</label></div>
+		<div class="wptouch-checkbox-row withhr"><input type="checkbox" name="enable-page-coms" <?php if (isset($v['enable-page-coms']) && $v['enable-page-coms'] == 1) echo('checked'); ?>><label for="enable-page-coms"> Enable Comments For Pages (will add the comment form to <strong>all</strong> pages by default)</label></div>
+
+<div class="wptouch-checkbox-row"><input type="checkbox" name="enable-login-button" <?php if (isset($v['enable-login-button']) && $v['enable-login-button'] == 1) echo('checked'); ?>><label for="enable-login-button"> Enable Login From The Header (will add a login button beside search &amp; menu buttons</label></div>
 			
 			<h4 id="wptouch-js">When Advanced Javascript Is Disabled:</h4>
 				<ul class="wptouch-small-menu">
