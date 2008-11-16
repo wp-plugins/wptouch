@@ -68,12 +68,12 @@ class WPtouchPlugin {
 function bnc_filter_iphone() {
 	$key = 'bnc_mobile_' . md5(get_bloginfo('siteurl'));
 		if (isset($_GET['bnc_view'])) {
-		if ($_GET['bnc_view'] == 'mobile') {
-			setcookie($key, 'mobile', 0);} 
-		elseif ($_GET['bnc_view'] == 'normal') {
-			setcookie($key, 'normal', 0);}
-		header('Location: ' . get_bloginfo('siteurl'));
-	die;
+			if ($_GET['bnc_view'] == 'mobile') {
+				setcookie($key, 'mobile', 0);} 
+			elseif ($_GET['bnc_view'] == 'normal') {
+				setcookie($key, 'normal', 0);}
+			header('Location: ' . get_bloginfo('siteurl'));
+		die;
 }
 		if (isset($_COOKIE[$key])) {
 			$this->desired_view = $_COOKIE[$key];
@@ -95,7 +95,8 @@ function bnc_filter_iphone() {
 
 function detectAppleMobile($query = '') {
 	$container = $_SERVER['HTTP_USER_AGENT'];
-//print_r($container); //this prints out the user agent array. uncomment to see it shown on the page.
+//the below out the user agent array. uncomment to see it shown on the page.
+//print_r($container); 
 
 // Add whatever user agents you want here to the array if you want to make this show on a Blackberry 
 // or something. No guarantees it'll look pretty, though!
@@ -161,7 +162,7 @@ function bnc_is_iphone() {
 		return $wptouch_plugin->applemobile;
 }
   
-	// The Template Switch Code
+	// The Automatic Template Switch Code
 function wptouch_switch() {
 	global $wptouch_plugin;
 		if ($wptouch_plugin->applemobile) {
@@ -499,13 +500,13 @@ return $v['link-color'];
 					  if (!isset($a[$id]))
 						  $a[$id] = $_POST['icon_' . $id];
 				  }
-			  }
-		  }
+		 }
+}
 
 		   $a['header-title'] = $_POST['header-title'];
 		 if (!isset($a['header-title']) || (isset($a['header-title']) && strlen($a['header-title']) == 0)) {
 			$a['header-title'] = get_bloginfo('title');
-		 }
+}
 
 		 $a['header-background-color'] = $_POST['header-background-color'];
 		 $a['header-border-color'] = $_POST['header-border-color'];
@@ -514,7 +515,7 @@ return $v['link-color'];
 		
 			$values = serialize($a);
 		 update_option('bnc_iphone_pages', $values);
-	  }
+}
 	  
 			$v = get_option('bnc_iphone_pages');
 			if (!is_array($v)) {
@@ -537,7 +538,7 @@ return $v['link-color'];
 				$v['header-text-color'] = 'eeeeee';
 			}
 			
-		if (!isset($v['link-color'])) {
+			if (!isset($v['link-color'])) {
 				$v['link-color'] = '006bb3';
 			}
 
@@ -989,9 +990,9 @@ The Plugin Section
 	<div class="all-good"><img src="<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/images/good.png" alt="" /> Whew. No <a href="http://mnm.uib.es/gallir/wp-cache-2/" target="_blank">WP Super Cache</a>. <strong>Currently, it does <em>not</em> work fully with WPtouch.</strong>Visit the <a href="http://www.bravenewcode.com/wptouch/">WPtouch homepage</a> for updates.</div>
 			<?php } ?>
 	
+			</div>
 		</div>
-	</div>
-  <input type="submit" name="submit" value="<?php _e('Save Options', 'submit'); ?>" id="wptouch-button" />
+ 	 <input type="submit" name="submit" value="<?php _e('Save Options', 'submit'); ?>" id="wptouch-button" />
   </form>
 </div>
 
