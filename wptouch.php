@@ -876,7 +876,7 @@ The Plugin Section
 			}
 			?>	
 			</strong><br /><br	/>
-			To the right you'll find information on other theme features activated through companion plugins &amp; WordPress versions.<br /><br />
+			To the right you'll find information on other theme features and their requirements, including those activated through companion plugins &amp; WordPress versions.<br /><br />
 			For further documentation visit <a href="http://www.bravenewcode.com/wptouch/">BraveNewCode</a>.<br /><br />
 			To report an incompatible plugin, send an e-mail to <a href="mailto:wptouch@bravenewcode.com">wptouch@bravenewcode.com</a>
 			</p>
