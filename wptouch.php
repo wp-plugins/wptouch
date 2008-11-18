@@ -665,24 +665,30 @@ The Javascript Section
 	</div>
 	
 		<div class="wptouch-item-content-box1">
-			<div class="wptouch-checkbox-row"><input type="checkbox" name="enable-js-header" <?php if (isset($v['enable-js-header']) && $v['enable-js-header'] == 1) echo('checked'); ?>><label for="enable-js-header"> Use Advanced <a href="http://www.jquery.com/" target="_blank">jQuery</a> Javascript Effects (ajax entries, ajax comments, smooth effects)</label></div>
+<div class="wptouch-checkbox-row"><input type="checkbox" name="enable-login-button" <?php if (isset($v['enable-login-button']) && $v['enable-login-button'] == 1) echo('checked'); ?>><label for="enable-login-button"> Enable Login From The Header <small>(will add a login button beside search &amp; menu buttons)</small></label></div>
+		
+<div class="wptouch-checkbox-row withhr"><input type="checkbox" name="enable-redirect" <?php if (isset($v['enable-redirect']) && $v['enable-redirect'] == 1) echo('checked'); ?>><label for="enable-redirect"> Enable Automatic Redirection <small>(makes your posts page the WPtouch frontpage)</small></label></div>		
+
+			<div class="wptouch-checkbox-row"><input type="checkbox" name="enable-js-header" <?php if (isset($v['enable-js-header']) && $v['enable-js-header'] == 1) echo('checked'); ?>><label for="enable-js-header"> Use Advanced <a href="http://www.jquery.com/" target="_blank">jQuery</a> Javascript Effects <small>(ajax entries, ajax comments, smooth effects)</small></label></div>
 			
 		<div class="wptouch-checkbox-row"><input type="checkbox" name="enable-gravatars" <?php if (isset($v['enable-gravatars']) && $v['enable-gravatars'] == 1) echo('checked'); ?>><label for="enable-gravatars"> Enable Gravatars in Comments</label></div>
 		
-		<div class="wptouch-checkbox-row withhr"><input type="checkbox" name="enable-page-coms" <?php if (isset($v['enable-page-coms']) && $v['enable-page-coms'] == 1) echo('checked'); ?>><label for="enable-page-coms"> Enable Comments For Pages (will add the comment form to <strong>all</strong> pages by default)</label></div>
-
-<div class="wptouch-checkbox-row"><input type="checkbox" name="enable-login-button" <?php if (isset($v['enable-login-button']) && $v['enable-login-button'] == 1) echo('checked'); ?>><label for="enable-login-button"> Enable Login From The Header (will add a login button beside search &amp; menu buttons</label></div>
-		<div class="wptouch-checkbox-row"><input type="checkbox" name="enable-redirect" <?php if (isset($v['enable-redirect']) && $v['enable-redirect'] == 1) echo('checked'); ?>><label for="enable-redirect"> Enable Redirection To Blog Page</label></div>
+		<div class="wptouch-checkbox-row"><input type="checkbox" name="enable-page-coms" <?php if (isset($v['enable-page-coms']) && $v['enable-page-coms'] == 1) echo('checked'); ?>><label for="enable-page-coms"> Enable Comments For Pages <small>(will add the comment form to <strong>all</strong> pages by default)</small></label></div>
 			
-			<h4 id="wptouch-js">When Advanced Javascript Is Disabled:</h4>
+		<h4 id="wptouch-js">When Automatic Redirection Is Disabled:</h4>		
 				<ul class="wptouch-small-menu">
-					<li>Your site loads faster on EDGE and 3G connections</li>
-					<li>Ajax &amp; jQuery are not loaded &amp; used for comments, entries, excerpts etc.</li>
+					<li>WPtouch will use your default frontpage</li>
+					<li>*Can fix errors where WPtouch displays a white screen, or 'too many redirects' errors</li>
+		   		</ul>
+		<h4 id="wptouch-js">When Advanced Javascript Is Disabled:</h4>
+				<ul class="wptouch-small-menu">
+					<li>Site is faster on 3G/EDGE connections</li>
+					<li>Ajax &amp; jQuery are not used for comments, entries, excerpts</li>
 				</ul>
-		  <h4 id="wptouch-js">When Gravatars Are Disabled:</h4>		
+		<h4 id="wptouch-js">When Gravatars Are Disabled:</h4>		
 				<ul class="wptouch-small-menu">
-					<li>Gravatar.com images are <strong>not</strong> shown beside commenter's names</li>
-					<li>As a result, single post pages load faster on EDGE and 3G connections</li>
+					<li>Gravatars <strong>are not</strong> loaded in coments</li>
+					<li>Site is faster on 3G/EDGE connections</li>
 		   		</ul>
 		</div>
 	<div class="wptouch-clearer"></div>
