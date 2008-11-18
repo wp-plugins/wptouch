@@ -67,30 +67,32 @@ class WPtouchPlugin {
 	  
 function bnc_filter_iphone() {
 	$key = 'bnc_mobile_' . md5(get_bloginfo('siteurl'));
-		if (isset($_GET['bnc_view'])) {
+   if (isset($_GET['bnc_view'])) {
 			if ($_GET['bnc_view'] == 'mobile') {
-				setcookie($key, 'mobile', 0);} 
-			elseif ($_GET['bnc_view'] == 'normal') {
-				setcookie($key, 'normal', 0);}
+				setcookie($key, 'mobile', 0); 
+         } elseif ($_GET['bnc_view'] == 'normal') {
+				setcookie($key, 'normal', 0);
+         }
 			header('Location: ' . get_bloginfo('siteurl'));
-		die;
-}
-		if (isset($_COOKIE[$key])) {
-			$this->desired_view = $_COOKIE[$key];
-		} else {
-			$this->desired_view = 'mobile';
-}
+		   die;
+   }
 
-// check for a static home page, serve up the posts page as WPtouch home
+   if (isset($_COOKIE[$key])) {
+      $this->desired_view = $_COOKIE[$key];
+   } else {
+      $this->desired_view = 'mobile';
+   }
+
+   // check for a static home page, serve up the posts page as WPtouch home
 		if ($this->desired_view == 'mobile') {
 			$blog = get_option('page_for_posts');
 				if ($blog) {
-					if (function_exists('is_front_page') && is_front_page() && $this->applemobile) { 
-				header('Location: ' . get_permalink($blog));
-			die;
-			}
-		}
-	}
+					if (function_exists('is_front_page') && is_front_page() && $this->applemobile && bnc_is_redirect_enable()) { 
+				      header('Location: ' . get_permalink($blog));
+			         die;
+			      }
+		      }
+	   }
 }
 
 function detectAppleMobile($query = '') {
@@ -220,6 +222,15 @@ function bnc_is_login_button_enabled() {
 		}
 	return $ids['enable-login-button'];
 }		
+
+function bnc_is_redirect_enable() {
+	$ids = bnc_wp_touch_get_menu_pages();
+   if (!isset($ids['enable-redirect']))	 {
+      return true;
+	} else {
+	   return $ids['enable-redirect'];
+   }
+}
 	
 function bnc_is_js_enabled() {
 	$ids = bnc_wp_touch_get_menu_pages();
@@ -292,7 +303,7 @@ function bnc_wp_touch_get_pages() {
 		global $table_prefix;
 			$keys = array();
 				foreach ($ids as $k => $v) {
-					if ($k == 'main_title' || $k == 'enable-post-excerpts' || $k == 'enable-page-coms' || $k == 'enable-login-button' || $k == 'enable-js-header' || $k == 'enable-gravatars' || $k == 'enable-main-home' || $k == 'enable-main-rss' || $k == 'enable-main-email' || $k == 'enable-main-name' || $k == 'enable-main-tags' || $k == 'enable-main-categories') {
+					if ($k == 'main_title' || $k == 'enable-post-excerpts' || $k == 'enable-page-coms' || $k == 'enable-login-button' || $k == 'enable-redirect' || $k == 'enable-js-header' || $k == 'enable-gravatars' || $k == 'enable-main-home' || $k == 'enable-main-rss' || $k == 'enable-main-email' || $k == 'enable-main-name' || $k == 'enable-main-tags' || $k == 'enable-main-categories') {
 // do nothing
 					} else {
 					if (is_numeric($k)) {
@@ -442,6 +453,12 @@ return $v['link-color'];
 			} else {
 				$a['enable-login-button'] = 0;
 			}
+
+         if (isset($_POST['enable-redirect'])) {
+            $a['enable-redirect'] = 1;
+         } else {
+            $a['enable-redirect'] = 0;
+         }
 			
 			if (isset($_POST['enable-js-header'])) {
 				$a['enable-js-header'] = 1;
@@ -553,6 +570,10 @@ return $v['link-color'];
 			if (!isset($v['enable-login-button'])) {
 			$v['enable-login-button'] = 0;
 			}	
+
+         if (!isset($v['enable-redirect'])) {
+            $v['enable-redirect'] = 1;
+         }
 	
 			if (!isset($v['enable-js-header'])) {
 			$v['enable-js-header'] = 1;
@@ -651,6 +672,7 @@ The Javascript Section
 		<div class="wptouch-checkbox-row withhr"><input type="checkbox" name="enable-page-coms" <?php if (isset($v['enable-page-coms']) && $v['enable-page-coms'] == 1) echo('checked'); ?>><label for="enable-page-coms"> Enable Comments For Pages (will add the comment form to <strong>all</strong> pages by default)</label></div>
 
 <div class="wptouch-checkbox-row"><input type="checkbox" name="enable-login-button" <?php if (isset($v['enable-login-button']) && $v['enable-login-button'] == 1) echo('checked'); ?>><label for="enable-login-button"> Enable Login From The Header (will add a login button beside search &amp; menu buttons</label></div>
+		<div class="wptouch-checkbox-row"><input type="checkbox" name="enable-redirect" <?php if (isset($v['enable-redirect']) && $v['enable-redirect'] == 1) echo('checked'); ?>><label for="enable-redirect"> Enable Redirection To Blog Page</label></div>
 			
 			<h4 id="wptouch-js">When Advanced Javascript Is Disabled:</h4>
 				<ul class="wptouch-small-menu">
