@@ -627,7 +627,7 @@ The News Section
 <div class="wptouch-itemrow newsblock">
 	<div class="wptouch-item-desc">
 	<h2>News &amp; Updates</h2>
-	<p>BraveNewCode.com entries tagged 'WPtouch'. This list updates to provide you with the latest information about the plugin's development.</p>
+	<p>BraveNewCode.com entries tagged 'WPtouch'. This list updates to provide you with the latest information about our plugin's development.</p>
 	</div>
 		
 	<div class="wptouch-item-content-box1">
