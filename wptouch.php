@@ -643,7 +643,7 @@ The News Section
 	</div>
    <div id="wptouch-news-donate">
 	  <h3>Donate To WPtouch</h3> 
-	  WPtouch represents hundreds of hours of development work. If you'd like to support the project, please head on over and <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=paypal%40bravenewcode%2ecom&item_name=WPtouch%20Beer%20Fund&no_shipping=1&tax=0&currency_code=CAD&lc=CA&bn=PP%2dDonationsBF&charset=UTF%2d8">donate to WPtouch.</a><br /><br />
+	  WPtouch represents hundreds of hours of development work. If you'd like to support the project, please consider <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=paypal%40bravenewcode%2ecom&item_name=WPtouch%20Beer%20Fund&no_shipping=1&tax=0&currency_code=CAD&lc=CA&bn=PP%2dDonationsBF&charset=UTF%2d8">donating to WPtouch.</a><br /><br />
 
 	  Everyone who donates will be added to our <a href="http://www.bravenewcode.com/wptouch-friends-and-family/">WPtouch friends and family page</a>, in appreciation for the support.
    </div>
@@ -675,17 +675,17 @@ The Javascript Section
 		
 		<div class="wptouch-checkbox-row"><input type="checkbox" name="enable-page-coms" <?php if (isset($v['enable-page-coms']) && $v['enable-page-coms'] == 1) echo('checked'); ?>><label for="enable-page-coms"> Enable Comments For Pages <small>(will add the comment form to <strong>all</strong> pages by default)</small></label></div>
 			
-		<h4 id="wptouch-js">If Automatic Redirection Is Disabled:</h4>		
+		<h4 id="wptouch-js">If automatic redirection is unchecked:</h4>		
 				<ul class="wptouch-small-menu">
-					<li>WPtouch will use your default frontpage</li>
-					<li>*Can fix errors where WPtouch displays a white screen, or 'too many redirects' errors</li>
+					<li>WPtouch will use your defined front page <small>(If you've set one)</small></li>
+					<li>*Can fix errors where WPtouch displays a white screen, or 'too many redirects' message in mobileSafari</li>
 		   		</ul>
-		<h4 id="wptouch-js">If Advanced Javascript Is Disabled:</h4>
+		<h4 id="wptouch-js">If advanced javascript is unchecked:</h4>
 				<ul class="wptouch-small-menu">
 					<li>Site is faster on 3G/EDGE connections</li>
 					<li>Ajax &amp; jQuery are not used for comments, entries, excerpts</li>
 				</ul>
-		<h4 id="wptouch-js">If Gravatars Are Disabled:</h4>		
+		<h4 id="wptouch-js">If Gravatars are unchecked:</h4>		
 				<ul class="wptouch-small-menu">
 					<li>Gravatars <strong>are not</strong> loaded in coments</li>
 					<li>Site is faster on 3G/EDGE connections</li>
@@ -703,9 +703,9 @@ The Style Section
 
 <div class="wptouch-itemrow wptouchbump">
 	<div class="wptouch-item-desc">
-	<h2>Style Options</h2>
+	<h2>Style & Color Options</h2>
 		<p>
-		Select the colors, title text, &amp; link color for the WPtouch header, and set your site-wide link color.<br /><br />
+		Customize the colors WPtouch will use for your website.<br /><br />
 		<a href="http://www.colorpicker.com/" target="_blank">Click here</a> to view a color picker to help you select your colors.
 		</p>
 	</div>
@@ -713,20 +713,20 @@ The Style Section
 	<div class="wptouch-item-content-box1" id="wptouchstyle">
 <h3>Header Style</h3>				
 
-	<div class="header-item-desc">Header Title (here you can override your site title to fit the WPtouch header)</div>
+	<div class="header-item-desc">Header Title Text <small>(here you can override your site title to fit the WPtouch header)</small></div>
 		<div class="header-input">&nbsp; <input text="text" name="header-title" type="text" value="<?php $str = $v['header-title']; echo stripslashes($str); ?>" /></div>
 
-	<div class="header-item-desc">Header Background Color</div>
+	<div class="header-item-desc">Logo & site title header background color</div>
 		<div class="header-input">#<input text="text" name="header-background-color" type="text" value="<?php echo $v['header-background-color']; ?>" /></div>
 
-	<div class="header-item-desc">Header 'Search &amp; Menu' Links Bottom Border Color (dark colors work best)</div>
+	<div class="header-item-desc">Header 'Search, Login &amp; Menu' background color <small>(dark colors work best)</small></div>
 		<div class="header-input">#<input text="text" name="header-border-color" type="text" value="<?php echo $v['header-border-color']; ?>" /></div>
 
 	<div class="header-item-desc">Header Text Color</div>
 		<div class="header-input">#<input type="text" name="header-text-color" type="text" value="<?php echo $v['header-text-color']; ?>" /></div>
 
 <h3>Other</h3>
-				<div class="header-item-desc">Site-wide Link Color (the color for most of the links in WPtouch)</div>
+				<div class="header-item-desc">Site-wide Link Color <small>(the color for most of the links in WPtouch)</small></div>
 			<div class="header-input">#<input type="text" name="link-color" type="text" value="<?php echo $v['link-color']; ?>" /></div>		
 		</div>
 	<div class="wptouch-clearer"></div>
@@ -742,8 +742,8 @@ The Post Listings Section
 	<div class="wptouch-item-desc">
 	<h2>Post Listings Options</h2>
 		<p>
-		Select which post-meta items will be shown beneath titles on the index, search &amp; archive pages.<br />
-		Choose whether excerpts are shown on those pages (default is hidden).
+		Select which post-meta items is shown under post titles on post, search, &amp; archives pages.<br />
+		Also, choose whether excerpts are shown/hidden (default is hidden).
 		</p>
 	</div>
 	
@@ -771,10 +771,10 @@ The Availabe Icons Section
 	<div class="wptouch-item-desc">
 	<h2>Available Icons</h2>
 		<p>
-		You can select which icons will be displayed beside corresponding pages enabled below.<br /><br />
-		To add icons to the pool simply drop 60x60 (recommended) - .jpg or .png images into the <strong>icon-pool</strong> folder inside the wptouch/images directory, then refresh this page to select them.<br /><br />
+		You can select which icons will be displayed beside pages enabled below.<br /><br />
+		To add icons to the pool simply drop 60x60 (recommended) .jpg or .png images into the <strong>wptouch/images/icon-pool</strong> directory, then refresh this page to select them.<br /><br />
 		Also in the folder is a <strong>.psd template</strong> which you can use to build icons yourself.<br /><br />
-		More official icons are available for download on the <a href="http://www.bravenewcode.com/wptouch/">WPtouch homepage</a>.
+		<!-- More official icons are available for download on the <a href="http://www.bravenewcode.com/wptouch/">WPtouch homepage</a>. -->
 		</p>
 	</div>
 		
@@ -798,10 +798,10 @@ The Menu Section
 	<div class="wptouch-item-desc">
 	<h2>Logo/Bookmark<br />Page &amp; Menu Icons</h2>
 		<p>
-		Choose the logo displayed in the header (also your bookmark icon), and which published pages are shown on the WPtouch drop-down menu.<br /><br />
+		Choose the logo displayed in the header (also your bookmark icon), and the pages you want included in the WPtouch drop-down menu.<br /><br />
 		<strong>Remember, only those checked<br />
 		will be shown.</strong><br /><br />
-		Next, select the icons from the drop list that you want to pair with each page/menu item.
+		Next, select the icons from the drop lists that you want to pair with each page/menu item.
 		</p>
 	</div>
 		
@@ -862,7 +862,7 @@ The Default Menu Item Section
 	<div class="wptouch-item-desc">
 	<h2>Default Menu Items</h2>
 		<p>
-		Enable/Disable these items from appearing in the WPtouch dropdown menu.
+		Enable/Disable these default items in the WPtouch dropdown menu.
 		</p>
 	</div>
 		
@@ -905,7 +905,7 @@ The Plugin Section
 			}
 			?>	
 			</strong><br /><br	/>
-			To the right you'll find information on other theme features and their requirements, including those activated through companion plugins &amp; WordPress versions.<br /><br />
+			Here you'll find info on additional WPtouch features and their requirements, including those activated with companion plugins.<br /><br />
 			For further documentation visit <a href="http://www.bravenewcode.com/wptouch/">BraveNewCode</a>.<br /><br />
 			To report an incompatible plugin, send an e-mail to <a href="mailto:wptouch@bravenewcode.com">wptouch@bravenewcode.com</a>
 			</p>
