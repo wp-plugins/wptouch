@@ -248,7 +248,7 @@ If this was a bogus 404 page, the end of entry results, or a search -->
 	  <div class="result-text">No more entries to display.</div>
 	 <?php } elseif (is_search() && ($is_ajax)) { ?>
 	<div class="result-text">No more search results to display.</div>
-	 <?php } elseif (is_search()) { ?>
+	 <?php } elseif (is_search() && (!$is_ajax)) { ?>
 	 <div class="result-text" style="padding-bottom:127px">No search results results found.<br />Try another query.</div>
 	<?php } else { ?>
 	  <div class="post"><img src="<?php bloginfo('template_directory'); ?>/images/404.jpg" alt="404 Not Found" /></div>

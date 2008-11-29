@@ -10,4 +10,4 @@ Version: 1.5.1
 Complete and updated information & installation instructions available at:
 http://www.bravenewcode.com/wptouch/
 
-nov. 23. 2008
+nov. 28. 2008

@@ -3,26 +3,33 @@ Contributors: BraveNewCode
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=paypal%40bravenewcode%2ecom&item_name=WPtouch%20Beer%20Fund&no_shipping=0&no_note=1&tax=0&currency_code=CAD&lc=CA&bn=PP%2dDonationsBF&charset=UTF%2d8
 Tags: wptouch, iphone, ipod touch, theme, apple, mac, bravenewcode, AJAX, mobile, wordpress on iphone, iphone wordpress
 Requires at least: 2.3
-Tested up to: 2.6.3
+Tested up to: 2.6.5
 Stable tag: 1.5
 
-WPtouch formats your WordPress blog with an iPhone application-style theme, complete with ajax loading articles and effects. The theme only shows when viewed from an iPhone or iPod touch.
+WPtouch automatically transforms your WordPress blog into an iPhone application-style theme, complete with ajax loading articles and effects, when viewed from an iPhone or iPod touch.
 
-Downloaded over 20,000 times (bravenewcode.com + wordpress.org) since April 2008. 
+Downloaded over 31,000 times (bravenewcode.com + wordpress.org) since April 2008. 
 
 == Description ==
 
-WPtouch formats your WordPress blog with an iPhone application-style theme, complete with ajax loading articles and effects. The theme only shows when viewed from an iPhone or iPod touch.
+WPtouch automatically transforms your WordPress blog into an iPhone application-style theme, complete with ajax loading articles and effects, when viewed from an iPhone or iPod touch.
 
-With WPtouch you can customize many aspects of its appearance in the WPtouch admin panel, and deliver a fast, user-friendly and stylish version of your site to your iPhone and iPod touch visitors, without modifying a single bit of code on your regular site. 
+The admin panel allows you to customize many aspects of its appearance, and deliver a fast, user-friendly and stylish version of your site to your iPhone and iPod touch visitors without modifying a single bit of code (or affecting) your regular site. 
 
-The theme also includes the easy ability for visitors to switch back and forth between the WPtouch view and your site's regular theme.
+The theme also includes the ability for your visitors to easily switch between the WPtouch view and your site's regular theme.
 
-Please visit http://www.bravenewcode.com/wptouch/ for a full description & more of the WPtouch plugin.
+Please visit http://www.bravenewcode.com/wptouch/ for a full description & updates on the WPtouch plugin.
 
 == What's New ==
 
-In version 1.5, we've added / changed:
+= Version 1.5.1 =
+
+* Added the ability to enable a login button w/ drop-down in the WPtouch header
+* Added the ability to disable WPtouch automatic homepage redirection (resolves white page issue)
+* Refinements in WPtouch admin wording, style
+
+
+= Version 1.5 =
 
 * Added support for WordPress image galleries
 * Added support for single post page split navigation
@@ -33,7 +40,7 @@ In version 1.5, we've added / changed:
 * WPtouch now supports WordPress 2.3 or higher
 
 
-In version 1.4, we've added / changed:
+= Version 1.4 =
 
 * More jQuery tune-ups, now loads through wp_enqueue_script() or Google to prevent collisions
 * Changed $J to $wptouch to prevent collisions using jQuery
@@ -47,7 +54,8 @@ In version 1.4, we've added / changed:
 * More compatibility with other plugins
 * Code cleanups and optimizations
 
-In version 1.3.x - 1.3.5, we've added / changed:
+
+= Versions 1.3.x =
 
 * Tweaks for the jQuery bugs
 * No conflict setting added for jQuery
@@ -66,7 +74,7 @@ In version 1.3.x - 1.3.5, we've added / changed:
 * Admin wording changes
 
 
-In version 1.2.x - 1.3, we've added / changed:
+= Versions 1.2.x =
 
 * Fix for the theme appearing in Safari browsers
 * Switch from Prototype to the more WordPress-native jQuery for javascript (much faster!)
@@ -85,7 +93,7 @@ In version 1.2.x - 1.3, we've added / changed:
 * Switched to Snoopy from CURL for the admin news section (thanks to Joost de Valk (yoast.com)
 
 
-Version 1.1.x - 1.2 added/changed the following features:
+= Versions 1.1.x =
 
 * The ability to disable advanced javascript effects (fixes effects not working for some, speeds up the load time considerably)
 * Proper styling of embedded YouTube videos on mobileSafari in iPhone 2.0
@@ -103,11 +111,13 @@ Version 1.1.x - 1.2 added/changed the following features:
 * styling for YouTube embedded videos
 * bug fixes for blogs installed in directories other than root
 
+
 == Installation ==
 
 Unzip, and upload the 'wptouch' folder and all its contents to your WordPress wp-content/plugins folder using FTP. Visit the plugin tab in the WordPress admin, and activate WPtouch. You can then setup your plugin options by visiting the Settings - >WPtouch tab.
 
 Please visit http://www.bravenewcode.com/wptouch/ for comprehensive installation instructions.
+
 
 == Frequently Asked Questions ==
 
