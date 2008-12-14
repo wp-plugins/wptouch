@@ -30,7 +30,7 @@ $bnc_option = get_option('bnc_iphone_pages');
 	$defaults['header-background-color'] = '222222';
 	$defaults['header-title'] = '' . get_bloginfo('title') . '';
 }
- 
+
 // WPtouch Theme Options
 $bnc_wptouch_version = '1.6';
 	function WPtouch($before = '', $after = '') {
@@ -62,7 +62,19 @@ class WPtouchPlugin {
 			add_filter('theme_root_uri', array(&$this, 'theme_root_uri'));
 			add_filter('template', array(&$this, 'get_template'));
 			add_filter('init', array(&$this, 'bnc_filter_iphone'));
+         add_filter('wp', array(&$this, 'bnc_do_redirect'));
 		$this->detectAppleMobile();
+}
+
+function bnc_do_redirect() {
+   global $post;
+   if ($this->applemobile) {
+      if (is_front_page() && bnc_get_selected_home_page() > 0) {
+         $url = get_permalink(bnc_get_selected_home_page());
+         header('Location: ' . $url);
+         die;
+      }
+   }
 }
 	  
 function bnc_filter_iphone() {
@@ -83,7 +95,10 @@ function bnc_filter_iphone() {
       $this->desired_view = 'mobile';
    }
 
+   // new Behaviour for redirection
+
    // check for a static home page, serve up the posts page as WPtouch home
+   /*
 		if ($this->desired_view == 'mobile') {
 			$blog = get_option('page_for_posts');
          $show = get_option('show_on_front');
@@ -113,7 +128,9 @@ function bnc_filter_iphone() {
             // in theory, they have selected "Your latest posts" in WordPress, so do nothing
          }
 	   }
+      */
 }
+
 
 function detectAppleMobile($query = '') {
 	$container = $_SERVER['HTTP_USER_AGENT'];
@@ -179,6 +196,19 @@ function theme_root_uri($url) {
 global $wptouch_plugin;
 	$wptouch_plugin = new WPtouchPlugin();
 
+function bnc_get_page_id_with_name($name) {
+   global $table_prefix;
+   if (mysql_connect(DB_HOST, DB_USER, DB_PASSWORD)) {
+      if (mysql_select_db(DB_NAME)) {
+         $sql = 'select id from ' . $table_prefix . 'posts where post_title = \'' . $name . '\';';
+         $result = mysql_query($sql);
+         while ($row = mysql_fetch_assoc($result)) {
+            print_r($result);
+         }
+      }
+   }
+}
+
 function bnc_is_iphone() {
 	global $wptouch_plugin;
 		return $wptouch_plugin->applemobile;
@@ -209,6 +239,12 @@ if ($v != null) {
 	return $v;
 	}
 }
+
+function bnc_get_selected_home_page() {
+   $v = bnc_wp_touch_get_menu_pages();
+   return $v['home-page'];
+}
+   
   
 function bnc_get_title_image() {
 	$ids = bnc_wp_touch_get_menu_pages();
@@ -528,6 +564,15 @@ return $v['link-color'];
 			$a['enable-main-categories'] = 0;
 		 }
 
+      if (isset($_POST['home-page'])) {
+         $a['home-page'] = $_POST['home-page'];
+         if (strlen($a['home-page']) == 0) {
+            $a['home-page'] = 'Default';
+         }
+      } else {
+         $a['home-page'] = 'Default';
+      }
+
 		  foreach ($_POST as $k => $v) {
 			  if ($k == 'enable_main_title') {
 				  $a['main_title'] = $v;
@@ -627,6 +672,10 @@ return $v['link-color'];
 			$v['enable-main-categories'] = 1;
 			}
 
+         if (!isset($v['home-page'])) {
+            $v['home-page'] = 'Default';
+         }
+
 	?>
 	
   <form method="post" action="<?php echo $_SERVER['REQUEST_URI']; ?>">
@@ -692,7 +741,8 @@ The News Section
 
 	<div class="wptouch-item-content-box1">
       <div class="wptouch-select-row">
-         <div class="wptouch-select-left"><label for="home-page">Override Home Page</label></div><div class="wptouch-select-right"><?php wp_dropdown_pages('show_option_none=Default%20Behaviour&name=home-page'); ?></div>
+         <?php $sel = bnc_get_page_id_with_name(bnc_get_selected_home_page()); ?>
+         <div class="wptouch-select-left"><label for="home-page">Override Home Page</label></div><div class="wptouch-select-right"><?php wp_dropdown_pages('show_option_none=Default&name=home-page&selected=' . bnc_get_selected_home_page()); ?></div>
       </div>
    </div>
 
