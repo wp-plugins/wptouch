@@ -763,20 +763,26 @@ The Javascript Section
 	
 		<div class="wptouch-item-content-box1">
 <div class="wptouch-checkbox-row"><input type="checkbox" name="enable-login-button" <?php if (isset($v['enable-login-button']) && $v['enable-login-button'] == 1) echo('checked'); ?>><label for="enable-login-button"> Enable Login From The Header <small>(will add a login button beside search &amp; menu buttons)</small></label></div>
-		
+	
+<!--	
 <div class="wptouch-checkbox-row withhr"><input type="checkbox" name="enable-redirect" <?php if (isset($v['enable-redirect']) && $v['enable-redirect'] == 1) echo('checked'); ?>><label for="enable-redirect">Automatic Redirection <small>(makes your posts page the WPtouch frontpage - on by default)</small></label></div>		
+-->
+
 
 			<div class="wptouch-checkbox-row"><input type="checkbox" name="enable-js-header" <?php if (isset($v['enable-js-header']) && $v['enable-js-header'] == 1) echo('checked'); ?>><label for="enable-js-header"> Use Advanced <a href="http://www.jquery.com/" target="_blank">jQuery</a> Javascript Effects <small>(ajax entries, ajax comments, smooth effects)</small></label></div>
 			
 		<div class="wptouch-checkbox-row"><input type="checkbox" name="enable-gravatars" <?php if (isset($v['enable-gravatars']) && $v['enable-gravatars'] == 1) echo('checked'); ?>><label for="enable-gravatars"> Enable Gravatars in Comments</label></div>
 		
 		<div class="wptouch-checkbox-row"><input type="checkbox" name="enable-page-coms" <?php if (isset($v['enable-page-coms']) && $v['enable-page-coms'] == 1) echo('checked'); ?>><label for="enable-page-coms"> Enable Comments For Pages <small>(will add the comment form to <strong>all</strong> pages by default)</small></label></div>
-			
+		
+      <!--	
 		<h4 id="wptouch-js">If automatic redirection is unchecked:</h4>		
 				<ul class="wptouch-small-menu">
 					<li>WPtouch will use your defined front page <small>(If you've set one)</small></li>
 					<li>*Can fix errors where WPtouch displays a white screen, or 'too many redirects' message in mobileSafari</li>
 		   		</ul>
+      -->
+
 		<h4 id="wptouch-js">If advanced javascript is unchecked:</h4>
 				<ul class="wptouch-small-menu">
 					<li>Site is faster on 3G/EDGE connections</li>
