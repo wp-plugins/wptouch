@@ -684,7 +684,9 @@ The News Section
 	<div class="wptouch-item-desc">
 	<h2>Home Page Redirection</h2>
 	<p>
-   For the home page, WPtouch follows the default behavior for WordPress.  If you'd like to specify a new home page, select it from the list on the right.
+   For your home page, WPtouch follows the default behavior you've defined in WordPress.
+   <br /><br />
+   If you'd like to specify a different home page (or your posts page for example) select it from the list on the right.
    </p>
 	</div>
 
