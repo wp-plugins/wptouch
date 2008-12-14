@@ -1,127 +1,41 @@
-float: left;
-}
+/* @override http://24.36.70.109:9098/wp-content/plugins/wptouch/admin-css/wptouch-admin.css */
 
-.wptouch-select-right {
+/* @group Header */
+
+#wptouch-theme .wptouch-version {
+	font-size: 16px;
 	float: right;
+	color: #ccc;
 	position: relative;
-	bottom: 4px;
+	bottom: 20px;
 }
 
-.wptouch-select-right select {
-	width: 120px;
+#wptouch-theme #wptouch-title {
+	border-bottom: 1px solid #dedede;
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
 
-.wptouch-checkbox-row {
-}
-
-.wptouch-checkbox-row label {
-	margin-left: 5px;
-}
-
-
-
-/* @end */
-
-/* @group Plugin Support */
-
-#wptouch-theme .wptouch-admin-plugins img {
-	position: relative;
-	top: 4px;
-}
-
-#wptouch-theme .all-good {
-	border: 1px solid #8aceff;
-	background-color: #e2f5fe;
-	padding: 0 3px 5px 5px;
+#wptouch-theme .wptouch-thhead {
+	font-size: 16px;
 	display: block;
-	margin-bottom: 5px;
-	font-size: 11px;
-	line-height: 15px;
-	border-radius: 3px;
-	-mox-border-radius: 3px;
-	-webkit-border-radius: 3px;
+	color: #d54e21;
+	text-align: left;
 }
 
-#wptouch-theme .sort-of {
-	border: 1px solid #ffc900;
-	background-color: #fee8b9;
-	padding: 0 3px 6px 5px;
-	display: block;
-	margin-bottom: 5px;
+#wptouch-theme .wptouch-thtext {
+	font-weight: normal;
+	font-style: normal;
 	font-size: 11px;
-	line-height: 15px;
-	border-radius: 3px;
-	-mox-border-radius: 3px;
-	-webkit-border-radius: 3px;
-}
-
-#wptouch-theme .too-bad {
-	border: 1px solid #f96764;
-	background-color: #ffaab1;
-	padding: 0 3px 6px 5px;
-	display: block;
-	margin-bottom: 5px;
-	font-size: 11px;
-	line-height: 15px;
-	border-radius: 3px;
-	-mox-border-radius: 3px;
-	-webkit-border-radius: 3px;
+	text-align: left;
+	margin-top: 15px;
+	color: #333;
+	margin-right: 25px;
 }
 
 
 
 /* @end */
-
-/* @group Save Button */
-
-#wptouch-theme input#wptouch-button {
-	border: 1px solid #b9d6de;
-	background-color: #264761;
-	color: #c3e1ef;
-	-webkit-border-radius:5px;
-	padding: 7px;
-	font-weight: bold;
-	font-size: 12px;
-	margin-top: 10px;
-	cursor: pointer;
-}
-
-#wptouch-theme input#wptouch-button:active {
-	border: 1px solid #b9d6de;
-	background-color: #d54e21;
-	color: #eee;
-	-webkit-border-radius:5px;
-	padding: 7px;
-	font-weight: bold;
-	font-size: 12px;
-	margin-top: 10px;
-}
-
-
-
-/* @end */
-
-/* @group Javascript Options */
-
-#wptouch-theme h4#wptouch-js {
-}
-
-#wptouch-theme ul.wptouch-small-menu {
-	list-style-type: circle;
-	font-size: 12px;
-	color: #444;
-	padding: 0;
-}
-
-
-
-/* @end */
-
-/* @override http://24.150.116.198:9098/wp-content/plugins/wptouch/admin-css/wptouch-admin.css */
-
-/* 
-WPtouch Admin Styles for WordPress 2.1+
-*/
 
 #wptouch-theme {
 	font-family: "Lucida Grande", Georgia, Arial, sans-serif;
@@ -153,58 +67,10 @@ WPtouch Admin Styles for WordPress 2.1+
 	clear: both;
 }
 
-/* @group Header */
-
-#wptouch-theme .wptouch-version {
-	font-size: 16px;
-	float: right;
-	color: #ccc;
-	position: relative;
-	bottom: 20px;
-}
-
-#wptouch-theme #wptouch-title {
-	padding-bottom: 43px;
-	border-bottom: 1px solid #dedede;
-}
-
-#wptouch-theme #wptouch-title img {
-	position: relative;
-}
-
-#wptouch-theme #wptouch-title img.logo {
-	position: relative;
-	z-index: 1;
-	padding: 0;
-	top: 38px;
-	margin: -15px 0 0;
-}
-
-#wptouch-theme .wptouch-thhead {
-	font-size: 16px;
-	display: block;
-	color: #d54e21;
-	text-align: left;
-}
-
-#wptouch-theme .wptouch-thtext {
-	font-weight: normal;
-	font-style: normal;
-	font-size: 11px;
-	text-align: left;
-	margin-top: 15px;
-	color: #333;
-	margin-right: 25px;
-}
-
-
-
-/* @end */
-
 /* @group DIV Classes */
 
 #wptouch-theme .wptouch-item-desc h2 {
-	color: #d54e21;
+	color: #21759b;
 	display: block;
 	width: 100%;
 	border-bottom-style: none;
@@ -218,10 +84,7 @@ WPtouch Admin Styles for WordPress 2.1+
 	display: block;
 	border-bottom: 1px solid #dedede;
 	margin-top: 10px;
-}
-
-* {
-	
+	font-size: 11px;
 }
 
 #wptouch-theme .wptouch-item-desc {
@@ -244,6 +107,31 @@ WPtouch Admin Styles for WordPress 2.1+
 	padding-bottom: 15px;
 	display: block;
 	margin-left: 30%;
+	font-size: 11px;
+}
+
+.wptouch-select-right select {
+	width: 120px;
+}
+
+.wptouch-checkbox-row label {
+	margin-left: 5px;
+}
+
+
+
+/* @end */
+
+/* @group Javascript Options Section */
+
+#wptouch-theme h4#wptouch-js {
+}
+
+#wptouch-theme ul.wptouch-small-menu {
+	list-style-type: circle;
+	color: #444;
+	padding: 0;
+	font-size: 11px;
 }
 
 
@@ -274,11 +162,11 @@ WPtouch Admin Styles for WordPress 2.1+
 }
 
 #wptouch-news-donate {
-   float: right;
-   width: 315px;
    font-size: 11px;
    line-height: 1.3;
 	position: relative;
+	width: 30%;
+	float: right;
 	bottom: 25px;
 }
 
@@ -323,10 +211,10 @@ WPtouch Admin Styles for WordPress 2.1+
 
 /* @end */
 
-/* @group Style */
+/* @group Styling Section */
 
 #wptouch-theme #wptouchstyle .header-item-desc {
-	
+	font-size: 11px;
 }
 
 #wptouch-theme #wptouchstyle input {
@@ -334,17 +222,18 @@ WPtouch Admin Styles for WordPress 2.1+
 	border: 1px solid #CCC;
 	background-color: #e2fffc;
 	color: #444;
-	padding: 5px;
-	font-size: 14px;
+	padding: 2px;
+	font-size: 11px;
 	margin-top: 5px;
 	margin-bottom: 10px;
+	font-weight: bold;
 }
 
 
 
 /* @end */
 
-/* @group Post Listings */
+/* @group Post Listings Section */
 
 #wptouch-theme .wptouch-checkbox-row {
 	margin-bottom: 5px;
@@ -361,7 +250,7 @@ WPtouch Admin Styles for WordPress 2.1+
 
 /* @end */
 
-/* @group Available Icons */
+/* @group Available Icons Section */
 
 #wptouch-theme ul.wptouch-iconblock {
 	float: left;
@@ -392,7 +281,7 @@ WPtouch Admin Styles for WordPress 2.1+
 
 /* @end */
 
-/* @group Logo/Bookmark, Page & Menu Icons */
+/* @group Logo/Bookmark, Page & Menu Icons Section */
 
 #wptouch-theme .wptouch-select-row label {
 	margin-left: 5px;
@@ -441,7 +330,7 @@ WPtouch Admin Styles for WordPress 2.1+
 
 /* @end */
 
-/* @group Plugin Support */
+/* @group Plugin Support Section */
 
 #wptouch-theme .wptouch-admin-plugins img {
 	position: relative;
@@ -500,7 +389,7 @@ WPtouch Admin Styles for WordPress 2.1+
 	-webkit-border-radius:5px;
 	padding: 7px;
 	font-weight: bold;
-	font-size: 12px;
+	font-size: 11px;
 	margin-top: 10px;
 	cursor: pointer;
 }
@@ -512,24 +401,7 @@ WPtouch Admin Styles for WordPress 2.1+
 	-webkit-border-radius:5px;
 	padding: 7px;
 	font-weight: bold;
-	font-size: 12px;
 	margin-top: 10px;
-}
-
-
-
-/* @end */
-
-/* @group Javascript Options */
-
-#wptouch-theme h4#wptouch-js {
-}
-
-#wptouch-theme ul.wptouch-small-menu {
-	list-style-type: circle;
-	font-size: 12px;
-	color: #444;
-	padding: 0;
 }
 
 
