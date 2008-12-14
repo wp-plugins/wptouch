@@ -157,17 +157,16 @@
 
 #wptouch-news-frame {
    float: left;
-   width: 300px;
    margin-top: -10px;
 }
 
 #wptouch-news-donate {
    font-size: 11px;
-   line-height: 1.3;
 	position: relative;
-	width: 30%;
 	float: right;
 	bottom: 25px;
+	line-height: 16px;
+	width: 28%;
 }
 
 #wptouch-news-frame h3 {
@@ -195,12 +194,14 @@
 #wptouch-news ul {
 	margin: 0;
 	padding: 0;
+	list-style-type: none;
 }
 
 #wptouch-news li {
-	list-style-type: circle;
-	padding: 0;
+	padding: 4px 0;
 	margin: 0;
+	list-style-type: none;
+	border-bottom: 1px solid #e6e6e6;
 }
 
 .donate-spacer {
