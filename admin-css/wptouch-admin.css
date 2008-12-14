@@ -3,11 +3,12 @@
 /* @group Header */
 
 #wptouch-theme .wptouch-version {
-	font-size: 16px;
-	float: right;
 	color: #ccc;
 	position: relative;
-	bottom: 20px;
+	font: 18px Georgia;
+	float: left;
+	margin-top: 10px;
+	margin-bottom: -30px;
 }
 
 #wptouch-theme #wptouch-title {
@@ -407,12 +408,12 @@
 /* @group Home Page Block */
 
 #wptouch-theme .home-page-block {
-	
 }
 
 #wptouch-theme .home-page-block .wptouch-select-row {
 	padding-top: 10px;
 	padding-bottom: 25px;
+	width: 55%;
 }
 
 #wptouch-theme .home-page-block .wptouch-select-row select {

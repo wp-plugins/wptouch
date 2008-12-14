@@ -475,11 +475,11 @@ return $v['link-color'];
 		  echo('<div class="wrap"><div id="wptouch-theme">');
 		  echo('<div id="wptouchupdated">Your new WPtouch settings were saved.</div>');
 		  echo('<div id="wptouch-title"><img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/admin-header.png" class="logo" alt="" /></div>');
-	  echo('' . WPtouch('<div class="wptouch-version">','</div>') . '');
+//	  echo('' . WPtouch('<div class="wptouch-version">','</div>') . '');
 	  } else {
 		  echo('<div class="wrap"><div id="wptouch-theme">');
 		  echo('<div id="wptouch-title"><img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/admin-header.png" class="logo" alt="" /></div>');
-	  echo('' . WPtouch('<div class="wptouch-version">','</div>') . '');
+	//  echo('' . WPtouch('<div class="wptouch-version">','</div>') . '');
 	  }
 ?>
 
@@ -1124,7 +1124,8 @@ The Plugin Section
 	
 			</div>
 		</div>
- 	 <input type="submit" name="submit" value="<?php _e('Save Options', 'submit'); ?>" id="wptouch-button" />
+ 		<?php echo('' . WPtouch('<div class="wptouch-version"> This is ','</div>') . ''); ?>
+ <input type="submit" name="submit" value="<?php _e('Save Options', 'submit'); ?>" id="wptouch-button" />
   </form>
 </div>
 
