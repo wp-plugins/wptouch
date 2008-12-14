@@ -86,12 +86,32 @@ function bnc_filter_iphone() {
    // check for a static home page, serve up the posts page as WPtouch home
 		if ($this->desired_view == 'mobile') {
 			$blog = get_option('page_for_posts');
+         $show = get_option('show_on_front');
+         $front = get_option('page_on_front');
+   
+         //echo($blog . ' | ' . $show . ' | ' . $front . ' | ' . $what . '<br>');
+         if ($show === 'page') {
+            // this means that the user has selected the "static page" radio button in WordPress
 				if ($blog) {
 					if (function_exists('is_front_page') && is_front_page() && $this->applemobile && bnc_is_redirect_enable()) { 
 				      header('Location: ' . get_permalink($blog));
 			         die;
-			      }
-		      }
+			      } else {
+                  // the "blog" portion is not valid, probably still stuck on "select"
+               }
+		      } else {
+               // this is where we should check to see if the home page is at least defined, and then go there
+               $front = intval(get_option('page_on_front'));
+               if ($front && function_exists('is_front_page') && !is_front_page() && $this->applemobile && bnc_is_redirect_enable()) {
+                  $url = get_bloginfo('siteurl') . '/?p=' . $front;
+                  echo $url; die;
+                  header('Location: ' . get_bloginfo('siteurl') . '/?p=' . $front);
+                  die;
+               }
+            }
+         } else {
+            // in theory, they have selected "Your latest posts" in WordPress, so do nothing
+         }
 	   }
 }
 
@@ -617,6 +637,8 @@ return $v['link-color'];
 		</div>				
 	</div>	
 	 -->
+
+
 	
 <?php
 /*
@@ -650,6 +672,29 @@ The News Section
 	
 	<div class="wptouch-clearer"></div>
    <div class="donate-spacer"></div>
+</div>
+
+<?php
+/*
+   Home Page Redirection Area
+*/
+?>
+
+<div class="wptouch-itemrow home-page-block">
+	<div class="wptouch-item-desc">
+	<h2>Home Page Redirection</h2>
+	<p>
+   For the home page, WPtouch follows the default behavior for WordPress.  If you'd like to specify a new home page, select it from the list on the right.
+   </p>
+	</div>
+
+	<div class="wptouch-item-content-box1">
+      <div class="wptouch-select-row">
+         <div class="wptouch-select-left"><label for="home-page">Override Home Page</label></div><div class="wptouch-select-right"><?php wp_dropdown_pages('show_option_none=Default%20Behaviour&name=home-page'); ?></div>
+      </div>
+   </div>
+
+   <div class="clear"></div>
 </div>
 
 <?php
@@ -873,6 +918,7 @@ The Default Menu Item Section
 	
 				<div class="wptouch-checkbox-row"><input type="checkbox" name="enable-main-email" <?php if (isset($v['enable-main-email']) && $v['enable-main-email'] == 1) echo('checked'); ?>><label for="enable-main-email">Enable Email Icon</label></div>
 		</div>
+
 	<div class="wptouch-clearer"></div>
 </div>
 
