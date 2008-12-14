@@ -472,8 +472,8 @@ return $v['link-color'];
   function bnc_wp_touch_page()
   {
 	  if (isset($_POST['submit'])) {
-		  echo('<div class="updated"><p>Options changes saved.</p></div>');
 		  echo('<div class="wrap"><div id="wptouch-theme">');
+		  echo('<div id="wptouchupdated">Your WPtouch Options changes were saved.</div>');
 		  echo('<div id="wptouch-title"><img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/admin-header.png" class="logo" alt="" /></div>');
 	  echo('' . WPtouch('<div class="wptouch-version">','</div>') . '');
 	  } else {

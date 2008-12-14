@@ -14,23 +14,7 @@
 	border-bottom: 1px solid #dedede;
 	padding-top: 10px;
 	padding-bottom: 10px;
-}
-
-#wptouch-theme .wptouch-thhead {
-	font-size: 16px;
-	display: block;
-	color: #d54e21;
-	text-align: left;
-}
-
-#wptouch-theme .wptouch-thtext {
-	font-weight: normal;
-	font-style: normal;
-	font-size: 11px;
-	text-align: left;
-	margin-top: 15px;
-	color: #333;
-	margin-right: 25px;
+	height: 216px;
 }
 
 
@@ -142,7 +126,8 @@
 
 .newsblock {
 	position: relative;
-	bottom: 10px;
+	clear: both;
+	bottom: 5px;
 }
 
 .wptouch-itemrow h3 {
@@ -410,9 +395,43 @@
 	background-color: #d54e21;
 	color: #eee;
 	-webkit-border-radius:5px;
+	-mozilla-border-radius:5px;
 	font-weight: bold;
 }
 
 
 
 /* @end */
+
+/* @group Home Page Block */
+
+#wptouch-theme .home-page-block {
+	
+}
+
+#wptouch-theme .home-page-block .wptouch-select-row {
+	padding-top: 10px;
+	padding-bottom: 25px;
+}
+
+#wptouch-theme .home-page-block .wptouch-select-row select {
+	width: 200px;
+}
+
+
+
+/* @end */
+
+#wptouch-theme #wptouchupdated {
+	position: relative;
+	font-weight: bold;
+	background-color: #f0f6fb;
+	-webkit-border-radius:5px;
+	-mozilla-border-radius:5px;
+	border: 1px solid #c3d5e7;
+	color: #d54e21;
+	margin: 7px 0 15px;
+	top: 8px;
+	width: 90%;
+	padding: 6px;
+}
