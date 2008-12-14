@@ -384,15 +384,25 @@
 /* @group Save Button */
 
 #wptouch-theme input#wptouch-button {
-	border: 1px solid #b9d6de;
-	background-color: #264761;
-	color: #c3e1ef;
+	background-color: #E4F2FD;
+	color: #264761;
+	border: 1px solid #5289b2;
 	-webkit-border-radius:5px;
-	padding: 7px;
 	font-weight: bold;
 	font-size: 11px;
 	margin-top: 10px;
 	cursor: pointer;
+	padding-right: 5px;
+	padding-left: 5px;
+	clear: both;
+	margin-bottom: 25px;
+	float: right;
+}
+
+#wptouch-theme input#wptouch-button:hover {
+	border: 1px solid #b9d6de;
+	background-color: #264761;
+	color: #c3e1ef;
 }
 
 #wptouch-theme input#wptouch-button:active {
@@ -400,9 +410,7 @@
 	background-color: #d54e21;
 	color: #eee;
 	-webkit-border-radius:5px;
-	padding: 7px;
 	font-weight: bold;
-	margin-top: 10px;
 }
 
 
