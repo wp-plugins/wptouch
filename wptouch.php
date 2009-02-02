@@ -810,7 +810,12 @@ The Javascript Section
 		   		</ul>
 
 		<h4 id="Statistics">If you'd like to capture traffic statistics:</h4>
-			<textarea name="statistics" onclick="this.value=''">Please enter the javascript code for your statistics tracking here...  </textarea>
+				<?php if (isset($v['statistics']))  { ?>
+					<textarea name="statistics"><?php echo stripslashes($v['statistics']); ?>
+				<?php } else { ?>
+					<textarea name="statistics" onclick="this.value=''"><?php echo ('Please enter the javascript code for your statistics tracking here...'); ?>
+				<?php } ?>
+				</textarea>
 		</div>
 	<div class="wptouch-clearer"></div>
 </div>
