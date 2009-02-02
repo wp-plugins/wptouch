@@ -3,6 +3,7 @@
 FOOTER
 Here the switch code is very important, as well as the php code which deals with admin links and WordPress
 -->
+<?php wptouch_get_stats(); ?>
 <div id="footer">
 			<p>
 				<h3>iPhone View | <a href="<?php echo bloginfo('home') . '/?bnc_view=normal'; ?>">Normal View</a></h3>	

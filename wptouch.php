@@ -248,6 +248,13 @@ function bnc_get_selected_home_page() {
    $v = bnc_wp_touch_get_menu_pages();
    return $v['home-page'];
 }
+
+function wptouch_get_stats() {
+	$options = bnc_wp_touch_get_menu_pages();
+	if (isset($options['statistics'])) {
+		echo stripslashes($options['statistics']);
+	}
+}
    
   
 function bnc_get_title_image() {
@@ -577,6 +584,10 @@ return $v['link-color'];
          $a['home-page'] = 'Default';
       }
 
+		if (isset($_POST['statistics'])) {
+			$a['statistics'] = $_POST['statistics'];
+		}
+
 		  foreach ($_POST as $k => $v) {
 			  if ($k == 'enable_main_title') {
 				  $a['main_title'] = $v;
@@ -599,8 +610,8 @@ return $v['link-color'];
 		 $a['header-text-color'] = $_POST['header-text-color'];
 		 $a['link-color'] = $_POST['link-color'];
 		
-			$values = serialize($a);
-		 update_option('bnc_iphone_pages', $values);
+		$values = serialize($a);
+		update_option('bnc_iphone_pages', $values);
 }
 	  
 			$v = get_option('bnc_iphone_pages');
@@ -797,6 +808,9 @@ The Javascript Section
 					<li>Gravatars <strong>are not</strong> loaded in coments</li>
 					<li>Site is faster on 3G/EDGE connections</li>
 		   		</ul>
+
+		<h4 id="Statistics">If you'd like to capture traffic statistics:</h4>
+			<textarea name="statistics" onclick="this.value=''">Please enter the javascript code for your statistics tracking here...  </textarea>
 		</div>
 	<div class="wptouch-clearer"></div>
 </div>
@@ -1119,7 +1133,7 @@ The Plugin Section
 					  <?php
 		  //Super-Cache Plugin Check
 		  if (function_exists('wp_super_cache_footer')) { ?>
-	 <div class="too-bad"><img src="<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/images/bad.png" alt="" /> Yikes! <a href="http://ocaoimh.ie/wp-super-cache/" target="_blank">WP Super Cache</a>. <strong>Currently, it does <em>not</em> work fully with WPtouch.</strong> Visit the <a href="http://www.bravenewcode.com/wptouch/">WPtouch homepage</a> for updates.</div>
+	 <div class="sort-of"><img src="<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/images/sortof.png" alt="" /> <a href="http://ocaoimh.ie/wp-super-cache/" target="_blank">WP Super Cache</a> support is currently experimental. Please visit <a href="http://www.bravenewcode.com/2009/01/05/wptouch-and-wp-super-cache/">this page</a> for more information.</div>
 	  
 	  <?php } else { ?>
 	  
