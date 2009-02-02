@@ -1,7 +1,4 @@
-/* @override 
-	http://24.150.116.198:9098/wp-content/plugins/wptouch/themes/default/style.css
-	http://24.36.119.47:9098/wp-content/themes/default/style.css
-*/
+/* @override http://24.36.119.47:9098/wp-content/plugins/wptouch/themes/default/style.css */
 
 /*  
 Theme Name: WPtouch iPhone & iPod touch Plugin / Theme
@@ -525,22 +522,6 @@ a.ajax {
 
 /* @group Image Gallery */
 
-.gallery {
-		max-width: 277px;
-	height: auto;
-	padding-left: 15px;
-}
-
-.gallery dl.gallery-item {
-	margin-right: 0;
-	float: left;
-}
-
-.gallery img {
-			width: 72px;
-	float: left;
-}
-
 
 
 /* @end */
@@ -664,19 +645,33 @@ img.small {
 	font-size: 11px;
 	color: #999;
 	line-height: 13px;
+}
+
+#singlentry .gallery {
+	margin: 0;
+	padding: 0;
 	width: 100%;
+	height: auto;
 }
 
-#singlentry dl.galleryitem {
-	width: 20%;
+#singlentry .gallery dl.gallery-item img.attachment-thumbnail {
+	padding: 3px;
+	margin: 10px;
+	width: 50%;
 	height: auto;
-	margin-right: 5%;
-	float: left;
 }
 
-#singlentry .gallery img.attachment-thumbnail {
-	height: auto;
-	width: auto;
+#singlentry .gallery dl.gallery-item {
+	margin: 0;
+}
+
+#singlentry .gallery dl.gallery-item dt.gallery-icon {
+	margin: 0;
+}
+
+#singlentry .gallery dl.gallery-item dd.gallery-caption {
+	font-size: 11px;
+	color: #555;
 }
 
 /* @group Social Bookmarking */
