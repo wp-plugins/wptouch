@@ -1,6 +1,7 @@
 /* @override 
 	http://24.36.70.109:9098/wp-content/plugins/wptouch/admin-css/wptouch-admin.css
 	http://24.36.119.47:9107/wp-content/plugins/wptouch/admin-css/wptouch-admin.css
+	http://24.36.119.47:9098/wp-content/plugins/wptouch/admin-css/wptouch-admin.css
 */
 
 /* @group Header */
@@ -123,6 +124,15 @@
 	font-size: 11px;
 }
 
+#wptouch-theme textarea {
+	width: 70%;
+	font-size: 11px;
+	color: #555;
+	border: 1px solid #999;
+	-webkit-border-radius: 5px;
+	-mozilla-border-radius: 5px;
+}
+
 
 
 /* @end */
@@ -193,7 +203,7 @@
 	list-style-type: none;
 	border-bottom: 1px solid #e6e6e6;
 	display: block;
-	width: 160%;
+	width: 150%;
 }
 
 .donate-spacer {
