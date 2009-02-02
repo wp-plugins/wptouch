@@ -24,12 +24,16 @@
    
 //update_option('bnc_iphone_pages', serialize(''));
 //	update_option('bnc_iphone_pages', serialize($defaults));
-$bnc_option = get_option('bnc_iphone_pages');
+function wptouch_init() {
+	$bnc_option = get_option('bnc_iphone_pages');
 	if ($bnc_option == null) {
-	$defaults = array();
-	$defaults['header-background-color'] = '222222';
-	$defaults['header-title'] = '' . get_bloginfo('title') . '';
+		$defaults = array();
+		$defaults['header-background-color'] = '222222';
+		$defaults['header-title'] = '' . get_bloginfo('name') . '';
+	}
 }
+
+add_filter('init', 'wptouch_init');
 
 // WPtouch Theme Options
 $bnc_wptouch_version = '1.6';
