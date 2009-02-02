@@ -1,4 +1,7 @@
-/* @override http://24.36.70.109:9098/wp-content/plugins/wptouch/admin-css/wptouch-admin.css */
+/* @override 
+	http://24.36.70.109:9098/wp-content/plugins/wptouch/admin-css/wptouch-admin.css
+	http://24.36.119.47:9107/wp-content/plugins/wptouch/admin-css/wptouch-admin.css
+*/
 
 /* @group Header */
 
@@ -189,6 +192,8 @@
 	margin: 0;
 	list-style-type: none;
 	border-bottom: 1px solid #e6e6e6;
+	display: block;
+	width: 160%;
 }
 
 .donate-spacer {
@@ -381,8 +386,8 @@
 	cursor: pointer;
 	padding-right: 5px;
 	padding-left: 5px;
+	margin-bottom: 70px;
 	clear: both;
-	margin-bottom: 25px;
 	float: right;
 }
 

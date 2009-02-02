@@ -1,4 +1,7 @@
-/* @override http://24.150.116.198:9098/wp-content/plugins/wptouch/themes/default/style.css */
+/* @override 
+	http://24.150.116.198:9098/wp-content/plugins/wptouch/themes/default/style.css
+	http://24.36.119.47:9098/wp-content/themes/default/style.css
+*/
 
 /*  
 Theme Name: WPtouch iPhone & iPod touch Plugin / Theme
@@ -157,12 +160,14 @@ blockquote {
 #wptouch-login {
 	background: url(images/search-back.png) repeat-x;
 	text-align: center;
-	height: 41px;
+	height: 39px;
 	position: relative;
 	bottom: 1px;
-	border-bottom: 8px solid #444;
+	border-bottom: 1px solid #555;
 	margin: 0;
 	padding: 0;
+	-webkit-box-shadow: #555 -5px 2px 5px;	padding: 0;
+
 }
 
 #wptouch-login-inner {
@@ -177,6 +182,7 @@ blockquote {
 	padding: 3px;
 	font-size: 13px;
 	color: #222;
+	font-weight: bold;
 }
 
 #wptouch-login input#pwd {
@@ -186,6 +192,7 @@ blockquote {
 	padding: 3px;
 	font-size: 13px;
 	color: #222;
+	font-weight: bold;
 }
 
 #wptouch-login input#logsub {
@@ -196,7 +203,7 @@ blockquote {
 	background-color: #fff;
 	padding: 3px;
 	width: 60px;
-	height: 25px;}
+	height: 23px;}
 
 
 
@@ -383,32 +390,28 @@ a.h2 {
 	border-bottom-style: dashed;
 }
 
-#singlentry img {
-	max-width: 277px;
-	height: auto;}
-
 .mainentry img {
 	max-width: 277px;
 	height: auto;}
 
 .comment-bubble {
 	background: url(images/unread-com.png) no-repeat;
-	width: 22px;
-	height: 20px;
+	width: 24px;
+	height: 24px;
 	opacity: 1;
 	padding-top: 3px;
 	text-align: center;
-	font-size: 11px;
+	font-size: 13px;
 	float: left;
 	display: inline;
 	position: relative;
 	color: #fff;
 	z-index: 9;
-	left: 15px;
+	left: 14px;
 	padding-left: 0;
 	letter-spacing: -1px;
 	font-weight: bold;
-	top: 5px;
+	top: 3px;
 }
 
 .comment-bubble-big {
@@ -593,6 +596,10 @@ a.sh2 {
 	display: block;
 	padding-top: 5px;}
 
+#singlentry img {
+	max-width: 100%;
+	height: auto;}
+
 .single-post-meta-top {
 	text-align: left;
 	color: #999;
@@ -651,6 +658,26 @@ img.small {
 
 .alignright {
 	float: right;}
+
+#singlentry .wp-caption {
+	text-align: center;
+	font-size: 11px;
+	color: #999;
+	line-height: 13px;
+	width: 100%;
+}
+
+#singlentry dl.galleryitem {
+	width: 20%;
+	height: auto;
+	margin-right: 5%;
+	float: left;
+}
+
+#singlentry .gallery img.attachment-thumbnail {
+	height: auto;
+	width: auto;
+}
 
 /* @group Social Bookmarking */
 
