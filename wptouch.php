@@ -98,47 +98,12 @@ function bnc_filter_iphone() {
    } else {
       $this->desired_view = 'mobile';
    }
-
-   // new Behaviour for redirection
-
-   // check for a static home page, serve up the posts page as WPtouch home
-   /*
-		if ($this->desired_view == 'mobile') {
-			$blog = get_option('page_for_posts');
-         $show = get_option('show_on_front');
-         $front = get_option('page_on_front');
    
-         //echo($blog . ' | ' . $show . ' | ' . $front . ' | ' . $what . '<br>');
-         if ($show === 'page') {
-            // this means that the user has selected the "static page" radio button in WordPress
-				if ($blog) {
-					if (function_exists('is_front_page') && is_front_page() && $this->applemobile && bnc_is_redirect_enable()) { 
-				      header('Location: ' . get_permalink($blog));
-			         die;
-			      } else {
-                  // the "blog" portion is not valid, probably still stuck on "select"
-               }
-		      } else {
-               // this is where we should check to see if the home page is at least defined, and then go there
-               $front = intval(get_option('page_on_front'));
-               if ($front && function_exists('is_front_page') && !is_front_page() && $this->applemobile && bnc_is_redirect_enable()) {
-                  $url = get_bloginfo('siteurl') . '/?p=' . $front;
-                  echo $url; die;
-                  header('Location: ' . get_bloginfo('siteurl') . '/?p=' . $front);
-                  die;
-               }
-            }
-         } else {
-            // in theory, they have selected "Your latest posts" in WordPress, so do nothing
-         }
-	   }
-      */
 }
-
 
 function detectAppleMobile($query = '') {
 	$container = $_SERVER['HTTP_USER_AGENT'];
-//the below out the user agent array. uncomment to see it shown on the page.
+//The below prints out the user agent array. Uncomment to see it shown on the page.
 //print_r($container); 
 
 // Add whatever user agents you want here to the array if you want to make this show on a Blackberry 
@@ -218,11 +183,11 @@ function bnc_is_iphone() {
 		return $wptouch_plugin->applemobile;
 }
   
-	// The Automatic Template Switch Code
+	// The Automatic Footer Template Switch Code (into 'wp_footer();')
 function wptouch_switch() {
 	global $wptouch_plugin;
 		if ($wptouch_plugin->applemobile) {
-			echo '<h2 id="switch-footer-links" style="margin-top:50px;margin-bottom:75px"><a href="' . get_bloginfo('siteurl') . '/?bnc_view=mobile">iPhone View</a> | Normal View</h2>';
+			echo '<h2 id="switch-footer-links"><a href="' . get_bloginfo('siteurl') . '/?bnc_view=mobile">iPhone View</a> | Normal View</h2>';
 	}
 }
   
@@ -691,18 +656,14 @@ return $v['link-color'];
             $v['home-page'] = 'Default';
          }
 
-	?>
+?>
 	
   <form method="post" action="<?php echo $_SERVER['REQUEST_URI']; ?>">
-  
-	<!-- 
+ 
 	<div id="wptouch-preview" style="display:none">
 		<div style="background: #<?php echo bnc_get_header_background(); ?> url(<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/themes/default/images/head-fade-bk.png) repeat-x; color:#<?php echo bnc_get_header_color(); ?>" id="head-prev"><img src="<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/images/icon-pool/<?php echo bnc_get_title_image(); ?>" alt="" /> <?php bloginfo('title'); ?>
 		</div>				
 	</div>	
-	 -->
-
-
 	
 <?php
 /*
@@ -748,7 +709,7 @@ The News Section
 	<div class="wptouch-item-desc">
 	<h2>Home Page Redirection</h2>
 	<p>
-   For your home page, WPtouch follows the default behavior you've defined in WordPress.
+   For your home page, WPtouch follows the default front page behavior you've defined in <a href="options-reading.php">WordPress -> Reading Options.</a>
    <br /><br />
    If you'd like to specify a different home page (or your posts page for example) select it from the list on the right.
    </p>
@@ -764,6 +725,7 @@ The News Section
    <div class="clear"></div>
 </div>
 
+
 <?php
 /*
 The Javascript Section
@@ -774,46 +736,35 @@ The Javascript Section
 	<div class="wptouch-item-desc">
 	<h2>Optimization &amp;<br />Template Options</h2>
 	<p>Choose to enable/disable enhanced javascript, gravatars, comments on pages, and login in the header</p>
+	<br /><br />
+	<strong>When advanced javascript is unchecked:</strong>
+				<ul class="wptouch-small-menu">
+					<li>Site is faster on 3G/EDGE connections</li>
+					<li>Ajax &amp; jQuery are not used for comments, entries, excerpts</li>
+				</ul>
+				<br />
+		<strong>When Gravatars are unchecked:</strong>	
+				<ul class="wptouch-small-menu">
+					<li>Gravatars <strong>are not</strong> loaded in coments</li>
+					<li>Site is faster on 3G/EDGE connections</li>
+		   		</ul>
+
 	</div>
 	
 		<div class="wptouch-item-content-box1">
 <div class="wptouch-checkbox-row"><input type="checkbox" name="enable-login-button" <?php if (isset($v['enable-login-button']) && $v['enable-login-button'] == 1) echo('checked'); ?>><label for="enable-login-button"> Enable Login From The Header <small>(will add a login button beside search &amp; menu buttons)</small></label></div>
-	
-<!--	
-<div class="wptouch-checkbox-row withhr"><input type="checkbox" name="enable-redirect" <?php if (isset($v['enable-redirect']) && $v['enable-redirect'] == 1) echo('checked'); ?>><label for="enable-redirect">Automatic Redirection <small>(makes your posts page the WPtouch frontpage - on by default)</small></label></div>		
--->
-
 
 			<div class="wptouch-checkbox-row"><input type="checkbox" name="enable-js-header" <?php if (isset($v['enable-js-header']) && $v['enable-js-header'] == 1) echo('checked'); ?>><label for="enable-js-header"> Use Advanced <a href="http://www.jquery.com/" target="_blank">jQuery</a> Javascript Effects <small>(ajax entries, ajax comments, smooth effects)</small></label></div>
 			
 		<div class="wptouch-checkbox-row"><input type="checkbox" name="enable-gravatars" <?php if (isset($v['enable-gravatars']) && $v['enable-gravatars'] == 1) echo('checked'); ?>><label for="enable-gravatars"> Enable Gravatars in Comments</label></div>
 		
 		<div class="wptouch-checkbox-row"><input type="checkbox" name="enable-page-coms" <?php if (isset($v['enable-page-coms']) && $v['enable-page-coms'] == 1) echo('checked'); ?>><label for="enable-page-coms"> Enable Comments For Pages <small>(will add the comment form to <strong>all</strong> pages by default)</small></label></div>
-		
-      <!--	
-		<h4 id="wptouch-js">If automatic redirection is unchecked:</h4>		
-				<ul class="wptouch-small-menu">
-					<li>WPtouch will use your defined front page <small>(If you've set one)</small></li>
-					<li>*Can fix errors where WPtouch displays a white screen, or 'too many redirects' message in mobileSafari</li>
-		   		</ul>
-      -->
 
-		<h4 id="wptouch-js">If advanced javascript is unchecked:</h4>
-				<ul class="wptouch-small-menu">
-					<li>Site is faster on 3G/EDGE connections</li>
-					<li>Ajax &amp; jQuery are not used for comments, entries, excerpts</li>
-				</ul>
-		<h4 id="wptouch-js">If Gravatars are unchecked:</h4>		
-				<ul class="wptouch-small-menu">
-					<li>Gravatars <strong>are not</strong> loaded in coments</li>
-					<li>Site is faster on 3G/EDGE connections</li>
-		   		</ul>
-
-		<h4 id="Statistics">If you'd like to capture traffic statistics:</h4>
+		<h4 id="Statistics">If you'd like to capture traffic statistics (Google Analytics, MINT, Etc):</h4>
 				<?php if (isset($v['statistics']))  { ?>
 					<textarea name="statistics"><?php echo stripslashes($v['statistics']); ?>
 				<?php } else { ?>
-					<textarea name="statistics" onclick="this.value=''"><?php echo ('Please enter the javascript code for your statistics tracking here...'); ?>
+					<textarea name="statistics" onclick="this.value=''"><?php echo ('Please enter the javascript code snippet(s) for your statistics tracking here. It will be automatically inserted into WPtouch in the right place. You can also add other code that you\'d like to be loaded when WPtouch loads.'); ?>
 				<?php } ?>
 				</textarea>
 		</div>
@@ -829,7 +780,7 @@ The Style Section
 
 <div class="wptouch-itemrow wptouchbump">
 	<div class="wptouch-item-desc">
-	<h2>Style & Color Options</h2>
+	<h2>Style &amp; Color Options</h2>
 		<p>
 		Customize the colors WPtouch will use for your website.<br /><br />
 		<a href="http://www.colorpicker.com/" target="_blank">Click here</a> to view a color picker to help you select your colors.
@@ -898,8 +849,8 @@ The Availabe Icons Section
 	<h2>Available Icons</h2>
 		<p>
 		You can select which icons will be displayed beside pages enabled below.<br /><br />
-		To add icons to the pool simply drop 60x60 (recommended) .jpg or .png images into the <strong>wptouch/images/icon-pool</strong> directory, then refresh this page to select them.<br /><br />
-		Also in the folder is a <strong>.psd template</strong> which you can use to build icons yourself.<br /><br />
+		To add icons to the pool simply drop 60x60 (recommended size) .png images into the <strong>wptouch/images/icon-pool</strong> directory, then refresh this page to select them.<br /><br />
+		Also in the same folder is a <strong>.psd template</strong> which you can use to build icons yourself.<br /><br />
 		<!-- More official icons are available for download on the <a href="http://www.bravenewcode.com/wptouch/">WPtouch homepage</a>. -->
 		</p>
 	</div>
@@ -1142,7 +1093,7 @@ The Plugin Section
 	  
 	  <?php } else { ?>
 	  
-	<div class="all-good"><img src="<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/images/good.png" alt="" /> Whew. No <a href="http://mnm.uib.es/gallir/wp-cache-2/" target="_blank">WP Super Cache</a>. <strong>Currently, it does <em>not</em> work fully with WPtouch.</strong>Visit the <a href="http://www.bravenewcode.com/wptouch/">WPtouch homepage</a> for updates.</div>
+	<div class="all-good"><img src="<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/images/good.png" alt="" /> No <a href="http://mnm.uib.es/gallir/wp-cache-2/" target="_blank">WP Super Cache</a>. <strong>Currently, it does <em>not</em> work fully with WPtouch. Visit <a href="http://www.bravenewcode.com/2009/01/05/wptouch-and-wp-super-cache/">this page</a> for more information.</div>
 			<?php } ?>
 	
 			</div>

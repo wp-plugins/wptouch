@@ -66,7 +66,7 @@
 	font: bold 17px Georgia, Arial, Verdana, sans-serif;
 	padding: 0;
 	margin: 0;
-	text-shadow: #cef5fe -1px -1px 0;
+	text-shadow: #ecf4fc -1px -1px 1px;
 	letter-spacing: -1px;
 }
 
@@ -125,12 +125,13 @@
 }
 
 #wptouch-theme textarea {
-	width: 70%;
+	width: 465px;
 	font-size: 11px;
 	color: #555;
 	border: 1px solid #999;
 	-webkit-border-radius: 5px;
 	-mozilla-border-radius: 5px;
+	height: 100px;
 }
 
 
@@ -225,7 +226,7 @@
 	border: 1px solid #CCC;
 	background-color: #e2fffc;
 	color: #444;
-	padding: 2px;
+	padding: 3px;
 	font-size: 11px;
 	margin-top: 5px;
 	margin-bottom: 10px;
@@ -295,13 +296,13 @@
 	width: 70%;
 	background-color: #e2f5fe;
 	border: 1px solid #8aceff;
-	margin-bottom: 5px;
-	margin-top: 5px;
-	padding: 7px 5px 26px;
+	margin-bottom: 4px;
+	padding: 9px 5px 25px;
 	border-radius: 3px;
 	-mox-border-radius: 3px;
 	-webkit-border-radius: 3px;
 	font-weight: bold;
+	margin-top: 0;
 }
 
 #wptouch-theme .wptouch-select-row .logohome {
