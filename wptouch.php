@@ -692,7 +692,8 @@ The News Section
 <div class="wptouch-itemrow newsblock">
 	<div class="wptouch-item-desc">
 	<h2>News &amp; Updates</h2>
-	<p>BraveNewCode.com entries tagged 'WPtouch'. This list updates to provide you with the latest information about our plugin's development.</p>
+	<p>BraveNewCode.com entries tagged 'WPtouch'.</p>
+	<p>This list updates to provide you with the latest information about our plugin's development.</p>
 	</div>
 		
 	<div class="wptouch-item-content-box1">
@@ -728,12 +729,12 @@ The News Section
 	<h2>Home Page Redirection</h2>
 	<p>
    For your home page, WPtouch follows the default front page behavior you've defined in <a href="options-reading.php">WordPress -> Reading Options.</a>
-   <br /><br />
-   If you'd like to specify a different home page (or your posts page for example) select it from the list on the right.
    </p>
 	</div>
 
 	<div class="wptouch-item-content-box1">
+		<div class="header-item-desc">If you'd like to specify a different home page (your posts page for example)<br />select it from the list below.<br /><br />
+</div>
       <div class="wptouch-select-row">
          <?php $sel = bnc_get_page_id_with_name(bnc_get_selected_home_page()); ?>
          <div class="wptouch-select-left"><label for="home-page">Override Home Page</label></div><div class="wptouch-select-right"><?php wp_dropdown_pages('show_option_none=Default&name=home-page&selected=' . bnc_get_selected_home_page()); ?></div>
@@ -754,7 +755,7 @@ The Javascript Section
 	<div class="wptouch-item-desc">
 	<h2>Optimization &amp;<br />Template Options</h2>
 	<p>Choose to enable/disable enhanced javascript, gravatars, comments on pages, and login in the header</p>
-	<br /><br />
+	<br />
 	<strong>When advanced javascript is unchecked:</strong>
 				<ul class="wptouch-small-menu">
 					<li>Site is faster on 3G/EDGE connections</li>
@@ -780,12 +781,10 @@ The Javascript Section
 		<div class="wptouch-checkbox-row"><input type="checkbox" name="enable-page-coms" <?php if (isset($v['enable-page-coms']) && $v['enable-page-coms'] == 1) echo('checked'); ?>><label for="enable-page-coms"> Enable Comments For Pages <small>(will add the comment form to <strong>all</strong> pages by default)</small></label></div>
 
 		<h4 id="Statistics">If you'd like to capture traffic statistics (Google Analytics, MINT, Etc):</h4>
-				<?php if (isset($v['statistics']))  { ?>
-					<textarea name="statistics"><?php echo stripslashes($v['statistics']); ?>
-				<?php } else { ?>
-					<textarea name="statistics" onclick="this.value=''"><?php echo ('Please enter the javascript code snippet(s) for your statistics tracking here. It will be automatically inserted into WPtouch in the right place. You can also add other code that you\'d like to be loaded when WPtouch loads.'); ?>
-				<?php } ?>
-				</textarea>
+			<div class="header-item-desc">Please enter the javascript code snippet(s) for your statistics tracking here.
+			<br />It will be automatically inserted into WPtouch in the right place.<br />You can also add other code that you'd like to be loaded when WPtouch loads.<br /><br /></div>
+
+					<textarea name="statistics"><?php echo stripslashes($v['statistics']); ?></textarea>
 		</div>
 	<div class="wptouch-clearer"></div>
 </div>
@@ -1102,7 +1101,7 @@ The Plugin Section
 	  
 	  <?php } else { ?>
 	  
-	<div class="all-good"><img src="<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/images/good.png" alt="" /> Whew. No <a href="http://mnm.uib.es/gallir/wp-cache-2/" target="_blank">WP-Cache</a>. If installed, <strong>it requires configuration.</strong> Visit the <a href="http://www.bravenewcode.com/wptouch/">WPtouch homepage</a> for help using WP-Cache.</div>
+	<div class="all-good"><img src="<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/images/good.png" alt="" />No <a href="http://mnm.uib.es/gallir/wp-cache-2/" target="_blank">WP-Cache</a> installed. If installed, <strong>it requires special configuration.</strong> Visit the <a href="http://www.bravenewcode.com/wptouch/">WPtouch homepage</a> for help using WP-Cache.</div>
 			<?php } ?>
 			
 					  <?php
