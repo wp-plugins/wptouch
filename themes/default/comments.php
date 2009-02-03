@@ -5,41 +5,33 @@ if ('comments.php' == basename($_SERVER['SCRIPT_FILENAME']))
 		if (!empty($post->post_password)) {
 			// if there's a password
 			if ($_COOKIE['wp-postpass_' . COOKIEHASH] != $post->post_password) {
-			// and it doesn't match the cookie ?>
-			
+			// and it doesn't match the cookie ?>	
 		<p class="nocomments">This post is password protected. Enter the password to view comments.<p>
-<?php return; 
-		}
-	}
+<?php return; 	} }
 /* This variable is for alternating comment background */
 $oddcomment = 'alt'; 
 ?>
-<!-- 
-You can start editing here. 
--->
+
+<!-- You can start editing below here. but make a backup first!  -->
+
 <h3 id="comments"><?php
   comments_number('No Comments', '1 Comment', '% Comments'); ?></h3>
 
 <div id="comment_wrapper">
-
-<ol class="commentlist" id="commentlist">
-<?php if ($comments) : ?>
-<?php $comment_num = 0; ?>
-	<?php foreach ($comments as $comment) : ?>
-		<?php if (get_comment_type() == "comment") { ?>
-
-			<li class="<?php  echo $oddcomment; ?>" id="comment-<?php comment_ID(); ?>">
-		<?php  if ($comment->comment_approved == '0') : ?>
-	<div id="preview"><h2>Preview only: (moderation required)</h2></div>
-
-<?php endif; ?>
+	<ol class="commentlist" id="commentlist">
+		<?php if ($comments) : ?>
+			<?php $comment_num = 0; ?>
+				<?php foreach ($comments as $comment) : ?>
+					<?php if (get_comment_type() == "comment") { ?>
+					<li class="<?php  echo $oddcomment; ?>" id="comment-<?php comment_ID(); ?>">
+					<?php  if ($comment->comment_approved == '0') : ?>
+					<div id="preview"><h2>Preview only: (moderation required)</h2></div>
+					<?php endif; ?>
 
 	<div class="comwrap">
 			<div class="comtop">
 			
-<!--
-Checking to see if Gravatars are enabled for WPtouch
--->
+<!-- Checking to see if Gravatars are enabled for WPtouch -->
 	<?php if (bnc_is_gravatars_enabled()) { ?>
 			
 			<?php if (function_exists('gravatar')) { 
@@ -81,20 +73,18 @@ Checking to see if Gravatars are enabled for WPtouch
 
   <?php  else : // this is displayed if there are no comments so far  ?>
   
-  <?php if ('open' == $post->comment_status) : ?>
-  <!-- If comments are open, but there are no comments. -->
-  <li id="hidelist" style="display:none"></li>
-  </ol>
+	  <?php if ('open' == $post->comment_status) : ?>
+	  <!-- If comments are open, but there are no comments. -->
+	  <li id="hidelist" style="display:none"></li>
+	  </ol>
+	  
+	  <?php else : // comments are closed  ?>
+	  <!-- If comments are closed. -->
+	  <li style="display:none"></li>
+	  </ol>
+	  <h3 class="closed">Comments are closed on this post.</h3>
   
-  <?php else : // comments are closed  ?>
-  <!-- If comments are closed. -->
-  <li style="display:none"></li>
-  </ol>
-  <h3 class="closed">Comments are closed on this post.</h3>
-  
-
-  <?php endif; ?><!--end comment status-->
-
+  	<?php endif; ?><!--end comment status-->
   <?php endif; ?>
  
   <div id="textinputwrap">
@@ -108,9 +98,8 @@ Checking to see if Gravatars are enabled for WPtouch
 
 <?php else : ?>
 
-  <!--
-  Let's check for advanced JS setting, and if it's enabled do fancy ajax comments
-  -->
+  <!--  Let's check for advanced JS setting, and if it's enabled do fancy ajax comments -->
+  
 	<?php if (bnc_is_js_enabled()) { ?>
 	<div id="refresher" style="display:none">&raquo; <a href="javascript:this.location.reload();">Refresh the page</a> to post a new comment.</div>
 	<form id="commentform" action="<?php echo get_option('url'); ?>/wp-comments-post.php" method="post" onsubmit="$wptouch('#loading').fadeIn(100);var list = $wptouch('#commentlist'); var html = list.html(); var param = $wptouch('form').serialize(); $wptouch.ajax({url: '<?php bloginfo('template_directory'); ?>/comments-ajax.php?' + param, success: function(data, status){ list.append(data); commentAdded(); }, type: 'get' }); return false;">
@@ -157,15 +146,9 @@ Checking to see if Gravatars are enabled for WPtouch
 	There was an error. Please refresh the page and try again.
 	</div>
 	
-<?php do_action('comment_form', $post->ID); ?>
-</form>
-
-		<?php endif;
-		// If registration required and not logged in 
-		?>
-		</div><!--END of textinputwrap DIV-->
-
+		<?php do_action('comment_form', $post->ID); ?>
+	</form>
+<?php endif; // If registration required and not logged in ?>
+</div><!--END of textinputwrap DIV-->
 </div>
-<?php endif;
-// if you delete this the sky will fall on your head 
-?>
+<?php endif; // if you delete this the sky will fall on your head ?>

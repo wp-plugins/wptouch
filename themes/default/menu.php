@@ -1,6 +1,7 @@
 <?php 
-	header("Content-type:text/html; charset=utf-8"); 
-	require_once('../../../../../wp-blog-header.php'); 
+	header("Content-type:text/html; charset=utf-8");
+	require_once('../../../../../wp-blog-header.php');
+	// Back out, because it'll be the same for all installs, and helps with alias/symlinked folders
 ?>
 <div id="dropmenu-inner">
 	<ul>

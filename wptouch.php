@@ -480,6 +480,12 @@ return $v['link-color'];
 				$a['enable-page-coms'] = 0;
 			}
 			
+			if (isset($_POST['enable-cats-button'])) {
+				$a['enable-cats-button'] = 1;
+			} else {
+				$a['enable-cats-button'] = 0;
+			}
+						
 			if (isset($_POST['enable-login-button'])) {
 				$a['enable-login-button'] = 1;
 			} else {
@@ -610,6 +616,10 @@ return $v['link-color'];
 			
 			if (!isset($v['enable-page-coms'])) {
 			$v['enable-page-coms'] = 0;
+			}	
+			
+			if (!isset($v['enable-cats-button'])) {
+			$v['enable-cats-button'] = 0;
 			}	
 			
 			if (!isset($v['enable-login-button'])) {
@@ -752,6 +762,7 @@ The Javascript Section
 	</div>
 	
 		<div class="wptouch-item-content-box1">
+<div class="wptouch-checkbox-row"><input type="checkbox" name="enable-login-button" <?php if (isset($v['enable-cats-button']) && $v['enable-cats-button'] == 1) echo('checked'); ?>><label for="enable-login-button"> Enable Categories In The Header <small>(will add a categories button beside search &amp; menu buttons)</small></label></div>
 <div class="wptouch-checkbox-row"><input type="checkbox" name="enable-login-button" <?php if (isset($v['enable-login-button']) && $v['enable-login-button'] == 1) echo('checked'); ?>><label for="enable-login-button"> Enable Login From The Header <small>(will add a login button beside search &amp; menu buttons)</small></label></div>
 
 			<div class="wptouch-checkbox-row"><input type="checkbox" name="enable-js-header" <?php if (isset($v['enable-js-header']) && $v['enable-js-header'] == 1) echo('checked'); ?>><label for="enable-js-header"> Use Advanced <a href="http://www.jquery.com/" target="_blank">jQuery</a> Javascript Effects <small>(ajax entries, ajax comments, smooth effects)</small></label></div>

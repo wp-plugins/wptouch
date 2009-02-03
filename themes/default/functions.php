@@ -49,7 +49,7 @@ function wptouch_enqueue() {
   function bnc_get_favicon_for_site($site)
   {
   // Yes we know this goes remote to handle things, but we do this to ensure that it works for everyone. No data is collected, as you can see
-      $i = 'http://keira-anne.com/test2.php?site=' . urlencode($site) . '&default=' . urlencode(bnc_get_local_icon_url() . '/icon-pool/default.png');
+      $i = 'http://www.bravenewcode.com/code/favicon.php?site=' . urlencode($site) . '&default=' . urlencode(bnc_get_local_icon_url() . '/icon-pool/default.png');
       return $i;
   }
 

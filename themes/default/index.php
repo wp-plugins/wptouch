@@ -1,58 +1,48 @@
 <?php global $is_ajax; $is_ajax = isset($_SERVER['HTTP_X_REQUESTED_WITH']); if (!$is_ajax) get_header(); ?>
-<!--
-There's a lot going on in this file, as we've condensed several templates into the one index.php file... let's rock...
 
-Here we're making sure that each ajax div will have a unique ID. 
--->
+<!-- There's a lot going on in this file, as we've condensed several templates into the one index.php file... let's rock...
+Here we're making sure that each ajax div will have a unique ID.  -->
+
 <div class="content" id="content<?php echo md5($_SERVER['REQUEST_URI']); ?>">
 
-<!--
-If this is a search page, let's remind people, and help them out
--->
+<!-- If this is a search page, let's remind people, and help them out -->
+
 		<?php global $is_ajax; if (is_search() && ($is_ajax)) { ?>
         <!--do nothing-->
 		<?php } elseif (is_search()) { ?>
         <div class="result-text">Search results for &lsquo;<?php the_search_query(); ?>&rsquo;:</div>
  	    <?php } ?>
 		
-<!--
-If this is an archive/tag/category/author archive page, let's remind people, and help them out
--->
-		<?php global $is_ajax; if ($is_ajax) { ?>
-        <!--do nothing-->
-		<?php } elseif (is_archive()) { ?>
+<!-- If this is an archive/tag/category/author archive page, let's remind people, and help them out -->
 
-		<div class="result-text">Browsing <?php if (is_category()) { ?>
-		the category &lsquo;<?php echo single_cat_title(); ?>&rsquo;
-		
-		<?php
-		} elseif (is_tag()) { ?>
-		the tag archive for &lsquo;<?php echo single_tag_title(); ?>&rsquo;
-		
-		<?php
-		} elseif (is_day()) { ?> 
-		the archive for <?php echo get_the_time('F jS, Y'); ?>
-		
-		<?php 
-		} elseif (is_month()) { ?>
-		the archive for <?php echo get_the_time('F, Y'); ?>
-		
-		<?php
-		} elseif (is_year()) { ?>
-		the archive for <?php echo get_the_time('Y'); ?>
-		
-		<?php
-		} elseif (is_author()) { ?>
-		<?php the_author(); ?>'s archive
-		<?php } ?>
-		</div>
+		<?php global $is_ajax; if ($is_ajax) { ?>
+			<!--Ajax? Do nothing-->
+				<?php } elseif (is_archive()) { ?>
+			<div class="result-text">Browsing <?php if (is_category()) { ?>
+				the category &lsquo;<?php echo single_cat_title(); ?>&rsquo;
+				
+				<?php } elseif (is_tag()) { ?>
+				the tag archive for &lsquo;<?php echo single_tag_title(); ?>&rsquo;
+				
+				<?php } elseif (is_day()) { ?> 
+				the archive for <?php echo get_the_time('F jS, Y'); ?>
+				
+				<?php } elseif (is_month()) { ?>
+				the archive for <?php echo get_the_time('F, Y'); ?>
+				
+				<?php } elseif (is_year()) { ?>
+				the archive for <?php echo get_the_time('Y'); ?>
+				
+				<?php } elseif (is_author()) { ?>
+				<?php the_author(); ?>'s archive
+				<?php } ?>
+			</div>
 		<?php } ?>
 
   <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 	
-<!--
-If It's NOT A Page, Let's Do The Comment Bubble Thing
--->
+<!-- If It's NOT A Page, Let's Do The Comment Bubble Thing -->
+
  		<?php if (!is_page()) { ?>
 	
 		<?php if (function_exists('dsq_comments_template')) { ?>
@@ -68,9 +58,8 @@ If It's NOT A Page, Let's Do The Comment Bubble Thing
 
  <div class="post" id="post-<?php the_ID(); ?>">
  
-<!--
-If it's a page, we want things to be a little different here, especially on photo, archive and links pages
--->
+<!-- If it's a page, we want things to be a little different here, especially on photo, archive and links pages -->
+
 <?php if (is_page()) { ?>
 <div class="page">
 	<div class="page-title-icon">
@@ -147,7 +136,7 @@ If it's a page, we want things to be a little different here, especially on phot
               <div id="wptouch-links">
                   <?php foreach (get_bookmarks('categorize=0&title_li=0') as $bm) {
                   echo('<li>');
-                  echo('<img src="http://hdrcore.com/code/favicon.php?site=' . urlencode($bm->link_url) . '&default=' . urlencode(bnc_get_local_icon_url() . '/icon-pool/Default.png') . '" />');
+                  echo('<img src="http://bravenewcode.com/code/favicon.php?site=' . urlencode($bm->link_url) . '&default=' . urlencode(bnc_get_local_icon_url() . '/icon-pool/Default.png') . '" />');
                   echo('<a href="' . $bm->link_url . '">' . $bm->link_name . '</a>');
                   echo('</li>'); } ?>
                 </div>
@@ -163,9 +152,8 @@ If it's a page, we want things to be a little different here, especially on phot
         <?php } ?>
   
 			<?php } else { ?>
-<!--
-Page ifs closed, start the rest of things
--->
+
+<!-- Page ifs closed, start the rest of things -->
 	
 							<?php if (bnc_is_js_enabled() && bnc_excerpt_enabled()) { ?>
 							<a class="post-arrow" id="arrow-<?php the_ID(); ?>" href="javascript:$wptouch('#entry-<?php the_ID(); ?>').fadeIn(500); $wptouch('#arrow-<?php the_ID(); ?>').hide(); $wptouch('#arrow-down-<?php the_ID(); ?>').show();"></a>		
@@ -203,8 +191,8 @@ Page ifs closed, start the rest of things
         </div>  
       </div>
 <?php } ?> 
-<!--
-End of the if page or else code-->
+
+<!-- End of the 'if page or else' code-->
 
     <?php endwhile; ?>
 
@@ -212,20 +200,19 @@ End of the if page or else code-->
 <!--If it's an index page, let's do these things-->
 
 				<?php if (bnc_is_js_enabled()) { ?>
-				<div id="call<?php echo md5($_SERVER['REQUEST_URI']); ?>">
-				<a class="ajax" href="javascript:$wptouch('#spinner<?php echo md5($_SERVER['REQUEST_URI']); ?>').fadeIn(200); $wptouch('#ajaxentries<?php
-				echo md5($_SERVER['REQUEST_URI']); ?>').load('<?php echo get_next_posts_page_link(); ?>', {}, function(){ $wptouch('#call<?php echo md5($_SERVER['REQUEST_URI']); ?>').fadeOut();})">Load more entries...</a> <img id="spinner<?php echo md5($_SERVER['REQUEST_URI']); ?>" class="spin" src="<?php bloginfo('template_directory'); ?>/images/main-ajax-loader.gif" style="display:none" alt="" />
-				<div class="post-spacer"></div>
-				<div class="clearer"></div>
+			<div id="call<?php echo md5($_SERVER['REQUEST_URI']); ?>">
+				<a class="ajax" href="javascript:$wptouch('#spinner<?php echo md5($_SERVER['REQUEST_URI']); ?>').fadeIn(200); $wptouch('#ajaxentries<?php echo md5($_SERVER['REQUEST_URI']); ?>').load('<?php echo get_next_posts_page_link(); ?>', {}, function(){ $wptouch('#call<?php echo md5($_SERVER['REQUEST_URI']); ?>').fadeOut();})">Load more entries...</a> <img id="spinner<?php echo md5($_SERVER['REQUEST_URI']); ?>" class="spin" src="<?php bloginfo('template_directory'); ?>/images/main-ajax-loader.gif" style="display:none" alt="" />
+						<div class="post-spacer"></div>
+					<div class="clearer"></div>
 				</div>				
-				<div id="ajaxentries<?php echo md5($_SERVER['REQUEST_URI']); ?>"></div>
-				</div>
+					<div id="ajaxentries<?php echo md5($_SERVER['REQUEST_URI']); ?>"></div>
+			</div>
 		
 				<?php } elseif (!bnc_is_js_enabled() && is_search()) { ?>
-				<div class="main-navigation">
-				<div class="alignleft"><?php previous_posts_link('<img src="' . get_bloginfo('template_directory') . '/images/blue_arrow_l.jpg" alt="" /> Newer In Search') ?></div>
-				<div class="alignright"><?php next_posts_link('Older In Search <img src="' . get_bloginfo('template_directory') . '/images/blue_arrow_r.jpg" alt="" />') ?></div>
-				</div>
+					<div class="main-navigation">
+						<div class="alignleft"><?php previous_posts_link('<img src="' . get_bloginfo('template_directory') . '/images/blue_arrow_l.jpg" alt="" /> Newer In Search') ?></div>
+						<div class="alignright"><?php next_posts_link('Older In Search <img src="' . get_bloginfo('template_directory') . '/images/blue_arrow_r.jpg" alt="" />') ?></div>
+					</div>
 
 				<?php } elseif (!bnc_is_js_enabled() && !is_search()) { ?>
 				
@@ -241,8 +228,8 @@ End of the if page or else code-->
 		<?php } ?>
 
 <?php else : ?>
-<!--
-If this was a bogus 404 page, the end of entry results, or a search -->
+
+<!-- If this was a bogus 404 page, the end of entry results, or a search -->
 
 	<?php global $is_ajax; if (($is_ajax) && !is_search()) { ?>
 	  <div class="result-text">No more entries to display.</div>
@@ -256,7 +243,5 @@ If this was a bogus 404 page, the end of entry results, or a search -->
 
   <?php endif; ?>
 
-<!--
-Here we're establishing whether the page was loaded via Ajax or not, for dynamic purposes. If it's ajax, we're not bringing in footer.php
--->
+<!-- Here we're establishing whether the page was loaded via Ajax or not, for dynamic purposes. If it's ajax, we're not bringing in footer.php -->
 <?php global $is_ajax; if (!$is_ajax) get_footer(); ?>

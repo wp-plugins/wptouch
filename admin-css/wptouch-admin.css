@@ -63,11 +63,12 @@
 	display: block;
 	width: 100%;
 	border-bottom-style: none;
-	font: bold 17px Georgia, Arial, Verdana, sans-serif;
+	font: bold 18px Georgia, Garamond, Arial, Verdana, sans-serif;
 	padding: 0;
 	margin: 0;
 	text-shadow: #ecf4fc -1px -1px 1px;
 	letter-spacing: -1px;
+	word-spacing: 1px;
 }
 
 #wptouch-theme .wptouch-itemrow {

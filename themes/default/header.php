@@ -7,18 +7,11 @@
 <meta name="description" content="<?php bloginfo('description'); ?>" />
 <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php bloginfo('rss2_url'); ?>" />
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
-<!--
-Strict viewport options to control how the content is shown. 
-Increase the maximum-scale number to allow for zooming if you wish
--->
+<!-- Strict viewport options to control how the content is shown. Increase the maximum-scale number to allow for zooming if you wish -->
 <meta name="viewport" content="maximum-scale=1.0 width=device-width initial-scale=1.0 user-scalable=no" />
-<!--
-This makes the iPhone/iPod touch ask for the same icon the user chooses for a logo to be the bookmark icon as well.
--->
+<!-- This makes the iPhone/iPod touch ask for the same icon the user chooses for a logo to be the bookmark icon as well. -->
 <link rel="apple-touch-icon" href="<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/images/icon-pool/<?php echo bnc_get_title_image(); ?>"/>
-
-<!--
-(Future Consideration)
+<!-- (Future Consideration)
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta names="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 -->
@@ -26,7 +19,6 @@ This makes the iPhone/iPod touch ask for the same icon the user chooses for a lo
 	<?php if (bnc_is_js_enabled()) { ?>
 		<script src="<?php bloginfo('template_directory'); ?>/js/global.js" type="text/javascript" charset="utf-8"></script>
 	<?php } ?>
-	
 <?php
 if  (!function_exists('dsq_comments_template')) { ?>
 	<?php if (is_single() && bnc_is_js_enabled()) { ?>
@@ -36,10 +28,7 @@ if  (!function_exists('dsq_comments_template')) { ?>
 	<?php } ?>
 <?php } ?>
 <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
-<!--
-In order to have some dynamic user-selected CSS, we've written the below. 
-We could pull it out into a css.php file, but it's just a small block and easy to add or modify this way.
--->
+<!-- In order to have some dynamic user-selected CSS, we've written the below. We could pull it out into a css.php file, but it's just a small block and easy to add or modify this way. -->
 <style type="text/css">
 #menubar {
 	width: 100%;
@@ -51,44 +40,35 @@ We could pull it out into a css.php file, but it's just a small block and easy t
 	font: 21px HelveticaNeue-Bold, sans-serif;
 	letter-spacing: -1px;
 	position: relative;
-	color: #<?php echo bnc_get_header_color(); ?>
+	color: #<?php echo bnc_get_header_color(); ?>;
 }
 #dropmenu-inner a:hover {
 	color: #<?php echo bnc_get_link_color(); ?>;
 }
 #drop-fade {
-background: #<?php echo bnc_get_header_border_color(); ?>
+background: #<?php echo bnc_get_header_border_color(); ?>;
 }
 a {
 	text-decoration: none;
-	color: #<?php echo bnc_get_link_color(); ?>
+	color: #<?php echo bnc_get_link_color(); ?>;
 }
 </style>
 </head>
 <body>
-<!--
-////////////////////////////
-Before we get rocking and rolling, you want not want to touch this code so much, as it holds everything required for the drop down-menu. Users can customize icons, colors, and the title in the header itself, which doesn't leave much room for changing things yourself. 
+<!-- Before we get rocking and rolling, you want not want to touch this code so much, as it holds everything required for the drop down-menu. Users can customize icons, colors, and the title in the header itself, which doesn't leave much room for changing things yourself. 
 
 That said, if you want to get funky with the look of it, you could always change the way the glossy bar looks, by editing 'menu-bk.png' and 'head-fade-bk.png', both of which are in the default/images/ folder.
 
-We've commented below to let you know what works what, so if you do go messing around, you won't break the functionailty of the customization options we've built (hopefully). If you do want to discard them and hard code something yourself, make sure you include that note with your theme.
-////////////////////////////
--->
+We've commented below to let you know what works what, so if you do go messing around, you won't break the functionailty of the customization options we've built (hopefully). If you do want to discard them and hard code something yourself, make sure you include that note with your theme. -->
 <div id="menubar">
-
-<!--
-This fetches the admin selection logo icon for the header, which is also the bookmark icon
--->
+<!-- This fetches the admin selection logo icon for the header, which is also the bookmark icon -->
 <div  id="blogtitle">
 <img src="<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/images/icon-pool/<?php echo bnc_get_title_image(); ?>" alt="" /> <a href="<?php bloginfo('siteurl'); ?>">
 <?php $str = bnc_get_header_title(); echo stripslashes($str); ?></a></div>
 </div>
 
-<!--
-This check to see if they've disabled advanced JS and loads it if not.
-The toggles work with JS different ways, one with prototype/scriptaculous, the other with just the document.getelement routine...
--->
+<!-- This checks to see if they have disabled advanced JS and loads it if not. The toggles work with JS different ways, one with prototype/scriptaculous, the other with just the document.getelement routine... -->
+
 	<div id="drop-fade">
 <?php if (bnc_is_login_button_enabled()) { ?>
 	<?php get_currentuserinfo();
@@ -124,9 +104,8 @@ The toggles work with JS different ways, one with prototype/scriptaculous, the o
 		</a>
 	</div>
 
-<!--
-Our login dropdown
--->
+<!--Our new login dropdown -->
+
 	<div id="wptouch-login" style="display:none">
 		<div id="wptouch-login-inner">
 			<form name="loginform" id="loginform" action="<?php echo get_settings('url'); ?>/wp-login.php" method="post">
@@ -142,9 +121,8 @@ Our login dropdown
 			</div>
 		</div>
 
-<!--
-Our search dropdown
--->
+<!-- Our search dropdown -->
+
 	<div id="wptouch-search" style="display:none">
 		<div id="wptouch-search-inner">
 			<form method="get" id="searchform" action="<?php bloginfo('siteurl'); ?>/">
@@ -161,11 +139,10 @@ Our search dropdown
 
 	<div id="dropmenu" style="display:none">
         <?php if (!bnc_is_js_enabled()) { ?>
-        <!--
-Here's the  drop-down menu.
-
-We're checking the pages that are enabled in the admin, and the icons which were assigned to them. We're also checking to see if the user has enabled the RSS< Mail, and/or Home link to be shown in the menu.
--->
+   
+        <!-- Here's the  drop-down menu. 
+        We're checking the pages that are enabled in the admin, and the icons which were assigned to them. We're also checking to see if the user has enabled the RSS< Mail, and/or Home link to be shown in the menu. -->
+        
         <div id="dropmenu-inner">
             <ul>
             <?php if (bnc_is_home_enabled()) { ?><li><a href="<?php bloginfo('url'); ?>"><img src="<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/images/icon-pool/Home.png" alt="" />Home</a></li> <?php } ?>
@@ -185,9 +162,8 @@ We're checking the pages that are enabled in the admin, and the icons which were
         <?php } ?>
 	</div>
 
-<!--
-This just checks if the user is trying to use the theme with anything other than WPtouch, and its not an iPhone/iPod touch
--->
+<!-- This just checks if the user is trying to use the theme with anything other than WPtouch, and its not an iPhone/iPod touch -->
+
 	<?php if (false && function_exists('bnc_is_iphone') && !bnc_is_iphone()) { ?>
 		<div class="content post">
 		<a href="#" class="h2">Warning</a>
@@ -200,9 +176,8 @@ This just checks if the user is trying to use the theme with anything other than
 	</body> 
 	<?php die; } ?>
 	
-<!--
-This div spacer helps get the alignment are squared up after all the CSS floats
--->		
+<!-- This div spacer helps get the alignment are squared up after all the CSS floats -->		
+
 	<div class="post-spacer">&nbsp;</div>
 	
-	<!--End of the Header-->
+<!--End of the Header-->
