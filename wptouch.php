@@ -108,7 +108,7 @@ function detectAppleMobile($query = '') {
 
 // Add whatever user agents you want here to the array if you want to make this show on a Blackberry 
 // or something. No guarantees it'll look pretty, though!
-	$useragents = array("iphone", "ipod", "aspen", "dream", "incognito", "webmate");
+	$useragents = array("iphone", "ipod", "safari", "dream", "incognito", "webmate");
 		$this->applemobile = false;
 			foreach ($useragents as $useragent) {
 			if (eregi($useragent, $container)) {
@@ -247,6 +247,14 @@ function bnc_is_page_coms_enabled() {
 	return $ids['enable-page-coms'];
 }		
 
+function bnc_is_cats_button_enabled() {
+	$ids = bnc_wp_touch_get_menu_pages();
+		if (!isset($ids['enable-cats-button']))	 {
+		return true;
+		}
+	return $ids['enable-cats-button'];
+}	
+
 function bnc_is_login_button_enabled() {
 	$ids = bnc_wp_touch_get_menu_pages();
 		if (!isset($ids['enable-login-button']))	 {
@@ -335,7 +343,7 @@ function bnc_wp_touch_get_pages() {
 		global $table_prefix;
 			$keys = array();
 				foreach ($ids as $k => $v) {
-					if ($k == 'main_title' || $k == 'enable-post-excerpts' || $k == 'enable-page-coms' || $k == 'enable-login-button' || $k == 'enable-redirect' || $k == 'enable-js-header' || $k == 'enable-gravatars' || $k == 'enable-main-home' || $k == 'enable-main-rss' || $k == 'enable-main-email' || $k == 'enable-main-name' || $k == 'enable-main-tags' || $k == 'enable-main-categories') {
+					if ($k == 'main_title' || $k == 'enable-post-excerpts' || $k == 'enable-page-coms' || $k == 'enable-cats-button'  || $k == 'enable-login-button' || $k == 'enable-redirect' || $k == 'enable-js-header' || $k == 'enable-gravatars' || $k == 'enable-main-home' || $k == 'enable-main-rss' || $k == 'enable-main-email' || $k == 'enable-main-name' || $k == 'enable-main-tags' || $k == 'enable-main-categories') {
 // do nothing
 					} else {
 					if (is_numeric($k)) {

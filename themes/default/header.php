@@ -70,6 +70,7 @@ We've commented below to let you know what works what, so if you do go messing a
 <!-- This checks to see if they have disabled advanced JS and loads it if not. The toggles work with JS different ways, one with prototype/scriptaculous, the other with just the document.getelement routine... -->
 
 	<div id="drop-fade">
+
 <?php if (bnc_is_login_button_enabled()) { ?>
 	<?php get_currentuserinfo();
   		if (!current_user_can('edit_posts') && bnc_is_js_enabled()) : ?>
@@ -86,6 +87,17 @@ We've commented below to let you know what works what, so if you do go messing a
 			</a>
 		<?php endif; ?>
 <?php } ?>
+
+	<?php if (bnc_is_cats_button_enabled()) { ?>
+		<?php if (bnc_is_js_enabled()) { ?>
+			<a href="javascript:$wptouch('#wptouch-cats').slideToggle(200);">
+				<?php } else { ?>
+			<a href="javascript:document.getElementById('wptouch-cats').style.display='block';">
+		<?php } ?>
+		
+		<img src="<?php bloginfo('template_directory'); ?>/images/menu/	catsmenu.png" alt="" /></a>	
+	<?php } ?>
+
 	
 	<?php if (bnc_is_js_enabled()) { ?>
 		    <a href="javascript:$wptouch('#wptouch-search').slideToggle(200);">
@@ -120,6 +132,14 @@ We've commented below to let you know what works what, so if you do go messing a
 				</form>
 			</div>
 		</div>
+
+	<div id="wptouch-cats" style="display:none">
+		<div id="catsmenu-inner">
+            <ul>
+            <?php wp_list_categories('orderby=name&title_li='); ?>
+            </ul>
+        </div>
+	</div>
 
 <!-- Our search dropdown -->
 
