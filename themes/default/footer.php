@@ -21,12 +21,12 @@
 				<?php } ?>
 			<?php  endif; ?>
 		</p>
-	<?php wptouch_get_stats(); ?>
 		<?php
 //WPtouch theme designed and developed by Dale Mugford and Duane Storey for BraveNewCode.com
 //Licensed under GPL
 //If you modify it, please keep our credit in the footer (and keep the WordPress credit, too!), that's all we ask, folks.
 		wp_footer(); ?>
 	</div>
+	<?php wptouch_get_stats(); ?>
 </body>
 </html>

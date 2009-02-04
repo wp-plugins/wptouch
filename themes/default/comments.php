@@ -109,8 +109,7 @@ $oddcomment = 'alt';
 
 <?php if ($user_ID) : ?>
 
-		<p class="logged"  id="respond">Logged in as <a href="<?php
-		bloginfo('url'); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a>:</p>
+		<p class="logged"  id="respond">Logged in as <a href="<?php bloginfo('url'); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a>:</p>
 	
 	<?php else : ?>
 	
