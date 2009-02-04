@@ -22,6 +22,8 @@
    # See the GNU lesser General Public License for more details.
 */
    
+//update_option('bnc_iphone_pages', serialize(''));
+//	update_option('bnc_iphone_pages', serialize($defaults));
 function wptouch_init() {
 	$bnc_option = get_option('bnc_iphone_pages');
 	if ($bnc_option == null) {
@@ -163,6 +165,7 @@ function theme_root_uri($url) {
 global $wptouch_plugin;
 	$wptouch_plugin = new WPtouchPlugin();
 
+
 function bnc_get_page_id_with_name($name) {
    global $table_prefix;
    if (mysql_connect(DB_HOST, DB_USER, DB_PASSWORD)) {
@@ -181,7 +184,7 @@ function bnc_is_iphone() {
 		return $wptouch_plugin->applemobile;
 }
   
-// The Automatic Footer Template Switch Code (into 'wp_footer();')
+	// The Automatic Footer Template Switch Code (into 'wp_footer();')
 function wptouch_switch() {
 	global $wptouch_plugin;
 		if ($wptouch_plugin->applemobile) {
@@ -451,18 +454,20 @@ return $v['link-color'];
 	  }
 	}	
   
-  function bnc_wp_touch_page() {
+  function bnc_wp_touch_page()
+  {
 	  if (isset($_POST['submit'])) {
 		  echo('<div class="wrap"><div id="wptouch-theme">');
 		  echo('<div id="wptouchupdated">Your new WPtouch settings were saved.</div>');
 		  echo('<div id="wptouch-title"><img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/admin-header.png" class="logo" alt="" /></div>');
+//	  echo('' . WPtouch('<div class="wptouch-version">','</div>') . '');
 	  } else {
 		  echo('<div class="wrap"><div id="wptouch-theme">');
 		  echo('<div id="wptouch-title"><img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/admin-header.png" class="logo" alt="" /></div>');
+	//  echo('' . WPtouch('<div class="wptouch-version">','</div>') . '');
 	  }
-}	  
-
 ?>
+
 <?php $icons = bnc_get_icon_list(); ?>
 
 		<?php
@@ -669,6 +674,7 @@ return $v['link-color'];
          if (!isset($v['home-page'])) {
             $v['home-page'] = 'Default';
          }
+
 ?>
 	
   <form method="post" action="<?php echo $_SERVER['REQUEST_URI']; ?>">
@@ -739,6 +745,7 @@ The News Section
    <div class="clear"></div>
 </div>
 
+
 <?php
 /*
 The Javascript Section
@@ -777,10 +784,12 @@ The Javascript Section
 		<h4 id="Statistics">If you'd like to capture traffic statistics (Google Analytics, MINT, Etc):</h4>
 			<div class="header-item-desc">Please enter the javascript code snippet(s) for your statistics tracking here.
 			<br />It will be automatically inserted into WPtouch in the right place.<br />You can also add other code that you'd like to be loaded when WPtouch loads.<br /><br /></div>
-			<textarea name="statistics"><?php echo stripslashes($v['statistics']); ?></textarea>
+
+					<textarea name="statistics"><?php echo stripslashes($v['statistics']); ?></textarea>
 		</div>
 	<div class="wptouch-clearer"></div>
 </div>
+
 
 <?php
 /*
@@ -978,10 +987,8 @@ The Plugin Section
 			<?php
 			//Let's do some WordPress version checks to provide more information for the user about what they can expect using the plugin
 			$version = (float)get_bloginfo('version');
-			if ($version >= 2.7) {
-			echo 'WordPress installed: ' . get_bloginfo('version') . '<br />(Fully Supported)';
 			if ($version >= 2.5) {
-			echo 'WordPress installed: ' . get_bloginfo('version') . '<br />(Supported, Upgrade Recommended)';
+			echo 'WordPress installed: ' . get_bloginfo('version') . '<br />(Fully Supported)';
 			} elseif ($version >= 2.3) {
 			echo 'WordPress installed: ' . get_bloginfo('version') . '<br />(Supported, Upgrade Recommended)';
 			} elseif ($version >= 2.2) {
@@ -1014,49 +1021,51 @@ The Plugin Section
 				 
 				   <div class="too-bad"><img src="<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/images/bad.png" alt="" /> Since you're using a pre-tag version of WordPress, your categories will be listed on a page called 'Archives', if you have it.</div>
 			  <?php } ?>
-<br /><br />						   
-		<h4>WordPress Pages &amp; Feature Support</h4>
-  
-			  <?php
-		  //Start Pages support checks here
+			   
+						   <br /><br />
+						   
+				<h4>WordPress Pages &amp; Feature Support</h4>
 		  
-		  //WordPress Links Page Support
-		  $links_page_check = new WP_Query('pagename=links');
-		  if ($links_page_check->post->ID) {
-			  echo '<div class="all-good"><img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/good.png" alt="" /> All of your WP links will automatically show on your page called \'Links\'.</div>';
-		  } else {
-			  
-			  echo '<div class="too-bad"><img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/bad.png" alt="" /> If you create a page called \'Links\', all your WP links would display in <em>WPtouch</em> style.</div>';
-		  }
+					  <?php
+				  //Start Pages support checks here
+				  
+				  //WordPress Links Page Support
+				  $links_page_check = new WP_Query('pagename=links');
+				  if ($links_page_check->post->ID) {
+					  echo '<div class="all-good"><img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/good.png" alt="" /> All of your WP links will automatically show on your page called \'Links\'.</div>';
+				  } else {
+					  
+					  echo '<div class="too-bad"><img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/bad.png" alt="" /> If you create a page called \'Links\', all your WP links would display in <em>WPtouch</em> style.</div>';
+				  }
 ?>
-				
-  <?php
-		  //WordPress Photos Page with and without FlickRSS Support	 
-		  $links_page_check = new WP_Query('pagename=photos');
-		  if ($links_page_check->post->ID && function_exists('get_flickrRSS')) {
-			  echo '<div class="all-good"><img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/good.png" alt="" /> All your <a href="http://eightface.com/wordpress/flickrrss/" target="_blank">FlickrRSS</a> images will automatically show on your page called \'Photos\'.</div>';
-		  } elseif ($links_page_check->post->ID && !function_exists('get_flickrRSS')) {
-			  echo '<div class="sort-of"><img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/sortof.png" alt="" /> You have a page called \'Photos\', but don\'t have <a href="http://eightface.com/wordpress/flickrrss/" target="_blank">FlickrRSS</a> installed.</div>';
-		  } elseif (!$links_page_check->post->ID && function_exists('get_flickrRSS')) {
-			  echo '<div class="sort-of"><img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/sortof.png" alt="" /> If you create a page called \'Photos\', all your <a href="http://eightface.com/wordpress/flickrrss/" target="_blank">FlickrRSS</a> photos would display in <em>WPtouch</em> style.</div>';
-		  } else {
-			  
-			  echo '<div class="too-bad"><img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/bad.png" alt="" /> If you create a page called \'Photos\', and install the <a href="http://eightface.com/wordpress/flickrrss/" target="_blank">FlickrRSS</a> plugin, your photos would display in <em>WPtouch</em> style.</div>';
-		  }
+						
+		  <?php
+				  //WordPress Photos Page with and without FlickRSS Support	 
+				  $links_page_check = new WP_Query('pagename=photos');
+				  if ($links_page_check->post->ID && function_exists('get_flickrRSS')) {
+					  echo '<div class="all-good"><img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/good.png" alt="" /> All your <a href="http://eightface.com/wordpress/flickrrss/" target="_blank">FlickrRSS</a> images will automatically show on your page called \'Photos\'.</div>';
+				  } elseif ($links_page_check->post->ID && !function_exists('get_flickrRSS')) {
+					  echo '<div class="sort-of"><img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/sortof.png" alt="" /> You have a page called \'Photos\', but don\'t have <a href="http://eightface.com/wordpress/flickrrss/" target="_blank">FlickrRSS</a> installed.</div>';
+				  } elseif (!$links_page_check->post->ID && function_exists('get_flickrRSS')) {
+					  echo '<div class="sort-of"><img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/sortof.png" alt="" /> If you create a page called \'Photos\', all your <a href="http://eightface.com/wordpress/flickrrss/" target="_blank">FlickrRSS</a> photos would display in <em>WPtouch</em> style.</div>';
+				  } else {
+					  
+					  echo '<div class="too-bad"><img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/bad.png" alt="" /> If you create a page called \'Photos\', and install the <a href="http://eightface.com/wordpress/flickrrss/" target="_blank">FlickrRSS</a> plugin, your photos would display in <em>WPtouch</em> style.</div>';
+				  }
 ?>
 
-	<?php
-		  //WordPress Archives Page Support with checks for Tags Support or Not
-		  $links_page_check = new WP_Query('pagename=archives');
-		  if ($links_page_check->post->ID && function_exists('wp_tag_cloud')) {
-			  echo '<div class="all-good"><img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/good.png" alt="" /> Your tags and your monthly listings will automatically show on your page called \'Archives\'.</div>';
-		  } elseif ($links_page_check->post->ID && !function_exists('wp_tag_cloud')) {
-			  echo '<div class="sort-of"><img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/good.png" alt="" /> You don\'t have WordPress 2.3 or above, so no Tags will show, but your categories and monthly listings will automatically show on your page called \'Archives\'.</div>';
-		  } else {		   
-			  echo '<div class="too-bad"><img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/bad.png" alt="" /> If you create a page called \'Archives\', your tags/categories and monthly listings would display in <em>WPtouch</em> style.</div>';
-		  }
+			<?php
+				  //WordPress Archives Page Support with checks for Tags Support or Not
+				  $links_page_check = new WP_Query('pagename=archives');
+				  if ($links_page_check->post->ID && function_exists('wp_tag_cloud')) {
+					  echo '<div class="all-good"><img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/good.png" alt="" /> Your tags and your monthly listings will automatically show on your page called \'Archives\'.</div>';
+				  } elseif ($links_page_check->post->ID && !function_exists('wp_tag_cloud')) {
+					  echo '<div class="sort-of"><img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/good.png" alt="" /> You don\'t have WordPress 2.3 or above, so no Tags will show, but your categories and monthly listings will automatically show on your page called \'Archives\'.</div>';
+				  } else {		   
+					  echo '<div class="too-bad"><img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/bad.png" alt="" /> If you create a page called \'Archives\', your tags/categories and monthly listings would display in <em>WPtouch</em> style.</div>';
+				  }
 ?>
-	  <br /><br />
+			  <br /><br />
 
 		  <h4>Other Plugin Support &amp; Compatibility</h4>
 	  <?php
@@ -1077,6 +1086,14 @@ The Plugin Section
 		   <?php } else { ?>
 		   <div class="sort-of"><img src="<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/images/sortof.png" alt="" /> You don't have <a href="http://www.bravenewcode.com/blipit/" target="_blank">Blip.it</a> installed: (No automatic iPhone compatible video support)</div>
 			<?php } ?>
+			
+	<?php /*?>			   <?php
+				  //CodeBox Check
+		   if (function_exists('codebox_header')) { ?>
+		 <div class="all-good"><img src="<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/images/good.png" alt="" /> Gravy. <a href="http://wordpress.org/extend/plugins/wp-codebox/" target="_blank">CodeBox</a> is <em>not</em> installed. If it was, things would look ugly.</div>
+		   <?php } else { ?>
+		   <div class="too-bad"><img src="<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/images/good.png" alt="" /> D'oh, <a href="http://wordpress.org/extend/plugins/wp-codebox/" target="_blank">CodeBox</a> <strong>is</strong> installed. WPtouch <em>does not</em> currently support it, so things will look ugly until it does, sorry.</div>
+			<?php } ?><?php */?>
 			  
 		<?php
 		  //WP-Cache Plugin Check
@@ -1106,7 +1123,7 @@ The Plugin Section
 </div>
 
 <?php 
-echo('</div></div>'); }
+echo('</div></div>'); } 
 add_action('admin_head', 'wptouch_admin_css');
 add_action('admin_menu', 'bnc_options_menu'); 
 add_action('wp_footer', 'wptouch_switch');
