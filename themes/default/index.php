@@ -114,65 +114,53 @@ Here we're making sure that each ajax div will have a unique ID.  -->
 // If you have a page named 'Photos', and the FlickrRSS activated and configured your photos will be displayed here.
 // It will override other number of images settings and fetch 20 from the ID.
 ?>
-              
-              <?php if (function_exists('get_flickrRSS')) { ?>
-			  <div id="wptouch-flickr">
-              <?php get_flickrRSS(20); ?>
-			  </div>
-              <?php } else { ?>
-			  <!-- do nothing... maybe they have a different look for the photos page themselves-->
-              <?php } ?>
-              
+	<?php if (function_exists('get_flickrRSS')) { ?>
+		<div id="wptouch-flickr">
+			<?php get_flickrRSS(20); ?>
+		</div>
+	<?php } else { ?>
+<!-- do nothing... maybe they have a different look for the photos page themselves-->
+	<?php } ?>
 <?php } ?><!-- end if photos page-->
-            
-			
+           		
 <?php if (is_page('links')) {
 // If you have a page named 'Links', a default listing of your Links will be displayed here.
 ?>
-	</div>
-</div>
-              
-              <h3 class="result-text-page">(Alphabetical Order)</h3>
-              <div id="wptouch-links">
-                  <?php foreach (get_bookmarks('categorize=0&title_li=0') as $bm) {
-                  echo('<li>');
-                  echo('<img src="http://bravenewcode.com/code/favicon.php?site=' . urlencode($bm->link_url) . '&default=' . urlencode(bnc_get_local_icon_url() . '/icon-pool/Default.png') . '" />');
-                  echo('<a href="' . $bm->link_url . '">' . $bm->link_name . '</a>');
-                  echo('</li>'); } ?>
-                </div>
-				
-<?php } ?><!-- end if links page-->    	
-	<?php wp_link_pages('Pages in this article: ', '', 'number'); ?>
+		</div>
+	</div>          
 
+	<h3 class="result-text-page">(Alphabetical Order)</h3>
+		<div id="wptouch-links">
+			<?php foreach (get_bookmarks('categorize=0&title_li=0') as $bm) { echo('<li>'); echo('<img src="http://bravenewcode.com/code/favicon.php?site=' . urlencode($bm->link_url) . '&default=' . urlencode(bnc_get_local_icon_url() . '/icon-pool/Default.png') . '" />'); echo('<a href="' . $bm->link_url . '">' . $bm->link_name . '</a>'); echo('</li>'); } ?>
+		</div>
+<?php } ?><!-- end if links page-->    	
+	
+		<?php wp_link_pages('Pages in this article: ', '', 'number'); ?>
 	</div>    
 </div>
+    
          <!--If comments are enabled for pages in the WPtouch admin-->
+	
 		 <?php if (bnc_is_page_coms_enabled()) { ?>
-        <?php comments_template(); ?>
+	        <?php comments_template(); ?>
         <?php } ?>
-  
-			<?php } else { ?>
+	<?php } else { ?>
 
 <!-- Page ifs closed, start the rest of things -->
 	
-							<?php if (bnc_is_js_enabled() && bnc_excerpt_enabled()) { ?>
-							<a class="post-arrow" id="arrow-<?php the_ID(); ?>" href="javascript:$wptouch('#entry-<?php the_ID(); ?>').fadeIn(500); $wptouch('#arrow-<?php the_ID(); ?>').hide(); $wptouch('#arrow-down-<?php the_ID(); ?>').show();"></a>		
-							
-							<a style="display:none" class="post-arrow-down" id="arrow-down-<?php the_ID(); ?>" href="javascript:$wptouch('#entry-<?php the_ID(); ?>').fadeOut(500); $wptouch('#arrow-<?php the_ID(); ?>').show(); $wptouch('#arrow-down-<?php the_ID(); ?>').hide();"></a>	
-							
-							
-							<?php } elseif (!bnc_is_js_enabled() && bnc_excerpt_enabled()) { ?>
-							
-					<a class="post-arrow" id="arrow-<?php the_ID(); ?>" href="javascript:document.getElementById('entry-<?php the_ID(); ?>').style.display = 'block';document.getElementById('arrow-<?php the_ID(); ?>').style.display = 'none';document.getElementById('arrow-down-<?php the_ID(); ?>').style.display = 'block';"></a>
-					 <a style="display:none" class="post-arrow-down" id="arrow-down-<?php the_ID(); ?>" href="javascript:document.getElementById('entry-<?php the_ID(); ?>').style.display = 'none';document.getElementById('arrow-<?php the_ID(); ?>').style.display = 'block';document.getElementById('arrow-down-<?php the_ID(); ?>').style.display = 'none';"></a>
-					 
-							<?php } ?>
-                    
-						<div class="calendar" style="background: url(<?php bloginfo('template_directory'); ?>/images/cal/month<?php echo get_the_time('n') ?>.jpg) no-repeat;">
-						<div class="cal-month"><?php echo get_the_time('M') ?></div>
-						<div class="cal-date"><?php echo get_the_time('j') ?></div>
-						</div>
-      
+	<?php if (bnc_is_js_enabled() && bnc_excerpt_enabled()) { ?>
+		<a class="post-arrow" id="arrow-<?php the_ID(); ?>" href="javascript:$wptouch('#entry-<?php the_ID(); ?>').fadeIn(500); $wptouch('#arrow-<?php the_ID(); ?>').hide(); $wptouch('#arrow-down-<?php the_ID(); ?>').show();"></a>		
+		<a style="display:none" class="post-arrow-down" id="arrow-down-<?php the_ID(); ?>" href="javascript:$wptouch('#entry-<?php the_ID(); ?>').fadeOut(500); $wptouch('#arrow-<?php the_ID(); ?>').show(); $wptouch('#arrow-down-<?php the_ID(); ?>').hide();"></a>	
+	<?php } elseif (!bnc_is_js_enabled() && bnc_excerpt_enabled()) { ?>
+		<a class="post-arrow" id="arrow-<?php the_ID(); ?>" href="javascript:document.getElementById('entry-<?php the_ID(); ?>').style.display = 'block';document.getElementById('arrow-<?php the_ID(); ?>').style.display = 'none';document.getElementById('arrow-down-<?php the_ID(); ?>').style.display = 'block';"></a>
+		<a style="display:none" class="post-arrow-down" id="arrow-down-<?php the_ID(); ?>" href="javascript:document.getElementById('entry-<?php the_ID(); ?>').style.display = 'none';document.getElementById('arrow-<?php the_ID(); ?>').style.display = 'block';document.getElementById('arrow-down-<?php the_ID(); ?>').style.display = 'none';"></a>
+	<?php } ?>
+
+	<div class="calendar" style="background: url(<?php bloginfo('template_directory'); ?>/images/cal/month<?php echo get_the_time('n') ?>.jpg) no-repeat;">
+		<div class="cal-month"><?php echo get_the_time('M') ?></div>
+		<div class="cal-date"><?php echo get_the_time('j') ?></div>
+	</div>
+
 <a class="h2" href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php if (function_exists('the_title_attribute')) the_title_attribute(); else the_title(); ?>"><?php if (function_exists('bnc_the_title')) bnc_the_title(); else the_title(); ?></a>
 			<div class="post-author">
 			<?php if (bnc_show_author()) { ?><span class="lead">Author:</span> <?php the_author(); ?><br /><?php } ?>
