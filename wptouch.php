@@ -451,8 +451,7 @@ return $v['link-color'];
 	  }
 	}	
   
-  function bnc_wp_touch_page()
-  {
+  function bnc_wp_touch_page() {
 	  if (isset($_POST['submit'])) {
 		  echo('<div class="wrap"><div id="wptouch-theme">');
 		  echo('<div id="wptouchupdated">Your new WPtouch settings were saved.</div>');
@@ -461,8 +460,9 @@ return $v['link-color'];
 		  echo('<div class="wrap"><div id="wptouch-theme">');
 		  echo('<div id="wptouch-title"><img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/admin-header.png" class="logo" alt="" /></div>');
 	  }
-?>
+}	  
 
+?>
 <?php $icons = bnc_get_icon_list(); ?>
 
 		<?php
@@ -1106,7 +1106,7 @@ The Plugin Section
 </div>
 
 <?php 
-echo('</div></div>'); } 
+echo('</div></div>'); }
 add_action('admin_head', 'wptouch_admin_css');
 add_action('admin_menu', 'bnc_options_menu'); 
 add_action('wp_footer', 'wptouch_switch');
