@@ -22,8 +22,6 @@
    # See the GNU lesser General Public License for more details.
 */
    
-//update_option('bnc_iphone_pages', serialize(''));
-//	update_option('bnc_iphone_pages', serialize($defaults));
 function wptouch_init() {
 	$bnc_option = get_option('bnc_iphone_pages');
 	if ($bnc_option == null) {
@@ -807,7 +805,6 @@ The Style Section
 	</div>
 		
 	<div class="wptouch-item-content-box1" id="wptouchstyle">
-<h3>Header Style</h3>				
 
 	<div class="header-item-desc">Header Title Text <small>(here you can override your site title to fit the WPtouch header)</small></div>
 		<div class="header-input">&nbsp; <input text="text" name="header-title" type="text" value="<?php $str = $v['header-title']; echo stripslashes($str); ?>" /></div>
@@ -821,7 +818,6 @@ The Style Section
 	<div class="header-item-desc">Header Text Color</div>
 		<div class="header-input">#<input type="text" name="header-text-color" type="text" value="<?php echo $v['header-text-color']; ?>" /></div>
 
-<h3>Other</h3>
 				<div class="header-item-desc">Site-wide Link Color <small>(the color for most of the links in WPtouch)</small></div>
 			<div class="header-input">#<input type="text" name="link-color" type="text" value="<?php echo $v['link-color']; ?>" /></div>		
 		</div>
@@ -849,7 +845,7 @@ The Post Listings Section
 			
 			<div class="wptouch-checkbox-row"><input type="checkbox" name="enable-main-categories" <?php if (isset($v['enable-main-categories']) && $v['enable-main-categories'] == 1) echo('checked'); ?>><label for="enable-categories"> Show Categories</label></div>
 			
-			<div class="wptouch-checkbox-row withhr"><input type="checkbox" name="enable-main-tags" <?php if (isset($v['enable-main-tags']) && $v['enable-main-tags'] == 1) echo('checked'); ?>><label for="enable-tags"> Show Tags</label></div>
+			<div class="wptouch-checkbox-row"><input type="checkbox" name="enable-main-tags" <?php if (isset($v['enable-main-tags']) && $v['enable-main-tags'] == 1) echo('checked'); ?>><label for="enable-tags"> Show Tags</label></div>
 			
 			<div class="wptouch-checkbox-row"><input type="checkbox" name="enable-post-excerpts" <?php if (isset($v['enable-post-excerpts']) && $v['enable-post-excerpts'] == 1) echo('checked'); ?>><label for="enable-excerpts">Hide Excerpts (if unchecked the excerpts will be shown, and the drop arrows will be hidden)</label></div>
 				
@@ -1086,14 +1082,6 @@ The Plugin Section
 		   <?php } else { ?>
 		   <div class="sort-of"><img src="<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/images/sortof.png" alt="" /> You don't have <a href="http://www.bravenewcode.com/blipit/" target="_blank">Blip.it</a> installed: (No automatic iPhone compatible video support)</div>
 			<?php } ?>
-			
-	<?php /*?>			   <?php
-				  //CodeBox Check
-		   if (function_exists('codebox_header')) { ?>
-		 <div class="all-good"><img src="<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/images/good.png" alt="" /> Gravy. <a href="http://wordpress.org/extend/plugins/wp-codebox/" target="_blank">CodeBox</a> is <em>not</em> installed. If it was, things would look ugly.</div>
-		   <?php } else { ?>
-		   <div class="too-bad"><img src="<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/images/good.png" alt="" /> D'oh, <a href="http://wordpress.org/extend/plugins/wp-codebox/" target="_blank">CodeBox</a> <strong>is</strong> installed. WPtouch <em>does not</em> currently support it, so things will look ugly until it does, sorry.</div>
-			<?php } ?><?php */?>
 			  
 		<?php
 		  //WP-Cache Plugin Check

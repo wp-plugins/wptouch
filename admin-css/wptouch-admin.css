@@ -34,14 +34,10 @@
 	margin-right: auto;
 }
 
-#wptouch-theme h3 {
-	font-size: 13px;
-	margin-top: 4%;
-}
-
 #wptouch-theme h4 {
 	font-size: 13px;
-	margin-top: 4%;
+	margin-top: 3%;
+	margin-bottom: 2%;
 }
 
 #wptouch-theme a {
@@ -80,10 +76,10 @@
 
 #wptouch-theme .wptouch-item-desc {
 	float: left;
-	width: 25%;
-	margin-right: 3%;
-	padding-top: 15px;
-	padding-bottom: 65px;
+	width: 24%;
+	margin-right: 4%;
+	padding-top: 10px;
+	padding-bottom: 50px;
 	padding-right: 2%;
 	margin-bottom: 1px;
 	display: block;
@@ -126,13 +122,15 @@
 }
 
 #wptouch-theme textarea {
-	width: 465px;
+	width: 70%;
 	font-size: 11px;
 	color: #555;
-	border: 1px solid #999;
+	border: 1px solid #ccc;
 	-webkit-border-radius: 5px;
 	-mozilla-border-radius: 5px;
-	height: 100px;
+	height: 80px;
+	margin: 0;
+	padding: 2px;
 }
 
 
@@ -145,12 +143,6 @@
 	position: relative;
 	clear: both;
 	bottom: 5px;
-}
-
-.wptouch-itemrow h3 {
-   margin-bottom: 10px;
-   padding-top: 0px;
-   color: black;
 }
 
 #wptouch-news-frame ul {
@@ -168,7 +160,7 @@
 	float: right;
 	bottom: 25px;
 	line-height: 16px;
-	width: 28%;
+	width: 24%;
 }
 
 #wptouch-news-frame h3 {
@@ -218,8 +210,9 @@
 
 /* @group Styling Section */
 
-#wptouch-theme #wptouchstyle .header-item-desc {
+#wptouch-theme .header-item-desc {
 	font-size: 11px;
+	line-height: 15px;
 }
 
 #wptouch-theme #wptouchstyle input {
@@ -258,28 +251,28 @@
 /* @group Available Icons Section */
 
 #wptouch-theme ul.wptouch-iconblock {
+	padding: 0 16px 16px 0;
+	margin: 0 0 10px;
 	float: left;
-	padding: 0 14px 10px 0;
-	border-bottom: 1px solid #eee;
-	margin: 0 0 20px;
 }
 
 #wptouch-theme ul.wptouch-iconblock li {
-	font-size: 11px;
-	color: #999;
-	width: 95px;
+	color: #555;
+	width: 110px;
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
+	font-size: 11px;
+	font-weight: bold;
 }
 
 #wptouch-theme ul.wptouch-iconblock li img {
-	width: 26px;
-	height: 26px;
 	float: left;
-	margin-right: 5px;
+	margin-right: 6px;
 	position: relative;
-	bottom: 5px;
+	bottom: 8px;
+	width: 32px;
+	height: 32px;
 }
 
 
