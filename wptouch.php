@@ -1090,7 +1090,7 @@ The Plugin Section
 	  
 	  <?php } else { ?>
 	  
-	<div class="all-good"><img src="<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/images/good.png" alt="" />No <a href="http://mnm.uib.es/gallir/wp-cache-2/" target="_blank">WP-Cache</a> installed. If installed, <strong>it requires special configuration.</strong> Visit the <a href="http://www.bravenewcode.com/wptouch/">WPtouch homepage</a> for help using WP-Cache.</div>
+	<div class="all-good"><img src="<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/images/good.png" alt="" />No <a href="http://mnm.uib.es/gallir/wp-cache-2/" target="_blank">WP-Cache</a> active. If activated, <strong>it requires special configuration.</strong> Visit the <a href="http://www.bravenewcode.com/wptouch/">WPtouch homepage</a> for help using WP-Cache.</div>
 			<?php } ?>
 			
 					  <?php
@@ -1100,7 +1100,7 @@ The Plugin Section
 	  
 	  <?php } else { ?>
 	  
-	<div class="all-good"><img src="<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/images/good.png" alt="" /> No <a href="http://mnm.uib.es/gallir/wp-cache-2/" target="_blank">WP Super Cache</a>. <strong>Currently, it does <em>not</em> work fully with WPtouch. Visit <a href="http://www.bravenewcode.com/2009/01/05/wptouch-and-wp-super-cache/">this page</a> for more information.</div>
+	<div class="all-good"><img src="<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/images/good.png" alt="" /> <a href="http://ocaoimh.ie/wp-super-cache/" target="_blank">WP Super Cache</a> support is currently experimental. Please visit <a href="http://www.bravenewcode.com/2009/01/05/wptouch-and-wp-super-cache/">this page</a> for more information.</div>
 			<?php } ?>
 	
 			</div>
