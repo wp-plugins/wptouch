@@ -18,7 +18,26 @@ The admin panel allows you to customize many aspects of its appearance, and deli
 
 The theme also includes the ability for your visitors to easily switch between the WPtouch view and your site's regular theme.
 
+
+= New In Version 1.6: =
+
+* Auto-resizing images in posts/pages on orientation change!
+* Auto-resizing WP image galleries
+* Better support for captions on images, gallery items
+* Added the ability to enable a quick login button w/ drop-down in the WPtouch header
+* Added the ability to enable categories as a drop-down item in the WPtouch header
+* Added the ability to disable WPtouch automatic homepage redirection (resolves white page issue)
+* Added the ability to manually select a re-direct landing page
+* Refinements in WPtouch admin
+* Enhanced support for WordPress 2.7 admin
+* Re-designed post comment bubble icon
+* Input box to inject custom code (Google Analytics, MINT, etc) into WPtouch
+* Basic support for Incognito & WebMate browsers on iPhone & iPod touch
+* Other code fixes, cleanups & optimizations
+* Other theme style cleanups and enhancements
+
 Please visit http://www.bravenewcode.com/wptouch/ for a full description & updates on the WPtouch plugin.
+
 
 == What's New ==
 
@@ -38,6 +57,7 @@ Please visit http://www.bravenewcode.com/wptouch/ for a full description & updat
 * Basic support for Incognito & WebMate browsers on iPhone & iPod touch
 * Other code fixes, cleanups & optimizations
 * Other theme style cleanups and enhancements
+
 
 = Version 1.5 =
 
