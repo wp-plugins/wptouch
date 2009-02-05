@@ -32,7 +32,7 @@ Please visit http://www.bravenewcode.com/wptouch/ for a full description & updat
 * Added the ability to disable WPtouch automatic homepage redirection (resolves white page issue)
 * Added the ability to manually select a re-direct landing page
 * Refinements in WPtouch admin
-* Enhanced support for WordPress 2.7 + 2.7 admin
+* Enhanced support for WordPress 2.7 admin
 * Re-designed post comment bubble icon
 * Input box to inject custom code (Google Analytics, MINT, etc) into WPtouch
 * Basic support for Incognito & WebMate browsers on iPhone & iPod touch
