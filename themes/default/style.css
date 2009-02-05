@@ -1,4 +1,7 @@
-/* @override http://24.36.119.47:9098/wp-content/plugins/wptouch/themes/default/style.css */
+/* @override 
+	http://24.36.119.47:9098/wp-content/plugins/wptouch/themes/default/style.css
+	http://www.theglitch.ws/wp-content/plugins/wptouch/themes/default/style.css
+*/
 
 /*  
 Theme Name: WPtouch iPhone & iPod touch Plugin / Theme
@@ -621,11 +624,6 @@ a.sh2 {
 	padding-top: 5px;
 }
 
-#singlentry img {
-	max-width: 100%;
-	height: auto;
-}
-
 .single-post-meta-top {
 	text-align: left;
 	color: #999;
@@ -701,19 +699,21 @@ img.small {
 	font-size: 11px;
 	color: #999;
 	line-height: 13px;
+		max-width: 100% !important;
+		height: auto !important;
 }
 
 #singlentry .gallery {
 	margin: 0;
 	padding: 0;
-	width: 100%;
-	height: auto;
+	width: 100% !important;
+	height: auto !important;
 }
 
 #singlentry .gallery dl.gallery-item img.attachment-thumbnail {
 	padding: 3px;
 	margin: 10px;
-	width: 50%;
+	width: 50% !important;
 	height: auto;
 }
 
@@ -814,11 +814,6 @@ img.small {
 	display: block;
 }
 
-.pageentry img {
-	max-width: 100%;
-	height: auto;
-}
-
 .pageentry li {
 	list-style-type: none;
 }
@@ -827,6 +822,15 @@ img.pageicon {
 	position: relative;
 	top: 2px;
 	margin-right: 2px;
+}
+
+.pageentry .wp-caption {
+	text-align: center;
+	font-size: 11px;
+	color: #999;
+	line-height: 13px;
+		max-width: 100% !important;
+		height: auto !important;
 }
 
 /* @group Links */
@@ -1017,19 +1021,21 @@ img.pageicon {
 }
 
 .gravatar {
-	border: 1px solid #ccc;
 	position: relative;
-	top: 7px;
-	margin-right: 2px;
-	padding: 0;
+	margin-right: 5px;
+	padding: 1px;
+	float: left;
+	-webkit-border-radius: 1px;
+	background-color: #eee;
 }
 
 .avatar {
-	border: 1px solid #ccc;
 	position: relative;
 	margin-right: 5px;
-	padding: 0;
+	padding: 1px;
 	float: left;
+	-webkit-border-radius: 1px;
+	background-color: #eee;
 }
 
 /* @end */
@@ -1252,5 +1258,21 @@ a.search-close {
 	position: relative;
 	top: 6px;
 }
+
+/* @end */
+
+/* @group Post / Page Images */
+
+#singlentry img {
+	max-width: 100% !important;
+	height: auto !important;
+}
+
+.pageentry img {
+	max-width: 100% !important;
+	height: auto !important;
+}
+
+
 
 /* @end */

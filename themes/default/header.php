@@ -32,7 +32,7 @@ if  (!function_exists('dsq_comments_template')) { ?>
 <style type="text/css">
 #menubar {
 	width: 100%;
-	height: 45px;
+	height: 45px !important;
 	background: #<?php echo bnc_get_header_background(); ?> url(<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/themes/default/images/head-fade-bk.png) repeat-x;
 }
 #blogtitle a {
@@ -43,6 +43,9 @@ if  (!function_exists('dsq_comments_template')) { ?>
 	color: #<?php echo bnc_get_header_color(); ?>;
 }
 #dropmenu-inner a:hover {
+	color: #<?php echo bnc_get_link_color(); ?>;
+}
+#catsmenu-inner a:hover {
 	color: #<?php echo bnc_get_link_color(); ?>;
 }
 #drop-fade {
@@ -108,10 +111,10 @@ We've commented below to let you know what works what, so if you do go messing a
 		</a>
 	
 	<?php if (bnc_is_js_enabled()) { ?>
-		<a href="#" onclick="bnc_load_menu('<?php bloginfo('template_directory'); ?>/menu.php'); return false;">
-		<?php } else { ?>
-		<a href="javascript:document.getElementById('dropmenu').style.display='block';">
-		<?php } ?>        
+			<a href="javascript:$wptouch('#dropmenu').slideToggle(200);">
+				<?php } else { ?>
+			<a href="javascript:document.getElementById('dropmenu').style.display='block';">
+		<?php } ?>
 		<img src="<?php bloginfo('template_directory'); ?>/images/menu/touchmenu.png" alt="" />
 		</a>
 	</div>
@@ -158,11 +161,9 @@ We've commented below to let you know what works what, so if you do go messing a
 	</div>
 
 	<div id="dropmenu" style="display:none">
-        <?php if (!bnc_is_js_enabled()) { ?>
-   
-        <!-- Here's the  drop-down menu. 
-        We're checking the pages that are enabled in the admin, and the icons which were assigned to them. We're also checking to see if the user has enabled the RSS< Mail, and/or Home link to be shown in the menu. -->
-        
+      
+        <!-- Here's the  drop-down menu. We're checking the pages that are enabled in the admin, and the icons which were assigned to them. We're also checking to see if the user has enabled the RSS< Mail, and/or Home link to be shown in the menu. -->
+    
         <div id="dropmenu-inner">
             <ul>
             <?php if (bnc_is_home_enabled()) { ?><li><a href="<?php bloginfo('url'); ?>"><img src="<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/images/icon-pool/Home.png" alt="" />Home</a></li> <?php } ?>
@@ -179,7 +180,6 @@ We've commented below to let you know what works what, so if you do go messing a
             <?php } ?>
             </ul>
         </div>
-        <?php } ?>
 	</div>
 
 <!-- This just checks if the user is trying to use the theme with anything other than WPtouch, and its not an iPhone/iPod touch -->
