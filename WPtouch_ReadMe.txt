@@ -1,13 +1,13 @@
 ReadMe 
 
 WPtouch WordPress Theme & Plugin
-Make your site look gorgeous on an iPhone/iPod touch
+Make your site look gorgeous on an iPhone, iPod touch or Android mobile phone
 
 By Dale Mugford & Duane Storey
 bravenewcode.com
-Version: 1.5.1
+Version: 1.6
 
 Complete and updated information & installation instructions available at:
 http://www.bravenewcode.com/wptouch/
 
-nov. 28. 2008
+feb. 4. 2008

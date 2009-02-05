@@ -1,14 +1,14 @@
 === Plugin Name ===
 Contributors: BraveNewCode
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=paypal%40bravenewcode%2ecom&item_name=WPtouch%20Beer%20Fund&no_shipping=0&no_note=1&tax=0&currency_code=CAD&lc=CA&bn=PP%2dDonationsBF&charset=UTF%2d8
-Tags: wptouch, iphone, ipod touch, theme, apple, mac, bravenewcode, AJAX, mobile, wordpress on iphone, iphone wordpress
-Requires at least: 2.3
-Tested up to: 2.6.5
-Stable tag: 1.5
+Tags: wptouch, iphone, ipod touch, theme, apple, mac, bravenewcode, ajax, mobile, wordpress on iphone, iphone wordpress
+Requires at least: 2.3.x
+Tested up to: 2.7
+Stable tag: 1.6
 
 WPtouch automatically transforms your WordPress blog into an iPhone application-style theme, complete with ajax loading articles and effects, when viewed from an iPhone or iPod touch.
 
-Downloaded over 31,000 times (bravenewcode.com + wordpress.org) since April 2008. 
+Downloaded over 60,000 times (bravenewcode.com + wordpress.org) since April 2008. 
 
 == Description ==
 
@@ -22,12 +22,22 @@ Please visit http://www.bravenewcode.com/wptouch/ for a full description & updat
 
 == What's New ==
 
-= Version 1.5.1 =
+= Version 1.6 =
 
-* Added the ability to enable a login button w/ drop-down in the WPtouch header
+* Auto-resizing images in posts/pages on orientation change!
+* Auto-resizing WP image galleries
+* Better support for captions on images, gallery items
+* Added the ability to enable a quick login button w/ drop-down in the WPtouch header
+* Added the ability to enable categories as a drop-down item in the WPtouch header
 * Added the ability to disable WPtouch automatic homepage redirection (resolves white page issue)
-* Refinements in WPtouch admin wording, style
-
+* Added the ability to manually select a re-direct landing page
+* Refinements in WPtouch admin
+* Enhanced support for WordPress 2.7 + 2.7 admin
+* Re-designed post comment bubble icon
+* Input box to inject custom code (Google Analytics, MINT, etc) into WPtouch
+* Basic support for Incognito & WebMate browsers on iPhone & iPod touch
+* Other code fixes, cleanups & optimizations
+* Other theme style cleanups and enhancements
 
 = Version 1.5 =
 
@@ -114,7 +124,12 @@ Please visit http://www.bravenewcode.com/wptouch/ for a full description & updat
 
 == Installation ==
 
-Unzip, and upload the 'wptouch' folder and all its contents to your WordPress wp-content/plugins folder using FTP. Visit the plugin tab in the WordPress admin, and activate WPtouch. You can then setup your plugin options by visiting the Settings - >WPtouch tab.
+= Pre 2.7 =
+Download, unzip, and upload the 'wptouch' folder and all its contents to your WordPress wp-content/plugins folder using FTP. Visit the plugin tab in the WordPress admin, and activate WPtouch. You can then setup your plugin options by visiting the Settings - >WPtouch tab.
+
+= 2.7+ =
+You can now install WPtouch directly from the WordPress admin!
+
 
 Please visit http://www.bravenewcode.com/wptouch/ for comprehensive installation instructions.
 
