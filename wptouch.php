@@ -4,7 +4,7 @@
    Plugin URI: http://bravenewcode.com/wptouch/
    Description: A plugin which reformats your site with a mobile theme when viewing with an <a href="http://www.apple.com/iphone/">iPhone</a> / <a href="http://www.apple.com/ipodtouch/">iPod touch</a>. Set styling, page, menu, icon and more options for the theme by visiting the <a href="options-general.php?page=wptouch/wptouch.php">WPtouch Options admin panel</a>. &nbsp;
    Author: Dale Mugford & Duane Storey
-   Version: 1.6
+   Version: 1.61
    Author URI: http://www.bravenewcode.com
    
    # Special thanks to ContentRobot and the iWPhone theme/plugin
@@ -34,7 +34,7 @@ function wptouch_init() {
 add_filter('init', 'wptouch_init');
 
 // WPtouch Theme Options
-$bnc_wptouch_version = '1.6';
+$bnc_wptouch_version = '1.61';
 	function WPtouch($before = '', $after = '') {
 		global $bnc_wptouch_version;
 			echo $before . 'WPtouch ' . $bnc_wptouch_version . $after;
@@ -196,15 +196,15 @@ function bnc_options_menu() {
 
 function bnc_wp_touch_get_menu_pages() {
 	$v = get_option('bnc_iphone_pages');
-		if (!is_array($v)) {
-	$v = unserialize($v);
-}
+	if (!is_array($v)) {
+		$v = unserialize($v);
+	}
 
-if ($v != null) {
-	return $v;
-		} else {
-	$v = array();
-	return $v;
+	if ($v != null) {
+		return $v;
+	} else {
+		$v = array();
+		return $v;
 	}
 }
 
@@ -337,32 +337,49 @@ function bnc_is_email_enabled() {
 
   
 function bnc_wp_touch_get_pages() {
+	global $table_prefix;
 	$ids = bnc_wp_touch_get_menu_pages();
 	$a = array();
-		global $table_prefix;
-			$keys = array();
-				foreach ($ids as $k => $v) {
-					if ($k == 'main_title' || $k == 'enable-post-excerpts' || $k == 'enable-page-coms' || $k == 'enable-cats-button'  || $k == 'enable-login-button' || $k == 'enable-redirect' || $k == 'enable-js-header' || $k == 'enable-gravatars' || $k == 'enable-main-home' || $k == 'enable-main-rss' || $k == 'enable-main-email' || $k == 'enable-main-name' || $k == 'enable-main-tags' || $k == 'enable-main-categories') {
-// do nothing
-					} else {
-					if (is_numeric($k)) {
-			$keys[] = $k;
-		}
+	$keys = array();
+	foreach ($ids as $k => $v) {
+		if ($k == 'main_title' || $k == 'enable-post-excerpts' || $k == 'enable-page-coms' || 
+			 $k == 'enable-cats-button'  || $k == 'enable-login-button' || $k == 'enable-redirect' || 
+			 $k == 'enable-js-header' || $k == 'enable-gravatars' || $k == 'enable-main-home' || 
+			 $k == 'enable-main-rss' || $k == 'enable-main-email' || $k == 'enable-main-name' || $k == 'enable-main-tags' || $k == 'enable-main-categories') {
+			} else {
+				if (is_numeric($k)) {
+					$keys[] = $k;
+				}
+			}
 	}
-}
-	  
-$query = "select * from {$table_prefix}posts where ID in (" . implode(',', $keys) . ") order by post_title asc";
-$con = @mysql_connect(DB_HOST, DB_USER, DB_PASSWORD);
+	 
+	$menu_order = array(); 
+	$query = "select * from {$table_prefix}posts where ID in (" . implode(',', $keys) . ") order by post_title asc";
+	$con = @mysql_connect(DB_HOST, DB_USER, DB_PASSWORD);
+	$inc = 0;
 	if ($con) {
 		if (@mysql_select_db(DB_NAME, $con)) {
 			$result = @mysql_query($query);
-		while ($row = @mysql_fetch_assoc($result)) {
-			$row['icon'] = $ids[$row['ID']];
-			$a[$row['ID']] = $row;
+			while ($row = @mysql_fetch_assoc($result)) {
+				//print_r($row);
+				$row['icon'] = $ids[$row['ID']];
+				$a[$row['ID']] = $row;
+				if (isset($menu_order[$row['menu_order']])) {
+					$menu_order[$row['menu_order']*100 + $inc] = $row;
+				} else {
+					$menu_order[$row['menu_order']*100] = $row;
+				}
+				$inc = $inc + 1;
 			}
 		}
 	} 
-return $a;
+
+	if (isset($ids['sort-order']) && $ids['sort-order'] == 'page') {
+		asort($menu_order);
+		return $menu_order;
+	} else {
+		return $a;
+	}
 }
 
 function bnc_get_header_title() {
@@ -564,6 +581,10 @@ return $v['link-color'];
 
 		if (isset($_POST['statistics'])) {
 			$a['statistics'] = $_POST['statistics'];
+		}
+
+		if (isset($_POST['sort-order'])) {
+			$a['sort-order'] = $_POST['sort-order'];
 		}
 
 		  foreach ($_POST as $k => $v) {
@@ -935,9 +956,19 @@ The Menu Section
 				 					echo('selected');
 								echo(">{$icon['friendly']}</option>");
 							}
-						echo("</select></div></div>");
+						echo("</select>");
+						echo("</div></div>");
 					}
 				}
+				echo("<div class=\"wptouch-select-row\" id=\"pages-sort-order\"><div class=\"wptouch-select-left\">Sort Order</div><div class=\"wptouch-select-right\"><select name=\"sort-order\"><option value=\"name\"");
+				if ($v['sort-order'] == 'name') {
+					echo(" selected");
+				}
+				echo(">By Name</option><option value=\"page\"");
+				if ($v['sort-order'] == 'page') {
+					echo(" selected");
+				}
+				echo(">By Page Order</option></select></div></div>");
 			}
 		?>
 </div>
