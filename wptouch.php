@@ -4,7 +4,7 @@
    Plugin URI: http://bravenewcode.com/wptouch/
    Description: A plugin which reformats your site with a mobile theme when viewing with an <a href="http://www.apple.com/iphone/">iPhone</a> / <a href="http://www.apple.com/ipodtouch/">iPod touch</a>. Set styling, page, menu, icon and more options for the theme by visiting the <a href="options-general.php?page=wptouch/wptouch.php">WPtouch Options admin panel</a>. &nbsp;
    Author: Dale Mugford & Duane Storey
-   Version: 1.61
+   Version: 1.6.1
    Author URI: http://www.bravenewcode.com
    
    # Special thanks to ContentRobot and the iWPhone theme/plugin
@@ -34,7 +34,7 @@ function wptouch_init() {
 add_filter('init', 'wptouch_init');
 
 // WPtouch Theme Options
-$bnc_wptouch_version = '1.61';
+$bnc_wptouch_version = '1.6.1';
 	function WPtouch($before = '', $after = '') {
 		global $bnc_wptouch_version;
 			echo $before . 'WPtouch ' . $bnc_wptouch_version . $after;
@@ -474,12 +474,10 @@ return $v['link-color'];
 	  if (isset($_POST['submit'])) {
 		  echo('<div class="wrap"><div id="wptouch-theme">');
 		  echo('<div id="wptouchupdated">Your new WPtouch settings were saved.</div>');
-		  echo('<div id="wptouch-title"><img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/admin-header.png" class="logo" alt="" /></div>');
-//	  echo('' . WPtouch('<div class="wptouch-version">','</div>') . '');
+		  echo('<div id="wptouch-title">' . WPtouch('<div class="header-wptouch-version"> This is ','</div>') . '</div>');
 	  } else {
 		  echo('<div class="wrap"><div id="wptouch-theme">');
-		  echo('<div id="wptouch-title"><img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/admin-header.png" class="logo" alt="" /></div>');
-	//  echo('' . WPtouch('<div class="wptouch-version">','</div>') . '');
+		  echo('<div id="wptouch-title">' . WPtouch('<div class="header-wptouch-version"> This is ','</div>') . '</div>');
 	  }
 ?>
 
@@ -697,11 +695,6 @@ return $v['link-color'];
 ?>
 	
   <form method="post" action="<?php echo $_SERVER['REQUEST_URI']; ?>">
- 
-	<div id="wptouch-preview" style="display:none">
-		<div style="background: #<?php echo bnc_get_header_background(); ?> url(<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/themes/default/images/head-fade-bk.png) repeat-x; color:#<?php echo bnc_get_header_color(); ?>" id="head-prev"><img src="<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/images/icon-pool/<?php echo bnc_get_title_image(); ?>" alt="" /> <?php bloginfo('title'); ?>
-		</div>				
-	</div>	
 	
 <?php
 /*

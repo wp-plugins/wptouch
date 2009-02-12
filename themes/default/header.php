@@ -123,7 +123,7 @@ We've commented below to let you know what works what, so if you do go messing a
 
 	<div id="wptouch-login" style="display:none">
 		<div id="wptouch-login-inner">
-			<form name="loginform" id="loginform" action="<?php echo get_settings('url'); ?>/wp-login.php" method="post">
+			<form name="loginform" id="loginform" action="<?php echo get_settings('wpurl'); ?>/wp-login.php" method="post">
 				<label>
 					<input type="text" name="log" id="log" onfocus="if (this.value == 'username') {this.value = ''}" value="username" />
 				</label>

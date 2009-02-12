@@ -10,10 +10,10 @@ function wptouch_enqueue() {
 			echo '<script type="text/javascript">google.load("jquery", "1");</script>';
 		}
 }
-  //Favicon fetch and convert script // This script will convert favicons for the links listed on your Links page (if you have one).
+//Favicon fetch and convert script // This script will convert favicons for the links listed on your Links page (if you have one).
   function bnc_url_exists($url)
   {
-      // Version 4.x supported
+// Version 4.x supported
       $handle = curl_init($url);
       if (false === $handle) {
           return false;
@@ -48,7 +48,7 @@ function wptouch_enqueue() {
   }
   function bnc_get_favicon_for_site($site)
   {
-  // Yes we know this goes remote to handle things, but we do this to ensure that it works for everyone. No data is collected, as you can see
+// Yes we know this goes remote to handle things, but we do this to ensure that it works for everyone. No data is collected, as you'll see if you look at the script.
       $i = 'http://www.bravenewcode.com/code/favicon.php?site=' . urlencode($site) . '&default=' . urlencode(bnc_get_local_icon_url() . '/icon-pool/default.png');
       return $i;
   }

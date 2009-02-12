@@ -20,6 +20,19 @@
 	padding-top: 10px;
 	padding-bottom: 10px;
 	height: 216px;
+	background: url(../images/admin-header.png) no-repeat;
+}
+
+#wptouch-theme .header-wptouch-version {
+	font: bold 20px "Myriad Pro", "Helvetica Neue", Helvetica, Geneva, sans-serif;
+	color: #4d6277;
+	text-shadow: #85b3df 0 1px 2px;
+	letter-spacing: -1px;
+	display: inline;
+	float: left;
+	position: relative;
+	top: 183px;
+	left: 140px;
 }
 
 
@@ -32,6 +45,7 @@
 	margin-bottom: 0;
 	margin-top: 0;
 	margin-right: auto;
+	float: left;
 }
 
 #wptouch-theme h4 {

@@ -132,9 +132,10 @@ blockquote {
 #blogtitle {
 	float: left;
 	margin-left: 10px;
-	text-shadow: #5c5c5c 0 0 0;
+	text-shadow: #5c5c5c 1px 1px 1px;
 	position: relative;
 	margin-top: 10px;
+	bottom: 1px;
 }
 
 #blogtitle img {
@@ -1173,8 +1174,8 @@ h2#switch-footer-links {
 /* @group YouTube */
 
 object {
-	max-width: 277px;
-	max-height: 224px;
+	max-width: 100% !important;
+	max-height: auto !important;
 }
 
 /* @end */
