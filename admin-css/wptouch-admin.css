@@ -233,7 +233,7 @@
 	line-height: 15px;
 }
 
-#wptouch-theme #wptouchstyle input {
+#wptouch-theme .wptouchstyle input {
 	-webkit-border-radius:5px;
 	border: 1px solid #CCC;
 	background-color: #e2fffc;
@@ -465,3 +465,13 @@
 	width: 90%;
 	padding: 6px;
 }
+
+/* @group Advertising Options */
+
+#wptouch-theme .advertising {
+	
+}
+
+
+
+/* @end */
