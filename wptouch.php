@@ -202,8 +202,8 @@ function wptouch_switch() {
 			margin:0px;
 			border-top: 2px solid #999;
 			border-bottom: 2px solid #999;
-			text-shadow: #e6e6e6 3px 3px 1px;
-			" id="switch-footer-links">View ' . get_bloginfo('title') . '\'s <a href="' . get_bloginfo('siteurl') . '/?bnc_view=mobile">Mobile Version</a></div>';
+			text-shadow: #e6e6e6 3px 3px 1px;" 
+			id="switch-footer-links">View ' . get_bloginfo('title') . '\'s <a href="' . get_bloginfo('siteurl') . '/?bnc_view=mobile">Mobile Version</a></div>';
 	}
 }
   
