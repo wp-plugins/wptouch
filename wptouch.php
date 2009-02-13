@@ -1136,7 +1136,7 @@ The Plugin Section
 
 		  <h4>Other Plugin Support &amp; Compatibility</h4>
 	  <?php	  //Peter's Anti-Spam
-	 if (!function_exists('cas_register_post') { ?>
+	 if (!function_exists('cas_register_post')) { ?>
 	 <div class="all-good"><img src="<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/images/good.png" alt="" /> Cool! <a href="http://wordpress.org/extend/plugins/peters-custom-anti-spam-image/" target="_blank">Peter's Custom Anti-Spam</a>: Your commentform supports it.</div>
 			  <?php } else { ?>
 		  <div class="too-bad"><img src="<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/images/bad.png" alt="" /> You don't have <a href="http://wordpress.org/extend/plugins/peters-custom-anti-spam-image/" target="_blank">Peter's Custom Anti-Spam</a> installed (Your commentform supports it).</div>
