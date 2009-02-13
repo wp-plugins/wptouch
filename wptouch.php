@@ -190,7 +190,7 @@ function bnc_is_iphone() {
 	// The Automatic Footer Template Switch Code (into 'wp_footer();')
 function wptouch_switch() {
 	global $wptouch_plugin;
-		if ($wptouch_plugin->applemobile) {
+		if ($wptouch_plugin->applemobile && $wptouch_plugin->desired_view == 'normal') {
 			echo '<div style="
 			width:100%;
 			height: 48px;
@@ -203,7 +203,7 @@ function wptouch_switch() {
 			border-top: 2px solid #999;
 			border-bottom: 2px solid #999;
 			text-shadow: #e6e6e6 3px 3px 1px;" 
-			id="switch-footer-links">View ' . get_bloginfo('title') . '\'s <a href="' . get_bloginfo('siteurl') . '/?bnc_view=mobile">Mobile Version</a></div>';
+			id="switch-footer-links">View ' . get_bloginfo('title') . '\'s <a href="' . get_bloginfo('siteurl') . '/?bnc_view=mobile">Mobile Theme</a></div>';
 	}
 }
   

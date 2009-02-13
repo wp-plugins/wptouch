@@ -1,7 +1,7 @@
 <!-- Here the switch code is very important, as well as the php code which deals with admin links and WordPress -->
 	<div id="footer">
 		<p>
-			<h3>iPhone View | <a href="<?php echo bloginfo('home') . '/?bnc_view=normal'; ?>">Normal View</a></h3>	
+			<h3>View <?php bloginfo('title'); ?>'s <a href="<?php echo bloginfo('home') . '/?bnc_view=normal'; ?>">Regular Theme</a></h3>	
 		<br /><br />
 			Powered by <a href="http://wordpress.org/">WordPress</a> with <a href="http://www.bravenewcode.com/wptouch/"><?php WPtouch(); ?></a>
 		<br />
@@ -9,9 +9,9 @@
 		<br />
 
 			<?php if (current_user_can('edit_posts')) : // If it's not an admin don't show these! ?>      
-				<a href="<?php bloginfo('wpurl'); ?>/wp-admin/">Admin</a> | <a href="<?php bloginfo('wpurl'); ?>/wp-login.php?action=logout">Logout</a>
+				<a href="<?php bloginfo('wpurl'); ?>/wp-admin/">Admin</a> | <a href="<?php echo wp_logout_url(); ?>">Logout</a>
 			<?php elseif (current_user_can('read_posts')) : ?>
-				<a href="<?php bloginfo('wpurl'); ?>/wp-admin/profile.php">Account Profile</a><?php if (!bnc_is_login_button_enabled()) { ?> | <a href="<?php bloginfo('wpurl'); ?>/wp-login.php?action=logout">Logout</a><?php } ?>
+				<a href="<?php bloginfo('wpurl'); ?>/wp-admin/profile.php">Account Profile</a><?php if (!bnc_is_login_button_enabled()) { ?> | <a href="<?php echo wp_logout_url(); ?>">Logout</a><?php } ?>
 			<?php else : ?>
 				<?php if (!bnc_is_login_button_enabled()) { ?>
 					<a href="<?php bloginfo('wpurl'); ?>/wp-login.php">Login to <?php bloginfo('name'); ?></a> 
@@ -21,12 +21,12 @@
 				<?php } ?>
 			<?php  endif; ?>
 		</p>
-		<?php
-//WPtouch theme designed and developed by Dale Mugford and Duane Storey for BraveNewCode.com
-//Licensed under GPL
-//If you modify it, please keep our credit in the footer (and keep the WordPress credit, too!), that's all we ask, folks.
-		wp_footer(); ?>
+		<?php wp_footer(); ?>
 	</div>
-	<?php wptouch_get_stats(); ?>
+	<?php wptouch_get_stats(); 
+	//WPtouch theme designed and developed by Dale Mugford and Duane Storey for BraveNewCode.com
+	//Licensed under GPL
+	//If you modify it, please keep the link credit *visible* in the footer (and keep the WordPress credit, too!), that's all we ask, folks.
+?>
 </body>
 </html>

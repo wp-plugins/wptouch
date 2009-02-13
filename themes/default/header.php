@@ -85,7 +85,7 @@ We've commented below to let you know what works what, so if you do go messing a
 				<img src="<?php bloginfo('template_directory'); ?>/images/menu/touchmenu-login.png" alt="" />
 			</a>	
 		<?php else : ?>		
-			<a href="<?php bloginfo('siteurl'); ?>/wp-login.php?action=logout">
+			<a href="<?php echo wp_logout_url(); ?>">
 				<img src="<?php bloginfo('template_directory'); ?>/images/menu/touchmenu-logout.png" alt="" />
 			</a>
 		<?php endif; ?>
