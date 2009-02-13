@@ -94,7 +94,12 @@ function bnc_filter_iphone() {
    if (isset($_COOKIE[$key])) {
       $this->desired_view = $_COOKIE[$key];
    } else {
-      $this->desired_view = 'mobile';
+   	$settings = bnc_wptouch_get_settings();
+   	if ( $settings['enable-regular-default'] ) {
+   		$this->desired_view = 'normal';
+   	} else {
+      	$this->desired_view = 'mobile';
+   	}
    }
    
 }
@@ -192,6 +197,10 @@ function wptouch_switch() {
   
 function bnc_options_menu() {
 	add_options_page('WPtouch Theme', 'WPtouch', 9, __FILE__, bnc_wp_touch_page);
+}
+
+function bnc_wptouch_get_settings() {
+	return bnc_wp_touch_get_menu_pages();
 }
 
 function bnc_wp_touch_get_menu_pages() {
@@ -584,6 +593,12 @@ return $v['link-color'];
 		if (isset($_POST['sort-order'])) {
 			$a['sort-order'] = $_POST['sort-order'];
 		}
+		
+		if (isset($_POST['enable-regular-default'])) {
+			$a['enable-regular-default'] = 1;
+		} else {
+			$a['enable-regular-default'] = 0;
+		}
 
 		  foreach ($_POST as $k => $v) {
 			  if ($k == 'enable_main_title') {
@@ -792,6 +807,8 @@ The Javascript Section
 		<div class="wptouch-checkbox-row"><input type="checkbox" name="enable-gravatars" <?php if (isset($v['enable-gravatars']) && $v['enable-gravatars'] == 1) echo('checked'); ?>><label for="enable-gravatars"> Enable Gravatars in Comments</label></div>
 		
 		<div class="wptouch-checkbox-row"><input type="checkbox" name="enable-page-coms" <?php if (isset($v['enable-page-coms']) && $v['enable-page-coms'] == 1) echo('checked'); ?>><label for="enable-page-coms"> Enable Comments For Pages <small>(will add the comment form to <strong>all</strong> pages by default)</small></label></div>
+		
+		<div class="wptouch-checkbox-row"><input type="checkbox" name="enable-regular-default" <?php if (isset($v['enable-regular-default']) && $v['enable-regular-default'] == 1) echo('checked'); ?>><label for="enable-regular-default"> First-time mobile users will see regular (non-mobile) site</label></div>			
 
 		<h4 id="Statistics">If you'd like to capture traffic statistics (Google Analytics, MINT, Etc):</h4>
 			<div class="header-item-desc">Please enter the javascript code snippet(s) for your statistics tracking here.
