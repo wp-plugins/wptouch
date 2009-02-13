@@ -891,8 +891,26 @@ The Post Listings Section
 			<div class="wptouch-checkbox-row"><input type="checkbox" name="enable-main-tags" <?php if (isset($v['enable-main-tags']) && $v['enable-main-tags'] == 1) echo('checked'); ?>><label for="enable-tags"> Show Tags</label></div>
 			
 			<div class="wptouch-checkbox-row"><input type="checkbox" name="enable-post-excerpts" <?php if (isset($v['enable-post-excerpts']) && $v['enable-post-excerpts'] == 1) echo('checked'); ?>><label for="enable-excerpts">Hide Excerpts (if unchecked the excerpts will be shown, and the drop arrows will be hidden)</label></div>
+			
+				
 				
 		</div>
+	
+		<div class="wptouch-clearer"></div>	
+</div>
+<div class="wptouch-itemrow">		
+		<div class="wptouch-item-desc">
+			<h2>Advertising Options</h2>
+			<p>
+				Enter your Google AdSense ID if you'd like to support mobile advertising on your version of WPtouch.
+			</p>
+		</div>		
+		
+		<div class="wptouch-item-content-box1">
+					<div class="header-item-desc">Google AdSense ID</div>
+			<div class="header-input">#<input type="text" name="adsense-id" type="text" value="<?php echo $v['adsense-id']; ?>" /></div>
+		</div>
+	
 	<div class="wptouch-clearer"></div>
 </div>
 
