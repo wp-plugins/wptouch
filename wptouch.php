@@ -1135,12 +1135,17 @@ The Plugin Section
 			  <br /><br />
 
 		  <h4>Other Plugin Support &amp; Compatibility</h4>
-	  <?php
-	  //Start plugin support checks here
+	  <?php	  //Peter's Anti-Spam
+	 if (!function_exists('cas_register_post') { ?>
+	 <div class="all-good"><img src="<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/images/good.png" alt="" /> Cool! <a href="http://wordpress.org/extend/plugins/peters-custom-anti-spam-image/" target="_blank">Peter's Custom Anti-Spam</a>: Your commentform supports it.</div>
+			  <?php } else { ?>
+		  <div class="too-bad"><img src="<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/images/bad.png" alt="" /> You don't have <a href="http://wordpress.org/extend/plugins/peters-custom-anti-spam-image/" target="_blank">Peter's Custom Anti-Spam</a> installed (Your commentform supports it).</div>
+			  <?php } ?>
+
 	  
+	  <?php	  
 	  //FlickrRSS Plugin check 
-	  if (function_exists('get_flickrRSS')) {
-?>
+	  if (function_exists('get_flickrRSS')) { ?>
 			 <div class="all-good"><img src="<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/images/good.png" alt="" /> Cool! <a href="http://eightface.com/wordpress/flickrrss/" target="_blank">FlickrRSS</a>: Your photos will automatically show on a page called 'Photos'.</div>
 			  <?php } else { ?>
 		  <div class="too-bad"><img src="<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/images/bad.png" alt="" /> You don't have <a href="http://eightface.com/wordpress/flickrrss/" target="_blank">FlickrRSS</a> installed (No automatic photos page support)</div>
