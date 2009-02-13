@@ -128,11 +128,15 @@
 #wptouch-theme h4#wptouch-js {
 }
 
-#wptouch-theme ul.wptouch-small-menu {
+#wptouch-theme ul.wptouch-small-menu li {
 	list-style-type: circle;
 	color: #444;
-	padding: 0;
 	font-size: 11px;
+	line-height: 14px;
+	list-style-position: inside;
+	text-indent: -10px;
+	padding: 0 0 0 10px;
+	margin: 2px 0;
 }
 
 #wptouch-theme textarea {

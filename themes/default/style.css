@@ -1114,6 +1114,11 @@ form#commentform input {
 	margin: 0;
 	font-size: 13px;
 	color: #444;
+	width: 170px;
+}
+
+form#commentform input#submit {
+	width: 25%;
 }
 
 form#commentform small {
@@ -1272,6 +1277,54 @@ a.search-close {
 .pageentry img {
 	max-width: 100% !important;
 	height: auto !important;
+}
+
+
+
+/* @end */
+
+/* @group Peter's Anti Spam Support */
+
+#secureimgdiv img#cas_image {
+	-webkit-border-radius: 2px	!important;
+	border: 1px solid #adadad	!important;
+	width: auto							!important;
+	height: 21px							!important;
+	float: left								!important;
+}
+
+#secureimgdiv {
+	
+}
+
+#secureimgdiv p {
+	
+}
+
+#secureimgdiv p label {
+	color: #475d79;
+	text-shadow: #eee 1px 1px 0;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+#secureimgdiv p small {
+	display: block;
+	margin-top: 5px;
+	font-size: 11px;
+	text-align: justify;
+}
+
+#secureimgdiv p input#securitycode {
+	-webkit-border-radius: 10px;
+	border: 1px solid #adadad;
+	padding: 3px;
+	margin: 0 0 0 0;
+	font-size: 13px;
+	color: #444;
+	width: 101px;
+-webkit-border-top-left-radius:1px;
+-webkit-border-bottom-left-radius:1px;
 }
 
 

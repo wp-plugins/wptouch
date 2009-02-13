@@ -31,24 +31,12 @@ $oddcomment = 'alt';
 	<div class="comwrap">
 			<div class="comtop">
 			
-<!-- Checking to see if Gravatars are enabled for WPtouch -->
-	<?php if (bnc_is_gravatars_enabled()) { ?>
-			
-			<?php if (function_exists('gravatar')) { 
-			/* If we've got the classic Gravatars plugin and they're enabled in the WPtouch admin, serve them up */
-			?>
-			<img class='gravatar' src="<?php gravatar("R", 28, "' . get_bloginfo('url') . '/wp-content/plugins/wptouch/images/blank_gravatar.png'"); ?>" alt='' />
-			
-			<?php } elseif (function_exists('get_avatar')) 
-			/* If we've got built in Gravatars and they're enabled in the WPtouch admin, serve them up */
-			{ 
-			echo get_avatar( $comment, $size = '28', $default = '' . get_bloginfo('url') . '/wp-content/plugins/wptouch/images/blank_gravatar.png' ); 
-			} else { ?>
-			<?php } ?><!--end grav option-->
-			
-	<?php } ?><!--end grav check -->
-		
-      <!--  <a class="post-arrow" id="comment-num-<?php echo $comment_num; ?>" href="#" onclick="bnc_scroll_comment('<?php echo $comment_num; ?>'); return false"></a>	 -->
+		<?php if (bnc_is_gravatars_enabled()) { ?>
+			<?php if (function_exists('gravatar')) { ?>
+			<img class='gravatar' src="<?php gravatar("R", 28, "' . get_bloginfo('url') . '/wp-content/plugins/wptouch/images/blank_gravatar.png'"); ?>" alt='' />	
+			<?php } elseif (function_exists('get_avatar')) { echo get_avatar( $comment, $size = '28', $default = '' . get_bloginfo('url') . '/wp-content/plugins/wptouch/images/blank_gravatar.png' ); } else { ?><?php } ?>		
+		<?php } ?>
+
 		<a href="<?php comment_author_url(); ?>"><?php comment_author(); ?></a> said:
 		<div class="comdater"><?php comment_time('m / d / H:i'); ?></div>  
 		</div><!--end comtop-->
@@ -97,10 +85,9 @@ $oddcomment = 'alt';
 		</center>
 
 <?php else : ?>
-
   <!--  Let's check for advanced JS setting, and if it's enabled do fancy ajax comments -->
   
-	<?php if (bnc_is_js_enabled()) { ?>
+	<?php if (!function_exists('cas_register_post') && bnc_is_js_enabled()) { ?>
 	<div id="refresher" style="display:none">&raquo; <a href="javascript:this.location.reload();">Refresh the page</a> to post a new comment.</div>
 	<form id="commentform" action="<?php echo get_option('url'); ?>/wp-comments-post.php" method="post" onsubmit="$wptouch('#loading').fadeIn(100);var list = $wptouch('#commentlist'); var html = list.html(); var param = $wptouch('form').serialize(); $wptouch.ajax({url: '<?php bloginfo('template_directory'); ?>/comments-ajax.php?' + param, success: function(data, status){ list.append(data); commentAdded(); }, type: 'get' }); return false;">
 	<?php } else { ?>
@@ -113,7 +100,7 @@ $oddcomment = 'alt';
 	
 	<?php else : ?>
 	
-		<h3 id="respond"><!--Leave A Comment--></h3>
+		<h3 id="respond">Leave A Comment</h3>
 		<p style="font-size:13px">
 		<input type="text" name="author" id="author" value="<?php echo $comment_author; ?>" size="22" tabindex="1" />
 		<label for="author"><small>Name <?php if ($req) echo "*"; ?></small></label>

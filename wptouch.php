@@ -111,7 +111,7 @@ function detectAppleMobile($query = '') {
 
 // Add whatever user agents you want here to the array if you want to make this show on a Blackberry 
 // or something. No guarantees it'll look pretty, though!
-	$useragents = array("iphone", "ipod", "aspen", "dream", "incognito", "webmate");
+	$useragents = array("iphone", "ipod", "aspen", "safari", "incognito", "webmate");
 		$this->applemobile = false;
 			foreach ($useragents as $useragent) {
 			if (eregi($useragent, $container)) {
@@ -847,7 +847,7 @@ The Style Section
 		</p>
 	</div>
 		
-	<div class="wptouch-item-content-box1" id="wptouchstyle">
+	<div class="wptouch-item-content-box1 wptouchstyle">
 
 	<div class="header-item-desc">Header Title Text <small>(here you can override your site title to fit the WPtouch header)</small></div>
 		<div class="header-input">&nbsp; <input text="text" name="header-title" type="text" value="<?php $str = $v['header-title']; echo stripslashes($str); ?>" /></div>
@@ -902,11 +902,11 @@ The Post Listings Section
 		<div class="wptouch-item-desc">
 			<h2>Advertising Options</h2>
 			<p>
-				Enter your Google AdSense ID if you'd like to support mobile advertising on your version of WPtouch.
+				Enter your Google AdSense ID if you'd like to support mobile advertising in WPtouch posts.
 			</p>
 		</div>		
 		
-		<div class="wptouch-item-content-box1">
+		<div class="wptouch-item-content-box1 wptouchstyle">
 					<div class="header-item-desc">Google AdSense ID</div>
 			<div class="header-input">#<input type="text" name="adsense-id" type="text" value="<?php echo $v['adsense-id']; ?>" /></div>
 		</div>
