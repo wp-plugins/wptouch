@@ -191,7 +191,19 @@ function bnc_is_iphone() {
 function wptouch_switch() {
 	global $wptouch_plugin;
 		if ($wptouch_plugin->applemobile) {
-			echo '<h2 id="switch-footer-links"><a href="' . get_bloginfo('siteurl') . '/?bnc_view=mobile">iPhone View</a> | Normal View</h2>';
+			echo '<div style="
+			width:100%;
+			height: 48px;
+			padding-top:17px;
+			padding-bottom:15px;
+			font-size: x-large;
+			font-weight: bold;
+			background: url(' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/switch-bg.png) repeat-x 0 0;
+			margin:0px;
+			border-top: 2px solid #999;
+			border-bottom: 2px solid #999;
+			text-shadow: #e6e6e6 3px 3px 1px;
+			" id="switch-footer-links">View ' . get_bloginfo('title') . '\'s <a href="' . get_bloginfo('siteurl') . '/?bnc_view=mobile">Mobile Version</a></div>';
 	}
 }
   
