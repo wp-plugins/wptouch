@@ -1065,7 +1065,11 @@ The Plugin Section
 			<strong>
 			<?php
 			//Let's do some WordPress version checks to provide more information for the user about what they can expect using the plugin
-			$version = (float)get_bloginfo('version');
+			$version = (float)str_replace('.','',get_bloginfo('version'));
+			if ($version < 100) {
+				$version = $version * 100;
+			}
+			$version = $version / 100;
 			if ($version > 2.7) {
 			echo 'WordPress installed: ' . get_bloginfo('version') . '<br />(Untested)';
 			} elseif ($version >= 2.5) {
