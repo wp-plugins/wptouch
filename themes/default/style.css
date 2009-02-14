@@ -1176,6 +1176,12 @@ h2#switch-footer-links {
 
 /* @group Plugin Compatibility CSS */
 
+.wptouch-adsense-ad {
+	-webkit-border-radius: 10px;
+	border: 1px solid #adadad;
+	background-color: #fff;
+}
+
 /* @group Peter's Anti Spam Support */
 
 #secureimgdiv img#cas_image {
