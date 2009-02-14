@@ -14,7 +14,7 @@ if (!function_exists('google_append_url')) {
 
 	$GLOBALS['google']['ad_type']='text_image';
 	$GLOBALS['google']['channel']='';
-	$GLOBALS['google']['color_border']='ADADAD';
+	$GLOBALS['google']['color_border']='FFFFFF';
 	$GLOBALS['google']['color_bg']='FFFFFF';
 	$GLOBALS['google']['color_link']='0000CC';
 	$GLOBALS['google']['color_text']='333333';

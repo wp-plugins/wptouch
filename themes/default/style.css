@@ -1177,12 +1177,15 @@ h2#switch-footer-links {
 /* @group Plugin Compatibility CSS */
 
 .wptouch-adsense-ad {
-	-webkit-border-radius: 10px;
-	border: 1px solid #adadad;
-	background-color: #fff;
-	display: block;
-	margin-bottom: 15px;
-	max-width: 100% !important;
+	-webkit-border-radius: 10px	!important;
+	border: 1px solid #adadad		!important;
+	background-color: #fff				!important;
+	display: block							!important;
+	margin-bottom: 15px				!important;
+	max-width: 100%						!important;
+	padding: 5px							!important;
+	text-align: left						    !important;
+	font-size: 12px						!important;
 }
 
 /* @group Peter's Anti Spam Support */
