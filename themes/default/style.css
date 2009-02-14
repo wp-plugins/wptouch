@@ -1182,6 +1182,7 @@ h2#switch-footer-links {
 	background-color: #fff;
 	display: block;
 	margin-bottom: 15px;
+	max-width: 100% !important;
 }
 
 /* @group Peter's Anti Spam Support */
