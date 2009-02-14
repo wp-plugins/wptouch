@@ -821,12 +821,6 @@ The Javascript Section
 		<div class="wptouch-checkbox-row"><input type="checkbox" name="enable-page-coms" <?php if (isset($v['enable-page-coms']) && $v['enable-page-coms'] == 1) echo('checked'); ?>><label for="enable-page-coms"> Enable Comments For Pages <small>(will add the comment form to <strong>all</strong> pages by default)</small></label></div>
 		
 		<div class="wptouch-checkbox-row"><input type="checkbox" name="enable-regular-default" <?php if (isset($v['enable-regular-default']) && $v['enable-regular-default'] == 1) echo('checked'); ?>><label for="enable-regular-default"> First-time mobile users will see regular (non-mobile) site</label></div>			
-
-		<h4 id="Statistics">If you'd like to capture traffic statistics (Google Analytics, MINT, Etc):</h4>
-			<div class="header-item-desc">Please enter the javascript code snippet(s) for your statistics tracking here.
-			<br />It will be automatically inserted into WPtouch in the right place.<br />You can also add other code that you'd like to be loaded when WPtouch loads.<br /><br /></div>
-
-					<textarea name="statistics"><?php echo stripslashes($v['statistics']); ?></textarea>
 		</div>
 	<div class="wptouch-clearer"></div>
 </div>
@@ -899,19 +893,26 @@ The Post Listings Section
 		<div class="wptouch-clearer"></div>	
 </div>
 <div class="wptouch-itemrow">		
+	<div class="double-box-one">
 		<div class="wptouch-item-desc">
 			<h2>Advertising Options</h2>
-			<p>
-				Enter your Google AdSense ID if you'd like to support mobile advertising in WPtouch posts.
-			</p>
-		</div>		
-		
+				<p>Enter your Google AdSense ID if you'd like to support mobile advertising in WPtouch posts.</p>
+		</div>	
+			
 		<div class="wptouch-item-content-box1 wptouchstyle">
-					<div class="header-item-desc">Google AdSense ID</div>
+			<div class="header-item-desc">Google AdSense ID</div>
 			<div class="header-input">#<input type="text" name="adsense-id" type="text" value="<?php echo $v['adsense-id']; ?>" /></div>
 		</div>
-	
-	<div class="wptouch-clearer"></div>
+	</div>
+	<div class="double-box-two">
+	<div class="wptouch-item-desc">
+		<h2>Stats Tracking</h2>
+	 		<p>If you'd like to capture traffic statistics (Google Analytics, MINT, Etc):</p>
+	 		<p>Enter the code snippet(s) for your statistics tracking here.</p>
+	</div>	
+	<textarea name="statistics"><?php echo stripslashes($v['statistics']); ?></textarea>
+</div>
+		<div class="wptouch-clearer"></div>
 </div>
 
 <?php
@@ -1054,10 +1055,8 @@ The Plugin Section
 			<?php
 			//Let's do some WordPress version checks to provide more information for the user about what they can expect using the plugin
 			$version = (float)get_bloginfo('version');
-			if ($version > 2.71) {
+			if ($version > 2.7) {
 			echo 'WordPress installed: ' . get_bloginfo('version') . '<br />(Untested)';
-			} elseif ($version == 2.71) {
-			echo 'WordPress installed: ' . get_bloginfo('version') . '<br />(Fully Supported)';
 			} elseif ($version >= 2.5) {
 			echo 'WordPress installed: ' . get_bloginfo('version') . '<br />(Fully Supported)';
 			} elseif ($version >= 2.3) {

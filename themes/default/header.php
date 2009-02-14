@@ -84,8 +84,14 @@ We've commented below to let you know what works what, so if you do go messing a
 		    <a href="javascript:document.getElementById('wptouch-login').style.display='block';">
 				<img src="<?php bloginfo('template_directory'); ?>/images/menu/touchmenu-login.png" alt="" />
 			</a>	
-		<?php else : ?>		
+		<?php else : ?>	
+		<?php //Let's do some a WordPress version check to figure out the correct logout method
+			$version = (float)get_bloginfo('version'); 
+			if ($version >= 2.7) { ?>
 			<a href="<?php echo wp_logout_url(); ?>">
+			<?php } else { ?>
+			<a href="<?php bloginfo('wpurl'); ?>/wp-login.php?action=logout">
+			<?php } ?>
 				<img src="<?php bloginfo('template_directory'); ?>/images/menu/touchmenu-logout.png" alt="" />
 			</a>
 		<?php endif; ?>

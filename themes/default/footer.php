@@ -9,7 +9,14 @@
 		<br />
 
 			<?php if (current_user_can('edit_posts')) : // If it's not an admin don't show these! ?>      
-				<a href="<?php bloginfo('wpurl'); ?>/wp-admin/">Admin</a> | <a href="<?php echo wp_logout_url(); ?>">Logout</a>
+				<a href="<?php bloginfo('wpurl'); ?>/wp-admin/">Admin</a> | 
+				<?php //Another WordPress version check to figure out the correct logout method
+					$version = (float)get_bloginfo('version'); 
+					if ($version >= 2.7) { ?>
+						<a href="<?php echo wp_logout_url(); ?>">
+					<?php } else { ?>
+						<a href="<?php bloginfo('wpurl'); ?>/wp-login.php?action=logout">
+					<?php } ?>Logout</a>
 			<?php elseif (current_user_can('read_posts')) : ?>
 				<a href="<?php bloginfo('wpurl'); ?>/wp-admin/profile.php">Account Profile</a><?php if (!bnc_is_login_button_enabled()) { ?> | <a href="<?php echo wp_logout_url(); ?>">Logout</a><?php } ?>
 			<?php else : ?>
