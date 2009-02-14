@@ -7,6 +7,8 @@
 
 if (!function_exists('google_append_url')) {
 
+	require_once('../../../wp-includes/class-snoopy.php');
+
 	$GLOBALS['google']['ad_type']='text_image';
 	$GLOBALS['google']['channel']='';
 	$GLOBALS['google']['color_border']='555555';
