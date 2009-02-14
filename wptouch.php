@@ -1067,7 +1067,7 @@ The Plugin Section
 			//Let's do some WordPress version checks to provide more information for the user about what they can expect using the plugin
 			$version = (float)str_replace('.','',get_bloginfo('version'));
 			if ($version < 100) {
-				$version = $version * 100;
+				$version = $version * 10;
 			}
 			$version = $version / 100;
 			if ($version > 2.7) {
