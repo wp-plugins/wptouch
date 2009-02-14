@@ -819,12 +819,6 @@ The Javascript Section
 					<li>Ajax &amp; jQuery are not used for comments, entries, excerpts</li>
 				</ul>
 				<br />
-		<strong>When Gravatars are unchecked:</strong>	
-				<ul class="wptouch-small-menu">
-					<li>Gravatars <strong>are not</strong> loaded in coments</li>
-					<li>Site is faster on 3G/EDGE connections</li>
-		   		</ul>
-
 	</div>
 	
 		<div class="wptouch-item-content-box1">
