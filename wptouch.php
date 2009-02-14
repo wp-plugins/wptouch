@@ -31,10 +31,23 @@ function wptouch_init() {
 	}
 }
 
+function wptouch_content_filter( $content ) {
+	$settings = bnc_wptouch_get_settings();
+	if ( isset($settings['adsense-id']) && strlen($settings['adsense-id']) && is_single() ) {
+		require_once( 'adsense.php' );
+		
+		$ad = google_show_ad( $settings['adsense-id'] );
+		return $content . '<div class="wptouch-adsense-ad">' . $ad . '</div>';	
+	} else {
+		return $content;
+	}
+}
+
 add_filter('init', 'wptouch_init');
 
 // WPtouch Theme Options
-$bnc_wptouch_version = '1.7';
+	global $bnc_wptouch_version;
+ 	$bnc_wptouch_version = '1.7';
 	function WPtouch($before = '', $after = '') {
 		global $bnc_wptouch_version;
 			echo $before . 'WPtouch ' . $bnc_wptouch_version . $after;
@@ -610,6 +623,10 @@ return $v['link-color'];
 			$a['enable-regular-default'] = 1;
 		} else {
 			$a['enable-regular-default'] = 0;
+		}
+		
+		if (isset($_POST['adsense-id'])) {
+			$a['adsense-id'] = $_POST['adsense-id'];
 		}
 
 		  foreach ($_POST as $k => $v) {
@@ -1194,4 +1211,5 @@ echo('</div></div>'); }
 add_action('admin_head', 'wptouch_admin_css');
 add_action('admin_menu', 'bnc_options_menu'); 
 add_action('wp_footer', 'wptouch_switch');
+add_action('the_content', 'wptouch_content_filter');
 ?>
