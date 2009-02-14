@@ -1180,6 +1180,8 @@ h2#switch-footer-links {
 	-webkit-border-radius: 10px;
 	border: 1px solid #adadad;
 	background-color: #fff;
+	display: block;
+	margin-bottom: 15px;
 }
 
 /* @group Peter's Anti Spam Support */
