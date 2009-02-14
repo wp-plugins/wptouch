@@ -181,20 +181,22 @@ blockquote {
 
 #catsmenu-inner li {
 	border-bottom: 1px solid #2d2d2d;
-	margin: 0;
 	background: url(images/arrow.png) no-repeat right center;
-	padding: 0;
+	display: block;
+	color: #444;
+	margin: 0;
+	padding: 0 15px 0 12px;
 }
 
 #catsmenu-inner a {
 	font-size: 15px;
 	font-weight: bold;
-	display: block;
-	width: 85%;
-	padding: 12px 20px 12px 12px;
 	text-shadow: #000 1px 1px 0;
 	color: #eee;
 	text-transform: capitalize;
+	padding-top: 10px;
+	padding-bottom: 15px;
+	display: block;
 }
 
 /* @end */

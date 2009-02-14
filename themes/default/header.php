@@ -88,9 +88,9 @@ We've commented below to let you know what works what, so if you do go messing a
 		<?php //Let's do some a WordPress version check to figure out the correct logout method
 			$version = (float)get_bloginfo('version'); 
 			if ($version >= 2.7) { ?>
-			<a href="<?php echo wp_logout_url(); ?>">
+			<a href="<?php echo wp_logout_url($_SERVER['REQUEST_URI']); ?>">
 			<?php } else { ?>
-			<a href="<?php bloginfo('wpurl'); ?>/wp-login.php?action=logout">
+			<a href="<?php bloginfo('wpurl'); ?>/wp-login.php?action=logout&redirect_to=<?php echo $_SERVER['REQUEST_URI']; ?>">
 			<?php } ?>
 				<img src="<?php bloginfo('template_directory'); ?>/images/menu/touchmenu-logout.png" alt="" />
 			</a>
@@ -145,7 +145,7 @@ We've commented below to let you know what works what, so if you do go messing a
 	<div id="wptouch-cats" style="display:none">
 		<div id="catsmenu-inner">
             <ul>
-            <?php wp_list_categories('orderby=name&title_li='); ?>
+            <?php wp_list_categories('orderby=name&title_li=&use_desc_for_title=0&hierarchical=0&number=15'); ?>
             </ul>
         </div>
 	</div>

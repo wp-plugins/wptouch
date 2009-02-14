@@ -13,9 +13,9 @@
 				<?php //Another WordPress version check to figure out the correct logout method
 					$version = (float)get_bloginfo('version'); 
 					if ($version >= 2.7) { ?>
-						<a href="<?php echo wp_logout_url(); ?>">
+						<a href="<?php echo wp_logout_url($_SERVER['REQUEST_URI']); ?>">
 					<?php } else { ?>
-						<a href="<?php bloginfo('wpurl'); ?>/wp-login.php?action=logout">
+						<a href="<?php bloginfo('wpurl'); ?>/wp-login.php?action=logout&redirect_to=<?php echo $_SERVER['REQUEST_URI']; ?>">
 					<?php } ?>Logout</a>
 			<?php elseif (current_user_can('read_posts')) : ?>
 				<a href="<?php bloginfo('wpurl'); ?>/wp-admin/profile.php">Account Profile</a><?php if (!bnc_is_login_button_enabled()) { ?> | <a href="<?php echo wp_logout_url(); ?>">Logout</a><?php } ?>
