@@ -465,19 +465,30 @@
 /* @end */
 
 #wptouch-theme form .wptouch-itemrow .double-box-one {
-	width: 50%;
 	border-right: 1px solid #e6e6e6;
 	margin-right: 25px;
 	float: left;
+	width: 50%;
+}
+
+#wptouch-theme .wptouch-item-desc {
+	float: left;
+	width: 24%;
+	margin-right: 4%;
+	padding-top: 10px;
+	padding-bottom: 50px;
+	padding-right: 2%;
+	margin-bottom: 1px;
+	display: block;
 }
 
 #wptouch-theme form .wptouch-itemrow .double-box-one .wptouch-item-desc {
-	width: 220px;
-	margin-right: 60px;
+	width: 39%;
+	margin-right: 19%;
 }
 
 #wptouch-theme form .wptouch-itemrow .double-box-two {
-	width: 45%;
+	width: 43%;
 	float: left;
 }
 
