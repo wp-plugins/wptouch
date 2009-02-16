@@ -20,7 +20,7 @@
 			<?php elseif (current_user_can('read_posts')) : ?>
 				<a href="<?php bloginfo('wpurl'); ?>/wp-admin/profile.php">Account Profile</a><?php if (!bnc_is_login_button_enabled()) { ?> | <a href="<?php echo wp_logout_url(); ?>">Logout</a><?php } ?>
 			<?php else : ?>
-				<?php if (!bnc_is_login_button_enabled()) { ?>
+				<?php if (!bnc_is_login_button_enabled() && get_option('comment_registration') && !$user_ID) { ?>
 					<a href="<?php bloginfo('wpurl'); ?>/wp-login.php">Login to <?php bloginfo('name'); ?></a> 
 				<?php } ?>
 				<?php if (get_option('comment_registration')) { ?>
