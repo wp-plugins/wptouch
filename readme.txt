@@ -18,7 +18,7 @@ The admin panel allows you to customize many aspects of its appearance, and deli
 
 The theme also includes the ability for your visitors to easily switch between the WPtouch view and your site's regular theme.
 
-= New In Version 1.7: =
+= New In Version 1.7.1: =
 
 * Added ability to choose if WPtouch or regular version of your site is shown first 
 * Fixed WP login/out button bugs
@@ -37,7 +37,7 @@ The theme also includes the ability for your visitors to easily switch between t
 * Changed how WPtouch shows switch links
 * Auto-adjusting width/height for MobileSafari plugin objects (YouTube, Quicktime)
 * Added GZIP compression for supported browsers
-* Fixed re-direct bug when viewing default theme from mobile device
+* 1.7.1: Fixed re-direct bug when viewing default theme from mobile device
 
 
 Please visit http://bravenewcode.com/wptouch/ for a full description & updates on the WPtouch plugin.
@@ -47,7 +47,7 @@ Please visit http://bravenewcode.com/wptouch/ for a full description & updates o
 
 (Here's the complete changelog)
 
-= Version 1.7: =
+= Version 1.7.1: =
 
 * Added ability to choose if WPtouch or regular version of your site is shown first 
 * Fixed WP login/out button bugs
@@ -66,7 +66,7 @@ Please visit http://bravenewcode.com/wptouch/ for a full description & updates o
 * Changed how WPtouch shows switch links
 * Auto-adjusting width/height for MobileSafari plugin objects (YouTube, Quicktime)
 * Added GZIP compression for supported browsers
-* Fixed re-direct bug when viewing default theme from mobile device
+* 1.7.1: Fixed re-direct bug when viewing default theme from mobile device
 
 
 = Version 1.6 =
