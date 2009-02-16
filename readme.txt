@@ -8,7 +8,7 @@ Stable tag: 1.7.3
 
 WPtouch automatically transforms your WordPress blog into an iPhone application-style theme, complete with ajax loading articles and effects, when viewed from an iPhone or iPod touch.
 
-Downloaded over 60,000 times (bravenewcode.com + wordpress.org) since April 2008. 
+Downloaded over 65,000 times (bravenewcode.com + wordpress.org) since April 2008. 
 
 == Description ==
 
