@@ -120,11 +120,12 @@ function bnc_filter_iphone() {
    	}
    }
 
-   if ($this->desired_view == 'mobile' && !$this->output_started) {
+	$value = ini_get( 'zlib.output_compression' );
+   if ($this->desired_view == 'mobile' && !$this->output_started && !$value) {
 	if (substr_count($_SERVER['HTTP_ACCEPT_ENCODING'], 'gzip')) {
-		ob_start("ob_gzhandler");
+		@ob_start("ob_gzhandler");
 	} else {
-		ob_start();
+		@ob_start();
 	}
 	$this->output_started = true;
    }
