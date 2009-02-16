@@ -205,7 +205,7 @@ function wptouch_switch() {
 	global $wptouch_plugin;
 		if ($wptouch_plugin->applemobile && $wptouch_plugin->desired_view == 'normal') {
 			echo '<div style="
-			width:100%;
+			width: auto;
 			height: 48px;
 			padding-top:17px;
 			padding-bottom:15px;
@@ -213,7 +213,7 @@ function wptouch_switch() {
 			font-weight: bold;
 			background: url(' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/switch-bg.png) repeat-x 0 0;
 			margin:0px;
-			border-top: 2px solid #999;
+			border-top: 1px solid #999;
 			border-bottom: 2px solid #999;
 			text-shadow: #e6e6e6 3px 3px 1px;" 
 			id="switch-footer-links">View ' . get_bloginfo('title') . '\'s <a href="' . get_bloginfo('siteurl') . '/?bnc_view=mobile">Mobile Theme</a></div>';
