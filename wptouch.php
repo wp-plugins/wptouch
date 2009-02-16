@@ -88,7 +88,7 @@ class WPtouchPlugin {
 
 function bnc_do_redirect() {
    global $post;
-   if ($this->applemobile) {
+   if ($this->applemobile && $this->desired_view == 'mobile') {
       if (is_front_page() && bnc_get_selected_home_page() > 0) {
          $url = get_permalink(bnc_get_selected_home_page());
          header('Location: ' . $url);
