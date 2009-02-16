@@ -1,10 +1,10 @@
 === Plugin Name ===
 Contributors: BraveNewCode
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=paypal%40bravenewcode%2ecom&item_name=WPtouch%20Beer%20Fund&no_shipping=0&no_note=1&tax=0&currency_code=CAD&lc=CA&bn=PP%2dDonationsBF&charset=UTF%2d8
-Tags: wptouch, iphone, ipod touch, theme, apple, mac, bravenewcode, ajax, mobile, wordpress on iphone, iphone wordpress
+Tags: wptouch, iphone, ipod touch, theme, apple, mac, bravenewcode, ajax, mobile, wordpress on iphone, iphone wordpress, mobile, mobile wordpress, mobile plugin
 Requires at least: 2.3.x
-Tested up to: 2.7
-Stable tag: 1.6
+Tested up to: 2.7.1
+Stable tag: 1.7
 
 WPtouch automatically transforms your WordPress blog into an iPhone application-style theme, complete with ajax loading articles and effects, when viewed from an iPhone or iPod touch.
 
@@ -18,28 +18,54 @@ The admin panel allows you to customize many aspects of its appearance, and deli
 
 The theme also includes the ability for your visitors to easily switch between the WPtouch view and your site's regular theme.
 
+= New In Version 1.7: =
 
-= New In Version 1.6: =
+* Added ability to choose if WPtouch or regular version of your site is shown first 
+* Fixed WP login/out button bugs
+* Added login/out auto-detect for WP 2.7 or pre-WP 2.7 sites
+* Fixed loading path issue that caused drop-down menu button to fail
+* Added choice between alphabetical or page order sorting of the drop down menu
+* Added clock icon
+* Fixes for categories drop-down menu (now shows post #'s)
+* Minor fix for categories drop-down menu
+* Automatic detection & support for Peter's anti-spam plugin
+* Built-in support for Adsense in posts
+* Moved Stats tracking box beside Advertising Options
+* Better WordPress version support detection
+* More refined image auto-sizing with WP added images & galleries in posts / pages
+* Fix for WordPress shortcodes appearing in excerpts
+* Changed how WPtouch shows switch links
+* Auto-adjusting width/height for MobileSafari plugin objects (YouTube, Quicktime)
+* Added GZIP compression for supported browsers
 
-* Auto-resizing images in posts/pages on orientation change!
-* Auto-resizing WP image galleries
-* Better support for captions on images, gallery items
-* Added the ability to enable a quick login button w/ drop-down in the WPtouch header
-* Added the ability to enable categories as a drop-down item in the WPtouch header
-* Added the ability to disable WPtouch automatic homepage redirection (resolves white page issue)
-* Added the ability to manually select a re-direct landing page
-* Refinements in WPtouch admin
-* Enhanced support for WordPress 2.7 admin
-* Re-designed post comment bubble icon
-* Input box to inject custom code (Google Analytics, MINT, etc) into WPtouch
-* Basic support for Incognito & WebMate browsers on iPhone & iPod touch
-* Other code fixes, cleanups & optimizations
-* Other theme style cleanups and enhancements
 
-Please visit http://www.bravenewcode.com/wptouch/ for a full description & updates on the WPtouch plugin.
+Please visit http://bravenewcode.com/wptouch/ for a full description & updates on the WPtouch plugin.
 
 
 == What's New ==
+
+(Here's the complete changelog)
+
+= Version 1.7: =
+
+* Added ability to choose if WPtouch or regular version of your site is shown first 
+* Fixed WP login/out button bugs
+* Added login/out auto-detect for WP 2.7 or pre-WP 2.7 sites
+* Fixed loading path issue that caused drop-down menu button to fail
+* Added choice between alphabetical or page order sorting of the drop down menu
+* Added clock icon
+* Fixes for categories drop-down menu (now shows post #'s)
+* Minor fix for categories drop-down menu
+* Automatic detection & support for Peter's anti-spam plugin
+* Built-in support for Adsense in posts
+* Moved Stats tracking box beside Advertising Options
+* Better WordPress version support detection
+* More refined image auto-sizing with WP added images & galleries in posts / pages
+* Fix for WordPress shortcodes appearing in excerpts
+* Changed how WPtouch shows switch links
+* Auto-adjusting width/height for MobileSafari plugin objects (YouTube, Quicktime)
+* Added GZIP compression for supported browsers
+
 
 = Version 1.6 =
 
