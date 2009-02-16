@@ -22,7 +22,7 @@
    # See the GNU lesser General Public License for more details.
 */
 
-require_once('wp-load.php');
+//require_once( ABSPATH . 'wp-load.php');
 
 function wptouch_init() {
 	$bnc_option = get_option('bnc_iphone_pages');
