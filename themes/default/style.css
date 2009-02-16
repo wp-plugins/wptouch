@@ -1,10 +1,5 @@
-/* @override 
-	http://24.36.119.47:9098/wp-content/plugins/wptouch/themes/default/style.css
-	http://www.theglitch.ws/wp-content/plugins/wptouch/themes/default/style.css
-*/
-
 /*  
-Theme Name: WPtouch iPhone & iPod touch Plugin / Theme
+Theme Name: WPtouch Mobile Plugin & Theme
 Theme URI: http://www.bravenewcode.com/wptouch/
 Description: A slick theme for your blog or website that is shown only when visitors are using an iPhone/iPod touch.
 Author: Dale Mugford and Duane Storey
@@ -1198,14 +1193,6 @@ h2#switch-footer-links {
 	width: auto							!important;
 	height: 21px							!important;
 	float: left								!important;
-}
-
-#secureimgdiv {
-	
-}
-
-#secureimgdiv p {
-	
 }
 
 #secureimgdiv p label {

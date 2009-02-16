@@ -1,8 +1,31 @@
-/* @override 
-	http://24.36.70.109:9098/wp-content/plugins/wptouch/admin-css/wptouch-admin.css
-	http://24.36.119.47:9107/wp-content/plugins/wptouch/admin-css/wptouch-admin.css
-	http://24.36.119.47:9098/wp-content/plugins/wptouch/admin-css/wptouch-admin.css
-*/
+/* WPtouch Admin CSS */
+
+#wptouch-theme {
+	font-family: "Lucida Grande", Georgia, Arial, sans-serif;
+	width: 100%;
+	margin-bottom: 0;
+	margin-top: 0;
+	margin-right: auto;
+	float: left;
+}
+
+#wptouch-theme h4 {
+	font-size: 13px;
+	margin-top: 3%;
+	margin-bottom: 2%;
+}
+
+#wptouch-theme a {
+	color: #3c627f;
+}
+
+#wptouch-theme a:hover {
+	color: #d54e21;
+}
+
+#wptouch-theme .wptouch-clearer {
+	clear: both;
+}
 
 /* @group Header */
 
@@ -38,33 +61,6 @@
 
 
 /* @end */
-
-#wptouch-theme {
-	font-family: "Lucida Grande", Georgia, Arial, sans-serif;
-	width: 100%;
-	margin-bottom: 0;
-	margin-top: 0;
-	margin-right: auto;
-	float: left;
-}
-
-#wptouch-theme h4 {
-	font-size: 13px;
-	margin-top: 3%;
-	margin-bottom: 2%;
-}
-
-#wptouch-theme a {
-	color: #3c627f;
-}
-
-#wptouch-theme a:hover {
-	color: #d54e21;
-}
-
-#wptouch-theme .wptouch-clearer {
-	clear: both;
-}
 
 /* @group DIV Classes */
 
@@ -125,8 +121,6 @@
 
 /* @group Javascript Options Section */
 
-#wptouch-theme h4#wptouch-js {
-}
 
 #wptouch-theme ul.wptouch-small-menu li {
 	list-style-type: circle;
@@ -175,9 +169,6 @@
 
 #wptouch-news-donate h3 {
 	margin-bottom: 14px;
-}
-
-#wptouch-news {
 }
 
 #wptouch-news a {
@@ -231,6 +222,7 @@
 	margin-top: 5px;
 	margin-bottom: 10px;
 	font-weight: bold;
+	vertical-align: middle;
 }
 
 
@@ -299,7 +291,7 @@
 	margin-bottom: 4px;
 	padding: 9px 5px 25px;
 	border-radius: 3px;
-	-mox-border-radius: 3px;
+	-moz-border-radius: 3px;
 	-webkit-border-radius: 3px;
 	font-weight: bold;
 	margin-top: 0;
@@ -321,9 +313,6 @@
 
 #wptouch-theme .wptouch-select-right select {
 	width: 120px;
-}
-
-#wptouch-theme .wptouch-checkbox-row {
 }
 
 #wptouch-theme .wptouch-checkbox-row label {
@@ -349,8 +338,7 @@
 	margin-bottom: 5px;
 	font-size: 11px;
 	line-height: 15px;
-	border-radius: 3px;
-	-mox-border-radius: 3px;
+	-moz-border-radius: 3px;
 	-webkit-border-radius: 3px;
 }
 
@@ -362,8 +350,7 @@
 	margin-bottom: 5px;
 	font-size: 11px;
 	line-height: 15px;
-	border-radius: 3px;
-	-mox-border-radius: 3px;
+	-moz-border-radius: 3px;
 	-webkit-border-radius: 3px;
 }
 
@@ -375,8 +362,7 @@
 	margin-bottom: 5px;
 	font-size: 11px;
 	line-height: 15px;
-	border-radius: 3px;
-	-mox-border-radius: 3px;
+	-moz-border-radius: 3px;
 	-webkit-border-radius: 3px;
 }
 
@@ -390,7 +376,8 @@
 	background-color: #E4F2FD;
 	color: #264761;
 	border: 1px solid #5289b2;
-	-webkit-border-radius:5px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
 	font-weight: bold;
 	font-size: 11px;
 	margin-top: 10px;
@@ -412,8 +399,8 @@
 	border: 1px solid #b9d6de;
 	background-color: #d54e21;
 	color: #eee;
-	-webkit-border-radius:5px;
-	-mozilla-border-radius:5px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
 	font-weight: bold;
 }
 
@@ -422,9 +409,6 @@
 /* @end */
 
 /* @group Home Page Block */
-
-#wptouch-theme .home-page-block {
-}
 
 #wptouch-theme .home-page-block .wptouch-select-row {
 	padding-top: 10px;
@@ -440,12 +424,14 @@
 
 /* @end */
 
+/* @group Misc */
+
 #wptouch-theme #wptouchupdated {
 	position: relative;
 	font-weight: bold;
 	background-color: #f0f6fb;
-	-webkit-border-radius:5px;
-	-mozilla-border-radius:5px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
 	border: 1px solid #c3d5e7;
 	color: #d54e21;
 	margin: 7px 0 15px;
@@ -453,16 +439,6 @@
 	width: 90%;
 	padding: 6px;
 }
-
-/* @group Advertising Options */
-
-#wptouch-theme .advertising {
-	
-}
-
-
-
-/* @end */
 
 #wptouch-theme form .wptouch-itemrow .double-box-one {
 	border-right: 1px solid #e6e6e6;
@@ -501,10 +477,12 @@
 	font-size: 11px;
 	color: #555;
 	border: 1px solid #ccc;
-	-webkit-border-radius: 5px;
-	-mozilla-border-radius: 5px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
 	height: 80px;
 	margin: 45px 0 0;
 	padding: 2px;
 	float: right;
 }
+
+/* @end */
