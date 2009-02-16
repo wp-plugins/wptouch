@@ -21,7 +21,9 @@
    # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. 
    # See the GNU lesser General Public License for more details.
 */
-   
+
+require_once('wp-load.php');
+
 function wptouch_init() {
 	$bnc_option = get_option('bnc_iphone_pages');
 	if ($bnc_option == null) {
@@ -29,6 +31,7 @@ function wptouch_init() {
 		$defaults['header-background-color'] = '222222';
 		$defaults['header-title'] = '' . get_bloginfo('name') . '';
 	}
+
 }
 
 function wptouch_content_filter( $content ) {
@@ -68,8 +71,10 @@ function wptouch_admin_css() {
 class WPtouchPlugin {
 		var $applemobile;
 		var $desired_view;
+		var $output_started;
 		
 	function WPtouchPlugin() {
+		$this->output_started = false;
 		$this->applemobile = false;
 			add_action('plugins_loaded', array(&$this, 'detectAppleMobile'));
 			add_filter('stylesheet', array(&$this, 'get_stylesheet'));
@@ -91,10 +96,10 @@ function bnc_do_redirect() {
       }
    }
 }
-	  
+
 function bnc_filter_iphone() {
 	$key = 'bnc_mobile_' . md5(get_bloginfo('siteurl'));
-   if (isset($_GET['bnc_view'])) {
+   	if (isset($_GET['bnc_view'])) {
 			if ($_GET['bnc_view'] == 'mobile') {
 				setcookie($key, 'mobile', 0); 
          } elseif ($_GET['bnc_view'] == 'normal') {
@@ -114,7 +119,15 @@ function bnc_filter_iphone() {
       	$this->desired_view = 'mobile';
    	}
    }
-   
+
+   if ($this->desired_view == 'mobile' && !$this->output_started) {
+	if (substr_count($_SERVER['HTTP_ACCEPT_ENCODING'], 'gzip')) {
+		ob_start("ob_gzhandler");
+	} else {
+		ob_start();
+	}
+	$this->output_started = true;
+   }
 }
 
 function detectAppleMobile($query = '') {
@@ -222,6 +235,20 @@ function wptouch_switch() {
   
 function bnc_options_menu() {
 	add_options_page('WPtouch Theme', 'WPtouch', 9, __FILE__, bnc_wp_touch_page);
+}
+
+function bnc_get_ordered_cat_list() {
+	// We created our own functio for this as wp_list_categories doesn't make the count linkable
+
+	global $table_prefix;
+	global $wpdb;
+
+	$sql = "select * from " . $table_prefix . "term_taxonomy inner join " . $table_prefix . "terms on " . $table_prefix . "term_taxonomy.term_id = " . $table_prefix . "terms.term_id where taxonomy = 'category' order by count desc";	
+	$results = $wpdb->get_results( $sql );
+	foreach ($results as $result) {
+		echo "<li><a href=\"" . get_category_link( $result->term_id ) . "\">" . $result->name . " (" . $result->count . ")</a></li>";
+	}
+
 }
 
 function bnc_wptouch_get_settings() {
