@@ -111,5 +111,4 @@ if (!function_exists('google_append_url')) {
 		return $ad;
 	}
 }
-
 ?>

@@ -157,11 +157,6 @@ We've commented below to let you know what works what, so if you do go messing a
 			<form method="get" id="searchform" action="<?php bloginfo('siteurl'); ?>/">
 			<input type="text" value="<?php the_search_query(); ?>" name="s" id="s" /> 
 			<input name="submit" type="submit" id="ssubmit" tabindex="5" value="Search" />
-			<?php if (!bnc_is_js_enabled()) { ?>
-			<a class="search-close" href="javascript:document.getElementById('wptouch-search').style.display = 'none';">
-			<img src="<?php bloginfo('template_directory'); ?>/images/cross.png" alt="" />
-			</a>
-			<?php } ?>
 			</form>
 		</div>
 	</div>

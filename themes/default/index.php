@@ -169,14 +169,12 @@ Here we're making sure that each ajax div will have a unique ID.  -->
 			<?php if (bnc_show_tags() && get_the_tags()) { echo(''); the_tags('<span class="lead">Tags:</span> ', ', ', ''); echo(''); } ?> 
 			<?php } else { ?>
 			Filed:<?php the_category(', '); ?><?php } ?>
-			</div>
-					
-			<div class="clearer"></div>
+			</div>	
+			<div class="clearer"></div>	
             <div id="entry-<?php the_ID(); ?>" <?php if (bnc_excerpt_enabled()) { ?>style="display:none"<?php } ?> class="mainentry">
  				<?php the_content_rss('', true, '', 50); ?>
  		    <a href="<?php the_permalink() ?>">Read More &raquo;</a>
-					
-        </div>  
+	        </div>  
       </div>
 <?php } ?> 
 
@@ -185,7 +183,8 @@ Here we're making sure that each ajax div will have a unique ID.  -->
     <?php endwhile; ?>
 
 <?php if (!is_page()) { ?>
-<!--If it's an index page, let's do these things-->
+
+<!--If it's not a page, let's do these things-->
 
 				<?php if (bnc_is_js_enabled()) { ?>
 			<div id="call<?php echo md5($_SERVER['REQUEST_URI']); ?>">
@@ -206,10 +205,10 @@ Here we're making sure that each ajax div will have a unique ID.  -->
 				
 				<div class="main-navigation">
 					<div class="alignleft">
-					<?php previous_posts_link('<img src="' . get_bloginfo('template_directory') . '/images/blue_arrow_l.jpg" alt="" /> Newer Entries') ?>
+						<?php previous_posts_link('<img src="' . get_bloginfo('template_directory') . '/images/blue_arrow_l.jpg" alt="" /> Newer Entries') ?>
 					</div>
 					<div class="alignright">
-					<?php next_posts_link('Older Entries <img src="' . get_bloginfo('template_directory') . '/images/blue_arrow_r.jpg" alt="" />') ?>
+						<?php next_posts_link('Older Entries <img src="' . get_bloginfo('template_directory') . '/images/blue_arrow_r.jpg" alt="" />') ?>
 					</div>
 				</div>
 				<?php } ?>
