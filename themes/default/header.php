@@ -145,7 +145,7 @@ We've commented below to let you know what works what, so if you do go messing a
 	<div id="wptouch-cats" style="display:none">
 		<div id="catsmenu-inner">
             <ul>
-            <?php wp_list_categories('orderby=name&title_li=&use_desc_for_title=0&hierarchical=0&number=15'); ?>
+            <?php wp_list_categories('orderby=count&title_li=&use_desc_for_title=0&hierarchical=0&number=20'); ?>
             </ul>
         </div>
 	</div>
