@@ -129,7 +129,7 @@ We've commented below to let you know what works what, so if you do go messing a
 
 	<div id="wptouch-login" style="display:none">
 		<div id="wptouch-login-inner">
-			<form name="loginform" id="loginform" action="<?php echo get_settings('wpurl'); ?>/wp-login.php" method="post">
+			<form name="loginform" id="loginform" action="<?php bloginfo('wpurl'); ?>/wp-login.php" method="post">
 				<label>
 					<input type="text" name="log" id="log" onfocus="if (this.value == 'username') {this.value = ''}" value="username" />
 				</label>
@@ -167,7 +167,7 @@ We've commented below to let you know what works what, so if you do go messing a
     
         <div id="dropmenu-inner">
             <ul>
-            <?php if (bnc_is_home_enabled()) { ?><li><a href="<?php bloginfo('url'); ?>"><img src="<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/images/icon-pool/Home.png" alt="" />Home</a></li> <?php } ?>
+            <?php if (bnc_is_home_enabled()) { ?><li><a href="<?php bloginfo('siteurl'); ?>"><img src="<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/images/icon-pool/Home.png" alt="" />Home</a></li> <?php } ?>
             <?php
             $pages = bnc_wp_touch_get_pages();
             foreach ($pages as $p) {

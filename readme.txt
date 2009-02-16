@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=paypa
 Tags: wptouch, iphone, ipod touch, theme, apple, mac, bravenewcode, ajax, mobile, wordpress on iphone, iphone wordpress, mobile, mobile wordpress, mobile plugin
 Requires at least: 2.3.x
 Tested up to: 2.7.1
-Stable tag: 1.7.2
+Stable tag: 1.7.3
 
 WPtouch automatically transforms your WordPress blog into an iPhone application-style theme, complete with ajax loading articles and effects, when viewed from an iPhone or iPod touch.
 
@@ -18,7 +18,7 @@ The admin panel allows you to customize many aspects of its appearance, and deli
 
 The theme also includes the ability for your visitors to easily switch between the WPtouch view and your site's regular theme.
 
-= New In Version 1.7.2: =
+= New In Version 1.7.3: =
 
 * Fixed user agent detection code
 * Added ability to choose if WPtouch or regular version of your site is shown first 
@@ -39,6 +39,8 @@ The theme also includes the ability for your visitors to easily switch between t
 * Auto-adjusting width/height for MobileSafari plugin objects (YouTube, Quicktime)
 * Added GZIP compression for supported browsers
 * 1.7.1: Fixed re-direct bug when viewing default theme from mobile device
+* 1.7.2: Fixed missing Android support
+* 1.7.3: Fixed broken login link on some installations
 
 
 Please visit http://bravenewcode.com/wptouch/ for a full description & updates on the WPtouch plugin.
@@ -48,7 +50,7 @@ Please visit http://bravenewcode.com/wptouch/ for a full description & updates o
 
 (Here's the complete changelog)
 
-= Version 1.7.2: =
+= Version 1.7.3: =
 
 * Fixed user agent detection code
 * Added ability to choose if WPtouch or regular version of your site is shown first 
@@ -69,6 +71,8 @@ Please visit http://bravenewcode.com/wptouch/ for a full description & updates o
 * Auto-adjusting width/height for MobileSafari plugin objects (YouTube, Quicktime)
 * Added GZIP compression for supported browsers
 * 1.7.1: Fixed re-direct bug when viewing default theme from mobile device
+* 1.7.2: Fixed missing Android support
+* 1.7.3: Fixed broken login link on some installations
 
 
 = Version 1.6 =
