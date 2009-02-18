@@ -50,7 +50,7 @@ add_filter('init', 'wptouch_init');
 
 // WPtouch Theme Options
 	global $bnc_wptouch_version;
- 	$bnc_wptouch_version = '1.7.4';
+ 	$bnc_wptouch_version = '1.7.5';
 	function WPtouch($before = '', $after = '') {
 		global $bnc_wptouch_version;
 			echo $before . 'WPtouch ' . $bnc_wptouch_version . $after;
