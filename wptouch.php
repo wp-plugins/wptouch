@@ -835,9 +835,7 @@ The News Section
 
 
 <?php
-/*
-The Javascript Section
-*/
+/* The Javascript Section */ 
 ?>
 
 <div class="wptouch-itemrow">
@@ -894,9 +892,7 @@ The Javascript Section
 
 
 <?php
-/*
-The Style Section
-*/
+/* The Style Section */
 ?>
 
 <div class="wptouch-itemrow wptouchbump">
@@ -927,9 +923,7 @@ The Style Section
 </div>
 
 <?php
-/*
-The Post Listings Section
-*/
+/* The Post Listings Section */
 ?>
 
 <div class="wptouch-itemrow">
@@ -938,18 +932,26 @@ The Post Listings Section
 		<p>	Select which post-meta items are shown under titles on post, search, &amp; archives pages. Also, choose if excerpts are shown/hidden (default is hidden).</p>
 	</div>
 	
-		<div class="wptouch-item-content-box1">
+		<div class="wptouch-item-content-box1">		
+			<div class="wptouch-checkbox-row">
+				<input type="checkbox" name="enable-main-name" <?php if (isset($v['enable-main-name']) && $v['enable-main-name'] == 1) echo('checked'); ?>>
+				<label for="enable-authorname"> Show Author's Name</label>
+			</div>
 			
-			<div class="wptouch-checkbox-row"><input type="checkbox" name="enable-main-name" <?php if (isset($v['enable-main-name']) && $v['enable-main-name'] == 1) echo('checked'); ?>><label for="enable-authorname"> Show Author's Name</label></div>
+			<div class="wptouch-checkbox-row">
+				<input type="checkbox" name="enable-main-categories" <?php if (isset($v['enable-main-categories']) && $v['enable-main-categories'] == 1) echo('checked'); ?>>
+				<label for="enable-categories"> Show Categories</label>
+			</div>
 			
-			<div class="wptouch-checkbox-row"><input type="checkbox" name="enable-main-categories" <?php if (isset($v['enable-main-categories']) && $v['enable-main-categories'] == 1) echo('checked'); ?>><label for="enable-categories"> Show Categories</label></div>
+			<div class="wptouch-checkbox-row">
+				<input type="checkbox" name="enable-main-tags" <?php if (isset($v['enable-main-tags']) && $v['enable-main-tags'] == 1) echo('checked'); ?>>
+				<label for="enable-tags"> Show Tags</label>
+			</div>
 			
-			<div class="wptouch-checkbox-row"><input type="checkbox" name="enable-main-tags" <?php if (isset($v['enable-main-tags']) && $v['enable-main-tags'] == 1) echo('checked'); ?>><label for="enable-tags"> Show Tags</label></div>
-			
-			<div class="wptouch-checkbox-row"><input type="checkbox" name="enable-post-excerpts" <?php if (isset($v['enable-post-excerpts']) && $v['enable-post-excerpts'] == 1) echo('checked'); ?>><label for="enable-excerpts">Hide Excerpts (if unchecked the excerpts will be shown, and the drop arrows will be hidden)</label></div>
-			
-				
-				
+			<div class="wptouch-checkbox-row">
+				<input type="checkbox" name="enable-post-excerpts" <?php if (isset($v['enable-post-excerpts']) && $v['enable-post-excerpts'] == 1) echo('checked'); ?>>
+				<label for="enable-excerpts">Hide Excerpts (if unchecked the excerpts will be shown, and the drop arrows will be hidden)</label>
+			</div>
 		</div>
 	
 		<div class="wptouch-clearer"></div>	
