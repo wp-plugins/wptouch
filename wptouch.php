@@ -4,7 +4,7 @@
    Plugin URI: http://bravenewcode.com/wptouch/
    Description: A plugin which reformats your site with a mobile theme when viewing with an <a href="http://www.apple.com/iphone/">iPhone</a> / <a href="http://www.apple.com/ipodtouch/">iPod touch</a>. Set styling, page, menu, icon and more options for the theme by visiting the <a href="options-general.php?page=wptouch/wptouch.php">WPtouch Options admin panel</a>. &nbsp;
    Author: Dale Mugford & Duane Storey
-   Version: 1.7.4
+   Version: 1.7.5
    Author URI: http://www.bravenewcode.com
    
    # Special thanks to ContentRobot and the iWPhone theme/plugin
@@ -109,10 +109,10 @@ function bnc_filter_iphone() {
 		   die;
    }
 
+   	$settings = bnc_wptouch_get_settings();
    if (isset($_COOKIE[$key])) {
       $this->desired_view = $_COOKIE[$key];
    } else {
-   	$settings = bnc_wptouch_get_settings();
    	if ( $settings['enable-regular-default'] ) {
    		$this->desired_view = 'normal';
    	} else {
@@ -122,7 +122,7 @@ function bnc_filter_iphone() {
 
 	$value = ini_get( 'zlib.output_compression' );
    if ($this->desired_view == 'mobile' && !$this->output_started && !$value) {
-	if (substr_count($_SERVER['HTTP_ACCEPT_ENCODING'], 'gzip')) {
+	if (substr_count($_SERVER['HTTP_ACCEPT_ENCODING'], 'gzip') && isset($settings['enable-gzip']) && $settings['enable-gzip']) {
 		@ob_start("ob_gzhandler");
 	} else {
 		@ob_start();
@@ -652,6 +652,12 @@ return $v['link-color'];
 		} else {
 			$a['enable-regular-default'] = 0;
 		}
+
+		if (isset($_POST['enable-gzip'])) {
+			$a['enable-gzip'] = 1;
+		} else {
+			$a['enable-gzip'] = 0;
+		}
 		
 		if (isset($_POST['adsense-id'])) {
 			$a['adsense-id'] = $_POST['adsense-id'];
@@ -860,6 +866,8 @@ The Javascript Section
 		<div class="wptouch-checkbox-row"><input type="checkbox" name="enable-page-coms" <?php if (isset($v['enable-page-coms']) && $v['enable-page-coms'] == 1) echo('checked'); ?>><label for="enable-page-coms"> Enable Comments For Pages <small>(will add the comment form to <strong>all</strong> pages by default)</small></label></div>
 		
 		<div class="wptouch-checkbox-row"><input type="checkbox" name="enable-regular-default" <?php if (isset($v['enable-regular-default']) && $v['enable-regular-default'] == 1) echo('checked'); ?>><label for="enable-regular-default"> First-time mobile users will see regular (non-mobile) site</label></div>			
+
+		<div class="wptouch-checkbox-row"><input type="checkbox" name="enable-gzip" <?php if (isset($v['enable-gzip']) && $v['enable-gzip'] == 1) echo('checked'); ?>><label for="enable-gzip"> Enabled GZIP compression on output <small>(speeds up page loads, but may conflict with other plugins)</small></label></div>			
 		</div>
 	<div class="wptouch-clearer"></div>
 </div>
