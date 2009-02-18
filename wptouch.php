@@ -4,7 +4,7 @@
    Plugin URI: http://bravenewcode.com/wptouch/
    Description: A plugin which reformats your site with a mobile theme when viewing with an <a href="http://www.apple.com/iphone/">iPhone</a> / <a href="http://www.apple.com/ipodtouch/">iPod touch</a>. Set styling, page, menu, icon and more options for the theme by visiting the <a href="options-general.php?page=wptouch/wptouch.php">WPtouch Options admin panel</a>. &nbsp;
    Author: Dale Mugford & Duane Storey
-   Version: 1.7.5
+   Version: 1.7.6
    Author URI: http://www.bravenewcode.com
    
    # Special thanks to ContentRobot and the iWPhone theme/plugin
@@ -50,7 +50,11 @@ add_filter('init', 'wptouch_init');
 
 // WPtouch Theme Options
 	global $bnc_wptouch_version;
+<<<<<<< .mine
+ 	$bnc_wptouch_version = '1.7.6';
+=======
  	$bnc_wptouch_version = '1.7.5';
+>>>>>>> .r95579
 	function WPtouch($before = '', $after = '') {
 		global $bnc_wptouch_version;
 			echo $before . 'WPtouch ' . $bnc_wptouch_version . $after;
@@ -783,8 +787,8 @@ The News Section
 <div class="wptouch-itemrow newsblock">
 	<div class="wptouch-item-desc">
 	<h2>News &amp; Updates</h2>
-	<p>BraveNewCode.com entries tagged 'WPtouch'.</p>
-	<p>This list updates to provide you with the latest information about our plugin's development.</p>
+	<p>BraveNewCode blog entries tagged 'WPtouch'.</p>
+	<p>This list updates with the latest information about the plugin's development.</p>
 	</div>
 		
 	<div class="wptouch-item-content-box1">
@@ -800,9 +804,8 @@ The News Section
 	</div>
    <div id="wptouch-news-donate">
 	  <h3>Donate To WPtouch</h3> 
-	  WPtouch represents hundreds of hours of development work. If you'd like to support the project, please consider <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=paypal%40bravenewcode%2ecom&item_name=WPtouch%20Beer%20Fund&no_shipping=1&tax=0&currency_code=CAD&lc=CA&bn=PP%2dDonationsBF&charset=UTF%2d8">donating to WPtouch.</a><br /><br />
-
-	  Everyone who donates will be added to our <a href="http://www.bravenewcode.com/wptouch-friends-and-family/">WPtouch friends and family page</a>, in appreciation for the support.
+	  WPtouch represents hundreds of hours of development work. If you like the project and want to see it continue, please consider <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=paypal%40bravenewcode%2ecom&item_name=WPtouch%20Beer%20Fund&no_shipping=1&tax=0&currency_code=CAD&lc=CA&bn=PP%2dDonationsBF&charset=UTF%2d8">donating to WPtouch.</a><br /><br />
+	  Everyone who donates will be added to our WPtouch friends and family listing on <a href="http://www.bravenewcode.com/wptouch">bravenewcode.com/wptouch</a>, in appreciation for the support.
    </div>
 	
 	<div class="wptouch-clearer"></div>
@@ -817,14 +820,12 @@ The News Section
 
 <div class="wptouch-itemrow home-page-block">
 	<div class="wptouch-item-desc">
-	<h2>Home Page Redirection</h2>
-	<p>
-   For your home page, WPtouch follows the default front page behavior you've defined in <a href="options-reading.php">WordPress -> Reading Options.</a>
-   </p>
+		<h2>Home Page Redirection</h2>
+		<p>For your home page, WPtouch respects the front page behavior you've defined in the <a href="options-reading.php">WordPress -> Reading Options.</a></p>
 	</div>
 
 	<div class="wptouch-item-content-box1">
-		<div class="header-item-desc">If you'd like to specify a different home page (your posts page for example)<br />select it from the list below.<br /><br />
+		<div class="header-item-desc">If you'd like a different home page (your posts page for example)<br />select it from the list below.<br /><br />
 </div>
       <div class="wptouch-select-row">
          <?php $sel = bnc_get_page_id_with_name(bnc_get_selected_home_page()); ?>
@@ -844,15 +845,16 @@ The Javascript Section
 
 <div class="wptouch-itemrow">
 	<div class="wptouch-item-desc">
-	<h2>Optimization &amp;<br />Template Options</h2>
-	<p>Choose to enable/disable enhanced javascript, gravatars, comments on pages, and login in the header</p>
-	<br />
-	<strong>When advanced javascript is unchecked:</strong>
-				<ul class="wptouch-small-menu">
-					<li>Site is faster on 3G/EDGE connections</li>
-					<li>Ajax &amp; jQuery are not used for comments, entries, excerpts</li>
-				</ul>
-				<br />
+	<h2>Advanced Options</h2>
+		<p>Choose to enable/disable advanced features & options available for WPtouch.</p>
+	
+		<p><strong>When advanced javascript is unchecked:</strong>
+			<ul class="wptouch-small-menu">
+				<li>Site is faster on 3G/EDGE connections</li>
+				<li>Ajax &amp; jQuery are not used for comments, entries, excerpts</li>
+				<li>May solve javascript collisions where WPtouch features don't work</li>
+			</ul>
+		</p>
 	</div>
 	
 		<div class="wptouch-item-content-box1">
@@ -867,7 +869,7 @@ The Javascript Section
 		
 		<div class="wptouch-checkbox-row"><input type="checkbox" name="enable-regular-default" <?php if (isset($v['enable-regular-default']) && $v['enable-regular-default'] == 1) echo('checked'); ?>><label for="enable-regular-default"> First-time mobile users will see regular (non-mobile) site</label></div>			
 
-		<div class="wptouch-checkbox-row"><input type="checkbox" name="enable-gzip" <?php if (isset($v['enable-gzip']) && $v['enable-gzip'] == 1) echo('checked'); ?>><label for="enable-gzip"> Enabled GZIP compression on output <small>(speeds up page loads, but may conflict with other plugins)</small></label></div>			
+		<div class="wptouch-checkbox-row"><input type="checkbox" name="enable-gzip" <?php if (isset($v['enable-gzip']) && $v['enable-gzip'] == 1) echo('checked'); ?>><label for="enable-gzip"> Enable GZIP compression <small>(speeds up page loads, may conflict with other plugins)</small></label></div>			
 		</div>
 	<div class="wptouch-clearer"></div>
 </div>
@@ -881,11 +883,9 @@ The Style Section
 
 <div class="wptouch-itemrow wptouchbump">
 	<div class="wptouch-item-desc">
-	<h2>Style &amp; Color Options</h2>
-		<p>
-		Customize the colors WPtouch will use for your website.<br /><br />
-		<a href="http://www.colorpicker.com/" target="_blank">Click here</a> to view a color picker to help you select your colors.
-		</p>
+		<h2>Style &amp; Color Options</h2>
+		<p>Customize the colors WPtouch will use for your website.</p>
+		<p><a href="http://www.colorpicker.com/" target="_blank">Click here</a> to view a color picker to help you select your colors.</p>
 	</div>
 		
 	<div class="wptouch-item-content-box1 wptouchstyle">
@@ -917,10 +917,7 @@ The Post Listings Section
 <div class="wptouch-itemrow">
 	<div class="wptouch-item-desc">
 	<h2>Post Listings Options</h2>
-		<p>
-		Select which post-meta items is shown under post titles on post, search, &amp; archives pages.<br />
-		Also, choose whether excerpts are shown/hidden (default is hidden).
-		</p>
+		<p>	Select which post-meta items are shown under titles on post, search, &amp; archives pages. Also, choose if excerpts are shown/hidden (default is hidden).</p>
 	</div>
 	
 		<div class="wptouch-item-content-box1">
@@ -944,6 +941,7 @@ The Post Listings Section
 		<div class="wptouch-item-desc">
 			<h2>Advertising Options</h2>
 				<p>Enter your Google AdSense ID if you'd like to support mobile advertising in WPtouch posts.</p>
+				<p>Make sure to include the 'pub-' part of your ID string.</p>
 		</div>	
 			
 		<div class="wptouch-item-content-box1 wptouchstyle">
@@ -970,22 +968,20 @@ The Availabe Icons Section
 
 <div class="wptouch-itemrow">
 	<div class="wptouch-item-desc">
-	<h2>Available Icons</h2>
-		<p>
-		You can select which icons will be displayed beside pages enabled below.<br /><br />
-		To add icons to the pool simply drop 60x60 (recommended size) .png images into the <strong>wptouch/images/icon-pool</strong> directory, then refresh this page to select them.<br /><br />
-		Also in the same folder is a <strong>.psd template</strong> which you can use to build icons yourself.<br /><br />
-		<!-- More official icons are available for download on the <a href="http://www.bravenewcode.com/wptouch/">WPtouch homepage</a>. -->
-		</p>
+		<h2>Available Icons</h2>
+			<p>You can select which icons will be displayed beside pages enabled below</p>
+			<p>To add icons to the pool simply drop 60x60 (ideal) .png images into the <strong>wp-content/wptouch/images/icon-pool</strong> directory, then refresh this page to select them.</p>
+			<p>In the icon-pool folder is a <strong>.psd template</strong> which you can use to build icons yourself.</p>
+			<!-- <p>More official icons are available for download on the <a href="http://www.bravenewcode.com/wptouch/">WPtouch homepage</a>.</p> -->
 	</div>
 		
 	<div class="wptouch-item-content-box1">
 	<?php foreach ($icons as $icon) { ?>
 				<ul class="wptouch-iconblock">
-				<li><img src="<?php echo($icon['url']); ?>" title="<?php echo($icon['name']); ?>" /> <?php echo($icon['friendly']); ?></li>
+					<li><img src="<?php echo($icon['url']); ?>" title="<?php echo($icon['name']); ?>" /> <?php echo($icon['friendly']); ?></li>
 				</ul>
 				<?php } ?>
-		</div>
+	</div>
 	<div class="wptouch-clearer"></div>
 </div>
 
@@ -998,12 +994,9 @@ The Menu Section
 <div class="wptouch-itemrow">
 	<div class="wptouch-item-desc">
 	<h2>Logo/Bookmark<br />Page &amp; Menu Icons</h2>
-		<p>
-		Choose the logo displayed in the header (also your bookmark icon), and the pages you want included in the WPtouch drop-down menu.<br /><br />
-		<strong>Remember, only those checked<br />
-		will be shown.</strong><br /><br />
-		Next, select the icons from the drop lists that you want to pair with each page/menu item.
-		</p>
+		<p>Choose the logo displayed in the header (also your bookmark icon), and the pages you want included in the WPtouch drop-down menu. <strong>Remember, only those checked will be shown.</strong></p>
+		<p>Next, select the icons from the drop lists that you want to pair with each page/menu item.</p>
+		<p>Lastly, you can decide if pages are listed by the page order in WordPress, or by name (default).</p>
 	</div>
 		
 	<div class="wptouch-item-content-box1">
@@ -1069,14 +1062,11 @@ The Default Menu Item Section
 */
 ?>
 	
-	<div class="wptouch-itemrow">
+<div class="wptouch-itemrow">
 	<div class="wptouch-item-desc">
-	<h2>Default Menu Items</h2>
-		<p>
-		Enable/Disable these default items in the WPtouch dropdown menu.
-		</p>
-	</div>
-		
+		<h2>Default Menu Items</h2>
+			<p>Enable/Disable these default items in the WPtouch dropdown menu.</p>
+	</div>		
 	<div class="wptouch-item-content-box1">
 				<div class="wptouch-checkbox-row"><input type="checkbox" name="enable-main-home" <?php if (isset($v['enable-main-home']) && $v['enable-main-home'] == 1) echo('checked'); ?>><label for="enable-main-home">Enable Home Icon</label></div>
 	
@@ -1097,8 +1087,7 @@ The Plugin Section
 <div class="wptouch-itemrow">
 	<div class="wptouch-item-desc">
 	<h2>Plugin Support &amp; Compatibility</h2>
-			<p>
-			<strong>
+			<p><strong>
 			<?php
 			//Let's do some WordPress version checks to provide more information for the user about what they can expect using the plugin
 			$version = (float)str_replace('.','',get_bloginfo('version'));
@@ -1122,11 +1111,10 @@ The Plugin Section
 			echo 'WordPress installed: ' . get_bloginfo('version') . '<br />(NOT Supported! Upgrade <u>Required</u>)';
 			}
 			?>	
-			</strong><br /><br	/>
-			Here you'll find info on additional WPtouch features and their requirements, including those activated with companion plugins.<br /><br />
-			For further documentation visit <a href="http://www.bravenewcode.com/wptouch/">BraveNewCode</a>.<br /><br />
-			To report an incompatible plugin, send an e-mail to <a href="mailto:wptouch@bravenewcode.com">wptouch@bravenewcode.com</a>
-			</p>
+			</strong></p>
+			<p>Here you'll find info on additional WPtouch features and their requirements, including those activated with companion plugins.</p>
+			<p>For further documentation visit <a href="http://www.bravenewcode.com/wptouch/">BraveNewCode</a>.</p>
+			<p>To report an incompatible plugin, send an e-mail to <a href="mailto:wptouch@bravenewcode.com">wptouch@bravenewcode.com</a></p>
 	</div>
 		
 	<div class="wptouch-item-content-box1 wptouch-admin-plugins">
