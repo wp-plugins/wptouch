@@ -39,10 +39,6 @@ The theme also includes the ability for your visitors to easily switch between t
 * Fix for WordPress shortcodes appearing in excerpts
 * Changed how WPtouch shows switch links
 * Auto-adjusting width/height for MobileSafari plugin objects (YouTube, Quicktime)
-* Added GZIP compression for supported browsers
-* 1.7.1: Fixed re-direct bug when viewing default theme from mobile device
-* 1.7.2: Fixed missing Android support
-* 1.7.3: Fixed broken login link on some installations
 
 
 Please visit http://bravenewcode.com/wptouch/ for a full description & updates on the WPtouch plugin.
@@ -73,10 +69,6 @@ Please visit http://bravenewcode.com/wptouch/ for a full description & updates o
 * Fix for WordPress shortcodes appearing in excerpts
 * Changed how WPtouch shows switch links
 * Auto-adjusting width/height for MobileSafari plugin objects (YouTube, Quicktime)
-* Added GZIP compression for supported browsers
-* 1.7.1: Fixed re-direct bug when viewing default theme from mobile device
-* 1.7.2: Fixed missing Android support
-* 1.7.3: Fixed broken login link on some installations
 
 
 = Version 1.6 =
