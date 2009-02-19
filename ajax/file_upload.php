@@ -7,7 +7,7 @@
 	
 	if ( current_user_can( 'upload_files' ) ) {
 		$wptouch_dir = $loc[0] . '/wp-content/uploads/wptouch/';
-		$upload_dir = $loc[0] . '/wp-content/uploads/wptouch/custom-icons/';
+		$upload_dir = $loc[0] . '/wp-content/uploads/wptouch/custom-icons/'; 
 		if ( !file_exists( $wptouch_dir )) {
 			mkdir( $wptouch_dir, 0755, true ); 
 		}
