@@ -217,20 +217,8 @@ function bnc_is_iphone() {
 	// The Automatic Footer Template Switch Code (into 'wp_footer();')
 function wptouch_switch() {
 	global $wptouch_plugin;
-		if ($wptouch_plugin->applemobile && $wptouch_plugin->desired_view == 'normal') {
-			echo '<div style="
-			width: auto;
-			height: 48px;
-			padding-top:17px;
-			padding-bottom:15px;
-			font-size: x-large;
-			font-weight: bold;
-			background: url(' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/switch-bg.png) repeat-x 0 0;
-			margin:0px;
-			border-top: 1px solid #999;
-			border-bottom: 2px solid #999;
-			text-shadow: #e6e6e6 3px 3px 1px;" 
-			id="switch-footer-links">View ' . get_bloginfo('title') . '\'s <a href="' . get_bloginfo('siteurl') . '/?bnc_view=mobile">Mobile Theme</a></div>';
+		if ($wptouch_plugin->desired_view == 'normal') {
+			echo '<div style="width: auto;height: 48px;padding-top:17px;padding-bottom:15px;font-size: x-large;font-weight: bold;background: url(' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/switch-bg.png) repeat-x 0 0;margin:0px;border-top: 1px solid #999;border-bottom: 2px solid #999;text-shadow: #e6e6e6 3px 3px 1px;" id="switch-footer-links">View ' . get_bloginfo('title') . '\'s <a href="' . get_bloginfo('siteurl') . '/?bnc_view=mobile">Mobile Theme</a></div>';
 	}
 }
   
@@ -1273,9 +1261,9 @@ The Plugin Section
 
 <?php 
 echo('</div></div>'); } 
+add_action('wp_footer', 'wptouch_switch');
 add_action('admin_head', 'wptouch_admin_css');
 add_action('admin_menu', 'bnc_options_menu'); 
-add_action('wp_footer', 'wptouch_switch');
 add_action('the_content', 'wptouch_content_filter');
 add_filter('the_content_rss', 'do_shortcode', 11);
 ?>
