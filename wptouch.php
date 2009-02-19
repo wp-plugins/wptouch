@@ -488,36 +488,7 @@ function bnc_get_link_color() {
 return $v['link-color'];
 }
 
-  function bnc_get_icon_list()
-  {
-		$a = preg_match('#(.*)wptouch.php#', __FILE__, $matches);
-		$dir = opendir($matches[1] . 'images/icon-pool/');
-	  $files = array();
-	  if ($dir) {
-		  while (false !== ($file = readdir($dir))) {
-			  if ($file == '.' || $file == '..' || $file == '.svn' || $file == 'template.psd' || $file == '.DS_Store' || $file == 'more')
-				  continue;
-			  $icon = array();
-			  $names = explode('.', $file);
-			  $icon['friendly'] = ucfirst($names[0]);
-			  $icon['name'] = $file;
-			  $icon['url'] = get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/icon-pool/' . $file;
-			  $files[$icon['name']] = $icon;
-		  }
-	  }
-	  
-	  ksort($files);
-	  return $files;
-  }
-
-	function bnc_output_icons($icons) {
-	  foreach ($icons as $icon) {
-		  echo('<option value="' . $icon['name'] . '" ');
-		  if (isset($v['main_title']) && $icon['name'] == $v['main_title'])
-			  echo('selected');
-		  echo(">{$icon['friendly']}</option>");
-	  }
-	}	
+	require_once( 'include/icons.php' );
   
   function bnc_wp_touch_page()
   {
@@ -681,6 +652,9 @@ return $v['link-color'];
 			if (!is_array($v)) {
 				$v = unserialize($v);
 			}
+			
+			global $wptouch_settings;
+			$wptouch_settings = $v;
 
 			if (!isset($v['header-title'])) {
 				$v['header-title'] = '' . get_bloginfo('title') . '';
@@ -788,7 +762,7 @@ The News Section
 	</div>
    <div id="wptouch-news-donate">
 	  <h3>Donate To WPtouch</h3> 
-	  WPtouch represents hundreds of hours of development work. If you like the project and want to see it continue, please consider <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=paypal%40bravenewcode%2ecom&item_name=WPtouch%20Beer%20Fund&no_shipping=1&tax=0&currency_code=CAD&lc=CA&bn=PP%2dDonationsBF&charset=UTF%2d8">donating to WPtouch.</a><br /><br />
+	  WPtouch represents hundreds of hours of development work. If you like the project and want to see it continue, please consider <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=paypal%40bravenewcode%2ecom&amp;item_name=WPtouch%20Beer%20Fund&amp;no_shipping=1&amp;tax=0&amp;currency_code=CAD&amp;lc=CA&amp;bn=PP%2dDonationsBF&amp;charset=UTF%2d8">donating to WPtouch.</a><br /><br />
 	  Everyone who donates will be added to our WPtouch friends and family listing on <a href="http://www.bravenewcode.com/wptouch">bravenewcode.com/wptouch</a>, in appreciation for the support.
    </div>
 	
@@ -828,7 +802,7 @@ The News Section
 <div class="wptouch-itemrow">
 	<div class="wptouch-item-desc">
 	<h2>Advanced Options</h2>
-		<p>Choose to enable/disable advanced features & options available for WPtouch.</p>
+		<p>Choose to enable/disable advanced features &amp; options available for WPtouch.</p>
 	
 		<p><strong>When advanced javascript is unchecked:</strong>
 			<ul class="wptouch-small-menu">
@@ -841,36 +815,36 @@ The News Section
 	
 	<div class="wptouch-item-content-box1">
 		<div class="wptouch-checkbox-row">
-			<input type="checkbox" name="enable-cats-button" <?php if (isset($v['enable-cats-button']) && $v['enable-cats-button'] == 1) echo('checked'); ?>>
+			<input type="checkbox" name="enable-cats-button" <?php if (isset($v['enable-cats-button']) && $v['enable-cats-button'] == 1) echo('checked'); ?> />
 			<label for="enable-cats-button"> Enable Categories In The Header <small>(will add a categories button beside search &amp; menu buttons)</small></label>
 		</div>
 		<div class="wptouch-checkbox-row">
-			<input type="checkbox" name="enable-login-button" <?php if (isset($v['enable-login-button']) && $v['enable-login-button'] == 1) echo('checked'); ?>>
+			<input type="checkbox" name="enable-login-button" <?php if (isset($v['enable-login-button']) && $v['enable-login-button'] == 1) echo('checked'); ?> />
 			<label for="enable-login-button"> Enable Login From The Header <small>(will add a login button beside search &amp; menu buttons)</small></label>
 		</div>
 		
 		<div class="wptouch-checkbox-row">
-			<input type="checkbox" name="enable-js-header" <?php if (isset($v['enable-js-header']) && $v['enable-js-header'] == 1) echo('checked'); ?>>
+			<input type="checkbox" name="enable-js-header" <?php if (isset($v['enable-js-header']) && $v['enable-js-header'] == 1) echo('checked'); ?> />
 			<label for="enable-js-header"> Use Advanced <a href="http://www.jquery.com/" target="_blank">jQuery</a> Javascript Effects<small>(ajax entries &amp; comments)</small></label>
 		</div>
 		
 		<div class="wptouch-checkbox-row">
-			<input type="checkbox" name="enable-gravatars" <?php if (isset($v['enable-gravatars']) && $v['enable-gravatars'] == 1) echo('checked'); ?>>
+			<input type="checkbox" name="enable-gravatars" <?php if (isset($v['enable-gravatars']) && $v['enable-gravatars'] == 1) echo('checked'); ?> />
 			<label for="enable-gravatars"> Enable Gravatars in Comments</label>
 		</div>
 		
 		<div class="wptouch-checkbox-row">
-			<input type="checkbox" name="enable-page-coms" <?php if (isset($v['enable-page-coms']) && $v['enable-page-coms'] == 1) echo('checked'); ?>>
+			<input type="checkbox" name="enable-page-coms" <?php if (isset($v['enable-page-coms']) && $v['enable-page-coms'] == 1) echo('checked'); ?> />
 			<label for="enable-page-coms"> Enable Comments For Pages <small>(will add the comment form to <strong>all</strong> pages by default)</small></label>
 		</div>
 		
 		<div class="wptouch-checkbox-row">
-			<input type="checkbox" name="enable-regular-default" <?php if (isset($v['enable-regular-default']) && $v['enable-regular-default'] == 1) echo('checked'); ?>>
+			<input type="checkbox" name="enable-regular-default" <?php if (isset($v['enable-regular-default']) && $v['enable-regular-default'] == 1) echo('checked'); ?> />
 			<label for="enable-regular-default"> First-time mobile users will see regular (non-mobile) site</label>
 		</div>			
 		
 		<div class="wptouch-checkbox-row">
-			<input type="checkbox" name="enable-gzip" <?php if (isset($v['enable-gzip']) && $v['enable-gzip'] == 1) echo('checked'); ?>>
+			<input type="checkbox" name="enable-gzip" <?php if (isset($v['enable-gzip']) && $v['enable-gzip'] == 1) echo('checked'); ?> />
 			<label for="enable-gzip"> Enable GZIP compression <small>(speeds up page loads, may conflict with other plugins)</small></label>
 		</div>			
 	</div>
@@ -892,19 +866,19 @@ The News Section
 	<div class="wptouch-item-content-box1 wptouchstyle">
 
 	<div class="header-item-desc">Header Title Text <small>(here you can override your site title to fit the WPtouch header)</small></div>
-		<div class="header-input">&nbsp; <input text="text" name="header-title" type="text" value="<?php $str = $v['header-title']; echo stripslashes($str); ?>" /></div>
+		<div class="header-input">&nbsp; <input type="text" name="header-title" value="<?php $str = $v['header-title']; echo stripslashes($str); ?>" /></div>
 
 	<div class="header-item-desc">Logo & site title header background color</div>
-		<div class="header-input">#<input text="text" name="header-background-color" type="text" value="<?php echo $v['header-background-color']; ?>" /></div>
+		<div class="header-input">#<input type="text" name="header-background-color" value="<?php echo $v['header-background-color']; ?>" /></div>
 
 	<div class="header-item-desc">Header 'Search, Login &amp; Menu' background color <small>(dark colors work best)</small></div>
-		<div class="header-input">#<input text="text" name="header-border-color" type="text" value="<?php echo $v['header-border-color']; ?>" /></div>
+		<div class="header-input">#<input type="text" name="header-border-color" value="<?php echo $v['header-border-color']; ?>" /></div>
 
 	<div class="header-item-desc">Header Text Color</div>
-		<div class="header-input">#<input type="text" name="header-text-color" type="text" value="<?php echo $v['header-text-color']; ?>" /></div>
+		<div class="header-input">#<input type="text" name="header-text-color" value="<?php echo $v['header-text-color']; ?>" /></div>
 
 				<div class="header-item-desc">Site-wide Link Color <small>(the color for most of the links in WPtouch)</small></div>
-			<div class="header-input">#<input type="text" name="link-color" type="text" value="<?php echo $v['link-color']; ?>" /></div>		
+			<div class="header-input">#<input type="text" name="link-color" value="<?php echo $v['link-color']; ?>" /></div>		
 		</div>
 	<div class="wptouch-clearer"></div>
 </div>
@@ -1007,13 +981,10 @@ The Availabe Icons Section
 			<!-- <p>More official icons are available for download on the <a href="http://www.bravenewcode.com/wptouch/">WPtouch homepage</a>.</p> -->
 	</div>
 		
-	<div class="wptouch-item-content-box1">
-	<?php foreach ($icons as $icon) { ?>
-				<ul class="wptouch-iconblock">
-					<li><img src="<?php echo($icon['url']); ?>" title="<?php echo($icon['name']); ?>" /> <?php echo($icon['friendly']); ?></li>
-				</ul>
-				<?php } ?>
+	<div class="wptouch-item-content-box1">	
+		<?php bnc_show_icons(); ?>
 	</div>
+	
 	<div class="wptouch-clearer"></div>
 </div>
 
@@ -1025,18 +996,26 @@ The Menu Section
 
 <div class="wptouch-itemrow">
 	<div class="wptouch-item-desc">
-	<h2>Logo/Bookmark<br />Page &amp; Menu Icons</h2>
+		<h2>Logo/Bookmark<br />Page &amp; Menu Icons</h2>
+		
 		<p>Choose the logo displayed in the header (also your bookmark icon), and the pages you want included in the WPtouch drop-down menu. <strong>Remember, only those checked will be shown.</strong></p>
+		
 		<p>Next, select the icons from the drop lists that you want to pair with each page/menu item.</p>
+		
 		<p>Lastly, you can decide if pages are listed by the page order in WordPress, or by name (default).</p>
 	</div>
 		
 	<div class="wptouch-item-content-box1">
+	<?php include( 'html/icon-area.php' ); ?>
+	
+	<!--
 		<div class="wptouch-select-row">
 			<?php
 			// do top header icon 
 				echo("<div class=\"wptouch-select-left\">Logo &amp; Home Screen Bookmark Icon</div>");
-					echo("<div class=\"wptouch-select-right\"><select name=\"enable_main_title\"></div>");
+				echo("<div class=\"wptouch-select-right\"><select name=\"enable_main_title\"></div>");
+					
+					
 						foreach ($icons as $icon) {
 							echo('<option value="' . $icon['name'] . '" ');
 								if (isset($v['main_title']) && $icon['name'] == $v['main_title'])
@@ -1046,8 +1025,9 @@ The Menu Section
 				echo("</select></div>");
 			?>
 		</div>
-		
+		-->
 
+<!--
 			<?php
 				global $table_prefix;
 					$query = "select * from {$table_prefix}posts where post_type = 'page' and post_status = 'publish' order by post_title asc";
@@ -1084,6 +1064,8 @@ The Menu Section
 				echo(">By Page Order</option></select></div></div>");
 			}
 		?>
+		
+		-->
 </div>
 	<div class="wptouch-clearer"></div>
 </div>
@@ -1100,11 +1082,11 @@ The Default Menu Item Section
 			<p>Enable/Disable these default items in the WPtouch dropdown menu.</p>
 	</div>		
 	<div class="wptouch-item-content-box1">
-				<div class="wptouch-checkbox-row"><input type="checkbox" name="enable-main-home" <?php if (isset($v['enable-main-home']) && $v['enable-main-home'] == 1) echo('checked'); ?>><label for="enable-main-home">Enable Home Icon</label></div>
+				<div class="wptouch-checkbox-row"><input type="checkbox" name="enable-main-home" <?php if (isset($v['enable-main-home']) && $v['enable-main-home'] == 1) echo('checked'); ?> /><label for="enable-main-home">Enable Home Icon</label></div>
 	
-				<div class="wptouch-checkbox-row"><input type="checkbox" name="enable-main-rss" <?php if (isset($v['enable-main-rss']) && $v['enable-main-rss'] == 1) echo('checked'); ?>><label for="enable-main-rss">Enable RSS Icon</label></div>
+				<div class="wptouch-checkbox-row"><input type="checkbox" name="enable-main-rss" <?php if (isset($v['enable-main-rss']) && $v['enable-main-rss'] == 1) echo('checked'); ?> /><label for="enable-main-rss">Enable RSS Icon</label></div>
 	
-				<div class="wptouch-checkbox-row"><input type="checkbox" name="enable-main-email" <?php if (isset($v['enable-main-email']) && $v['enable-main-email'] == 1) echo('checked'); ?>><label for="enable-main-email">Enable Email Icon</label></div>
+				<div class="wptouch-checkbox-row"><input type="checkbox" name="enable-main-email" <?php if (isset($v['enable-main-email']) && $v['enable-main-email'] == 1) echo('checked'); ?> /><label for="enable-main-email">Enable Email Icon</label></div>
 		</div>
 
 	<div class="wptouch-clearer"></div>
