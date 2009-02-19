@@ -992,9 +992,10 @@ The Availabe Icons Section
 			<!-- <p>To add icons to the pool simply drop 60x60 (ideal) .png images into the <strong>wp-content/wptouch/images/icon-pool</strong> directory, then refresh this page to select them.</p> -->
 
 			<p>
-				To add icons to the pool, simply upload a 60x60 .png, .jpeg or .gif from your local computer. <br /><br />These files will be stored in <br />wp-content/uploads/wptouch/custom-icons/.
+				To add icons to the pool, simply upload a 60x60 .png, .jpeg or .gif from your local computer. <br /><br />These files will be stored in <strong>wp-content/uploads/wptouch/custom-icons/</strong>.
 				<div id="upload_response"></div>
-				<div id="upload_progress" style="display: none;"><img src="<?php echo get_bloginfo('url') . '/wp-content/plugins/wptouch/images/progress.gif'; ?>" alt="" /></div>
+				
+				<div id="upload_progress" style="display: none;"><p><img src="<?php echo get_bloginfo('url') . '/wp-content/plugins/wptouch/images/progress.gif'; ?>" alt="" /></p></div>
 				<script type="text/javascript">
 					$j = jQuery.noConflict();
 					$j(document).ready(function(){

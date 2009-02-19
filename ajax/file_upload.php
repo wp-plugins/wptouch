@@ -27,7 +27,7 @@
 					} else {
 						echo 'File has been saved! Click <a href="#" onclick="location.reload(true); return false;">here to refresh the page</a>.';						
 					}					
-				} else echo __( 'Only PNG, GIF and JPEG are allowed', 'wptouch' );
+				} else echo __( 'Sorry, only PNG, GIF and JPEG images are supported.', 'wptouch' );
 			} else echo __( 'Image too large', 'wptouch' );
 		}
 
