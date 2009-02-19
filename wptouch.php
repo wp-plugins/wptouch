@@ -978,29 +978,30 @@ The Availabe Icons Section
 		<h2>Available Icons</h2>
 			<p>You can select which icons will be displayed beside pages enabled below</p>
 			<!-- <p>To add icons to the pool simply drop 60x60 (ideal) .png images into the <strong>wp-content/wptouch/images/icon-pool</strong> directory, then refresh this page to select them.</p> -->
-
-			<p>
-				To add icons to the pool, simply upload a 60x60 .png, .jpeg or .gif from your local computer. <br /><br />These files will be stored in <strong>wp-content/uploads/wptouch/custom-icons/</strong>.
-				<div id="upload_response"></div>
+			<p>To add icons to the pool, simply upload a 60x60 .png, .jpeg or .gif from your computer.
+			<p>These files will be stored in <strong>wp-content/uploads/wptouch/custom-icons/</strong>.</p>
 				
-				<div id="upload_progress" style="display: none;"><p><img src="<?php echo get_bloginfo('url') . '/wp-content/plugins/wptouch/images/progress.gif'; ?>" alt="" /></p></div>
-				<script type="text/javascript">
-					$j = jQuery.noConflict();
-					$j(document).ready(function(){
-						new Ajax_upload('#upload_button', {
-							action: '<?php echo get_bloginfo('wpurl') . "/wp-content/plugins/wptouch/ajax/file_upload.php"; ?>',
-							autoSubmit: true,
-							name: 'submitted_file',
-							onSubmit: function(file, extension) { $j = jQuery.noConflict(); $j("#upload_progress").show(); },
-							onComplete: function(file, response) { $j = jQuery.noConflict(); $j("#upload_progress").hide(); $j('#upload_response').hide().html(response).fadeIn(); }
-						});
-					});
-				</script>
-			</p>
+				<div id="upload_response"></div>
+					<div id="upload_progress" style="display: none;">
+						<p><img src="<?php echo get_bloginfo('url') . '/wp-content/plugins/wptouch/images/progress.gif'; ?>" alt="" /></p>
+					</div>
+							<script type="text/javascript">
+							$j = jQuery.noConflict();
+							$j(document).ready(function(){
+								new Ajax_upload('#upload_button', {
+									action: '<?php echo get_bloginfo('wpurl') . "/wp-content/plugins/wptouch/ajax/file_upload.php"; ?>',
+									autoSubmit: true,
+									name: 'submitted_file',
+									onSubmit: function(file, extension) { $j = jQuery.noConflict(); $j("#upload_progress").show(); },
+									onComplete: function(file, response) { $j = jQuery.noConflict(); $j("#upload_progress").hide(); $j('#upload_response').hide().html(response).fadeIn(); }
+								});
+							});
+						</script>
+					</p>
 			
-			<div id="upload_button" /></div> 
+			<div id="upload_button"></div> 
 			
-			<p>In the icon-pool folder is a <strong>.psd template</strong> which you can use to build icons yourself.</p>
+			<p>In the icon-pool folder is a <strong><a href="<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/images/icon-pool/template.psd">.psd template</a></strong> which you can use to build icons yourself.</p>
 			
 
 			<!-- <p>More official icons are available for download on the <a href="http://www.bravenewcode.com/wptouch/">WPtouch homepage</a>.</p> -->

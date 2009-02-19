@@ -1,3 +1,5 @@
+/* @override http://24.36.119.47:9098/wp-content/plugins/wptouch/admin-css/wptouch-admin.css */
+
 /* WPtouch Admin CSS */
 
 #wptouch-theme {
@@ -490,5 +492,18 @@
 	width: 117px;
 	height: 40px;
 }
+
+/* @end */
+
+/* @group Icon Upload */
+
+#wptouch-theme #upload_progress {
+	position: relative;
+	top: 39px;
+	margin-top: -25px;
+	left: 135px;
+}
+
+
 
 /* @end */
