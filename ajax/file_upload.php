@@ -1,0 +1,35 @@
+<?php
+	$cur_dir = dirname(__FILE__);
+	$loc = explode( '/wp-content/', $cur_dir );
+	$max_size = 128*1024; // 128k
+	
+	require_once( $loc[0] . '/wp-config.php' );
+	
+	if ( current_user_can( 'upload_files' ) ) {
+		$wptouch_dir = $loc[0] . '/wp-content/uploads/wptouch/';
+		$upload_dir = $loc[0] . '/wp-content/uploads/wptouch/custom-icons/';
+		if ( !file_exists( $wptouch_dir )) {
+			mkdir( $wptouch_dir, 0755, true ); 
+		}
+		
+		if ( !file_exists( $upload_dir )) {
+			mkdir( $upload_dir, 0755, true ); 
+		}		
+		
+		if ( isset( $_FILES['submitted_file'] ) ) {
+			$f = $_FILES['submitted_file'];
+			if ( $f['size'] <= $max_size) {
+				if ( $f['type'] == 'image/png' || $f['type'] == 'image/jpeg' || $f['type'] == 'image/gif' ) {	
+					@move_uploaded_file( $f['tmp_name'], $upload_dir . $f['name'] );
+					
+					if ( !file_exists( $upload_dir . $f['name'] ) ) {
+						echo 'There seems to have been an error.  Please try your upload again.';
+					} else {
+						echo 'File has been saved! Click <a href="#" onclick="location.reload(true); return false;">here to refresh the page</a>.';						
+					}					
+				} else echo __( 'Only PNG, GIF and JPEG are allowed', 'wptouch' );
+			} else echo __( 'Image too large', 'wptouch' );
+		}
+
+	} else echo __( 'Insufficient priviledges', 'wptouch' );
+?>

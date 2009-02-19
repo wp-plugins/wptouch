@@ -4,7 +4,7 @@
    Plugin URI: http://bravenewcode.com/wptouch/
    Description: A plugin which reformats your site with a mobile theme when viewing with an <a href="http://www.apple.com/iphone/">iPhone</a> / <a href="http://www.apple.com/ipodtouch/">iPod touch</a>. Set styling, page, menu, icon and more options for the theme by visiting the <a href="options-general.php?page=wptouch/wptouch.php">WPtouch Options admin panel</a>. &nbsp;
    Author: Dale Mugford & Duane Storey
-   Version: 1.7.6
+   Version: 1.8
    Author URI: http://www.bravenewcode.com
    
    # Special thanks to ContentRobot and the iWPhone theme/plugin
@@ -21,8 +21,6 @@
    # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. 
    # See the GNU lesser General Public License for more details.
 */
-
-//require_once( ABSPATH . 'wp-load.php');
 
 function wptouch_init() {
 	$bnc_option = get_option('bnc_iphone_pages');
@@ -50,7 +48,7 @@ add_filter('init', 'wptouch_init');
 
 // WPtouch Theme Options
 	global $bnc_wptouch_version;
- 	$bnc_wptouch_version = '1.7.6';
+ 	$bnc_wptouch_version = '1.8';
 
 	function WPtouch($before = '', $after = '') {
 		global $bnc_wptouch_version;
@@ -67,6 +65,7 @@ function wptouch_admin_css() {
 			echo '<script src="http://www.google.com/jsapi"></script>';
 			echo '<script type="text/javascript">google.load("jquery", "1"); jQuery.noConflict( ); </script>';
 			}
+	echo "<script type=\"text/javascript\" src=\"" . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/js/jquery.ajax_upload.1.1.js' . "\"></script>";
 }
   
 class WPtouchPlugin {
@@ -990,8 +989,31 @@ The Availabe Icons Section
 	<div class="wptouch-item-desc">
 		<h2>Available Icons</h2>
 			<p>You can select which icons will be displayed beside pages enabled below</p>
-			<p>To add icons to the pool simply drop 60x60 (ideal) .png images into the <strong>wp-content/wptouch/images/icon-pool</strong> directory, then refresh this page to select them.</p>
+			<!-- <p>To add icons to the pool simply drop 60x60 (ideal) .png images into the <strong>wp-content/wptouch/images/icon-pool</strong> directory, then refresh this page to select them.</p> -->
+
+			<p>
+				To add icons to the pool, simply from your local computer, and it will be added.    
+				<div id="upload_response"></div>
+				<div id="upload_progress" style="display: none;"><img src="<?php echo get_bloginfo('url') . '/wp-content/plugins/wptouch/images/progress.gif'; ?>" alt="" /></div>
+				<script type="text/javascript">
+					$j = jQuery.noConflict();
+					$j(document).ready(function(){
+						new Ajax_upload('#upload_button', {
+							action: '<?php echo get_bloginfo('wpurl') . "/wp-content/plugins/wptouch/ajax/file_upload.php"; ?>',
+							autoSubmit: true,
+							name: 'submitted_file',
+							onSubmit: function(file, extension) { $j = jQuery.noConflict(); $j("#upload_progress").show(); },
+							onComplete: function(file, response) { $j = jQuery.noConflict(); $j("#upload_progress").hide(); $j('#upload_response').hide().html(response).fadeIn(); }
+						});
+					});
+				</script>
+			</p>
+			
+			<div id="upload_button" /></div> 
+			
 			<p>In the icon-pool folder is a <strong>.psd template</strong> which you can use to build icons yourself.</p>
+			
+
 			<!-- <p>More official icons are available for download on the <a href="http://www.bravenewcode.com/wptouch/">WPtouch homepage</a>.</p> -->
 	</div>
 		

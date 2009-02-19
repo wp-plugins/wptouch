@@ -485,4 +485,10 @@
 	float: right;
 }
 
+#wptouch-theme #upload_button {
+	background: url(../images/upload.png);
+	width: 117px;
+	height: 40px;
+}
+
 /* @end */
