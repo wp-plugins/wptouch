@@ -22,14 +22,34 @@
    # See the GNU lesser General Public License for more details.
 */
 
+require_once( 'include/plugin.php' );
+
+function wptouch_delete_icon( $icon ) {
+	if ( !current_user_can( 'upload_files' ) ) {
+		// don't allow users to delete who don't have access to upload
+		return;	
+	}
+			
+	$dir = explode( 'wptouch', $icon );
+	$loc = ABSPATH . 'wp-content/uploads/wptouch/' . $dir[1];
+	unlink( $loc );
+}
+
 function wptouch_init() {
+	
+	if ( isset( $_GET['delete_icon'] ) ) {
+		wptouch_delete_icon( $_GET['delete_icon'] );
+		
+		header( 'Location: ' . get_bloginfo('wpurl') . '/wp-admin/options-general.php?page=wptouch/wptouch.php' );
+		die;
+	}	
+	
 	$bnc_option = get_option('bnc_iphone_pages');
 	if ($bnc_option == null) {
 		$defaults = array();
 		$defaults['header-background-color'] = '222222';
 		$defaults['header-title'] = '' . get_bloginfo('name') . '';
 	}
-
 }
 
 function wptouch_content_filter( $content ) {
@@ -52,21 +72,21 @@ add_filter('init', 'wptouch_init');
 
 	function WPtouch($before = '', $after = '') {
 		global $bnc_wptouch_version;
-			echo $before . 'WPtouch ' . $bnc_wptouch_version . $after;
-}
+		echo $before . 'WPtouch ' . $bnc_wptouch_version . $after;
+	}
  
 	// WP Admin stylesheet, Javascript
-function wptouch_admin_css() {
-	$url = get_bloginfo('wpurl');
-	$version = (float)get_bloginfo('version');
+	function wptouch_admin_css() {
+		$url = get_bloginfo('wpurl');
+		$version = (float)get_bloginfo('version');
 		echo '<link rel="stylesheet" type="text/css" href="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/admin-css/wptouch-admin.css" />';
-	$version = (float)get_bloginfo('version');
+		$version = (float)get_bloginfo('version');
 		if ($version < 2.2) {
 			echo '<script src="http://www.google.com/jsapi"></script>';
 			echo '<script type="text/javascript">google.load("jquery", "1"); jQuery.noConflict( ); </script>';
-			}
-	echo "<script type=\"text/javascript\" src=\"" . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/js/jquery.ajax_upload.1.1.js' . "\"></script>";
-}
+		}
+		echo "<script type=\"text/javascript\" src=\"" . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/js/jquery.ajax_upload.1.1.js' . "\"></script>";
+	}
   
 class WPtouchPlugin {
 		var $applemobile;
@@ -100,25 +120,25 @@ function bnc_do_redirect() {
 function bnc_filter_iphone() {
 	$key = 'bnc_mobile_' . md5(get_bloginfo('siteurl'));
    	if (isset($_GET['bnc_view'])) {
-			if ($_GET['bnc_view'] == 'mobile') {
-				setcookie($key, 'mobile', 0); 
-         } elseif ($_GET['bnc_view'] == 'normal') {
-				setcookie($key, 'normal', 0);
-         }
-			header('Location: ' . get_bloginfo('siteurl'));
-		   die;
-   }
-
-   	$settings = bnc_wptouch_get_settings();
-   if (isset($_COOKIE[$key])) {
-      $this->desired_view = $_COOKIE[$key];
-   } else {
-   	if ( $settings['enable-regular-default'] ) {
-   		$this->desired_view = 'normal';
-   	} else {
-      	$this->desired_view = 'mobile';
-   	}
-   }
+   		if ($_GET['bnc_view'] == 'mobile') {
+			setcookie($key, 'mobile', 0); 
+		} elseif ($_GET['bnc_view'] == 'normal') {
+			setcookie($key, 'normal', 0);
+		}
+		header('Location: ' . get_bloginfo('siteurl'));
+		die;
+	}
+		
+	$settings = bnc_wptouch_get_settings();
+	if (isset($_COOKIE[$key])) {
+		$this->desired_view = $_COOKIE[$key];
+	} else {
+		if ( $settings['enable-regular-default'] ) {
+			$this->desired_view = 'normal';
+		} else {
+	  		$this->desired_view = 'mobile';
+		}
+	}
 
 	$value = ini_get( 'zlib.output_compression' );
    if ($this->desired_view == 'mobile' && !$this->output_started && !$value) {
