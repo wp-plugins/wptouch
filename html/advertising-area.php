@@ -12,6 +12,9 @@
 		<div class="wptouch-item-content-box1 wptouchstyle">
 			<div class="header-item-desc">Google AdSense ID</div>
 			<div class="header-input">#<input type="text" name="adsense-id" type="text" value="<?php echo $wptouch_settings['adsense-id']; ?>" /></div>
+			
+			<div class="header-item-desc">Google AdSense Channel</div>
+			<div class="header-input">#<input type="text" name="adsense-channel" type="text" value="<?php echo $wptouch_settings['adsense-channel']; ?>" /></div>
 		</div>
 	</div>
 	

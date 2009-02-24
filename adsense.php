@@ -89,11 +89,12 @@ if (!function_exists('google_append_url')) {
 	  return $google_ad_url;
 	}
 	
-	function google_show_ad( $id ) {
+	function google_show_ad( $id, $channel = '' ) {
 		global $bnc_wptouch_version;
 		
 		$ad = '';
 		$GLOBALS['google']['client']= $id;
+		$GLOBALS['google']['channel']= $channel;
 		
 		$google_dt = time();
 		google_set_screen_res();

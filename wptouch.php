@@ -57,7 +57,12 @@ function wptouch_content_filter( $content ) {
 	if ( isset($settings['adsense-id']) && strlen($settings['adsense-id']) && is_single() ) {
 		require_once( 'adsense.php' );
 		
-		$ad = google_show_ad( $settings['adsense-id'] );
+		$channel = '';
+		if ( isset($settings['adsense-channel']) ) {
+			$channel = $settings['adsense-channel'];
+		}
+		
+		$ad = google_show_ad( $settings['adsense-id'], $channel );
 		return $content . '<div class="wptouch-adsense-ad">' . $ad . '</div>';	
 	} else {
 		return $content;
@@ -641,6 +646,10 @@ return $v['link-color'];
 		if (isset($_POST['adsense-id'])) {
 			$a['adsense-id'] = $_POST['adsense-id'];
 		}
+		
+		if (isset($_POST['adsense-channel'])) {
+			$a['adsense-channel'] = $_POST['adsense-channel'];
+		}		
 
 		  foreach ($_POST as $k => $v) {
 			  if ($k == 'enable_main_title') {
