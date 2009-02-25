@@ -168,7 +168,7 @@ We've commented below to let you know what works what, so if you do go messing a
         <div id="dropmenu-inner">
             <ul>
             <?php if (bnc_is_home_enabled()) { ?>
-            	<li><a href="<?php bloginfo('siteurl'); ?>"><img src="<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/images/icon-pool/Home.png" alt="" />Home</a></li> 
+            	<li><a href="<?php bloginfo('siteurl'); ?>"><img src="<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/images/icon-pool/Home.png" alt="" /><?php _e( "Home", "wptouch" ); ?></a></li> 
             <?php } ?>
             
             <?php           
@@ -185,15 +185,15 @@ We've commented below to let you know what works what, so if you do go messing a
 			} ?>
 		
             <?php if (bnc_is_rss_enabled()) { ?>
-           		<li><a href="<?php bloginfo('rss2_url'); ?>"><img src="<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/images/icon-pool/RSS.png" alt="" />RSS Feed</a></li>
+           		<li><a href="<?php bloginfo('rss2_url'); ?>"><img src="<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/images/icon-pool/RSS.png" alt="" /><?php _e( "RSS Feed", "wptouch" ); ?></a></li>
            	<?php } ?>
            
            	<?php if (bnc_is_email_enabled()) { ?>
-           		<li class="noborder"><a href="mailto:<?php bloginfo('admin_email'); ?>"><img src="<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/images/icon-pool/Mail.png" alt="" />E-Mail</a></li>
+           		<li class="noborder"><a href="mailto:<?php bloginfo('admin_email'); ?>"><img src="<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/images/icon-pool/Mail.png" alt="" /><?php _e( "E-Mail", "wptouch" ); ?></a></li>
            	<?php } ?>
            
            	<?php if (!bnc_is_js_enabled()) { ?>
-           		<li class="noarrow"><a class="menu-close" href="javascript:document.getElementById('dropmenu').style.display = 'none';"><img src="<?php bloginfo('template_directory'); ?>/images/cross.png" alt="" /> Close Menu</a></li>
+           		<li class="noarrow"><a class="menu-close" href="javascript:document.getElementById('dropmenu').style.display = 'none';"><img src="<?php bloginfo('template_directory'); ?>/images/cross.png" alt="" /> <?php _e( "Close Menu", "wptouch" ); ?></a></li>
            	<?php } ?>
            </ul>
         </div>
@@ -205,7 +205,7 @@ We've commented below to let you know what works what, so if you do go messing a
 		<div class="content post">
 		<a href="#" class="h2">Warning</a>
 			<div class="mainentry">
-			Sorry, this theme is only meant for use with WordPress on Apple's iPhone and iPod Touch.
+			<?php _e( "Sorry, this theme is only meant for use with WordPress on Apple's iPhone and iPod Touch.", "wptouch" ); ?>
 			</div>
 		</div>
   

@@ -127,7 +127,7 @@ $oddcomment = 'alt';
 		</p>
 		
 	<div id="errors" style="display:none">
-	There was an error. Please refresh the page and try again.
+	<?php _e( "There was an error. Please refresh the page and try again.", "wptouch" ); ?>
 	</div>
 	
 		<?php do_action('comment_form', $post->ID); ?>

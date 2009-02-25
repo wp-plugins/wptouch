@@ -10,7 +10,7 @@ Here we're making sure that each ajax div will have a unique ID.  -->
 		<?php global $is_ajax; if (is_search() && ($is_ajax)) { ?>
         <!--do nothing-->
 		<?php } elseif (is_search()) { ?>
-        <div class="result-text">Search results for &lsquo;<?php the_search_query(); ?>&rsquo;:</div>
+        <div class="result-text"><?php _e( "Search results for", "wptouch" ); ?> &lsquo;<?php the_search_query(); ?>&rsquo;:</div>
  	    <?php } ?>
 		
 <!-- If this is an archive/tag/category/author archive page, let's remind people, and help them out -->
@@ -19,22 +19,22 @@ Here we're making sure that each ajax div will have a unique ID.  -->
 			<!--Ajax? Do nothing-->
 				<?php } elseif (is_archive()) { ?>
 			<div class="result-text">Browsing <?php if (is_category()) { ?>
-				the category &lsquo;<?php echo single_cat_title(); ?>&rsquo;
+				<?php _e( "the category", "wptouch" ); ?> &lsquo;<?php echo single_cat_title(); ?>&rsquo;
 				
 				<?php } elseif (is_tag()) { ?>
-				the tag archive for &lsquo;<?php echo single_tag_title(); ?>&rsquo;
+				<?php _e( "the tag archive for", "wptouch" ); ?> &lsquo;<?php echo single_tag_title(); ?>&rsquo;
 				
 				<?php } elseif (is_day()) { ?> 
-				the archive for <?php echo get_the_time('F jS, Y'); ?>
+				<?php _e( "the archive for", "wptouch" ); ?> <?php echo get_the_time('F jS, Y'); ?>
 				
 				<?php } elseif (is_month()) { ?>
-				the archive for <?php echo get_the_time('F, Y'); ?>
+				<?php _e( "the archive for", "wptouch" ); ?> <?php echo get_the_time('F, Y'); ?>
 				
 				<?php } elseif (is_year()) { ?>
-				the archive for <?php echo get_the_time('Y'); ?>
+				<?php _e( "the archive for", "wptouch" ); ?> <?php echo get_the_time('Y'); ?>
 				
 				<?php } elseif (is_author()) { ?>
-				<?php the_author(); ?>'s archive
+				<?php the_author(); ?>'s <?php _e( "archive", "wptouch" ); ?>
 				<?php } ?>
 			</div>
 		<?php } ?>
@@ -90,12 +90,12 @@ Here we're making sure that each ajax div will have a unique ID.  -->
   </div>
           
                 <?php if (function_exists('wp_tag_cloud')) { ?>
-                <h3 class="result-text-page">Tag Cloud</h3>
+                <h3 class="result-text-page"><?php _e( "Tag Cloud", "wptouch" ); ?></h3>
             	<div id="wptouch-tagcloud">
               	<?php wp_tag_cloud('smallest=11&largest=18&unit=px&orderby=count&order=DESC'); ?>
               <?php } else { ?>
 
-            <h3 class="result-text-page">Category Cloud</h3>
+            <h3 class="result-text-page"><?php _e( "Category Cloud", "wptouch" ); ?></h3>
           <div id="wptouch-tagcloud">
           <?php wp_list_categories(); // This will print out the default WordPress Categories Listing. ?>                
           <?php } ?>
@@ -103,7 +103,7 @@ Here we're making sure that each ajax div will have a unique ID.  -->
 	</div>
 </div>
 
-          <h3 class="result-text-page">Monthly Archives</h3>
+          <h3 class="result-text-page"><?php _e( "Monthly Archives", "wptouch" ); ?></h3>
           <div id="wptouch-archives">
            <?php wp_get_archives(); // This will print out the default WordPress Monthly Archives Listing. ?> 
           </div>
@@ -129,13 +129,13 @@ Here we're making sure that each ajax div will have a unique ID.  -->
 		</div>
 	</div>          
 
-	<h3 class="result-text-page">(Alphabetical Order)</h3>
+	<h3 class="result-text-page">(<?php _e( "Alphabetical Order", "wptouch" ); ?>)</h3>
 		<div id="wptouch-links">
 			<?php foreach (get_bookmarks('categorize=0&title_li=0') as $bm) { echo('<li>'); echo('<img src="http://bravenewcode.com/code/favicon.php?site=' . urlencode($bm->link_url) . '&default=' . urlencode(bnc_get_local_icon_url() . '/icon-pool/Default.png') . '" />'); echo('<a href="' . $bm->link_url . '">' . $bm->link_name . '</a>'); echo('</li>'); } ?>
 		</div>
 <?php } ?><!-- end if links page-->    	
 	
-		<?php wp_link_pages('Pages in this article: ', '', 'number'); ?>
+		<?php wp_link_pages( __('Pages in this article: ', 'wptouch'), '', 'number'); ?>
 	</div>    
 </div>
     
@@ -163,17 +163,17 @@ Here we're making sure that each ajax div will have a unique ID.  -->
 
 <a class="h2" href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php if (function_exists('the_title_attribute')) the_title_attribute(); else the_title(); ?>"><?php if (function_exists('bnc_the_title')) bnc_the_title(); else the_title(); ?></a>
 			<div class="post-author">
-			<?php if (bnc_show_author()) { ?><span class="lead">Author:</span> <?php the_author(); ?><br /><?php } ?>
+			<?php if (bnc_show_author()) { ?><span class="lead"><?php _e("Author:", "wptouch"); ?></span> <?php the_author(); ?><br /><?php } ?>
 			<?php if (function_exists('wp_tag_cloud')) { ?>
 			<?php if (bnc_show_categories()) { echo('<span class="lead">Categories:</span> '); the_category(', '); echo('<br />'); } ?> 
-			<?php if (bnc_show_tags() && get_the_tags()) { echo(''); the_tags('<span class="lead">Tags:</span> ', ', ', ''); echo(''); } ?> 
+			<?php if (bnc_show_tags() && get_the_tags()) { echo(''); the_tags('<span class="lead">' . __( 'Tags:', 'wptouch' ) . '</span> ', ', ', ''); echo(''); } ?> 
 			<?php } else { ?>
 			Filed:<?php the_category(', '); ?><?php } ?>
 			</div>	
 			<div class="clearer"></div>	
             <div id="entry-<?php the_ID(); ?>" <?php if (bnc_excerpt_enabled()) { ?>style="display:none"<?php } ?> class="mainentry">
  				<?php the_content_rss('', true, '', 50); ?>
- 		    <a href="<?php the_permalink() ?>">Read More &raquo;</a>
+ 		    <a href="<?php the_permalink() ?>"><?php _e( "Read More", "wptouch" ); ?> &raquo;</a>
 	        </div>  
       </div>
 <?php } ?> 
@@ -197,18 +197,18 @@ Here we're making sure that each ajax div will have a unique ID.  -->
 		
 				<?php } elseif (!bnc_is_js_enabled() && is_search()) { ?>
 					<div class="main-navigation">
-						<div class="alignleft"><?php previous_posts_link('<img src="' . get_bloginfo('template_directory') . '/images/blue_arrow_l.jpg" alt="" /> Newer In Search') ?></div>
-						<div class="alignright"><?php next_posts_link('Older In Search <img src="' . get_bloginfo('template_directory') . '/images/blue_arrow_r.jpg" alt="" />') ?></div>
+						<div class="alignleft"><?php previous_posts_link('<img src="' . get_bloginfo('template_directory') . '/images/blue_arrow_l.jpg" alt="" /> ' . __( 'Newer In Search', 'wptouch')); ?></div>
+						<div class="alignright"><?php next_posts_link( __('Older In Search', 'wptouch') . ' <img src="' . get_bloginfo('template_directory') . '/images/blue_arrow_r.jpg" alt="" />') ?></div>
 					</div>
 
 				<?php } elseif (!bnc_is_js_enabled() && !is_search()) { ?>
 				
 				<div class="main-navigation">
 					<div class="alignleft">
-						<?php previous_posts_link('<img src="' . get_bloginfo('template_directory') . '/images/blue_arrow_l.jpg" alt="" /> Newer Entries') ?>
+						<?php previous_posts_link('<img src="' . get_bloginfo('template_directory') . '/images/blue_arrow_l.jpg" alt="" /> ' . __( 'Newer Entries', 'wptouch') ) ?>
 					</div>
 					<div class="alignright">
-						<?php next_posts_link('Older Entries <img src="' . get_bloginfo('template_directory') . '/images/blue_arrow_r.jpg" alt="" />') ?>
+						<?php next_posts_link( __('Older Entries', 'wptouch') . ' <img src="' . get_bloginfo('template_directory') . '/images/blue_arrow_r.jpg" alt="" />') ?>
 					</div>
 				</div>
 				<?php } ?>
@@ -219,11 +219,11 @@ Here we're making sure that each ajax div will have a unique ID.  -->
 <!-- If this was a bogus 404 page, the end of entry results, or a search -->
 
 	<?php global $is_ajax; if (($is_ajax) && !is_search()) { ?>
-	  <div class="result-text">No more entries to display.</div>
+	  <div class="result-text"><?php _e( "No more entries to display.", "wptouch" ); ?></div>
 	 <?php } elseif (is_search() && ($is_ajax)) { ?>
-	<div class="result-text">No more search results to display.</div>
+	<div class="result-text"><?php _e( "No more search results to display.", "wptouch" ); ?></div>
 	 <?php } elseif (is_search() && (!$is_ajax)) { ?>
-	 <div class="result-text" style="padding-bottom:127px">No search results results found.<br />Try another query.</div>
+	 <div class="result-text" style="padding-bottom:127px"><?php _e( "No search results results found.", "wptouch" ); ?><br /><?php _e( "Try another query.", "wptouch" ); ?></div>
 	<?php } else { ?>
 	  <div class="post"><img src="<?php bloginfo('template_directory'); ?>/images/404.jpg" alt="404 Not Found" /></div>
 	<?php } ?>

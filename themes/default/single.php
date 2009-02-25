@@ -11,9 +11,9 @@ If it's ajax, we're not bringing in header.php and footer.php -->
 <!-- Let's check for DISQUS... we need to skip to a different div if it's installed and active -->		
 	
 	<?php if (function_exists('dsq_comments_template')) { ?>
- 		<a href="#dsq-add-new-comment">&darr; Skip to comments</a></div>
+ 		<a href="#dsq-add-new-comment">&darr; <?php _e( "Skip to comments", "wptouch" ); ?></a></div>
 			<?php } else { ?>
-   	    <a href="#comments">&darr; Skip to comments</a></div>
+   	    <a href="#comments">&darr; <?php _e( "Skip to comments", "wptouch" ); ?></a></div>
 	<?php } ?>	
 		<div class="clearer"></div>
 	</div>
@@ -26,9 +26,9 @@ If it's ajax, we're not bringing in header.php and footer.php -->
 <!-- Categories and Tags post footer -->        
 
 			<div class="single-post-meta-bottom">
-				<?php link_pages('<div class="post-page-nav">Article Pages: ', '</div>', 'number', ' &raquo;', '&laquo; '); ?>          
-			    Categories: <?php if (the_category(', ')) the_category(); ?>
-			    <?php if (function_exists('get_the_tags')) the_tags('<br />Tags: ', ', ', ''); ?>  
+				<?php link_pages('<div class="post-page-nav">' . __( "Article Pages", "wptouch" ) . ': ', '</div>', 'number', ' &raquo;', '&laquo; '); ?>          
+			    <?php _e( "Categories", "wptouch" ); ?>: <?php if (the_category(', ')) the_category(); ?>
+			    <?php if (function_exists('get_the_tags')) the_tags('<br />' . __( 'Tags', 'wptouch' ) . ': ', ', ', ''); ?>  
 		    </div>
     
 <!-- Mail and Bookmark code -->	
@@ -78,11 +78,11 @@ bloginfo('name'); ?>- <?php the_title();?>&body=Check out this post: <?php the_p
 <!-- Dynamic test for what page this is. A little redundant, but so what? -->
 
 	<?php global $is_ajax; if (($is_ajax) && !is_search()) { ?>
-		<div class="result-text">No more entries to display.</div>
+		<div class="result-text"><?php _e( "No more entries to display.", "wptouch" ); ?></div>
 			<?php } elseif (is_search() && ($is_ajax)) { ?>
-		<div class="result-text">No more search results to display.</div>
+		<div class="result-text"><?php _e( "No more search results to display.", "wptouch" ); ?></div>
 			<?php } elseif (is_search()) { ?>
-		<div class="result-text">No search results results found. Try another query.</div>
+		<div class="result-text"><?php _e( "No search results results found. Try another query.", "wptouch" ); ?></div>
 			<?php } else { ?>
 		<div class="post"><img src="<?php bloginfo('template_directory'); ?>/images/404.jpg" alt="404 Not Found" /></div>
 			<?php } ?>
