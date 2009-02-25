@@ -6,44 +6,44 @@
 <div class="wptouch-itemrow">
 	<div class="wptouch-item-desc">
 	
-	<h2>Plugin Support &amp; Compatibility</h2>
+	<h2><?php _e( "Plugin Support &amp; Compatibility", "wptouch" ); ?></h2>
 	<p>
 		<strong>
 		<?php
 			if ($version > 2.71) {
-				echo 'WordPress installed: ' . get_bloginfo('version') . '<br />(Untested)';
+				echo __( 'WordPress installed: ', 'wptouch' ) . get_bloginfo('version') . '<br />(' . __( 'Untested', 'wptouch' ) . ')';
 			} elseif ($version >= 2.5) {
-				echo 'WordPress installed: ' . get_bloginfo('version') . '<br />(Fully Supported)';
+				echo __('WordPress installed: ', 'wptouch' ) . get_bloginfo('version') . '<br />(' . __( 'Fully Supported', 'wptouch' ) . ')';
 			} elseif ($version >= 2.3) {
-				echo 'WordPress installed: ' . get_bloginfo('version') . '<br />(Supported, Upgrade Recommended)';
+				echo __( 'WordPress installed: ', 'wptouch' ) . get_bloginfo('version') . '<br />(' . __( 'Supported, Upgrade Recommended', 'wptouch' ) . ')';
 			} else {
-				echo 'WordPress installed: ' . get_bloginfo('version') . '<br />(NOT Supported! Upgrade <u>Required</u>)';
+				echo __( 'WordPress installed: ', 'wptouch' ) . get_bloginfo('version') . '<br />(' . __( 'NOT Supported! Upgrade', 'wptouch' ) . ' <u>' . __( 'Required', 'wptouch' ) . '</u>)';
 			} 
 		?>	
 		</strong>
 	</p>
-	<p>Here you'll find info on additional WPtouch features and their requirements, including those activated with companion plugins.</p>
-	<p>For further documentation visit <a href="http://www.bravenewcode.com/wptouch/">BraveNewCode</a>.</p>
-	<p>To report an incompatible plugin, send an e-mail to <a href="mailto:wptouch@bravenewcode.com">wptouch@bravenewcode.com</a></p>
+	<p><?php _e( "Here you'll find info on additional WPtouch features and their requirements, including those activated with companion plugins.", "wptouch" ); ?></p>
+	<p><?php _e( "For further documentation visit" ); ?> <a href="http://www.bravenewcode.com/wptouch/"><?php _e( "BraveNewCode" ); ?></a>.</p>
+	<p><?php _e( "To report an incompatible plugin, send an e-mail to" ); ?> <a href="mailto:wptouch@bravenewcode.com">wptouch@bravenewcode.com</a></p>
 </div>
 		
 <div class="wptouch-item-content-box1 wptouch-admin-plugins">
-	<h4>WordPress Built-in Functions Support</h4>
+	<h4><?php _e( "WordPress Built-in Functions Support", "wptouch" ); ?></h4>
 
 	<!-- wp tag cloud -->
 	<?php if (function_exists('wp_tag_cloud')) { ?>
 	<div class="all-good">
-		<img src="<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/images/good.png" alt="" /> The tag cloud for WordPress will automatically show on a page called 'Archives' if you have one.
+		<img src="<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/images/good.png" alt="" /> <?php _e( "The tag cloud for WordPress will automatically show on a page called 'Archives' if you have one.", "wptouch" ); ?>
 	</div>
 	<?php } else { ?>
 	<div class="too-bad">
-		<img src="<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/images/bad.png" alt="" /> Since you're using a pre-tag version of WordPress, your categories will be listed on a page called 'Archives', if you have it.
+		<img src="<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/images/bad.png" alt="" /> <?php _e( "Since you're using a pre-tag version of WordPress, your categories will be listed on a page called 'Archives', if you have it.", "wptouch" ); ?>
 	</div>
 	<?php } ?>
 			   
 	<br /><br />
 						   
-	<h4>WordPress Pages &amp; Feature Support</h4>
+	<h4><?php _e( "WordPress Pages &amp; Feature Support", "wptouch" ); ?></h4>
  
 	<?php
 	  //Start Pages support checks here

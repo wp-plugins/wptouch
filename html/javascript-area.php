@@ -17,7 +17,7 @@
 	<div class="wptouch-item-content-box1">
 		<div class="wptouch-checkbox-row">
 			<input type="checkbox" name="enable-cats-button" <?php if ( isset( $wptouch_settings['enable-cats-button']) && $wptouch_settings['enable-cats-button'] == 1) echo('checked'); ?> />
-			<label for="enable-cats-button"> <?php _e( "Enable Categories In The Header", "wptouch" ); ?> (<small><?php _e "(will add a categories button beside search &amp; menu buttons", "wptouch" ); ?>)</small></label>
+			<label for="enable-cats-button"> <?php _e( "Enable Categories In The Header", "wptouch" ); ?> (<small><?php _e( "will add a categories button beside search &amp; menu buttons", "wptouch" ); ?>)</small></label>
 		</div>
 		<div class="wptouch-checkbox-row">
 			<input type="checkbox" name="enable-login-button" <?php if (isset($wptouch_settings['enable-login-button']) && $wptouch_settings['enable-login-button'] == 1) echo('checked'); ?> />
