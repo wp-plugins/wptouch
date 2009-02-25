@@ -36,7 +36,6 @@ function wptouch_delete_icon( $icon ) {
 }
 
 function wptouch_init() {
-	
 	if ( isset( $_GET['delete_icon'] ) ) {
 		wptouch_delete_icon( $_GET['delete_icon'] );
 		
@@ -147,12 +146,14 @@ function bnc_filter_iphone() {
 
 	$value = ini_get( 'zlib.output_compression' );
    if ($this->desired_view == 'mobile' && !$this->output_started && !$value) {
-	if (substr_count($_SERVER['HTTP_ACCEPT_ENCODING'], 'gzip') && isset($settings['enable-gzip']) && $settings['enable-gzip']) {
-		@ob_start("ob_gzhandler");
-	} else {
-		@ob_start();
-	}
-	$this->output_started = true;
+   	
+		if (substr_count($_SERVER['HTTP_ACCEPT_ENCODING'], 'gzip') && isset($settings['enable-gzip']) && $settings['enable-gzip']) {
+			@ob_start("ob_gzhandler");
+		} else {
+			@ob_start();
+		}
+		
+		$this->output_started = true;
    }
 }
 
@@ -218,7 +219,7 @@ function theme_root_uri($url) {
 }
   
 global $wptouch_plugin;
-	$wptouch_plugin = new WPtouchPlugin();
+	$wptouch_plugin = &new WPtouchPlugin();
 
 
 function bnc_get_page_id_with_name($name) {
