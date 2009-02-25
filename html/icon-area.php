@@ -3,11 +3,11 @@
 
 <div class="wptouch-itemrow">
 	<div class="wptouch-item-desc">		
-		<h2>Available Icons</h2>
+		<h2><?php _e( "Available Icons", "wptouch" ); ?></h2>
 			
-		<p>You can select which icons will be displayed beside pages enabled below</p>
-		<p>To add icons to the pool, simply upload a 60x60 .png, .jpeg or .gif from your computer.
-		<p>These files will be stored in <strong>wp-content/uploads/wptouch/custom-icons/</strong>.</p>
+		<p><?php _e( "You can select which icons will be displayed beside pages enabled below", "wptouch" ); ?></p>
+		<p><?php _e( "To add icons to the pool, simply upload a 60x60 .png, .jpeg or .gif from your computer.", "wptouch" ); ?></p>
+		<p><?php _e( printf( "These files will be stored in %swp-content/uploads/wptouch/custom-icons/%s.", "<strong>", "</strong>" ), "wptouch" ); ?></p>
 				
 		<div id="upload_response"></div>
 		<div id="upload_progress" style="display: none;">
@@ -28,7 +28,7 @@
 			
 		<div id="upload_button"></div> 
 			
-		<p>In the icon-pool folder is a <strong><a href="<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/images/icon-pool/template.psd">.psd template</a></strong> which you can use to build icons yourself.</p>
+		<p><?php _e( "In the icon-pool folder is a ", "wptouch" ); ?><strong><a href="<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/images/icon-pool/template.psd"><?php _e( ".psd template", "wptouch"); ?></a></strong> <?php _e( "which you can use to build icons yourself.", "wptouch" ); ?></p>
 	</div>
 		
 	<div class="wptouch-item-content-box1">	
@@ -40,19 +40,19 @@
 
 <div class="wptouch-itemrow">
 	<div class="wptouch-item-desc">
-		<h2>Logo/Bookmark<br />Page &amp; Menu Icons</h2>
+		<h2><?php _e( "Logo/Bookmark", "wptouch" ); ?><br /><?php _e( "Page &amp; Menu Icons", "wptouch" ); ?></h2>
 		
-		<p>Choose the logo displayed in the header (also your bookmark icon), and the pages you want included in the WPtouch drop-down menu. <strong>Remember, only those checked will be shown.</strong></p>
+		<p><?php _e( "Choose the logo displayed in the header (also your bookmark icon), and the pages you want included in the WPtouch drop-down menu.", "wptouch" ); ?> <strong><?php _e( "Remember, only those checked will be shown.", "wptouch" ); ?></strong></p>
 		
-		<p>Next, select the icons from the drop lists that you want to pair with each page/menu item.</p>
+		<p><?php _e( "Next, select the icons from the drop lists that you want to pair with each page/menu item.", "wptouch" ); ?></p>
 		
-		<p>Lastly, you can decide if pages are listed by the page order in WordPress, or by name (default).</p>
+		<p><?php _e( "Lastly, you can decide if pages are listed by the page order in WordPress, or by name (default).", "wptouch" ); ?></p>
 	</div>
 		
 	<div class="wptouch-item-content-box1">
 		<div class="wptouch-select-row">
 			<div class="wptouch-select-left">
-				<?php _e( "Logo &amp; Home Screen Bookmark Icon", "wptouch"); ?>
+				<?php _e( "Logo &amp; Home Screen Bookmark Icon", "wptouch" ); ?>
 			</div>
 			<div class="wptouch-select-right">
 				<select name="enable_main_title">

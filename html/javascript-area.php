@@ -2,14 +2,14 @@
 
 <div class="wptouch-itemrow">
 	<div class="wptouch-item-desc">
-	<h2>Advanced Options</h2>
-		<p>Choose to enable/disable advanced features &amp; options available for WPtouch.</p>
+	<h2><?php _e( "Advanced Options", "wptouch" ); ?></h2>
+		<p><?php _e( "Choose to enable/disable advanced features &amp; options available for WPtouch.", "wptouch"); ?></p>
 	
-		<p><strong>When advanced javascript is unchecked:</strong>
+		<p><strong><?php _e( "When advanced javascript is unchecked:", "wptouch" ); ?></strong>
 			<ul class="wptouch-small-menu">
-				<li>Site is faster on 3G/EDGE connections</li>
-				<li>Ajax &amp; jQuery are not used for comments, entries, excerpts</li>
-				<li>May solve javascript collisions where WPtouch features don't work</li>
+				<li><?php _e( "Site is faster on 3G/EDGE connections", "wptouch" ); ?></li>
+				<li><?php _e( "Ajax &amp; jQuery are not used for comments, entries, excerpts", "wptouch" ); ?></li>
+				<li><?php _e( "May solve javascript collisions where WPtouch features don't work", "wptouch" ); ?></li>
 			</ul>
 		</p>
 	</div>
@@ -17,36 +17,36 @@
 	<div class="wptouch-item-content-box1">
 		<div class="wptouch-checkbox-row">
 			<input type="checkbox" name="enable-cats-button" <?php if ( isset( $wptouch_settings['enable-cats-button']) && $wptouch_settings['enable-cats-button'] == 1) echo('checked'); ?> />
-			<label for="enable-cats-button"> Enable Categories In The Header <small>(will add a categories button beside search &amp; menu buttons)</small></label>
+			<label for="enable-cats-button"> <?php _e( "Enable Categories In The Header", "wptouch" ); ?> (<small><?php _e "(will add a categories button beside search &amp; menu buttons", "wptouch" ); ?>)</small></label>
 		</div>
 		<div class="wptouch-checkbox-row">
 			<input type="checkbox" name="enable-login-button" <?php if (isset($wptouch_settings['enable-login-button']) && $wptouch_settings['enable-login-button'] == 1) echo('checked'); ?> />
-			<label for="enable-login-button"> Enable Login From The Header <small>(will add a login button beside search &amp; menu buttons)</small></label>
+			<label for="enable-login-button"> <?php _e( "Enable Login From The Header", "wptouch" ); ?> <small>(<?php _e( "will add a login button beside search &amp; menu buttons", "wptouch" ); ?>)</small></label>
 		</div>
 		
 		<div class="wptouch-checkbox-row">
 			<input type="checkbox" name="enable-js-header" <?php if (isset($wptouch_settings['enable-js-header']) && $wptouch_settings['enable-js-header'] == 1) echo('checked'); ?> />
-			<label for="enable-js-header"> Use Advanced <a href="http://www.jquery.com/" target="_blank">jQuery</a> Javascript Effects<small>(ajax entries &amp; comments)</small></label>
+			<label for="enable-js-header"> <?php _e( "Use Advanced", "wptouch" ); ?> <a href="http://www.jquery.com/" target="_blank"><?php _e( "jQuery", "wptouch" ); ?></a> <?php _e( "Javascript Effects", "wptouch" ); ?><small>(<?php _e( "ajax entries &amp; comments", "wptouch" ); ?>)</small></label>
 		</div>
 		
 		<div class="wptouch-checkbox-row">
 			<input type="checkbox" name="enable-gravatars" <?php if (isset($wptouch_settings['enable-gravatars']) && $wptouch_settings['enable-gravatars'] == 1) echo('checked'); ?> />
-			<label for="enable-gravatars"> Enable Gravatars in Comments</label>
+			<label for="enable-gravatars"> <?php _e( "Enable Gravatars in Comments", "wptouch" ); ?></label>
 		</div>
 		
 		<div class="wptouch-checkbox-row">
 			<input type="checkbox" name="enable-page-coms" <?php if (isset($wptouch_settings['enable-page-coms']) && $wptouch_settings['enable-page-coms'] == 1) echo('checked'); ?> />
-			<label for="enable-page-coms"> Enable Comments For Pages <small>(will add the comment form to <strong>all</strong> pages by default)</small></label>
+			<label for="enable-page-coms"> <?php _e( "Enable Comments For Pages", "wptouch" ); ?> <small>(<?php _e( "will add the comment form to", "wptouch" ); ?> <strong><?php _e( "all", "wptouch" ); ?></strong> <?php _e( "pages by default", "wptouch" ); ?>)</small></label>
 		</div>
 		
 		<div class="wptouch-checkbox-row">
 			<input type="checkbox" name="enable-regular-default" <?php if (isset($wptouch_settings['enable-regular-default']) && $wptouch_settings['enable-regular-default'] == 1) echo('checked'); ?> />
-			<label for="enable-regular-default"> First-time mobile users will see regular (non-mobile) site</label>
+			<label for="enable-regular-default"> <?php _e( "First-time mobile users will see regular (non-mobile) site", "wptouch" ); ?></label>
 		</div>			
 		
 		<div class="wptouch-checkbox-row">
 			<input type="checkbox" name="enable-gzip" <?php if (isset($wptouch_settings['enable-gzip']) && $wptouch_settings['enable-gzip'] == 1) echo('checked'); ?> />
-			<label for="enable-gzip"> Enable GZIP compression <small>(speeds up page loads, may conflict with other plugins)</small></label>
+			<label for="enable-gzip"> <?php _e( "Enable GZIP compression", "wptouch" ); ?> <small>(<?php _e( "speeds up page loads, may conflict with other plugins", "wptouch" ); ?>)</small></label>
 		</div>			
 	</div>
 	<div class="wptouch-clearer"></div>
