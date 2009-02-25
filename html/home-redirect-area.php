@@ -11,7 +11,6 @@
 		</div>
 	
 		<div class="wptouch-select-row">
-			<?php $sel = bnc_get_page_id_with_name( bnc_get_selected_home_page() ); ?>
 			<div class="wptouch-select-left">
 				<label for="home-page">Override Home Page</label>
 			</div>

@@ -29,7 +29,8 @@ $bnc_wptouch_version = '1.8';
 
 require_once( 'include/plugin.php' );
 
-//update_option( 'bnc_iphone_pages', '' );
+// uncomment this line to wipe the settings clean
+// update_option( 'bnc_iphone_pages', '' );
 
 global $wptouch_defaults;
 $wptouch_defaults = array(
@@ -91,8 +92,7 @@ function wptouch_content_filter( $content ) {
 	}
 }
 
-add_filter('init', 'wptouch_init');
-
+	add_filter('init', 'wptouch_init');
 
 	function WPtouch($before = '', $after = '') {
 		global $bnc_wptouch_version;
@@ -244,19 +244,26 @@ class WPtouchPlugin {
 global $wptouch_plugin;
 $wptouch_plugin = &new WPtouchPlugin();
 
+/*
 
-function bnc_get_page_id_with_name($name) {
+function bnc_get_page_id_with_name ($name ) {
    global $table_prefix;
+   global $wpdb;
+   
+   $sql = 'select * from ' . $table_prefix . 'posts where post_title = \'' . $name . '\';';
+   
    if (mysql_connect(DB_HOST, DB_USER, DB_PASSWORD)) {
       if (mysql_select_db(DB_NAME)) {
-         $sql = 'select id from ' . $table_prefix . 'posts where post_title = \'' . $name . '\';';
+         $sql = 'select * from ' . $table_prefix . 'posts where post_title = \'' . $name . '\';';
          $result = mysql_query($sql);
          while ($row = mysql_fetch_assoc($result)) {
-            print_r($result);
+            print_r($row);
          }
       }
    }
 }
+
+*/
 
 function bnc_is_iphone() {
 	global $wptouch_plugin;
@@ -314,12 +321,7 @@ function bnc_wp_touch_get_menu_pages() {
 	
 	bnc_validate_wptouch_settings( $v );
 
-	if ($v != null) {
-		return $v;
-	} else {
-		$v = array();
-		return $v;
-	}
+	return $v;
 }
 
 function bnc_get_selected_home_page() {
@@ -333,7 +335,6 @@ function wptouch_get_stats() {
 		echo stripslashes($options['statistics']);
 	}
 }
-   
   
 function bnc_get_title_image() {
 	$ids = bnc_wp_touch_get_menu_pages();
@@ -410,6 +411,8 @@ function bnc_is_email_enabled() {
   
 function bnc_wp_touch_get_pages() {
 	global $table_prefix;
+	global $wpdb;
+	
 	$ids = bnc_wp_touch_get_menu_pages();
 	$a = array();
 	$keys = array();
@@ -427,24 +430,18 @@ function bnc_wp_touch_get_pages() {
 	 
 	$menu_order = array(); 
 	$query = "select * from {$table_prefix}posts where ID in (" . implode(',', $keys) . ") order by post_title asc";
-	$con = @mysql_connect(DB_HOST, DB_USER, DB_PASSWORD);
-	$inc = 0;
-	if ($con) {
-		if (@mysql_select_db(DB_NAME, $con)) {
-			$result = @mysql_query($query);
-			while ($row = @mysql_fetch_assoc($result)) {
-				//print_r($row);
-				$row['icon'] = $ids[$row['ID']];
-				$a[$row['ID']] = $row;
-				if (isset($menu_order[$row['menu_order']])) {
-					$menu_order[$row['menu_order']*100 + $inc] = $row;
-				} else {
-					$menu_order[$row['menu_order']*100] = $row;
-				}
-				$inc = $inc + 1;
-			}
+	$results = $wpdb->get_results( $query, ARRAY_A );
+
+	foreach ( $results as $row ) {
+		$row['icon'] = $ids[$row['ID']];
+		$a[$row['ID']] = $row;
+		if (isset($menu_order[$row['menu_order']])) {
+			$menu_order[$row['menu_order']*100 + $inc] = $row;
+		} else {
+			$menu_order[$row['menu_order']*100] = $row;
 		}
-	} 
+		$inc = $inc + 1;
+	}
 
 	if (isset($ids['sort-order']) && $ids['sort-order'] == 'page') {
 		asort($menu_order);
