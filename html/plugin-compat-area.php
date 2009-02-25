@@ -51,10 +51,10 @@
 	  //WordPress Links Page Support
 	  $links_page_check = new WP_Query('pagename=links');
 	  if ($links_page_check->post->ID) {
-		  echo '<div class="all-good"><img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/good.png" alt="" /> All of your WP links will automatically show on your page called \'Links\'.</div>';
+		  echo '<div class="all-good"><img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/good.png" alt="" /> ' . __( "All of your WP links will automatically show on your page called 'Links'.", "wptouch" ) . '</div>';
 	  } else {
 		  
-		  echo '<div class="too-bad"><img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/bad.png" alt="" /> If you create a page called \'Links\', all your WP links would display in <em>WPtouch</em> style.</div>';
+		  echo '<div class="too-bad"><img src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/bad.png" alt="" /> ' . __( "If you create a page called 'Links', all your WP links would display in <em>WPtouch</em> style.", "wptouch" ) . '</div>';
 	  }
 ?>
 						
