@@ -22,9 +22,9 @@
    <div id="wptouch-news-donate">
 	  <h3><?php _e( "Donate To WPtouch", "wptouch" ); ?></h3> 
 	  
-	  <?php _e( sprintf( "WPtouch represents hundreds of hours of development work. If you like the project and want to see it continue, %splease consider donating to WPtouch%s.", '<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=paypal%40bravenewcode%2ecom&amp;item_name=WPtouch%20Beer%20Fund&amp;no_shipping=1&amp;tax=0&amp;currency_code=CAD&amp;lc=CA&amp;bn=PP%2dDonationsBF&amp;charset=UTF%2d8">', '</a>' ), "wptouch" ); ?><br /><br />
+	  <?php  sprintf( _e( "WPtouch represents hundreds of hours of development work. If you like the project and want to see it continue, %splease consider donating to WPtouch%s.", "wptouch"), '<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=paypal%40bravenewcode%2ecom&amp;item_name=WPtouch%20Beer%20Fund&amp;no_shipping=1&amp;tax=0&amp;currency_code=CAD&amp;lc=CA&amp;bn=PP%2dDonationsBF&amp;charset=UTF%2d8">', '</a>' ); ?><br /><br />
 	  
-	  <?php _e( sprintf( "Everyone who donates will be added to our WPtouch friends and family listing on %sbravenewcode.com/wptouch%s, in appreciation for the support.", '<a href="http://www.bravenewcode.com/wptouch">', '</a>' ), "wptouch" ); ?>
+	  <?php sprintf( _e( "Everyone who donates will be added to our WPtouch friends and family listing on %sbravenewcode.com/wptouch%s, in appreciation for the support.", "wptouch"), '<a href="http://www.bravenewcode.com/wptouch">', '</a>' ); ?>
    </div>
 	
 	<div class="wptouch-clearer"></div>

@@ -1,12 +1,12 @@
 <?php
 // Do not delete these lines***********************
 if ('comments.php' == basename($_SERVER['SCRIPT_FILENAME']))
-	die('Please do not load this page directly. Thanks!');
+	die( __('Please do not load this page directly. Thanks!', 'wptouch') );
 		if (!empty($post->post_password)) {
 			// if there's a password
 			if ($_COOKIE['wp-postpass_' . COOKIEHASH] != $post->post_password) {
 			// and it doesn't match the cookie ?>	
-		<p class="nocomments">This post is password protected. Enter the password to view comments.<p>
+		<p class="nocomments"><?php _e('This post is password protected. Enter the password to view comments.', 'wptouch'); ?><p>
 <?php return; 	} }
 /* This variable is for alternating comment background */
 $oddcomment = 'alt'; 
@@ -15,7 +15,7 @@ $oddcomment = 'alt';
 <!-- You can start editing below here. but make a backup first!  -->
 
 <h3 id="comments"><?php
-  comments_number('No Comments', '1 Comment', '% Comments'); ?></h3>
+  comments_number( __('No Comments', 'wptouch'), __('1 Comment', 'wptouch'), __('% Comments', 'wptouch') ); ?></h3>
 
 <div id="comment_wrapper">
 	<ol class="commentlist" id="commentlist">
@@ -25,7 +25,7 @@ $oddcomment = 'alt';
 					<?php if (get_comment_type() == "comment") { ?>
 					<li class="<?php  echo $oddcomment; ?>" id="comment-<?php comment_ID(); ?>">
 					<?php  if ($comment->comment_approved == '0') : ?>
-					<div id="preview"><h2>Preview only: (moderation required)</h2></div>
+					<div id="preview"><h2><?php _e( 'Preview only: (moderation required)', 'wptouch'); ?></h2></div>
 					<?php endif; ?>
 
 	<div class="comwrap">
@@ -68,7 +68,7 @@ $oddcomment = 'alt';
 	  <!-- If comments are closed. -->
 	  <li style="display:none"></li>
 	  </ol>
-	  <h3 class="closed">Comments are closed on this post.</h3>
+	  <h3 class="closed"><?php _e( 'Comments are closed on this post.', 'wptouch' ); ?></h3>
   
   	<?php endif; ?><!--end comment status-->
   <?php endif; ?>
@@ -79,7 +79,7 @@ $oddcomment = 'alt';
   
 		<?php if (get_option('comment_registration') && !$user_ID) : ?>
 		<center>
-		<h1>You must <a href="<?php echo get_option('url'); ?>/wp-login.php">login</a> or <a href="<?php echo get_option('url'); ?>/wp-register.php">register</a> to comment.</h1>
+		<h1><?php sprintf( __( 'You must %slogin</a> or %sregister</a> to comment', 'wptouch' ), '<a href="' . get_option('url') . '/wp-login.php">', '<a href="' . get_option('url') . '"/wp-register.php">') ; ?></h1>
 		</center>
 
 <?php else : ?>
@@ -101,17 +101,17 @@ $oddcomment = 'alt';
 		<h3 id="respond">Leave A Comment</h3>
 		<p style="font-size:13px">
 		<input type="text" name="author" id="author" value="<?php echo $comment_author; ?>" size="22" tabindex="1" />
-		<label for="author"><small>Name <?php if ($req) echo "*"; ?></small></label>
+		<label for="author"><small><?php _e( 'Name', 'wptouch' ); ?> <?php if ($req) echo "*"; ?></small></label>
 		</p>
 	
 		<p style="font-size:13px">
 		<input type="text" name="email" id="email" value="<?php echo $comment_author_email; ?>" size="22" tabindex="2" />
-		<label for="email"><small>Mail (unpublished) <?php if ($req) echo "*"; ?></small></label>
+		<label for="email"><small><?php _e( 'Mail (unpublished)', 'wptouch' ); ?> <?php if ($req) echo "*"; ?></small></label>
 		</p>
 	
 		<p style="font-size:13px">
 		<input type="text" name="url" id="url" value="<?php echo $comment_author_url; ?>" size="22" tabindex="3" />
-		<label for="url"><small>Website</small></label>
+		<label for="url"><small><?php _e( 'Website', 'wptouch' ); ?></small></label>
 		</p>
 
 <?php endif; ?>

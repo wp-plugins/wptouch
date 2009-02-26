@@ -203,7 +203,7 @@ We've commented below to let you know what works what, so if you do go messing a
 
 	<?php if (false && function_exists('bnc_is_iphone') && !bnc_is_iphone()) { ?>
 		<div class="content post">
-		<a href="#" class="h2">Warning</a>
+		<a href="#" class="h2"><?php _e( 'Warning', 'wptouch' ); ?></a>
 			<div class="mainentry">
 			<?php _e( "Sorry, this theme is only meant for use with WordPress on Apple's iPhone and iPod Touch.", "wptouch" ); ?>
 			</div>

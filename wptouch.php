@@ -274,12 +274,14 @@ function bnc_is_iphone() {
 function wptouch_switch() {
 	global $wptouch_plugin;
 	if ($wptouch_plugin->desired_view == 'normal') {
-		echo '<div style="width: auto;height: 48px;padding-top:17px;padding-bottom:15px;font-size: x-large;font-weight: bold;background: url(' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/switch-bg.png) repeat-x 0 0;margin:0px;border-top: 1px solid #999;border-bottom: 2px solid #999;text-shadow: #e6e6e6 3px 3px 1px;" id="switch-footer-links">View ' . get_bloginfo('title') . '\'s <a href="' . get_bloginfo('siteurl') . '/?bnc_view=mobile">Mobile Theme</a></div>';
+		echo '<div style="width: auto;height: 48px;padding-top:17px;padding-bottom:15px;font-size: x-large;font-weight: bold;background: url(' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/switch-bg.png) repeat-x 0 0;margin:0px;border-top: 1px solid #999;border-bottom: 2px solid #999;text-shadow: #e6e6e6 3px 3px 1px;" id="switch-footer-links">';
+		echo sprintf( __( 'View %s\'s', "wptouch" ), get_bloginfo('title') ) . '<a href="' . get_bloginfo('siteurl') . '/?bnc_view=mobile">' . __( "Mobile Theme", "wptouch" ) . '</a>';
+		echo '</div>';
 	}
 }
   
 function bnc_options_menu() {
-	add_options_page('WPtouch Theme', 'WPtouch', 9, __FILE__, bnc_wp_touch_page);
+	add_options_page( __( 'WPtouch Theme', 'wptouch' ), 'WPtouch', 9, __FILE__, bnc_wp_touch_page);
 }
 
 function bnc_get_ordered_cat_list() {
@@ -482,10 +484,10 @@ function bnc_wp_touch_page() {
 	if (isset($_POST['submit'])) {
 		echo('<div class="wrap"><div id="wptouch-theme">');
 		echo('<div id="wptouchupdated">' . __( "Your new WPtouch settings were saved.", "wptouch" ) . '</div>');
-		echo('<div id="wptouch-title">' . WPtouch('<div class="header-wptouch-version"> This is ','</div>') . '</div>');
+		echo('<div id="wptouch-title">' . WPtouch('<div class="header-wptouch-version"> ' . __( "This is", "wptouch" ) . ' ','</div>') . '</div>');
 	} else {
 		echo('<div class="wrap"><div id="wptouch-theme">');
-		echo('<div id="wptouch-title">' . WPtouch('<div class="header-wptouch-version"> This is ','</div>') . '</div>');
+		echo('<div id="wptouch-title">' . WPtouch('<div class="header-wptouch-version"> ' . __( "This is", "wptouch" ) . ' ','</div>') . '</div>');
 	}
 ?>
 

@@ -17,10 +17,10 @@ $comment_post_ID = (int)$_GET['comment_post_ID'];
 $post_status = $wpdb->get_var("SELECT comment_status FROM $wpdb->posts WHERE ID = '$comment_post_ID'");
 if (empty($post_status)) {
 do_action('comment_id_not_found', $comment_post_ID);
-fail('The post you are trying to comment on does not curently exist in the database.');
+fail( __('The post you are trying to comment on does not curently exist in the database.', 'wptouch') );
 } elseif ('closed' == $post_status) {
 do_action('comment_closed', $comment_post_ID);
-fail(__('Sorry, comments are closed for this item.'));
+fail(__('Sorry, comments are closed for this item.', 'wptouch'));
 }
 $comment_author = trim($_GET['author']);
 $comment_author_email = trim($_GET['email']);
@@ -34,16 +34,16 @@ $comment_author_email = addslashes($user_email);
 $comment_author_url = addslashes($user_url);
 else : if 
 (get_option('comment_registration'))
-fail(__('Sorry, you must be logged in to post a comment.'));
+fail(__('Sorry, you must be logged in to post a comment.', 'wptouch'));
 endif;
 $comment_type = '';
 if (get_settings('require_name_email') && !$user_ID) {
 if (6 > strlen($comment_author_email) || '' == $comment_author)
-fail(__('Error: please fill the required fields (name, email).'));
+fail(__('Error: please fill the required fields (name, email).', 'wptouch'));
 elseif (!is_email($comment_author_email))
-fail(__('Error: please enter a valid email address.')); }
+fail(__('Error: please enter a valid email address.', 'wptouch')); }
 if ('' == $comment_content)
-fail(__('Error: please type a comment.'));
+fail(__('Error: please type a comment.', 'wptouch'));
 $commentdata = compact('comment_post_ID', 'comment_author', 'comment_author_email', 'comment_author_url', 'comment_content', 'comment_type', 'user_ID');
 $new_comment_ID = wp_new_comment($commentdata);
 if (!$user_ID) : 

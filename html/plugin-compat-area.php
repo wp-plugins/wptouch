@@ -23,8 +23,8 @@
 		</strong>
 	</p>
 	<p><?php _e( "Here you'll find info on additional WPtouch features and their requirements, including those activated with companion plugins.", "wptouch" ); ?></p>
-	<p><?php _e( "For further documentation visit" ); ?> <a href="http://www.bravenewcode.com/wptouch/"><?php _e( "BraveNewCode" ); ?></a>.</p>
-	<p><?php _e( "To report an incompatible plugin, send an e-mail to" ); ?> <a href="mailto:wptouch@bravenewcode.com">wptouch@bravenewcode.com</a></p>
+	<p><?php _e( "For further documentation visit" ); ?> <a href="http://www.bravenewcode.com/wptouch/"><?php _e( "BraveNewCode", "wptouch" ); ?></a>.</p>
+	<p><?php _e( "To report an incompatible plugin, send an e-mail to", "wptouch" ); ?> <a href="mailto:wptouch@bravenewcode.com">wptouch@bravenewcode.com</a></p>
 </div>
 		
 <div class="wptouch-item-content-box1 wptouch-admin-plugins">
@@ -94,7 +94,7 @@
 			<img src="<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/images/good.png" alt="" />  <?php _e( 'Cool! <a href="http://wordpress.org/extend/plugins/peters-custom-anti-spam-image/" target="_blank">Peter\'s Custom Anti-Spam</a>: Your commentform supports it.', 'wptouch'); ?></div>
 	<?php } else { ?>
 		<div class="sort-of">
-			<img src="<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/images/sortof.png" alt="" /> <?php _e( 'You don't have <a href="http://wordpress.org/extend/plugins/peters-custom-anti-spam-image/" target="_blank">Peter\'s Custom Anti-Spam</a> installed (Your commentform supports it).', 'wptouch' ); ?></div>
+			<img src="<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/images/sortof.png" alt="" /> <?php _e( 'You don\'t have <a href="http://wordpress.org/extend/plugins/peters-custom-anti-spam-image/" target="_blank">Peter\'s Custom Anti-Spam</a> installed (Your commentform supports it).', 'wptouch' ); ?></div>
 	<?php } ?>
 
 

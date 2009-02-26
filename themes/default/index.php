@@ -18,7 +18,7 @@ Here we're making sure that each ajax div will have a unique ID.  -->
 		<?php global $is_ajax; if ($is_ajax) { ?>
 			<!--Ajax? Do nothing-->
 				<?php } elseif (is_archive()) { ?>
-			<div class="result-text">Browsing <?php if (is_category()) { ?>
+			<div class="result-text"><?php _e( 'Browsing', 'wptouch' ); ?> <?php if (is_category()) { ?>
 				<?php _e( "the category", "wptouch" ); ?> &lsquo;<?php echo single_cat_title(); ?>&rsquo;
 				
 				<?php } elseif (is_tag()) { ?>
@@ -163,12 +163,12 @@ Here we're making sure that each ajax div will have a unique ID.  -->
 
 <a class="h2" href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php if (function_exists('the_title_attribute')) the_title_attribute(); else the_title(); ?>"><?php if (function_exists('bnc_the_title')) bnc_the_title(); else the_title(); ?></a>
 			<div class="post-author">
-			<?php if (bnc_show_author()) { ?><span class="lead"><?php _e("Author:", "wptouch"); ?></span> <?php the_author(); ?><br /><?php } ?>
+			<?php if (bnc_show_author()) { ?><span class="lead"><?php _e("Author", "wptouch"); ?>:</span> <?php the_author(); ?><br /><?php } ?>
 			<?php if (function_exists('wp_tag_cloud')) { ?>
-			<?php if (bnc_show_categories()) { echo('<span class="lead">Categories:</span> '); the_category(', '); echo('<br />'); } ?> 
-			<?php if (bnc_show_tags() && get_the_tags()) { echo(''); the_tags('<span class="lead">' . __( 'Tags:', 'wptouch' ) . '</span> ', ', ', ''); echo(''); } ?> 
+			<?php if (bnc_show_categories()) { echo('<span class="lead">' . __( 'Categories', 'wptouch' ) . ':</span> '); the_category(', '); echo('<br />'); } ?> 
+			<?php if (bnc_show_tags() && get_the_tags()) { echo(''); the_tags('<span class="lead">' . __( 'Tags', 'wptouch' ) . ':</span> ', ', ', ''); echo(''); } ?> 
 			<?php } else { ?>
-			Filed:<?php the_category(', '); ?><?php } ?>
+			<?php _e( 'Filed', 'wptouch' ); ?>:<?php the_category(', '); ?><?php } ?>
 			</div>	
 			<div class="clearer"></div>	
             <div id="entry-<?php the_ID(); ?>" <?php if (bnc_excerpt_enabled()) { ?>style="display:none"<?php } ?> class="mainentry">
