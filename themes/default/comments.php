@@ -86,7 +86,7 @@ $oddcomment = 'alt';
   <!--  Let's check for advanced JS setting, and if it's enabled do fancy ajax comments -->
   
 	<?php if (!function_exists('cas_register_post') && bnc_is_js_enabled()) { ?>
-	<div id="refresher" style="display:none">&raquo; <a href="javascript:this.location.reload();">Refresh the page</a> to post a new comment.</div>
+	<div id="refresher" style="display:none">&raquo; <a href="javascript:this.location.reload();"><?php _e( "Refresh the page", "wptouch" ); ?></a> <?php _e( "to post a new comment.", "wptouch" ); ?></div>
 	<form id="commentform" action="<?php echo get_option('url'); ?>/wp-comments-post.php" method="post" onsubmit="$wptouch('#loading').fadeIn(100);var list = $wptouch('#commentlist'); var html = list.html(); var param = $wptouch('form').serialize(); $wptouch.ajax({url: '<?php bloginfo('template_directory'); ?>/comments-ajax.php?' + param, success: function(data, status){ list.append(data); commentAdded(); }, type: 'get' }); return false;">
 	<?php } else { ?>
 	<form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" id="commentform">
@@ -94,11 +94,11 @@ $oddcomment = 'alt';
 
 <?php if ($user_ID) : ?>
 
-		<p class="logged"  id="respond">Logged in as <a href="<?php bloginfo('url'); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a>:</p>
+		<p class="logged"  id="respond"><?php _e( "Logged in as", "wptouch" ); ?> <a href="<?php bloginfo('url'); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a>:</p>
 	
 	<?php else : ?>
 	
-		<h3 id="respond">Leave A Comment</h3>
+		<h3 id="respond"><?php _e( "Leave A Comment", "wptouch" ); ?></h3>
 		<p style="font-size:13px">
 		<input type="text" name="author" id="author" value="<?php echo $comment_author; ?>" size="22" tabindex="1" />
 		<label for="author"><small><?php _e( 'Name', 'wptouch' ); ?> <?php if ($req) echo "*"; ?></small></label>

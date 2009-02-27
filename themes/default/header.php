@@ -2,19 +2,20 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head profile="http://gmpg.org/xfn/11">
 <meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
-<title><?php bloginfo('name'); ?></title>
-<meta name="generator" content="WordPress <?php bloginfo('version'); ?>" /> <!-- leave this for stats -->
+<title><?php $str = bnc_get_header_title(); echo stripslashes($str); ?></title>
+<meta name="generator" content="WordPress <?php bloginfo('version'); ?>" />
 <meta name="description" content="<?php bloginfo('description'); ?>" />
 <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php bloginfo('rss2_url'); ?>" />
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 <!-- Strict viewport options to control how the content is shown. Increase the maximum-scale number to allow for zooming if you wish -->
 <meta name="viewport" content="maximum-scale=1.0 width=device-width initial-scale=1.0 user-scalable=no" />
-<!-- This makes the iPhone/iPod touch ask for the same icon the user chooses for a logo to be the bookmark icon as well. -->
+<!--This makes the iPhone/iPod touch ask for the same icon the user chooses for a logo to be the bookmark icon as well. -->
 <link rel="apple-touch-icon" href="<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/images/icon-pool/<?php echo bnc_get_title_image(); ?>"/>
 <!-- (Future Consideration)
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta names="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 -->
+
 <?php wptouch_enqueue(); wp_head(); ?>
 	<?php if (bnc_is_js_enabled()) { ?>
 		<script src="<?php bloginfo('template_directory'); ?>/js/global.js" type="text/javascript" charset="utf-8"></script>
@@ -64,10 +65,10 @@ That said, if you want to get funky with the look of it, you could always change
 
 We've commented below to let you know what works what, so if you do go messing around, you won't break the functionailty of the customization options we've built (hopefully). If you do want to discard them and hard code something yourself, make sure you include that note with your theme. -->
 <div id="menubar">
-<!-- This fetches the admin selection logo icon for the header, which is also the bookmark icon -->
 <div  id="blogtitle">
-<img src="<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/images/icon-pool/<?php echo bnc_get_title_image(); ?>" alt="" /> <a href="<?php bloginfo('siteurl'); ?>">
-<?php $str = bnc_get_header_title(); echo stripslashes($str); ?></a></div>
+<!-- This fetches the admin selection logo icon for the header, which is also the bookmark icon -->
+<img src="<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/images/icon-pool/<?php echo bnc_get_title_image(); ?>" alt="" /> <a href="<?php bloginfo('siteurl'); ?>"><?php $str = bnc_get_header_title(); echo stripslashes($str); ?></a>
+</div>
 </div>
 
 <!-- This checks to see if they have disabled advanced JS and loads it if not. The toggles work with JS different ways, one with prototype/scriptaculous, the other with just the document.getelement routine... -->
@@ -163,7 +164,7 @@ We've commented below to let you know what works what, so if you do go messing a
 
 	<div id="dropmenu" style="display:none">
       
-        <!-- Here's the  drop-down menu. We're checking the pages that are enabled in the admin, and the icons which were assigned to them. We're also checking to see if the user has enabled the RSS< Mail, and/or Home link to be shown in the menu. -->
+        <!-- Here's the drop-down menu. We're checking the pages that are enabled in the admin, and the icons which were assigned to them. We're also checking to see if the user has enabled the RSS< Mail, and/or Home link to be shown in the menu. -->
     
         <div id="dropmenu-inner">
             <ul>
@@ -179,8 +180,6 @@ We've commented below to let you know what works what, so if you do go messing a
             	} else {
             		$image = get_bloginfo('wpurl') . '/wp-content/uploads/wptouch/custom-icons/' . $p['icon'];
             	}
-            	
-            	
 				echo('<li><a href="' . get_permalink($p['ID']) . '"><img src="' . $image . '" />' . $p['post_title'] . '</a></li>'); 
 			} ?>
 		
@@ -214,7 +213,6 @@ We've commented below to let you know what works what, so if you do go messing a
 	<?php die; } ?>
 	
 <!-- This div spacer helps get the alignment are squared up after all the CSS floats -->		
-
 	<div class="post-spacer">&nbsp;</div>
 	
-<!--End of the Header-->
+<!-- End of the Header -->

@@ -5,7 +5,7 @@ If it's ajax, we're not bringing in header.php and footer.php -->
 	<div class="content" id="content<?php echo md5($_SERVER['REQUEST_URI']); ?>">
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 			<div class="post">
-			    <a class="sh2" href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php if (function_exists('the_title_attribute')) the_title_attribute(); else the_title(); ?>"><?php the_title(); ?></a>
+			    <a class="sh2" href="<?php the_permalink() ?>" rel="bookmark" title="<?php _e( "Permanent Link to ", "wptouch" ); ?><?php if (function_exists('the_title_attribute')) the_title_attribute(); else the_title(); ?>"><?php the_title(); ?></a>
 			        <div class="single-post-meta-top"><?php echo get_the_time('M / d / y - g:ia') ?> &rsaquo; <?php the_author() ?><br />
 
 <!-- Let's check for DISQUS... we need to skip to a different div if it's installed and active -->		
@@ -34,9 +34,9 @@ If it's ajax, we're not bringing in header.php and footer.php -->
 <!-- Mail and Bookmark code -->	
 
 	<div class="single-links">
-		<div class="single-bookmark-right"><a href="javascript:$wptouch('#bookmark-box').slideToggle(300);"><img src="<?php bloginfo('template_directory'); ?>/images/bookmarkit.png" class="small" alt="" /> Bookmark It</a></div>
+		<div class="single-bookmark-right"><a href="javascript:$wptouch('#bookmark-box').slideToggle(300);"><img src="<?php bloginfo('template_directory'); ?>/images/bookmarkit.png" class="small" alt="" /> <?php _e( "Bookmark It", "wptouch" ); ?></a></div>
 			<div class="single-mail-left"><a href="mailto:?subject=<?php
-bloginfo('name'); ?>- <?php the_title();?>&body=Check out this post: <?php the_permalink() ?>"><img src="<?php bloginfo('template_directory'); ?>/images/mailit.png" class="small" alt="" /> Mail It</a></div>
+bloginfo('name'); ?>- <?php the_title();?>&body=<?php _e( "Check out this post:", "wptouch" ); ?> <?php the_permalink() ?>"><img src="<?php bloginfo('template_directory'); ?>/images/mailit.png" class="small" alt="" /> <?php _e( "Mail It", "wptouch" ); ?></a></div>
 				<div class="clearer"></div>
 			</div>
 		<div class="post-spacer"></div>
@@ -47,13 +47,13 @@ bloginfo('name'); ?>- <?php the_title();?>&body=Check out this post: <?php the_p
 	<div id="bookmark-box" style="display:none">
 		<ul>
 			<li><a  href="http://del.icio.us/post?url=<?php echo get_permalink()
-?>&title=<?php the_title(); ?>" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/bookmarks/delicious.jpg" alt="" /> Del.icio.us</a></li>
+?>&title=<?php the_title(); ?>" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/bookmarks/delicious.jpg" alt="" /> <?php _e( "Del.icio.us", "wptouch" ); ?></a></li>
 			<li><a href="http://digg.com/submit?phase=2&url=<?php echo get_permalink()
-?>&title=<?php the_title(); ?>" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/bookmarks/digg.jpg" alt="" /> Digg</a></li>
-			<li><a href="http://technorati.com/faves?add=<?php the_permalink() ?>" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/bookmarks/technorati.jpg" alt="" /> Technorati</a></li>
-			<li><a href="http://ma.gnolia.com/bookmarklet/add?url=<?php echo get_permalink() ?>&title=<?php the_title(); ?>" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/bookmarks/magnolia.jpg" alt="" /> Magnolia</a></li>
-			<li><a href="http://www.newsvine.com/_wine/save?popoff=0&u=<?php echo get_permalink() ?>&h=<?php the_title(); ?>" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/bookmarks/newsvine.jpg" target="_blank"> Newsvine</a></li>
-			<li class="noborder"><a href="http://reddit.com/submit?url=<?php echo get_permalink() ?>&title=<?php the_title(); ?>" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/bookmarks/reddit.jpg" alt="" /> Reddit</a></li>
+?>&title=<?php the_title(); ?>" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/bookmarks/digg.jpg" alt="" /> <?php _e( "Digg", "wptouch" ); ?></a></li>
+			<li><a href="http://technorati.com/faves?add=<?php the_permalink() ?>" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/bookmarks/technorati.jpg" alt="" /> <?php _e( "Technorati", "wptouch" ); ?></a></li>
+			<li><a href="http://ma.gnolia.com/bookmarklet/add?url=<?php echo get_permalink() ?>&title=<?php the_title(); ?>" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/bookmarks/magnolia.jpg" alt="" /> <?php _e( "Magnolia", "wptouch" ); ?></a></li>
+			<li><a href="http://www.newsvine.com/_wine/save?popoff=0&u=<?php echo get_permalink() ?>&h=<?php the_title(); ?>" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/bookmarks/newsvine.jpg" target="_blank"> <?php _e( "Newsvine", "wptouch" ); ?></a></li>
+			<li class="noborder"><a href="http://reddit.com/submit?url=<?php echo get_permalink() ?>&title=<?php the_title(); ?>" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/bookmarks/reddit.jpg" alt="" /> <?php _e( "Reddit", "wptouch" ); ?></a></li>
 		</ul>
 	</div>
 
@@ -65,7 +65,6 @@ bloginfo('name'); ?>- <?php the_title();?>&body=Check out this post: <?php the_p
 		<div class="alignright"><?php previous_post_link('%link <img src="' . get_bloginfo('template_directory') . '/images/blue_arrow_r.jpg" alt="" />') ?></div>
 
 <!-- Let's make sure there's no float strangeness happening. Sometimes plugins get funky here. -->
-
 		<div class="clearer"></div>
 	</div>
 

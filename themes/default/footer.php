@@ -15,7 +15,7 @@
 					<a href="<?php bloginfo('wpurl'); ?>/wp-admin/profile.php"><?php _e( "Account Profile", "wptouch" ); ?></a><?php if (!bnc_is_login_button_enabled()) { ?> | <a href="<?php echo wp_logout_url(); ?>"><?php _e( "Logout", "wptouch" ); ?></a><?php } ?>
 				<?php else : ?>
 					<?php if (!bnc_is_login_button_enabled() && get_option('comment_registration') && !$user_ID) { ?>
-						<a href="<?php bloginfo('wpurl'); ?>/wp-login.php">Login to <?php bloginfo('name'); ?></a> | 
+						<a href="<?php bloginfo('wpurl'); ?>/wp-login.php"><?php _e( "Login to", "wptouch" ); ?> <?php bloginfo('name'); ?></a> | 
 					<?php } ?>
 					
 					<?php if (get_option('comment_registration')) { ?>
@@ -23,7 +23,7 @@
 					<?php } ?>
 				<?php  endif; ?></h3></center>
 
-			<h3>View <?php bloginfo('title'); ?>'s <a href="<?php echo bloginfo('home') . '/?bnc_view=normal'; ?>"><?php _e( "Regular Theme", "wptouch" ); ?></a></h3>	
+			<h3><?php _e( "View", "wptouch" ); ?> <?php bloginfo('title'); ?><?php _e( "'s", "wptouch" ); ?> <a href="<?php echo bloginfo('home') . '/?bnc_view=normal'; ?>"><?php _e( "Regular Theme", "wptouch" ); ?></a></h3>	
 
 			<?php _e( "All content Copyright &copy;", "wptouch" ); ?> <?php bloginfo('name'); ?><br />
 			<?php _e( 'Powered by <a href="http://wordpress.org/">WordPress</a> with', 'wptouch' ); ?> <a href="http://bravenewcode.com/wptouch/"><?php WPtouch(); ?></a>

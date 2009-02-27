@@ -91,5 +91,3 @@
 	
 	<div class="wptouch-clearer"></div>
 </div>
-
-
