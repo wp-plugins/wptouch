@@ -1,7 +1,7 @@
 <?php require_once( ABSPATH . '/wp-content/plugins/wptouch/include/icons.php' ); ?>
 <?php global $wptouch_settings; ?>
 
-<div class="wptouch-itemrow">
+<div class="wptouch-itemrow" id="available_icons">
 	<div class="wptouch-item-desc">		
 		<h2><?php _e( "Available Icons", "wptouch" ); ?></h2>
 			

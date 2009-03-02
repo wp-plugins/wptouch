@@ -74,7 +74,7 @@ function wptouch_init() {
 	if ( isset( $_GET['delete_icon'] ) ) {
 		wptouch_delete_icon( $_GET['delete_icon'] );
 		
-		header( 'Location: ' . get_bloginfo('wpurl') . '/wp-admin/options-general.php?page=wptouch/wptouch.php' );
+		header( 'Location: ' . get_bloginfo('wpurl') . '/wp-admin/options-general.php?page=wptouch/wptouch.php#available_icons' );
 		die;
 	}	
 }
