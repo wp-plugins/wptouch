@@ -438,15 +438,17 @@ function bnc_wp_touch_get_pages() {
 	$query = "select * from {$table_prefix}posts where ID in (" . implode(',', $keys) . ") order by post_title asc";
 	$results = $wpdb->get_results( $query, ARRAY_A );
 
-	foreach ( $results as $row ) {
-		$row['icon'] = $ids[$row['ID']];
-		$a[$row['ID']] = $row;
-		if (isset($menu_order[$row['menu_order']])) {
-			$menu_order[$row['menu_order']*100 + $inc] = $row;
-		} else {
-			$menu_order[$row['menu_order']*100] = $row;
+	if ( $results ) {
+		foreach ( $results as $row ) {
+			$row['icon'] = $ids[$row['ID']];
+			$a[$row['ID']] = $row;
+			if (isset($menu_order[$row['menu_order']])) {
+				$menu_order[$row['menu_order']*100 + $inc] = $row;
+			} else {
+				$menu_order[$row['menu_order']*100] = $row;
+			}
+			$inc = $inc + 1;
 		}
-		$inc = $inc + 1;
 	}
 
 	if (isset($ids['sort-order']) && $ids['sort-order'] == 'page') {
