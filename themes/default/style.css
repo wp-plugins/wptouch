@@ -131,6 +131,7 @@ blockquote {
 	height: 35px;
 	padding-top: 10px;
 	padding-left: 10px;
+	display: block;
 }
 
 #blogtitle a {
@@ -141,7 +142,6 @@ blockquote {
 	margin-right: 5px;
 	max-width: 30px;
 	-webkit-border-radius: 4px;
-	vertical-align: top;
 	text-shadow: #999 3px 3px 2px;
 	bottom: 4px;
 	float: left;
@@ -195,23 +195,24 @@ blockquote {
 
 #catsmenu-inner li {
 	border-bottom: 1px solid #2d2d2d;
-	background: url(images/arrow.png) no-repeat right center;
-	display: block;
-	color: #444;
 	margin: 0;
-	padding: 0 15px 0 12px;
+	background: url(images/arrow.png) no-repeat right center;
+	padding: 9px 20px 7px 10px;
+}
+
+#catsmenu-inner li:hover {
+	background-color: #222;
 }
 
 #catsmenu-inner a {
 	font-size: 14px;
 	font-weight: bold;
+	display: block;
 	text-shadow: #000 1px 1px 0;
 	color: #eee;
-	text-transform: capitalize;
-	padding-top: 10px;
-	padding-bottom: 15px;
-	display: block;
-	width: 87%;
+	margin: 0;
+	padding: 4px 0;
+	width: 93%;
 }
 
 /* @end */
@@ -343,7 +344,7 @@ input#ssubmit {
 	border-bottom: 1px solid #2d2d2d;
 	margin: 0;
 	background: url(images/arrow.png) no-repeat right center;
-	padding: 13px 20px 11px 10px;
+	padding: 9px 20px 7px 10px;
 }
 
 #dropmenu-inner li:hover {
@@ -364,8 +365,8 @@ input#ssubmit {
 	text-shadow: #000 1px 1px 0;
 	color: #eee;
 	margin: 0;
-	padding: 0;
-	width: 88%;
+	padding: 4px 0;
+	width: 93%;
 }
 
 #dropmenu-inner img {
