@@ -254,25 +254,24 @@
 	padding: 0 16px 16px 0;
 	margin: 0 0 10px;
 	float: left;
+	text-align: center;
 }
 
 #wptouch-theme ul.wptouch-iconblock li {
-	color: #555;
-	width: 110px;
+	color: #777;
 	list-style-type: none;
-	margin: 0;
+	margin: 0 -4px 0 0;
 	padding: 0;
 	font-size: 11px;
-	font-weight: bold;
+	display: block;
+	width: 70px;
+	height: 44px;
 }
 
 #wptouch-theme ul.wptouch-iconblock li img {
-	float: left;
-	margin-right: 6px;
-	position: relative;
-	bottom: 8px;
 	width: 32px;
 	height: 32px;
+	margin-bottom: 3px;
 }
 
 

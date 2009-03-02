@@ -51,7 +51,7 @@
 			echo '<div class="new-icon-block ' . $name . '">';
 			foreach ( $icons[ $name ] as $icon ) {
 				echo '<ul class="wptouch-iconblock">';
-				echo '<li><img src="' . $icon['url'] . '" title="' . $icon['name'] . '" />' . $icon['friendly'];
+				echo '<li><img src="' . $icon['url'] . '" title="' . $icon['name'] . '" /><br />' . $icon['friendly'];
 				if ( $name == 'custom' ) {
 					echo ' <a href="' . $_SERVER['REQUEST_URI'] . '&delete_icon=' . urlencode($icon['url']) . '">(x)</a>';	
 				}
