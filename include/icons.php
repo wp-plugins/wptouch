@@ -53,7 +53,7 @@
 				echo '<ul class="wptouch-iconblock">';
 				echo '<li><img src="' . $icon['url'] . '" title="' . $icon['name'] . '" />' . $icon['friendly'];
 				if ( $name == 'custom' ) {
-					echo ' <a href="' . $_SERVER['REQUEST_URI'] . '&delete_icon=' . urlencode($icon['url']) . '">[x]</a>';	
+					echo ' <a href="' . $_SERVER['REQUEST_URI'] . '&delete_icon=' . urlencode($icon['url']) . '">(x)</a>';	
 				}
 				echo '</li>';
 				echo '</ul>';

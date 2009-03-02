@@ -279,7 +279,7 @@ function wptouch_switch() {
 	global $wptouch_plugin;
 	if ($wptouch_plugin->desired_view == 'normal') {
 		echo '<div style="width: auto;height: 48px;padding-top:17px;padding-bottom:15px;font-size: x-large;font-weight: bold;background: url(' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/switch-bg.png) repeat-x 0 0;margin:0px;border-top: 1px solid #999;border-bottom: 2px solid #999;text-shadow: #e6e6e6 3px 3px 1px;" id="switch-footer-links">';
-		echo sprintf( __( 'View %s\'s', "wptouch" ), get_bloginfo('title') ) . '<a href="' . get_bloginfo('siteurl') . '/?bnc_view=mobile">' . __( "Mobile Theme", "wptouch" ) . '</a>';
+		echo sprintf( __( 'View %s\'s', "wptouch" ), get_bloginfo('title') ) . '<a href="' . get_bloginfo('siteurl') . '/?bnc_view=mobile">' . __( " Mobile Theme", "wptouch" ) . '</a>';
 		echo '</div>';
 	}
 }

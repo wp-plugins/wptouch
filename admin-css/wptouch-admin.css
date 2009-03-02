@@ -504,6 +504,15 @@
 	left: 135px;
 }
 
+#wptouch-theme ul.wptouch-iconblock li a {
+	text-decoration: none;
+	color: #db1f1d;
+}
+
+#wptouch-theme ul.wptouch-iconblock li a:hover {
+	text-transform: uppercase;
+}
+
 
 
 /* @end */
