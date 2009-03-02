@@ -20,7 +20,7 @@
         
         foreach ( $locations as $name => $location ) {
         	$current_path = $wordpress_root . $location;
-	   	    $dir = opendir( $current_path );
+	   	    $dir = @opendir( $current_path );
 	   	    $files[ $name ] = array();
 
 			if ( $dir ) {
