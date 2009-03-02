@@ -1,7 +1,7 @@
 /* @override http://24.36.119.47:9098/wp-content/plugins/wptouch/themes/default/style.css */
 
 /*  
-Theme Name: WPtouch Mobile Plugin & Theme
+Theme Name: WPtouch Mobile Plugin & Theme For WordPress
 Theme URI: http://www.bravenewcode.com/wptouch/
 Description: A slick theme for your blog or website that is shown only when visitors are using an iPhone/iPod touch.
 Author: Dale Mugford and Duane Storey
@@ -127,13 +127,13 @@ blockquote {
 /* @group Header */
 
 #blogtitle {
-	float: left;
-	margin-left: 10px;
 	text-shadow: #5c5c5c 1px 1px 1px;
-	position: relative;
-	margin-top: 10px;
-	bottom: 1px;
-	height: 37px;
+	height: 35px;
+	padding-top: 10px;
+	padding-left: 10px;
+}
+
+#blogtitle a {
 }
 
 #blogtitle img {
@@ -143,13 +143,29 @@ blockquote {
 	-webkit-border-radius: 4px;
 	vertical-align: top;
 	text-shadow: #999 3px 3px 2px;
-	bottom: 2px;
+	bottom: 4px;
+	float: left;
 }
 
 #blogmenu {
 	float: right;
 	margin-top: 3px;
 	margin-right: 13px;
+}
+
+#drop-fade {
+	width: 100%;
+	display: block;
+	text-align: right;
+	position: relative;
+	padding: 4px 0 2px;
+	opacity: 0.98;
+	-webkit-box-shadow: #555 -5px 2px 5px;
+	margin: 0;
+}
+
+#drop-fade img {
+	padding-right: 12px;
 }
 
 /* @group Categories */
@@ -187,7 +203,7 @@ blockquote {
 }
 
 #catsmenu-inner a {
-	font-size: 15px;
+	font-size: 14px;
 	font-weight: bold;
 	text-shadow: #000 1px 1px 0;
 	color: #eee;
@@ -195,6 +211,7 @@ blockquote {
 	padding-top: 10px;
 	padding-bottom: 15px;
 	display: block;
+	width: 87%;
 }
 
 /* @end */
@@ -305,16 +322,19 @@ input#ssubmit {
 	opacity: 0.97;
 	-webkit-box-shadow: #555 -5px 2px 5px;
 	padding: 0;
+	z-index: 1;
 }
 
 #dropmenu-inner {
 	width: 100%;
-	z-index: 9;
+	position: relative;
+	margin: 0;
+	padding: 0;
 }
 
 #dropmenu-inner ul {
 	margin: 0;
-	padding: 2px 0 0;
+	padding: 0;
 	list-style-type: none;
 	position: relative;
 }
@@ -323,7 +343,11 @@ input#ssubmit {
 	border-bottom: 1px solid #2d2d2d;
 	margin: 0;
 	background: url(images/arrow.png) no-repeat right center;
-	padding: 0;
+	padding: 13px 20px 11px 10px;
+}
+
+#dropmenu-inner li:hover {
+	background-color: #222;
 }
 
 #dropmenu-inner li.noarrow img {
@@ -334,13 +358,14 @@ input#ssubmit {
 }
 
 #dropmenu-inner a {
-	font-size: 15px;
+	font-size: 14px;
 	font-weight: bold;
 	display: block;
-	width: 85%;
-	padding: 12px 20px 12px 12px;
 	text-shadow: #000 1px 1px 0;
 	color: #eee;
+	margin: 0;
+	padding: 0;
+	width: 88%;
 }
 
 #dropmenu-inner img {
@@ -351,24 +376,6 @@ input#ssubmit {
 	padding-right: 10px;
 	right: 1px;
 	margin-bottom: 3%;
-}
-
-#drop-fade {
-	width: 100%;
-	display: block;
-	text-align: right;
-	position: relative;
-	bottom: 1px;
-	margin: 0;
-	padding: 2px 0 3px;
-	opacity: 0.98;
-	-webkit-box-shadow: #555 -5px 2px 5px;
-	height: 16px;
-	z-index: 2;
-}
-
-#drop-fade img {
-	padding-right: 12px;
 }
 
 /* @end */
