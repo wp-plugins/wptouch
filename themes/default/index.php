@@ -64,16 +64,18 @@ Here we're making sure that each ajax div will have a unique ID.  -->
 <div class="page">
 	<div class="page-title-icon">
 	<?php
-	$icon_name = strtolower($post->post_title) . '.png';
-	$mypages = bnc_wp_touch_get_pages();
-	if (isset($mypages[get_the_ID()])) {
-	$icon_name = $mypages[get_the_ID()]['icon'];
-	}
-	$dir = preg_split("#/plugins/wptouch#", __FILE__, $test);
-	if (!file_exists($dir[0] . '/plugins/wptouch/images/icon-pool/' . $icon_name)) {
-	$icon_name = 'default.png';
-	}
-	echo('<img class="pageicon" src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/icon-pool/' . $icon_name . '" />');
+		$icon_name = strtolower($post->post_title) . '.png';
+		$mypages = bnc_wp_touch_get_pages();
+	
+		if (isset($mypages[get_the_ID()])) {
+			$icon_name = $mypages[get_the_ID()]['icon'];
+		}
+	
+		$dir = preg_split("#/plugins/wptouch#", __FILE__, $test);
+		if (!file_exists($dir[0] . '/plugins/wptouch/images/icon-pool/' . $icon_name)) {
+			$icon_name = 'Default.png';
+		}
+		echo('<img class="pageicon" src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/icon-pool/' . $icon_name . '" />');
 	?> 
 	</div>
 		<h2><?php if (function_exists('bnc_the_title')) bnc_the_title(); else the_title(); ?></h2>

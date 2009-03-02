@@ -34,7 +34,7 @@ $bnc_wptouch_version = '1.8';
 require_once( 'include/plugin.php' );
 
 // uncomment this line to wipe the settings clean
-//update_option( 'bnc_iphone_pages', '' );
+// update_option( 'bnc_iphone_pages', '' );
 
 global $wptouch_defaults;
 $wptouch_defaults = array(
@@ -42,9 +42,9 @@ $wptouch_defaults = array(
 	'header-title' => get_bloginfo('name'),
 	'main_title' => 'Default.png',
 	'enable-post-excerpts' => true,
-	'enable-page-coms' => true,
+	'enable-page-coms' => false,
 	'enable-cats-button' => true,
-	'enable-login-button' => true,
+	'enable-login-button' => false,
 	'enable-redirect' => true,
 	'enable-js-header' => true,
 	'enable-gravatars' => true,
@@ -52,6 +52,7 @@ $wptouch_defaults = array(
 	'enable-main-rss' => true,
 	'enable-main-name' => true,
 	'enable-main-tags' => true,
+	'enable-gzip' => false,
 	'enable-main-categories' => true,
 	'enable-main-email' => true,
 	'header-border-color' => '333333',
@@ -191,7 +192,7 @@ class WPtouchPlugin {
 		
 		// Add whatever user agents you want here to the array if you want to make this show on a Blackberry 
 		// or something. No guarantees it'll look pretty, though!
-		$useragents = array("iphone", "safari", "aspen", "dream", "incognito", "webmate");
+		$useragents = array("iphone", "ipod", "aspen", "dream", "incognito", "webmate");
 		$this->applemobile = false;
 		foreach ($useragents as $useragent) {
 			if (eregi($useragent, $container)) {
@@ -279,7 +280,7 @@ function wptouch_switch() {
 	global $wptouch_plugin;
 	if ($wptouch_plugin->desired_view == 'normal') {
 		echo '<div style="width: auto;height: 48px;padding-top:17px;padding-bottom:15px;font-size: x-large;font-weight: bold;background: url(' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/switch-bg.png) repeat-x 0 0;margin:0px;border-top: 1px solid #999;border-bottom: 2px solid #999;text-shadow: #e6e6e6 3px 3px 1px;" id="switch-footer-links">';
-		echo sprintf( __( 'View %s\'s', "wptouch" ), get_bloginfo('title') ) . '&nbsp;<a href="' . get_bloginfo('siteurl') . '/?bnc_view=mobile">' . __( "Mobile Theme", "wptouch" ) . '</a>';
+		echo sprintf( __( 'View %s\'s', "wptouch" ), get_bloginfo('title') ) . '<a href="' . get_bloginfo('siteurl') . '/?bnc_view=mobile">' . __( " Mobile Theme", "wptouch" ) . '</a>';
 		echo '</div>';
 	}
 }
