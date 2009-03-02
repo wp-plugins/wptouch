@@ -1,8 +1,6 @@
 <!-- Here the switch code is very important, as well as the php code which deals with admin links and WordPress -->
 	<div id="footer">
-		<p>
-		
-			<center><h3><?php if (current_user_can('edit_posts')) : // If it's not an admin don't show these! ?>      
+		<center><h3><?php if (current_user_can('edit_posts')) : // If it's not an admin don't show these! ?>      
 				<a href="<?php bloginfo('wpurl'); ?>/wp-admin/"><?php _e("Admin", "wptouch"); ?></a> | 
 					<?php //Another WordPress version check to figure out the correct logout method
 						$version = (float)get_bloginfo('version'); 
@@ -27,16 +25,13 @@
 
 			<?php _e( "All content Copyright &copy;", "wptouch" ); ?> <?php bloginfo('name'); ?><br />
 			<?php _e( 'Powered by <a href="http://wordpress.org/">WordPress</a> with', 'wptouch' ); ?> <a href="http://bravenewcode.com/wptouch/"><?php WPtouch(); ?></a>
-		<br />
-
-
-				</p>
 		<?php wp_footer(); ?>
 	</div>
-	<?php wptouch_get_stats(); 
-	//WPtouch theme designed and developed by Dale Mugford and Duane Storey for BraveNewCode.com
-	//Licensed under GPL
-	//If you modify it, please keep the link credit *visible* in the footer (and keep the WordPress credit, too!), that's all we ask, folks.
+<br />
+<?php wptouch_get_stats(); 
+//WPtouch theme designed and developed by Dale Mugford and Duane Storey for BraveNewCode.com
+//Licensed under GPL
+//If you modify it, please keep the link credit *visible* in the footer (and keep the WordPress credit, too!), that's all we ask, folks.
 ?>
 </body>
 </html>

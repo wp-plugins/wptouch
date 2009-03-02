@@ -1,3 +1,5 @@
+/* @override http://24.36.119.47:9098/wp-content/plugins/wptouch/themes/default/style.css */
+
 /*  
 Theme Name: WPtouch Mobile Plugin & Theme
 Theme URI: http://www.bravenewcode.com/wptouch/
@@ -131,6 +133,7 @@ blockquote {
 	position: relative;
 	margin-top: 10px;
 	bottom: 1px;
+	height: 37px;
 }
 
 #blogtitle img {
@@ -140,7 +143,7 @@ blockquote {
 	-webkit-border-radius: 4px;
 	vertical-align: top;
 	text-shadow: #999 3px 3px 2px;
-	bottom: 4px;
+	bottom: 2px;
 }
 
 #blogmenu {
@@ -361,6 +364,7 @@ input#ssubmit {
 	opacity: 0.98;
 	-webkit-box-shadow: #555 -5px 2px 5px;
 	height: 16px;
+	z-index: 2;
 }
 
 #drop-fade img {
