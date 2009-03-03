@@ -1304,14 +1304,14 @@ a.search-close {
 	margin-right: 3px;
 }
 
-#dropmenu-inner li.noarrow, #wptouch-cats li.noarrow {
+li.noarrow {
 	border-bottom: 0px;
 	margin: 0;
 	background: none;
 	padding: 9px 20px 7px 10px;
 }
 
-#dropmenu-inner li.noarrow img, #wptouch-cats li.noarrow img {
+li.noarrow img {
 	width: 20px;
 	height: 20px;
 	margin-top: 5px;
