@@ -36,6 +36,7 @@ require_once( 'include/plugin.php' );
 // uncomment this line to wipe the settings clean
 // update_option( 'bnc_iphone_pages', '' );
 
+//No need to manually change these, they're all admin options saved to the database
 global $wptouch_defaults;
 $wptouch_defaults = array(
 	'header-background-color' => '222222',
@@ -192,7 +193,7 @@ class WPtouchPlugin {
 		
 		// Add whatever user agents you want here to the array if you want to make this show on a Blackberry 
 		// or something. No guarantees it'll look pretty, though!
-		$useragents = array("iphone", "ipod", "safari", "dream", "incognito", "webmate");
+		$useragents = array("iphone", "ipod", "aspen", "dream", "incognito", "webmate");
 		$this->applemobile = false;
 		foreach ($useragents as $useragent) {
 			if (eregi($useragent, $container)) {
