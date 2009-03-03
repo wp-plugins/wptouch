@@ -11,6 +11,4 @@
 		return $version;
 	}		
 
-
-
 ?>

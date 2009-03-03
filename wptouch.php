@@ -2,7 +2,7 @@
 /*
    Plugin Name: WPtouch iPhone Theme
    Plugin URI: http://bravenewcode.com/wptouch/
-   Description: A plugin which reformats your site with a mobile theme when viewing with an <a href="http://www.apple.com/iphone/">iPhone</a> / <a href="http://www.apple.com/ipodtouch/">iPod touch</a>. Set styling, page, menu, icon and more options for the theme by visiting the <a href="options-general.php?page=wptouch/wptouch.php">WPtouch Options admin panel</a>. &nbsp;
+   Description: A plugin which reformats your site with a mobile theme when viewing with an <a href="http://www.apple.com/iphone/"> Apple iPhone</a>, <a href="http://www.apple.com/ipodtouch/">Apple iPod touch</a>, <a href="http://www.android.com/">Google Android</a> or <a href="http://www.rim.com/storm/">Blackberry Storm</a> touch mobile device. Set options for the theme by visiting the <a href="options-general.php?page=wptouch/wptouch.php">WPtouch Options admin panel</a>. &nbsp;
    Author: Dale Mugford & Duane Storey
    Version: 1.8
    Author URI: http://www.bravenewcode.com
@@ -291,7 +291,7 @@ function bnc_options_menu() {
 }
 
 function bnc_get_ordered_cat_list() {
-	// We created our own functio for this as wp_list_categories doesn't make the count linkable
+	// We created our own function for this as wp_list_categories doesn't make the count linkable
 
 	global $table_prefix;
 	global $wpdb;
@@ -492,10 +492,10 @@ function bnc_wp_touch_page() {
 	if (isset($_POST['submit'])) {
 		echo('<div class="wrap"><div id="wptouch-theme">');
 		echo('<div id="wptouchupdated">' . __( "Your new WPtouch settings were saved.", "wptouch" ) . '</div>');
-		echo('<div id="wptouch-title">' . WPtouch('<div class="header-wptouch-version"> ' . __( "This is", "wptouch" ) . ' ','</div>') . '</div>');
+		echo('<div id="wptouch-title">' . WPtouch('<div class="header-wptouch-version"> ' . __( "This is", "wptouch" ) . ' ','<br />' . __( "WordPress on iPhone, iPod touch, Android and Storm", "wptouch" ) . '</div>') . '</div>');
 	} else {
 		echo('<div class="wrap"><div id="wptouch-theme">');
-		echo('<div id="wptouch-title">' . WPtouch('<div class="header-wptouch-version"> ' . __( "This is", "wptouch" ) . ' ','</div>') . '</div>');
+		echo('<div id="wptouch-title">' . WPtouch('<div class="header-wptouch-version"> ' . __( "This is", "wptouch" ) . ' ','<br />' . __( "WordPress on iPhone, iPod touch, Android and Storm", "wptouch" ) . '</div>') . '</div>');
 	}
 ?>
 
