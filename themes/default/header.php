@@ -147,6 +147,10 @@ We've commented below to let you know what works what, so if you do go messing a
 		<div id="catsmenu-inner">
             <ul>
 	   	<?php bnc_get_ordered_cat_list(); ?>
+	   		<?php if (!bnc_is_js_enabled()) { ?>
+           		<li class="noarrow"><a href="javascript:document.getElementById('wptouch-cats').style.display = 'none';"><img src="<?php bloginfo('template_directory'); ?>/images/cross.png" alt="" /> <?php _e( "Close Menu", "wptouch" ); ?></a></li>
+           	<?php } ?>
+
             </ul>
         </div>
 	</div>

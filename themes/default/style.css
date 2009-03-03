@@ -351,6 +351,12 @@ input#ssubmit {
 	background-color: #222;
 }
 
+#dropmenu-inner li.noarrow {
+	border-bottom: 0px;
+	margin: 0;
+	background: none;
+	padding: 9px 20px 7px 10px;
+}
 #dropmenu-inner li.noarrow img {
 	width: 20px;
 	height: 20px;
