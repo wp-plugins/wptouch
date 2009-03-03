@@ -39,11 +39,11 @@ endif;
 $comment_type = '';
 if (get_settings('require_name_email') && !$user_ID) {
 if (6 > strlen($comment_author_email) || '' == $comment_author)
-fail(__('Error: please fill the required fields (name, email).', 'wptouch'));
+fail(__('Error: please fill in the required fields', 'wptouch'));
 elseif (!is_email($comment_author_email))
 fail(__('Error: please enter a valid email address.', 'wptouch')); }
 if ('' == $comment_content)
-fail(__('Error: please type a comment.', 'wptouch'));
+fail(__('Error: please type something in the comment area.', 'wptouch'));
 $commentdata = compact('comment_post_ID', 'comment_author', 'comment_author_email', 'comment_author_url', 'comment_content', 'comment_type', 'user_ID');
 $new_comment_ID = wp_new_comment($commentdata);
 if (!$user_ID) : 

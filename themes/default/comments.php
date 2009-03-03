@@ -1,5 +1,5 @@
 <?php
-// Do not delete these lines***********************
+// Do not delete these lines**********
 if ('comments.php' == basename($_SERVER['SCRIPT_FILENAME']))
 	die( __('Please do not load this page directly. Thanks!', 'wptouch') );
 		if (!empty($post->post_password)) {
@@ -12,7 +12,7 @@ if ('comments.php' == basename($_SERVER['SCRIPT_FILENAME']))
 $oddcomment = 'alt'; 
 ?>
 
-<!-- You can start editing below here. but make a backup first!  -->
+<!-- You can start editing below here... but make a backup first!  -->
 
 <h3 id="comments"><?php
   comments_number( __('No Comments', 'wptouch'), __('1 Comment', 'wptouch'), __('% Comments', 'wptouch') ); ?></h3>
@@ -32,15 +32,15 @@ $oddcomment = 'alt';
 			<div class="comtop">		
 				<?php if (bnc_is_gravatars_enabled()) { ?>
 					<?php if (function_exists('gravatar')) { ?>
-					<img class='gravatar' src="<?php gravatar("R", 28, "' . get_bloginfo('url') . '/wp-content/plugins/wptouch/images/blank_gravatar.png'"); ?>" alt='' />	
-					<?php } elseif (function_exists('get_avatar')) { echo get_avatar( $comment, $size = '28', $default = '' . get_bloginfo('url') . '/wp-content/plugins/wptouch/images/blank_gravatar.png' ); } else { ?><?php } ?>		
+					<img class='gravatar' src="<?php gravatar("R", 28, "' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/blank_gravatar.png'"); ?>" alt='' />	
+					<?php } elseif (function_exists('get_avatar')) { echo get_avatar( $comment, $size = '28', $default = '' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/blank_gravatar.png' ); } else { ?><?php } ?>		
 				<?php } ?>
 
 		<a href="<?php comment_author_url(); ?>"><?php comment_author(); ?></a> said:
 			<div class="comdater"><?php comment_time('m / d / H:i'); ?></div>  
 	</div><!--end comtop-->
 
-        <?php $comment_num++; ?>
+        <!-- <?php $comment_num++; ?>  -->
 	  
 		<div class="combody">  
 		<?php comment_text(); ?>
@@ -79,60 +79,59 @@ $oddcomment = 'alt';
   
 		<?php if (get_option('comment_registration') && !$user_ID) : ?>
 		<center>
-		<h1><?php sprintf( __( 'You must %slogin</a> or %sregister</a> to comment', 'wptouch' ), '<a href="' . get_option('url') . '/wp-login.php">', '<a href="' . get_option('url') . '"/wp-register.php">') ; ?></h1>
+		<h1><?php sprintf( __( 'You must %slogin</a> or %sregister</a> to comment', 'wptouch' ), '<a href="' . get_option('wpurl') . '/wp-login.php">', '<a href="' . get_option('wpurl') . '"/wp-register.php">') ; ?></h1>
 		</center>
 
 <?php else : ?>
   <!--  Let's check for advanced JS setting, and if it's enabled do fancy ajax comments -->
   
 	<?php if (!function_exists('cas_register_post') && bnc_is_js_enabled()) { ?>
-	<div id="refresher" style="display:none">&raquo; <a href="javascript:this.location.reload();"><?php _e( "Refresh the page", "wptouch" ); ?></a> <?php _e( "to post a new comment.", "wptouch" ); ?></div>
-	<form id="commentform" action="<?php echo get_option('url'); ?>/wp-comments-post.php" method="post" onsubmit="$wptouch('#loading').fadeIn(100);var list = $wptouch('#commentlist'); var html = list.html(); var param = $wptouch('form').serialize(); $wptouch.ajax({url: '<?php bloginfo('template_directory'); ?>/comments-ajax.php?' + param, success: function(data, status){ list.append(data); commentAdded(); }, type: 'get' }); return false;">
+		<div id="refresher" style="display:none">&raquo; <a href="javascript:this.location.reload();"><?php _e( "Refresh the page", "wptouch" ); ?></a> <?php _e( "to post a new comment.", "wptouch" ); ?></div>
+			<form id="commentform" action="<?php echo get_option('wpurl'); ?>/wp-comments-post.php" method="post" onsubmit="$wptouch('#loading').fadeIn(100);var list = $wptouch('#commentlist'); var html = list.html(); var param = $wptouch('form').serialize(); $wptouch.ajax({url: '<?php bloginfo('template_directory'); ?>/comments-ajax.php?' + param, success: function(data, status){ list.append(data); commentAdded(); }, type: 'get' }); return false;">
 	<?php } else { ?>
-	<form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" id="commentform">
+		<form action="<?php echo get_option('wpurl'); ?>/wp-comments-post.php" method="post" id="commentform">
 	<?php } ?>
 
 <?php if ($user_ID) : ?>
 
-		<p class="logged"  id="respond"><?php _e( "Logged in as", "wptouch" ); ?> <a href="<?php bloginfo('url'); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a>:</p>
+		<p class="logged"  id="respond"><?php _e( "Logged in as", "wptouch" ); ?> <a href="<?php bloginfo('wpurl'); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a>:</p>
 	
 	<?php else : ?>
 	
 		<h3 id="respond"><?php _e( "Leave A Comment", "wptouch" ); ?></h3>
-		<p style="font-size:13px">
-		<input type="text" name="author" id="author" value="<?php echo $comment_author; ?>" size="22" tabindex="1" />
-		<label for="author"><small><?php _e( 'Name', 'wptouch' ); ?> <?php if ($req) echo "*"; ?></small></label>
-		</p>
+			<p style="font-size:13px">
+				<input type="text" name="author" id="author" value="<?php echo $comment_author; ?>" size="22" tabindex="1" />
+				<label for="author"><small><?php _e( 'Name', 'wptouch' ); ?> <?php if ($req) echo "*"; ?></small></label>
+			</p>
 	
-		<p style="font-size:13px">
-		<input type="text" name="email" id="email" value="<?php echo $comment_author_email; ?>" size="22" tabindex="2" />
-		<label for="email"><small><?php _e( 'Mail (unpublished)', 'wptouch' ); ?> <?php if ($req) echo "*"; ?></small></label>
-		</p>
-	
-		<p style="font-size:13px">
-		<input type="text" name="url" id="url" value="<?php echo $comment_author_url; ?>" size="22" tabindex="3" />
-		<label for="url"><small><?php _e( 'Website', 'wptouch' ); ?></small></label>
-		</p>
+			<p style="font-size:13px">
+				<input type="text" name="email" id="email" value="<?php echo $comment_author_email; ?>" size="22" tabindex="2" />
+				<label for="email"><small><?php _e( 'Mail (unpublished)', 'wptouch' ); ?> <?php if ($req) echo "*"; ?></small></label>
+			</p>
+		
+			<p style="font-size:13px">
+				<input type="text" name="url" id="url" value="<?php echo $comment_author_url; ?>" size="22" tabindex="3" />
+				<label for="url"><small><?php _e( 'Website', 'wptouch' ); ?></small></label>
+			</p>
 
 <?php endif; ?>
 
 	<p><textarea name="comment" id="comment" tabindex="4"></textarea></p>
 	
 		<p style="padding-bottom:10px"><input name="submit" type="submit" id="submit" tabindex="5" value="Publish" />
-		<input type="hidden" name="comment_post_ID" value="<?php echo $id; ?>" />
-		
-		<div id="loading"  style="display:none">
-		<img src="<?php bloginfo('template_directory'); ?>/images/comment-ajax-loader.gif" alt="" />
-		</div>
+			<input type="hidden" name="comment_post_ID" value="<?php echo $id; ?>" />		
+				<div id="loading"  style="display:none">
+					<img src="<?php bloginfo('template_directory'); ?>/images/comment-ajax-loader.gif" alt="" />
+				</div>
 		</p>
 		
-	<div id="errors" style="display:none">
-	<?php _e( "There was an error. Please refresh the page and try again.", "wptouch" ); ?>
-	</div>
-	
+		<div id="errors" style="display:none">
+			<?php _e( "There was an error. Please refresh the page and try again.", "wptouch" ); ?>
+		</div>
+				
 		<?php do_action('comment_form', $post->ID); ?>
 	</form>
 <?php endif; // If registration required and not logged in ?>
-</div><!--END of textinputwrap DIV-->
-</div>
+</div><!--textinputwrap div-->
+</div><!-- comment_wrapper -->
 <?php endif; // if you delete this the sky will fall on your head ?>
