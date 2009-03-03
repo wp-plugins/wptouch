@@ -492,10 +492,10 @@ function bnc_wp_touch_page() {
 	if (isset($_POST['submit'])) {
 		echo('<div class="wrap"><div id="wptouch-theme">');
 		echo('<div id="wptouchupdated">' . __( "Your new WPtouch settings were saved.", "wptouch" ) . '</div>');
-		echo('<div id="wptouch-title">' . WPtouch('<div class="header-wptouch-version"> ' . __( "This is", "wptouch" ) . ' ','<br />' . __( "WordPress on iPhone, iPod touch, Android and Storm", "wptouch" ) . '</div>') . '</div>');
+		echo('<div id="wptouch-title"><p>' . __( "WordPress on iPhone, iPod touch, Android and Storm", "wptouch" ) . '</p>' . WPtouch('<div class="header-wptouch-version"> ' . __( "This is", "wptouch" ) . ' ','</div>') . '</div>');
 	} else {
 		echo('<div class="wrap"><div id="wptouch-theme">');
-		echo('<div id="wptouch-title">' . WPtouch('<div class="header-wptouch-version"> ' . __( "This is", "wptouch" ) . ' ','<br />' . __( "WordPress on iPhone, iPod touch, Android and Storm", "wptouch" ) . '</div>') . '</div>');
+		echo('<div id="wptouch-title"><p>' . __( "WordPress on iPhone, iPod touch, Android and Storm", "wptouch" ) . '</p>' . WPtouch('<div class="header-wptouch-version"> ' . __( "This is", "wptouch" ) . ' ','</div>') . '</div>');
 	}
 ?>
 
