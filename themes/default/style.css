@@ -351,6 +351,8 @@ input#ssubmit {
 	background-color: #222;
 }
 
+<<<<<<< .mine
+=======
 #dropmenu-inner li.noarrow {
 	border-bottom: 0px;
 	margin: 0;
@@ -364,6 +366,7 @@ input#ssubmit {
 	margin-left: 5px;
 }
 
+>>>>>>> .r99082
 #dropmenu-inner a {
 	font-size: 14px;
 	font-weight: bold;
@@ -1301,11 +1304,18 @@ a.search-close {
 	margin-right: 3px;
 }
 
-#dropmenu-inner li.noarrow {
-	border-bottom: 1px solid #1a1a1a;
+#dropmenu-inner li.noarrow, #wptouch-cats li.noarrow {
+	border-bottom: 0px;
 	margin: 0;
-	padding: 0;
-	background-image: none;
+	background: none;
+	padding: 9px 20px 7px 10px;
+}
+
+#dropmenu-inner li.noarrow img, #wptouch-cats li.noarrow img {
+	width: 20px;
+	height: 20px;
+	margin-top: 5px;
+	margin-left: 5px;
 }
 
 .main-navigation {
