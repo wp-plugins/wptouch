@@ -148,7 +148,7 @@ We've commented below to let you know what works what, so if you do go messing a
             <ul>
 	   	<?php bnc_get_ordered_cat_list(); ?>
 	   		<?php if (!bnc_is_js_enabled()) { ?>
-           		<li class="noarrow"><a href="javascript:document.getElementById('wptouch-cats').style.display = 'none';"><img src="<?php bloginfo('template_directory'); ?>/images/cross.png" alt="" /> <?php _e( "Close Menu", "wptouch" ); ?></a></li>
+           		<li class="noarrow"><a class="menu-close" href="javascript:document.getElementById('wptouch-cats').style.display = 'none';"><img src="<?php bloginfo('template_directory'); ?>/images/cross.png" alt="" /> <?php _e( "Close Menu", "wptouch" ); ?></a></li>
            	<?php } ?>
 
             </ul>
@@ -217,6 +217,6 @@ We've commented below to let you know what works what, so if you do go messing a
 	<?php die; } ?>
 	
 <!-- This div spacer helps get the alignment are squared up after all the CSS floats -->		
-	<div class="post-spacer">&nbsp;</div>
-	
+	<div class="post-spacer ">&nbsp;</div>
+	<div class="post-spacer ">&nbsp;</div>	
 <!-- End of the Header -->

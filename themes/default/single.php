@@ -34,7 +34,7 @@ If it's ajax, we're not bringing in header.php and footer.php -->
 <!-- Mail and Bookmark code -->	
 
 	<div class="single-links">
-		<div class="single-bookmark-right"><a href="javascript:$wptouch('#bookmark-box').slideToggle(300);"><img src="<?php bloginfo('template_directory'); ?>/images/bookmarkit.png" class="small" alt="" /> <?php _e( "Bookmark It", "wptouch" ); ?></a></div>
+		<div class="single-bookmark-right"><?php if (bnc_is_js_enabled()) { ?><a href="javascript:$wptouch('#bookmark-box').slideToggle(300);"><?php } else { ?><a href="javascript:document.getElementById('bookmark-box').style.display = 'block';"><?php } ?><img src="<?php bloginfo('template_directory'); ?>/images/bookmarkit.png" class="small" alt="" /> <?php _e( "Bookmark It", "wptouch" ); ?></a></div>
 			<div class="single-mail-left"><a href="mailto:?subject=<?php
 bloginfo('name'); ?>- <?php the_title();?>&body=<?php _e( "Check out this post:", "wptouch" ); ?> <?php the_permalink() ?>"><img src="<?php bloginfo('template_directory'); ?>/images/mailit.png" class="small" alt="" /> <?php _e( "Mail It", "wptouch" ); ?></a></div>
 				<div class="clearer"></div>

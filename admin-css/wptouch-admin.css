@@ -46,6 +46,7 @@
 	padding-bottom: 10px;
 	height: 216px;
 	background: url(../images/admin-header.png) no-repeat;
+	width: auto;
 }
 
 #wptouch-theme .header-wptouch-version {
@@ -56,8 +57,19 @@
 	display: inline;
 	float: left;
 	position: relative;
-	top: 183px;
-	left: 140px;
+	top: 128px;
+	left: 147px;
+}
+
+#wptouch-theme #wptouch-title p {
+	position: relative;
+	top: 67px;
+	left: 147px;
+	font: bold 22px "Lucida Grande", Lucida, Verdana, sans-serif;
+	color: #d54e21;
+	text-shadow: #fff -2px -2px 1px;
+	letter-spacing: -1px;
+	width: 585px;
 }
 
 

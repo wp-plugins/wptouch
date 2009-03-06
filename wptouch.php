@@ -33,7 +33,7 @@ $bnc_wptouch_version = '1.8';
 
 require_once( 'include/plugin.php' );
 
-// uncomment this line to wipe the settings clean
+// uncomment this line to create a fresh install scenario
 // update_option( 'bnc_iphone_pages', '' );
 
 //No need to manually change these, they're all admin options saved to the database
@@ -63,7 +63,7 @@ $wptouch_defaults = array(
 
 function wptouch_delete_icon( $icon ) {
 	if ( !current_user_can( 'upload_files' ) ) {
-		// don't allow users to delete who don't have access to upload
+		// don't allow users to delete who don't have access to upload (security feature)
 		return;	
 	}
 			
@@ -193,7 +193,7 @@ class WPtouchPlugin {
 		
 		// Add whatever user agents you want here to the array if you want to make this show on a Blackberry 
 		// or something. No guarantees it'll look pretty, though!
-		$useragents = array("iphone", "ipod", "aspen", "dream", "incognito", "webmate");
+		$useragents = array("iPhone", "iPod", "safari", "dream", "incognito", "webmate", "BlackBerry9500", "BlackBerry9530");
 		$this->applemobile = false;
 		foreach ($useragents as $useragent) {
 			if (eregi($useragent, $container)) {

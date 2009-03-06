@@ -134,9 +134,6 @@ blockquote {
 	display: block;
 }
 
-#blogtitle a {
-}
-
 #blogtitle img {
 	position: relative;
 	margin-right: 5px;
@@ -145,12 +142,6 @@ blockquote {
 	text-shadow: #999 3px 3px 2px;
 	bottom: 4px;
 	float: left;
-}
-
-#blogmenu {
-	float: right;
-	margin-top: 3px;
-	margin-right: 13px;
 }
 
 #drop-fade {
@@ -181,11 +172,6 @@ blockquote {
 	padding: 0;
 }
 
-#wptouch-cats #catsmenu-inner {
-	width: 100%;
-	z-index: 9;
-}
-
 #catsmenu-inner ul {
 	margin: 0;
 	padding: 2px 0 0;
@@ -198,6 +184,7 @@ blockquote {
 	margin: 0;
 	background: url(images/arrow.png) no-repeat right center;
 	padding: 9px 20px 7px 10px;
+	text-transform: capitalize;
 }
 
 #catsmenu-inner li:hover {
@@ -215,6 +202,16 @@ blockquote {
 	width: 93%;
 }
 
+#catsmenu-inner img {
+	float: left;
+	position: relative;
+	bottom: 7px;
+	width: 28px;
+	padding-right: 10px;
+	right: 1px;
+	margin-bottom: 3%;
+}
+
 /* @end */
 
 /* @group Login */
@@ -224,16 +221,11 @@ blockquote {
 	text-align: center;
 	height: 39px;
 	position: relative;
-	bottom: 1px;
+	bottom: 0;
 	border-bottom: 1px solid #555;
 	margin: 0;
 	padding: 0;
 	-webkit-box-shadow: #555 -5px 2px 5px;
-}
-
-#wptouch-login-inner {
-	padding-top: 6px;
-	padding-bottom: 0;
 }
 
 #wptouch-login input#log {
@@ -244,6 +236,7 @@ blockquote {
 	font-size: 13px;
 	color: #222;
 	font-weight: bold;
+	margin-top: 6px;
 }
 
 #wptouch-login input#pwd {
@@ -283,11 +276,6 @@ blockquote {
 	-webkit-box-shadow: #555 -5px 2px 5px;
 }
 
-#wptouch-search-inner {
-	padding-top: 6px;
-	padding-bottom: 0;
-}
-
 input#s {
 	-webkit-border-radius: 10px;
 	border: 1px solid #475d79;
@@ -297,6 +285,7 @@ input#s {
 	color: #222;
 	margin-right: 3px;
 	text-align: left;
+	margin-top: 6px;
 }
 
 input#ssubmit {
@@ -308,6 +297,7 @@ input#ssubmit {
 	padding: 3px;
 	width: 67px;
 	height: 23px;
+	margin-top: 6px;
 }
 
 /* @end */
@@ -326,13 +316,6 @@ input#ssubmit {
 	z-index: 1;
 }
 
-#dropmenu-inner {
-	width: 100%;
-	position: relative;
-	margin: 0;
-	padding: 0;
-}
-
 #dropmenu-inner ul {
 	margin: 0;
 	padding: 0;
@@ -345,28 +328,9 @@ input#ssubmit {
 	margin: 0;
 	background: url(images/arrow.png) no-repeat right center;
 	padding: 9px 20px 7px 10px;
+	text-transform: capitalize;
 }
 
-#dropmenu-inner li:hover {
-	background-color: #222;
-}
-
-<<<<<<< .mine
-=======
-#dropmenu-inner li.noarrow {
-	border-bottom: 0px;
-	margin: 0;
-	background: none;
-	padding: 9px 20px 7px 10px;
-}
-#dropmenu-inner li.noarrow img {
-	width: 20px;
-	height: 20px;
-	margin-top: 5px;
-	margin-left: 5px;
-}
-
->>>>>>> .r99082
 #dropmenu-inner a {
 	font-size: 14px;
 	font-weight: bold;
@@ -376,6 +340,10 @@ input#ssubmit {
 	margin: 0;
 	padding: 4px 0;
 	width: 93%;
+}
+
+#dropmenu-inner li:hover {
+	background-color: #222;
 }
 
 #dropmenu-inner img {
@@ -393,11 +361,6 @@ input#ssubmit {
 /* @end */
 
 /* @group Index Page */
-
-.content {
-	margin: 5px 0 0;
-	padding: 0;
-}
 
 .post {
 	-webkit-border-radius: 10px;
@@ -517,9 +480,10 @@ a.h2 {
 	font-size: 9px;
 	font-weight: bold;
 	color: #fff;
-	padding-top: 9px;
+	padding-top: 8px;
 	letter-spacing: 0;
 	text-shadow: #333 0 1px 0;
+	padding-bottom: 0;
 }
 
 .cal-date {
@@ -571,20 +535,24 @@ a.h2 {
 
 /* @group Ajax */
 
+.ajax-load-more {
+	display: block;
+	text-align: center;
+	margin-top: 15px;
+}
+
 img.spin {
-	display: inline;
-	position: relative;
 	margin-right: 5px;
-	float: right;
+	position: relative;
+	margin-bottom: -3px;
 }
 
 a.ajax {
 	color: #475d79;
 	text-shadow: #eee 1px 1px 0;
-	font-size: 14px;
+	font-size: 15px;
 	font-weight: bold;
 	margin-right: 10px;
-	float: right;
 }
 
 /* @end */
@@ -1194,6 +1162,8 @@ h2#switch-footer-links {
 
 /* @group Plugin Compatibility CSS */
 
+/* @group WPtouch Adsense area */
+
 .wptouch-adsense-ad {
 	-webkit-border-radius: 10px	!important;
 	border: 1px solid #adadad		!important;
@@ -1205,6 +1175,10 @@ h2#switch-footer-links {
 	text-align: left						    !important;
 	font-size: 12px						!important;
 }
+
+
+
+/* @end */
 
 /* @group Peter's Anti Spam Support */
 
@@ -1252,6 +1226,12 @@ object {
 	max-width: 100% !important;
 	max-height: auto !important;
 }
+
+/* @end */
+
+/* @group Ribbon Manager Plugin Override */
+
+a#ribbon{display:none !important;}
 
 /* @end */
 
@@ -1304,14 +1284,14 @@ a.search-close {
 	margin-right: 3px;
 }
 
-li.noarrow {
+#dropmenu-inner li.noarrow, #wptouch-cats li.noarrow {
 	border-bottom: 0px;
 	margin: 0;
 	background: none;
 	padding: 9px 20px 7px 10px;
 }
 
-li.noarrow img {
+#dropmenu-inner li.noarrow img, #wptouch-cats li.noarrow img {
 	width: 20px;
 	height: 20px;
 	margin-top: 5px;

@@ -36,8 +36,8 @@
 	  
 	  <?php echo sprintf( __( "Everyone who donates will be added to our WPtouch friends and family listing on %sbravenewcode.com/wptouch%s, in appreciation for the support.", "wptouch"), '<a href="http://www.bravenewcode.com/wptouch">', '</a>' ); ?>
 
-	<h3><?php _e( "Last Donations", "wptouch" ); ?></h3>		
-	<ul id="wptouch-donation-frame" style="display: none;"></ul>
+	<!-- <h3><?php _e( "Last Donations", "wptouch" ); ?></h3>		
+	<ul id="wptouch-donation-frame" style="display: none;"></ul> -->
    </div>
 	
 	<div class="wptouch-clearer"></div>

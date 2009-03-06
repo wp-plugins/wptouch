@@ -189,13 +189,14 @@ Here we're making sure that each ajax div will have a unique ID.  -->
 <!--If it's not a page, let's do these things-->
 
 				<?php if (bnc_is_js_enabled()) { ?>
-			<div id="call<?php echo md5($_SERVER['REQUEST_URI']); ?>">
-				<a class="ajax" href="javascript:$wptouch('#spinner<?php echo md5($_SERVER['REQUEST_URI']); ?>').fadeIn(200); $wptouch('#ajaxentries<?php echo md5($_SERVER['REQUEST_URI']); ?>').load('<?php echo get_next_posts_page_link(); ?>', {}, function(){ $wptouch('#call<?php echo md5($_SERVER['REQUEST_URI']); ?>').fadeOut();})"><?php if (is_search()) { ?><?php _e( "Load more search results...", "wptouch" ); ?><?php } elseif (is_category()) { ?><?php _e( "Load more category results...", "wptouch" ); ?><?php } elseif (function_exists('wp_tag_cloud') && is_tag()) { ?><?php _e( "Load more tag results...", "wptouch" ); ?><?php } else { ?><?php _e( "Load more entries...", "wptouch" ); ?><?php } ?></a> <img id="spinner<?php echo md5($_SERVER['REQUEST_URI']); ?>" class="spin" src="<?php bloginfo('template_directory'); ?>/images/main-ajax-loader.gif" style="display:none" alt="" />
+			<div id="call<?php echo md5($_SERVER['REQUEST_URI']); ?>" class="ajax-load-more">
+				<img id="spinner<?php echo md5($_SERVER['REQUEST_URI']); ?>" class="spin" src="<?php bloginfo('template_directory'); ?>/images/main-ajax-loader.gif" style="display:none" alt="" /> <a class="ajax" href="javascript:$wptouch('#spinner<?php echo md5($_SERVER['REQUEST_URI']); ?>').fadeIn(200); $wptouch('#ajaxentries<?php echo md5($_SERVER['REQUEST_URI']); ?>').load('<?php echo get_next_posts_page_link(); ?>', {}, function(){ $wptouch('#call<?php echo md5($_SERVER['REQUEST_URI']); ?>').fadeOut();})"><?php if (is_search()) { ?><?php _e( "Load more search results...", "wptouch" ); ?><?php } elseif (is_category()) { ?><?php _e( "Load more category results...", "wptouch" ); ?><?php } elseif (function_exists('wp_tag_cloud') && is_tag()) { ?><?php _e( "Load more tag results...", "wptouch" ); ?><?php } else { ?><?php _e( "Load more entries...", "wptouch" ); ?><?php } ?></a>
 						<div class="post-spacer"></div>
 					<div class="clearer"></div>
-				</div>				
+				</div>
 					<div id="ajaxentries<?php echo md5($_SERVER['REQUEST_URI']); ?>"></div>
 			</div>
+			
 		
 				<?php } elseif (!bnc_is_js_enabled() && is_search()) { ?>
 					<div class="main-navigation">
