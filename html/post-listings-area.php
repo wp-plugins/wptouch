@@ -8,25 +8,25 @@
 	
 	<div class="wptouch-item-content-box1">		
 		<div class="wptouch-checkbox-row">
-			<input type="checkbox" name="enable-main-name" <?php if (isset($wptouch_settings['enable-main-name']) && $wptouch_settings['enable-main-name'] == 1) echo('checked'); ?>>
+			<input type="checkbox" name="enable-main-name" <?php if (isset($wptouch_settings['enable-main-name']) && $wptouch_settings['enable-main-name'] == 1) echo('checked'); ?> />
 			<label for="enable-authorname"> <?php _e( "Show Author's Name", "wptouch" ); ?></label>
 		</div>
 		
 		<div class="wptouch-checkbox-row">
-			<input type="checkbox" name="enable-main-categories" <?php if (isset($wptouch_settings['enable-main-categories']) && $wptouch_settings['enable-main-categories'] == 1) echo('checked'); ?>>
+			<input type="checkbox" name="enable-main-categories" <?php if (isset($wptouch_settings['enable-main-categories']) && $wptouch_settings['enable-main-categories'] == 1) echo('checked'); ?> />
 			<label for="enable-categories"> <?php _e( "Show Categories", "wptouch" ); ?></label>
 		</div>
 		
 		<div class="wptouch-checkbox-row">
-			<input type="checkbox" name="enable-main-tags" <?php if (isset($wptouch_settings['enable-main-tags']) && $wptouch_settings['enable-main-tags'] == 1) echo('checked'); ?>>
+			<input type="checkbox" name="enable-main-tags" <?php if (isset($wptouch_settings['enable-main-tags']) && $wptouch_settings['enable-main-tags'] == 1) echo('checked'); ?> />
 			<label for="enable-tags"> <?php _e( "Show Tags", "wptouch" ); ?></label>
 		</div>
 		
 		<div class="wptouch-checkbox-row">
-			<input type="checkbox" name="enable-post-excerpts" <?php if (isset($wptouch_settings['enable-post-excerpts']) && $wptouch_settings['enable-post-excerpts'] == 1) echo('checked'); ?>>
+			<input type="checkbox" name="enable-post-excerpts" <?php if (isset($wptouch_settings['enable-post-excerpts']) && $wptouch_settings['enable-post-excerpts'] == 1) echo('checked'); ?> />
 			<label for="enable-excerpts"><?php _e( "Hide Excerpts (if unchecked the excerpts will be shown, and the drop arrows will be hidden)", "wptouch" ); ?></label>
 		</div>
-	</div>
+	</div><!-- .wptouch-item-content-box1 -->
 	
 	<div class="wptouch-clearer"></div>	
-</div>
+</div><!-- .wptouch-itemrow -->

@@ -121,11 +121,11 @@
 	font-size: 11px;
 }
 
-.wptouch-select-right select {
-	width: 120px;
+#wptouch-theme .wptouch-select-right select#home-page {
+	width: 150px;
 }
 
-.wptouch-checkbox-row label {
+#wptouch-theme .wptouch-checkbox-row label {
 	margin-left: 5px;
 }
 
@@ -208,11 +208,31 @@
 	list-style-type: none;
 	border-bottom: 1px solid #e6e6e6;
 	display: block;
-	width: 150%;
+	width: 110%;
 }
 
 .donate-spacer {
    padding-bottom: 20px;
+}
+
+
+
+/* @end */
+
+/* @group Home Page Block */
+
+#wptouch-theme .home-page-block .wptouch-select-row {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	width: 55%;
+	position: relative;
+}
+
+#wptouch-theme .home-page-block .wptouch-select-row select {
+	width: 200px;
+	position: absolute;
+	right: 0;
+	top: 0;
 }
 
 
@@ -298,16 +318,17 @@
 
 #wptouch-theme .wptouch-select-row {
 	display: block;
-	width: 70%;
+	width: 75%;
 	background-color: #e2f5fe;
 	border: 1px solid #8aceff;
-	margin-bottom: 4px;
-	padding: 9px 5px 25px;
+	margin-bottom: 10px;
 	border-radius: 3px;
 	-moz-border-radius: 3px;
 	-webkit-border-radius: 3px;
 	font-weight: bold;
 	margin-top: 0;
+	padding: 9px 5px;
+	position: relative;
 }
 
 #wptouch-theme .wptouch-select-row .logohome {
@@ -315,13 +336,17 @@
 }
 
 #wptouch-theme .wptouch-select-left {
-	float: left;
+	width: 65%;
+	display: block;
 }
 
 #wptouch-theme .wptouch-select-right {
+	position: absolute;
+	text-align: right;
+	vertical-align: top;
 	float: right;
-	position: relative;
-	bottom: 4px;
+	right: 5px;
+	top: 4px;
 }
 
 #wptouch-theme .wptouch-select-right select {
@@ -415,22 +440,6 @@
 	-moz-border-radius: 3px;
 	-webkit-border-radius: 3px;
 	font-weight: bold;
-}
-
-
-
-/* @end */
-
-/* @group Home Page Block */
-
-#wptouch-theme .home-page-block .wptouch-select-row {
-	padding-top: 10px;
-	padding-bottom: 25px;
-	width: 55%;
-}
-
-#wptouch-theme .home-page-block .wptouch-select-row select {
-	width: 200px;
 }
 
 

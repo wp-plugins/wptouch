@@ -29,14 +29,14 @@
 		<div id="upload_button"></div> 
 			
 		<p><?php _e( "In the icon-pool folder is a ", "wptouch" ); ?><strong><a href="<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/images/icon-pool/template.psd"><?php _e( ".psd template", "wptouch"); ?></a></strong> <?php _e( "which you can use to build icons yourself.", "wptouch" ); ?></p>
-	</div>
+	</div><!-- .wptouch-item-desc -->
 		
 	<div class="wptouch-item-content-box1">	
 		<?php bnc_show_icons(); ?>
 	</div>
 	
 	<div class="wptouch-clearer"></div>
-</div>
+</div><!-- #available_icons -->
 
 <div class="wptouch-itemrow">
 	<div class="wptouch-item-desc">
@@ -47,9 +47,22 @@
 		<p><?php _e( "Next, select the icons from the drop lists that you want to pair with each page/menu item.", "wptouch" ); ?></p>
 		
 		<p><?php _e( "Lastly, you can decide if pages are listed by the page order in WordPress, or by name (default).", "wptouch" ); ?></p>
-	</div>
+	</div><!-- .wptouch-item-desc-->
 		
 	<div class="wptouch-item-content-box1">
+		
+		<div class="wptouch-select-row" id="pages-sort-order">
+			<div class="wptouch-select-left">	
+				<?php _e( "Sort Order", "wptouch" ); ?>
+			</div>
+			<div class="wptouch-select-right">
+				<select name="sort-order">
+					<option value="name"<?php if ( $wptouch_settings['sort-order'] == 'name') echo " selected"; ?>><?php _e( "Name", "wptouch" ); ?></option>
+					<option value="page"<?php if ( $wptouch_settings['sort-order'] == 'page') echo " selected"; ?>><?php _e( "Page", "wptouch" ); ?></option>
+				</select>
+			</div>
+		</div>
+
 		<div class="wptouch-select-row">
 			<div class="wptouch-select-left">
 				<?php _e( "Logo &amp; Home Screen Bookmark Icon", "wptouch" ); ?>
@@ -74,20 +87,8 @@
 				</select>
 			</div>
 		</div>
-		<?php } ?>
-		
-		<div class="wptouch-select-row" id="pages-sort-order">
-			<div class="wptouch-select-left">	
-				<?php _e( "Sort Order", "wptouch" ); ?>
-			</div>
-			<div class="wptouch-select-right">
-				<select name="sort-order">
-					<option value="name"<?php if ( $wptouch_settings['sort-order'] == 'name') echo " selected"; ?>><?php _e( "Name", "wptouch" ); ?></option>
-					<option value="page"<?php if ( $wptouch_settings['sort-order'] == 'page') echo " selected"; ?>><?php _e( "Page", "wptouch" ); ?></option>
-				</select>
-			</div>
-		</div>
-	</div>
-	
+		<?php } ?>		
 	<div class="wptouch-clearer"></div>
-</div>
+	
+	</div><!-- .wptouch-item-content-box1 -->
+</div><!-- .wptouch-itemrow -->

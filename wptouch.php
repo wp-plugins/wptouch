@@ -519,7 +519,7 @@ function bnc_wp_touch_page() {
 </div>
 
 <?php 
-echo('</div></div>'); } 
+echo('</div>'); } 
 add_action('wp_footer', 'wptouch_switch');
 add_action('admin_head', 'wptouch_admin_css');
 add_action('admin_menu', 'bnc_options_menu'); 
