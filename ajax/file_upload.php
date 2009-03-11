@@ -25,7 +25,7 @@
 					if ( !file_exists( $upload_dir . $f['name'] ) ) {
 						echo 'There seems to have been an error.  Please try your upload again.';
 					} else {
-						echo 'File has been saved! Click <a href="#" onclick="location.reload(true); return false;">here to refresh the page</a>.';						
+						echo 'File has been saved! <br />Click <a href="#" style="color:red" onclick="location.reload(true); return false;">here to refresh the page</a>.<br /><br />';						
 					}					
 				} else echo __( 'Sorry, only PNG, GIF and JPEG images are supported.', 'wptouch' );
 			} else echo __( 'Image too large', 'wptouch' );

@@ -4,11 +4,11 @@
 
 #wptouch-theme {
 	font-family: "Lucida Grande", Georgia, Arial, sans-serif;
-	width: 100%;
 	margin-bottom: 0;
 	margin-top: 0;
 	margin-right: auto;
 	float: left;
+	width: 96.5%;
 }
 
 #wptouch-theme h4 {
@@ -312,7 +312,8 @@
 /* @group Logo/Bookmark, Page & Menu Icons Section */
 
 #wptouch-theme .wptouch-select-row label {
-	margin-left: 5px;
+	margin-left: 20px;
+	display: block;
 }
 
 #wptouch-theme .wptouch-select-row {
@@ -352,8 +353,23 @@
 	width: 120px;
 }
 
+#wptouch-theme .wptouch-select-left input {
+	float: left;
+	margin-right: 2px;
+	margin-bottom: 9px;
+}
+
 #wptouch-theme .wptouch-checkbox-row label {
 	margin-left: 5px;
+}
+
+#wptouch-theme #pages-sort-order {
+	background-color: #f4f5e5;
+	border-color: #fcc49b;
+}
+
+#wptouch-theme #pages-sort-order select {
+	border-color: #fcc49b;
 }
 
 

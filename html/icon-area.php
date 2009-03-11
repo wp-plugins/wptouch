@@ -53,12 +53,12 @@
 		
 		<div class="wptouch-select-row" id="pages-sort-order">
 			<div class="wptouch-select-left">	
-				<?php _e( "Sort Order", "wptouch" ); ?>
+				<?php _e( "Menu List Sort Order", "wptouch" ); ?>
 			</div>
-			<div class="wptouch-select-right">
+			<div class="wptouch-select-right sort-order">
 				<select name="sort-order">
-					<option value="name"<?php if ( $wptouch_settings['sort-order'] == 'name') echo " selected"; ?>><?php _e( "Name", "wptouch" ); ?></option>
-					<option value="page"<?php if ( $wptouch_settings['sort-order'] == 'page') echo " selected"; ?>><?php _e( "Page", "wptouch" ); ?></option>
+					<option value="name"<?php if ( $wptouch_settings['sort-order'] == 'name') echo " selected"; ?>><?php _e( "By Name", "wptouch" ); ?></option>
+					<option value="page"<?php if ( $wptouch_settings['sort-order'] == 'page') echo " selected"; ?>><?php _e( "By Page ID", "wptouch" ); ?></option>
 				</select>
 			</div>
 		</div>
