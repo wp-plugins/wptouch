@@ -84,7 +84,7 @@ Here we're making sure that each ajax div will have a unique ID.  -->
       
 <div class="clearer"></div>
   
-    <div id="entry-<?php the_ID(); ?>" class="pageentry">
+    <div id="entry-<?php the_ID(); ?>" class="pageentry <?php echo $wptouch_settings['style-text-size']; ?> <?php echo $wptouch_settings['style-text-justify']; ?>">
         <?php the_content(); ?>  
 <?php if (is_page('archives')) {
 // If you have a page named 'Archives', the WP tag cloud will be displayed below your content. Simply remove this wrapper. 

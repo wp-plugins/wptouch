@@ -24,6 +24,7 @@ The theme also includes the ability for your visitors to easily switch between t
 * Changed database calls to use wpdb object, will hopefully work with wpmu
 * Internationalization preparation of the admin and theme files (for WPtouch 1.9)
 * Added ability to add/delete custom icons that survive WPtouch & WordPress upgrades
+* Added ability to select left/full text justification, 3 font sizes
 * Changed how WPtouch admin panel shows icons, more room for custom icons
 * Added channel capability for Adsense
 * Now suppresses banners created by the Ribbon Manger Plugin

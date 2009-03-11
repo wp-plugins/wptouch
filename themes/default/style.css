@@ -413,10 +413,8 @@ a.h2 {
 
 .mainentry {
 	color: #444;
-	text-align: justify;
 	padding: 7px 0 0;
-	font-size: 13px;
-	line-height: 16px;
+	line-height: 145%;
 	display: block;
 }
 
@@ -802,10 +800,8 @@ img.small {
 
 .pageentry {
 	color: #444;
-	text-align: justify;
 	padding: 2px 0 0;
-	font-size: 13px;
-	line-height: 16px;
+	line-height: 145%;
 	display: block;
 }
 
