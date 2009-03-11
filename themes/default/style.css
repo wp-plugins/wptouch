@@ -34,18 +34,6 @@ body {
 	background: repeat;
 }
 
-.classic-wptouch-bg {
-	background-image: url(images/pinstripes-classic.gif);
-}
-
-.horizontal-wptouch-bg {
-	background-image: url(images/pinstripes-horizontal.gif);
-}
-
-.diagonal-wptouch-bg {
-	background-image: url(images/pinstripes-diagonal.gif);
-}
-
 a:active {
 	color: #bf0000;
 }
@@ -629,8 +617,6 @@ a.sh2 {
 	display: block;
 	padding-top: 5px;
 	overflow: hidden;
-	text-align: justify;
-	font-size: 1.1em;
 }
 
 .single-post-meta-top {
@@ -1360,5 +1346,45 @@ a.search-close {
 }
 
 
+
+/* @end */
+
+/* @group Text Options */
+
+.full-justified {
+	text-align: justify;
+}
+
+.left-justifed {
+	text-align: left;
+}
+
+.small-text {
+	font-size: 1.1em;
+}
+
+.medium-text {
+	font-size: 1.2em;
+}
+
+.large-text {
+	font-size: 1.3em;
+}
+
+/* @end */
+
+/* @group Background Options */
+
+.classic-wptouch-bg {
+	background-image: url(images/pinstripes-classic.gif);
+}
+
+.horizontal-wptouch-bg {
+	background-image: url(images/pinstripes-horizontal.gif);
+}
+
+.diagonal-wptouch-bg {
+	background-image: url(images/pinstripes-diagonal.gif);
+}
 
 /* @end */
