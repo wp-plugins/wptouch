@@ -58,6 +58,8 @@ $wptouch_defaults = array(
 	'enable-main-email' => true,
 	'header-border-color' => '333333',
 	'header-text-color' => 'eeeeee',
+	'style-text-justify' => 'full',
+	'style-text-size' => 'small',
 	'link-color' => '006bb3'
 );
 

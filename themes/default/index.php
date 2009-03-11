@@ -1,4 +1,5 @@
 <?php global $is_ajax; $is_ajax = isset($_SERVER['HTTP_X_REQUESTED_WITH']); if (!$is_ajax) get_header(); ?>
+<?php $wptouch_settings = bnc_wptouch_get_settings(); ?>
 
 <!-- There's a lot going on in this file, as we've condensed several templates into the one index.php file... let's rock...
 Here we're making sure that each ajax div will have a unique ID.  -->
@@ -173,7 +174,7 @@ Here we're making sure that each ajax div will have a unique ID.  -->
 			<?php _e( 'Filed', 'wptouch' ); ?>:<?php the_category(', '); ?><?php } ?>
 			</div>	
 			<div class="clearer"></div>	
-            <div id="entry-<?php the_ID(); ?>" <?php if (bnc_excerpt_enabled()) { ?>style="display:none"<?php } ?> class="mainentry">
+            <div id="entry-<?php the_ID(); ?>" <?php if (bnc_excerpt_enabled()) { ?>style="display:none"<?php } ?> class="mainentry <?php echo $wptouch_settings['style-text-size']; ?> <?php echo $wptouch_settings['style-text-justify']; ?>">
  				<?php the_content_rss('', true, '', 50); ?>
  		    <a href="<?php the_permalink() ?>"><?php _e( "Read More", "wptouch" ); ?> &raquo;</a>
 	        </div>  

@@ -1,6 +1,9 @@
 <!-- Here we're establishing whether the page was loaded via Ajax or not, for dynamic purposes. 
 If it's ajax, we're not bringing in header.php and footer.php -->
 
+<?php $wptouch_settings = bnc_wptouch_get_settings(); ?>
+
+
 <?php global $is_ajax; $is_ajax = isset($_SERVER['HTTP_X_REQUESTED_WITH']); if (!$is_ajax) get_header(); ?>
 	<div class="content" id="content<?php echo md5($_SERVER['REQUEST_URI']); ?>">
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
@@ -19,7 +22,7 @@ If it's ajax, we're not bringing in header.php and footer.php -->
 	</div>
 
          <div class="post singlecut" id="post-<?php the_ID(); ?>">
-         	<div id="singlentry">
+         	<div id="singlentry" class="<?php echo $wptouch_settings['style-text-size']; ?> <?php echo $wptouch_settings['style-text-justify']; ?>">
             	<?php the_content(); ?>				
 			</div>  
 			

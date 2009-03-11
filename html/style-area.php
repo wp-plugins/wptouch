@@ -22,6 +22,23 @@
 	
 		<div class="header-item-desc"><?php _e( "Site-wide Link Color", "wptouch" ); ?> <small>(<?php _e( "the color for most of the links in WPtouch", "wptouch" ); ?>)</small></div>
 		<div class="header-input">#<input type="text" name="link-color" value="<?php echo $wptouch_settings['link-color']; ?>" /></div>		
+
+		<div class="header-item-desc"><?php _e( "Font Size", "wptouch" ); ?></div>
+		<div class="header-input">
+			<select name="style-text-size">
+				<option <?php if ($wptouch_settings['style-text-size'] == "small") echo " selected"; ?> value="small"><?php _e( "Small", "wptouch" ); ?></option>
+				<option <?php if ($wptouch_settings['style-text-size'] == "medium") echo " selected"; ?> value="medium"><?php _e( "Medium", "wptouch" ); ?></option>
+				<option <?php if ($wptouch_settings['style-text-size'] == "large") echo " selected"; ?> value="large"><?php _e( "Large", "wptouch" ); ?></option>
+			</select>
+		</div>		
+
+		<div class="header-item-desc"><?php _e( "Font Justification", "wptouch" ); ?></div>
+		<div class="header-input">
+			<select name="style-text-justify">
+				<option <?php if ($wptouch_settings['style-text-justify'] == "left") echo " selected"; ?> value="left"><?php _e( "Left", "wptouch" ); ?></option>
+				<option <?php if ($wptouch_settings['style-text-justify'] == "full") echo " selected"; ?> value="full"><?php _e( "Full", "wptouch" ); ?></option>
+			</select>
+		</div>
 	</div>
 	
 	<div class="wptouch-clearer"></div>

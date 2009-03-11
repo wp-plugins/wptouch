@@ -121,6 +121,14 @@
 			$a['adsense-channel'] = $_POST['adsense-channel'];
 		}		
 
+		if ( isset($_POST['style-text-size']) ) {
+			$a['style-text-size'] = $_POST['style-text-size'];
+		}
+
+		if ( isset($_POST['style-text-justify']) ) {
+			$a['style-text-justify'] = $_POST['style-text-justify'];
+		}
+
 		foreach ($_POST as $k => $v) {
 			if ($k == 'enable_main_title') {
 				$a['main_title'] = $v;
