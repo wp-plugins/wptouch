@@ -165,7 +165,7 @@
 #wptouch-theme #wptouch-news-frame {
    float: left;
    margin-top: -10px;
-	width: 50%;
+	width: 48%;
 }
 
 #wptouch-theme #wptouch-news-donate {
@@ -174,7 +174,7 @@
 	float: right;
 	bottom: 25px;
 	line-height: 16px;
-	width: 28%;
+	width: 26%;
 }
 
 #wptouch-theme #wptouch-news-frame h3 {

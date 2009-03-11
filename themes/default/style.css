@@ -31,7 +31,19 @@ body {
 	padding: 0;
 	font: 12px Helvetica;
 	-webkit-text-size-adjust: none;
-	background: url(images/pinstripes.jpg) repeat;
+	background: repeat;
+}
+
+body .classic-wptouch-bg {
+	background-image: url(images/pinstripes-classic.jpg);
+}
+
+body .horizontal-wptouch-bg {
+	background-image: url(images/pinstripes-horizontal.gif);
+}
+
+body .diagonal-wptouch-bg {
+	background-image: url(images/pinstripes-diagonal.gif);
 }
 
 a:active {
@@ -612,12 +624,13 @@ a.sh2 {
 }
 
 #singlentry {
-	line-height: 21px;
-	color: #444;
+	line-height: 145%;
+	color: #343434;
 	display: block;
 	padding-top: 5px;
 	overflow: hidden;
-	font-size: 1.2em;
+	text-align: justify;
+	font-size: 1.1em;
 }
 
 .single-post-meta-top {
