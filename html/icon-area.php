@@ -11,7 +11,7 @@
 				
 		<div id="upload_response"></div>
 		<div id="upload_progress" style="display: none;">
-			<p><img src="<?php echo get_bloginfo('url') . '/wp-content/plugins/wptouch/images/progress.gif'; ?>" alt="" /></p>
+			<p><img src="<?php echo get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/progress.gif'; ?>" alt="" /></p>
 		</div>
 		<script type="text/javascript">
 			$j = jQuery.noConflict();
@@ -28,7 +28,8 @@
 			
 		<div id="upload_button"></div> 
 			
-		<p><?php _e( "In the icon-pool folder is a ", "wptouch" ); ?><strong><a href="<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/images/icon-pool/template.psd"><?php _e( ".psd template", "wptouch"); ?></a></strong> <?php _e( "which you can use to build icons yourself.", "wptouch" ); ?></p>
+		<p><?php _e( "Need help getting started?", "wptouch" ); ?></p>
+		<p><?php echo sprintf(__( 'Download our %s Photoshop template%s which you can use to build custom icons WPtouch style.', 'wptouch'), '<strong><a href="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/icon-pool/template.psd">', '</a></strong>' ); ?></p>
 	</div><!-- .wptouch-item-desc -->
 		
 	<div class="wptouch-item-content-box1">	

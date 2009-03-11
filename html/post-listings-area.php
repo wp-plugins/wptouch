@@ -24,7 +24,7 @@
 		
 		<div class="wptouch-checkbox-row">
 			<input type="checkbox" name="enable-post-excerpts" <?php if (isset($wptouch_settings['enable-post-excerpts']) && $wptouch_settings['enable-post-excerpts'] == 1) echo('checked'); ?> />
-			<label for="enable-excerpts"><?php _e( "Hide Excerpts (if unchecked the excerpts will be shown, and the drop arrows will be hidden)", "wptouch" ); ?></label>
+			<label for="enable-excerpts"><?php _e( "Hide Excerpts", "wptouch" ); ?></label>
 		</div>
 	</div><!-- .wptouch-item-content-box1 -->
 	

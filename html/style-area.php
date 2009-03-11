@@ -3,8 +3,8 @@
 <div class="wptouch-itemrow wptouchbump">
 	<div class="wptouch-item-desc">
 		<h2><?php _e( "Style &amp; Color Options", "wptouch" ); ?></h2>
-		<p><?php _e( "Customize the colors WPtouch will use for your website.", "wptouch" ); ?></p>
-		<p><a href="http://www.colorpicker.com/" target="_blank"><?php _e( "Click here", "wptouch" ); ?></a> <?php _e( "to view a color picker to help you select your colors.", "wptouch" ); ?></p>
+		<p><?php _e( "Customize the appearance of your website title, colors and text WPtouch will use.", "wptouch" ); ?></p>
+		<p><a href="http://www.colorpicker.com/" target="_blank"><?php _e( "Click here", "wptouch" ); ?></a> <?php _e( "to view a color picker to help you select hex colors.", "wptouch" ); ?></p>
 	</div>
 		
 	<div class="wptouch-item-content-box1 wptouchstyle">

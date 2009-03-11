@@ -519,6 +519,8 @@
 	background: url(../images/upload.png);
 	width: 117px;
 	height: 40px;
+	cursor: pointer;
+	display: block;
 }
 
 /* @end */

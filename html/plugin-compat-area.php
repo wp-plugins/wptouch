@@ -17,14 +17,14 @@
 			} elseif ($version >= 2.3) {
 				echo __( 'WordPress installed: ', 'wptouch' ) . get_bloginfo('version') . '<br />(' . __( 'Supported, Upgrade Recommended', 'wptouch' ) . ')';
 			} else {
-				echo __( 'WordPress installed: ', 'wptouch' ) . get_bloginfo('version') . '<br />(' . __( 'NOT Supported! Upgrade', 'wptouch' ) . ' <u>' . __( 'Required', 'wptouch' ) . '</u>)';
+				echo __( 'WordPress installed: ', 'wptouch' ) . get_bloginfo('version') . '<br />(' . __( 'NOT Supported! Upgrade Required', 'wptouch' ) . ' <u>' . __( 'Required', 'wptouch' ) . '</u>)';
 			} 
 		?>	
 		</strong>
 	</p>
 	<p><?php _e( "Here you'll find info on additional WPtouch features and their requirements, including those activated with companion plugins.", "wptouch" ); ?></p>
 	<p><?php _e( "For further documentation visit" ); ?> <a href="http://www.bravenewcode.com/wptouch/"><?php _e( "BraveNewCode", "wptouch" ); ?></a>.</p>
-	<p><?php _e( "To report an incompatible plugin, send an e-mail to", "wptouch" ); ?> <a href="mailto:wptouch@bravenewcode.com">wptouch@bravenewcode.com</a></p>
+	<p><?php _e( "To report an incompatible plugin, send a detailed e-mail to", "wptouch" ); ?> <a href="mailto:wptouch@bravenewcode.com">wptouch@bravenewcode.com</a></p>
 </div>
 		
 <div class="wptouch-item-content-box1 wptouch-admin-plugins">
