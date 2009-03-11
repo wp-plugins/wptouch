@@ -6,7 +6,7 @@ If it's ajax, we're not bringing in header.php and footer.php -->
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 			<div class="post">
 			    <a class="sh2" href="<?php the_permalink() ?>" rel="bookmark" title="<?php _e( "Permanent Link to ", "wptouch" ); ?><?php if (function_exists('the_title_attribute')) the_title_attribute(); else the_title(); ?>"><?php the_title(); ?></a>
-			        <div class="single-post-meta-top"><?php echo get_the_time('M / d / y - g:ia') ?> &rsaquo; <?php the_author() ?><br />
+			        <div class="single-post-meta-top"><?php echo get_the_time('M jS @ h:i a') ?> &rsaquo; <?php the_author() ?><br />
 
 <!-- Let's check for DISQUS... we need to skip to a different div if it's installed and active -->		
 	

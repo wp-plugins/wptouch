@@ -37,7 +37,7 @@ $oddcomment = 'alt';
 				<?php } ?>
 
 		<a href="<?php comment_author_url(); ?>"><?php comment_author(); ?></a> said:
-			<div class="comdater"><?php comment_time('m / d / H:i'); ?></div>  
+			<div class="comdater"><?php comment_time('M jS @ h:i a'); ?></div>  
 	</div><!--end comtop-->
 
         <!-- <?php $comment_num++; ?>  -->

@@ -193,7 +193,7 @@ class WPtouchPlugin {
 		
 		// Add whatever user agents you want here to the array if you want to make this show on a Blackberry 
 		// or something. No guarantees it'll look pretty, though!
-		$useragents = array("iPhone", "iPod", "safari", "dream", "incognito", "webmate", "BlackBerry9500", "BlackBerry9530");
+		$useragents = array("iPhone", "iPod", "aspen", "dream", "incognito", "webmate", "BlackBerry9500", "BlackBerry9530");
 		$this->applemobile = false;
 		foreach ($useragents as $useragent) {
 			if (eregi($useragent, $container)) {
