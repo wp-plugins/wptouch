@@ -79,11 +79,11 @@ We've commented below to let you know what works what, so if you do go messing a
 	<?php get_currentuserinfo();
   		if (!current_user_can('edit_posts') && bnc_is_js_enabled()) : ?>
 		    <a href="javascript:$wptouch('#wptouch-login').slideToggle(200);">
-				<img src="<?php bloginfo('template_directory'); ?>/images/menu/touchmenu-login.png" alt="" />
+				<img src="<?php bloginfo('template_directory'); ?>/images/menu/touchmenu-login.png" alt="" /> <?php _e( 'Login', 'wptouch' ); ?>
 			</a>	
 		<?php elseif (!current_user_can('edit_posts') && !bnc_is_js_enabled()) : ?>
 		    <a href="javascript:document.getElementById('wptouch-login').style.display='block';">
-				<img src="<?php bloginfo('template_directory'); ?>/images/menu/touchmenu-login.png" alt="" />
+				<img src="<?php bloginfo('template_directory'); ?>/images/menu/touchmenu-login.png" alt="" /> <?php _e( 'Login', 'wptouch' ); ?>
 			</a>	
 		<?php else : ?>	
 		<?php //Let's do some a WordPress version check to figure out the correct logout method
@@ -93,7 +93,7 @@ We've commented below to let you know what works what, so if you do go messing a
 			<?php } else { ?>
 			<a href="<?php bloginfo('wpurl'); ?>/wp-login.php?action=logout&redirect_to=<?php echo $_SERVER['REQUEST_URI']; ?>">
 			<?php } ?>
-				<img src="<?php bloginfo('template_directory'); ?>/images/menu/touchmenu-logout.png" alt="" />
+				<img src="<?php bloginfo('template_directory'); ?>/images/menu/touchmenu-logout.png" alt="" /> <?php _e( 'Logout', 'wptouch' ); ?>
 			</a>
 		<?php endif; ?>
 <?php } ?>
@@ -105,7 +105,7 @@ We've commented below to let you know what works what, so if you do go messing a
 			<a href="javascript:document.getElementById('wptouch-cats').style.display='block';">
 		<?php } ?>
 		
-		<img src="<?php bloginfo('template_directory'); ?>/images/menu/	catsmenu.png" alt="" /></a>	
+		<img src="<?php bloginfo('template_directory'); ?>/images/menu/	catsmenu.png" alt="" /> <?php _e( 'Categories', 'wptouch' ); ?></a>	
 	<?php } ?>
 
 	
@@ -114,7 +114,7 @@ We've commented below to let you know what works what, so if you do go messing a
 		<?php } else { ?>
 		    <a href="javascript:document.getElementById('wptouch-search').style.display='block';">
 		<?php } ?>
-		    <img src="<?php bloginfo('template_directory'); ?>/images/menu/search-touchmenu.png" alt="" />
+		    <img src="<?php bloginfo('template_directory'); ?>/images/menu/search-touchmenu.png" alt="" /> <?php _e( 'Search', 'wptouch' ); ?>
 		</a>
 	
 	<?php if (bnc_is_js_enabled()) { ?>
@@ -122,7 +122,7 @@ We've commented below to let you know what works what, so if you do go messing a
 				<?php } else { ?>
 			<a href="javascript:document.getElementById('dropmenu').style.display='block';">
 		<?php } ?>
-		<img src="<?php bloginfo('template_directory'); ?>/images/menu/touchmenu.png" alt="" />
+		<img src="<?php bloginfo('template_directory'); ?>/images/menu/touchmenu.png" alt="" /> <?php _e( 'Menu', 'wptouch' ); ?>
 		</a>
 	</div>
 

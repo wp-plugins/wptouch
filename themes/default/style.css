@@ -155,8 +155,17 @@ blockquote {
 	margin: 0;
 }
 
+#drop-fade a {
+	color: #eee;
+	font-size: 10px;
+	position: relative;
+	bottom: 4px;
+	margin-right: 15px;
+}
+
 #drop-fade img {
-	padding-right: 12px;
+	position: relative;
+	top: 5px;
 }
 
 /* @group Categories */
@@ -609,6 +618,7 @@ a.sh2 {
 	color: #444;
 	display: block;
 	padding-top: 5px;
+	overflow: hidden;
 }
 
 .single-post-meta-top {
@@ -997,6 +1007,7 @@ img.pageicon {
 	bottom: 4px;
 	text-align: justify;
 	font-size: 13px;
+	overflow: hidden;
 }
 
 .comdater {
