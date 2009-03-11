@@ -668,11 +668,11 @@ img.small {
 	background: #fff repeat-x;
 	margin: 10px;
 	padding: 4px 5px 12px;
+	line-height: 16px;
 }
 
 .navigation a {
-	color: #222;
-	font-size: 12px;
+	font-size: 11px;
 	font-weight: bold;
 	padding-bottom: 10px;
 	padding-top: 2px;
