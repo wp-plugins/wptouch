@@ -83,12 +83,11 @@
 	display: block;
 	width: 100%;
 	border-bottom-style: none;
-	font: bold 18px Georgia, Garamond, Arial, Verdana, sans-serif;
+	font: bold 19px Georgia, Garamond, Arial, Verdana, sans-serif;
 	padding: 0;
 	margin: 0;
 	text-shadow: #ecf4fc -1px -1px 1px;
 	letter-spacing: -1px;
-	word-spacing: 1px;
 }
 
 #wptouch-theme .wptouch-itemrow {
@@ -411,35 +410,10 @@
 /* @group Save Button */
 
 #wptouch-theme input#wptouch-button {
-	background-color: #E4F2FD;
-	color: #264761;
-	border: 1px solid #5289b2;
-	-moz-border-radius: 3px;
-	-webkit-border-radius: 3px;
-	font-weight: bold;
-	font-size: 11px;
 	margin-top: 10px;
-	cursor: pointer;
-	padding-right: 5px;
-	padding-left: 5px;
 	margin-bottom: 70px;
 	clear: both;
 	float: right;
-}
-
-#wptouch-theme input#wptouch-button:hover {
-	border: 1px solid #b9d6de;
-	background-color: #264761;
-	color: #c3e1ef;
-}
-
-#wptouch-theme input#wptouch-button:active {
-	border: 1px solid #b9d6de;
-	background-color: #d54e21;
-	color: #eee;
-	-moz-border-radius: 3px;
-	-webkit-border-radius: 3px;
-	font-weight: bold;
 }
 
 

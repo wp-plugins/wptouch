@@ -514,7 +514,7 @@ function bnc_wp_touch_page() {
 <?php require_once( 'html/default-menu-area.php' ); ?>
 <?php require_once( 'html/plugin-compat-area.php' ); ?>		
 <?php echo('' . WPtouch('<div class="wptouch-version"> This is ','</div>') . ''); ?>
-<input type="submit" name="submit" value="<?php _e('Save Options', 'wptouch' ); ?>" id="wptouch-button" />
+<input type="submit" name="submit" value="<?php _e('Save Options', 'wptouch' ); ?>" id="wptouch-button" class="button-primary" />
 </form>
 </div>
 

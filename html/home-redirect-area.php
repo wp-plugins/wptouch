@@ -7,7 +7,7 @@
 
 	<div class="wptouch-item-content-box1">
 		<div class="header-item-desc">
-			<?php _e( "If you'd like a different home page (your posts page for example)", "wptouch" ); ?><br /><?php _e( "select it from the list below.", "wptouch" ); ?><br /><br />
+			<?php _e( "If you'd like a different home page for your WPtouch mobile site", "wptouch" ); ?><br /><?php _e( "(your posts page for example) select it from the list below.", "wptouch" ); ?><br /><br />
 		</div>
 	
 		<div class="wptouch-select-row">
