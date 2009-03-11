@@ -5,6 +5,7 @@
 		<h2><?php _e( "News &amp; Updates", "wptouch" ); ?></h2>
 		<p><?php _e( "BraveNewCode blog entries tagged 'WPtouch'.", "wptouch" ); ?></p>
 		<p><?php _e( "This list updates with the latest information about the plugin's development.", "wptouch" ); ?></p>
+		<p class="callout"><strong><?php _e( "Interested in helping us internationalize WPtouch?" ); ?></strong><br /><br /><?php echo sprintf(__( "Send us an %se-mail%s telling us what language(s) you're fluent in.", "wptouch" ), '<a href="mailto:wptouch@bravenewcode.com">','</a>'); ?></p>
 	</div>
 		
 	<div class="wptouch-item-content-box1">

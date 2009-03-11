@@ -2,7 +2,7 @@
 <div class="wptouch-itemrow home-page-block">
 	<div class="wptouch-item-desc">
 		<h2><?php _e( "Home Page Redirection", "wptouch" ); ?></h2>
-		<p><?php echo sprintf( __( "For your home page, WPtouch respects the front page behavior you've defined in the %sWordPress -> Reading Options%s.", "wptouch"), '<a href="options-reading.php">', '</a>' ); ?></p>
+		<p><?php echo sprintf( __( "For your home page, WPtouch respects the front page behavior you've defined in the %sWordPress &raquo; Reading Options%s.", "wptouch"), '<br /><a href="options-reading.php">', '</a>' ); ?></p>
 	</div>
 
 	<div class="wptouch-item-content-box1">

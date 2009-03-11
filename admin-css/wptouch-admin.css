@@ -152,22 +152,22 @@
 
 /* @group News and Support */
 
-.newsblock {
+#wptouch-theme .newsblock {
 	position: relative;
 	clear: both;
 	bottom: 5px;
 }
 
-#wptouch-news-frame ul {
+#wptouch-theme #wptouch-news-frame ul {
 	margin-bottom: 20px;
 }
 
-#wptouch-news-frame {
+#wptouch-theme #wptouch-news-frame {
    float: left;
    margin-top: -10px;
 }
 
-#wptouch-news-donate {
+#wptouch-theme #wptouch-news-donate {
    font-size: 11px;
 	position: relative;
 	float: right;
@@ -176,32 +176,32 @@
 	width: 24%;
 }
 
-#wptouch-news-frame h3 {
+#wptouch-theme #wptouch-news-frame h3 {
 	margin-bottom: 11px;
 }
 
-#wptouch-news-donate h3 {
+#wptouch-theme #wptouch-news-donate h3 {
 	margin-bottom: 14px;
 }
 
-#wptouch-news a {
+#wptouch-theme #wptouch-news a {
 	text-decoration: none;
 	font: bold 11px "Lucida Grande", Arial, Verdana, sans-serif;
 	border-bottom-style: none;
 	color: #d54e21;
 }
 
-#wptouch-news a:hover {
+#wptouch-theme #wptouch-news a:hover {
 	color: #3c627f;
 }
 
-#wptouch-news ul {
+#wptouch-theme #wptouch-news ul {
 	margin: 0;
 	padding: 0;
 	list-style-type: none;
 }
 
-#wptouch-news li {
+#wptouch-theme #wptouch-news li {
 	padding: 4px 0;
 	margin: 0;
 	list-style-type: none;
@@ -210,8 +210,18 @@
 	width: 110%;
 }
 
-.donate-spacer {
+#wptouch-theme .donate-spacer {
    padding-bottom: 20px;
+}
+
+#wptouch-theme p.callout {
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	background-color: #fefbdb;
+	border: 1px solid #fce37b;
+	padding: 5px;
+	width: 80%;
+	color: #444;
 }
 
 
@@ -247,6 +257,7 @@
 
 #wptouch-theme .wptouchstyle input {
 	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
 	border: 1px solid #CCC;
 	background-color: #e2fffc;
 	color: #444;
