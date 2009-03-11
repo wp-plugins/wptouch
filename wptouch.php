@@ -60,6 +60,7 @@ $wptouch_defaults = array(
 	'header-text-color' => 'eeeeee',
 	'style-text-justify' => 'full',
 	'style-text-size' => 'small',
+	'style-background' => 'classic-wptouch-bg',
 	'link-color' => '006bb3'
 );
 

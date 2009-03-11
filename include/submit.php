@@ -129,6 +129,10 @@
 			$a['style-text-justify'] = $_POST['style-text-justify'];
 		}
 
+		if ( isset($_POST['style-background']) ) {
+			$a['style-background'] = $_POST['style-background'];
+		}
+
 		foreach ($_POST as $k => $v) {
 			if ($k == 'enable_main_title') {
 				$a['main_title'] = $v;

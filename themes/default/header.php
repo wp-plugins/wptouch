@@ -58,7 +58,8 @@ a {
 }
 </style>
 </head>
-<body>
+<?php $wptouch_settings = bnc_wptouch_get_settings(); ?>
+<body class="<?php echo $wptouch_settings['style-background']; ?>">
 <!-- Before we get rocking and rolling, you want not want to touch this code so much, as it holds everything required for the drop down-menu. Users can customize icons, colors, and the title in the header itself, which doesn't leave much room for changing things yourself. 
 
 That said, if you want to get funky with the look of it, you could always change the way the glossy bar looks, by editing 'menu-bk.png' and 'head-fade-bk.png', both of which are in the default/images/ folder.

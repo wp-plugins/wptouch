@@ -39,6 +39,15 @@
 				<option <?php if ($wptouch_settings['style-text-justify'] == "full") echo " selected"; ?> value="full"><?php _e( "Full", "wptouch" ); ?></option>
 			</select>
 		</div>
+
+		<div class="header-item-desc"><?php _e( "Background Style", "wptouch" ); ?></div>
+		<div class="header-input">
+			<select name="style-background">
+				<option <?php if ($wptouch_settings['style-background'] == "classic-wptouch-bg") echo " selected"; ?> value="classic-wptouch-bg"><?php _e( "Classic", "wptouch" ); ?></option>
+				<option <?php if ($wptouch_settings['style-background'] == "horizontal-wptouch-bg") echo " selected"; ?> value="horizontal-wptouch-bg"><?php _e( "Horizontal Pinstripes", "wptouch" ); ?></option>
+				<option <?php if ($wptouch_settings['style-background'] == "diagonal-wptouch-bg") echo " selected"; ?> value="diagonal-wptouch-bg"><?php _e( "Diagonal Pinstripes", "wptouch" ); ?></option>
+			</select>
+		</div>
 	</div>
 	
 	<div class="wptouch-clearer"></div>
