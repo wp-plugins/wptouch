@@ -270,6 +270,12 @@
 	vertical-align: middle;
 }
 
+#wptouch-theme .wptouchstyle select {
+	margin-bottom: 10px;
+	width: 165px;
+	margin-top: 5px;
+}
+
 
 
 /* @end */

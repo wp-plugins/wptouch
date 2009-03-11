@@ -34,15 +34,15 @@ body {
 	background: repeat;
 }
 
-body .classic-wptouch-bg {
-	background-image: url(images/pinstripes-classic.jpg);
+.classic-wptouch-bg {
+	background-image: url(images/pinstripes-classic.gif);
 }
 
-body .horizontal-wptouch-bg {
+.horizontal-wptouch-bg {
 	background-image: url(images/pinstripes-horizontal.gif);
 }
 
-body .diagonal-wptouch-bg {
+.diagonal-wptouch-bg {
 	background-image: url(images/pinstripes-diagonal.gif);
 }
 

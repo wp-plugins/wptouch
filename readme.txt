@@ -4,41 +4,42 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=paypa
 Tags: wptouch, iphone, ipod touch, theme, apple, mac, bravenewcode, ajax, mobile, wordpress on iphone, iphone wordpress, mobile, mobile wordpress, mobile plugin
 Requires at least: 2.3.x
 Tested up to: 2.7.1
-Stable tag: 1.7.5
+Stable tag: 1.8
 
 WPtouch automatically transforms your WordPress blog into an iPhone application-style theme, complete with ajax loading articles and effects, when viewed from an iPhone or iPod touch.
 
-Downloaded over 65,000 times (bravenewcode.com + wordpress.org) since April 2008. 
+Downloaded over 70,000 times (bravenewcode.com + wordpress.org) since April 2008. 
 
 == Description ==
 
-WPtouch automatically transforms your WordPress blog into an iPhone application-style theme, complete with ajax loading articles and effects, when viewed from an iPhone or iPod touch.
+With a single click, WPtouch transforms your WordPress blog into an iPhone application-style theme, complete with ajax loading articles and effects, when viewed from an iPhone or iPod touch.
 
-The admin panel allows you to customize many aspects of its appearance, and deliver a fast, user-friendly and stylish version of your site to your iPhone and iPod touch visitors without modifying a single bit of code (or affecting) your regular site. 
+The admin panel allows you to customize many aspects of its appearance, and deliver a fast, user-friendly and stylish version of your site to your iPhone and iPod touch visitors without modifying a single bit of code (or affecting) your regular desktop theme.
 
 The theme also includes the ability for your visitors to easily switch between the WPtouch view and your site's regular theme.
 
-= New In Version 1.7.5: =
+= New In Version 1.8: =
 
-* Added option to do GZIP compression
-* Suppressed warning about multiple gzhandlers
-* Fixed user agent detection code
-* Added ability to choose if WPtouch or regular version of your site is shown first 
-* Fixed WP login/out button bugs
-* Added login/out auto-detect for WP 2.7 or pre-WP 2.7 sites
-* Fixed loading path issue that caused drop-down menu button to fail
-* Added choice between alphabetical or page order sorting of the drop down menu
-* Added clock icon
-* Fixes for categories drop-down menu (now shows post #'s)
-* Minor fix for categories drop-down menu
-* Automatic detection & support for Peter's anti-spam plugin
-* Built-in support for Adsense in posts
-* Moved Stats tracking box beside Advertising Options
-* Better WordPress version support detection
-* More refined image auto-sizing with WP added images & galleries in posts / pages
-* Fix for WordPress shortcodes appearing in excerpts
-* Changed how WPtouch shows switch links
-* Auto-adjusting width/height for MobileSafari plugin objects (YouTube, Quicktime)
+* Significant rewrite of core code for increased efficiency
+* Changed database calls to use wpdb object, will hopefully work with wpmu
+* Internationalization preparation of the admin and theme files (for WPtouch 1.9)
+* Added ability to add/delete custom icons that survive WPtouch & WordPress upgrades
+* Changed how WPtouch admin panel shows icons, more room for custom icons
+* Added channel capability for Adsense
+* Now suppresses banners created by the Ribbon Manger Plugin
+* Minor tweaks to login, register, admin links, footer appearance
+* Minor tweaks to drop down menus, header styling
+* More refinements for search, categories & tag pages, 'load more' link
+* Text & code refinements in the WPtouch admin
+* Experimental support for the Blackberry Storm
+* Fixed issue with WPtouch header title display issue
+* Fixed issue related to login/logout/admin/register link path issues
+* Fixed issue where Bookmarks link when Advanced JS is turned off
+* Fixed issue with default icon case
+* Fixed issue with switch code on systems with PHP4
+* Fixed issue related to fresh installs
+* Fixed issue with pre 2.7 versions of WordPress admin
+* Fixed issue with Android and the sub-header menu links not working
 
 
 Please visit http://bravenewcode.com/wptouch/ for a full description & updates on the WPtouch plugin.
@@ -47,6 +48,30 @@ Please visit http://bravenewcode.com/wptouch/ for a full description & updates o
 == What's New ==
 
 (Here's the complete changelog)
+
+= Version 1.8: =
+
+* Significant rewrite of core code for increased efficiency
+* Changed database calls to use wpdb object, will hopefully work with WP MU
+* Total internationalization prep of the admin and theme files (for WPtouch 1.9)
+* Added ability to add/delete custom icons that survive WPtouch & WordPress upgrades
+* Added ability to set text justification, font size for posts
+* Changed how WPtouch admin panel shows icons, more room for custom icons
+* Added channel capability for Adsense
+* Now suppresses banners created by the Ribbon Manger Plugin
+* Minor tweaks to login, register, admin links, footer appearance
+* Minor tweaks to drop down menus, header styling
+* More refinements for search, categories & tag pages, 'load more' link
+* Text & code refinements in the WPtouch admin
+* Experimental support for the Blackberry Storm
+* Fixed issue with WPtouch header title display issue
+* Fixed issue related to login/logout/admin/register link path issues
+* Fixed issue where Bookmarks link when Advanced JS is turned off
+* Fixed issue with default icon case
+* Fixed issue with switch code on systems with PHP4
+* Fixed issue related to fresh installs
+* Fixed issue with pre 2.7 versions of WordPress admin
+* Fixed issue with Android and the sub-header menu links not working
 
 = Version 1.7.5: =
 
@@ -186,17 +211,17 @@ Please visit http://www.bravenewcode.com/wptouch/ for comprehensive installation
 
 == Frequently Asked Questions ==
 
-= I thought the iPhone/iPod touch shows my website fine the way it is now? =
+= I thought the iPhone/iPod touch/Android shows my website fine the way it is now? =
 
-Yes, that's true for the most part (minus flash support). However, first of all not all blogs are created equal, and some sites don't translate well in the viewport of the phone. Secondly, many WordPress sites today make heavy use of different javascripts which significantly increase the load time of pages, and drives users on EDGE batty. So we've come up with WPtouch, a slim, feature-rich, highly-customized "theme application" of which includes an admin interface to let you customize page icons and your logo.
+Yes, that's true for the most part. However, not all websites are created equal, with some sites failing to translate well in the viewport of a small mobile device. Many WordPress sites today make heavy use of different javascripts which significantly increase the load time of pages, and drive your visitors on 3G/EDGE batty. So we've come up with WPtouch, a lightweight, fast-loading, feature-rich and highly-customized "theme application" which includes an admin interface to let you customize many aspects of your site's presentation.
 
 = Well, what if my users don't like it and want to see my regular site? =
 
-There's an option in the footer on WPtouch for your users to easily switch between the WPtouch view and your site's regular appearance. It's that easy. We even put a little snippet of code into your current theme which will be shown only to iPhone/iPod touch users and give them the ability to switch between the two easily.
+There's an option in the footer on WPtouch for your users to easily switch between the WPtouch view and your site's regular appearance. It's that easy. We even automatically put a little snippet of code into your current theme which will be shown only to iPhone/iPod/Android visitors, giving them control to switch between the two site themes easily.
 
-= Will it slow down my blog? =
+= Will it slow down my blog, or increase my server load? =
 
-Not bloody likely! Unless of course you're getting slammed with all sorts of traffic because you've installed this sexy thang. The entire package for WPtouch is small. It was designed to be as lightweight and speedy as possible, while still serving your blog's content in a richly presented way.
+Not bloody likely! Unless of course you're getting slammed with all sorts of traffic because you've installed this sexy thang. The entire package for WPtouch is small (300kb or so). It was designed to be as lightweight and speedy as possible, while still serving your site's content in a richly presented way, sparing no essential features like search, login, categories, tags, comments etc.
 
 == Screenshots ==
 

@@ -22,7 +22,6 @@
 	
 		<div class="header-item-desc"><?php _e( "Site-wide Link Color", "wptouch" ); ?> <small>(<?php _e( "the color for most of the links in WPtouch", "wptouch" ); ?>)</small></div>
 		<div class="header-input">#<input type="text" name="link-color" value="<?php echo $wptouch_settings['link-color']; ?>" /></div>		
-
 		<div class="header-item-desc"><?php _e( "Font Size", "wptouch" ); ?></div>
 		<div class="header-input">
 			<select name="style-text-size">
@@ -40,12 +39,12 @@
 			</select>
 		</div>
 
-		<div class="header-item-desc"><?php _e( "Background Style", "wptouch" ); ?></div>
+		<div class="header-item-desc"><?php _e( "Background Image", "wptouch" ); ?></div>
 		<div class="header-input">
 			<select name="style-background">
 				<option <?php if ($wptouch_settings['style-background'] == "classic-wptouch-bg") echo " selected"; ?> value="classic-wptouch-bg"><?php _e( "Classic", "wptouch" ); ?></option>
-				<option <?php if ($wptouch_settings['style-background'] == "horizontal-wptouch-bg") echo " selected"; ?> value="horizontal-wptouch-bg"><?php _e( "Horizontal Pinstripes", "wptouch" ); ?></option>
-				<option <?php if ($wptouch_settings['style-background'] == "diagonal-wptouch-bg") echo " selected"; ?> value="diagonal-wptouch-bg"><?php _e( "Diagonal Pinstripes", "wptouch" ); ?></option>
+				<option <?php if ($wptouch_settings['style-background'] == "horizontal-wptouch-bg") echo " selected"; ?> value="horizontal-wptouch-bg"><?php _e( "Horizontal Grey", "wptouch" ); ?></option>
+				<option <?php if ($wptouch_settings['style-background'] == "diagonal-wptouch-bg") echo " selected"; ?> value="diagonal-wptouch-bg"><?php _e( "Diagonal Grey", "wptouch" ); ?></option>
 			</select>
 		</div>
 	</div>
