@@ -612,13 +612,12 @@ a.sh2 {
 }
 
 #singlentry {
-	font-size: 13px;
-	line-height: 20px;
-	text-align: justify;
+	line-height: 21px;
 	color: #444;
 	display: block;
 	padding-top: 5px;
 	overflow: hidden;
+	font-size: 1.2em;
 }
 
 .single-post-meta-top {
