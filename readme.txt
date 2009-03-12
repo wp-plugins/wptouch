@@ -18,7 +18,12 @@ The admin panel allows you to customize many aspects of its appearance, and deli
 
 The theme also includes the ability for your visitors to easily switch between the WPtouch view and your site's regular theme.
 
-= New In Version 1.8: =
+= New In Version 1.8.1: =
+
+* Fixed issue with custom icons and the header logo
+* Fixed issue with the Classic background not appearing
+
+= Version 1.8: =
 
 * Significant rewrite of core code for increased efficiency
 * Changed database calls to use wpdb object, will hopefully work with wpmu
@@ -50,6 +55,11 @@ Please visit http://bravenewcode.com/wptouch/ for a full description & updates o
 
 (Here's the complete changelog)
 
+= Version 1.8.1: =
+
+* Fixed issue with custom icons and the header logo
+* Fixed issue with the Classic background not appearing
+
 = Version 1.8: =
 
 * Significant rewrite of core code for increased efficiency
@@ -73,6 +83,7 @@ Please visit http://bravenewcode.com/wptouch/ for a full description & updates o
 * Fixed issue related to fresh installs
 * Fixed issue with pre 2.7 versions of WordPress admin
 * Fixed issue with Android and the sub-header menu links not working
+
 
 = Version 1.7.5: =
 

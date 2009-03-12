@@ -22,8 +22,8 @@ input {
 }
 
 iframe {
-	max-width: 277px;
-	height: auto;
+	max-width: 100% !important;
+	height: auto !important;
 }
 
 body {
@@ -39,7 +39,7 @@ a:active {
 
 ul {
 	margin: 0;
-	padding: 0 25px 0 20px;
+	padding: 0 20px 0 20px;
 	list-style-type: circle;
 	list-style-position: outside;
 }
@@ -1014,19 +1014,15 @@ img.pageicon {
 .gravatar {
 	position: relative;
 	margin-right: 5px;
-	padding: 1px;
+	padding: 0px;
 	float: left;
-	-webkit-border-radius: 1px;
-	background-color: #eee;
 }
 
 .avatar {
 	position: relative;
 	margin-right: 5px;
-	padding: 1px;
+	padding: 0px;
 	float: left;
-	-webkit-border-radius: 1px;
-	background-color: #eee;
 }
 
 /* @end */
