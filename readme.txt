@@ -1,10 +1,10 @@
 === Plugin Name ===
 Contributors: BraveNewCode
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=paypal%40bravenewcode%2ecom&item_name=WPtouch%20Beer%20Fund&no_shipping=0&no_note=1&tax=0&currency_code=CAD&lc=CA&bn=PP%2dDonationsBF&charset=UTF%2d8
-Tags: wptouch, iphone, ipod touch, theme, apple, mac, bravenewcode, ajax, mobile, wordpress on iphone, iphone wordpress, mobile, mobile wordpress, mobile plugin
+Tags: wptouch, iphone, ipod touch, theme, apple, mac, bravenewcode, ajax, mobile, wordpress on iphone, iphone wordpress, mobile, mobile wordpress, mobile plugin, android, blackberry
 Requires at least: 2.3.x
 Tested up to: 2.7.1
-Stable tag: 1.8
+Stable tag: 1.8.1
 
 WPtouch automatically transforms your WordPress blog into an iPhone application-style theme, complete with ajax loading articles and effects, when viewed from an iPhone or iPod touch.
 
