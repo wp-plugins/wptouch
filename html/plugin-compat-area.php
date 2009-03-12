@@ -125,11 +125,11 @@
 	<!-- wp cache -->		  
 	<?php if (function_exists('wp_cache_is_enabled')) { ?>
 		<div class="sort-of">
-			<img src="<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/images/sortof.png" alt="" /> <?php _e( 'Achtung! <a href="http://mnm.uib.es/gallir/wp-cache-2/" target="_blank">WP-Cache</a>. If active, <strong>it requires configuration.</strong> Visit the <a href="http://www.bravenewcode.com/wptouch/">WPtouch homepage</a> for help using WP-Cache.', 'wptouch' ); ?>
+			<img src="<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/images/sortof.png" alt="" /> <?php _e( '<a href="http://mnm.uib.es/gallir/wp-cache-2/" target="_blank">WP-Cache</a> active. It <strong><a href="http://www.bravenewcode.com/wptouch/">requires special configuration</a></strong> to work with WPtouch.', 'wptouch' ); ?>
 		</div>
 	<?php } else { ?>
 		<div class="all-good">
-			<img src="<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/images/good.png" alt="" /> <?php _e( 'No <a href="http://mnm.uib.es/gallir/wp-cache-2/" target="_blank">WP-Cache</a> active. If activated, <strong>it requires special configuration.</strong> Visit the <a href="http://www.bravenewcode.com/wptouch/">WPtouch homepage</a> for help using WP-Cache.', 'wptouch' ); ?>
+			<img src="<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/images/good.png" alt="" /> <?php _e( 'No <a href="http://mnm.uib.es/gallir/wp-cache-2/" target="_blank">WP-Cache</a> active. If activated, <strong>it requires configuration.</strong> Visit the <a href="http://www.bravenewcode.com/wptouch/">WPtouch page</a> for help.', 'wptouch' ); ?>
 		</div>
 	<?php } ?>
 			

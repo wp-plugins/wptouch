@@ -1,4 +1,7 @@
-/* @override http://24.36.119.47:9098/wp-content/plugins/wptouch/admin-css/wptouch-admin.css */
+/* @override 
+	http://24.36.119.47:9098/wp-content/plugins/wptouch/admin-css/wptouch-admin.css
+	http://24.36.119.47:9107/wp-content/plugins/wptouch/admin-css/wptouch-admin.css
+*/
 
 /* WPtouch Admin CSS */
 
@@ -494,8 +497,8 @@
 }
 
 #wptouch-theme form .wptouch-itemrow .double-box-two {
-	width: 43%;
-	float: left;
+	width: 44%;
+	float: right;
 }
 
 #wptouch-theme form .wptouch-itemrow .double-box-two .wptouch-item-desc {

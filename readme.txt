@@ -4,11 +4,11 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=paypa
 Tags: wptouch, iphone, ipod touch, theme, apple, mac, bravenewcode, ajax, mobile, wordpress on iphone, iphone wordpress, mobile, mobile wordpress, mobile plugin
 Requires at least: 2.3.x
 Tested up to: 2.7.1
-Stable tag: 1.7.5
+Stable tag: 1.8
 
 WPtouch automatically transforms your WordPress blog into an iPhone application-style theme, complete with ajax loading articles and effects, when viewed from an iPhone or iPod touch.
 
-Downloaded over 70,000 times (bravenewcode.com + wordpress.org) since April 2008. 
+Downloaded over 75,000 times (bravenewcode.com + wordpress.org) since April 2008. 
 
 == Description ==
 
@@ -53,10 +53,10 @@ Please visit http://bravenewcode.com/wptouch/ for a full description & updates o
 = Version 1.8: =
 
 * Significant rewrite of core code for increased efficiency
-* Changed database calls to use wpdb object, will hopefully work with WP MU
-* Total internationalization prep of the admin and theme files (for WPtouch 1.9)
+* Changed database calls to use wpdb object, will hopefully work with wpmu
+* Internationalization preparation of the admin and theme files (for WPtouch 1.9)
 * Added ability to add/delete custom icons that survive WPtouch & WordPress upgrades
-* Added ability to set text justification, font size for posts
+* Added ability to select left/full text justification, 3 font sizes
 * Changed how WPtouch admin panel shows icons, more room for custom icons
 * Added channel capability for Adsense
 * Now suppresses banners created by the Ribbon Manger Plugin
