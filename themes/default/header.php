@@ -68,18 +68,9 @@ We've commented below to let you know what works what, so if you do go messing a
 <div id="menubar">
 <div  id="blogtitle">
 <!-- This fetches the admin selection logo icon for the header, which is also the bookmark icon -->
-<?php           
-            $pages = bnc_wp_touch_get_pages();
-            foreach ($pages as $p) {
-            	if ( file_exists( ABSPATH . 'wp-content/plugins/wptouch/images/icon-pool/' . $p['icon'] ) ) {
-            		$image = get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/icon-pool/' . $p['icon'];	
-            	} else {
-            		$image = get_bloginfo('wpurl') . '/wp-content/uploads/wptouch/custom-icons/' . $p['icon'];
-            	}
-				echo('<a href="' . get_bloginfo('siteurl') . '"><img src="' . $image . '" alt="header icon" /> ' . $str = bnc_get_header_title() echo stripslashes($str) . '</a>'); 
-			} ?>
 
-<!-- <img src="<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/images/icon-pool/<?php echo bnc_get_title_image(); ?>" alt="" /> <a href="<?php bloginfo('siteurl'); ?>"><?php $str = bnc_get_header_title(); echo stripslashes($str); ?></a> -->
+
+<img src="<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/images/icon-pool/<?php echo bnc_get_title_image(); ?>" alt="" /> <a href="<?php bloginfo('siteurl'); ?>"><?php $str = bnc_get_header_title(); echo stripslashes($str); ?></a>
 </div>
 </div>
 
