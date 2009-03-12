@@ -53,10 +53,10 @@ Please visit http://bravenewcode.com/wptouch/ for a full description & updates o
 = Version 1.8: =
 
 * Significant rewrite of core code for increased efficiency
-* Changed database calls to use wpdb object, will hopefully work with WP MU
-* Total internationalization prep of the admin and theme files (for WPtouch 1.9)
+* Changed database calls to use wpdb object, will hopefully work with wpmu
+* Internationalization preparation of the admin and theme files (for WPtouch 1.9)
 * Added ability to add/delete custom icons that survive WPtouch & WordPress upgrades
-* Added ability to set text justification, font size for posts
+* Added ability to select left/full text justification, 3 font sizes
 * Changed how WPtouch admin panel shows icons, more room for custom icons
 * Added channel capability for Adsense
 * Now suppresses banners created by the Ribbon Manger Plugin
