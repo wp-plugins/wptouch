@@ -10,7 +10,7 @@
 <!-- Strict viewport options to control how the content is shown. Increase the maximum-scale number to allow for zooming if you wish -->
 <meta name="viewport" content="maximum-scale=1.0 width=device-width initial-scale=1.0 user-scalable=no" />
 <!--This makes the iPhone/iPod touch ask for the same icon the user chooses for a logo to be the bookmark icon as well. -->
-<link rel="apple-touch-icon" href="<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/images/icon-pool/<?php echo bnc_get_title_image(); ?>"/>
+<link rel="apple-touch-icon" href="<?php echo bnc_get_title_image(); ?>" />
 <!-- (Future Consideration)
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta names="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -70,7 +70,7 @@ We've commented below to let you know what works what, so if you do go messing a
 <!-- This fetches the admin selection logo icon for the header, which is also the bookmark icon -->
 
 
-<img src="<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/images/icon-pool/<?php echo bnc_get_title_image(); ?>" alt="" /> <a href="<?php bloginfo('siteurl'); ?>"><?php $str = bnc_get_header_title(); echo stripslashes($str); ?></a>
+<img src="<?php echo bnc_get_title_image(); ?>" alt="" /> <a href="<?php bloginfo('siteurl'); ?>"><?php $str = bnc_get_header_title(); echo stripslashes($str); ?></a>
 </div>
 </div>
 

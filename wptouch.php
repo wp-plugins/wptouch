@@ -349,7 +349,15 @@ function wptouch_get_stats() {
   
 function bnc_get_title_image() {
 	$ids = bnc_wp_touch_get_menu_pages();
-	return $ids['main_title'];
+	$title_image = $ids['main_title'];
+
+	if ( file_exists( ABSPATH . 'wp-content/plugins/wptouch/images/icon-pool/' . $title_image ) ) {
+		$image = get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/icon-pool/' . $title_image;
+	} else {
+		$image = get_bloginfo('wpurl') . '/wp-content/uploads/wptouch/custom-icons/' . $title_image;
+	}
+
+	return $image;
 }
 
 function bnc_excerpt_enabled() {
