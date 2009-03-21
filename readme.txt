@@ -1,14 +1,14 @@
 === Plugin Name ===
 Contributors: BraveNewCode
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=paypal%40bravenewcode%2ecom&item_name=WPtouch%20Beer%20Fund&no_shipping=0&no_note=1&tax=0&currency_code=CAD&lc=CA&bn=PP%2dDonationsBF&charset=UTF%2d8
-Tags: wptouch, iphone, ipod touch, theme, apple, mac, bravenewcode, ajax, mobile, wordpress on iphone, iphone wordpress, mobile, mobile wordpress, mobile plugin, android, blackberry
+Tags: wptouch, iphone, ipod touch, theme, apple, mac, bravenewcode, ajax, mobile, mobile, android, blackberry
 Requires at least: 2.3.x
 Tested up to: 2.7.1
-Stable tag: 1.8.1
+Stable tag: 1.8.3
 
 WPtouch automatically transforms your WordPress blog into an iPhone application-style theme, complete with ajax loading articles and effects, when viewed from an iPhone or iPod touch.
 
-Downloaded over 75,000 times (bravenewcode.com + wordpress.org) since April 2008. 
+Downloaded over 80,000 times (bravenewcode.com + wordpress.org) since April 2008. 
 
 == Description ==
 
@@ -18,40 +18,13 @@ The admin panel allows you to customize many aspects of its appearance, and deli
 
 The theme also includes the ability for your visitors to easily switch between the WPtouch view and your site's regular theme.
 
-= New In Version 1.8.2: =
+= New In Version 1.8.3: =
 
 * Fixed path issues related to custom icons (sites on windows servers)
 * Fixed issues related to ajax comments not working in some situations
+* Added check for 'Allow Comments' on pages
 * Fixed Apache error (reported in logs)
-
-= New In Version 1.8.1: =
-
-* Fixed issue with custom icons and the header logo
-* Fixed issue with the Classic background not appearing
-
-= Version 1.8: =
-
-* Significant rewrite of core code for increased efficiency
-* Changed database calls to use wpdb object, will hopefully work with wpmu
-* Internationalization preparation of the admin and theme files (for WPtouch 1.9)
-* Added ability to add/delete custom icons that survive WPtouch & WordPress upgrades
-* Added ability to select left/full text justification, 3 font sizes
-* Changed how WPtouch admin panel shows icons, more room for custom icons
-* Added channel capability for Adsense
-* Now suppresses banners created by the Ribbon Manger Plugin
-* Minor tweaks to login, register, admin links, footer appearance
-* Minor tweaks to drop down menus, header styling
-* More refinements for search, categories & tag pages, 'load more' link
-* Text & code refinements in the WPtouch admin
-* Experimental support for the Blackberry Storm
-* Fixed issue with WPtouch header title display issue
-* Fixed issue related to login/logout/admin/register link path issues
-* Fixed issue where Bookmarks link when Advanced JS is turned off
-* Fixed issue with default icon case
-* Fixed issue with switch code on systems with PHP4
-* Fixed issue related to fresh installs
-* Fixed issue with pre 2.7 versions of WordPress admin
-* Fixed issue with Android and the sub-header menu links not working
+* Fixed admin styling issues on IE7, Firefox
 
 
 Please visit http://bravenewcode.com/wptouch/ for a full description & updates on the WPtouch plugin.
@@ -60,6 +33,17 @@ Please visit http://bravenewcode.com/wptouch/ for a full description & updates o
 == What's New ==
 
 (Here's the complete changelog)
+
+= New In Version 1.8.3: =
+
+* Fixed admin styling issues on IE7, Firefox
+
+= New In Version 1.8.2: =
+
+* Fixed path issues related to custom icons (sites on windows servers)
+* Fixed issues related to ajax comments not working in some situations
+* Added check for 'Allow Comments' on pages
+* Fixed Apache error (reported in logs)
 
 = Version 1.8.1: =
 
