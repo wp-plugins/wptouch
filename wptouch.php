@@ -136,13 +136,20 @@ class WPtouchPlugin {
 		add_filter('template', array(&$this, 'get_template'));
 		add_filter('init', array(&$this, 'bnc_filter_iphone'));
 		add_filter('wp', array(&$this, 'bnc_do_redirect'));
+		add_filter( 'wp_head', array(&$this, 'bnc_head') );
 		
 		$this->detectAppleMobile();
 	}
 
+	function bnc_head() {
+		if ($this->applemobile && $this->desired_view == 'normal') {
+			echo "<link rel=\"stylesheet\" type=\"text/css\" href=\"" . get_bloginfo( 'url' ) . "/wp-content/plugins/wptouch/switch-css/wptouch-switch-link.css\"></link>";
+		}
+	}
+
 	function bnc_do_redirect() {
 	   global $post;
-	   if ($this->applemobile && $this->desired_view == 'mobile') {
+	   if ( $this->applemobile && $this->desired_view == 'mobile' ) {
 	      if (is_front_page() && bnc_get_selected_home_page() > 0) {
 	         $url = get_permalink(bnc_get_selected_home_page());
 	         header('Location: ' . $url);
@@ -282,7 +289,7 @@ function bnc_is_iphone() {
 function wptouch_switch() {
 	global $wptouch_plugin;
 	if ($wptouch_plugin->desired_view == 'normal') {
-		echo '<div style="width: auto;height: 48px;padding-top:17px;padding-bottom:15px;font-size: x-large;font-weight: bold;background: url(' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/switch-bg.png) repeat-x 0 0;margin:0px;border-top: 1px solid #999;border-bottom: 2px solid #999;text-shadow: #e6e6e6 3px 3px 1px;" id="switch-footer-links">';
+		echo '<div id="wptouch-switch-link">';
 		echo sprintf( __( 'View %s\'s', "wptouch" ), get_bloginfo('title') ) . '<a href="' . get_bloginfo('siteurl') . '/?bnc_view=mobile">' . __( " Mobile Theme", "wptouch" ) . '</a>';
 		echo '</div>';
 	}
