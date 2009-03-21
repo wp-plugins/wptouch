@@ -19,7 +19,7 @@
 		if ( isset( $_FILES['submitted_file'] ) ) {
 			$f = $_FILES['submitted_file'];
 			if ( $f['size'] <= $max_size) {
-				if ( $f['type'] == 'image/png' || $f['type'] == 'image/jpeg' || $f['type'] == 'image/gif' ) {	
+				if ( $f['type'] == 'image/png' || $f['type'] == 'image/jpeg' || $f['type'] == 'image/gif' || $f['type'] == 'image/x-png' || $f['type'] == 'image/pjpeg' ) {	
 					@move_uploaded_file( $f['tmp_name'], $upload_dir . $f['name'] );
 					
 					if ( !file_exists( $upload_dir . $f['name'] ) ) {
@@ -27,7 +27,9 @@
 					} else {
 						echo 'File has been saved! <br />Click <a href="#" style="color:red" onclick="location.reload(true); return false;">here to refresh the page</a>.<br /><br />';						
 					}					
-				} else echo __( 'Sorry, only PNG, GIF and JPEG images are supported.', 'wptouch' );
+				} else {
+					echo __( 'Sorry, only PNG, GIF and JPEG images are supported.', 'wptouch' );
+				}
 			} else echo __( 'Image too large', 'wptouch' );
 		}
 
