@@ -26,7 +26,7 @@
 		
 		<div class="wptouch-checkbox-row">
 			<input type="checkbox" name="enable-js-header" <?php if (isset($wptouch_settings['enable-js-header']) && $wptouch_settings['enable-js-header'] == 1) echo('checked'); ?> />
-			<label for="enable-js-header"> <?php _e( "Use advanced", "wptouch" ); ?> <a href="http://www.jquery.com/" target="_blank"><?php _e( "jQuery", "wptouch" ); ?></a> <?php _e( "effects", "wptouch" ); ?><small>(<?php _e( "ajax entries &amp; comments", "wptouch" ); ?>)</small></label>
+			<label for="enable-js-header"> <?php _e( "Use advanced", "wptouch" ); ?> <a href="http://www.jquery.com/" target="_blank"><?php _e( "jQuery", "wptouch" ); ?></a> <?php _e( "effects", "wptouch" ); ?> <small>(<?php _e( "ajax entries &amp; comments", "wptouch" ); ?>)</small></label>
 		</div>
 		
 		<div class="wptouch-checkbox-row">
@@ -51,4 +51,3 @@
 	</div>
 	<div class="wptouch-clearer"></div>
 </div>
-
