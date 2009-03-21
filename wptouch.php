@@ -290,8 +290,8 @@ function wptouch_switch() {
 	global $wptouch_plugin;
 	if ($wptouch_plugin->desired_view == 'normal') {
 		echo '<div id="wptouch-switch-link">';
-		echo sprintf( __( 'View %s\'s', "wptouch" ), get_bloginfo('title') ) . '<a href="' . get_bloginfo('siteurl') . '/?bnc_view=mobile">' . __( " Mobile Theme", "wptouch" ) . '</a>';
-		echo '</div>';
+
+ 		echo '</div>';
 	}
 }
   
