@@ -243,4 +243,5 @@ Not bloody likely! Unless of course you're getting slammed with all sorts of tra
 8. Sample post with image auto-size
 9. Built-in 'e-mail post' capability
 10. WordPress Photo Gallery & Post Nav Support
+11. Theme switch link appearance
 
