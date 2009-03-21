@@ -142,11 +142,12 @@ Here we're making sure that each ajax div will have a unique ID.  -->
 	</div>    
 </div>
     
-         <!--If comments are enabled for pages in the WPtouch admin-->
-	
-		 <?php if (bnc_is_page_coms_enabled()) { ?>
-	        <?php comments_template(); ?>
-        <?php } ?>
+<!--If comments are enabled for pages in the WPtouch admin, and 'Allow Comments' is checked on a page-->
+	<?php if (bnc_is_page_coms_enabled() && 'open' == $post->comment_status) : ?>
+		<?php comments_template(); ?>
+  	<?php endif; ?>
+<!--end comment status-->
+
 	<?php } else { ?>
 
 <!-- Page ifs closed, start the rest of things -->

@@ -6,12 +6,13 @@
 /* WPtouch Admin CSS */
 
 #wptouch-theme {
-	font-family: "Lucida Grande", Georgia, Arial, sans-serif;
-	margin-bottom: 0;
-	margin-top: 0;
-	margin-right: auto;
-	float: left;
-	width: 96.5%;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, sans-serif;
+	padding: 0;
+	margin: 10px 10px 0;
+	overflow: hidden;
+	clear: both;
+	width: 97%;
+	position: relative;
 }
 
 #wptouch-theme h4 {
@@ -38,9 +39,9 @@
 	color: #ccc;
 	position: relative;
 	font: 18px Georgia;
-	float: left;
 	margin-top: 10px;
-	margin-bottom: -30px;
+	text-align: right;
+	float: right;
 }
 
 #wptouch-theme #wptouch-title {
@@ -49,7 +50,18 @@
 	padding-bottom: 10px;
 	height: 216px;
 	background: url(../images/admin-header.png) no-repeat;
-	width: auto;
+}
+
+#wptouch-theme #wptouch-title p {
+	position: relative;
+	font: bold 22px "Lucida Grande", Lucida, Verdana, sans-serif;
+	color: #d54e21;
+	text-shadow: #fff -2px -2px 1px;
+	letter-spacing: -1px;
+	height: 0;
+	padding-top: 90px;
+	padding-left: 140px;
+	margin: 0;
 }
 
 #wptouch-theme .header-wptouch-version {
@@ -57,22 +69,10 @@
 	color: #4d6277;
 	text-shadow: #85b3df 0 1px 2px;
 	letter-spacing: -1px;
-	display: inline;
-	float: left;
 	position: relative;
-	top: 128px;
-	left: 147px;
-}
-
-#wptouch-theme #wptouch-title p {
-	position: relative;
-	top: 67px;
-	left: 147px;
-	font: bold 22px "Lucida Grande", Lucida, Verdana, sans-serif;
-	color: #d54e21;
-	text-shadow: #fff -2px -2px 1px;
-	letter-spacing: -1px;
-	width: 585px;
+	height: 0;
+	top: 130px;
+	left: 142px;
 }
 
 
@@ -86,7 +86,7 @@
 	display: block;
 	width: 100%;
 	border-bottom-style: none;
-	font: bold 19px Georgia, Garamond, Arial, Verdana, sans-serif;
+	font: bold 19px Georgia, "Times New Roman", Times, serif;
 	padding: 0;
 	margin: 0;
 	text-shadow: #ecf4fc -1px -1px 1px;
@@ -94,7 +94,6 @@
 }
 
 #wptouch-theme .wptouch-itemrow {
-	display: block;
 	border-bottom: 1px solid #dedede;
 	margin-top: 10px;
 	font-size: 11px;
@@ -157,8 +156,8 @@
 
 #wptouch-theme .newsblock {
 	position: relative;
-	clear: both;
 	bottom: 5px;
+	clear: both;
 }
 
 #wptouch-theme #wptouch-news-frame ul {
@@ -168,20 +167,21 @@
 #wptouch-theme #wptouch-news-frame {
    float: left;
    margin-top: -10px;
-	width: 48%;
+	width: 46%;
 }
 
 #wptouch-theme #wptouch-news-donate {
    font-size: 11px;
 	position: relative;
-	float: right;
 	bottom: 25px;
 	line-height: 16px;
-	width: 26%;
+	float: right;
+	width: 28%;
 }
 
 #wptouch-theme #wptouch-news-frame h3 {
 	margin-bottom: 11px;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, sans-serif;
 }
 
 #wptouch-theme #wptouch-news-donate h3 {
@@ -449,8 +449,7 @@
 #wptouch-theme input#wptouch-button {
 	margin-top: 10px;
 	margin-bottom: 70px;
-	clear: both;
-	float: right;
+	display: block;
 }
 
 
@@ -478,6 +477,7 @@
 	margin-right: 25px;
 	float: left;
 	width: 50%;
+	overflow: hidden;
 }
 
 #wptouch-theme .wptouch-item-desc {
@@ -499,6 +499,7 @@
 #wptouch-theme form .wptouch-itemrow .double-box-two {
 	width: 44%;
 	float: right;
+	overflow: hidden;
 }
 
 #wptouch-theme form .wptouch-itemrow .double-box-two .wptouch-item-desc {
@@ -506,7 +507,7 @@
 }
 
 #wptouch-theme form .wptouch-itemrow .double-box-two textarea {
-	width: 55%;
+	width: 50%;
 	font-size: 11px;
 	color: #555;
 	border: 1px solid #ccc;
