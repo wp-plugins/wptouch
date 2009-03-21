@@ -28,7 +28,7 @@
 
 // WPtouch Theme Options
 global $bnc_wptouch_version;
-$bnc_wptouch_version = '1.8.1';
+$bnc_wptouch_version = '1.8.2';
 
 require_once( 'include/plugin.php' );
 

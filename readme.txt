@@ -18,6 +18,12 @@ The admin panel allows you to customize many aspects of its appearance, and deli
 
 The theme also includes the ability for your visitors to easily switch between the WPtouch view and your site's regular theme.
 
+= New In Version 1.8.2: =
+
+* Fixed path issues related to custom icons (sites on windows servers)
+* Fixed issues related to ajax comments not working in some situations
+* Fixed Apache error (reported in logs)
+
 = New In Version 1.8.1: =
 
 * Fixed issue with custom icons and the header logo
