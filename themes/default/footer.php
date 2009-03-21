@@ -21,7 +21,7 @@
 					<?php } ?>
 				<?php  endif; ?></h3></center>
 
-			<h3><?php _e( "View", "wptouch" ); ?> <?php bloginfo('title'); ?><?php _e( "'s", "wptouch" ); ?> <a href="<?php echo bloginfo('home') . '/?bnc_view=normal'; ?>"><?php _e( "Regular Theme", "wptouch" ); ?></a></h3>	
+			<div id="wptouch-switch-link"><?php _e( "Mobile Theme", "wptouch" ); ?><a onclick="javascript:document.getElementById('switch-on').style.display='none';javascript:document.getElementById('switch-off').style.display='block';" href="<?php echo bloginfo('home') . '/?bnc_view=normal'; ?>"><img id="switch-on" src="<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/images/on.jpg" alt="on switch image" class="wptouch-switch-image" /><img id="switch-off" style="display:none" src="<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/images/off.jpg" alt="off switch image" class="wptouch-switch-image" /></a></div>	
 
 			<?php _e( "All content Copyright &copy;", "wptouch" ); ?> <?php bloginfo('name'); ?><br />
 			<?php _e( 'Powered by <a href="http://wordpress.org/">WordPress</a> with', 'wptouch' ); ?> <a href="http://bravenewcode.com/wptouch/"><?php WPtouch(); ?></a>
