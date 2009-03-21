@@ -17,9 +17,7 @@
 	position: relative !important;
 	clear: both !important;
 	width: 375px !important;
-	font-size: x-large !important;
-	font-weight: bold !important;
-	line-height: 1.2 !important;
+	font: bold x-large/1.2 "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 img.wptouch-switch-image {
