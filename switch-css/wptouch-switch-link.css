@@ -1,30 +1,32 @@
-/* Switch CSS */
+/* WPtouch Switch Link CSS */
+
+/* This CSS loads on your regular site theme when it is viewed on our supported devices, and doesn't affect your regular css */
 
 /* @group Switch Link */
 
 #wptouch-switch-link {
-	-webkit-border-radius: 10px;
-	border: 1px solid #adadad;
-	background-color: #fff;
-	margin-left: 10px;
-	margin-right: 10px;
-	padding: 10px;
-	margin-bottom: 20px;
-	text-align: left;
-	font-size: 16px;
-	color: #222;
-	position: relative;
-	clear: both;
-	width: 363px;
+	-webkit-border-radius: 14px !important;
+	border: 1px solid #adadad !important;
+	background-color: #fff !important;
+	margin-left: auto !important;
+	margin-right: auto !important;
+	padding: 15px !important;
+	margin-bottom: 40px !important;
+	text-align: left !important;
+	color: #222 !important;
+	position: relative !important;
+	clear: both !important;
+	width: 375px !important;
+	font-size: x-large !important;
+	font-weight: bold !important;
+	line-height: 1.2 !important;
 }
 
 img.wptouch-switch-image {
-	position: absolute;
-	right: 10px;
-	height: 22px;
-	top: 8px;
+	position: absolute !important;
+	right: 15px !important;
+	height: 34px !important;
+	top: 12px !important;
 }
-
-
 
 /* @end */
