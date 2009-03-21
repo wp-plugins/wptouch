@@ -290,7 +290,8 @@ function wptouch_switch() {
 	global $wptouch_plugin;
 	if ($wptouch_plugin->desired_view == 'normal') {
 		echo '<div id="wptouch-switch-link">';
-
+		_e( "Mobile Theme", "wptouch" ); 
+		echo "<a onclick=\"javascript:document.getElementById('switch-on').style.display='none';javascript:document.getElementById('switch-off').style.display='none';\" href=\"" . get_bloginfo('home') . "/?bnc_view=mobile\"><img id=\"switch-on\" src=\"" . get_bloginfo('wpurl') . "/wp-content/plugins/wptouch/images/on.jpg\" alt=\"on switch image\" class=\"wptouch-switch-image\" /><img id=\"switch-off\" style=\"display:block\" src=\"" . get_bloginfo('wpurl') . "/wp-content/plugins/wptouch/images/off.jpg\" alt=\"off switch image\" class=\"wptouch-switch-image\" /></a>";
  		echo '</div>';
 	}
 }
