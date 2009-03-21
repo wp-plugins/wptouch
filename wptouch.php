@@ -447,8 +447,12 @@ function bnc_wp_touch_get_pages() {
 	}
 	 
 	$menu_order = array(); 
-	$query = "select * from {$table_prefix}posts where ID in (" . implode(',', $keys) . ") order by post_title asc";
-	$results = $wpdb->get_results( $query, ARRAY_A );
+	$results = false;
+
+	if ( count( $keys ) > 0 ) {
+		$query = "select * from {$table_prefix}posts where ID in (" . implode(',', $keys) . ") order by post_title asc";
+		$results = $wpdb->get_results( $query, ARRAY_A );
+	}
 
 	if ( $results ) {
 		foreach ( $results as $row ) {

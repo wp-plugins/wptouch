@@ -1,6 +1,6 @@
 <?php
 	$cur_dir = dirname(__FILE__);
-	$loc = explode( 'wp-content, $cur_dir );
+	$loc = explode( 'wp-content', $cur_dir );
 	$max_size = 128*1024; // 128k
 	
 	require_once( $loc[0] . '/wp-config.php' );
