@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=paypa
 Tags: wptouch, iphone, ipod touch, theme, apple, mac, bravenewcode, ajax, mobile, mobile, android, blackberry
 Requires at least: 2.3.x
 Tested up to: 2.7.1
-Stable tag: 1.8.3
+Stable tag: 1.8.4
 
 WPtouch automatically transforms your WordPress blog into an iPhone application-style theme, complete with ajax loading articles and effects, when viewed from an iPhone or iPod touch.
 
@@ -18,14 +18,17 @@ The admin panel allows you to customize many aspects of its appearance, and deli
 
 The theme also includes the ability for your visitors to easily switch between the WPtouch view and your site's regular theme.
 
-= New In Version 1.8.3: =
+= New In Version 1.8.4: =
 
+* Fixed missing mime types for icon upload through IE7
+* Fixed issues related to automatic favicon generation on a Links page
+* Changed footer switch links to mimic iPhone settings app appearance
+* Fixed misc scenarios for ajax-upload errors
 * Fixed path issues related to custom icons (sites on windows servers)
 * Fixed issues related to ajax comments not working in some situations
 * Added check for 'Allow Comments' on pages
-* Fixed Apache error (reported in logs)
+* Fixed hidden Apache error (reported in logs)
 * Fixed admin styling issues on IE7, Firefox
-
 
 Please visit http://bravenewcode.com/wptouch/ for a full description & updates on the WPtouch plugin.
 
@@ -34,21 +37,24 @@ Please visit http://bravenewcode.com/wptouch/ for a full description & updates o
 
 (Here's the complete changelog)
 
-= New In Version 1.8.3: =
+= New In Version 1.8.4: =
 
-* Fixed admin styling issues on IE7, Firefox
-
-= New In Version 1.8.2: =
-
+* Fixed missing mime types for icon upload through IE7
+* Fixed issues related to automatic favicon generation on a Links page
+* Changed footer switch links to mimic iPhone settings app appearance
+* Fixed misc scenarios for ajax-upload errors
 * Fixed path issues related to custom icons (sites on windows servers)
 * Fixed issues related to ajax comments not working in some situations
 * Added check for 'Allow Comments' on pages
-* Fixed Apache error (reported in logs)
+* Fixed hidden Apache error (reported in logs)
+* Fixed admin styling issues on IE7, Firefox
+
 
 = Version 1.8.1: =
 
 * Fixed issue with custom icons and the header logo
 * Fixed issue with the Classic background not appearing
+
 
 = Version 1.8: =
 

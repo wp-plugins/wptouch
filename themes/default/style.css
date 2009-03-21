@@ -1379,3 +1379,31 @@ a.search-close {
 }
 
 /* @end */
+
+/* @group Switch Link */
+
+#wptouch-switch-link {
+	-webkit-border-radius: 10px;
+	border: 1px solid #adadad;
+	background-color: #fff;
+	margin-left: 10px;
+	margin-right: 10px;
+	padding: 10px;
+	margin-bottom: 20px;
+	text-align: left;
+	font-size: 16px;
+	color: #222;
+	position: relative;
+	clear: both;
+}
+
+img.wptouch-switch-image {
+	position: absolute;
+	right: 10px;
+	height: 22px;
+	top: 8px;
+}
+
+
+
+/* @end */
