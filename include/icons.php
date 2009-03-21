@@ -15,7 +15,7 @@
         $locations = bnc_get_icon_locations();
                 
         $files = array();
-        $root_locations = explode( '/wp-content/', __FILE__);
+        $root_locations = explode( 'wp-content', __FILE__);
         $wordpress_root = $root_locations[0];
         
         foreach ( $locations as $name => $location ) {
