@@ -4,7 +4,7 @@
    Plugin URI: http://bravenewcode.com/wptouch/
    Description: A plugin which reformats your site with a mobile theme when viewing with an <a href="http://www.apple.com/iphone/"> Apple iPhone</a>, <a href="http://www.apple.com/ipodtouch/">Apple iPod touch</a>, <a href="http://www.android.com/">Google Android</a> or <a href="http://www.rim.com/storm/">Blackberry Storm</a> touch mobile device. Set options for the theme by visiting the <a href="options-general.php?page=wptouch/wptouch.php">WPtouch Options admin panel</a>. &nbsp;
    Author: Dale Mugford & Duane Storey
-   Version: 1.8.4
+   Version: 1.8.5
    Author URI: http://www.bravenewcode.com
    
    # Special thanks to ContentRobot and the iWPhone theme/plugin
@@ -28,7 +28,7 @@
 
 // WPtouch Theme Options
 global $bnc_wptouch_version;
-$bnc_wptouch_version = '1.8.4';
+$bnc_wptouch_version = '1.8.5';
 
 require_once( 'include/plugin.php' );
 
@@ -143,7 +143,7 @@ class WPtouchPlugin {
 
 	function bnc_head() {
 		if ($this->applemobile && $this->desired_view == 'normal') {
-			echo "<link rel=\"stylesheet\" type=\"text/css\" href=\"" . get_bloginfo( 'url' ) . "/wp-content/plugins/wptouch/switch-css/wptouch-switch-link.css\"></link>";
+			echo "<link rel=\"stylesheet\" type=\"text/css\" href=\"" . get_bloginfo( 'wpurl' ) . "/wp-content/plugins/wptouch/switch-css/wptouch-switch-link.css\"></link>";
 		}
 	}
 
@@ -291,7 +291,7 @@ function wptouch_switch() {
 	if ($wptouch_plugin->desired_view == 'normal') {
 		echo '<div id="wptouch-switch-link">';
 		_e( "Mobile Theme", "wptouch" ); 
-		echo "<a onclick=\"javascript:document.getElementById('switch-on').style.display='block';javascript:document.getElementById('switch-off').style.display='none';\" href=\"" . get_bloginfo('home') . "/?bnc_view=mobile\"><img id=\"switch-on\" src=\"" . get_bloginfo('wpurl') . "/wp-content/plugins/wptouch/images/on.jpg\" alt=\"on switch image\" class=\"wptouch-switch-image\" style=\"display:none\" /><img id=\"switch-off\" src=\"" . get_bloginfo('wpurl') . "/wp-content/plugins/wptouch/images/off.jpg\" alt=\"off switch image\" class=\"wptouch-switch-image\" /></a>";
+		echo "<a onclick=\"javascript:document.getElementById('switch-on').style.display='block';javascript:document.getElementById('switch-off').style.display='none';\" href=\"" . get_bloginfo('siteurl') . "/?bnc_view=mobile\"><img id=\"switch-on\" src=\"" . get_bloginfo('wpurl') . "/wp-content/plugins/wptouch/images/on.jpg\" alt=\"on switch image\" class=\"wptouch-switch-image\" style=\"display:none\" /><img id=\"switch-off\" src=\"" . get_bloginfo('siteurl') . "/wp-content/plugins/wptouch/images/off.jpg\" alt=\"off switch image\" class=\"wptouch-switch-image\" /></a>";
  		echo '</div>';
 	}
 }
