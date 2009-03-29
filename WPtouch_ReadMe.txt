@@ -5,7 +5,7 @@ Make your site look gorgeous on an iPhone, iPod touch or Android-based mobile ph
 
 By Dale Mugford & Duane Storey
 bravenewcode.com
-Version: 1.8.4
+Version: 1.8.5
 
 Complete and updated information & installation instructions available at:
 http://www.bravenewcode.com/wptouch/
