@@ -257,7 +257,7 @@ class WPtouchPlugin {
 }
   
 global $wptouch_plugin;
-$wptouch_plugin = &new WPtouchPlugin();
+$wptouch_plugin = & new WPtouchPlugin();
 
 /*
 
@@ -288,7 +288,7 @@ function bnc_is_iphone() {
 	// The Automatic Footer Template Switch Code (into "wp_footer()" in footer.php)
 function wptouch_switch() {
 	global $wptouch_plugin;
-	if ($wptouch_plugin->desired_view == 'normal') {
+	if (bnc_is_iphone() && $wptouch_plugin->desired_view == 'normal') {
 		echo '<div id="wptouch-switch-link">';
 		_e( "Mobile Theme", "wptouch" ); 
 		echo "<a onclick=\"javascript:document.getElementById('switch-on').style.display='block';javascript:document.getElementById('switch-off').style.display='none';\" href=\"" . get_bloginfo('siteurl') . "/?bnc_view=mobile\"><img id=\"switch-on\" src=\"" . get_bloginfo('wpurl') . "/wp-content/plugins/wptouch/images/on.jpg\" alt=\"on switch image\" class=\"wptouch-switch-image\" style=\"display:none\" /><img id=\"switch-off\" src=\"" . get_bloginfo('siteurl') . "/wp-content/plugins/wptouch/images/off.jpg\" alt=\"off switch image\" class=\"wptouch-switch-image\" /></a>";
