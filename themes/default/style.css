@@ -371,7 +371,7 @@ input#ssubmit {
 /* @group Index Page */
 
 .post {
-	-webkit-border-radius: 10px;
+	-webkit-border-radius: 8px;
 	border: 1px solid #adadad;
 	background-color: #fff;
 	margin-left: 10px;
@@ -658,7 +658,7 @@ img.small {
 .navigation {
 	display: block;
 	clear: both;
-	-webkit-border-radius: 10px;
+	-webkit-border-radius: 8px;
 	border: 1px solid #adadad;
 	background: #fff repeat-x;
 	margin: 10px;
@@ -725,7 +725,7 @@ img.small {
 /* @group Social Bookmarking */
 
 #bookmark-box {
-	-webkit-border-radius: 10px;
+	-webkit-border-radius: 8px;
 	border: 1px solid #adadad;
 	margin: 10px;
 	background-color: #fff;
@@ -819,14 +819,14 @@ img.pageicon {
 	font-size: 11px;
 	color: #999;
 	line-height: 13px;
-		max-width: 100% !important;
-		height: auto !important;
+	max-width: 100% !important;
+	height: auto !important;
 }
 
 /* @group Links */
 
 #wptouch-links {
-	-webkit-border-radius: 10px;
+	-webkit-border-radius: 8px;
 	border: 1px solid #adadad;
 	background-color: #fff;
 	margin-right: 10px;
@@ -893,7 +893,7 @@ img.pageicon {
 /* @group Archives */
 
 #wptouch-tagcloud {
-	-webkit-border-radius: 10px;
+	-webkit-border-radius: 8px;
 	border: 1px solid #adadad;
 	background-color: #fff;
 	margin-right: 10px;
@@ -905,7 +905,7 @@ img.pageicon {
 }
 
 #wptouch-archives {
-	-webkit-border-radius: 10px;
+	-webkit-border-radius: 8px;
 	border: 1px solid #adadad;
 	background-color: #fff;
 	margin-right: 10px;
@@ -947,7 +947,7 @@ img.pageicon {
 /* @group 404 */
 
 #fourohfour {
-	-webkit-border-radius: 10px;
+	-webkit-border-radius: 8px;
 	border: 1px solid #adadad;
 	background-color: #fff;
 	text-align: center;
@@ -979,7 +979,7 @@ img.pageicon {
 }
 
 .comwrap {
-	-webkit-border-radius: 10px;
+	-webkit-border-radius: 8px;
 	border: 1px solid #adadad;
 	background-color: #fff;
 	padding: 5px;
@@ -1039,7 +1039,7 @@ h3#comments, h3#respond {
 }
 
 #preview {
-	-webkit-border-radius: 10px;
+	-webkit-border-radius: 8px;
 	border: 1px solid #adadad;
 	background-color: #475d79;
 	text-align: center;
@@ -1068,7 +1068,7 @@ p.logged {
 }
 
 textarea#comment {
-	-webkit-border-radius: 10px;
+	-webkit-border-radius: 8px;
 	border: 1px solid #adadad;
 	font-size: 13px;
 	color: #444;
@@ -1080,7 +1080,7 @@ textarea#comment {
 #loading {
 	position: relative;
 	background-color: #b1cbff;
-	-webkit-border-radius: 10px;
+	-webkit-border-radius: 8px;
 	border: 1px solid #adadad;
 	opacity: 0.75;
 	z-index: 9;
@@ -1094,7 +1094,7 @@ textarea#comment {
 }
 
 form#commentform input {
-	-webkit-border-radius: 10px;
+	-webkit-border-radius: 8px;
 	border: 1px solid #adadad;
 	padding: 3px;
 	margin: 0;
@@ -1115,7 +1115,7 @@ form#commentform small {
 }
 
 #refresher {
-	-webkit-border-radius: 10px;
+	-webkit-border-radius: 8px;
 	padding: 5px;
 	border: 1px solid #adadad;
 	background-color: #475d79;
@@ -1129,7 +1129,7 @@ form#commentform small {
 
 p.subscribe-to-comments {
 	padding: 8px;
-	-webkit-border-radius: 10px;
+	-webkit-border-radius: 8px;
 	background-color: #fff;
 	border: 1px solid #adadad;
 }
@@ -1142,12 +1142,6 @@ p.subscribe-to-comments input#subscribe {
 
 /* @group Footer */
 
-h2#switch-footer-links {
-	display: none;
-	width: 0;
-	height: 0;
-}
-
 #footer {
 	text-align: center;
 	color: #475d79;
@@ -1158,6 +1152,34 @@ h2#switch-footer-links {
 	margin-top: 50px;
 }
 
+/* @group Switch Link */
+
+#wptouch-switch-link {
+	-webkit-border-radius: 8px;
+	border: 1px solid #adadad;
+	background-color: #fff;
+	max-width: 278px;
+	margin: 0 auto;
+	padding: 10px;
+	margin-bottom: 20px;
+	text-align: left;
+	font-size: 16px;
+	color: #222;
+	position: relative;
+	clear: both;
+}
+
+img.wptouch-switch-image {
+	position: absolute;
+	right: 10px;
+	height: 22px;
+	top: 8px;
+}
+
+
+
+/* @end */
+
 /* @end */
 
 /* @group Plugin Compatibility CSS */
@@ -1165,7 +1187,7 @@ h2#switch-footer-links {
 /* @group WPtouch Adsense area */
 
 .wptouch-adsense-ad {
-	-webkit-border-radius: 10px	!important;
+	-webkit-border-radius: 8px		!important;
 	border: 1px solid #adadad		!important;
 	background-color: #fff				!important;
 	display: block							!important;
@@ -1205,15 +1227,15 @@ h2#switch-footer-links {
 }
 
 #secureimgdiv p input#securitycode {
-	-webkit-border-radius: 10px;
+	-webkit-border-radius: 8px;
 	border: 1px solid #adadad;
 	padding: 3px;
 	margin: 0 0 0 0;
 	font-size: 13px;
 	color: #444;
 	width: 101px;
--webkit-border-top-left-radius:1px;
--webkit-border-bottom-left-radius:1px;
+-webkit-border-top-left-radius: 1px;
+-webkit-border-bottom-left-radius: 1px;
 }
 
 
@@ -1255,7 +1277,7 @@ h3#dsq-add-new-comment {
 }
 
 #disqus_thread {
-	-webkit-border-radius: 10px;
+	-webkit-border-radius: 8px;
 	border: 1px solid #adadad;
 	background-color: #fff;
 	padding: 10px;
@@ -1300,7 +1322,7 @@ a.search-close {
 
 .main-navigation {
 	display: block;
-	-webkit-border-radius: 10px;
+	-webkit-border-radius: 8px;
 	border: 1px solid #adadad;
 	background: #fff repeat-x;
 	margin: 10px;
@@ -1377,33 +1399,5 @@ a.search-close {
 .diagonal-wptouch-bg {
 	background: url(images/pinstripes-diagonal.gif) repeat;
 }
-
-/* @end */
-
-/* @group Switch Link */
-
-#wptouch-switch-link {
-	-webkit-border-radius: 10px;
-	border: 1px solid #adadad;
-	background-color: #fff;
-	margin-left: 10px;
-	margin-right: 10px;
-	padding: 10px;
-	margin-bottom: 20px;
-	text-align: left;
-	font-size: 16px;
-	color: #222;
-	position: relative;
-	clear: both;
-}
-
-img.wptouch-switch-image {
-	position: absolute;
-	right: 10px;
-	height: 22px;
-	top: 8px;
-}
-
-
 
 /* @end */

@@ -56,7 +56,7 @@ a {
 	text-decoration: none;
 	color: #<?php echo bnc_get_link_color(); ?>;
 }
-.post{
+.mainentry, .pageentry, #wptouch-links, #wptouch-archives, #singlentry, .comwrap, #catsmenu-inner li, #dropmenu-inner li, #drop-fade a{
 	-webkit-text-size-adjust: <?php echo bnc_get_zoom_state(); ?>;
 }
 </style>
