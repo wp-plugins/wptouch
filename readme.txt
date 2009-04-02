@@ -4,11 +4,11 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=paypa
 Tags: wptouch, iphone, ipod touch, theme, apple, mac, bravenewcode, ajax, mobile, mobile, android, blackberry
 Requires at least: 2.3.x
 Tested up to: 2.7.1
-Stable tag: 1.8.5
+Stable tag: 1.8.6
 
 WPtouch automatically transforms your WordPress blog into an iPhone application-style theme, complete with ajax loading articles and effects, when viewed from an iPhone or iPod touch.
 
-Downloaded over 85,000 times (bravenewcode.com + wordpress.org) since April 2008. 
+Downloaded over 87,000 times (bravenewcode.com + wordpress.org) since April 2008. 
 
 == Description ==
 
@@ -18,20 +18,28 @@ The admin panel allows you to customize many aspects of its appearance, and deli
 
 The theme also includes the ability for your visitors to easily switch between the WPtouch view and your site's regular theme.
 
-= New In Version 1.8.5: =
+= New In Version 1.8.6: =
 
-* Fixed new switch link to work under different WordPress install scenarios
-* Fixed switch link CSS style-sheet loading issues in some situations
-* Added screenshot of new switch link appearance
+* Fixed fatal error on line 153 for WordPress 2.3.x users
+*Fixed jQuery failing to load for WordPress 2.3.x users
+*As a note for WordPress 2.3 users, WPtouch 1.9 will require WordPress 2.5+. 
 
 Please visit http://bravenewcode.com/wptouch/ for a full description & updates on the WPtouch plugin.
+
+You can also checkout our Support Forums at http://support.bravenewcode.com to post questions and learn tips and tricks for WPtouch and our other plugins.
 
 
 == What's New ==
 
 (Here's the complete changelog)
 
-= New In Version 1.8.5: =
+= New In Version 1.8.6: =
+
+* Fixed fatal error on line 153 for WordPress 2.3.x users
+*Fixed jQuery failing to load for WordPress 2.3.x users
+*As a note for WordPress 2.3 users, WPtouch 1.9 will require WordPress 2.5+. 
+
+= Version 1.8.5: =
 
 * Fixed new switch link to work under different WordPress install scenarios
 * Fixed switch link CSS style-sheet loading issues in some situations
@@ -214,6 +222,8 @@ You can now install WPtouch directly from the WordPress admin!
 
 
 Please visit http://www.bravenewcode.com/wptouch/ for comprehensive installation instructions.
+
+You can also checkout our Support Forums at http://support.bravenewcode.com to post questions and learn tips and tricks for WPtouch and our other plugins.
 
 
 == Frequently Asked Questions ==

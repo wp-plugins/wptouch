@@ -31,12 +31,12 @@
 	</div>
 	
    <div id="wptouch-news-donate">
-	  <h3><?php _e( "Donate To WPtouch", "wptouch" ); ?><br /><?php _e( "And Help The Environment!", "wptouch" ); ?></h3> 
+	  <h3><?php _e( "Donate To WPtouch", "wptouch" ); ?><br /><?php _e( "And Help Us Stay Carbon Neutral!", "wptouch" ); ?></h3> 
 	  
 	  <?php echo sprintf( __( "WPtouch represents hundreds of hours of work. If you like the project and want to see it continue, %sconsider donating to WPtouch%s.", "wptouch"), '<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=paypal%40bravenewcode%2ecom&amp;item_name=WPtouch%20Beer%20Fund&amp;no_shipping=1&amp;tax=0&amp;currency_code=CAD&amp;lc=CA&amp;bn=PP%2dDonationsBF&amp;charset=UTF%2d8">', '</a>' ); ?><br />
 	  <?php echo sprintf( __( "Everyone who donates is added to the donor listing on %sour website%s.", "wptouch"), '<a href="http://www.bravenewcode.com/wptouch">', '</a>' ); ?><br /><br />
 	  
-	  	 <strong> <?php echo sprintf( __( "We use every donation to keep our company carbon neutral!  %sFind out more%s", "wptouch"), '<a href="http://www.bravenewcode.com/environment">', '</a>' ); ?> &raquo;</strong>
+	  	 <strong> <?php echo sprintf( __( "We use every donation to pay for carbon offsets. %sFind out more%s", "wptouch"), '<a href="http://www.bravenewcode.com/environment" target="_blank">', '</a>' ); ?> &raquo;</strong>
 
 	<!-- <h3><?php _e( "Last Donations", "wptouch" ); ?></h3>		
 	<ul id="wptouch-donation-frame" style="display: none;"></ul> -->
