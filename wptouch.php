@@ -150,8 +150,17 @@ class WPtouchPlugin {
 	function bnc_do_redirect() {
 	   global $post;
 	   if ( $this->applemobile && $this->desired_view == 'mobile' ) {
-	      if (is_front_page() && bnc_get_selected_home_page() > 0) {
-	         $url = get_permalink(bnc_get_selected_home_page());
+			$version = (float)get_bloginfo('version');
+			$is_front = 0;
+			
+			if ( $version <= 2.3 ) {
+				$is_front = (is_home() && (bnc_get_selected_home_page() > 0));
+			} else {
+				$is_front = (is_front_page() && (bnc_get_selected_home_page() > 0));
+			}
+			
+			if ( $is_front ) {
+	         $url = get_permalink( bnc_get_selected_home_page() );
 	         header('Location: ' . $url);
 	         die;
 	      }
