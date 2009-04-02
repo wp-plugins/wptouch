@@ -20,9 +20,13 @@ The theme also includes the ability for your visitors to easily switch between t
 
 = New In Version 1.8.6: =
 
-* Fixed fatal error on line 153 for WordPress 2.3.x users
-*Fixed jQuery failing to load for WordPress 2.3.x users
-*As a note for WordPress 2.3 users, WPtouch 1.9 will require WordPress 2.5+. 
+* Fixed fatal error on line 153 undefined 'is_front_page' function for WP 2.3.x users
+* Fixed jQuery failing to load for WP 2.3.x users
+* Added option for font-zoom on rotate for accessibility, on by default
+* Fixed various styling bugs
+* Changed switch link in WPtouch to remain fixed width
+* Fixed various content overflow issues in WPtouch
+* As a note for WordPress 2.3 users, WPtouch 1.9 will require WordPress 2.5+
 
 Please visit http://bravenewcode.com/wptouch/ for a full description & updates on the WPtouch plugin.
 
@@ -35,9 +39,13 @@ You can also checkout our Support Forums at http://support.bravenewcode.com to p
 
 = New In Version 1.8.6: =
 
-* Fixed fatal error on line 153 for WordPress 2.3.x users
-*Fixed jQuery failing to load for WordPress 2.3.x users
-*As a note for WordPress 2.3 users, WPtouch 1.9 will require WordPress 2.5+. 
+* Fixed fatal error on line 153 undefined 'is_front_page' function for WP 2.3.x users
+* Fixed jQuery failing to load for WP 2.3.x users
+* Added option for font-zoom on rotate for accessibility, on by default
+* Fixed various styling bugs
+* Changed switch link in WPtouch to remain fixed width
+* Fixed various content overflow issues in WPtouch
+* As a note for WordPress 2.3 users, WPtouch 1.9 will require WordPress 2.5+
 
 = Version 1.8.5: =
 
