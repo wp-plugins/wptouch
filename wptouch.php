@@ -109,11 +109,9 @@ function wptouch_content_filter( $content ) {
  
 	// WP Admin stylesheet, Javascript
 	function wptouch_admin_css() {
-		$url = get_bloginfo('wpurl');
-		$version = (float)get_bloginfo('version');
 		echo '<link rel="stylesheet" type="text/css" href="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/admin-css/wptouch-admin.css" />';
 		$version = (float)get_bloginfo('version');
-		if ($version < 2.2) {
+		if ( $version <= 2.3 ) {
 			echo '<script src="http://www.google.com/jsapi"></script>';
 			echo '<script type="text/javascript">google.load("jquery", "1"); jQuery.noConflict( ); </script>';
 		}
