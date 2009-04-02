@@ -126,7 +126,7 @@ blockquote {
 /* @group Header */
 
 #blogtitle {
-	text-shadow: #5c5c5c 1px 1px 1px;
+	text-shadow: #242424 -1px -1px 1px;
 	height: 35px;
 	padding-top: 10px;
 	padding-left: 10px;
@@ -138,8 +138,7 @@ blockquote {
 	margin-right: 5px;
 	max-width: 30px;
 	-webkit-border-radius: 4px;
-	text-shadow: #999 3px 3px 2px;
-	bottom: 4px;
+	bottom: 2px;
 	float: left;
 }
 
@@ -361,7 +360,7 @@ input#ssubmit {
 	width: 28px;
 	padding-right: 10px;
 	right: 1px;
-	margin-bottom: 3%;
+	margin-bottom: 3%; 
 }
 
 /* @end */
@@ -374,10 +373,11 @@ input#ssubmit {
 	-webkit-border-radius: 8px;
 	border: 1px solid #adadad;
 	background-color: #fff;
-	margin-left: 10px;
-	margin-right: 10px;
 	padding: 10px;
-	margin-bottom: 10px;
+	margin-bottom: 12px;
+	position: relative;
+	margin-right: 10px;
+	margin-left: 10px;
 }
 
 a.post-arrow {
@@ -440,7 +440,7 @@ a.h2 {
 	position: relative;
 	color: #fff;
 	z-index: 9;
-	left: 14px;
+	left: 13px;
 	padding-left: 0;
 	letter-spacing: -1px;
 	font-weight: bold;
@@ -465,41 +465,103 @@ a.h2 {
 	letter-spacing: -1px;
 	font-weight: bold;
 	top: 5px;
+	
 }
 
 .calendar {
 	text-align: center;
-	float: left;
-	margin-right: 5px;
 	position: relative;
-	bottom: 4px;
-	margin-bottom: 4px;
-	height: 47px;
-	width: 46px;
-}
-
-.calendar img {
-	width: 40px;
-	height: 40px;
+	margin-bottom: 0;
+	margin-right: 10px;
+	margin-top: 0;
+	border: 1px solid #c7c7c7;
+	-webkit-border-top-left-radius: 9px;
+	-webkit-border-top-right-radius: 0px;
+	-webkit-border-bottom-left-radius: 0px;
+	-webkit-border-bottom-right-radius: 9px;
+	top: 3px;
+	float: left;
 }
 
 .cal-month {
-	font-size: 9px;
+	font-size: 11px;
 	font-weight: bold;
 	color: #fff;
-	padding-top: 8px;
 	letter-spacing: 0;
-	text-shadow: #333 0 1px 0;
-	padding-bottom: 0;
+	text-shadow: #495765 -1px -1px 1px;
+	border-bottom: 1px solid #f3f3f3;
+	text-transform: capitalize;
+	padding: 3px 13px;
+	-webkit-border-top-left-radius: 9px;
+	-webkit-border-top-right-radius: 0px;
 }
 
 .cal-date {
 	color: #222;
-	font-size: 17px;
-	font-weight: bold;
-	padding-top: 1px;
+	padding-top: 2px;
 	padding-right: 1px;
+	background-color: #e9e9e9;
+	padding-bottom: 5px;
+	text-shadow: white -1px -1px 1px;
+	-webkit-border-bottom-left-radius: 0px;
+	-webkit-border-bottom-right-radius: 9px;
+	letter-spacing: -1px;
+	font: bold 16px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 }
+
+/* @group Calendar Month Colors */
+
+.month-01 {
+	background-color: #c5c764;
+}
+
+.month-02 {
+	background-color: #345abe;
+}
+
+.month-03 {
+	background-color: #37838d;
+}
+
+.month-04 {
+	background-color: #55b06c;
+}
+
+.month-05 {
+	background-color: #90d2fe;
+}
+
+.month-06 {
+	background-color: #8d68b1;
+}
+
+.month-07 {
+	background-color: #fb9848;
+}
+
+.month-08 {
+	background-color: #639a37;
+}
+
+.month-09 {
+	background-color: #b62344;
+}
+
+.month-10 {
+	background-color: #1d4362;
+}
+
+.month-11 {
+	background-color: #4d1d77;
+}
+
+.month-12 {
+	background-color: #edc94d;
+}
+
+
+
+/* @end */
 
 .post-author {
 	color: #555;

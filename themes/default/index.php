@@ -160,8 +160,13 @@ Here we're making sure that each ajax div will have a unique ID.  -->
 		<a style="display:none" class="post-arrow-down" id="arrow-down-<?php the_ID(); ?>" href="javascript:document.getElementById('entry-<?php the_ID(); ?>').style.display = 'none';document.getElementById('arrow-<?php the_ID(); ?>').style.display = 'block';document.getElementById('arrow-down-<?php the_ID(); ?>').style.display = 'none';"></a>
 	<?php } ?>
 
-	<div class="calendar" style="background: url(<?php bloginfo('template_directory'); ?>/images/cal/month<?php echo get_the_time('n') ?>.jpg) no-repeat;">
-		<div class="cal-month"><?php echo get_the_time('M') ?></div>
+<!-- 
+old calendar code, it's all done in CSS magic now : )
+<div class="calendar" style="background: url(<?php bloginfo('template_directory'); ?>/images/cal/month<?php echo get_the_time('n') ?>.jpg) no-repeat;"> 
+-->
+	
+	<div class="calendar">
+		<div class="cal-month month-<?php echo get_the_time('m') ?>"><?php echo get_the_time('M') ?></div>
 		<div class="cal-date"><?php echo get_the_time('j') ?></div>
 	</div>
 
