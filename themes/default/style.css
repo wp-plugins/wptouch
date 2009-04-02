@@ -415,6 +415,7 @@ a.h2 {
 	padding: 7px 0 0;
 	line-height: 145%;
 	display: block;
+	overflow: hidden;
 }
 
 .mainentry li {
