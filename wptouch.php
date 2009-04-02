@@ -10,7 +10,9 @@
    # Special thanks to ContentRobot and the iWPhone theme/plugin
    # (http://iwphone.contentrobot.com/) which the detection feature
    # of the plugin was based on.
-   
+ 
+   # Copyright 2008-2009 BraveNewCode Inc. All Rights Reserved.
+ 
    # This plugin is free software; you can redistribute it and/or
    # modify it under the terms of the GNU Lesser General Public
    # License as published by the Free Software Foundation; either
@@ -541,4 +543,5 @@ add_action('admin_head', 'wptouch_admin_css');
 add_action('admin_menu', 'bnc_options_menu'); 
 add_action('the_content', 'wptouch_content_filter');
 add_filter('the_content_rss', 'do_shortcode', 11);
+add_filter('the_content', 'do_shortcode', 11);
 ?>
