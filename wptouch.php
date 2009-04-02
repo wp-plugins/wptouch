@@ -4,7 +4,7 @@
    Plugin URI: http://bravenewcode.com/wptouch/
    Description: A plugin which reformats your site with a mobile theme when viewing with an <a href="http://www.apple.com/iphone/"> Apple iPhone</a>, <a href="http://www.apple.com/ipodtouch/">Apple iPod touch</a>, <a href="http://www.android.com/">Google Android</a> or <a href="http://www.rim.com/storm/">Blackberry Storm</a> touch mobile device. Set options for the theme by visiting the <a href="options-general.php?page=wptouch/wptouch.php">WPtouch Options admin panel</a>. &nbsp;
    Author: Dale Mugford & Duane Storey
-   Version: 1.8.5
+   Version: 1.8.6
    Author URI: http://www.bravenewcode.com
    
    # Special thanks to ContentRobot and the iWPhone theme/plugin
@@ -28,7 +28,7 @@
 
 // WPtouch Theme Options
 global $bnc_wptouch_version;
-$bnc_wptouch_version = '1.8.5';
+$bnc_wptouch_version = '1.8.6';
 
 require_once( 'include/plugin.php' );
 
@@ -38,7 +38,6 @@ require_once( 'include/plugin.php' );
 //No need to manually change these, they're all admin options saved to the database
 global $wptouch_defaults;
 $wptouch_defaults = array(
-	'header-background-color' => '222222',
 	'header-title' => get_bloginfo('name'),
 	'main_title' => 'Default.png',
 	'enable-post-excerpts' => true,
@@ -55,12 +54,14 @@ $wptouch_defaults = array(
 	'enable-gzip' => false,
 	'enable-main-categories' => true,
 	'enable-main-email' => true,
+	'header-background-color' => '222222',
 	'header-border-color' => '333333',
 	'header-text-color' => 'eeeeee',
+	'link-color' => '006bb3',
 	'style-text-justify' => 'full-justified',
 	'style-text-size' => 'small-text',
-	'style-background' => 'classic-wptouch-bg',
-	'link-color' => '006bb3'
+	'bnc-zoom-state' => 'auto',
+	'style-background' => 'classic-wptouch-bg'
 );
 
 function wptouch_delete_icon( $icon ) {
@@ -107,7 +108,7 @@ function wptouch_content_filter( $content ) {
 		echo $before . 'WPtouch ' . $bnc_wptouch_version . $after;
 	}
  
-	// WP Admin stylesheet, Javascript
+	// WP Admin stylesheet, jQuery + Ajax Upload
 	function wptouch_admin_css() {
 		echo '<link rel="stylesheet" type="text/css" href="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/admin-css/wptouch-admin.css" />';
 		$version = (float)get_bloginfo('version');
@@ -266,33 +267,12 @@ class WPtouchPlugin {
 global $wptouch_plugin;
 $wptouch_plugin = & new WPtouchPlugin();
 
-/*
-
-function bnc_get_page_id_with_name ($name ) {
-   global $table_prefix;
-   global $wpdb;
-   
-   $sql = 'select * from ' . $table_prefix . 'posts where post_title = \'' . $name . '\';';
-   
-   if (mysql_connect(DB_HOST, DB_USER, DB_PASSWORD)) {
-      if (mysql_select_db(DB_NAME)) {
-         $sql = 'select * from ' . $table_prefix . 'posts where post_title = \'' . $name . '\';';
-         $result = mysql_query($sql);
-         while ($row = mysql_fetch_assoc($result)) {
-            print_r($row);
-         }
-      }
-   }
-}
-
-*/
-
 function bnc_is_iphone() {
 	global $wptouch_plugin;
 	return $wptouch_plugin->applemobile;
 }
   
-	// The Automatic Footer Template Switch Code (into "wp_footer()" in footer.php)
+// The Automatic Footer Template Switch Code (into "wp_footer()" in regular theme's footer.php)
 function wptouch_switch() {
 	global $wptouch_plugin;
 	if (bnc_is_iphone() && $wptouch_plugin->desired_view == 'normal') {
@@ -396,6 +376,7 @@ function bnc_is_login_button_enabled() {
 
 function bnc_is_redirect_enable() {
 	$ids = bnc_wp_touch_get_menu_pages();
+	return $ids['enable-redirect'];
 }
 	
 function bnc_is_js_enabled() {
@@ -453,7 +434,8 @@ function bnc_wp_touch_get_pages() {
 		if ($k == 'main_title' || $k == 'enable-post-excerpts' || $k == 'enable-page-coms' || 
 			 $k == 'enable-cats-button'  || $k == 'enable-login-button' || $k == 'enable-redirect' || 
 			 $k == 'enable-js-header' || $k == 'enable-gravatars' || $k == 'enable-main-home' || 
-			 $k == 'enable-main-rss' || $k == 'enable-main-email' || $k == 'enable-main-name' || $k == 'enable-main-tags' || $k == 'enable-main-categories') {
+			 $k == 'enable-main-rss' || $k == 'enable-main-email' || $k == 'enable-main-name' || 
+			 $k == 'enable-main-tags' || $k == 'enable-main-categories') {
 			} else {
 				if (is_numeric($k)) {
 					$keys[] = $k;
@@ -513,6 +495,11 @@ function bnc_get_header_color() {
 function bnc_get_link_color() {
 	$v = bnc_wp_touch_get_menu_pages();
 	return $v['link-color'];
+}
+
+function bnc_get_zoom_state() {
+	$v = bnc_wp_touch_get_menu_pages();
+	return $v['bnc-zoom-state'];
 }
 
 require_once( 'include/icons.php' );

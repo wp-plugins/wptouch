@@ -29,7 +29,7 @@ if  (!function_exists('dsq_comments_template')) { ?>
 	<?php } ?>
 <?php } ?>
 <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
-<!-- In order to have some dynamic user-selected CSS, we've written the below. We could pull it out into a css.php file, but it's just a small block and easy to add or modify this way. -->
+<!-- In order to have some dynamic CSS, we've written the below. We could pull it out into a css.php file, but it's just a small block and easy to add or modify this way. -->
 <style type="text/css">
 #menubar {
 	width: 100%;
@@ -55,6 +55,9 @@ background: #<?php echo bnc_get_header_border_color(); ?>;
 a {
 	text-decoration: none;
 	color: #<?php echo bnc_get_link_color(); ?>;
+}
+.post{
+	-webkit-text-size-adjust: <?php echo bnc_get_zoom_state(); ?>;
 }
 </style>
 </head>

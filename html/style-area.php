@@ -39,6 +39,15 @@
 			</select>
 		</div>
 
+		<div class="header-item-desc"><?php _e( "Font Zoom", "wptouch" ); ?></div>
+		<div class="header-input">
+			<select name="bnc-zoom-state">
+				<option <?php if ($wptouch_settings['bnc-zoom-state'] == "auto") echo " selected"; ?> value="auto"><?php _e( "Auto", "wptouch" ); ?></option>
+				<option <?php if ($wptouch_settings['bnc-zoom-state'] == "none") echo " selected"; ?> value="none"><?php _e( "None", "wptouch" ); ?></option>
+			</select>
+		</div>
+
+
 		<div class="header-item-desc"><?php _e( "Background Image", "wptouch" ); ?></div>
 		<div class="header-input">
 			<select name="style-background">
