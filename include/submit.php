@@ -133,6 +133,10 @@
 			$a['style-background'] = $_POST['style-background'];
 		}
 
+		if ( isset( $_POST['bnc-zoom-state']) ) {
+			$a['bnc-zoom-state'] = $_POST['bnc-zoom-state'];
+		}
+
 		foreach ($_POST as $k => $v) {
 			if ($k == 'enable_main_title') {
 				$a['main_title'] = $v;
