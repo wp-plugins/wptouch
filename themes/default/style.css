@@ -427,6 +427,8 @@ a.h2 {
 	height: auto;
 }
 
+/* @group Calendar CSS Icons */
+
 .comment-bubble {
 	background: url(images/unread-com.png) no-repeat;
 	width: 24px;
@@ -436,7 +438,6 @@ a.h2 {
 	text-align: center;
 	font-size: 13px;
 	float: left;
-	display: inline;
 	position: relative;
 	color: #fff;
 	z-index: 9;
@@ -475,9 +476,9 @@ a.h2 {
 	margin-right: 10px;
 	margin-top: 0;
 	border: 1px solid #c7c7c7;
-	-webkit-border-top-left-radius: 9px;
-	-webkit-border-top-right-radius: 0px;
-	-webkit-border-bottom-left-radius: 0px;
+	-webkit-border-top-left-radius: 0px;
+	-webkit-border-top-right-radius: 1px;
+	-webkit-border-bottom-left-radius: 1px;
 	-webkit-border-bottom-right-radius: 9px;
 	top: 3px;
 	float: left;
@@ -492,8 +493,8 @@ a.h2 {
 	border-bottom: 1px solid #f3f3f3;
 	text-transform: capitalize;
 	padding: 3px 13px;
-	-webkit-border-top-left-radius: 9px;
-	-webkit-border-top-right-radius: 0px;
+	-webkit-border-top-left-radius: 0px;
+	-webkit-border-top-right-radius: 1px;
 }
 
 .cal-date {
@@ -503,13 +504,13 @@ a.h2 {
 	background-color: #e9e9e9;
 	padding-bottom: 5px;
 	text-shadow: white -1px -1px 1px;
-	-webkit-border-bottom-left-radius: 0px;
+	-webkit-border-bottom-left-radius: 1px;
 	-webkit-border-bottom-right-radius: 9px;
 	letter-spacing: -1px;
 	font: bold 16px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 }
 
-/* @group Calendar Month Colors */
+/* @group Cal Month Colors */
 
 .month-01 {
 	background-color: #c5c764;
@@ -560,6 +561,8 @@ a.h2 {
 }
 
 
+
+/* @end */
 
 /* @end */
 
