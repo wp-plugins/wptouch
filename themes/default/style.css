@@ -472,7 +472,7 @@ a.h2 {
 .calendar {
 	text-align: center;
 	position: relative;
-	margin-bottom: 0;
+	margin-bottom: 5px;
 	margin-right: 10px;
 	margin-top: 0;
 	border: 1px solid #c7c7c7;
