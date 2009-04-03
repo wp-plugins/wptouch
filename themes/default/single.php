@@ -64,8 +64,8 @@ bloginfo('name'); ?>- <?php the_title();?>&body=<?php _e( "Check out this post:"
 
 <!-- Single post navigation links -->
 
-		<div class="alignleft"><?php next_post_link('<img src="' . get_bloginfo('template_directory') . '/images/blue_arrow_l.jpg" alt="" /> %link') ?></div>
-		<div class="alignright"><?php previous_post_link('%link <img src="' . get_bloginfo('template_directory') . '/images/blue_arrow_r.jpg" alt="" />') ?></div>
+		<div class="alignleft"><?php next_post_link('<img src="' . get_bloginfo('template_directory') . '/images/blue_arrow_l.jpg" alt="" /> %link', 'Prev Post') ?></div>
+		<div class="alignright"><?php previous_post_link('%link <img src="' . get_bloginfo('template_directory') . '/images/blue_arrow_r.jpg" alt="" />', 'Next Post') ?></div>
 
 <!-- Let's make sure there's no float strangeness happening. Sometimes plugins get funky here. -->
 		<div class="clearer"></div>
