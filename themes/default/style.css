@@ -128,7 +128,7 @@ blockquote {
 #blogtitle {
 	text-shadow: #242424 -1px -1px 1px;
 	height: 35px;
-	padding-top: 10px;
+	padding-top: 9px;
 	padding-left: 10px;
 	display: block;
 }
@@ -138,8 +138,10 @@ blockquote {
 	margin-right: 5px;
 	max-width: 30px;
 	-webkit-border-radius: 4px;
-	bottom: 2px;
+	bottom: 1px;
 	float: left;
+	width: 30px;
+	height: 30px;
 }
 
 #drop-fade {
@@ -360,7 +362,7 @@ input#ssubmit {
 	width: 28px;
 	padding-right: 10px;
 	right: 1px;
-	margin-bottom: 3%; 
+	margin-bottom: 3%;
 }
 
 /* @end */
@@ -466,7 +468,6 @@ a.h2 {
 	letter-spacing: -1px;
 	font-weight: bold;
 	top: 5px;
-	
 }
 
 .calendar {
@@ -559,8 +560,6 @@ a.h2 {
 .month-12 {
 	background-color: #af1919;
 }
-
-
 
 /* @end */
 
@@ -757,8 +756,8 @@ img.small {
 	font-size: 11px;
 	color: #999;
 	line-height: 13px;
-		max-width: 100% !important;
-		height: auto !important;
+	max-width: 100% !important;
+	height: auto !important;
 }
 
 #singlentry .gallery {
@@ -1242,13 +1241,17 @@ img.wptouch-switch-image {
 	top: 8px;
 }
 
-
-
 /* @end */
 
 /* @end */
 
 /* @group Plugin Compatibility CSS */
+
+/* @group Intense Debate */
+
+
+
+/* @end */
 
 /* @group WPtouch Adsense area */
 
@@ -1263,8 +1266,6 @@ img.wptouch-switch-image {
 	text-align: left						    !important;
 	font-size: 12px						!important;
 }
-
-
 
 /* @end */
 
@@ -1300,11 +1301,9 @@ img.wptouch-switch-image {
 	font-size: 13px;
 	color: #444;
 	width: 101px;
--webkit-border-top-left-radius: 1px;
--webkit-border-bottom-left-radius: 1px;
+	-webkit-border-top-left-radius: 1px;
+	-webkit-border-bottom-left-radius: 1px;
 }
-
-
 
 /* @end */
 
@@ -1319,7 +1318,9 @@ object {
 
 /* @group Ribbon Manager Plugin Override */
 
-a#ribbon{display:none !important;}
+a#ribbon {
+	display: none !important;
+}
 
 /* @end */
 
@@ -1331,15 +1332,20 @@ a#ribbon{display:none !important;}
 
 h3#dsq-add-new-comment {
 	color: #475d79;
-	text-shadow: #eee 2px 2px 0;
+	text-shadow: #eee 2px 1px 1px;
 	letter-spacing: -1px;
-	font-size: 17px;
+	font-size: 16px;
 	position: relative;
 	bottom: 10px;
 }
 
 .dsq-by img {
 	display: none;
+}
+
+.dsq-authenticated-pic img.dsq-post-avatar {
+	width: 24px;
+	height: 24px;
 }
 
 #disqus_thread {
@@ -1352,8 +1358,21 @@ h3#dsq-add-new-comment {
 	margin-top: 50px;
 }
 
+#disqus_thread .dsq-authenticated ul li {
+	font-weight: bold;
+	position: relative;
+	left: 5px;
+}
+
 #disqus_thread a#dsq-options-toggle {
 	float: right;
+}
+
+a.dsq-brlink {
+	text-align: center;
+	display: block;
+	margin-top: 15px;
+	font-family: "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 }
 
 /* @end */
@@ -1423,8 +1442,6 @@ a.search-close {
 	max-width: 100% !important;
 	height: auto !important;
 }
-
-
 
 /* @end */
 
