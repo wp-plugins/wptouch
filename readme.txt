@@ -18,15 +18,16 @@ The admin panel allows you to customize many aspects of its appearance, and deli
 
 The theme also includes the ability for your visitors to easily switch between the WPtouch view and your site's regular theme.
 
-= New In Version 1.8.6: =
+= New In Version 1.8.7: =
 
-* Fixed fatal error on line 153 undefined 'is_front_page' function for WP 2.3.x users
-* Fixed jQuery failing to load for WP 2.3.x users
-* Added option for font-zoom on rotate for accessibility, on by default
-* Fixed various styling bugs
-* Changed switch link in WPtouch to remain fixed width
-* Fixed various content overflow issues in WPtouch
-* As a note for WordPress 2.3 users, WPtouch 1.9 will require WordPress 2.5+
+* Changed calendar icons from images to CSS-based only (they look sexay!)
+* Refined styling of header logo, text shadow, general appearance
+* Removed unneeded declarations from the WPtouch stylesheet
+* Tested and works efficiently with WordPress MU (Finally!)
+* Please read the details in this readme regarding use on WordPress MU
+* Disqus commenting plugins out-of-the-box styling enhancements
+* We're working on IntenseDebate plugin support, should be out with the next revision
+
 
 Please visit http://bravenewcode.com/wptouch/ for a full description & updates on the WPtouch plugin.
 
