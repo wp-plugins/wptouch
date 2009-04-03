@@ -128,7 +128,7 @@ blockquote {
 #blogtitle {
 	text-shadow: #242424 -1px -1px 1px;
 	height: 35px;
-	padding-top: 9px;
+	padding-top: 10px;
 	padding-left: 10px;
 	display: block;
 }
@@ -138,7 +138,7 @@ blockquote {
 	margin-right: 5px;
 	max-width: 30px;
 	-webkit-border-radius: 4px;
-	bottom: 1px;
+	bottom: 2px;
 	float: left;
 	width: 30px;
 	height: 30px;
@@ -433,21 +433,20 @@ a.h2 {
 
 .comment-bubble {
 	background: url(images/unread-com.png) no-repeat;
-	width: 24px;
-	height: 24px;
+	width: 26px;
+	height: 25px;
 	opacity: 1;
-	padding-top: 3px;
+	padding-top: 5px;
 	text-align: center;
-	font-size: 13px;
 	float: left;
 	position: relative;
 	color: #fff;
 	z-index: 9;
 	left: 13px;
 	padding-left: 0;
+	top: 2px;
+	font: bold 11px Arial-BoldMT, Helvetica, Geneva, sans-serif;
 	letter-spacing: -1px;
-	font-weight: bold;
-	top: 3px;
 }
 
 .comment-bubble-big {
