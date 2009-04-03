@@ -8,7 +8,7 @@
 <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php bloginfo('rss2_url'); ?>" />
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 <!-- Strict viewport options to control how the content is shown. Increase the maximum-scale number to allow for zooming if you wish -->
-<meta name="viewport" content="width=320; maximum-scale=1.0; width=device-width initial-scale=1.0; user-scalable=no" />
+<meta name="viewport" content="maximum-scale=1.0; width=device-width initial-scale=1.0; user-scalable=no" />
 <!--This makes the iPhone/iPod touch ask for the same icon the user chooses for a logo to be the bookmark icon as well. -->
 <link rel="apple-touch-icon" href="<?php echo bnc_get_title_image(); ?>" />
 <!-- (Future Consideration)
