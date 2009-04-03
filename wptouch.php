@@ -37,8 +37,9 @@ require_once( 'include/plugin.php' );
 // uncomment this line to create a fresh install scenario
 // update_option( 'bnc_iphone_pages', '' );
 
-$on_mu = (strpos( __FILE__, "mu-plugins" ) !== false);
-if ( $on_mu ) {
+global $wptouch_on_mu;
+$wptouch_on_mu = (strpos( __FILE__, "mu-plugins" ) !== false);
+if ( $wptouch_on_mu ) {
 	$str = __FILE__;
 	$p = explode( "mu-plugins",  $str );
 	$wptouch_plugin_dir = $p[0] . "/mu-plugins/wptouch/";
@@ -85,6 +86,10 @@ function wptouch_get_plugin_dir_name() {
 	return $wptouch_plugin_dir_name;
 }
 
+function wptouch_get_upload_path() {
+	
+}
+
 function wptouch_delete_icon( $icon ) {
 	if ( !current_user_can( 'upload_files' ) ) {
 		// don't allow users to delete who don't have access to upload (security feature)
@@ -92,7 +97,12 @@ function wptouch_delete_icon( $icon ) {
 	}
 			
 	$dir = explode( 'wptouch', $icon );
-	$loc = ABSPATH . 'wp-content/uploads/wptouch/' . $dir[1];
+	if ( wptouch_get_plugin_dir_name() == "mu-plugins" ) {
+		global $blog_id;
+		$loc = ABSPATH . 'wp-content/blogs.dir/' . $blog_id . '/uploads/wptouch/' . $dir[1];
+	} else {
+		$loc = ABSPATH . 'wp-content/uploads/wptouch/' . $dir[1];
+	}
 	unlink( $loc );
 }
 
@@ -378,11 +388,16 @@ function wptouch_get_stats() {
 function bnc_get_title_image() {
 	$ids = bnc_wp_touch_get_menu_pages();
 	$title_image = $ids['main_title'];
+	global $blog_id;
 
 	if ( file_exists( ABSPATH . 'wp-content/' . wptouch_get_plugin_dir_name() . '/wptouch/images/icon-pool/' . $title_image ) ) {
 		$image = get_bloginfo('wpurl') . '/wp-content/' . wptouch_get_plugin_dir_name() . '/wptouch/images/icon-pool/' . $title_image;
 	} else {
-		$image = get_bloginfo('wpurl') . '/wp-content/uploads/wptouch/custom-icons/' . $title_image;
+		if ( wptouch_get_plugin_dir_name() == "mu-plugins") {
+			$image = get_bloginfo('wpurl') . '/wp-content/blogs.dir/' . $blog_id . '/uploads/wptouch/custom-icons/' . $title_image;
+		} else {
+			$image = get_bloginfo('wpurl') . '/wp-content/uploads/wptouch/custom-icons/' . $title_image;
+		}
 	}
 
 	return $image;

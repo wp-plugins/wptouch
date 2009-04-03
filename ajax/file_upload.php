@@ -2,12 +2,20 @@
 	$cur_dir = dirname(__FILE__);
 	$loc = explode( 'wp-content', $cur_dir );
 	$max_size = 128*1024; // 128k
+	global $wptouch_on_mu;
+	global $blog_id;
 	
 	require_once( $loc[0] . '/wp-config.php' );
 	
 	if ( current_user_can( 'upload_files' ) ) {
-		$wptouch_dir = $loc[0] . '/wp-content/uploads/wptouch/';
-		$upload_dir = $loc[0] . '/wp-content/uploads/wptouch/custom-icons/'; 
+		if ( !$wptouch_on_mu ) {
+			$wptouch_dir = $loc[0] . '/wp-content/uploads/wptouch/';
+			$upload_dir = $loc[0] . '/wp-content/uploads/wptouch/custom-icons/'; 
+		} else { 
+			$wptouch_dir = $loc[0] . '/wp-content/blogs.dir/' . $blog_id . '/uploads/wptouch/';
+			$upload_dir = $loc[0] . '/wp-content/blogs.dir/' . $blog_id . '/uploads/wptouch/custom-icons/'; 
+		}
+
 		if ( !file_exists( $wptouch_dir )) {
 			mkdir( $wptouch_dir, 0755, true ); 
 		}

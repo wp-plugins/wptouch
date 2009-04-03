@@ -183,11 +183,16 @@ We've commented below to let you know what works what, so if you do go messing a
             
             <?php           
             $pages = bnc_wp_touch_get_pages();
+		global $blog_id;
             foreach ($pages as $p) {
             	if ( file_exists( ABSPATH . 'wp-content/' . wptouch_get_plugin_dir_name() . '/wptouch/images/icon-pool/' . $p['icon'] ) ) {
             		$image = get_bloginfo('wpurl') . '/wp-content/' . wptouch_get_plugin_dir_name() . '/wptouch/images/icon-pool/' . $p['icon'];	
             	} else {
-            		$image = get_bloginfo('wpurl') . '/wp-content/uploads/wptouch/custom-icons/' . $p['icon'];
+			if ( wptouch_get_plugin_dir_name() == "mu-plugins" ) {
+            			$image = get_bloginfo('wpurl') . '/wp-content/blogs.dir/' . $blog_id . '/uploads/wptouch/custom-icons/' . $p['icon'];
+			} else {
+            			$image = get_bloginfo('wpurl') . '/wp-content/uploads/wptouch/custom-icons/' . $p['icon'];
+			}
             	}
 				echo('<li><a href="' . get_permalink($p['ID']) . '"><img src="' . $image . '" alt="icon" />' . $p['post_title'] . '</a></li>'); 
 			} ?>

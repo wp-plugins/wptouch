@@ -1,11 +1,17 @@
 <?php
 
 	function bnc_get_icon_locations() {
-        $locations = array( 
-        	'default' => '/wp-content/' . wptouch_get_plugin_dir_name() . '/wptouch/images/icon-pool/',        
+		global $wptouch_on_mu;
+		global $blog_id;
+        	$locations = array( 
+        		'default' => '/wp-content/' . wptouch_get_plugin_dir_name() . '/wptouch/images/icon-pool/',        
 			'custom' => '/wp-content/uploads/wptouch/custom-icons/'
 
-        );
+        	);
+
+	if ( $wptouch_on_mu ) {
+		$locations['custom'] =  '/wp-content/blogs.dir/' . $blog_id . '/uploads/wptouch/custom-icons/';
+	}
         
         return $locations;
 	}

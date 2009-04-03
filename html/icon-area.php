@@ -11,13 +11,13 @@
 				
 		<div id="upload_response"></div>
 		<div id="upload_progress" style="display: none;">
-			<p><img src="<?php echo get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/progress.gif'; ?>" alt="" /></p>
+			<p><img src="<?php echo get_bloginfo('wpurl') . '/wp-content/' . wptouch_get_plugin_dir_name() . '/wptouch/images/progress.gif'; ?>" alt="" /></p>
 		</div>
 		<script type="text/javascript">
 			$j = jQuery.noConflict();
 			$j(document).ready(function(){
 				new Ajax_upload('#upload_button', {
-					action: '<?php echo get_bloginfo('wpurl') . "/wp-content/plugins/wptouch/ajax/file_upload.php"; ?>',
+					action: '<?php echo get_bloginfo('wpurl') . "/wp-content/" . wptouch_get_plugin_dir_name() . "/wptouch/ajax/file_upload.php"; ?>',
 					autoSubmit: true,
 					name: 'submitted_file',
 					onSubmit: function(file, extension) { $j = jQuery.noConflict(); $j("#upload_progress").show(); },
@@ -29,7 +29,7 @@
 		<div id="upload_button"></div> 
 			
 		<p><?php _e( "Need help getting started?", "wptouch" ); ?></p>
-		<p><?php echo sprintf(__( 'Download our %s Photoshop template%s which you can use to build custom icons WPtouch style.', 'wptouch'), '<strong><a href="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/icon-pool/template.psd">', '</a></strong>' ); ?></p>
+		<p><?php echo sprintf(__( 'Download our %s Photoshop template%s which you can use to build custom icons WPtouch style.', 'wptouch'), '<strong><a href="' . get_bloginfo('wpurl') . '/wp-content/' . wptouch_get_plugin_dir_name() . '/wptouch/images/icon-pool/template.psd">', '</a></strong>' ); ?></p>
 	</div><!-- .wptouch-item-desc -->
 		
 	<div class="wptouch-item-content-box1">	
