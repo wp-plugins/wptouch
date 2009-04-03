@@ -15,7 +15,4 @@
    		$response = $snoopy->results;
    		echo '<h3>Latest News</h3>' . $response;
 	}
-
-
-
 ?>

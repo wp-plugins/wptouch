@@ -15,7 +15,6 @@
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta names="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 -->
-
 <?php wptouch_enqueue(); wp_head(); ?>
 	<?php if (bnc_is_js_enabled()) { ?>
 		<script src="<?php bloginfo('template_directory'); ?>/js/global.js" type="text/javascript" charset="utf-8"></script>
