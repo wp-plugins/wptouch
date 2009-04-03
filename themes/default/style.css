@@ -476,44 +476,44 @@ a.h2 {
 	margin-right: 10px;
 	margin-top: 0;
 	border: 1px solid #c7c7c7;
-	-webkit-border-top-left-radius: 0px;
+	-webkit-border-top-left-radius: 9px;
 	-webkit-border-top-right-radius: 1px;
 	-webkit-border-bottom-left-radius: 1px;
 	-webkit-border-bottom-right-radius: 9px;
 	top: 3px;
 	float: left;
+	-webkit-box-shadow: #c7c7c7 1px 1px 4px;
 }
 
 .cal-month {
-	font-size: 11px;
+	font-size: 10px;
 	font-weight: bold;
 	color: #fff;
 	letter-spacing: 0;
-	text-shadow: #495765 -1px -1px 1px;
+	text-shadow: #67727f 1px -1px 0;
 	border-bottom: 1px solid #f3f3f3;
-	text-transform: capitalize;
+	text-transform: uppercase;
 	padding: 3px 13px;
-	-webkit-border-top-left-radius: 0px;
+	-webkit-border-top-left-radius: 7px;
 	-webkit-border-top-right-radius: 1px;
 }
 
 .cal-date {
-	color: #222;
-	padding-top: 2px;
-	padding-right: 1px;
+	color: #111;
 	background-color: #e9e9e9;
-	padding-bottom: 5px;
 	text-shadow: white -1px -1px 1px;
 	-webkit-border-bottom-left-radius: 1px;
 	-webkit-border-bottom-right-radius: 9px;
 	letter-spacing: -1px;
-	font: bold 16px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	font: bold 19px "Arial Rounded MT Bold", Helvetica, Geneva, sans-serif;
+	padding: 3px 0 6px;
+	text-align: center;
 }
 
 /* @group Cal Month Colors */
 
 .month-01 {
-	background-color: #c5c764;
+	background-color: #767c8f;
 }
 
 .month-02 {
@@ -545,7 +545,7 @@ a.h2 {
 }
 
 .month-09 {
-	background-color: #b62344;
+	background-color: #a04262;
 }
 
 .month-10 {
@@ -557,7 +557,7 @@ a.h2 {
 }
 
 .month-12 {
-	background-color: #edc94d;
+	background-color: #af1919;
 }
 
 
