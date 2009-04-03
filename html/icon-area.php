@@ -1,4 +1,4 @@
-<?php require_once( ABSPATH . '/wp-content/plugins/wptouch/include/icons.php' ); ?>
+<?php require_once( ABSPATH . '/wp-content/' . wptouch_get_plugin_dir_name() . '/wptouch/include/icons.php' ); ?>
 <?php global $wptouch_settings; ?>
 
 <div class="wptouch-itemrow" id="available_icons">

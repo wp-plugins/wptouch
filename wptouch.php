@@ -37,6 +37,20 @@ require_once( 'include/plugin.php' );
 // uncomment this line to create a fresh install scenario
 // update_option( 'bnc_iphone_pages', '' );
 
+$on_mu = (strpos( __FILE__, "mu-plugins" ) !== false);
+if ( $on_mu ) {
+	$str = __FILE__;
+	$p = explode( "mu-plugins",  $str );
+	$wptouch_plugin_dir = $p[0] . "/mu-plugins/wptouch/";
+	$wptouch_plugin_dir_name = "mu-plugins";
+} else {
+	$str = __FILE__;
+	$p = explode( "plugins",  $str );
+	$wptouch_plugin_dir = $p[0] . "/plugins/wptouch/";
+	$wptouch_plugin_dir_name = "plugins";
+}
+
+
 //No need to manually change these, they're all admin options saved to the database
 global $wptouch_defaults;
 $wptouch_defaults = array(
@@ -65,6 +79,11 @@ $wptouch_defaults = array(
 	'bnc-zoom-state' => 'auto',
 	'style-background' => 'classic-wptouch-bg'
 );
+
+function wptouch_get_plugin_dir_name() {
+	global $wptouch_plugin_dir_name;
+	return $wptouch_plugin_dir_name;
+}
 
 function wptouch_delete_icon( $icon ) {
 	if ( !current_user_can( 'upload_files' ) ) {
@@ -112,13 +131,14 @@ function wptouch_content_filter( $content ) {
  
 	// WP Admin stylesheet, jQuery + Ajax Upload
 	function wptouch_admin_css() {
-		echo '<link rel="stylesheet" type="text/css" href="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/admin-css/wptouch-admin.css" />';
+		global $wptouch_plugin_dir_name;
+		echo '<link rel="stylesheet" type="text/css" href="' . get_bloginfo('wpurl') . '/wp-content/' . $wptouch_plugin_dir_name . '/wptouch/admin-css/wptouch-admin.css" />';
 		$version = (float)get_bloginfo('version');
 		if ( $version <= 2.3 ) {
 			echo '<script src="http://www.google.com/jsapi"></script>';
 			echo '<script type="text/javascript">google.load("jquery", "1"); jQuery.noConflict( ); </script>';
 		}
-		echo "<script type=\"text/javascript\" src=\"" . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/js/jquery.ajax_upload.1.1.js' . "\"></script>";
+		echo "<script type=\"text/javascript\" src=\"" . get_bloginfo('wpurl') . '/wp-content/' . $wptouch_plugin_dir_name . '/wptouch/js/jquery.ajax_upload.1.1.js' . "\"></script>";
 	}
   
 class WPtouchPlugin {
@@ -143,8 +163,9 @@ class WPtouchPlugin {
 	}
 
 	function bnc_head() {
+		global $wptouch_plugin_dir_name;
 		if ($this->applemobile && $this->desired_view == 'normal') {
-			echo "<link rel=\"stylesheet\" type=\"text/css\" href=\"" . get_bloginfo( 'wpurl' ) . "/wp-content/plugins/wptouch/switch-css/wptouch-switch-link.css\"></link>";
+			echo "<link rel=\"stylesheet\" type=\"text/css\" href=\"" . get_bloginfo( 'wpurl' ) . "/wp-content/" . $wptouch_plugin_dir_name . "/wptouch/switch-css/wptouch-switch-link.css\"></link>";
 		}
 	}
 
@@ -267,8 +288,9 @@ class WPtouchPlugin {
 	}
 		  
 	function theme_root_uri($url) {
+		global $wptouch_plugin_dir_name;
 		if ($this->applemobile && $this->desired_view === 'mobile') {
-			$dir = get_bloginfo('wpurl') . "/wp-content/plugins/wptouch/themes";
+			$dir = get_bloginfo('wpurl') . "/wp-content/" . $wptouch_plugin_dir_name . "/wptouch/themes";
 			return $dir;
 		} else {
 			return $url;
@@ -290,7 +312,7 @@ function wptouch_switch() {
 	if (bnc_is_iphone() && $wptouch_plugin->desired_view == 'normal') {
 		echo '<div id="wptouch-switch-link">';
 		_e( "Mobile Theme", "wptouch" ); 
-		echo "<a onclick=\"javascript:document.getElementById('switch-on').style.display='block';javascript:document.getElementById('switch-off').style.display='none';\" href=\"" . get_bloginfo('siteurl') . "/?bnc_view=mobile\"><img id=\"switch-on\" src=\"" . get_bloginfo('wpurl') . "/wp-content/plugins/wptouch/images/on.jpg\" alt=\"on switch image\" class=\"wptouch-switch-image\" style=\"display:none\" /><img id=\"switch-off\" src=\"" . get_bloginfo('siteurl') . "/wp-content/plugins/wptouch/images/off.jpg\" alt=\"off switch image\" class=\"wptouch-switch-image\" /></a>";
+		echo "<a onclick=\"javascript:document.getElementById('switch-on').style.display='block';javascript:document.getElementById('switch-off').style.display='none';\" href=\"" . get_bloginfo('siteurl') . "/?bnc_view=mobile\"><img id=\"switch-on\" src=\"" . get_bloginfo('wpurl') . "/wp-content/" . wptouch_get_plugin_dir_name() . "/wptouch/images/on.jpg\" alt=\"on switch image\" class=\"wptouch-switch-image\" style=\"display:none\" /><img id=\"switch-off\" src=\"" . get_bloginfo('siteurl') . "/wp-content/" . wptouch_get_plugin_dir_name() . "/wptouch/images/off.jpg\" alt=\"off switch image\" class=\"wptouch-switch-image\" /></a>";
  		echo '</div>';
 	}
 }
@@ -357,8 +379,8 @@ function bnc_get_title_image() {
 	$ids = bnc_wp_touch_get_menu_pages();
 	$title_image = $ids['main_title'];
 
-	if ( file_exists( ABSPATH . 'wp-content/plugins/wptouch/images/icon-pool/' . $title_image ) ) {
-		$image = get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/icon-pool/' . $title_image;
+	if ( file_exists( ABSPATH . 'wp-content/' . wptouch_get_plugin_dir_name() . '/wptouch/images/icon-pool/' . $title_image ) ) {
+		$image = get_bloginfo('wpurl') . '/wp-content/' . wptouch_get_plugin_dir_name() . '/wptouch/images/icon-pool/' . $title_image;
 	} else {
 		$image = get_bloginfo('wpurl') . '/wp-content/uploads/wptouch/custom-icons/' . $title_image;
 	}

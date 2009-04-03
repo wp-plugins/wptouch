@@ -178,14 +178,14 @@ We've commented below to let you know what works what, so if you do go messing a
         <div id="dropmenu-inner">
             <ul>
             <?php if (bnc_is_home_enabled()) { ?>
-            	<li><a href="<?php bloginfo('siteurl'); ?>"><img src="<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/images/icon-pool/Home.png" alt="" /><?php _e( "Home", "wptouch" ); ?></a></li> 
+            	<li><a href="<?php bloginfo('siteurl'); ?>"><img src="<?php bloginfo('wpurl'); ?>/wp-content/<?php echo wptouch_get_plugin_dir_name(); ?>/wptouch/images/icon-pool/Home.png" alt="" /><?php _e( "Home", "wptouch" ); ?></a></li> 
             <?php } ?>
             
             <?php           
             $pages = bnc_wp_touch_get_pages();
             foreach ($pages as $p) {
-            	if ( file_exists( ABSPATH . 'wp-content/plugins/wptouch/images/icon-pool/' . $p['icon'] ) ) {
-            		$image = get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/images/icon-pool/' . $p['icon'];	
+            	if ( file_exists( ABSPATH . 'wp-content/' . wptouch_get_plugin_dir_name() . '/wptouch/images/icon-pool/' . $p['icon'] ) ) {
+            		$image = get_bloginfo('wpurl') . '/wp-content/' . wptouch_get_plugin_dir_name() . '/wptouch/images/icon-pool/' . $p['icon'];	
             	} else {
             		$image = get_bloginfo('wpurl') . '/wp-content/uploads/wptouch/custom-icons/' . $p['icon'];
             	}
@@ -193,11 +193,11 @@ We've commented below to let you know what works what, so if you do go messing a
 			} ?>
 		
             <?php if (bnc_is_rss_enabled()) { ?>
-           		<li><a href="<?php bloginfo('rss2_url'); ?>"><img src="<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/images/icon-pool/RSS.png" alt="" /><?php _e( "RSS Feed", "wptouch" ); ?></a></li>
+           		<li><a href="<?php bloginfo('rss2_url'); ?>"><img src="<?php bloginfo('wpurl'); ?>/wp-content/<?php echo wptouch_get_plugin_dir_name(); ?>/wptouch/images/icon-pool/RSS.png" alt="" /><?php _e( "RSS Feed", "wptouch" ); ?></a></li>
            	<?php } ?>
            
            	<?php if (bnc_is_email_enabled()) { ?>
-           		<li class="noborder"><a href="mailto:<?php bloginfo('admin_email'); ?>"><img src="<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/images/icon-pool/Mail.png" alt="" /><?php _e( "E-Mail", "wptouch" ); ?></a></li>
+           		<li class="noborder"><a href="mailto:<?php bloginfo('admin_email'); ?>"><img src="<?php bloginfo('wpurl'); ?>/wp-content/<?php echo wptouch_get_plugin_dir_name(); ?>/wptouch/images/icon-pool/Mail.png" alt="" /><?php _e( "E-Mail", "wptouch" ); ?></a></li>
            	<?php } ?>
            
            	<?php if (!bnc_is_js_enabled()) { ?>
