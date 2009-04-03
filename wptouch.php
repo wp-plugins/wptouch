@@ -589,6 +589,6 @@ add_action('wp_footer', 'wptouch_switch');
 add_action('admin_head', 'wptouch_admin_css');
 add_action('admin_menu', 'bnc_options_menu'); 
 add_action('the_content', 'wptouch_content_filter');
-add_filter('the_content_rss', 'do_shortcode', 11);
-add_filter('the_content', 'do_shortcode', 11);
+//add_filter('the_content_rss', 'do_shortcode', 11);
+//add_filter('the_content', 'do_shortcode', 11);
 ?>

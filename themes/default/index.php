@@ -46,7 +46,7 @@ Here we're making sure that each ajax div will have a unique ID.  -->
 
  		<?php if (!is_page()) { ?>
 	
-		<?php if (function_exists('dsq_comments_template')) { ?>
+		<?php if (function_exists('dsq_comments_template') || function_exists('intensedebate_id')) { ?>
 		<!--We don't want DISQUS to show anything here, it doesn't look nice-->
 			<?php } else { ?>
 			<!--Show the Comment Bubble (not on pages, this exists for index. archive, tag and category stuff)-->
