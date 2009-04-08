@@ -28,29 +28,30 @@
    # See the GNU lesser General Public License for more details.
 */
 
+
 // WPtouch Theme Options
 global $bnc_wptouch_version;
 $bnc_wptouch_version = '1.8.7';
 
 require_once( 'include/plugin.php' );
 
+
 // uncomment this line to create a fresh install scenario
 // update_option( 'bnc_iphone_pages', '' );
 
 global $wptouch_on_mu;
 $wptouch_on_mu = (strpos( __FILE__, "mu-plugins" ) !== false);
-if ( $wptouch_on_mu ) {
+if ( $wptouch_on_mu && false ) {
 	$str = __FILE__;
-	$p = explode( "mu-plugins",  $str );
-	$wptouch_plugin_dir = $p[0] . "/mu-plugins/wptouch/";
+	$ptemp = explode( "mu-plugins",  $str );
+	$wptouch_plugin_dir = $ptemp[0] . "/mu-plugins/wptouch/";
 	$wptouch_plugin_dir_name = "mu-plugins";
 } else {
 	$str = __FILE__;
-	$p = explode( "plugins",  $str );
-	$wptouch_plugin_dir = $p[0] . "/plugins/wptouch/";
+	$ptemp = explode( "plugins",  $str );
+	$wptouch_plugin_dir = $ptemp[0] . "/plugins/wptouch/";
 	$wptouch_plugin_dir_name = "plugins";
 }
-
 
 //No need to manually change these, they're all admin options saved to the database
 global $wptouch_defaults;
@@ -592,3 +593,4 @@ add_action('the_content', 'wptouch_content_filter');
 //add_filter('the_content_rss', 'do_shortcode', 11);
 //add_filter('the_content', 'do_shortcode', 11);
 ?>
+
