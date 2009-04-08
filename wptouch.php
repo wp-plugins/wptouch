@@ -593,4 +593,3 @@ add_action('the_content', 'wptouch_content_filter');
 //add_filter('the_content_rss', 'do_shortcode', 11);
 //add_filter('the_content', 'do_shortcode', 11);
 ?>
-
