@@ -39,7 +39,19 @@ You can also checkout our Support Forums at http://support.bravenewcode.com to p
 
 (Here's the complete changelog)
 
-= New In Version 1.8.6: =
+= New In Version 1.8.7: =
+
+* Changed calendar icons from images to CSS-based only (they look sexay!)
+* Refined styling of header logo, text shadow, general appearance
+* Removed unneeded declarations from the WPtouch stylesheet
+* Tested and works efficiently with WordPress MU when installed site-wide (Finally!)
+* Please read the details in this readme regarding use on WordPress MU
+* Disqus commenting plugins out-of-the-box styling enhancements
+* We're working on IntenseDebate plugin support, should be out with the next revision
+* Added javascript to support framesets and screen size detection
+
+
+= Version 1.8.6: =
 
 * Fixed fatal error on line 153 undefined 'is_front_page' function for WP 2.3.x users
 * Fixed jQuery failing to load for WP 2.3.x users
@@ -49,13 +61,10 @@ You can also checkout our Support Forums at http://support.bravenewcode.com to p
 * Fixed various content overflow issues in WPtouch
 * As a note for WordPress 2.3 users, WPtouch 1.9 will require WordPress 2.5+
 
-= Version 1.8.5: =
+= Version 1.8 - 1.8.5: =
 
 * Fixed new switch link to work under different WordPress install scenarios
 * Fixed switch link CSS style-sheet loading issues in some situations
-
-= Version 1.8.4: =
-
 * Fixed missing mime types for icon upload through IE7
 * Fixed issues related to automatic favicon generation on a Links page
 * Changed footer switch links to mimic iPhone settings app appearance
@@ -65,16 +74,8 @@ You can also checkout our Support Forums at http://support.bravenewcode.com to p
 * Added check for 'Allow Comments' on pages
 * Fixed hidden Apache error (reported in logs)
 * Fixed admin styling issues on IE7, Firefox
-
-
-= Version 1.8.1: =
-
 * Fixed issue with custom icons and the header logo
 * Fixed issue with the Classic background not appearing
-
-
-= Version 1.8: =
-
 * Significant rewrite of core code for increased efficiency
 * Changed database calls to use wpdb object, will hopefully work with wpmu
 * Internationalization preparation of the admin and theme files (for WPtouch 1.9)
@@ -98,7 +99,7 @@ You can also checkout our Support Forums at http://support.bravenewcode.com to p
 * Fixed issue with Android and the sub-header menu links not working
 
 
-= Version 1.7.5: =
+= Version 1.7 =
 
 * Added option to do GZIP compression
 * Suppressed warning about multiple gzhandlers
@@ -165,7 +166,7 @@ You can also checkout our Support Forums at http://support.bravenewcode.com to p
 * Code cleanups and optimizations
 
 
-= Versions 1.3.x =
+= Version 1.3 =
 
 * Tweaks for the jQuery bugs
 * No conflict setting added for jQuery
@@ -184,7 +185,7 @@ You can also checkout our Support Forums at http://support.bravenewcode.com to p
 * Admin wording changes
 
 
-= Versions 1.2.x =
+= Version 1.2 =
 
 * Fix for the theme appearing in Safari browsers
 * Switch from Prototype to the more WordPress-native jQuery for javascript (much faster!)
@@ -203,7 +204,7 @@ You can also checkout our Support Forums at http://support.bravenewcode.com to p
 * Switched to Snoopy from CURL for the admin news section (thanks to Joost de Valk (yoast.com)
 
 
-= Versions 1.1.x =
+= Version 1.1 =
 
 * The ability to disable advanced javascript effects (fixes effects not working for some, speeds up the load time considerably)
 * Proper styling of embedded YouTube videos on mobileSafari in iPhone 2.0
@@ -266,4 +267,3 @@ Not bloody likely! Unless of course you're getting slammed with all sorts of tra
 9. Built-in 'e-mail post' capability
 10. WordPress Photo Gallery & Post Nav Support
 11. Theme switch link appearance
-
