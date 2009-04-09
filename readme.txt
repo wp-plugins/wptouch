@@ -23,10 +23,11 @@ The theme also includes the ability for your visitors to easily switch between t
 * Changed calendar icons from images to CSS-based only (they look sexay!)
 * Refined styling of header logo, text shadow, general appearance
 * Removed unneeded declarations from the WPtouch stylesheet
-* Tested and works efficiently with WordPress MU (Finally!)
+* Tested and works efficiently with WordPress MU when installed site-wide (Finally!)
 * Please read the details in this readme regarding use on WordPress MU
 * Disqus commenting plugins out-of-the-box styling enhancements
 * We're working on IntenseDebate plugin support, should be out with the next revision
+* Added javascript to support framesets and screen size detection
 
 
 Please visit http://bravenewcode.com/wptouch/ for a full description & updates on the WPtouch plugin.
@@ -228,6 +229,9 @@ Download, unzip, and upload the 'wptouch' folder and all its contents to your Wo
 
 = 2.7+ =
 You can now install WPtouch directly from the WordPress admin!
+
+= WordPress MU =
+If you'd like to use WPtouch with WordPress MU as a site-wide plugin, simple install the wptouch folder in the mu-plugins directory.  Once complete, either move wptouch.php back a directory (into the mu-plugins directory), or create a symbolic link to it.
 
 
 Please visit http://www.bravenewcode.com/wptouch/ for comprehensive installation instructions.
