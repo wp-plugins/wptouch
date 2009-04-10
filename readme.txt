@@ -4,11 +4,11 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=paypa
 Tags: wptouch, iphone, ipod touch, theme, apple, mac, bravenewcode, ajax, mobile, mobile, android, blackberry
 Requires at least: 2.3.x
 Tested up to: 2.7.1
-Stable tag: 1.8.7
+Stable tag: 1.8.8
 
 WPtouch automatically transforms your WordPress blog into an iPhone application-style theme, complete with ajax loading articles and effects, when viewed from an iPhone or iPod touch.
 
-Downloaded over *90,000 times* (bravenewcode.com + wordpress.org) since April 2008. 
+Downloaded over *95,000 times* (bravenewcode.com + wordpress.org) since April 2008. 
 
 == Description ==
 
@@ -18,16 +18,14 @@ The admin panel allows you to customize many aspects of its appearance, and deli
 
 The theme also includes the ability for your visitors to easily switch between the *WPtouch* view and your site's regular theme.
 
-= New In Version 1.8.7: =
+= New In Version 1.8.8: =
 
-* Changed calendar icons from images to CSS-based only (they look sexay!)
-* Refined styling of header logo, text shadow, general appearance
-* Removed unneeded declarations from the WPtouch stylesheet
-* Tested and works efficiently with WordPress MU when installed site-wide (Finally!)
-* Please read the details in this readme regarding use on WordPress MU
-* Disqus commenting plugins out-of-the-box styling enhancements
-* We're working on IntenseDebate plugin support, should be out with the next revision
-* Added javascript to support framesets and screen size detection
+* Fixed refresh issue (some pages keep re-loading)
+* Fixed mkdir issue on PHP4 installations
+* Set viewport to fixed width for device to prevent some sites from loading wide
+* Minor revisions to new CSS calendar icon styling
+* Added exclusive mode feature to help in situations where other plugins are incompatible, load too many scripts/css files and both break and slow down WPtouch
+* Added Fancybox for some feature descriptions in the admin
 
 
 Please visit http://bravenewcode.com/wptouch/ for a full description & updates on the WPtouch plugin.
@@ -39,7 +37,16 @@ You can also checkout our Support Forums at http://support.bravenewcode.com to p
 
 (Here's the complete changelog)
 
-= New In Version 1.8.7: =
+= Version 1.8.8 (latest): =
+
+* Fixed refresh issue (some pages keep re-loading)
+* Fixed mkdir issue on PHP4 installations
+* Set viewport to fixed width for device to prevent some sites from loading wide
+* Minor revisions to new CSS calendar icon styling
+* Added exclusive mode feature to help in situations where other plugins are incompatible, load too many scripts/css files and both break and slow down WPtouch
+* Added Fancybox for some feature descriptions in the admin
+
+= Versions 1.8 to 1.8.7: =
 
 * Changed calendar icons from images to CSS-based only (they look sexay!)
 * Refined styling of header logo, text shadow, general appearance
@@ -51,10 +58,6 @@ You can also checkout our Support Forums at http://support.bravenewcode.com to p
 * We're working on IntenseDebate plugin support, should be out with the next revision
 * Added javascript to support framesets and screen size detection
 * Fixed bug related to RSS feeds being broken in some situations
-
-
-= Version 1.8.6: =
-
 * Fixed fatal error on line 153 undefined 'is_front_page' function for WP 2.3.x users
 * Fixed jQuery failing to load for WP 2.3.x users
 * Added option for font-zoom on rotate for accessibility, on by default
@@ -62,9 +65,6 @@ You can also checkout our Support Forums at http://support.bravenewcode.com to p
 * Changed switch link in WPtouch to remain fixed width
 * Fixed various content overflow issues in WPtouch theme files
 * As a note for WordPress 2.3 users, WPtouch 1.9 will require WordPress 2.5+
-
-= Versions 1.8 - 1.8.5: =
-
 * Fixed new switch link to work under different WordPress install scenarios
 * Fixed switch link CSS style-sheet loading issues in some situations
 * Fixed missing mime types for icon upload through IE7
