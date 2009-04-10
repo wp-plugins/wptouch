@@ -4,7 +4,7 @@
    Plugin URI: http://bravenewcode.com/wptouch/
    Description: A plugin which reformats your site with a mobile theme when viewing with an <a href="http://www.apple.com/iphone/"> Apple iPhone</a>, <a href="http://www.apple.com/ipodtouch/">Apple iPod touch</a>, <a href="http://www.android.com/">Google Android</a> or <a href="http://www.rim.com/storm/">Blackberry Storm</a> touch mobile device. Set options for the theme by visiting the <a href="options-general.php?page=wptouch/wptouch.php">WPtouch Options admin panel</a>. &nbsp;
    Author: Dale Mugford & Duane Storey
-   Version: 1.8.7
+   Version: 1.8.8
    Author URI: http://www.bravenewcode.com
    
    # Special thanks to ContentRobot and the iWPhone theme/plugin
@@ -31,7 +31,7 @@
 
 // WPtouch Theme Options
 global $bnc_wptouch_version;
-$bnc_wptouch_version = '1.8.7';
+$bnc_wptouch_version = '1.8.8';
 
 require_once( 'include/plugin.php' );
 
@@ -144,13 +144,15 @@ function wptouch_content_filter( $content ) {
 	function wptouch_admin_css() {
 		global $wptouch_plugin_dir_name;
 		echo '<link rel="stylesheet" type="text/css" href="' . get_bloginfo('wpurl') . '/wp-content/' . $wptouch_plugin_dir_name . '/wptouch/admin-css/wptouch-admin.css" />';
+		echo '<link rel="stylesheet" type="text/css" href="' . get_bloginfo('wpurl') . '/wp-content/' . $wptouch_plugin_dir_name . '/wptouch/js/fancybox/jquery.fancybox.css" />';
 		$version = (float)get_bloginfo('version');
 		if ( $version <= 2.3 ) {
 			echo '<script src="http://www.google.com/jsapi"></script>';
 			echo '<script type="text/javascript">google.load("jquery", "1"); jQuery.noConflict( ); </script>';
 		}
 		echo "<script type=\"text/javascript\" src=\"" . get_bloginfo('wpurl') . '/wp-content/' . $wptouch_plugin_dir_name . '/wptouch/js/jquery.ajax_upload.1.1.js' . "\"></script>";
-	}
+		echo "<script type=\"text/javascript\" src=\"" . get_bloginfo('wpurl') . '/wp-content/' . $wptouch_plugin_dir_name . '/wptouch/js/fancybox1.2.1.js' . "\"></script>";
+		}
   
 class WPtouchPlugin {
 	var $applemobile;

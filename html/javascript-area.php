@@ -15,6 +15,7 @@
 	</div>
 	
 	<div class="wptouch-item-content-box1">
+
 		<div class="wptouch-checkbox-row">
 			<input type="checkbox" name="enable-cats-button" <?php if ( isset( $wptouch_settings['enable-cats-button']) && $wptouch_settings['enable-cats-button'] == 1) echo('checked'); ?> />
 			<label for="enable-cats-button"> <?php _e( "Enable categories in the header", "wptouch" ); ?> (<small><?php _e( "will add a categories button beside search &amp; menu buttons", "wptouch" ); ?>)</small></label>
@@ -36,18 +37,26 @@
 		
 		<div class="wptouch-checkbox-row">
 			<input type="checkbox" name="enable-page-coms" <?php if (isset($wptouch_settings['enable-page-coms']) && $wptouch_settings['enable-page-coms'] == 1) echo('checked'); ?> />
-			<label for="enable-page-coms"> <?php _e( "Enable comments on pages", "wptouch" ); ?> <small>(<?php _e( "will add the comment form to pages with 'Allow Comments' checked in the WordPress admin", "wptouch" ); ?>)</small></label>
+			<label for="enable-page-coms"> <?php _e( "Enable comments on pages", "wptouch" ); ?> <a href="#page-coms-info" class="wptouch-fancy">?</a><div id="page-coms-info" style="display:none"><?php _e( "will add the comment form to pages with 'Allow Comments' checked in the WordPress admin", "wptouch" ); ?></div></label>
 		</div>
 		
 		<div class="wptouch-checkbox-row">
 			<input type="checkbox" name="enable-regular-default" <?php if (isset($wptouch_settings['enable-regular-default']) && $wptouch_settings['enable-regular-default'] == 1) echo('checked'); ?> />
-			<label for="enable-regular-default"> <?php _e( "First-time mobile users will see regular (non-mobile) site", "wptouch" ); ?></label>
+			<label for="enable-regular-default"><?php _e( "First-time mobile users will see regular (non-mobile) site", "wptouch" ); ?> <a href="#reg-info" class="wptouch-fancy">?</a><div id="reg-info" style="display:none"><h2><?php _e( "More Info", "wptouch" ); ?></h2><?php _e( "When this option is checked, users will see your regular site theme first, and have the option in your footer to switch to the WPtouch mobile view. They'll be able to change back and forth either way. Make sure you have the wp_footer(); function call in your regular theme's footer.php file for the switch link to work properly.", "wptouch" ); ?></div></label>
 		</div>			
 		
 		<div class="wptouch-checkbox-row">
 			<input type="checkbox" name="enable-gzip" <?php if (isset($wptouch_settings['enable-gzip']) && $wptouch_settings['enable-gzip'] == 1) echo('checked'); ?> />
 			<label for="enable-gzip"> <?php _e( "Enable GZIP compression", "wptouch" ); ?> <small>(<?php _e( "speeds up page loads, may conflict with other plugins", "wptouch" ); ?>)</small></label>
 		</div>			
+		<div class="wptouch-checkbox-row">
+			<input type="checkbox" name="enable-iframe" <?php if (isset($wptouch_settings['enable-iframe']) && $wptouch_settings['enable-iframe'] == 1) echo('checked'); ?> />
+			<label for="enable-iframe"> <?php _e( "Enable iFrame Site Support", "wptouch" ); ?> <small>(<?php _e( "Fixes cases where your domain loads inside an iFrame, thus causing WPtouch to appear far too wide and small", "wptouch" ); ?>)</small></label>
+		</div>		
+		<div class="wptouch-checkbox-row">
+			<input type="checkbox" name="enable-exclusive" <?php if (isset($wptouch_settings['enable-exclusive']) && $wptouch_settings['enable-exclusive'] == 1) echo('checked'); ?> />
+			<label for="enable-exclusive"> <?php _e( "Enable WPtouch Exclusive Mode", "wptouch" ); ?> <small>(<?php _e( "Disallows other plugins from loading into WPtouch. Fixes incompatibilities and speeds up WPtouch", "wptouch" ); ?>)</small></label>
+		</div>		
 	</div>
 	<div class="wptouch-clearer"></div>
 </div>

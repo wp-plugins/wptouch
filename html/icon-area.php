@@ -21,9 +21,19 @@
 					autoSubmit: true,
 					name: 'submitted_file',
 					onSubmit: function(file, extension) { $j = jQuery.noConflict(); $j("#upload_progress").show(); },
-					onComplete: function(file, response) { $j = jQuery.noConflict(); $j("#upload_progress").hide(); $j('#upload_response').hide().html(response).fadeIn(); }
+					onComplete: function(file, response) { $j = jQuery.noConflict(); $j("#upload_progress").hide();
+					$j('#upload_response').hide().html(response).fadeIn(); }
 				});
+			$j("a.wptouch-fancy").fancybox({
+				'padding':						8,
+				'imageScale':					true,
+				'zoomSpeedIn':				300, 
+				'zoomSpeedOut':			300,
+				'zoomOpacity':				true, 
+				'overlayShow':				false,
+				'hideOnContentClick': 	false
 			});
+		});
 		</script>
 			
 		<div id="upload_button"></div> 
