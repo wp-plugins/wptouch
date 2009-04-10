@@ -529,7 +529,7 @@
 		easingOut			:	'swing',
 		easingChange		:	'swing',
 		frameWidth			:	425,
-		frameHeight			:	355,
+		frameHeight			:	200,
 		overlayShow			:	true,
 		overlayOpacity		:	0.3,
 		hideOnContentClick	:	true,

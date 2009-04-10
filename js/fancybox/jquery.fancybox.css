@@ -85,11 +85,28 @@ div#fancy_content {
 }
 
 div#fancy_div {
-	background: #fff;
+	background: #fcffeb;
 	color: #333;
-	height: 100%;
-	width: 100%;
+	height: 97%;
+	width: 98%;
 	z-index: 100;
+	margin: 0;
+	padding: 5px;
+	line-height: 17px;
+	font-size: .9em;
+}
+
+div#fancy_div h2 {
+	color: #264761;
+	display: block;
+	width: 100%;
+	border-bottom-style: none;
+	font: bold 17px Georgia, "Times New Roman", Times, serif;
+	text-shadow: #ecf4fc -1px -1px 1px;
+	letter-spacing: -1px;
+	padding: 0;
+	margin-bottom: 5px;
+	margin-top: 0;
 }
 
 img#fancy_img {

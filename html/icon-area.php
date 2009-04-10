@@ -31,6 +31,7 @@
 				'zoomSpeedOut':			300,
 				'zoomOpacity':				true, 
 				'overlayShow':				false,
+				'frameHeight':				250,
 				'hideOnContentClick': 	false
 			});
 		});
