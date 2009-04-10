@@ -136,6 +136,12 @@
 		if ( isset( $_POST['bnc-zoom-state']) ) {
 			$a['bnc-zoom-state'] = $_POST['bnc-zoom-state'];
 		}
+		
+		if ( isset( $_POST['enable-exclusive'] ) ) {
+			$a['enable-exclusive'] = 1;	
+		} else {
+			$a['enable-exclusive'] = 0;
+		}
 
 		foreach ($_POST as $k => $v) {
 			if ($k == 'enable_main_title') {

@@ -79,7 +79,8 @@ $wptouch_defaults = array(
 	'style-text-justify' => 'full-justified',
 	'style-text-size' => 'small-text',
 	'bnc-zoom-state' => 'auto',
-	'style-background' => 'classic-wptouch-bg'
+	'style-background' => 'classic-wptouch-bg',
+	'enable-exclusive' => false
 );
 
 function wptouch_get_plugin_dir_name() {
@@ -359,6 +360,11 @@ function bnc_validate_wptouch_settings( &$settings ) {
 			$settings[$key] = $value;
 		}
 	}
+}
+
+function bnc_wptouch_is_exclusive() {
+	$settings = bnc_wptouch_get_settings();
+	return $settings['enable-exclusive'];
 }
 
 function bnc_wp_touch_get_menu_pages() {

@@ -25,7 +25,9 @@
 
 			<?php _e( "All content Copyright &copy;", "wptouch" ); ?> <?php bloginfo('name'); ?><br />
 			<?php _e( 'Powered by <a href="http://wordpress.org/">WordPress</a> with', 'wptouch' ); ?> <a href="http://bravenewcode.com/wptouch/"><?php WPtouch(); ?></a>
+	<?php if ( !bnc_wptouch_is_exclusive() ) { ?>
 		<?php wp_footer(); ?>
+	<?php } ?>
 	</div>
 <br />
 <?php wptouch_get_stats(); 

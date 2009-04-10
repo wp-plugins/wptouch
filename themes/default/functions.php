@@ -3,7 +3,7 @@
 // This checks to see if advanced JS is enabled in the WPtouch admin and then loads jQuery without collisions if possible (2.5 or higher)
 function wptouch_enqueue() {
 	$version = get_bloginfo('version'); 
-		if ($version >= 2.5 && bnc_is_js_enabled()) { 
+		if ($version >= 2.5 && bnc_is_js_enabled() && !bnc_wptouch_is_exclusive() ) { 
 			echo	 '' . wp_enqueue_script('jquery') . '';
 		} elseif (bnc_is_js_enabled()) { 
 			echo '<script src="http://www.google.com/jsapi"></script>';
