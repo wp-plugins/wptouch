@@ -18,7 +18,7 @@ The admin panel allows you to customize many aspects of its appearance, and deli
 
 The theme also includes the ability for your visitors to easily switch between the *WPtouch* view and your site's regular theme.
 
-= New In Version 1.8.8: =
+= New In Version 1.8.9: =
 
 * Fixed refresh issue (some pages keep re-loading)
 * Fixed mkdir issue on PHP4 installations
@@ -37,7 +37,7 @@ You can also checkout our Support Forums at http://support.bravenewcode.com to p
 
 (Here's the complete changelog)
 
-= Version 1.8.8 (latest): =
+= Version 1.8.9 (latest): =
 
 * Fixed refresh issue (some pages keep re-loading)
 * Fixed mkdir issue on PHP4 installations
