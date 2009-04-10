@@ -15,7 +15,6 @@
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta names="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 -->
-
 <?php 
 
 	wptouch_enqueue(); 
