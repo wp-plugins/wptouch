@@ -37,7 +37,7 @@ You can also checkout our Support Forums at http://support.bravenewcode.com to p
 
 (Here's the complete changelog)
 
-= Version 1.8.9.1 (latest): =
+= Version 1.8.9.1 =
 
 * Fixed refresh issue (some pages keep re-loading)
 * Fixed mkdir issue on PHP4 installations
@@ -46,7 +46,7 @@ You can also checkout our Support Forums at http://support.bravenewcode.com to p
 * Added exclusive mode feature to help in situations where other plugins are incompatible, load too many scripts/css files and both break and slow down WPtouch
 * Added Fancybox for some feature descriptions in the admin
 
-= Versions 1.8 to 1.8.7: =
+= Versions 1.8.1 to 1.8.8 =
 
 * Changed calendar icons from images to CSS-based only (they look sexay!)
 * Refined styling of header logo, text shadow, general appearance
