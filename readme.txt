@@ -6,15 +6,13 @@ Requires at least: 2.3.x
 Tested up to: 2.7.1
 Stable tag: 1.8.9.1
 
-WPtouch automatically transforms your WordPress blog into an iPhone application-style theme, complete with ajax loading articles and effects, when viewed from an iPhone or iPod touch.
-
-Downloaded over *95,000 times* (bravenewcode.com + wordpress.org) since April 2008. 
+WPtouch automatically transforms your WordPress blog into an iPhone application-style theme, complete with ajax loading articles and effects, when viewed from an iPhone, iPod touch, Android or BlackBerry touch mobile device.
 
 == Description ==
 
-With a single click, *WPtouch* transforms your WordPress blog into an iPhone application-style theme, complete with ajax loading articles and effects, when viewed from an iPhone or iPod touch.
+With a single click, *WPtouch* transforms your WordPress blog into an iPhone application-style theme, complete with ajax loading articles and effects, when viewed from an iPhone, iPod touch, Android or BlackBerry touch mobile device.
 
-The admin panel allows you to customize many aspects of its appearance, and deliver a fast, user-friendly and stylish version of your site to your iPhone and iPod touch visitors without modifying a single bit of code (or affecting) your regular desktop theme.
+The admin panel allows you to customize many aspects of its appearance, and deliver a fast, user-friendly and stylish version of your site to your iPhone, iPod touch, Android or BlackBerry Storm visitors without modifying a single bit of code (or affecting) your regular desktop theme.
 
 The theme also includes the ability for your visitors to easily switch between the *WPtouch* view and your site's regular theme.
 
@@ -28,9 +26,9 @@ The theme also includes the ability for your visitors to easily switch between t
 * Added Fancybox for some feature descriptions in the admin
 
 
-Please visit http://bravenewcode.com/wptouch/ for a full description & updates on the WPtouch plugin.
+Please visit http://bravenewcode.com/wptouch/ for a full description & updates on the *WPtouch* plugin.
 
-You can also checkout our Support Forums at http://support.bravenewcode.com to post questions and learn tips and tricks for WPtouch and our other plugins.
+You can also checkout our Support Forums at http://support.bravenewcode.com to post questions and learn tips and tricks for *WPtouch* and our other plugins.
 
 
 == What's New ==
@@ -224,11 +222,15 @@ You can also checkout our Support Forums at http://support.bravenewcode.com to p
 * styling for YouTube embedded videos
 * bug fixes for blogs installed in directories other than root
 
+= Version 1.0 = 
+
+* Initial release
+
 
 == Installation ==
 
 = Pre 2.7 =
-Download, unzip, and upload the 'wptouch' folder and all its contents to your WordPress wp-content/plugins folder using FTP. Visit the plugin tab in the WordPress admin, and activate *WPtouch*. You can then setup your plugin options by visiting the Settings - >WPtouch tab.
+Download, unzip, and upload the 'wptouch' folder and all its contents to your WordPress wp-content/plugins folder using FTP. Visit the plugin tab in the WordPress admin, and activate *WPtouch*. You can then setup your plugin options by visiting the *Settings - >WPtouch* tab.
 
 = 2.7+ =
 You can now install *WPtouch* directly from the WordPress admin!
@@ -250,11 +252,11 @@ Yes, that's true for the most part. However, not all websites are created equal,
 
 = Well, what if my users don't like it and want to see my regular site? =
 
-There's a mobile switch option in the footer on *WPtouch* for your users to easily switch between the *WPtouch* view and your site's regular appearance. It's that easy. We even automatically put a little snippet of code into your current theme which will be shown only to iPhone/iPod/Android visitors, giving them control to switch between the two site themes easily.
+There's a mobile switch option in the footer on *WPtouch* for your users to easily switch between the *WPtouch* view and your site's regular appearance. It's that easy. We even automatically put a little snippet of code into your current theme which will be shown only to iPhone, iPod touch, Android or BlackBerry touch mobile device visitors, giving them control to switch between the two site themes easily.
 
 = Will it slow down my blog, or increase my server load? =
 
-Not bloody likely! Unless of course you're getting slammed with all sorts of traffic because you've installed this sexy thang. The entire theme files package for *WPtouch* is small (300kb or so without the screenshots). It was designed to be as lightweight and speedy as possible, while still serving your site's content in a richly presented way, sparing no essential features like search, login, categories, tags, comments etc.
+Not bloody likely! Unless of course you're getting slammed with all sorts of traffic because you've installed this sexy thang. The entire theme files package for *WPtouch* is small (300kb or so without the screenshots in the download). It was designed to be as lightweight and speedy as possible, while still serving your site's content in a richly presented way, sparing no essential features like search, login, categories, tags, comments etc.
 
 == Screenshots ==
 
