@@ -35,6 +35,12 @@ You can also checkout our Support Forums at http://support.bravenewcode.com to p
 
 (Here's the complete changelog)
 
+= Version 1.9.0 (coming soon) =
+
+* Updated compatibility code -- thanks to Will Norris for the suggestions
+* Modified AJAX calls
+* Made it so administration CSS/JS only loads on WPtouch page
+
 = Version 1.8.9.1 =
 
 * Fixed refresh issue (some pages keep re-loading)
