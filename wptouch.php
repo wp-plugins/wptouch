@@ -85,12 +85,8 @@ function wptouch_delete_icon( $icon ) {
 	}
 			
 	$dir = explode( 'wptouch', $icon );
-	if ( wptouch_get_plugin_dir_name() == "mu-plugins" ) {
-		global $blog_id;
-		$loc = ABSPATH . 'wp-content/blogs.dir/' . $blog_id . '/uploads/wptouch/' . $dir[1];
-	} else {
-		$loc = ABSPATH . 'wp-content/uploads/wptouch/' . $dir[1];
-	}
+	$loc = compat_get_upload_dir() . "/" . $dir[1];
+	
 	unlink( $loc );
 }
 

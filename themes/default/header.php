@@ -39,7 +39,7 @@ if  (!function_exists('dsq_comments_template')) { ?>
 #menubar {
 	width: 100%;
 	height: 45px !important;
-	background: #<?php echo bnc_get_header_background(); ?> url(<?php bloginfo('wpurl'); ?>/wp-content/plugins/wptouch/themes/default/images/head-fade-bk.png) repeat-x;
+	background: #<?php echo bnc_get_header_background(); ?> url(<?php echo compat_get_plugin_url(); ?>/themes/default/images/head-fade-bk.png) repeat-x;
 }
 #blogtitle a {
 	text-decoration: none;
@@ -184,35 +184,31 @@ We've commented below to let you know what works what, so if you do go messing a
         <div id="dropmenu-inner">
             <ul>
             <?php if (bnc_is_home_enabled()) { ?>
-            	<li><a href="<?php bloginfo('siteurl'); ?>"><img src="<?php bloginfo('wpurl'); ?>/wp-content/<?php echo wptouch_get_plugin_dir_name(); ?>/wptouch/images/icon-pool/Home.png" alt="" /><?php _e( "Home", "wptouch" ); ?></a></li> 
+            	<li><a href="<?php bloginfo('siteurl'); ?>"><img src="<?php echo compat_get_plugin_url(); ?>/images/icon-pool/Home.png" alt="" /><?php _e( "Home", "wptouch" ); ?></a></li> 
             <?php } ?>
             
             <?php           
-            $pages = bnc_wp_touch_get_pages();
-		global $blog_id;
-            foreach ($pages as $p) {
-            	if ( file_exists( ABSPATH . 'wp-content/' . wptouch_get_plugin_dir_name() . '/wptouch/images/icon-pool/' . $p['icon'] ) ) {
-            		$image = get_bloginfo('wpurl') . '/wp-content/' . wptouch_get_plugin_dir_name() . '/wptouch/images/icon-pool/' . $p['icon'];	
-            	} else {
-			if ( wptouch_get_plugin_dir_name() == "mu-plugins" ) {
-            			$image = get_bloginfo('wpurl') . '/wp-content/blogs.dir/' . $blog_id . '/uploads/wptouch/custom-icons/' . $p['icon'];
-			} else {
-            			$image = get_bloginfo('wpurl') . '/wp-content/uploads/wptouch/custom-icons/' . $p['icon'];
-			}
-            	}
-				echo('<li><a href="' . get_permalink($p['ID']) . '"><img src="' . $image . '" alt="icon" />' . $p['post_title'] . '</a></li>'); 
-			} ?>
+					$pages = bnc_wp_touch_get_pages();
+					global $blog_id;
+					foreach ($pages as $p) {
+						if ( file_exists( compat_get_plugin_dir() . '/images/icon-pool/' . $p['icon'] ) ) {
+							$image = compat_get_plugin_url() . '/images/icon-pool/' . $p['icon'];	
+						} else {
+            			$image = compat_get_upload_url() . '/wptouch/custom-icons/' . $p['icon'];
+            		}
+						echo('<li><a href="' . get_permalink($p['ID']) . '"><img src="' . $image . '" alt="icon" />' . $p['post_title'] . '</a></li>'); 
+					} ?>
 		
             <?php if (bnc_is_rss_enabled()) { ?>
-           		<li><a href="<?php bloginfo('rss2_url'); ?>"><img src="<?php bloginfo('wpurl'); ?>/wp-content/<?php echo wptouch_get_plugin_dir_name(); ?>/wptouch/images/icon-pool/RSS.png" alt="" /><?php _e( "RSS Feed", "wptouch" ); ?></a></li>
+           		<li><a href="<?php bloginfo('rss2_url'); ?>"><img src="<?php echo compat_get_plugin_url(); ?>/images/icon-pool/RSS.png" alt="" /><?php _e( "RSS Feed", "wptouch" ); ?></a></li>
            	<?php } ?>
            
            	<?php if (bnc_is_email_enabled()) { ?>
-           		<li class="noborder"><a href="mailto:<?php bloginfo('admin_email'); ?>"><img src="<?php bloginfo('wpurl'); ?>/wp-content/<?php echo wptouch_get_plugin_dir_name(); ?>/wptouch/images/icon-pool/Mail.png" alt="" /><?php _e( "E-Mail", "wptouch" ); ?></a></li>
+           		<li class="noborder"><a href="mailto:<?php bloginfo('admin_email'); ?>"><img src="<?php echo compat_get_plugin_url(); ?>/images/icon-pool/Mail.png" alt="" /><?php _e( "E-Mail", "wptouch" ); ?></a></li>
            	<?php } ?>
            
            	<?php if (!bnc_is_js_enabled()) { ?>
-           		<li class="noarrow"><a class="menu-close" href="javascript:document.getElementById('dropmenu').style.display = 'none';"><img src="<?php bloginfo('template_directory'); ?>/images/cross.png" alt="" /> <?php _e( "Close Menu", "wptouch" ); ?></a></li>
+           		<li class="noarrow"><a class="menu-close" href="javascript:document.getElementById('dropmenu').style.display = 'none';"><img src="<?php echo compat_get_plugin_url(); ?>/images/cross.png" alt="" /> <?php _e( "Close Menu", "wptouch" ); ?></a></li>
            	<?php } ?>
            </ul>
         </div>
