@@ -11,7 +11,7 @@
 				
 		<div id="upload_response"></div>
 		<div id="upload_progress" style="display: none;">
-			<p><img src="<?php echo compat_get_plugin_dir() . '/images/progress.gif'; ?>" alt="" /></p>
+			<p><img src="<?php echo compat_get_plugin_url() . '/images/progress.gif'; ?>" alt="" /></p>
 		</div>
 		<script type="text/javascript">
 			$j = jQuery.noConflict();

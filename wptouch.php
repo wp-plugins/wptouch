@@ -85,8 +85,8 @@ function wptouch_delete_icon( $icon ) {
 	}
 			
 	$dir = explode( 'wptouch', $icon );
-	$loc = compat_get_upload_dir() . "/" . $dir[1];
-	
+	$loc = compat_get_upload_dir() . "/wptouch/" . ltrim( $dir[1], '/' );
+
 	unlink( $loc );
 }
 
