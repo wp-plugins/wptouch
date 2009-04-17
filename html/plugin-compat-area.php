@@ -1,4 +1,4 @@
-<?php require_once( ABSPATH . '/wp-content/' . wptouch_get_plugin_dir_name() . '/wptouch/include/plugin.php' ); ?>
+<?php require_once( compat_get_plugin_dir() . '/include/plugin.php' ); ?>
 <?php global $wptouch_settings; ?>
 
 <?php $version = bnc_get_wp_version(); ?>

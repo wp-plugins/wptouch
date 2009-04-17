@@ -14,13 +14,13 @@
 
 		<script type="text/javascript">
 			jQuery.ajax({
-				url: "<?php bloginfo('wpurl'); ?>/wp-content/<?php echo wptouch_get_plugin_dir_name(); ?>/wptouch/load-news.php",
+				url: "<?php bloginfo('wpurl'); ?>/?wptouch=news",
 				success: function(data) {
 					jQuery("#wptouch-news-frame").html(data).fadeIn();
 				}});
 
 			jQuery.ajax({
-				url: "<?php bloginfo('wpurl'); ?>/wp-content/<?php echo wptouch_get_plugin_dir_name(); ?>/wptouch/load-news.php?donations=1",
+				url: "<?php bloginfo('wpurl'); ?>/?wptouch=donations",
 				success: function(data) {
 					jQuery("#wptouch-donation-frame").html(data).fadeIn();
 				}});

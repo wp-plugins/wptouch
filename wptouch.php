@@ -158,8 +158,30 @@ class WPtouchPlugin {
 		add_filter( 'init', array(&$this, 'bnc_filter_iphone') );
 		add_filter( 'wp', array(&$this, 'bnc_do_redirect') );
 		add_filter( 'wp_head', array(&$this, 'bnc_head') );
+		add_filter( 'query_vars', array( &$this, 'wptouch_query_vars' ) );
+		add_filter( 'parse_request', array( &$this, 'wptouch_parse_request' ) );
 		
 		$this->detectAppleMobile();
+	}
+
+	function wptouch_query_vars( $vars ) {
+		$vars[] = "wptouch";
+		return $vars;
+	}
+	
+	function wptouch_parse_request( $wp ) {
+		if  (array_key_exists( "wptouch", $wp->query_vars ) ) {
+			switch ( $wp->query_vars["wptouch"] ) {
+				case "upload":
+					include( 'ajax/file_upload.php' );
+					die;
+				case "news":
+					include( 'ajax/load_news.php' );
+					die;
+				case "donations":
+					die;
+			}
+		}	
 	}
 
 	function bnc_head() {
