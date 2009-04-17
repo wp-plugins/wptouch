@@ -34,8 +34,6 @@ global $bnc_wptouch_version;
 $bnc_wptouch_version = '1.8.9.1';
 
 require_once( 'include/plugin.php' );
-require_once( 'include/compat.php' );
-
 
 // uncomment this line to create a fresh install scenario
 // update_option( 'bnc_iphone_pages', '' );
@@ -110,6 +108,8 @@ function wptouch_delete_icon( $icon ) {
 }
 
 function wptouch_init() {
+	require_once( 'include/compat.php' );
+	
 	if ( isset( $_GET['delete_icon'] ) ) {
 		wptouch_delete_icon( $_GET['delete_icon'] );
 		
