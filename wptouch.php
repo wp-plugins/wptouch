@@ -173,16 +173,17 @@ class WPtouchPlugin {
 		if  (array_key_exists( "wptouch", $wp->query_vars ) ) {
 			switch ( $wp->query_vars["wptouch"] ) {
 				case "upload":
-					include( 'ajax/file_upload.php' );
-					die;
+					include( 'ajax/file_upload.php' );	
+					break;
 				case "news":
 					include( 'ajax/load-news.php' );
-					die;
+					break;
 				case "donations":
 					$donations = true;
 					include( 'ajax/load-news.php' );
-					die;
+					break;
 			}
+			exit;
 		}	
 	}
 
