@@ -19,11 +19,11 @@
 					jQuery("#wptouch-news-frame").html(data).fadeIn();
 				}});
 
-			jQuery.ajax({
+		/*	jQuery.ajax({
 				url: "<?php bloginfo('wpurl'); ?>/?wptouch=donations",
 				success: function(data) {
 					jQuery("#wptouch-donation-frame").html(data).fadeIn();
-				}});
+				}}); */
 		</script>
 
 

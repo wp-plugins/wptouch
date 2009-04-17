@@ -176,9 +176,11 @@ class WPtouchPlugin {
 					include( 'ajax/file_upload.php' );
 					die;
 				case "news":
-					include( 'ajax/load_news.php' );
+					include( 'ajax/load-news.php' );
 					die;
 				case "donations":
+					$donations = true;
+					include( 'ajax/load-news.php' );
 					die;
 			}
 		}	
