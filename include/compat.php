@@ -30,7 +30,7 @@ if ( !function_exists( 'compat_get_wp_content_url' ) ) {
 
 if ( !function_exists( 'compat_is_wordpress_mu' ) ) {
 	function compat_is_wordpress_mu() {	
-		return file_exists( compat_get_wp_content_url() . '/mu-plugins' );
+		return file_exists( compat_get_wp_content_dir() . '/mu-plugins' );
 	}
 }
 	

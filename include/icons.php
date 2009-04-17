@@ -1,64 +1,55 @@
 <?php
 
 	function bnc_get_icon_locations() {
-		global $wptouch_on_mu;
-		global $blog_id;
-        	$locations = array( 
-        		'default' => '/wp-content/' . wptouch_get_plugin_dir_name() . '/wptouch/images/icon-pool/',        
-			'custom' => '/wp-content/uploads/wptouch/custom-icons/'
+      $locations = array( 
+        		'default' => array( compat_get_plugin_dir() . '/images/icon-pool/', compat_get_plugin_url() . '/images/icon-pool/' ),      
+				'custom' => array( compat_get_upload_dir() . '/wptouch/custom-icons/', compat_get_upload_url() . '/wptouch/custom-icons' )
+		);
 
-        	);
-
-	if ( $wptouch_on_mu ) {
-		$locations['custom'] =  '/wp-content/blogs.dir/' . $blog_id . '/uploads/wptouch/custom-icons/';
+      return $locations;
 	}
+	
+	function bnc_get_icon_list() {
+		$locations = bnc_get_icon_locations();
         
-        return $locations;
-	}
+		$files = array();
 
-    function bnc_get_icon_list() {
-        $a = preg_match('#(.*)wptouch.php#', __FILE__, $matches);
-        $locations = bnc_get_icon_locations();
-                
-        $files = array();
-        $root_locations = explode( 'wp-content', __FILE__);
-        $wordpress_root = $root_locations[0];
-        
-        foreach ( $locations as $name => $location ) {
-        	$current_path = $wordpress_root . $location;
-	   	    $dir = @opendir( $current_path );
-	   	    $files[ $name ] = array();
-
+		foreach ( $locations as $key => $value ) {
+			$current_path = $value[0];
+			
+			$dir = @opendir( $current_path );
+			$files[ $key ] = array();
+		
 			if ( $dir ) {
 				while ( false !== ( $file = readdir( $dir ) ) ) { 
 					if ($file == '.' || $file == '..' || $file == '.svn' || $file == 'template.psd' || $file == '.DS_Store' || $file == 'more') {
 						continue;
 					}
-					
+				
 					$icon = array();
 					$names = explode('.', $file);
 					$icon['friendly'] = ucfirst($names[0]);
 					$icon['name'] = $file;
-					$icon['url'] = get_bloginfo('wpurl') . $location . $file;
-					$files[ $name ][ $icon['name'] ] = $icon;
+					$icon['url'] = $value[1] . "/" . $file;
+					$files[ $key ][ $icon['name'] ] = $icon;
 				}
 			}
-        }
-     
-     	ksort($files);
-     	return $files;
+		}
+
+		ksort($files);
+		return $files;
 	}
 	
 	function bnc_show_icons() {
 		$icons = bnc_get_icon_list();
 		$locations = bnc_get_icon_locations();
 		
-		foreach ( $locations as $name => $location ) {
-			echo '<div class="new-icon-block ' . $name . '">';
-			foreach ( $icons[ $name ] as $icon ) {
+		foreach ( $locations as $key => $value ) {
+			echo '<div class="new-icon-block ' . $key . '">';
+			foreach ( $icons[ $key ] as $icon ) {
 				echo '<ul class="wptouch-iconblock">';
 				echo '<li><img src="' . $icon['url'] . '" title="' . $icon['name'] . '" /><br />' . $icon['friendly'];
-				if ( $name == 'custom' ) {
+				if ( $key == 'custom' ) {
 					echo ' <a href="' . $_SERVER['REQUEST_URI'] . '&delete_icon=' . urlencode($icon['url']) . '">(x)</a>';	
 				}
 				echo '</li>';
@@ -73,9 +64,9 @@
 		$locations = bnc_get_icon_locations();
 		$files = array();
 		
-		foreach ( $locations as $name => $location ) {
-			foreach ( $icons[$name] as $icon) {
-				$files[$icon['name']] = $icon;
+		foreach ( $locations as $key => $value ) {
+			foreach ( $icons[$key] as $icon) {
+				$files[ $icon['name'] ] = $icon;
 			}	
 		}
 		

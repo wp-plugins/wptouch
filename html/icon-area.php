@@ -7,7 +7,7 @@
 			
 		<p><?php _e( "You can select which icons will be displayed beside pages enabled below", "wptouch" ); ?></p>
 		<p><?php _e( "To add icons to the pool, simply upload a 60x60 .png, .jpeg or .gif from your computer.", "wptouch" ); ?></p>
-		<p><?php echo sprintf( __( "These files will be stored in %swp-content/uploads/wptouch/custom-icons/%s.", "wptouch"), "<strong>", "</strong>" ); ?></p>
+		<p><?php echo sprintf( __( "These files will be stored in %s/uploads/wptouch/custom-icons/%s.", "wptouch"), "<strong>", "</strong>" ); ?></p>
 				
 		<div id="upload_response"></div>
 		<div id="upload_progress" style="display: none;">
