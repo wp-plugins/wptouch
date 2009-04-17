@@ -34,6 +34,7 @@ global $bnc_wptouch_version;
 $bnc_wptouch_version = '1.8.9.1';
 
 require_once( 'include/plugin.php' );
+require_once( 'include/compat.php' );
 
 
 // uncomment this line to create a fresh install scenario
