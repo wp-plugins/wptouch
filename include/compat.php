@@ -88,5 +88,4 @@ if ( !function_exists( 'compat_get_upload_url' ) ) {
 		}			
 	}	
 }
-
 ?>
