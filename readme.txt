@@ -35,11 +35,13 @@ You can also checkout our Support Forums at http://support.bravenewcode.com to p
 
 (Here's the complete changelog)
 
-= Version 1.9.0 (coming soon) =
+= Version 1.8.9.2 (coming soon) =
 
 * Updated compatibility code -- thanks to Will Norris for the suggestions
 * Modified AJAX calls
 * Made it so administration CSS/JS only loads on WPtouch page
+
+*Compatibility mode urls in template files, this version will need to be tested in a variety of situations, so please report any errors at http://support.nbravenewcode.com*
 
 = Version 1.8.9.1 =
 

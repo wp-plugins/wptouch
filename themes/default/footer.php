@@ -15,16 +15,15 @@
 					<?php if (!bnc_is_login_button_enabled() && get_option('comment_registration') && !$user_ID) { ?>
 						<a href="<?php bloginfo('wpurl'); ?>/wp-login.php"><?php _e( "Login to", "wptouch" ); ?> <?php bloginfo('name'); ?></a> | 
 					<?php } ?>
-					
 					<?php if (get_option('comment_registration')) { ?>
 						<a href="<?php bloginfo('wpurl'); ?>/wp-register.php"><?php _e( "Register for this site", "wptouch" ); ?></a>
 					<?php } ?>
-				<?php  endif; ?></h3></center>
+				<?php endif; ?></h3></center>
 
 			<div id="wptouch-switch-link"><?php _e( "Mobile Theme", "wptouch" ); ?><a onclick="javascript:document.getElementById('switch-on').style.display='none';javascript:document.getElementById('switch-off').style.display='block';" href="<?php echo bloginfo('home') . '/?bnc_view=normal'; ?>"><img id="switch-on" src="<?php echo compat_get_plugin_url(); ?>/images/on.jpg" alt="on switch image" class="wptouch-switch-image" /><img id="switch-off" style="display:none" src="<?php echo compat_get_plugin_url(); ?>/images/off.jpg" alt="off switch image" class="wptouch-switch-image" /></a></div>	
 
 			<?php _e( "All content Copyright &copy;", "wptouch" ); ?> <?php bloginfo('name'); ?><br />
-			<?php _e( 'Powered by <a href="http://wordpress.org/">WordPress</a> with', 'wptouch' ); ?> <a href="http://bravenewcode.com/wptouch/"><?php WPtouch(); ?></a>
+			<?php _e( 'Powered by <a href="http://www.wordpress.org/">WordPress</a> with', 'wptouch' ); ?> <a href="http://bravenewcode.com/wptouch/"><?php WPtouch(); ?></a>
 	<?php if ( !bnc_wptouch_is_exclusive() ) { ?>
 		<?php wp_footer(); ?>
 	<?php } ?>
