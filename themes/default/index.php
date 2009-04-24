@@ -76,7 +76,7 @@ Here we're making sure that each ajax div will have a unique ID.  -->
 		if (!file_exists($dir[0] . '/plugins/wptouch/images/icon-pool/' . $icon_name)) {
 			$icon_name = 'Default.png';
 		}
-		echo('<img class="pageicon" src="' . compat_get_plugin_url() . '/images/icon-pool/' . $icon_name . '" />');
+		echo('<img class="pageicon" src="' . echo compat_get_plugin_url() . '/images/icon-pool/' . $icon_name . '" />');
 	?> 
 	</div>
 		<h2><?php if (function_exists('bnc_the_title')) bnc_the_title(); else the_title(); ?></h2>
@@ -224,13 +224,13 @@ Here we're making sure that each ajax div will have a unique ID.  -->
 <!-- If this was a bogus 404 page, the end of entry results, or a search -->
 
 	<?php global $is_ajax; if (($is_ajax) && !is_search()) { ?>
-	  <div class="result-text"><?php _e( "No more entries to display.", "wptouch" ); ?></div>
+	  <div class="footer-result-text"><?php _e( "No more entries to display.", "wptouch" ); ?></div>
 	 <?php } elseif (is_search() && ($is_ajax)) { ?>
-	<div class="result-text"><?php _e( "No more search results to display.", "wptouch" ); ?></div>
+	<div class="footer-result-text"><?php _e( "No more search results to display.", "wptouch" ); ?></div>
 	 <?php } elseif (is_search() && (!$is_ajax)) { ?>
-	 <div class="result-text" style="padding-bottom:127px"><?php _e( "No search results results found.", "wptouch" ); ?><br /><?php _e( "Try another query.", "wptouch" ); ?></div>
+	 <div class="footer-result-text" style="padding-bottom:127px"><?php _e( "No search results results found.", "wptouch" ); ?><br /><?php _e( "Try another query.", "wptouch" ); ?></div>
 	<?php } else { ?>
-	  <div class="post"><img src="<?php compat_get_plugin_url(); ?>themes/default/images/404.jpg" alt="404 Not Found" /></div>
+	  <div class="post"><img src="<?php echo compat_get_plugin_url(); ?>themes/default/images/404.jpg" alt="404 Not Found" /></div>
 	<?php } ?>
 
   <?php endif; ?>

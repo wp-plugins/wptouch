@@ -112,6 +112,17 @@ blockquote {
 	margin-left: 10px;
 }
 
+.footer-result-text {
+	color: #475d79;
+	text-shadow: #eee 1px 1px 0;
+	letter-spacing: -1px;
+	font-size: 15px;
+	font-weight: bold;
+	margin-bottom: 10px;
+	margin-left: 10px;
+	text-align: center;
+}
+
 .result-text-page {
 	color: #475d79;
 	text-shadow: #eee 1px 1px 0;
@@ -804,7 +815,6 @@ img.small {
 	position: relative;
 	bottom: 4px;
 	right: 3px;
-	width: 24px;
 }
 
 #bookmark-box ul {

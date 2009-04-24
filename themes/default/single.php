@@ -37,9 +37,9 @@ If it's ajax, we're not bringing in header.php and footer.php -->
 <!-- Mail and Bookmark code -->	
 
 	<div class="single-links">
-		<div class="single-bookmark-right"><?php if (bnc_is_js_enabled()) { ?><a href="javascript:$wptouch('#bookmark-box').slideToggle(300);"><?php } else { ?><a href="javascript:document.getElementById('bookmark-box').style.display = 'block';"><?php } ?><img src="<?php compat_get_plugin_url(); ?>/themes/default/images/bookmarkit.png" class="small" alt="" /> <?php _e( "Bookmark It", "wptouch" ); ?></a></div>
+		<div class="single-bookmark-right"><?php if (bnc_is_js_enabled()) { ?><a href="javascript:$wptouch('#bookmark-box').slideToggle(300);"><?php } else { ?><a href="javascript:document.getElementById('bookmark-box').style.display = 'block';"><?php } ?><img src="<?php echo compat_get_plugin_url(); ?>/themes/default/images/bookmarkit.png" class="small" alt="" /> <?php _e( "Bookmark It", "wptouch" ); ?></a></div>
 			<div class="single-mail-left"><a href="mailto:?subject=<?php
-bloginfo('name'); ?>- <?php the_title();?>&body=<?php _e( "Check out this post:", "wptouch" ); ?> <?php the_permalink() ?>"><img src="<?php compat_get_plugin_url(); ?>/themes/default/images/mailit.png" class="small" alt="" /> <?php _e( "Mail It", "wptouch" ); ?></a></div>
+bloginfo('name'); ?>- <?php the_title();?>&body=<?php _e( "Check out this post:", "wptouch" ); ?> <?php the_permalink() ?>"><img src="<?php echo compat_get_plugin_url(); ?>/themes/default/images/mailit.png" class="small" alt="" /> <?php _e( "Mail It", "wptouch" ); ?></a></div>
 				<div class="clearer"></div>
 			</div>
 		<div class="post-spacer"></div>
@@ -50,13 +50,13 @@ bloginfo('name'); ?>- <?php the_title();?>&body=<?php _e( "Check out this post:"
 	<div id="bookmark-box" style="display:none">
 		<ul>
 			<li><a  href="http://del.icio.us/post?url=<?php echo get_permalink()
-?>&title=<?php the_title(); ?>" target="_blank"><img src="<?php compat_get_plugin_url(); ?>/themes/default/images/bookmarks/delicious.jpg" alt="" /> <?php _e( "Del.icio.us", "wptouch" ); ?></a></li>
+?>&title=<?php the_title(); ?>" target="_blank"><img src="<?php echo compat_get_plugin_url(); ?>/themes/default/images/bookmarks/delicious.jpg" alt="" /> <?php _e( "Del.icio.us", "wptouch" ); ?></a></li>
 			<li><a href="http://digg.com/submit?phase=2&url=<?php echo get_permalink()
-?>&title=<?php the_title(); ?>" target="_blank"><img src="<?php compat_get_plugin_url(); ?>/themes/default/images/bookmarks/digg.jpg" alt="" /> <?php _e( "Digg", "wptouch" ); ?></a></li>
-			<li><a href="http://technorati.com/faves?add=<?php the_permalink() ?>" target="_blank"><img src="<?php compat_get_plugin_url(); ?>/themes/default/images/bookmarks/technorati.jpg" alt="" /> <?php _e( "Technorati", "wptouch" ); ?></a></li>
-			<li><a href="http://ma.gnolia.com/bookmarklet/add?url=<?php echo get_permalink() ?>&title=<?php the_title(); ?>" target="_blank"><img src="<?php compat_get_plugin_url(); ?>/themes/default/images/bookmarks/magnolia.jpg" alt="" /> <?php _e( "Magnolia", "wptouch" ); ?></a></li>
-			<li><a href="http://www.newsvine.com/_wine/save?popoff=0&u=<?php echo get_permalink() ?>&h=<?php the_title(); ?>" target="_blank"><img src="<?php compat_get_plugin_url(); ?>/themes/default/images/bookmarks/newsvine.jpg" target="_blank"> <?php _e( "Newsvine", "wptouch" ); ?></a></li>
-			<li class="noborder"><a href="http://reddit.com/submit?url=<?php echo get_permalink() ?>&title=<?php the_title(); ?>" target="_blank"><img src="<?php compat_get_plugin_url(); ?>/themes/default/images/bookmarks/reddit.jpg" alt="" /> <?php _e( "Reddit", "wptouch" ); ?></a></li>
+?>&title=<?php the_title(); ?>" target="_blank"><img src="<?php echo compat_get_plugin_url(); ?>/themes/default/images/bookmarks/digg.jpg" alt="" /> <?php _e( "Digg", "wptouch" ); ?></a></li>
+			<li><a href="http://technorati.com/faves?add=<?php the_permalink() ?>" target="_blank"><img src="<?php echo compat_get_plugin_url(); ?>/themes/default/images/bookmarks/technorati.jpg" alt="" /> <?php _e( "Technorati", "wptouch" ); ?></a></li>
+			<li><a href="http://ma.gnolia.com/bookmarklet/add?url=<?php echo get_permalink() ?>&title=<?php the_title(); ?>" target="_blank"><img src="<?php echo compat_get_plugin_url(); ?>/themes/default/images/bookmarks/magnolia.jpg" alt="" /> <?php _e( "Magnolia", "wptouch" ); ?></a></li>
+			<li><a href="http://www.newsvine.com/_wine/save?popoff=0&u=<?php echo get_permalink() ?>&h=<?php the_title(); ?>" target="_blank"><img src="<?php echo compat_get_plugin_url(); ?>/themes/default/images/bookmarks/newsvine.jpg" target="_blank"> <?php _e( "Newsvine", "wptouch" ); ?></a></li>
+			<li class="noborder"><a href="http://reddit.com/submit?url=<?php echo get_permalink() ?>&title=<?php the_title(); ?>" target="_blank"><img src="<?php echo compat_get_plugin_url(); ?>/themes/default/images/bookmarks/reddit.jpg" alt="" /> <?php _e( "Reddit", "wptouch" ); ?></a></li>
 		</ul>
 	</div>
 
