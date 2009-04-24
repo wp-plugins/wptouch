@@ -76,7 +76,7 @@ Here we're making sure that each ajax div will have a unique ID.  -->
 		if (!file_exists($dir[0] . '/plugins/wptouch/images/icon-pool/' . $icon_name)) {
 			$icon_name = 'Default.png';
 		}
-		echo('<img class="pageicon" src="' . get_bloginfo('template_directory') . '/images/icon-pool/' . $icon_name . '" />');
+		echo('<img class="pageicon" src="' . compat_get_plugin_url( 'wptouch' ) . '/images/icon-pool/' . $icon_name . '" />');
 	?> 
 	</div>
 		<h2><?php if (function_exists('bnc_the_title')) bnc_the_title(); else the_title(); ?></h2>

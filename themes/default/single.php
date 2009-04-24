@@ -11,13 +11,13 @@ If it's ajax, we're not bringing in header.php and footer.php -->
 			    <a class="sh2" href="<?php the_permalink() ?>" rel="bookmark" title="<?php _e( "Permanent Link to ", "wptouch" ); ?><?php if (function_exists('the_title_attribute')) the_title_attribute(); else the_title(); ?>"><?php the_title(); ?></a>
 			        <div class="single-post-meta-top"><?php echo get_the_time('M jS @ h:i a') ?> &rsaquo; <?php the_author() ?><br />
 
-<!-- Let's check for DISQUS... we need to skip to a different div if it's installed and active -->		
+		<!-- Let's check for DISQUS... we need to skip to a different div if it's installed and active -->		
 	
-	<?php if (function_exists('dsq_comments_template')) { ?>
- 		<a href="#dsq-add-new-comment">&darr; <?php _e( "Skip to comments", "wptouch" ); ?></a></div>
-			<?php } else { ?>
-   	    <a href="#comments">&darr; <?php _e( "Skip to comments", "wptouch" ); ?></a></div>
-	<?php } ?>	
+		<?php if (function_exists('dsq_comments_template')) { ?>
+	 		<a href="#dsq-add-new-comment">&darr; <?php _e( "Skip to comments", "wptouch" ); ?></a></div>
+		<?php } else { ?>
+	   	    <a href="#comments">&darr; <?php _e( "Skip to comments", "wptouch" ); ?></a></div>
+		<?php } ?>	
 		<div class="clearer"></div>
 	</div>
 
@@ -67,8 +67,6 @@ bloginfo('name'); ?>- <?php the_title();?>&body=<?php _e( "Check out this post:"
 		<div class="alignleft"><?php next_post_link('<img src="' . get_bloginfo('template_directory') . '/images/blue_arrow_l.jpg" alt="" /> %link', 'Prev Post') ?></div>
 		<div class="alignright"><?php previous_post_link('%link <img src="' . get_bloginfo('template_directory') . '/images/blue_arrow_r.jpg" alt="" />', 'Next Post') ?></div>
 
-
-
 <!-- Let's make sure there's no float strangeness happening. Sometimes plugins get funky here. -->
 		<div class="clearer"></div>
 	</div>
@@ -88,7 +86,7 @@ bloginfo('name'); ?>- <?php the_title();?>&body=<?php _e( "Check out this post:"
 			<?php } elseif (is_search()) { ?>
 		<div class="result-text"><?php _e( "No search results results found. Try another query.", "wptouch" ); ?></div>
 			<?php } else { ?>
-		<div class="post"><img src="<?php compat_get_plugin_url( 'wptouch' ); ?>/themes/default/images/404.jpg" alt="404 Not Found" /></div>
+		<div class="post"><img src="<?php bloginfo('template_directory'); ?>/images/404.jpg" alt="404 Not Found" /></div>
 			<?php } ?>
 	<?php endif; ?>
 		</div>

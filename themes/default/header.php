@@ -208,7 +208,7 @@ We've commented below to let you know what works what, so if you do go messing a
            	<?php } ?>
            
            	<?php if (!bnc_is_js_enabled()) { ?>
-           		<li class="noarrow"><a class="menu-close" href="javascript:document.getElementById('dropmenu').style.display = 'none';"><img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/images/cross.png" alt="" /> <?php _e( "Close Menu", "wptouch" ); ?></a></li>
+           		<li class="noarrow"><a class="menu-close" href="javascript:document.getElementById('dropmenu').style.display = 'none';"><img src="<?php bloginfo('template_directory'); ?>/images/cross.png" alt="" /> <?php _e( "Close Menu", "wptouch" ); ?></a></li>
            	<?php } ?>
            </ul>
         </div>
