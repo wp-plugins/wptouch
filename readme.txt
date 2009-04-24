@@ -37,11 +37,17 @@ You can also checkout our Support Forums at http://support.bravenewcode.com to p
 
 = Version 1.8.9.2 (coming soon) =
 
-* Updated compatibility code -- thanks to Will Norris for the suggestions
+* Updated compatibility code (Various WordPress install scenarios) -- thanks to Will Norris for the suggestions
 * Modified AJAX calls
 * Made it so administration CSS/JS only loads on WPtouch page
+* Fixed a variety of scenarios where paths to files and images were broken
+* Updated social bookmarking icons
+* More preparation for WPtouch 1.9 and 5 languages
+* Preparation for WPtouch 2.0 and theme switch support
+* Fixed switch link issue where regular theme switch link was broken
 
-*Compatibility mode urls in template files, this version will need to be tested in a variety of situations, so please report any errors at http://support.nbravenewcode.com*
+*This version will need to be tested in a variety of situations, 
+so please report any errors here -> http://support.nbravenewcode.com*
 
 = Version 1.8.9.1 =
 
