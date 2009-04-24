@@ -32,8 +32,8 @@ $oddcomment = 'alt';
 			<div class="comtop">		
 				<?php if (bnc_is_gravatars_enabled()) { ?>
 					<?php if (function_exists('gravatar')) { ?>
-					<img class='gravatar' src="<?php gravatar("R", 28, "' . compat_get_plugin_url( 'wptouch' ) . '/images/blank_gravatar.png"); ?>" alt='' />	
-					<?php } elseif (function_exists('get_avatar')) { echo get_avatar( $comment, $size = '28', $default = '' . compat_get_plugin_url( 'wptouch' ) . '/images/blank_gravatar.png' ); } else { ?><?php } ?>		
+					<img class='gravatar' src="<?php gravatar("R", 28, "' . get_bloginfo('template_directory') . '/images/blank_gravatar.png"); ?>" alt='' />	
+					<?php } elseif (function_exists('get_avatar')) { echo get_avatar( $comment, $size = '28', $default = '' . get_bloginfo('template_directory') . '/images/blank_gravatar.png' ); } else { ?><?php } ?>		
 				<?php } ?>
 
 		<a href="<?php comment_author_url(); ?>"><?php comment_author(); ?></a> said:
@@ -87,7 +87,7 @@ $oddcomment = 'alt';
   
 	<?php if (!function_exists('cas_register_post') && bnc_is_js_enabled()) { ?>
 		<div id="refresher" style="display:none">&raquo; <a href="javascript:this.location.reload();"><?php _e( "Refresh the page", "wptouch" ); ?></a> <?php _e( "to post a new comment.", "wptouch" ); ?></div>
-			<form id="commentform" action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" onsubmit="$wptouch('#loading').fadeIn(100);var list = $wptouch('#commentlist'); var html = list.html(); var param = $wptouch('form').serialize(); $wptouch.ajax({url: '<?php echo compat_get_plugin_url( 'wptouch' ); ?>/themes/default/comments-ajax.php?' + param, success: function(data, status){ list.append(data); commentAdded(); }, type: 'get' }); return false;">
+			<form id="commentform" action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" onsubmit="$wptouch('#loading').fadeIn(100);var list = $wptouch('#commentlist'); var html = list.html(); var param = $wptouch('form').serialize(); $wptouch.ajax({url: '<?php bloginfo('template_directory'); ?>/comments-ajax.php?' + param, success: function(data, status){ list.append(data); commentAdded(); }, type: 'get' }); return false;">
 	<?php } else { ?>
 		<form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" id="commentform">
 	<?php } ?>
@@ -121,7 +121,7 @@ $oddcomment = 'alt';
 		<p style="padding-bottom:10px"><input name="submit" type="submit" id="submit" tabindex="5" value="Publish" />
 			<input type="hidden" name="comment_post_ID" value="<?php echo $id; ?>" />		
 				<div id="loading"  style="display:none">
-					<img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/themes/default/images/comment-ajax-loader.gif" alt="" />
+					<img src="<?php bloginfo('template_directory'); ?>/images/comment-ajax-loader.gif" alt="" />
 				</div>
 		</p>
 		

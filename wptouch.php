@@ -128,7 +128,7 @@ function wptouch_content_filter( $content ) {
 	function wptouch_admin_css() {		
 		if ( isset( $_GET['page'] ) && $_GET['page'] == 'wptouch/wptouch.php' ) {		
 			echo "<link rel='stylesheet' type='text/css' href='" . compat_get_plugin_url( 'wptouch' ) . "/admin-css/wptouch-admin.css' />\n";
-			echo "<link rel='stylesheet' type='text/css' href='" . compat_get_plugin_url( 'wptouch' ) . "/wptouch/js/fancybox/jquery.fancybox.css' />\n";
+			echo "<link rel='stylesheet' type='text/css' href='" . compat_get_plugin_url( 'wptouch' ) . "/js/fancybox/jquery.fancybox.css' />\n";
 			
 			$version = (float)get_bloginfo('version');
 			if ( $version <= 2.3 ) {
