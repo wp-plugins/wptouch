@@ -44,7 +44,7 @@ function wptouch_enqueue() {
   }
   function bnc_get_local_icon_url()
   {
-      return compat_get_plugin_url() . '/images/';
+      return compat_get_plugin_url( 'wptouch' ) . '/images/';
   }
   function bnc_get_favicon_for_site($site)
   {

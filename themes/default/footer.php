@@ -20,7 +20,7 @@
 					<?php } ?>
 				<?php endif; ?></h3></center>
 
-			<div id="wptouch-switch-link"><?php _e( "Mobile Theme", "wptouch" ); ?><a onclick="javascript:document.getElementById('switch-on').style.display='none';javascript:document.getElementById('switch-off').style.display='block';" href="<?php echo bloginfo('home') . '/?bnc_view=normal'; ?>"><img id="switch-on" src="<?php echo compat_get_plugin_url(); ?>/images/on.jpg" alt="on switch image" class="wptouch-switch-image" /><img id="switch-off" style="display:none" src="<?php echo compat_get_plugin_url(); ?>/images/off.jpg" alt="off switch image" class="wptouch-switch-image" /></a></div>	
+			<div id="wptouch-switch-link"><?php _e( "Mobile Theme", "wptouch" ); ?><a onclick="javascript:document.getElementById('switch-on').style.display='none';javascript:document.getElementById('switch-off').style.display='block';" href="<?php echo bloginfo('home') . '/?bnc_view=normal'; ?>"><img id="switch-on" src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/images/on.jpg" alt="on switch image" class="wptouch-switch-image" /><img id="switch-off" style="display:none" src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/images/off.jpg" alt="off switch image" class="wptouch-switch-image" /></a></div>	
 
 			<?php _e( "All content Copyright &copy;", "wptouch" ); ?> <?php bloginfo('name'); ?><br />
 			<?php _e( 'Powered by <a href="http://www.wordpress.org/">WordPress</a> with', 'wptouch' ); ?> <a href="http://bravenewcode.com/wptouch/"><?php WPtouch(); ?></a>

@@ -56,13 +56,13 @@ if ( !function_exists( 'compat_get_base_plugin_url' ) ) {
 }
 
 if ( !function_exists( 'compat_get_plugin_dir') ) {
-	function compat_get_plugin_dir( $plugin_name = 'wptouch' ) {
+	function compat_get_plugin_dir( $plugin_name ) {
 		return compat_get_base_plugin_dir() . '/' . $plugin_name;
 	}
 }
 
 if ( !function_exists( 'compat_get_plugin_url' ) ) {
-	function compat_get_plugin_url( $plugin_name = 'wptouch' ) {
+	function compat_get_plugin_url( $plugin_name ) {
 		return compat_get_base_plugin_url() . '/' . $plugin_name;
 	}	
 }

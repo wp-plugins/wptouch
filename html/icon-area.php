@@ -1,4 +1,4 @@
-<?php require_once( compat_get_plugin_dir() . '/include/icons.php' ); ?>
+<?php require_once( compat_get_plugin_dir( 'wptouch' ) . '/include/icons.php' ); ?>
 <?php global $wptouch_settings; ?>
 
 <div class="wptouch-itemrow" id="available_icons">
@@ -11,7 +11,7 @@
 				
 		<div id="upload_response"></div>
 		<div id="upload_progress" style="display: none;">
-			<p><img src="<?php echo compat_get_plugin_url() . '/images/progress.gif'; ?>" alt="" /></p>
+			<p><img src="<?php echo compat_get_plugin_url( 'wptouch' ) . '/images/progress.gif'; ?>" alt="" /></p>
 		</div>
 		<script type="text/javascript">
 			$j = jQuery.noConflict();
@@ -40,7 +40,7 @@
 		<div id="upload_button"></div> 
 			
 		<p><?php _e( "Need help getting started?", "wptouch" ); ?></p>
-		<p><?php echo sprintf(__( 'Download our %s Photoshop template%s which you can use to build custom icons WPtouch style.', 'wptouch'), '<strong><a href="' . compat_get_plugin_dir() . '/images/icon-pool/template.psd">', '</a></strong>' ); ?></p>
+		<p><?php echo sprintf(__( 'Download our %s Photoshop template%s which you can use to build custom icons WPtouch style.', 'wptouch'), '<strong><a href="' . compat_get_plugin_dir( 'wptouch' ) . '/images/icon-pool/template.psd">', '</a></strong>' ); ?></p>
 	</div><!-- .wptouch-item-desc -->
 		
 	<div class="wptouch-item-content-box1">	

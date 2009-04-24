@@ -23,14 +23,14 @@
 	}
 ?>
 	<?php if ( bnc_is_js_enabled() ) { ?>
-		<script src="<?php echo compat_get_plugin_url(); ?>/themes/default/js/global.js" type="text/javascript" charset="utf-8"></script>
+		<script src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/themes/default/js/global.js" type="text/javascript" charset="utf-8"></script>
 	<?php } ?>
 <?php
 if  (!function_exists('dsq_comments_template')) { ?>
 	<?php if (is_single() && bnc_is_js_enabled()) { ?>
-	<script src="<?php echo compat_get_plugin_url(); ?>/themes/default/js/ajaxcoms.js" type="text/javascript"></script>
+	<script src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/themes/default/js/ajaxcoms.js" type="text/javascript"></script>
 	<?php } elseif (is_page() && bnc_is_page_coms_enabled()) { ?>
-	<script src="<?php echo compat_get_plugin_url(); ?>/themes/default/js/ajaxcoms.js" type="text/javascript"></script>
+	<script src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/themes/default/js/ajaxcoms.js" type="text/javascript"></script>
 	<?php } ?>
 <?php } ?>
 <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
@@ -39,7 +39,7 @@ if  (!function_exists('dsq_comments_template')) { ?>
 #menubar {
 	width: 100%;
 	height: 45px !important;
-	background: #<?php echo bnc_get_header_background(); ?> url(<?php echo compat_get_plugin_url(); ?>/themes/default/images/head-fade-bk.png) repeat-x;
+	background: #<?php echo bnc_get_header_background(); ?> url(<?php echo compat_get_plugin_url( 'wptouch' ); ?>/themes/default/images/head-fade-bk.png) repeat-x;
 }
 #blogtitle a {
 	text-decoration: none;
@@ -90,11 +90,11 @@ We've commented below to let you know what works what, so if you do go messing a
 	<?php get_currentuserinfo();
   		if (!current_user_can('edit_posts') && bnc_is_js_enabled()) : ?>
 		    <a href="javascript:$wptouch('#wptouch-login').slideToggle(200);">
-				<img src="<?php echo compat_get_plugin_url(); ?>/themes/default/images/menu/touchmenu-login.png" alt="" /> <?php _e( 'Login', 'wptouch' ); ?>
+				<img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/themes/default/images/menu/touchmenu-login.png" alt="" /> <?php _e( 'Login', 'wptouch' ); ?>
 			</a>	
 		<?php elseif (!current_user_can('edit_posts') && !bnc_is_js_enabled()) : ?>
 		    <a href="javascript:document.getElementById('wptouch-login').style.display='block';">
-				<img src="<?php echo compat_get_plugin_url(); ?>/themes/default/images/menu/touchmenu-login.png" alt="" /> <?php _e( 'Login', 'wptouch' ); ?>
+				<img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/themes/default/images/menu/touchmenu-login.png" alt="" /> <?php _e( 'Login', 'wptouch' ); ?>
 			</a>	
 		<?php else : ?>	
 		<?php //Let's do some a WordPress version check to figure out the correct logout method
@@ -104,7 +104,7 @@ We've commented below to let you know what works what, so if you do go messing a
 			<?php } else { ?>
 			<a href="<?php bloginfo('wpurl'); ?>/wp-login.php?action=logout&redirect_to=<?php echo $_SERVER['REQUEST_URI']; ?>">
 			<?php } ?>
-				<img src="<?php echo compat_get_plugin_url(); ?>/themes/default/images/menu/touchmenu-logout.png" alt="" /> <?php _e( 'Logout', 'wptouch' ); ?>
+				<img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/themes/default/images/menu/touchmenu-logout.png" alt="" /> <?php _e( 'Logout', 'wptouch' ); ?>
 			</a>
 		<?php endif; ?>
 <?php } ?>
@@ -116,7 +116,7 @@ We've commented below to let you know what works what, so if you do go messing a
 			<a href="javascript:document.getElementById('wptouch-cats').style.display='block';">
 		<?php } ?>
 		
-		<img src="<?php echo compat_get_plugin_url(); ?>/themes/default/images/menu/catsmenu.png" alt="" /> <?php _e( 'Categories', 'wptouch' ); ?></a>	
+		<img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/themes/default/images/menu/catsmenu.png" alt="" /> <?php _e( 'Categories', 'wptouch' ); ?></a>	
 	<?php } ?>
 
 	
@@ -125,7 +125,7 @@ We've commented below to let you know what works what, so if you do go messing a
 		<?php } else { ?>
 		    <a href="javascript:document.getElementById('wptouch-search').style.display='block';">
 		<?php } ?>
-		    <img src="<?php echo compat_get_plugin_url(); ?>/themes/default/images/menu/search-touchmenu.png" alt="" /> <?php _e( 'Search', 'wptouch' ); ?>
+		    <img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/themes/default/images/menu/search-touchmenu.png" alt="" /> <?php _e( 'Search', 'wptouch' ); ?>
 		</a>
 	
 	<?php if (bnc_is_js_enabled()) { ?>
@@ -133,7 +133,7 @@ We've commented below to let you know what works what, so if you do go messing a
 				<?php } else { ?>
 			<a href="javascript:document.getElementById('dropmenu').style.display='block';">
 		<?php } ?>
-		<img src="<?php echo compat_get_plugin_url(); ?>/themes/default/images/menu/touchmenu.png" alt="" /> <?php _e( 'Menu', 'wptouch' ); ?>
+		<img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/themes/default/images/menu/touchmenu.png" alt="" /> <?php _e( 'Menu', 'wptouch' ); ?>
 		</a>
 	</div>
 
@@ -159,7 +159,7 @@ We've commented below to let you know what works what, so if you do go messing a
             <ul>
 	   	<?php bnc_get_ordered_cat_list(); ?>
 	   		<?php if (!bnc_is_js_enabled()) { ?>
-           		<li class="noarrow"><a class="menu-close" href="javascript:document.getElementById('wptouch-cats').style.display = 'none';"><img src="<?php echo compat_get_plugin_url(); ?>/themes/default/images/cross.png" alt="" /> <?php _e( "Close Menu", "wptouch" ); ?></a></li>
+           		<li class="noarrow"><a class="menu-close" href="javascript:document.getElementById('wptouch-cats').style.display = 'none';"><img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/themes/default/images/cross.png" alt="" /> <?php _e( "Close Menu", "wptouch" ); ?></a></li>
            	<?php } ?>
 
             </ul>
@@ -184,15 +184,15 @@ We've commented below to let you know what works what, so if you do go messing a
         <div id="dropmenu-inner">
             <ul>
             <?php if (bnc_is_home_enabled()) { ?>
-            	<li><a href="<?php bloginfo('home'); ?>"><img src="<?php echo compat_get_plugin_url(); ?>/images/icon-pool/Home.png" alt="" /><?php _e( "Home", "wptouch" ); ?></a></li> 
+            	<li><a href="<?php bloginfo('home'); ?>"><img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/images/icon-pool/Home.png" alt="" /><?php _e( "Home", "wptouch" ); ?></a></li> 
             <?php } ?>
             
             <?php           
 					$pages = bnc_wp_touch_get_pages();
 					global $blog_id;
 					foreach ($pages as $p) {
-						if ( file_exists( compat_get_plugin_dir() . '/images/icon-pool/' . $p['icon'] ) ) {
-							$image = compat_get_plugin_url() . '/images/icon-pool/' . $p['icon'];	
+						if ( file_exists( compat_get_plugin_dir( 'wptouch' ) . '/images/icon-pool/' . $p['icon'] ) ) {
+							$image = compat_get_plugin_url( 'wptouch' ) . '/images/icon-pool/' . $p['icon'];	
 						} else {
             			$image = compat_get_upload_url() . '/wptouch/custom-icons/' . $p['icon'];
             		}
@@ -200,15 +200,15 @@ We've commented below to let you know what works what, so if you do go messing a
 					} ?>
 		
             <?php if (bnc_is_rss_enabled()) { ?>
-           		<li><a href="<?php bloginfo('rss2_url'); ?>"><img src="<?php echo compat_get_plugin_url(); ?>/images/icon-pool/RSS.png" alt="" /><?php _e( "RSS Feed", "wptouch" ); ?></a></li>
+           		<li><a href="<?php bloginfo('rss2_url'); ?>"><img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/images/icon-pool/RSS.png" alt="" /><?php _e( "RSS Feed", "wptouch" ); ?></a></li>
            	<?php } ?>
            
            	<?php if (bnc_is_email_enabled()) { ?>
-           		<li class="noborder"><a href="mailto:<?php bloginfo('admin_email'); ?>"><img src="<?php echo compat_get_plugin_url(); ?>/images/icon-pool/Mail.png" alt="" /><?php _e( "E-Mail", "wptouch" ); ?></a></li>
+           		<li class="noborder"><a href="mailto:<?php bloginfo('admin_email'); ?>"><img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/images/icon-pool/Mail.png" alt="" /><?php _e( "E-Mail", "wptouch" ); ?></a></li>
            	<?php } ?>
            
            	<?php if (!bnc_is_js_enabled()) { ?>
-           		<li class="noarrow"><a class="menu-close" href="javascript:document.getElementById('dropmenu').style.display = 'none';"><img src="<?php echo compat_get_plugin_url(); ?>/images/cross.png" alt="" /> <?php _e( "Close Menu", "wptouch" ); ?></a></li>
+           		<li class="noarrow"><a class="menu-close" href="javascript:document.getElementById('dropmenu').style.display = 'none';"><img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/images/cross.png" alt="" /> <?php _e( "Close Menu", "wptouch" ); ?></a></li>
            	<?php } ?>
            </ul>
         </div>

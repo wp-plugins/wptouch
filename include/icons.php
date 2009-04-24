@@ -2,7 +2,7 @@
 
 	function bnc_get_icon_locations() {
       $locations = array( 
-        		'default' => array( compat_get_plugin_dir() . '/images/icon-pool/', compat_get_plugin_url() . '/images/icon-pool/' ),      
+        		'default' => array( compat_get_plugin_dir( 'wptouch' ) . '/images/icon-pool/', compat_get_plugin_url( 'wptouch' ) . '/images/icon-pool/' ),      
 				'custom' => array( compat_get_upload_dir() . '/wptouch/custom-icons/', compat_get_upload_url() . '/wptouch/custom-icons' )
 		);
 

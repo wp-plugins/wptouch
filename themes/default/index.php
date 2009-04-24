@@ -76,7 +76,7 @@ Here we're making sure that each ajax div will have a unique ID.  -->
 		if (!file_exists($dir[0] . '/plugins/wptouch/images/icon-pool/' . $icon_name)) {
 			$icon_name = 'Default.png';
 		}
-		echo('<img class="pageicon" src="' . echo compat_get_plugin_url() . '/images/icon-pool/' . $icon_name . '" />');
+		echo('<img class="pageicon" src="' . compat_get_plugin_url( 'wptouch' ) . '/images/icon-pool/' . $icon_name . '" />');
 	?> 
 	</div>
 		<h2><?php if (function_exists('bnc_the_title')) bnc_the_title(); else the_title(); ?></h2>
@@ -192,7 +192,7 @@ Here we're making sure that each ajax div will have a unique ID.  -->
 
 				<?php if (bnc_is_js_enabled()) { ?>
 			<div id="call<?php echo md5($_SERVER['REQUEST_URI']); ?>" class="ajax-load-more">
-				<img id="spinner<?php echo md5($_SERVER['REQUEST_URI']); ?>" class="spin" src="<?php echo compat_get_plugin_url(); ?>/themes/default/images/main-ajax-loader.gif" style="display:none" alt="" /> <a class="ajax" href="javascript:$wptouch('#spinner<?php echo md5($_SERVER['REQUEST_URI']); ?>').fadeIn(200); $wptouch('#ajaxentries<?php echo md5($_SERVER['REQUEST_URI']); ?>').load('<?php echo get_next_posts_page_link(); ?>', {}, function(){ $wptouch('#call<?php echo md5($_SERVER['REQUEST_URI']); ?>').fadeOut();})"><?php if (is_search()) { ?><?php _e( "Load more search results...", "wptouch" ); ?><?php } elseif (is_category()) { ?><?php _e( "Load more category results...", "wptouch" ); ?><?php } elseif (function_exists('wp_tag_cloud') && is_tag()) { ?><?php _e( "Load more tag results...", "wptouch" ); ?><?php } else { ?><?php _e( "Load more entries...", "wptouch" ); ?><?php } ?></a>
+				<img id="spinner<?php echo md5($_SERVER['REQUEST_URI']); ?>" class="spin" src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/themes/default/images/main-ajax-loader.gif" style="display:none" alt="" /> <a class="ajax" href="javascript:$wptouch('#spinner<?php echo md5($_SERVER['REQUEST_URI']); ?>').fadeIn(200); $wptouch('#ajaxentries<?php echo md5($_SERVER['REQUEST_URI']); ?>').load('<?php echo get_next_posts_page_link(); ?>', {}, function(){ $wptouch('#call<?php echo md5($_SERVER['REQUEST_URI']); ?>').fadeOut();})"><?php if (is_search()) { ?><?php _e( "Load more search results...", "wptouch" ); ?><?php } elseif (is_category()) { ?><?php _e( "Load more category results...", "wptouch" ); ?><?php } elseif (function_exists('wp_tag_cloud') && is_tag()) { ?><?php _e( "Load more tag results...", "wptouch" ); ?><?php } else { ?><?php _e( "Load more entries...", "wptouch" ); ?><?php } ?></a>
 						<div class="post-spacer"></div>
 					<div class="clearer"></div>
 				</div>
@@ -202,18 +202,18 @@ Here we're making sure that each ajax div will have a unique ID.  -->
 		
 				<?php } elseif (!bnc_is_js_enabled() && is_search()) { ?>
 					<div class="main-navigation">
-						<div class="alignleft"><?php previous_posts_link('<img src="' . compat_get_plugin_url() . '/themes/default/images/blue_arrow_l.jpg" alt="" /> ' . __( 'Newer In Search', 'wptouch')); ?></div>
-						<div class="alignright"><?php next_posts_link( __('Older In Search', 'wptouch') . ' <img src="' . compat_get_plugin_url() . 'themes/default/images/blue_arrow_r.jpg" alt="" />') ?></div>
+						<div class="alignleft"><?php previous_posts_link('<img src="' . compat_get_plugin_url( 'wptouch' ) . '/themes/default/images/blue_arrow_l.jpg" alt="" /> ' . __( 'Newer In Search', 'wptouch')); ?></div>
+						<div class="alignright"><?php next_posts_link( __('Older In Search', 'wptouch') . ' <img src="' . compat_get_plugin_url( 'wptouch' ) . 'themes/default/images/blue_arrow_r.jpg" alt="" />') ?></div>
 					</div>
 
 				<?php } elseif (!bnc_is_js_enabled() && !is_search()) { ?>
 				
 				<div class="main-navigation">
 					<div class="alignleft">
-						<?php previous_posts_link('<img src="' . compat_get_plugin_url() . 'themes/default/images/blue_arrow_l.jpg" alt="" /> ' . __( 'Newer Entries', 'wptouch') ) ?>
+						<?php previous_posts_link('<img src="' . compat_get_plugin_url( 'wptouch' ) . 'themes/default/images/blue_arrow_l.jpg" alt="" /> ' . __( 'Newer Entries', 'wptouch') ) ?>
 					</div>
 					<div class="alignright">
-						<?php next_posts_link( __('Older Entries', 'wptouch') . ' <img src="' . compat_get_plugin_url() . 'themes/default/images/blue_arrow_r.jpg" alt="" />') ?>
+						<?php next_posts_link( __('Older Entries', 'wptouch') . ' <img src="' . compat_get_plugin_url( 'wptouch' ) . 'themes/default/images/blue_arrow_r.jpg" alt="" />') ?>
 					</div>
 				</div>
 				<?php } ?>
@@ -230,7 +230,7 @@ Here we're making sure that each ajax div will have a unique ID.  -->
 	 <?php } elseif (is_search() && (!$is_ajax)) { ?>
 	 <div class="footer-result-text" style="padding-bottom:127px"><?php _e( "No search results results found.", "wptouch" ); ?><br /><?php _e( "Try another query.", "wptouch" ); ?></div>
 	<?php } else { ?>
-	  <div class="post"><img src="<?php echo compat_get_plugin_url(); ?>themes/default/images/404.jpg" alt="404 Not Found" /></div>
+	  <div class="post"><img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>themes/default/images/404.jpg" alt="404 Not Found" /></div>
 	<?php } ?>
 
   <?php endif; ?>
