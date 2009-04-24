@@ -3,7 +3,11 @@
 //No need to modify this file, it works under all installations, if activated by using advanced javascript
 global $comment, $comments, $post, $wpdb, $user_ID, $user_identity, $user_email, $user_url;
 // This relative path will find what we need... kinda dirty, but it's a failsafe
-require(' . get_bloginfo(\'siteurl\') . \' wp-blog-header.php');
+if ( defined('ABSPATH') )
+	require_once( dirname(dirname(__FILE__)) . '/wp-blog-header.php' );
+else
+	require_once('../../../../../wp-blog-header.php');
+	
 function fail($s)
 {
 header('HTTP/1.0 500 Internal Server Error');

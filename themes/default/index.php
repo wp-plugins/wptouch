@@ -230,7 +230,7 @@ Here we're making sure that each ajax div will have a unique ID.  -->
 	 <?php } elseif (is_search() && (!$is_ajax)) { ?>
 	 <div class="footer-result-text" style="padding-bottom:127px"><?php _e( "No search results results found.", "wptouch" ); ?><br /><?php _e( "Try another query.", "wptouch" ); ?></div>
 	<?php } else { ?>
-	  <div class="post"><img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>themes/default/images/404.jpg" alt="404 Not Found" /></div>
+	  <div class="post"><img src="<?php bloginfo('template_directory'); ?>/images/404.jpg" alt="404 Not Found" /></div>
 	<?php } ?>
 
   <?php endif; ?>
