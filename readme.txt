@@ -16,26 +16,7 @@ The admin panel allows you to customize many aspects of its appearance, and deli
 
 The theme also includes the ability for your visitors to easily switch between the *WPtouch* view and your site's regular theme.
 
-= New In Version 1.8.9.1: =
-
-* Fixed refresh issue (some pages keep re-loading)
-* Fixed mkdir issue on PHP4 installations
-* Set viewport to fixed width for device to prevent some sites from loading wide
-* Minor revisions to new CSS calendar icon styling
-* Added exclusive mode feature to help in situations where other plugins are incompatible, load too many scripts/css files and both break and slow down WPtouch
-* Added Fancybox for some feature descriptions in the admin
-
-
-Please visit http://bravenewcode.com/wptouch/ for a full description & updates on the *WPtouch* plugin.
-
-You can also checkout our Support Forums at http://support.bravenewcode.com to post questions and learn tips and tricks for *WPtouch* and our other plugins.
-
-
-== What's New ==
-
-(Here's the complete changelog)
-
-= Version 1.8.9.2 (coming soon) =
+= New In Version 1.8.9.2: =
 
 * Updated compatibility code (Various WordPress install scenarios) -- thanks to Will Norris for the suggestions
 * Modified AJAX calls
@@ -48,6 +29,15 @@ You can also checkout our Support Forums at http://support.bravenewcode.com to p
 
 *This version will need to be tested in a variety of situations, 
 so please report any errors here -> http://support.nbravenewcode.com*
+
+Please visit http://bravenewcode.com/wptouch/ for a full description & updates on the *WPtouch* plugin.
+
+You can also checkout our Support Forums at http://support.bravenewcode.com to post questions and learn tips and tricks for *WPtouch* and our other plugins.
+
+
+== What's New ==
+
+(Here's the complete changelog for past versions)
 
 = Version 1.8.9.1 =
 
