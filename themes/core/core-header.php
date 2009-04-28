@@ -7,84 +7,27 @@
 <meta name="description" content="<?php bloginfo('description'); ?>" />
 <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php bloginfo('rss2_url'); ?>" />
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
-<!-- Strict viewport options to control how the content is shown. Increase the maximum-scale number to allow for zooming if you wish -->
+<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
+<?php 
+// In order to have some dynamic CSS, we've written the below
+include('core-styles.php' ); ?>
 <meta name="viewport" content="width=320; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
 <!--This makes the iPhone/iPod touch ask for the same icon the user chooses for a logo to be the bookmark icon as well. -->
 <link rel="apple-touch-icon" href="<?php echo bnc_get_title_image(); ?>" />
-<!-- (Future Consideration)
-<meta name="apple-mobile-web-app-capable" content="yes" />
-<meta names="apple-mobile-web-app-status-bar-style" content="black-translucent" />
--->
-<?php 
-	wptouch_enqueue(); 
-	if ( !bnc_wptouch_is_exclusive() ) {
-		wp_head(); 
-	}
-?>
-	<?php if ( bnc_is_js_enabled() ) { ?>
-		<script src="<?php bloginfo('template_directory'); ?>/js/global.js" type="text/javascript" charset="utf-8"></script>
-	<?php } ?>
-<?php
-if  (!function_exists('dsq_comments_template')) { ?>
-	<?php if (is_single() && bnc_is_js_enabled()) { ?>
-	<script src="<?php bloginfo('template_directory'); ?>/js/ajaxcoms.js" type="text/javascript"></script>
-	<?php } elseif (is_page() && bnc_is_page_coms_enabled()) { ?>
-	<script src="<?php bloginfo('template_directory'); ?>/js/ajaxcoms.js" type="text/javascript"></script>
-	<?php } ?>
-<?php } ?>
-<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
-<!-- In order to have some dynamic CSS, we've written the below. We could pull it out into a css.php file, but it's just a small block and easy to add or modify this way. -->
-<style type="text/css">
-#menubar {
-	width: 100%;
-	height: 45px !important;
-	background: #<?php echo bnc_get_header_background(); ?> url(<?php bloginfo('template_directory'); ?>/images/head-fade-bk.png) repeat-x;
-}
-#blogtitle a {
-	text-decoration: none;
-	font: 21px HelveticaNeue-Bold, sans-serif;
-	letter-spacing: -1px;
-	position: relative;
-	color: #<?php echo bnc_get_header_color(); ?>;
-}
-#dropmenu-inner a:hover {
-	color: #<?php echo bnc_get_link_color(); ?>;
-}
-#catsmenu-inner a:hover {
-	color: #<?php echo bnc_get_link_color(); ?>;
-}
-#drop-fade {
-background: #<?php echo bnc_get_header_border_color(); ?>;
-}
-a {
-	text-decoration: none;
-	color: #<?php echo bnc_get_link_color(); ?>;
-}
-.mainentry, .pageentry, #wptouch-links, #wptouch-archives, #singlentry, .comwrap, #catsmenu-inner li, #dropmenu-inner li, #drop-fade a{
-	-webkit-text-size-adjust: <?php echo bnc_get_zoom_state(); ?>;
-}
-</style>
+<?php wptouch_core_header_enqueue(); ?>
+<?php wptouch_core_header_globaljs(); ?>
+<?php wptouch_core_header_plugin_compat(); ?>
 </head>
 <?php $wptouch_settings = bnc_wptouch_get_settings(); ?>
 <body class="<?php echo $wptouch_settings['style-background']; ?>">
-<!-- Before we get rocking and rolling, you want not want to touch this code so much, as it holds everything required for the drop down-menu. Users can customize icons, colors, and the title in the header itself, which doesn't leave much room for changing things yourself. 
-
-That said, if you want to get funky with the look of it, you could always change the way the glossy bar looks, by editing 'menu-bk.png' and 'head-fade-bk.png', both of which are in the default/images/ folder.
-
-We've commented below to let you know what works what, so if you do go messing around, you won't break the functionailty of the customization options we've built (hopefully). If you do want to discard them and hard code something yourself, make sure you include that note with your theme. -->
 <div id="menubar">
-<div  id="blogtitle">
-<!-- This fetches the admin selection logo icon for the header, which is also the bookmark icon -->
-
-
-<img src="<?php echo bnc_get_title_image(); ?>" alt="" /> <a href="<?php bloginfo('home'); ?>"><?php $str = bnc_get_header_title(); echo stripslashes($str); ?></a>
-</div>
+	<div  id="blogtitle">
+		<!-- This fetches the admin selection logo icon for the header, which is also the bookmark icon -->
+		<img src="<?php echo bnc_get_title_image(); ?>" alt="" /> <a href="<?php bloginfo('home'); ?>"><?php $str = bnc_get_header_title(); echo stripslashes($str); ?></a>
+	</div>
 </div>
 
-<!-- This checks to see if they have disabled advanced JS and loads it if not. The toggles work with JS different ways, one with prototype/scriptaculous, the other with just the document.getelement routine... -->
-
-	<div id="drop-fade">
-
+<div id="drop-fade">
 <?php if (bnc_is_login_button_enabled()) { ?>
 	<?php get_currentuserinfo();
   		if (!current_user_can('edit_posts') && bnc_is_js_enabled()) : ?>
@@ -136,7 +79,7 @@ We've commented below to let you know what works what, so if you do go messing a
 		</a>
 	</div>
 
-<!--Our new login dropdown -->
+<!--The Login Drop-Down -->
 
 	<div id="wptouch-login" style="display:none">
 		<div id="wptouch-login-inner">
@@ -153,6 +96,8 @@ We've commented below to let you know what works what, so if you do go messing a
 			</div>
 		</div>
 
+<!-- The Categories Drop-Down -->
+
 	<div id="wptouch-cats" style="display:none">
 		<div id="catsmenu-inner">
             <ul>
@@ -165,7 +110,7 @@ We've commented below to let you know what works what, so if you do go messing a
         </div>
 	</div>
 
-<!-- Our search dropdown -->
+<!-- The Search Drop-Down -->
 
 	<div id="wptouch-search" style="display:none">
 		<div id="wptouch-search-inner">
@@ -176,27 +121,19 @@ We've commented below to let you know what works what, so if you do go messing a
 		</div>
 	</div>
 
-	<div id="dropmenu" style="display:none">
-      
-        <!-- Here's the drop-down menu. We're checking the pages that are enabled in the admin, and the icons which were assigned to them. We're also checking to see if the user has enabled the RSS< Mail, and/or Home link to be shown in the menu. -->
-    
+<!-- 
+The Pages Drop-Down 
+We're checking the pages that are enabled in the admin, and the icons which were assigned to them. 
+We're also checking to see if the user has enabled the RSS< Mail, and/or Home link to be shown in the menu. 
+-->
+	<div id="dropmenu" style="display:none"> 
         <div id="dropmenu-inner">
             <ul>
             <?php if (bnc_is_home_enabled()) { ?>
             	<li><a href="<?php bloginfo('home'); ?>"><img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/images/icon-pool/Home.png" alt="" /><?php _e( "Home", "wptouch" ); ?></a></li> 
             <?php } ?>
             
-            <?php           
-					$pages = bnc_wp_touch_get_pages();
-					global $blog_id;
-					foreach ($pages as $p) {
-						if ( file_exists( compat_get_plugin_dir( 'wptouch' ) . '/images/icon-pool/' . $p['icon'] ) ) {
-							$image = compat_get_plugin_url( 'wptouch' ) . '/images/icon-pool/' . $p['icon'];	
-						} else {
-            			$image = compat_get_upload_url() . '/wptouch/custom-icons/' . $p['icon'];
-            		}
-						echo('<li><a href="' . get_permalink($p['ID']) . '"><img src="' . $image . '" alt="icon" />' . $p['post_title'] . '</a></li>'); 
-					} ?>
+            <?php wptouch_core_header_get_pages(); ?>
 		
             <?php if (bnc_is_rss_enabled()) { ?>
            		<li><a href="<?php bloginfo('rss2_url'); ?>"><img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/images/icon-pool/RSS.png" alt="" /><?php _e( "RSS Feed", "wptouch" ); ?></a></li>
@@ -213,20 +150,8 @@ We've commented below to let you know what works what, so if you do go messing a
         </div>
 	</div>
 
-<!-- This just checks if the user is trying to use the theme with anything other than WPtouch, and its not an iPhone/iPod touch -->
+<!-- This just checks if the user is trying to use the theme with anything other than WPtouch, 
+and if its not an iPhone/iPod touch/Android/BlackBerry Storm, kills it -->
+<?php wptouch_core_header_check_use(); ?>
 
-	<?php if (false && function_exists('bnc_is_iphone') && !bnc_is_iphone()) { ?>
-		<div class="content post">
-		<a href="#" class="h2"><?php _e( 'Warning', 'wptouch' ); ?></a>
-			<div class="mainentry">
-			<?php _e( "Sorry, this theme is only meant for use with WordPress on Apple's iPhone and iPod Touch.", "wptouch" ); ?>
-			</div>
-		</div>
-  
-	<?php get_footer(); ?>
-	</body> 
-	<?php die; } ?>
-	
-<!-- This div spacer helps get the alignment are squared up after all the CSS floats -->		
-	<div class="post-spacer ">&nbsp;</div>
-	<div class="post-spacer ">&nbsp;</div>	
+<!-- End of the Header -->
