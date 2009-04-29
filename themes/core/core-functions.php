@@ -68,9 +68,10 @@ function wptouch_core_header_check_use() {
 function wptouch_core_get_avatar() {
 if (bnc_is_gravatars_enabled()) {
 	if (function_exists('gravatar')) {
-		echo '<img class="gravatar" src="' . gravatar("R", 28, "' . compat_get_plugin_url() . '/images/blank_gravatar.png") . '" alt="avatar" />';
+		echo '<img class=\'gravatar\' src=\'' . gravatar("R", 28, "' . compat_get_plugin_url() . '/images/blank_gravatar.png'") . '" alt=\'\' />';
 			} elseif (function_exists('get_avatar')) { echo '' . get_avatar( $comment, $size = '28', $default = '' . compat_get_plugin_url() . '/images/blank_gravatar.png' ) . ''; 
 				} else { 
+			echo '<!-- no gravatar -->';
 			}		
 		}
   }
