@@ -30,12 +30,7 @@ $oddcomment = 'alt';
 
 	<div class="comwrap">
 			<div class="comtop">		
-				<?php if (bnc_is_gravatars_enabled()) { ?>
-					<?php if (function_exists('gravatar')) { ?>
-					<img class='gravatar' src="<?php gravatar("R", 28, "' . compat_get_plugin_url() . '/images/blank_gravatar.png"); ?>" alt='' />	
-					<?php } elseif (function_exists('get_avatar')) { echo get_avatar( $comment, $size = '28', $default = '' . compat_get_plugin_url() . '/images/blank_gravatar.png' ); } else { ?><?php } ?>		
-				<?php } ?>
-
+				<?php wptouch_core_get_avatar(); ?>
 		<a href="<?php comment_author_url(); ?>"><?php comment_author(); ?></a> said:
 			<div class="comdater"><?php comment_time('M jS @ h:i a'); ?></div>  
 	</div><!--end comtop-->

@@ -64,6 +64,17 @@ function wptouch_core_header_check_use() {
 // WPtouch Standard Functions
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+// Comment Avatars				
+function wptouch_core_get_avatar() {
+if (bnc_is_gravatars_enabled()) {
+	if (function_exists('gravatar')) {
+		echo '<img class="gravatar" src="' . gravatar("R", 28, "' . compat_get_plugin_url() . '/images/blank_gravatar.png") . '" alt="avatar" />';
+			} elseif (function_exists('get_avatar')) { echo '' . get_avatar( $comment, $size = '28', $default = '' . compat_get_plugin_url() . '/images/blank_gravatar.png' ) . ''; 
+				} else { 
+			}		
+		}
+  }
+
 //Favicon fetch and convert script // This script will convert favicons for the links listed on your Links page (if you have one).
 function bnc_url_exists($url)
   {
