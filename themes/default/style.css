@@ -1,5 +1,4 @@
 /* @override 
-	http://24.36.119.47:9098/wp-content/plugins/wptouch/themes/default/style.css
 	http://24.36.119.184:9098/wp-content/plugins/wptouch/themes/default/style.css
 */
 
@@ -101,6 +100,10 @@ blockquote {
 
 .clearer {
 	clear: both;
+}
+
+.content {
+	margin-top: 20px;
 }
 
 /* @end */
