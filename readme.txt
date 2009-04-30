@@ -24,7 +24,7 @@ The theme also includes the ability for your visitors to easily switch between t
 * Fixed a variety of scenarios where paths to files and images were broken
 * Updated social bookmarking icons
 * More preparation for WPtouch 1.9 and 5 languages
-* Preparation for WPtouch 2.0 and theme switch support
+* Preparation for WPtouch 2.0 and themes support
 * Fixed switch link issue where regular theme switch link was broken
 
 *This version will need to be tested in a variety of situations, 
@@ -225,6 +225,7 @@ You can also checkout our Support Forums at http://support.bravenewcode.com to p
 * CSS refinements for comments, the drop-down menu, and overall appearance
 * styling for YouTube embedded videos
 * bug fixes for blogs installed in directories other than root
+
 
 = Version 1.0 = 
 

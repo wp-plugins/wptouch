@@ -15,7 +15,7 @@ include('core-styles.php' ); ?>
 <!--This makes the iPhone/iPod touch ask for the same icon the user chooses for a logo to be the bookmark icon as well. -->
 <link rel="apple-touch-icon" href="<?php echo bnc_get_title_image(); ?>" />
 <?php wptouch_core_header_enqueue(); ?>
-<?php wptouch_core_header_globaljs(); ?>
+<?php wptouch_core_header_corejs(); ?>
 <?php wptouch_core_header_plugin_compat(); ?>
 </head>
 <?php $wptouch_settings = bnc_wptouch_get_settings(); ?>
