@@ -18,7 +18,7 @@ $version = get_bloginfo('version');
 
 function wptouch_core_header_corejs() {
  if ( bnc_is_js_enabled() ) {
-	echo '<script src="' . compat_get_plugin_dir('wptouch') . '/themes/core/core.js" type="text/javascript" charset="utf-8"></script>'; 
+	echo '<script src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/themes/core/core.js" type="text/javascript" charset="utf-8"></script>'; 
 	 }
  }
 
