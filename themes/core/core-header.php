@@ -31,55 +31,43 @@ include('core-styles.php' ); ?>
 <?php if (bnc_is_login_button_enabled()) { ?>
 	<?php get_currentuserinfo();
   		if (!current_user_can('edit_posts') && bnc_is_js_enabled()) : ?>
-			<a href="javascript:$wptouch('#wptouch-login').slideToggle(200);">
+			<a href="javascript:bnc_jquery_login_drop();">
 				<img src="<?php bloginfo('template_directory'); ?>/images/menu/touchmenu-login.png" alt="" /> <?php _e( 'Login', 'wptouch' ); ?>
 			</a>	
 		<?php elseif (!current_user_can('edit_posts') && !bnc_is_js_enabled()) : ?>
-		    <a href="javascript:document.getElementById('wptouch-login').style.display='block';">
+		    <a href="javascript:bnc_login_drop();">
 				<img src="<?php bloginfo('template_directory'); ?>/images/menu/touchmenu-login.png" alt="" /> <?php _e( 'Login', 'wptouch' ); ?>
 			</a>	
 		<?php else : ?>	
-		<?php //Let's do some a WordPress version check to figure out the correct logout method
+		<?php
 			$version = (float)get_bloginfo('version'); 
-			if ($version >= 2.7) { ?>
-			<a href="<?php echo wp_logout_url($_SERVER['REQUEST_URI']); ?>">
-			<?php } else { ?>
-			<a href="<?php bloginfo('wpurl'); ?>/wp-login.php?action=logout&redirect_to=<?php echo $_SERVER['REQUEST_URI']; ?>">
-			<?php } ?>
+				if ($version >= 2.7) { ?>
+				<a href="<?php echo wp_logout_url($_SERVER['REQUEST_URI']); ?>">
+				<?php } else { ?>
+				<a href="<?php bloginfo('wpurl'); ?>/wp-login.php?action=logout&redirect_to=<?php echo $_SERVER['REQUEST_URI']; ?>">
+				<?php } ?>
 				<img src="<?php bloginfo('template_directory'); ?>/images/menu/touchmenu-logout.png" alt="" /> <?php _e( 'Logout', 'wptouch' ); ?>
-			</a>
+				</a>
 		<?php endif; ?>
 <?php } ?>
 
-	<?php if (bnc_is_cats_button_enabled()) { ?>
-		<?php if (bnc_is_js_enabled()) { ?>
-			<a href="javascript:$wptouch('#wptouch-cats').slideToggle(200);">
-				<?php } else { ?>
-			<a href="javascript:document.getElementById('wptouch-cats').style.display='block';">
-		<?php } ?>
-		
-		<img src="<?php bloginfo('template_directory'); ?>/images/menu/catsmenu.png" alt="" /> <?php _e( 'Categories', 'wptouch' ); ?></a>	
+	<?php if (bnc_is_cats_button_enabled()) { ?>	
+		    <a href="javascript:<?php if (bnc_is_js_enabled()) { echo 'bnc_query_cats_drop();' } else { echo 'bnc_cats_drop();' } ?>">
+				<img src="<?php bloginfo('template_directory'); ?>/images/menu/catsmenu.png" alt="" /> <?php _e( 'Categories', 'wptouch' ); ?>
+			</a>	
 	<?php } ?>
-
 	
 	<?php if (bnc_is_js_enabled()) { ?>
-		    <a href="javascript:$wptouch('#wptouch-search').slideToggle(200);">
-		<?php } else { ?>
-		    <a href="javascript:document.getElementById('wptouch-search').style.display='block';">
-		<?php } ?>
-		    <img src="<?php bloginfo('template_directory'); ?>/images/menu/search-touchmenu.png" alt="" /> <?php _e( 'Search', 'wptouch' ); ?>
-		</a>
+		    <a href="javascript:<?php if (bnc_is_js_enabled()) { echo 'bnc_query_search_drop();' } else { echo 'bnc_search_drop();' } ?>">
+		 	   <img src="<?php bloginfo('template_directory'); ?>/images/menu/search-touchmenu.png" alt="" /> <?php _e( 'Search', 'wptouch' ); ?>
+			</a>
 	
 	<?php if (bnc_is_js_enabled()) { ?>
-			<a href="javascript:$wptouch('#dropmenu').slideToggle(200);">
-				<?php } else { ?>
-			<a href="javascript:document.getElementById('dropmenu').style.display='block';">
-		<?php } ?>
-		<img src="<?php bloginfo('template_directory'); ?>/images/menu/touchmenu.png" alt="" /> <?php _e( 'Menu', 'wptouch' ); ?>
-		</a>
-	</div>
-
-<!--The Login Drop-Down -->
+		    <a href="javascript:<?php if (bnc_is_js_enabled()) { echo 'bnc_query_menu_drop();' } else { echo 'bnc_menu_drop();' } ?>">
+				<img src="<?php bloginfo('template_directory'); ?>/images/menu/touchmenu.png" alt="" /> <?php _e( 'Menu', 'wptouch' ); ?>
+			</a>
+</div>
+<!--#start The Login Drop-Down -->
 
 	<div id="wptouch-login" style="display:none">
 		<div id="wptouch-login-inner">
@@ -96,7 +84,7 @@ include('core-styles.php' ); ?>
 			</div>
 		</div>
 
-<!-- The Categories Drop-Down -->
+<!-- #start The Categories Drop-Down -->
 
 	<div id="wptouch-cats" style="display:none">
 		<div id="catsmenu-inner">
@@ -110,7 +98,7 @@ include('core-styles.php' ); ?>
         </div>
 	</div>
 
-<!-- The Search Drop-Down -->
+<!-- #start The Search Drop-Down -->
 
 	<div id="wptouch-search" style="display:none">
 		<div id="wptouch-search-inner">

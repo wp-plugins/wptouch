@@ -38,3 +38,47 @@ function bnc_scroll_comment(comment_num) {
     var diff = numbertwo - first;
     $wptouch(document).scrollTop($(document).scrollTop()+diff);  
 }
+
+// -- If jQuery is On -- //
+
+function bnc_jquery_login_drop() {
+$wptouch('#wptouch-login').slideToggle(200);
+}
+
+function bnc_jquery_cats_drop() {
+$wptouch('#wptouch-cats').slideToggle(200);
+}
+
+function bnc_jquery_search_drop() {
+$wptouch('#wptouch-search').slideToggle(200);
+}
+
+function bnc_jquery_menu_drop() {
+$wptouch('#dropmenu').slideToggle(200);
+}
+
+// -- If jQuery is Off -- //
+
+function bnc_login_drop() {
+document.getElementById('wptouch-login').style.display='block';
+}
+
+function bnc_cats_drop() {
+document.getElementById('wptouch-cats').style.display='block';
+}
+
+function bnc_login_drop() {
+document.getElementById('wptouch-login').style.display='block';
+}
+
+function bnc_menu_drop() {
+document.getElementById('dropmenu').style.display='block';
+}
+
+
+
+
+
+
+
+
