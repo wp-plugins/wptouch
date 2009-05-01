@@ -4,17 +4,19 @@
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 function wptouch_core_header_enqueue() {
-$version = get_bloginfo('version'); 
-		if ($version >= 2.5 && bnc_is_js_enabled() && !bnc_wptouch_is_exclusive() ) { 
-			echo	 '' . wp_enqueue_script('jquery') . '';
-		} elseif (bnc_is_js_enabled()) { 
+	$version = get_bloginfo('version'); 
+		if ($version >= 2.5 && !bnc_wptouch_is_exclusive() && bnc_is_js_enabled()) { 
+			echo	 '' . wp_enqueue_script('jquery') . '';	
+
+		} elseif ($version >= 2.5 && bnc_wptouch_is_exclusive() && bnc_is_js_enabled()) { 
 			echo '<script src="http://www.google.com/jsapi"></script>';
 			echo '<script type="text/javascript">google.load("jquery", "1");</script>';
-		}
-	if ( !bnc_wptouch_is_exclusive() ) {
-		wp_head(); 
-		}
-	}
+
+		} elseif ($version < 2.5 && bnc_is_js_enabled()) { 
+			echo '<script src="http://www.google.com/jsapi"></script>';
+			echo '<script type="text/javascript">google.load("jquery", "1");</script>';
+ 	}
+ }
 
 function wptouch_core_header_corejs() {
  if ( bnc_is_js_enabled() ) {
