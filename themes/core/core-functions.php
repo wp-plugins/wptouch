@@ -1,27 +1,28 @@
 <?php 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// Core Header Functions
+// WPtouch Core Header Functions
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+function wptouch_core_header_styles() {
+	include('core-styles.php' );
+}
 
 function wptouch_core_header_enqueue() {
 	$version = get_bloginfo('version'); 
 		if ($version >= 2.5 && !bnc_wptouch_is_exclusive() && bnc_is_js_enabled()) { 
-			echo	 '' . wp_enqueue_script('jquery') . '';	
+		wp_enqueue_script('wptouch-core', '/' . PLUGINDIR . '/wptouch/themes/core/core.js', array('jquery'),'2.0' );		
+		wp_head(); 
 
-		} elseif ($version >= 2.5 && bnc_wptouch_is_exclusive() && bnc_is_js_enabled()) { 
+ 			} elseif ($version >= 2.5 && bnc_wptouch_is_exclusive() && bnc_is_js_enabled()) { 
 			echo '<script type="text/javascript" src="http://www.google.com/jsapi"></script>';
 			echo '<script type="text/javascript">google.load("jquery", "1");</script>';
+			echo '<script src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/themes/core/core.js" type="text/javascript" charset="utf-8"></script>'; 
 
 		} elseif ($version < 2.5 && bnc_is_js_enabled()) { 
 			echo '<script type="text/javascript" src="http://www.google.com/jsapi"></script>';
 			echo '<script type="text/javascript">google.load("jquery", "1");</script>';
+			echo '<script src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/themes/core/core.js" type="text/javascript" charset="utf-8"></script>'; 
  	}
- }
-
-function wptouch_core_header_corejs() {
- if ( bnc_is_js_enabled() ) {
-	echo '<script src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/themes/core/core.js" type="text/javascript" charset="utf-8"></script>'; 
-	 }
  }
 
 function wptouch_core_header_plugin_compat() {
@@ -34,7 +35,13 @@ if (!function_exists('dsq_comments_template') ) {
 	 }  
   }
   
-function wptouch_core_header_get_pages() {
+function wptouch_core_header_home() {
+	if (bnc_is_home_enabled()) {
+		echo '<li><a href="' . get_bloginfo('home') . '"><img src="' . compat_get_plugin_url( 'wptouch' ) . '/images/icon-pool/Home.png" alt="" />' . __( "Home", "wptouch" ) . '</a></li>'; 
+	}
+}
+  
+function wptouch_core_header_pages() {
 	$pages = bnc_wp_touch_get_pages();
 	global $blog_id;
 	foreach ($pages as $p) {
@@ -46,14 +53,31 @@ function wptouch_core_header_get_pages() {
 		echo('<li><a href="' . get_permalink($p['ID']) . '"><img src="' . $image . '" alt="icon" />' . $p['post_title'] . '</a></li>'); 
 	}
   }
-  
+ 
+function wptouch_core_header_rss() {
+	if (bnc_is_rss_enabled()) {
+		echo '<li><a href="' . get_bloginfo('rss2_url') . '"><img src="' . compat_get_plugin_url( 'wptouch' ) . '/images/icon-pool/RSS.png" alt="" />' . __( "RSS Feed", "wptouch" ) . '</a></li>'; 
+	}
+}
+
+function wptouch_core_header_email() {
+	if (bnc_is_email_enabled()) {
+		echo '<li><a href="mailto:' . get_bloginfo('admin_email') . '"><img src="' . compat_get_plugin_url( 'wptouch' ) . '/images/icon-pool/Mail.png" alt="" />' . __( "E-Mail", "wptouch" ) . '</a></li>'; 
+	}
+} 
+
+function wptouch_core_header_close() {
+	if (!bnc_is_js_enabled()) {
+	echo '<li><a class="menu-close" href="javascript:document.getElementById(\'dropmenu\').style.display = \'none\';"><img src="' . get_bloginfo('template_directory') . '/images/cross.png" alt="" /> ' . __( "Close Menu", "wptouch" ) . '</a></li>';
+	} 
+}
   
 function wptouch_core_header_check_use() {
 	if (false && function_exists('bnc_is_iphone') && !bnc_is_iphone()) {
 		echo '<div class="content post">';
-		echo '<a href="#" class="h2">' . _e( 'Warning', 'wptouch' ) . '</a>';
+		echo '<a href="#" class="h2">' . __( 'Warning', 'wptouch' ) . '</a>';
 		echo '<div class="mainentry">';
-		echo '' . _e( "Sorry, this theme is only meant for use with WordPress on Apple's iPhone and iPod Touch.", "wptouch" ) . '';
+		echo '' . __( "Sorry, this theme is only meant for use with WordPress on Apple's iPhone and iPod Touch.", "wptouch" ) . '';
 		echo '</div></div>';
 		echo '' .get_footer() . '';
 		echo '</body>';
@@ -61,6 +85,43 @@ function wptouch_core_header_check_use() {
 	} 
 }
   
+  
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// WPtouch Core Body Functions
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////  
+
+function wptouch_core_body_background() {
+	$wptouch_settings = bnc_wptouch_get_settings();
+	echo $wptouch_settings['style-background'];
+  }
+  
+function wptouch_core_body_sitetitle() {  
+	$str = bnc_get_header_title(); 
+	echo stripslashes($str);  
+  }
+
+function wptouch_core_body_result_text() {  
+	global $is_ajax; if (!$is_ajax) {
+			if (is_search()) {
+				echo '' . __( "Search results for", "wptouch" ) . ' &lsquo;' . the_search_query() . '&rsquo;';	
+			} elseif (is_archive()) { 
+				echo '' . __( "Browsing", "wptouch" ) . '';
+			}
+			if (is_category()) {
+				echo '' . __( "the category", "wptouch" ) . ' &lsquo;' . single_cat_title() . '&rsquo;';				
+			} elseif (is_tag()) {
+				echo '' . __( "the tag archive for", "wptouch" ) . ' &lsquo;' . single_tag_title() . '&rsquo;';		
+			} elseif (is_day()) {
+				echo '' . __( "the archive for", "wptouch" ) . ' ' . get_the_time('F jS, Y') . '';
+			} elseif (is_month()) {
+				echo '' . __( "the archive for", "wptouch" ) . ' ' . get_the_time('F, Y') . '';	
+			} elseif (is_year()) {
+				echo '' . __( "the archive for", "wptouch" ) . ' ' . get_the_time('Y') . '';		
+			} elseif (is_author()) {
+				echo '' . the_author() . '\'s ' . __( "archive", "wptouch" ) . '';
+		}
+	}
+}
   
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // WPtouch Standard Functions

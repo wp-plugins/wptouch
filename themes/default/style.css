@@ -142,7 +142,7 @@ blockquote {
 
 /* @group Header */
 
-#blogtitle {
+#headerbar-title {
 	text-shadow: #242424 -1px -1px 1px;
 	height: 35px;
 	padding-top: 10px;
@@ -150,7 +150,7 @@ blockquote {
 	display: block;
 }
 
-#blogtitle img {
+#headerbar-title img {
 	position: relative;
 	margin-right: 5px;
 	max-width: 30px;
@@ -184,6 +184,62 @@ blockquote {
 	position: relative;
 	top: 5px;
 }
+
+/* @group DropDown Menu */
+
+#wptouch-menu {
+	margin: 0;
+	width: 100%;
+	position: relative;
+	bottom: 1px;
+	background: #181818 no-repeat;
+	opacity: 0.97;
+	-webkit-box-shadow: #555 -5px 2px 5px;
+	padding: 0;
+	z-index: 1;
+}
+
+#wptouch-menu-inner ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	position: relative;
+}
+
+#wptouch-menu-inner li {
+	border-bottom: 1px solid #2d2d2d;
+	margin: 0;
+	background: url(images/arrow.png) no-repeat right center;
+	padding: 9px 20px 7px 10px;
+	text-transform: capitalize;
+}
+
+#wptouch-menu-inner a {
+	font-size: 14px;
+	font-weight: bold;
+	display: block;
+	text-shadow: #000 1px 1px 0;
+	color: #eee;
+	margin: 0;
+	padding: 4px 0;
+	width: 93%;
+}
+
+#wptouch-menu-inner li:hover {
+	background-color: #222;
+}
+
+#wptouch-menu-inner img {
+	float: left;
+	position: relative;
+	bottom: 7px;
+	width: 28px;
+	padding-right: 10px;
+	right: 1px;
+	margin-bottom: 3%;
+}
+
+/* @end */
 
 /* @group Login */
 
@@ -325,62 +381,6 @@ input#ssubmit {
 	width: 67px;
 	height: 23px;
 	margin-top: 6px;
-}
-
-/* @end */
-
-/* @group DropDown Menu */
-
-#dropmenu {
-	margin: 0;
-	width: 100%;
-	position: relative;
-	bottom: 1px;
-	background: #181818 no-repeat;
-	opacity: 0.97;
-	-webkit-box-shadow: #555 -5px 2px 5px;
-	padding: 0;
-	z-index: 1;
-}
-
-#dropmenu-inner ul {
-	margin: 0;
-	padding: 0;
-	list-style-type: none;
-	position: relative;
-}
-
-#dropmenu-inner li {
-	border-bottom: 1px solid #2d2d2d;
-	margin: 0;
-	background: url(images/arrow.png) no-repeat right center;
-	padding: 9px 20px 7px 10px;
-	text-transform: capitalize;
-}
-
-#dropmenu-inner a {
-	font-size: 14px;
-	font-weight: bold;
-	display: block;
-	text-shadow: #000 1px 1px 0;
-	color: #eee;
-	margin: 0;
-	padding: 4px 0;
-	width: 93%;
-}
-
-#dropmenu-inner li:hover {
-	background-color: #222;
-}
-
-#dropmenu-inner img {
-	float: left;
-	position: relative;
-	bottom: 7px;
-	width: 28px;
-	padding-right: 10px;
-	right: 1px;
-	margin-bottom: 3%;
 }
 
 /* @end */

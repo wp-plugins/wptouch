@@ -1,6 +1,13 @@
-// The WPtouch Core Javascript File
-// This file holds all the default jQuery & Ajax functions all in one neat place.
-
+/*
+ * WPtouch 2.0 -The WPtouch Core Javascript File
+ * This file holds all the default jQuery & Ajax functions all in one neat place.
+ * 
+ * Copyright (c) 2009 Duane Storey & Dale Mugford (bravenewcode.com)
+ * Dual licensed under the MIT (MIT-LICENSE.txt)
+ * and GPL (GPL-LICENSE.txt) licenses.
+ *
+ * Date: May 2nd, 2009
+ */
 
 
 /////// -- Header Bump on page load -- ///////
@@ -14,7 +21,6 @@ var orient=currentWIdth==320?"profile":"portrait";
 document.body.setAttribute("orient",orient);setTimeout(function() {
 window.scrollTo(0,1);},500);}}
 setInterval(updateLayout,400);
-
 
 
 /////// -- jQuery -- ///////
@@ -31,21 +37,22 @@ $wptouch = jQuery.noConflict();
 	}
 
 	function bnc_jquery_login_drop() {
-		$wptouch('#wptouch-login').slIdeToggle(200);
+		$wptouch('#wptouch-login').slideToggle(200);
 	}
 
 	function bnc_jquery_tags_drop() {
-		$wptouch('#wptouch-tags').slIdeToggle(200);
+		$wptouch('#wptouch-tags').slideToggle(200);
 	}
 	
 	function bnc_jquery_cats_drop() {
-		$wptouch('#wptouch-cats').slIdeToggle(200);
+		$wptouch('#wptouch-cats').slideToggle(200);
 	}
 
 	function bnc_jquery_search_drop() {
-		$wptouch('#wptouch-search').slIdeToggle(200);
+		$wptouch('#wptouch-search').slideToggle(200);
 	}
 	
 	function bnc_jquery_menu_drop() {
-		$wptouch('#wptouch-menu').slIdeToggle(200);
+		$wptouch('#wptouch-menu').slideToggle(200);
 	}
+	
