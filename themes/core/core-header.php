@@ -29,43 +29,38 @@ include('core-styles.php' ); ?>
 
 <div id="drop-fade">
 <?php if (bnc_is_login_button_enabled()) { ?>
-	<?php get_currentuserinfo();
-  		if (!current_user_can('edit_posts') && bnc_is_js_enabled()) : ?>
-			<a href="javascript:bnc_jquery_login_drop();">
-				<img src="<?php bloginfo('template_directory'); ?>/images/menu/touchmenu-login.png" alt="" /> <?php _e( 'Login', 'wptouch' ); ?>
-			</a>	
-		<?php elseif (!current_user_can('edit_posts') && !bnc_is_js_enabled()) : ?>
-		    <a href="javascript:bnc_login_drop();">
-				<img src="<?php bloginfo('template_directory'); ?>/images/menu/touchmenu-login.png" alt="" /> <?php _e( 'Login', 'wptouch' ); ?>
-			</a>	
-		<?php else : ?>	
-		<?php
-			$version = (float)get_bloginfo('version'); 
-				if ($version >= 2.7) { ?>
-				<a href="<?php echo wp_logout_url($_SERVER['REQUEST_URI']); ?>">
-				<?php } else { ?>
-				<a href="<?php bloginfo('wpurl'); ?>/wp-login.php?action=logout&redirect_to=<?php echo $_SERVER['REQUEST_URI']; ?>">
-				<?php } ?>
-				<img src="<?php bloginfo('template_directory'); ?>/images/menu/touchmenu-logout.png" alt="" /> <?php _e( 'Logout', 'wptouch' ); ?>
-				</a>
-		<?php endif; ?>
+
+	<?php if (!is_user_logged_in()) { ?>
+		    <a href="javascript:<?php if (bnc_is_js_enabled()) echo "bnc_jquery_login_drop();"; else echo "document.getElementById('wptouch-login').style.display='block';" ?>">
+					<img src="<?php bloginfo('template_directory'); ?>/images/menu/touchmenu-login.png" alt="" /> <?php _e( 'Login', 'wptouch' ); ?>
+				</a>	
+	<?php } else { ?>
+		<?php $version = (float)get_bloginfo('version'); if ($version >= 2.7) { ?>
+			<a href="<?php echo wp_logout_url($_SERVER['REQUEST_URI']); ?>">
+		<?php } else { ?>
+			<a href="<?php bloginfo('wpurl'); ?>/wp-login.php?action=logout&redirect_to=<?php echo $_SERVER['REQUEST_URI']; ?>">
+		<?php } ?>
+			<img src="<?php bloginfo('template_directory'); ?>/images/menu/touchmenu-logout.png" alt="" /> <?php _e( 'Logout', 'wptouch' ); ?>
+			</a>
+	<?php } ?>
+
 <?php } ?>
 
 	<?php if (bnc_is_cats_button_enabled()) { ?>	
-		    <a href="javascript:<?php if (bnc_is_js_enabled()) { echo 'bnc_query_cats_drop();' } else { echo 'bnc_cats_drop();' } ?>">
+		    <a href="javascript:<?php if (bnc_is_js_enabled()) echo "bnc_jquery_cats_drop();"; else echo "document.getElementById('wptouch-cats').style.display='block';" ?>">
 				<img src="<?php bloginfo('template_directory'); ?>/images/menu/catsmenu.png" alt="" /> <?php _e( 'Categories', 'wptouch' ); ?>
 			</a>	
 	<?php } ?>
 	
-	<?php if (bnc_is_js_enabled()) { ?>
-		    <a href="javascript:<?php if (bnc_is_js_enabled()) { echo 'bnc_query_search_drop();' } else { echo 'bnc_search_drop();' } ?>">
+		    <a href="javascript:<?php if (bnc_is_js_enabled()) echo "bnc_jquery_search_drop();"; else echo "document.getElementById('wptouch-search').style.display='block';" ?>">
 		 	   <img src="<?php bloginfo('template_directory'); ?>/images/menu/search-touchmenu.png" alt="" /> <?php _e( 'Search', 'wptouch' ); ?>
 			</a>
+
 	
-	<?php if (bnc_is_js_enabled()) { ?>
-		    <a href="javascript:<?php if (bnc_is_js_enabled()) { echo 'bnc_query_menu_drop();' } else { echo 'bnc_menu_drop();' } ?>">
+		    <a href="javascript:<?php if (bnc_is_js_enabled()) echo "bnc_jquery_menu_drop();"; else echo "document.getElementById('wptouch-menu').style.display='block';" ?>">
 				<img src="<?php bloginfo('template_directory'); ?>/images/menu/touchmenu.png" alt="" /> <?php _e( 'Menu', 'wptouch' ); ?>
 			</a>
+
 </div>
 <!--#start The Login Drop-Down -->
 
@@ -114,8 +109,8 @@ The Pages Drop-Down
 We're checking the pages that are enabled in the admin, and the icons which were assigned to them. 
 We're also checking to see if the user has enabled the RSS< Mail, and/or Home link to be shown in the menu. 
 -->
-	<div id="dropmenu" style="display:none"> 
-        <div id="dropmenu-inner">
+	<div id="wptouch-menu" style="display:none"> 
+        <div id="wptouch-menu-inner">
             <ul>
             <?php if (bnc_is_home_enabled()) { ?>
             	<li><a href="<?php bloginfo('home'); ?>"><img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/images/icon-pool/Home.png" alt="" /><?php _e( "Home", "wptouch" ); ?></a></li> 

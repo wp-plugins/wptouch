@@ -8,9 +8,9 @@
 addEventListener("load",function() {
 setTimeout(updateLayout,0);
 setTimeout(function(){window.scrollTo(0,1);},100);},false);
-var currentWidth=0;function updateLayout() {
-if(window.innerWidth!=currentWidth) {currentWidth=window.innerWidth;
-var orient=currentWidth==320?"profile":"portrait";
+var currentWIdth=0;function updateLayout() {
+if(window.innerWIdth!=currentWIdth) {currentWIdth=window.innerWIdth;
+var orient=currentWIdth==320?"profile":"portrait";
 document.body.setAttribute("orient",orient);setTimeout(function() {
 window.scrollTo(0,1);},500);}}
 setInterval(updateLayout,400);
@@ -19,66 +19,33 @@ setInterval(updateLayout,400);
 
 /////// -- jQuery -- ///////
 
-var $wptouch = jQuery.noConflict();
-var menu_loaded = 0;
-function bnc_load_menu(loc) {
-    if (menu_loaded == 0) {
-        $wptouch.get(loc, {}, function(data) { $wptouch('#dropmenu').html(data); $wptouch('#dropmenu').slideToggle();  } );
-    } else {
-        $wptouch('#dropmenu').slideToggle();
-    }
-    menu_loaded = 1;
-}
+$wptouch = jQuery.noConflict();
+	
+	function bnc_scroll_comment(comment_num) {
+	     var h = $("body").height();
+	    var two = parseInt(comment_num)+1;
+	    var first = $('#comment-num-' + comment_num).offset().top;
+	    var numbertwo = $('#comment-num-' + two).offset().top;
+	    var diff = numbertwo - first;
+	    $wptouch(document).scrollTop($(document).scrollTop()+diff);  
+	}
 
-function bnc_scroll_comment(comment_num) {
-     var h = $("body").height();
-    var two = parseInt(comment_num)+1;
-    var first = $('#comment-num-' + comment_num).offset().top;
-    var numbertwo = $('#comment-num-' + two).offset().top;
-    var diff = numbertwo - first;
-    $wptouch(document).scrollTop($(document).scrollTop()+diff);  
-}
+	function bnc_jquery_login_drop() {
+		$wptouch('#wptouch-login').slIdeToggle(200);
+	}
 
-// -- If jQuery is On -- //
+	function bnc_jquery_tags_drop() {
+		$wptouch('#wptouch-tags').slIdeToggle(200);
+	}
+	
+	function bnc_jquery_cats_drop() {
+		$wptouch('#wptouch-cats').slIdeToggle(200);
+	}
 
-function bnc_jquery_login_drop() {
-$wptouch('#wptouch-login').slideToggle(200);
-}
-
-function bnc_jquery_cats_drop() {
-$wptouch('#wptouch-cats').slideToggle(200);
-}
-
-function bnc_jquery_search_drop() {
-$wptouch('#wptouch-search').slideToggle(200);
-}
-
-function bnc_jquery_menu_drop() {
-$wptouch('#dropmenu').slideToggle(200);
-}
-
-// -- If jQuery is Off -- //
-
-function bnc_login_drop() {
-document.getElementById('wptouch-login').style.display='block';
-}
-
-function bnc_cats_drop() {
-document.getElementById('wptouch-cats').style.display='block';
-}
-
-function bnc_login_drop() {
-document.getElementById('wptouch-login').style.display='block';
-}
-
-function bnc_menu_drop() {
-document.getElementById('dropmenu').style.display='block';
-}
-
-
-
-
-
-
-
-
+	function bnc_jquery_search_drop() {
+		$wptouch('#wptouch-search').slIdeToggle(200);
+	}
+	
+	function bnc_jquery_menu_drop() {
+		$wptouch('#wptouch-menu').slIdeToggle(200);
+	}
