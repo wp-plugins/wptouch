@@ -122,6 +122,18 @@ function wptouch_core_body_result_text() {
 		}
 	}
 }
+
+function wptouch_core_body_post_arrows() {  
+	 if (bnc_is_js_enabled() && bnc_excerpt_enabled()) {
+		echo '<a class="post-arrow" id="arrow-' . get_the_ID() . '" href="javascript:$wptouch(\'#entry-' . get_the_ID() . '\').fadeIn(500); $wptouch(\'#arrow-' . get_the_ID() . '\').hide(); $wptouch(\'#arrow-down-' . get_the_ID() . '\').show();"></a>';	
+		echo '<a style="display:none" class="post-arrow-down month-' . get_the_time('m') . '" id="arrow-down-' . get_the_ID() . '" href="javascript:$wptouch(\'#entry-' . get_the_ID() . '\').fadeOut(500); $wptouch(\'#arrow-' . get_the_ID() . '\').show(); $wptouch(\'#arrow-down-' . get_the_ID() . '\').hide();"></a>';
+	
+	} elseif (!bnc_is_js_enabled() && bnc_excerpt_enabled()) {
+
+		echo '<a class="post-arrow" id="arrow-' . get_the_ID() . '" href="javascript:document.getElementById(\'entry-' . get_the_ID() . '\').style.display = \'block\';document.getElementById(\'arrow-' . get_the_ID() . '\').style.display = \'none\';document.getElementById(\'arrow-down-' . get_the_ID() . '\').style.display = \'block\';"></a>';
+		echo '<a style="display:none" class="post-arrow-down" id="arrow-down-' . get_the_ID() . '" href="javascript:document.getElementById(\'entry-' . get_the_ID() . '\').style.display = \'none\';document.getElementById(\'arrow-' . get_the_ID() . '\').style.display = \'block\';document.getElementById(\'arrow-down-' . get_the_ID() . '\').style.display = \'none\';"></a>';
+	}
+}
   
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // WPtouch Standard Functions

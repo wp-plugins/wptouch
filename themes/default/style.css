@@ -103,7 +103,7 @@ blockquote {
 }
 
 .content {
-	margin-top: 20px;
+	margin-top: 15px;
 }
 
 /* @end */
@@ -154,11 +154,11 @@ blockquote {
 	position: relative;
 	margin-right: 5px;
 	max-width: 30px;
-	-webkit-border-radius: 4px;
 	bottom: 2px;
 	float: left;
 	width: 30px;
 	height: 30px;
+	padding: 0;
 }
 
 #drop-fade {
@@ -168,8 +168,9 @@ blockquote {
 	position: relative;
 	padding: 4px 0 2px;
 	opacity: 0.98;
-	-webkit-box-shadow: #555 -5px 2px 5px;
+	-webkit-box-shadow: #444 -4px 2px 4px;
 	margin: 0;
+	border-top: 1px solid #0d0d0d;
 }
 
 #drop-fade a {
@@ -188,15 +189,13 @@ blockquote {
 /* @group DropDown Menu */
 
 #wptouch-menu {
-	margin: 0;
 	width: 100%;
 	position: relative;
-	bottom: 1px;
-	background: #181818 no-repeat;
-	opacity: 0.97;
-	-webkit-box-shadow: #555 -5px 2px 5px;
-	padding: 0;
+	background: #262626 no-repeat;
 	z-index: 1;
+	margin: 0;
+	padding: 0;
+	border-top: 1px solid #1b1b1b;
 }
 
 #wptouch-menu-inner ul {
@@ -207,19 +206,27 @@ blockquote {
 }
 
 #wptouch-menu-inner li {
-	border-bottom: 1px solid #2d2d2d;
+	border-bottom: 1px solid #1d1d1d;
 	margin: 0;
 	background: url(images/arrow.png) no-repeat right center;
-	padding: 9px 20px 7px 10px;
+	padding: 8px 20px 7px 10px;
 	text-transform: capitalize;
+	border-top: 1px solid #313131;
+
+}
+
+#wptouch-menu-inner li:last-child {
+	padding-bottom: 9px;
+	border-bottom: 2px solid #868686;
+
 }
 
 #wptouch-menu-inner a {
 	font-size: 14px;
 	font-weight: bold;
 	display: block;
-	text-shadow: #000 1px 1px 0;
-	color: #eee;
+	text-shadow: #171717 -1px -1px 0;
+	color: #bfbfbf;
 	margin: 0;
 	padding: 4px 0;
 	width: 93%;
@@ -232,11 +239,10 @@ blockquote {
 #wptouch-menu-inner img {
 	float: left;
 	position: relative;
-	bottom: 7px;
+	bottom: 5px;
 	width: 28px;
 	padding-right: 10px;
 	right: 1px;
-	margin-bottom: 3%;
 }
 
 /* @end */
@@ -244,16 +250,20 @@ blockquote {
 /* @group Login */
 
 #wptouch-login {
-	background: url(images/search-back.png) repeat-x;
+	z-index: 1;
 	text-align: center;
-	border-bottom: 1px solid #555;
+	border-bottom: 1px solid #363636;
 	margin: 0;
 	padding: 0;
 	-webkit-box-shadow: #555 -5px 2px 5px;
 	height: 39px;
+	border-top: 1px solid #363636;
+	background: #545454 repeat-x;
+	position: relative;
 }
 
 #wptouch-login-inner {
+	padding-top: 2px;
 }
 
 #wptouch-login input#log {
@@ -401,21 +411,25 @@ input#ssubmit {
 }
 
 a.post-arrow {
-	width: 22px;
-	height: 20px;
+	width: 18px;
+	height: 15px;
 	float: right;
-	margin-top: 3px;
+	margin-top: 1px;
 	padding: 0;
-	background: url(images/post-arrow.jpg) no-repeat;
+	background: #f4f4f4 url(images/post-arrow.png) no-repeat -1px -2px;
+	border: 1px solid #ddd;
+	-webkit-border-radius: 5px;
 }
 
 a.post-arrow-down {
-	width: 22px;
-	height: 20px;
+	width: 18px;
+	height: 15px;
 	float: right;
-	margin-top: 3px;
+	margin-top: 1px;
 	padding: 0;
-	background: url(images/post-arrow-down.jpg) no-repeat;
+	background: #e4e4e4 url(images/post-arrow.png) no-repeat -1px -23px;
+	border: 1px solid #b8b8b8;
+	-webkit-border-radius: 5px;
 }
 
 a.h2 {
@@ -503,7 +517,7 @@ a.h2 {
 	-webkit-border-bottom-right-radius: 9px;
 	top: 3px;
 	float: left;
-	-webkit-box-shadow: #c7c7c7 1px 1px 4px;
+	-webkit-box-shadow: #c6c6c6 1px 1px 3px;
 }
 
 .cal-month {
@@ -550,7 +564,7 @@ a.h2 {
 }
 
 .month-05 {
-	background-color: #90d2fe;
+	background-color: #58b0ea;
 }
 
 .month-06 {
