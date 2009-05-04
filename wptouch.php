@@ -189,7 +189,7 @@ class WPtouchPlugin {
 
 	function bnc_head() {
 		if ( $this->applemobile && $this->desired_view == 'normal' ) {
-			echo "<link rel='stylesheet' type='text/css' href='" . compat_get_plugin_url( 'wptouch' ) . "/switch-css/wptouch-switch-link.css'></link>\n";
+			echo "<link rel='stylesheet' type='text/css' href='" . compat_get_plugin_url( 'wptouch' ) . "/themes/core/core-css/wptouch-switch-link.css'></link>\n";
 		}
 	}
 
