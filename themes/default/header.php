@@ -47,7 +47,7 @@ include( dirname(__FILE__) . '/../core/core-header.php' );
 </div>
 <!--#start The Login Drop-Down -->
 
-	<div id="wptouch-login" style="display:none">
+	<div id="wptouch-login" class="dropper" style="display:none">
 		<div id="wptouch-login-inner">
 			<form name="loginform" id="loginform" action="<?php bloginfo('wpurl'); ?>/wp-login.php" method="post">
 				<label>
@@ -62,10 +62,21 @@ include( dirname(__FILE__) . '/../core/core-header.php' );
 			</form>
 		</div>
 	</div>
+	
+<!-- #start The Search Drop-Down -->
+
+	<div id="wptouch-search" class="dropper" style="display:none">
+		<div id="wptouch-search-inner">
+			<form method="get" id="searchform" action="<?php bloginfo('home'); ?>/">
+			<input type="text" value="<?php the_search_query(); ?>" name="s" id="s" /> 
+			<input name="submit" type="submit" id="ssubmit" tabindex="5" value="Search" />
+			</form>
+		</div>
+	</div>
 
 <!-- #start The Categories Drop-Down -->
 
-	<div id="wptouch-cats" style="display:none">
+	<div id="wptouch-cats" class="dropper" style="display:none">
 		<div id="catsmenu-inner">
             <ul>
 		   		<?php bnc_get_ordered_cat_list(); if (!bnc_is_js_enabled()) { ?>
@@ -77,20 +88,9 @@ include( dirname(__FILE__) . '/../core/core-header.php' );
         </div>
 	</div>
 
-<!-- #start The Search Drop-Down -->
-
-	<div id="wptouch-search" style="display:none">
-		<div id="wptouch-search-inner">
-			<form method="get" id="searchform" action="<?php bloginfo('home'); ?>/">
-			<input type="text" value="<?php the_search_query(); ?>" name="s" id="s" /> 
-			<input name="submit" type="submit" id="ssubmit" tabindex="5" value="Search" />
-			</form>
-		</div>
-	</div>
-
 <!-- #start The Menu Drop-Down -->
 
-	<div id="wptouch-menu" style="display:none"> 
+	<div id="wptouch-menu" class="dropper" style="display:none"> 
         <div id="wptouch-menu-inner">
 			<ul>
 				<?php wptouch_core_header_home(); ?>            

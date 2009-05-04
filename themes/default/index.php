@@ -35,7 +35,7 @@
 			<div class="clearer"></div>	
             <div id="entry-<?php the_ID(); ?>" <?php if (bnc_excerpt_enabled()) { ?>style="display:none"<?php } ?> class="mainentry <?php echo $wptouch_settings['style-text-size']; ?> <?php echo $wptouch_settings['style-text-justify']; ?>">
  				<?php the_content_rss('', true, '', 50); ?>
- 		    <a href="<?php the_permalink() ?>"><?php _e( "Read More", "wptouch" ); ?> &raquo;</a>
+ 		    <a class="read-more" href="<?php the_permalink() ?>"><?php _e( "Read This Post", "wptouch" ); ?></a>
 	        </div>  
       </div>
 
@@ -74,13 +74,12 @@
 </div><!-- #End post -->
 
 <?php else : ?>
-
 	<?php global $is_ajax; if (($is_ajax) && !is_search()) { ?>
-	  <div class="footer-result-text"><?php _e( "No more entries to display.", "wptouch" ); ?></div>
+	  <div class="result-text-footer"><?php _e( "No more entries to display.", "wptouch" ); ?></div>
 	 <?php } elseif (is_search() && ($is_ajax)) { ?>
-	<div class="footer-result-text"><?php _e( "No more search results to display.", "wptouch" ); ?></div>
+	<div class="result-text-footer"><?php _e( "No more search results to display.", "wptouch" ); ?></div>
 	 <?php } elseif (is_search() && (!$is_ajax)) { ?>
-	 <div class="footer-result-text" style="padding-bottom:127px"><?php _e( "No search results results found.", "wptouch" ); ?><br /><?php _e( "Try another query.", "wptouch" ); ?></div>
+	 <div class="result-text-footer" style="padding-bottom:127px"><?php _e( "No search results results found.", "wptouch" ); ?><br /><?php _e( "Try another query.", "wptouch" ); ?></div>
 	<?php } else { ?>
 	  <div class="post"><img src="<?php bloginfo('template_directory'); ?>/images/404.jpg" alt="404 Not Found" /></div>
 	<?php } ?>

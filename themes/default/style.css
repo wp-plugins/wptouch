@@ -35,10 +35,6 @@ body {
 	-webkit-text-size-adjust: none;
 }
 
-a:active {
-	color: #bf0000;
-}
-
 ul {
 	margin: 0;
 	padding: 0 20px 0 20px;
@@ -66,22 +62,33 @@ h1 {
 }
 
 h2 {
-	font-size: 14px;
+	font-size: 20px;
+	text-shadow: #f9f9f9 -1px -1px 0;
 	text-align: left;
+	border-bottom: 1px solid #dcdcdc;
+	padding-bottom: 10px;
 }
 
 h3 {
-	font-size: 13px;
+	font-size: 18px;
+	text-shadow: #f9f9f9 -1px -1px 0;
+	position: relative;
+	border-bottom: 1px solid #dcdcdc;
+	padding-bottom: 10px;
 }
 
 h4 {
-	font-size: 12px;
-	margin: 0;
+	font-size: 16px;
+	text-shadow: #f9f9f9 -1px -1px 0;
 	padding: 0 0 10px;
+	border-bottom: 1px solid #dcdcdc;
+	padding-bottom: 10px;
 }
 
 h5 {
-	font-size: 11px;
+	text-shadow: #f9f9f9 -1px -1px 0;
+	font-size: 14px;
+	padding: 0;
 }
 
 h6 {
@@ -106,39 +113,29 @@ blockquote {
 	margin-top: 15px;
 }
 
-/* @end */
-
 .result-text {
 	color: #475d79;
 	text-shadow: #eee 1px 1px 0;
-	letter-spacing: -1px;
 	font-size: 15px;
 	font-weight: bold;
 	margin-bottom: 10px;
 	margin-left: 10px;
+	letter-spacing: 0;
 }
 
-.footer-result-text {
+.result-text-footer {
 	color: #475d79;
 	text-shadow: #eee 1px 1px 0;
-	letter-spacing: -1px;
+	letter-spacing: 0;
 	font-size: 15px;
 	font-weight: bold;
 	margin-bottom: 10px;
 	margin-left: 10px;
 	text-align: center;
+	display: block;
 }
 
-.result-text-page {
-	color: #475d79;
-	text-shadow: #eee 1px 1px 0;
-	letter-spacing: -1px;
-	font-size: 16px;
-	font-weight: bold;
-	margin-bottom: 10px;
-	margin-left: 10px;
-	margin-top: 25px;
-}
+/* @end */
 
 /* @group Header */
 
@@ -186,42 +183,41 @@ blockquote {
 	top: 5px;
 }
 
-/* @group DropDown Menu */
 
-#wptouch-menu {
+/* @group DropDown Menus */
+
+.dropper {
 	width: 100%;
 	position: relative;
-	background: #262626 no-repeat;
+	background: #2c2c2c no-repeat;
 	z-index: 1;
 	margin: 0;
 	padding: 0;
 	border-top: 1px solid #1b1b1b;
 }
 
-#wptouch-menu-inner ul {
+.dropper ul {
 	margin: 0;
 	padding: 0;
 	list-style-type: none;
-	position: relative;
+	position: relative;	
 }
 
-#wptouch-menu-inner li {
+.dropper li {
 	border-bottom: 1px solid #1d1d1d;
 	margin: 0;
 	background: url(images/arrow.png) no-repeat right center;
 	padding: 8px 20px 7px 10px;
 	text-transform: capitalize;
-	border-top: 1px solid #313131;
-
+	border-top: 1px solid #363636;
 }
 
-#wptouch-menu-inner li:last-child {
+.dropper li:last-child {
 	padding-bottom: 9px;
-	border-bottom: 2px solid #868686;
-
+	border-bottom: 2px solid #868686;	
 }
 
-#wptouch-menu-inner a {
+.dropper a {
 	font-size: 14px;
 	font-weight: bold;
 	display: block;
@@ -230,9 +226,8 @@ blockquote {
 	margin: 0;
 	padding: 4px 0;
 	width: 93%;
-}
-
-#wptouch-menu-inner li:hover {
+}	
+.dropper li:hover {
 	background-color: #222;
 }
 
@@ -249,21 +244,11 @@ blockquote {
 
 /* @group Login */
 
-#wptouch-login {
-	z-index: 1;
-	text-align: center;
-	border-bottom: 1px solid #363636;
-	margin: 0;
-	padding: 0;
-	-webkit-box-shadow: #555 -5px 2px 5px;
-	height: 39px;
-	border-top: 1px solid #363636;
-	background: #545454 repeat-x;
-	position: relative;
-}
-
 #wptouch-login-inner {
+	height: 38px;
+	text-align: center;
 	padding-top: 2px;
+	border-top: 1px solid #363636;
 }
 
 #wptouch-login input#log {
@@ -300,73 +285,19 @@ blockquote {
 
 /* @end */
 
-/* @group Categories */
-
-#wptouch-cats {
-	margin: 0;
-	width: 100%;
-	position: relative;
-	bottom: 1px;
-	background: #181818 no-repeat;
-	opacity: 0.97;
-	-webkit-box-shadow: #555 -5px 2px 5px;
-	padding: 0;
-}
-
-#catsmenu-inner ul {
-	margin: 0;
-	padding: 2px 0 0;
-	list-style-type: none;
-	position: relative;
-}
-
-#catsmenu-inner li {
-	border-bottom: 1px solid #2d2d2d;
-	margin: 0;
-	background: url(images/arrow.png) no-repeat right center;
-	padding: 9px 20px 7px 10px;
-	text-transform: capitalize;
-}
-
-#catsmenu-inner li:hover {
-	background-color: #222;
-}
-
-#catsmenu-inner a {
-	font-size: 14px;
-	font-weight: bold;
-	display: block;
-	text-shadow: #000 1px 1px 0;
-	color: #eee;
-	margin: 0;
-	padding: 4px 0;
-	width: 93%;
-}
-
-#catsmenu-inner img {
-	float: left;
-	position: relative;
-	bottom: 7px;
-	width: 28px;
-	padding-right: 10px;
-	right: 1px;
-	margin-bottom: 3%;
-}
-
-/* @end */
-
 /* @group Search */
 
 #wptouch-search {
-	background: url(images/search-back.png) repeat-x;
 	text-align: center;
-	height: 39px;
-	position: relative;
-	bottom: 1px;
-	border-bottom: 1px solid #555;
-	margin: 0;
-	padding: 0;
-	-webkit-box-shadow: #555 -5px 2px 5px;
+	height: 38px;
+	padding-top: 2px;
+	margin-top: 0;
+}
+
+#wptouch-search-inner {
+	border-top: 1px solid #363636;
+	margin-top: -2px;
+	padding-top: 1px;
 }
 
 input#s {
@@ -390,7 +321,20 @@ input#ssubmit {
 	padding: 3px;
 	width: 67px;
 	height: 23px;
-	margin-top: 6px;
+}
+
+/* @end */
+
+/* @group Categories */
+
+#catsmenu-inner img {
+	float: left;
+	position: relative;
+	bottom: 7px;
+	width: 28px;
+	padding-right: 10px;
+	right: 1px;
+	margin-bottom: 3%;
 }
 
 /* @end */
@@ -446,10 +390,28 @@ a.h2 {
 
 .mainentry {
 	color: #444;
-	padding: 7px 0 0;
 	line-height: 145%;
 	display: block;
-	overflow: hidden;
+	padding: 10px 0 0;
+}
+
+.mainentry a.read-more {
+	display: block;
+	padding-top: 10px;
+	border-top: 1px solid #c1c1c1;
+	position: relative;
+	padding-left: 10px;
+	color: #222;
+	font-weight: bold;
+	background: url(images/arrow.png) no-repeat right 7px;
+	padding-bottom: 10px;
+	-webkit-border-bottom-left-radius: 8px;
+	-webkit-border-bottom-right-radius: 8px;
+	margin: 10px -10px -10px;
+}
+
+.mainentry a.read-more:hover {
+	background-color: #dcdcdc;
 }
 
 .mainentry li {
@@ -658,6 +620,7 @@ a.ajax {
 	font-size: 15px;
 	font-weight: bold;
 	margin-right: 10px;
+	letter-spacing: 0;
 }
 
 /* @end */
@@ -734,6 +697,7 @@ a.sh2 {
 	line-height: 14px;
 	background-color: #eee;
 	margin: 5px -10px;
+	text-shadow: #fff -1px 1px 0;
 }
 
 .single-links {
@@ -1512,7 +1476,7 @@ a.search-close {
 }
 
 #footer ul#links li {
-	border-bottom: 1px solid #ccc;
+	border-bottom: 1px solid #adadad;
 	list-style-type: none;
 	font-weight: bold;
 	font-size: 13px;
