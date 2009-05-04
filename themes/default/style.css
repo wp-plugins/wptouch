@@ -1238,46 +1238,6 @@ p.subscribe-to-comments input#subscribe {
 
 /* @end */
 
-/* @group Footer */
-
-#footer {
-	text-align: center;
-	color: #475d79;
-	font-size: 11px;
-	font-weight: bold;
-	text-shadow: #eee 1px 1px 0;
-	padding-bottom: 5px;
-	margin-top: 50px;
-}
-
-/* @group Switch Link */
-
-#wptouch-switch-link {
-	-webkit-border-radius: 8px;
-	border: 1px solid #adadad;
-	background-color: #fff;
-	max-width: 278px;
-	margin: 0 auto;
-	padding: 10px;
-	margin-bottom: 20px;
-	text-align: left;
-	font-size: 16px;
-	color: #222;
-	position: relative;
-	clear: both;
-}
-
-img.wptouch-switch-image {
-	position: absolute;
-	right: 10px;
-	height: 22px;
-	top: 8px;
-}
-
-/* @end */
-
-/* @end */
-
 /* @group Plugin Compatibility CSS */
 
 /* @group Intense Debate */
@@ -1515,5 +1475,72 @@ a.search-close {
 .diagonal-wptouch-bg {
 	background: url(images/pinstripes-diagonal.gif) repeat;
 }
+
+/* @end */
+
+/* @group Footer */
+
+#footer {
+	text-align: center;
+	color: #475d79;
+	font-size: 11px;
+	font-weight: bold;
+	text-shadow: #eee 1px 1px 0;
+	padding-bottom: 5px;
+	margin-top: 50px;
+}
+
+#footer ul#links {
+	padding: 0;
+	list-style-type: none;
+	-webkit-border-radius: 8px;
+	border: 1px solid #adadad;
+	background-color: #fff;
+	margin-right: 10px;
+	margin-left: 10px;
+	margin-bottom: 20px;
+}
+
+#footer ul#links li a.text {
+	color: #222;
+	display: block;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	position: relative;
+	z-index: 1;
+}
+
+#footer ul#links li {
+	border-bottom: 1px solid #ccc;
+	list-style-type: none;
+	font-weight: bold;
+	font-size: 13px;
+	color: #222;
+	display: block;
+	margin: 0;
+	background: url(images/arrow.png) no-repeat right center;
+	padding: 2px 0;
+	text-align: left;
+	position: relative;
+}
+
+#footer ul#links li:last-child {
+	border-bottom-style: none;
+}
+
+#footer ul#links img.wptouch-switch-image {
+	position: absolute;
+	height: 20px;
+	width: auto;
+	top: 11px;
+	right: 0;
+	z-index: 0;
+	margin-right: 10px;
+}
+
+/* @group Switch Link */
+
+/* @end */
 
 /* @end */
