@@ -135,7 +135,6 @@ function wptouch_content_filter( $content ) {
 				echo "<script src='http://www.google.com/jsapi'></script>\n";
 				echo "<script type='text/javascript'>google.load('jquery', '1'); jQuery.noConflict( ); </script>\n";
 			}
-			
 			echo "<script type='text/javascript' src='" . compat_get_plugin_url( 'wptouch' ) . "/js/jquery.ajax_upload.1.1.js'></script>\n";
 			echo "<script type='text/javascript' src='" . compat_get_plugin_url( 'wptouch' ) . "/js/fancybox1.2.1.js'></script>\n";
 		}
