@@ -16,7 +16,7 @@ The admin panel allows you to customize many aspects of its appearance, and deli
 
 The theme also includes the ability for your visitors to easily switch between the *WPtouch* view and your site's regular theme.
 
-= New In Version 1.8.9.2: =
+= New In Version 1.9 (beta): =
 
 * Updated compatibility code (Various WordPress install scenarios) -- thanks to Will Norris for the suggestions
 * Modified AJAX calls
@@ -26,6 +26,8 @@ The theme also includes the ability for your visitors to easily switch between t
 * More preparation for WPtouch 1.9 and 5 languages
 * Preparation for WPtouch 2.0 and themes support (based on CoreTheme)
 * Fixed switch link issue where regular theme switch link was broken
+* Major re-writes of theme files, css for simplicity, CoreTheme
+* Updates to default theme style
 
 *This version will need to be tested in a variety of situations, 
 so please report any errors here -> http://support.nbravenewcode.com*
