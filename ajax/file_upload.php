@@ -20,15 +20,15 @@
 					@move_uploaded_file( $f['tmp_name'], $upload_dir . "/" . $f['name'] );
 					
 					if ( !file_exists( $upload_dir . "/" . $f['name'] ) ) {
-						echo 'There seems to have been an error.  Please try your upload again.';
+						echo '<p>There seems to have been an error.  Please try your upload again.</p>';
 					} else {
-						echo 'File has been saved! <br />Click <a href="#" style="color:red" onclick="location.reload(true); return false;">here to refresh the page</a>.<br /><br />';						
+						echo '<p>File has been saved!</p><p>Click <a href="#" style="color:red" onclick="location.reload(true); return false;">here to refresh the page</a>.</p>';						
 					}					
 				} else {
-					echo __( 'Sorry, only PNG, GIF and JPEG images are supported.', 'wptouch' );
+					echo __( '<p>Sorry, only PNG, GIF and JPEG images are supported.</p>', 'wptouch' );
 				}
-			} else echo __( 'Image too large', 'wptouch' );
+			} else echo __( '<p>Image too large</p>', 'wptouch' );
 		}
 
-	} else echo __( 'Insufficient priviledges', 'wptouch' );
+	} else echo __( '<p>Insufficient priviledges</p>', 'wptouch' );
 ?>

@@ -13,21 +13,8 @@
 	<div class="wptouch-clearer"></div>
 	
 	<div id="wptouch-news-beta">
-	<div id="wptouch-news-content" style="display: none;"></div>
-	<div id="wptouch-beta-content" style="display: none;"></div>
-		<script type="text/javascript">
-			jQuery.ajax({
-				url: "<?php bloginfo('wpurl'); ?>/?wptouch=news",
-				success: function(data) {
-					jQuery("#wptouch-news-content").html(data).fadeIn();
-				}});
-
-			jQuery.ajax({
-				url: "<?php bloginfo('wpurl'); ?>/?wptouch=beta",
-				success: function(data) {
-					jQuery("#wptouch-beta-content").html(data).fadeIn();
-				}}); 
-		</script>
+		<div id="wptouch-news-content" style="display: none;"></div>
+		<div id="wptouch-beta-content" style="display: none;"></div>
 	</div><!-- wptouch-news-beta -->
 	<div class="wptouch-clearer"></div>
 </div><!-- wptouch-head -->
