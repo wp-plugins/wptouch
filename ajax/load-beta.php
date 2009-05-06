@@ -3,8 +3,10 @@
 	
    $snoopy = new Snoopy;
    {
-		$snoopy->fetch('http://www.bravenewcode.com/custom/wptouch-news.php');
+
+		$snoopy->fetch('http://www.bravenewcode.com/custom/wptouch-beta.php');
 		$response = $snoopy->results;
-		echo '<h3>Latest News</h3>' . $response;
+		echo '<h3>Beta Downloads</h3>' . $response;
+
 	}
 ?>

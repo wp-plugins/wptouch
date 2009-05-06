@@ -4,7 +4,7 @@
    Plugin URI: http://bravenewcode.com/wptouch/
    Description: A plugin which reformats your site with a mobile theme when viewing with an <a href="http://www.apple.com/iphone/"> Apple iPhone</a>, <a href="http://www.apple.com/ipodtouch/">Apple iPod touch</a>, <a href="http://www.android.com/">Google Android</a> or <a href="http://www.rim.com/storm/">Blackberry Storm</a> touch mobile device. Set options for the theme by visiting the <a href="options-general.php?page=wptouch/wptouch.php">WPtouch Options admin panel</a>. &nbsp;
    Author: Dale Mugford & Duane Storey
-   Version: 1.9
+   Version: 1.9b1
    Author URI: http://www.bravenewcode.com
    
    # Special thanks to ContentRobot and the iWPhone theme/plugin
@@ -31,7 +31,7 @@
 
 // WPtouch Theme Options
 global $bnc_wptouch_version;
-$bnc_wptouch_version = '1.9';
+$bnc_wptouch_version = '1.9 Beta 1';
 
 require_once( 'include/plugin.php' );
 require_once( 'include/compat.php' );
@@ -177,9 +177,8 @@ class WPtouchPlugin {
 				case "news":
 					include( 'ajax/load-news.php' );
 					break;
-				case "donations":
-					$donations = true;
-					include( 'ajax/load-news.php' );
+				case "beta":
+					include( 'ajax/load-beta.php' );
 					break;
 			}
 			exit;
@@ -264,6 +263,7 @@ class WPtouchPlugin {
 			"iPod", 
 			"aspen", 
 			"dream",
+			"android",
 			"incognito", 
 			"webmate", 
 			"BlackBerry9500", 
@@ -572,11 +572,10 @@ function bnc_wp_touch_page() {
 	if (isset($_POST['submit'])) {
 		echo('<div class="wrap"><div id="wptouch-theme">');
 		echo('<div id="wptouchupdated">' . __( "Your new WPtouch settings were saved.", "wptouch" ) . '</div>');
-		echo('<div id="wptouch-title"><p>' . __( "WordPress on iPhone, iPod touch, and Android", "wptouch" ) . '</p>' . WPtouch('<div class="header-wptouch-version"> ' . __( "This is", "wptouch" ) . ' ','</div>') . '</div>');
-	} else {
+			} else {
 		echo('<div class="wrap"><div id="wptouch-theme">');
-		echo('<div id="wptouch-title"><p>' . __( "WordPress on iPhone, iPod touch, and Android", "wptouch" ) . '</p>' . WPtouch('<div class="header-wptouch-version"> ' . __( "This is", "wptouch" ) . ' ','</div>') . '</div>');
-	}
+		}
+	
 ?>
 
 <?php $icons = bnc_get_icon_list(); ?>
@@ -584,7 +583,7 @@ function bnc_wp_touch_page() {
 <?php require_once( 'include/submit.php' ); ?>
 
 <form method="post" action="<?php echo $_SERVER['REQUEST_URI']; ?>">
-<?php require_once( 'html/news-area.php' ); ?>
+<?php require_once( 'html/head-area.php' ); ?>
 <?php require_once( 'html/home-redirect-area.php' ); ?>
 <?php require_once( 'html/javascript-area.php' ); ?>
 <?php require_once( 'html/style-area.php' ); ?>
