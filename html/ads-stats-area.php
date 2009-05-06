@@ -2,7 +2,7 @@
 
 <div class="metabox-holder">
 	<div class="postbox">
-		<h3 class='hndle'><span><?php _e( "Advertising &amp; Statistics Options", "wptouch" ); ?></span></h3>
+		<h3 class='hndle'><?php _e( "Advertising &amp; Statistics Options", "wptouch" ); ?></h3>
 
 			<div class="wptouch-left-content">
 				<h4><?php _e( "Adsense", "wptouch" ); ?></h4>
@@ -16,8 +16,8 @@
 
 			<div class="wptouch-right-content">
 				<ul class="wptouch-make-li-italic">
-					<li><input type="text" name="adsense-id" type="text" value="<?php echo $wptouch_settings['adsense-id']; ?>" /><?php _e( "Google AdSense ID", "wptouch" ); ?></li>
-					<li><input type="text" name="adsense-channel" type="text" value="<?php echo $wptouch_settings['adsense-channel']; ?>" /><?php _e( "Google AdSense Channel", "wptouch" ); ?></li>
+					<li><input name="adsense-id" type="text" value="<?php echo $wptouch_settings['adsense-id']; ?>" /><?php _e( "Google AdSense ID", "wptouch" ); ?></li>
+					<li><input name="adsense-channel" type="text" value="<?php echo $wptouch_settings['adsense-channel']; ?>" /><?php _e( "Google AdSense Channel", "wptouch" ); ?></li>
 				</ul>
 			
 				<textarea id="wptouch-stats" name="statistics"><?php echo stripslashes($wptouch_settings['statistics']); ?></textarea>

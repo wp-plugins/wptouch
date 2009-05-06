@@ -2,7 +2,7 @@
 
 <div class="metabox-holder">
 	<div class="postbox">
-		<h3 class='hndle'><span><?php _e( "Default Menu Items", "wptouch" ); ?></span></h3>
+		<h3 class='hndle'><?php _e( "Default Menu Items", "wptouch" ); ?></h3>
 			<div class="wptouch-left-content">
 				<p><?php _e( "Enable/Disable these default items in the WPtouch dropdown menu.", "wptouch"); ?></p>
 			</div>		

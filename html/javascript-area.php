@@ -2,7 +2,7 @@
 
 <div class="metabox-holder">
 	<div class="postbox">
-		<h3 class='hndle'><span><?php _e( "Advanced Options", "wptouch" ); ?></span></h3>
+		<h3 class='hndle'><?php _e( "Advanced Options", "wptouch" ); ?></h3>
 
 			<div class="wptouch-left-content">
 				<p><?php _e( "Choose to enable/disable advanced features &amp; options available for WPtouch.", "wptouch"); ?></p>	

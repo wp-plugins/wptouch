@@ -2,7 +2,7 @@
 
 <div class="metabox-holder">
 	<div class="postbox">
-		<h3 class='hndle'><span><?php _e( "Post Listings Options", "wptouch" ); ?></span></h3>
+		<h3 class='hndle'><?php _e( "Post Listings Options", "wptouch" ); ?></h3>
 
 		<div class="wptouch-left-content">
 			<p> <?php _e( "Select which post-meta items are shown under titles on post, search, &amp; archives pages. Also, choose if excerpts are shown/hidden (default is hidden).", "wptouch" ); ?></p>

@@ -3,7 +3,7 @@
 
 <div class="metabox-holder">
 	<div class="postbox">
-		<h3 class='hndle'><span><?php _e( "Available Icons", "wptouch" ); ?></span></h3>
+		<h3 class='hndle'><?php _e( "Available Icons", "wptouch" ); ?></h3>
 
 			<div class="wptouch-left-content">
 				<p><?php _e( "You can select which icons will be displayed beside pages enabled below", "wptouch" ); ?></p>

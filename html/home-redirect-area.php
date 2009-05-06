@@ -2,7 +2,7 @@
 
 <div class="metabox-holder">
 	<div class="postbox">
-		<h3 class='hndle'><span><?php _e( "Home Page Redirection", "wptouch" ); ?></span></h3>
+		<h3 class='hndle'><?php _e( "Home Page Redirection", "wptouch" ); ?></h3>
 
 			<div class="wptouch-left-content">
 				<p><?php echo sprintf( __( "For your home page, WPtouch respects the front page behavior you've defined in the %sWordPress &raquo; Reading Options%s.", "wptouch"), '<br /><a href="options-reading.php">', '</a>' ); ?></p>
