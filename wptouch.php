@@ -586,10 +586,11 @@ function bnc_wp_touch_page() {
 <?php require_once( 'html/head-area.php' ); ?>
 <?php require_once( 'html/home-redirect-area.php' ); ?>
 <?php require_once( 'html/javascript-area.php' ); ?>
-<?php require_once( 'html/style-area.php' ); ?>
 <?php require_once( 'html/post-listings-area.php' ); ?>
-<?php require_once( 'html/advertising-area.php' ); ?>
+<?php require_once( 'html/style-area.php' ); ?>
+<?php require_once( 'html/ads-stats-area.php' ); ?>
 <?php require_once( 'html/icon-area.php' ); ?>
+<?php require_once( 'html/page-area.php' ); ?>
 <?php require_once( 'html/default-menu-area.php' ); ?>
 <?php require_once( 'html/plugin-compat-area.php' ); ?>		
 <?php echo('' . WPtouch('<div class="wptouch-version"> This is ','</div>') . ''); ?>

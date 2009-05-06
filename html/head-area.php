@@ -4,9 +4,9 @@
 	<div id="wptouch-head-title"><?php WPtouch(); ?></div>
 	<div id="wptouch-head-links">
 		<ul>
-			<li><?php echo sprintf(__( "%sSupport Forums%s", "wptouch" ), '<a href="http://support.bravenewcode.com">','</a>'); ?> | </li>
-			<li><?php echo sprintf(__( "%sWPtouch Homepage%s", "wptouch" ), '<a href="http://www.bravenewcode.com/wptouch">','</a>'); ?> | </li>
-			<li><?php echo sprintf(__( "%sDonate%s", "wptouch" ), '<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=paypal%40bravenewcode%2ecom&item_name=WPtouch%20Beer%20Fund&no_shipping=1&tax=0&currency_code=CAD&lc=CA&bn=PP%2dDonationsBF&charset=UTF%2d8">','</a>'); ?></li>
+			<li><?php echo sprintf(__( "%sSupport Forums%s", "wptouch" ), '<a href="http://support.bravenewcode.com" target="_blank">','</a>'); ?> | </li>
+			<li><?php echo sprintf(__( "%sWPtouch Homepage%s", "wptouch" ), '<a href="http://www.bravenewcode.com/wptouch" target="_blank">','</a>'); ?> | </li>
+			<li><?php echo sprintf(__( "%sDonate%s", "wptouch" ), '<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=paypal%40bravenewcode%2ecom&item_name=WPtouch%20Beer%20Fund&no_shipping=1&tax=0&currency_code=CAD&lc=CA&bn=PP%2dDonationsBF&charset=UTF%2d8" target="_blank">','</a>'); ?></li>
 		</ul>
 	</div>
 	
@@ -28,6 +28,6 @@
 					jQuery("#wptouch-beta-content").html(data).fadeIn();
 				}}); 
 		</script>
-	</div>
+	</div><!-- wptouch-news-beta -->
 	<div class="wptouch-clearer"></div>
-</div>
+</div><!-- wptouch-head -->

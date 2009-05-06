@@ -11,23 +11,23 @@
 	<div class="wptouch-right-content">		
 		<ul>
 			<li>
-				<input type="checkbox" name="enable-main-name" <?php if (isset($wptouch_settings['enable-main-name']) && $wptouch_settings['enable-main-name'] == 1) echo('checked'); ?> />
+				<input type="checkbox" class="checkbox" name="enable-main-name" <?php if (isset($wptouch_settings['enable-main-name']) && $wptouch_settings['enable-main-name'] == 1) echo('checked'); ?> />
 				<label for="enable-authorname"> <?php _e( "Show Author's Name", "wptouch" ); ?></label>
 			</li>			
 			<li>
-				<input type="checkbox" name="enable-main-categories" <?php if (isset($wptouch_settings['enable-main-categories']) && $wptouch_settings['enable-main-categories'] == 1) echo('checked'); ?> />
+				<input type="checkbox" class="checkbox" name="enable-main-categories" <?php if (isset($wptouch_settings['enable-main-categories']) && $wptouch_settings['enable-main-categories'] == 1) echo('checked'); ?> />
 				<label for="enable-categories"> <?php _e( "Show Categories", "wptouch" ); ?></label>
 			</li>			
 			<li>
-				<input type="checkbox" name="enable-main-tags" <?php if (isset($wptouch_settings['enable-main-tags']) && $wptouch_settings['enable-main-tags'] == 1) echo('checked'); ?> />
+				<input type="checkbox" class="checkbox" name="enable-main-tags" <?php if (isset($wptouch_settings['enable-main-tags']) && $wptouch_settings['enable-main-tags'] == 1) echo('checked'); ?> />
 				<label for="enable-tags"> <?php _e( "Show Tags", "wptouch" ); ?></label>
 			</li>			
 			<li>
-				<input type="checkbox" name="enable-post-excerpts" <?php if (isset($wptouch_settings['enable-post-excerpts']) && $wptouch_settings['enable-post-excerpts'] == 1) echo('checked'); ?> />
+				<input type="checkbox" class="checkbox" name="enable-post-excerpts" <?php if (isset($wptouch_settings['enable-post-excerpts']) && $wptouch_settings['enable-post-excerpts'] == 1) echo('checked'); ?> />
 				<label for="enable-excerpts"><?php _e( "Hide Excerpts", "wptouch" ); ?></label>
 			</li>
 		</ul>	
 	</div><!-- wptouch-right-content -->
-	</div><!-- postbox -->
 	<div class="wptouch-clearer"></div>
+	</div><!-- postbox -->
 </div><!-- metabox -->

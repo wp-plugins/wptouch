@@ -4,9 +4,19 @@
 
 /* @group Global */
 
-#wptouch-theme, #wptouch-theme .postbox, #wptouch-theme .postbox ul, #wptouch-theme .postbox p {
-	margin-top: 10px;
-	font-size: 11px;
+#wptouch-theme {
+	width: 94%;
+	color: #444;
+	margin-bottom: 35px;
+}
+
+#wptouch-theme .postbox {
+	padding: 10px;
+}
+
+#wptouch-theme .postbox h3.hndle {
+	margin: -10px -10px 0;
+	color: #264761;
 }
 
 #wptouch-theme a {
@@ -14,8 +24,97 @@
 	font-size: 11px;
 }
 
-.wptouch-clearer {
+#wptouch-theme a.orange-link {
+	color: #d54e21;
+}
+
+#wptouch-theme a.orange-link:hover {
+	color: #3c627f;
+}
+
+#wptouch-theme a.wptouch-fancylink {
+	color: red;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+#wptouch-theme, #wptouch-theme .postbox, #wptouch-theme .postbox ul, #wptouch-theme .postbox p, #wptouch-theme p {
+	margin-top: 10px;
+	font-size: 11px;
+}
+
+#wptouch-theme .wptouch-left-content {
+	width: 30%;
+	float: left;
+	padding-right: 15px;
+	margin-top: 10px;
+}
+
+#wptouch-theme .wptouch-left-content h4 {
+	font-size: 14px;
+	color: #d54e21;
+	letter-spacing: -1px;
+	margin: 0 0 5px;
+	padding: 0;
+}
+
+#wptouch-theme .wptouch-left-content p {
+	margin-top: 0;
+}
+
+#wptouch-theme .wptouch-right-content {
+	width: 63%;
+	float: left;
+	margin-left: 3%;
+	border-left: 1px solid #e6e6e6;
+	margin-bottom: -10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+}
+
+#wptouch-theme .wptouch-clearer {
 	clear: both;
+}
+
+#wptouch-theme select {
+	width: 25%;
+	vertical-align: baseline;
+}
+
+#wptouch-theme input.checkbox {
+	margin-right: 5px;
+	vertical-align: baseline;
+	width: auto;
+}
+
+#wptouch-theme input {
+	border: 1px solid #cadbdf;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	margin-left: 5px;
+	margin-right: 5px;
+	width: 177px;
+	color: #444;
+	font-size: 11px;
+}
+
+#wptouch-theme ul.wptouch-make-li-italic li {
+	font-style: italic;
+}
+
+#wptouch-theme #wptouchupdated {
+	border: 1px solid #8aceff;
+	background-color: #e2f5fe;
+	display: block;
+	font-size: 11px;
+	line-height: 15px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	padding: 8px 8px 7px;
+	font-weight: bold;
+	color: #264761;
+	margin-top: 15px;
+	width: 99%;
 }
 
 
@@ -28,17 +127,19 @@
 }
 
 #wptouch-head-title {
-	font: bold 18px Georgia, "Times New Roman", Times, serif;
+	font: bold 20px Georgia, "Times New Roman", Times, serif;
 	float: left;
-	margin-top: 10px;
+	margin-top: 11px;
+	padding-left: 7px;
+	color: #264761;
+	text-shadow: #fff -1px -1px 0;
+	letter-spacing: -1px;
 }
 
 #wptouch-head-links {
 	float: right;
-	margin-top: 13px;
-}
-
-#wptouch-head-links ul {
+	margin-top: 15px;
+	margin-right: 7px;
 }
 
 #wptouch-head-links li {
@@ -46,12 +147,243 @@
 	color: #ccc;
 }
 
+#wptouch-head h3 {
+	color: #222;
+}
+
 #wptouch-news-beta {
-	background-color: #fff;
 	border: 1px solid #cadbdf;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
+	margin-top: 12px;
+	background: #fff url(../images/wptouch-icon.png) no-repeat 101% -1px;
+	height: 170px;
+	padding-left: 15px;
+	margin-bottom: 22px;
+	width: 100%;
+}
+
+/* @group Latest News */
+
+#wptouch-news-content {
+	float: left;
+	width: 37%;
+	margin-right: 8%;
+}
+
+#wptouch-news-content li {
+	border-bottom: 1px solid #e6e6e6;
+	margin: 0;
+	padding: 3px 0;
+	list-style-type: circle;
+	list-style-position: inside;
+	color: #c1cfd1;
+}
+
+#wptouch-news-content li:last-child {
+	border-bottom-style: none;
+}
+
+/* @end */
+
+/* @group Beta Downloads */
+
+#wptouch-beta-content {
+	float: left;
+	color: #777;
+}
+
+#wptouch-beta-content p {
+	margin: 0 0 5px;
+	padding: 0;
+}
+
+#wptouch-beta-content img {
+	float: left;
+	position: relative;
+	bottom: 10px;
+	margin-right: 10px;
+}
+
+#wptouch-beta-content a {
+	font-weight: bold;
+}
+
+#wptouch-beta-content .wptouch-beta-dl {
 	margin-top: 15px;
+}
+
+/* @end */
+
+#wptouch-beta-content .wptouch-beta-dl p {
+	color: #bbb;
+}
+
+
+
+/* @end */
+
+/* @group style-area.php */
+
+#wptouch-theme ul.wptouch-select-options li {
+	margin-left: 6px;
+}
+
+#wptouch-theme ul.wptouch-select-options li select {
+	width: 175px;
+	margin-right: 5px;
+}
+
+
+
+/* @end */
+
+/* @group ads-stats-area.php */
+
+textarea#wptouch-stats {
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	width: 95%;
+	margin-left: 5px;
+	margin-top: 55px;
+	height: 100px;
+	margin-bottom: 15px;
+	color: #444;
+	font-size: 11px;
+}
+
+
+
+/* @end */
+
+/* @group icons-area.php */
+
+#wptouch-theme ul.wptouch-iconblock li {
+	float: left;
+	padding: 8px 5px;
+	text-align: center;
+	width: 70px;
+	color: #666;
+	margin-bottom: 5px;
+	margin-right: 5px;
+	font-size: 9px;
+}
+
+#wptouch-theme .default ul.wptouch-iconblock li {
+	background-color: #fefae7;
+	border: 1px dashed #dcdcdc;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+}
+
+#wptouch-theme .custom ul.wptouch-iconblock li {
+	background-color: #e6f4fe;
+	border: 1px dashed #becbcf;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+}
+
+#wptouch-theme .custom ul.wptouch-iconblock li:hover {
+	border-style: solid;
+	border-color: #c58989;
+	background-color: #fba7a7;
+	color: #000;
+}
+
+#wptouch-theme .custom ul.wptouch-iconblock li a {
+	color: red;
+}
+
+#wptouch-theme ul.wptouch-iconblock img {
+	width: 32px;
+	height: 32px;
+}
+
+
+
+/* @end */
+
+/* @group page-area.php */
+
+#wptouch-theme .wptouch-pages span {
+	display: block;
+	text-align: left;
+	width: 73%;
+	float: right;
+	margin-top: 5px;
+}
+
+#wptouch-theme .wptouch-pages .checkbox {
+	margin-left: -1px;
+}
+
+
+/* @end */
+
+/* @group plugin-compat-area.php */
+
+#wptouch-theme .all-good {
+	border: 1px solid #8aceff;
+	background-color: #e2f5fe;
+	padding: 0 3px 5px 5px;
+	display: block;
+	margin-bottom: 5px;
+	font-size: 11px;
+	line-height: 15px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+
+#wptouch-theme .sort-of {
+	border: 1px solid #ffc900;
+	background-color: #fee8b9;
+	padding: 0 3px 6px 5px;
+	display: block;
+	margin-bottom: 5px;
+	font-size: 11px;
+	line-height: 15px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+
+#wptouch-theme .too-bad {
+	border: 1px solid #f96764;
+	background-color: #ffaab1;
+	padding: 0 3px 6px 5px;
+	display: block;
+	margin-bottom: 5px;
+	font-size: 11px;
+	line-height: 15px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+
+#wptouch-theme img.support {
+	position: relative !important;
+	top: 4px;
+	margin-right: 1px;
+}
+
+
+
+/* @end */
+
+/* @group Save Button Area */
+
+#wptouch-theme .wptouch-version {
+	float: right;
+	font: 18px Georgia, "Times New Roman", Times, serif;
+	color: #70777a;
+	text-shadow: #fff -1px -1px 0;
+	letter-spacing: -1px;
+	margin-top: 2px;
+	position: relative;
+	left: 10px;
+}
+
+#wptouch-theme input#wptouch-button {
+	width: 100px;
+	border: 2px solid #dcdcdc;
 }
 
 
