@@ -103,22 +103,17 @@ function wptouch_core_body_sitetitle() {
 function wptouch_core_body_result_text() {  
 	global $is_ajax; if (!$is_ajax) {
 			if (is_search()) {
-				echo '' . __( "Search results for", "wptouch" ) . ' &lsquo;' . the_search_query() . '&rsquo;';	
-			} elseif (is_archive()) { 
-				echo '' . __( "Browsing", "wptouch" ) . '';
-			}
-			if (is_category()) {
-				echo '' . __( "the category", "wptouch" ) . ' &lsquo;' . single_cat_title() . '&rsquo;';				
+				echo sprintf( __("Browsing search results for &lsquo;%s&rsquo;", "wptouch"), get_search_query() );
+			} if (is_category()) {
+				echo sprintf( __("Browsing the category archive &lsquo;%s&rsquo;", "wptouch"), single_cat_title("", false));
 			} elseif (is_tag()) {
-				echo '' . __( "the tag archive for", "wptouch" ) . ' &lsquo;' . single_tag_title() . '&rsquo;';		
+				echo sprintf( __("Browsing the tag archive &lsquo;%s&rsquo;", "wptouch"), single_tag_title("", false));
 			} elseif (is_day()) {
-				echo '' . __( "the archive for", "wptouch" ) . ' ' . get_the_time('F jS, Y') . '';
+				echo sprintf( __("Browsing the archive &lsquo;%s&rsquo;", "wptouch"),  get_the_time('F jS, Y'));
 			} elseif (is_month()) {
-				echo '' . __( "the archive for", "wptouch" ) . ' ' . get_the_time('F, Y') . '';	
+				echo sprintf( __("Browsing the archive &lsquo;%s&rsquo;", "wptouch"),  get_the_time('F, Y'));
 			} elseif (is_year()) {
-				echo '' . __( "the archive for", "wptouch" ) . ' ' . get_the_time('Y') . '';		
-			} elseif (is_author()) {
-				echo '' . the_author() . '\'s ' . __( "archive", "wptouch" ) . '';
+				echo sprintf( __("Browsing the archive &lsquo;%s&rsquo;", "wptouch"),  get_the_time('Y'));
 		}
 	}
 }

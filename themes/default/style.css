@@ -57,41 +57,48 @@ li {
 	color: #555;
 }
 
-h1 {
-	font-size: 15px;
+.pageentry h1, #mainentry h1 {
+	font-size: 22px;
 }
 
-h2 {
-	font-size: 20px;
-	text-shadow: #f9f9f9 -1px -1px 0;
-	text-align: left;
-	border-bottom: 1px solid #dcdcdc;
-	padding-bottom: 10px;
-}
-
-h3 {
+.pageentry h2, #mainentry h2 {
 	font-size: 18px;
 	text-shadow: #f9f9f9 -1px -1px 0;
-	position: relative;
-	border-bottom: 1px solid #dcdcdc;
+	text-align: left;
 	padding-bottom: 10px;
+	color: #222;
 }
 
-h4 {
-	font-size: 16px;
+.pageentry h3, #mainentry h3 {
+	text-align: left;
+	color: #666;
+	font-size: 15px;
+	border-bottom: 1px solid #adadad;
+	border-top: 1px solid #adadad;
+	padding: 10px;
+	font-weight: bold;
+	line-height: 14px;
+	background-color: #eee;
+	margin: 5px -10px;
+	text-shadow: #fff -1px 1px 0;
+
+}
+
+.pageentry h4, #mainentry h4 {
+	font-size: 13px;
 	text-shadow: #f9f9f9 -1px -1px 0;
 	padding: 0 0 10px;
-	border-bottom: 1px solid #dcdcdc;
 	padding-bottom: 10px;
+	color: #666;
 }
 
-h5 {
+.pageentry h5, #mainentry h5 {
 	text-shadow: #f9f9f9 -1px -1px 0;
-	font-size: 14px;
+	font-size: 12px;
 	padding: 0;
 }
 
-h6 {
+.entry h6 {
 	font-size: 9px;
 }
 
@@ -121,6 +128,7 @@ blockquote {
 	margin-bottom: 10px;
 	margin-left: 10px;
 	letter-spacing: 0;
+	border-style: none;
 }
 
 .result-text-footer {
@@ -345,13 +353,13 @@ input#ssubmit {
 
 .post {
 	-webkit-border-radius: 8px;
-	border: 1px solid #adadad;
 	background-color: #fff;
 	padding: 10px;
 	margin-bottom: 12px;
 	position: relative;
 	margin-right: 10px;
 	margin-left: 10px;
+	border: 1px solid #b1b1b1;
 }
 
 a.post-arrow {
@@ -678,6 +686,11 @@ a.sh2 {
 	overflow: hidden;
 }
 
+#singlentry li {
+	margin-top: 4px;
+	margin-bottom: 4px;
+}
+
 .single-post-meta-top {
 	text-align: left;
 	color: #999;
@@ -849,6 +862,7 @@ img.small {
 	margin-left: 42px;
 	position: relative;
 	bottom: 5px;
+	border-style: none;
 }
 
 .page-title-icon {
