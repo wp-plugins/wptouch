@@ -147,12 +147,32 @@ blockquote {
 
 /* @group Header */
 
+#headerbar-menu {
+	position: fixed;
+	top: 0;
+	right: 0;
+}
+
+#headerbar-menu a {
+	width: 22px;
+	height: 43px;
+	display: block;
+	background: url(images/menu/wptouch-menu-dropper.png) 0 -43px;
+	margin-top: 1px;
+}
+
+#headerbar-menu .open {
+	background-position: 0 0;
+}
+
 #headerbar-title {
 	text-shadow: #242424 -1px -1px 1px;
 	height: 35px;
-	padding-top: 10px;
+	padding-top: 9px;
 	padding-left: 10px;
 	display: block;
+	border-top: 1px solid #5d5d5d;
+	margin: 0;
 }
 
 #headerbar-title img {
@@ -174,7 +194,7 @@ blockquote {
 	padding: 4px 0 2px;
 	opacity: 0.98;
 	-webkit-box-shadow: #444 -4px 2px 4px;
-	margin: 0;
+	margin: -1px 0 0;
 	border-top: 1px solid #0d0d0d;
 }
 
@@ -295,24 +315,20 @@ blockquote {
 
 /* @group Search */
 
-#wptouch-search {
+#wptouch-search-inner {
+	border-top: 1px solid #363636;
+	border-bottom: 1px solid #1d1d1d;
+	margin-top: -2px;
 	text-align: center;
 	height: 38px;
 	padding-top: 2px;
 	margin-top: 0;
 }
 
-#wptouch-search-inner {
-	border-top: 1px solid #363636;
-	margin-top: -2px;
-	padding-top: 1px;
-}
-
 input#s {
 	-webkit-border-radius: 10px;
-	border: 1px solid #475d79;
 	padding: 3px;
-	width: 65%;
+	width: 68%;
 	font-size: 13px;
 	color: #222;
 	margin-right: 3px;
@@ -322,12 +338,11 @@ input#s {
 
 input#ssubmit {
 	-webkit-border-radius: 10px;
-	border: 1px solid #adadad;
 	font-size: 13px;
 	color: #222;
 	background-color: #fff;
 	padding: 3px;
-	width: 67px;
+	width: 64px;
 	height: 23px;
 }
 

@@ -54,5 +54,5 @@ $wptouch = jQuery.noConflict();
 	
 	function bnc_jquery_menu_drop() {
 		$wptouch('#wptouch-menu').slideToggle(200);
+		$wptouch("#headerbar-menu a").toggleClass("open");
 	}
-	

@@ -10,14 +10,16 @@ include( dirname(__FILE__) . '/../core/core-header.php' );
 		<img src="<?php echo bnc_get_title_image(); ?>" alt="<?php $str = bnc_get_header_title(); echo stripslashes($str); ?>" />
 		<a href="<?php bloginfo('home'); ?>"><?php wptouch_core_body_sitetitle(); ?></a>
 	</div>
+	<div id="headerbar-menu">
+	    <a href="javascript:<?php if (bnc_is_js_enabled()) echo "bnc_jquery_menu_drop();"; else echo "document.getElementById('wptouch-menu').style.display='block';" ?>"></a>
+	</div>
 </div>
 
 <div id="drop-fade">
 <?php if (bnc_is_login_button_enabled()) { ?>
-
 	<?php if (!is_user_logged_in()) { ?>
 		    <a href="javascript:<?php if (bnc_is_js_enabled()) echo "bnc_jquery_login_drop();"; else echo "document.getElementById('wptouch-login').style.display='block';" ?>">
-					<img src="<?php bloginfo('template_directory'); ?>/images/menu/touchmenu-login.png" alt="" /> <?php _e( 'Login', 'wptouch' ); ?></a>	
+					<img src="<?php bloginfo('template_directory'); ?>/images/menu/wptouch-menu-login.png" alt="" /> <?php _e( 'Login', 'wptouch' ); ?></a>	
 
 	<?php } else { ?>
 
@@ -26,25 +28,42 @@ include( dirname(__FILE__) . '/../core/core-header.php' );
 	<?php } else { ?>
 		<a href="<?php bloginfo('wpurl'); ?>/wp-login.php?action=logout&redirect_to=<?php echo $_SERVER['REQUEST_URI']; ?>">
 	<?php } ?>
-		<img src="<?php bloginfo('template_directory'); ?>/images/menu/touchmenu-logout.png" alt="" /> <?php _e( 'Logout', 'wptouch' ); ?>
+		<img src="<?php bloginfo('template_directory'); ?>/images/menu/wptouch-menu-logout.png" alt="" /> <?php _e( 'Logout', 'wptouch' ); ?>
 		</a>
 	<?php } ?>
-
 <?php } ?>
 
 	<?php if (bnc_is_cats_button_enabled()) { ?>	
 		    <a href="javascript:<?php if (bnc_is_js_enabled()) echo "bnc_jquery_cats_drop();"; else echo "document.getElementById('wptouch-cats').style.display='block';" ?>">
-		    <img src="<?php bloginfo('template_directory'); ?>/images/menu/catsmenu.png" alt="" /> <?php _e( 'Categories', 'wptouch' ); ?></a>	
+		    <img src="<?php bloginfo('template_directory'); ?>/images/menu/wptouch-menu-cats.png" alt="" /> <?php _e( 'Categories', 'wptouch' ); ?></a>	
 	<?php } ?>
 	
-		    <a href="javascript:<?php if (bnc_is_js_enabled()) echo "bnc_jquery_search_drop();"; else echo "document.getElementById('wptouch-search').style.display='block';" ?>">
-		    <img src="<?php bloginfo('template_directory'); ?>/images/menu/search-touchmenu.png" alt="" /> <?php _e( 'Search', 'wptouch' ); ?></a>
-
-		    <a href="javascript:<?php if (bnc_is_js_enabled()) echo "bnc_jquery_menu_drop();"; else echo "document.getElementById('wptouch-menu').style.display='block';" ?>">
-		    <img src="<?php bloginfo('template_directory'); ?>/images/menu/touchmenu.png" alt="" /> <?php _e( 'Menu', 'wptouch' ); ?>
-		    </a>
-
+	<?php if (bnc_is_tags_button_enabled()) { ?>	
+		    <a href="javascript:<?php if (bnc_is_js_enabled()) echo "bnc_jquery_tags_drop();"; else echo "document.getElementById('wptouch-tags').style.display='block';" ?>">
+		    <img src="<?php bloginfo('template_directory'); ?>/images/menu/wptouch-menu-tags.png" alt="" /> <?php _e( 'Tags', 'wptouch' ); ?></a>	
+	<?php } ?>
 </div>
+
+<!-- #start The Search / Menu Drop-Down -->
+
+	<div id="wptouch-menu" class="dropper" style="display:none"> 
+ 		<div id="wptouch-search-inner">
+			<form method="get" id="searchform" action="<?php bloginfo('home'); ?>/">
+			<input type="text" value="<?php the_search_query(); ?>" name="s" id="s" /> 
+			<input name="submit" type="submit" id="ssubmit" tabindex="5" value="Search" />
+			</form>
+		</div>
+        <div id="wptouch-menu-inner">
+			<ul>
+				<?php wptouch_core_header_home(); ?>            
+				<?php wptouch_core_header_pages(); ?>
+				<?php wptouch_core_header_rss(); ?>
+				<?php wptouch_core_header_email(); ?>           
+				<?php wptouch_core_header_close(); ?>           
+			</ul>
+        </div>
+	</div>
+
 <!--#start The Login Drop-Down -->
 
 	<div id="wptouch-login" class="dropper" style="display:none">
@@ -63,17 +82,6 @@ include( dirname(__FILE__) . '/../core/core-header.php' );
 		</div>
 	</div>
 	
-<!-- #start The Search Drop-Down -->
-
-	<div id="wptouch-search" class="dropper" style="display:none">
-		<div id="wptouch-search-inner">
-			<form method="get" id="searchform" action="<?php bloginfo('home'); ?>/">
-			<input type="text" value="<?php the_search_query(); ?>" name="s" id="s" /> 
-			<input name="submit" type="submit" id="ssubmit" tabindex="5" value="Search" />
-			</form>
-		</div>
-	</div>
-
 <!-- #start The Categories Drop-Down -->
 
 	<div id="wptouch-cats" class="dropper" style="display:none">
@@ -88,19 +96,21 @@ include( dirname(__FILE__) . '/../core/core-header.php' );
         </div>
 	</div>
 
-<!-- #start The Menu Drop-Down -->
-
-	<div id="wptouch-menu" class="dropper" style="display:none"> 
-        <div id="wptouch-menu-inner">
-			<ul>
-				<?php wptouch_core_header_home(); ?>            
-				<?php wptouch_core_header_pages(); ?>
-				<?php wptouch_core_header_rss(); ?>
-				<?php wptouch_core_header_email(); ?>           
-				<?php wptouch_core_header_close(); ?>           
-			</ul>
-        </div>
-	</div>
+<!-- #start The Tags Drop-Down -->
+	<?php if ( function_exists('wp_tag_cloud') ) : ?>
+		<div id="wptouch-tags" class="dropper" style="display:none">
+			<div id="catsmenu-inner">
+				<ul>
+				<?php wp_tag_cloud('smallest=12&largest=12&unit=px&number=25&format=list&orderby=count&order=DESC'); ?>
+		   			<?php if (!bnc_is_js_enabled()) { ?>
+		           		<li class="noarrow"><a class="menu-close" href="javascript:document.getElementById('wptouch-tags').style.display = 'none';">
+		           			<img src="<?php bloginfo('template_directory'); ?>/images/cross.png" alt="" /> <?php _e( "Close Menu", "wptouch" ); ?></a>
+		           		</li>
+		           	<?php } ?>
+				</ul>
+	        </div>
+		</div>
+	<?php endif; ?>  
 
 <!-- #start the wptouch plugin use check -->
 <?php wptouch_core_header_check_use(); ?>
