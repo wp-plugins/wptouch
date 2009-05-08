@@ -77,8 +77,9 @@
 }
 
 #wptouch-theme select {
-	width: 25%;
 	vertical-align: baseline;
+	width: 176px;
+	margin-right: 5px;
 }
 
 #wptouch-theme input.checkbox {
@@ -92,7 +93,7 @@
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	margin-left: 5px;
-	margin-right: 5px;
+	margin-right: 7px;
 	width: 177px;
 	color: #444;
 	font-size: 11px;
@@ -124,21 +125,22 @@
 /* @group head-area.php */
 
 #wptouch-head .postbox {
+	background: #fff url(../images/wptouch-icon.jpg) no-repeat right bottom;
 }
 
 #wptouch-head #wptouch-head-colour {
 	background-color: #a1c3dc;
 	padding: 10px;
 	margin: -10px -10px -20px;
-	border-bottom: 1px solid #d1e0e3;
 	-webkit-border-top-right-radius: 5px;
 	-webkit-border-top-left-radius: 5px;
+	border: 1px solid #abbbcb;
 }
 
 #wptouch-head-title {
 	font: bold 20px Georgia, "Times New Roman", Times, serif;
 	color: #333c42;
-	text-shadow: #daeaf7 1px 1px 1px;
+	text-shadow: #d5e5f1 0 1px 0;
 	letter-spacing: -1px;
 	margin: 0;
 	padding: 0;
@@ -146,7 +148,6 @@
 }
 
 #wptouch-head-links {
-	text-shadow: #daeaf7 0 1px 0px;
 	float: right;
 	position: relative;
 	bottom: 6px;
@@ -155,6 +156,12 @@
 #wptouch-head-links a {
 	color: #333c42;
 	font-weight: bold;
+	text-shadow: #daeaf7 0 1px 0;
+}
+
+#wptouch-head-links a:hover {
+	color: #d54e21;
+	text-shadow: #daeaf7 0 1px 0;
 }
 
 #wptouch-head-links li {
@@ -221,7 +228,7 @@
 }
 
 #wptouch-beta-content p {
-	margin: 0 0 5px;
+	margin: 0 210px 5px 0;
 	padding: 0 0 0 13px;
 }
 
@@ -237,7 +244,7 @@
 }
 
 #wptouch-beta-content .wptouch-beta-dl {
-	margin-top: 20px;
+	margin-top: 15px;
 	margin-left: 8px;
 }
 
@@ -255,11 +262,6 @@
 
 #wptouch-theme ul.wptouch-select-options li {
 	margin-left: 6px;
-}
-
-#wptouch-theme ul.wptouch-select-options li select {
-	width: 175px;
-	margin-right: 5px;
 }
 
 
@@ -354,10 +356,14 @@ textarea#wptouch-stats {
 
 #wptouch-theme .wptouch-pages span {
 	display: block;
-	text-align: left;
-	width: 73%;
-	float: right;
 	margin-top: 5px;
+	text-align: left;
+	width: 66%;
+	float: right;
+}
+
+#wptouch-theme .wptouch-pages select {
+	width: 32%;
 }
 
 #wptouch-theme .wptouch-pages .checkbox {
