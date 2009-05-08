@@ -2,7 +2,7 @@
 
 <div class="metabox-holder">
 	<div class="postbox">
-		<h3 class='hndle'><?php _e( "Logo/Bookmark Page &amp; Menu Icons", "wptouch" ); ?></h3>
+		<h3><?php _e( "Logo/Bookmark Page &amp; Menu Icons", "wptouch" ); ?></h3>
 
 			<div class="wptouch-left-content">
 				<p><?php _e( "Choose the logo displayed in the header (also your bookmark icon), and the pages you want included in the WPtouch drop-down menu.", "wptouch" ); ?> 						<strong><?php _e( "Remember, only those checked will be shown.", "wptouch" ); ?></strong></p>

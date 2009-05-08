@@ -4,7 +4,7 @@
 
 <div class="metabox-holder">
 	<div class="postbox">
-		<h3 class='hndle'><?php _e( "Plugin Support &amp; Compatibility", "wptouch" ); ?></h3>
+		<h3><?php _e( "Plugin Support &amp; Compatibility", "wptouch" ); ?></h3>
 
 			<div class="wptouch-left-content">
 				<p>

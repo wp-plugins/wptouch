@@ -2,15 +2,15 @@
 
 <div class="metabox-holder">
 	<div class="postbox">
-		<h3 class='hndle'><?php _e( "Advanced Options", "wptouch" ); ?></h3>
+		<h3><?php _e( "Advanced Options", "wptouch" ); ?></h3>
 
 			<div class="wptouch-left-content">
 				<p><?php _e( "Choose to enable/disable advanced features &amp; options available for WPtouch.", "wptouch"); ?></p>	
 				<p><strong><?php _e( "When advanced javascript is unchecked:", "wptouch" ); ?></strong></p>
 					<ul>
-						<li><?php _e( "Site is faster on 3G/EDGE connections", "wptouch" ); ?></li>
-						<li><?php _e( "Ajax &amp; jQuery are not used for comments, entries, excerpts", "wptouch" ); ?></li>
-						<li><?php _e( "May solve javascript collisions where WPtouch features don't work", "wptouch" ); ?></li>
+						<li><?php _e( "Faster load on 3G/EDGE connections", "wptouch" ); ?></li>
+						<li><?php _e( "Ajax / jQuery not used", "wptouch" ); ?></li>
+						<li><?php _e( "May solve javascript collisions", "wptouch" ); ?></li>
 					</ul>
 			</div><!-- wptouch-left-content -->
 	
@@ -22,6 +22,14 @@
 				<div id="cats-info" style="display:none">
 					<h2><?php _e( "More Info", "wptouch" ); ?></h2>
 					<p><?php _e( "This will add a categories drop-down item in the WPtouch sub header beside the Login (if also enabled), Search, and Menu link buttons.", "wptouch" ); ?><br /><br /><?php _e( "It will display your top categories, and show the number of entries they have in each.", "wptouch" ); ?></p>
+				</div>
+			</li>
+			<li>
+				<input class="checkbox" type="checkbox" name="enable-tags-button" <?php if ( isset( $wptouch_settings['enable-tags-button']) && $wptouch_settings['enable-tags-button'] == 1) echo('checked'); ?> />
+				<label class="label" for="enable-tags-button"><?php _e( "Enable tags in the header", "wptouch" ); ?> <a href="#tags-info" class="wptouch-fancylink">?</a></label>
+				<div id="tags-info" style="display:none">
+					<h2><?php _e( "More Info", "wptouch" ); ?></h2>
+					<p><?php _e( "This will add a 'Tags' drop-down item in the WPtouch sub header beside the Categories (if also enabled), Login (if also enabled), Search, and Menu link buttons.", "wptouch" ); ?><br /><br /><?php _e( "It will display your most used tags.", "wptouch" ); ?></p>
 				</div>
 			</li>
 			<li>

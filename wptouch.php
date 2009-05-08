@@ -47,6 +47,7 @@ $wptouch_defaults = array(
 	'enable-post-excerpts' => true,
 	'enable-page-coms' => false,
 	'enable-cats-button' => true,
+	'enable-tags-button' => true,
 	'enable-login-button' => false,
 	'enable-redirect' => true,
 	'enable-js-header' => true,
@@ -258,16 +259,16 @@ class WPtouchPlugin {
 		// or something. No guarantees it'll look pretty, though!
 		$useragents = array(
 	//developer mode:		
-	 //	"Safari",
-			"iPhone", 
-			"iPod", 
+	 //	"safari",
+			"iphone", 
+			"ipod", 
 			"aspen", 
 			"dream",
 			"android",
 			"incognito", 
 			"webmate", 
-			"BlackBerry9500", 
-			"BlackBerry9530"
+			"blackberry9500", 
+			"blackberry9530"
 		);
 		
 		$this->applemobile = false;
@@ -433,6 +434,11 @@ function bnc_is_cats_button_enabled() {
 	return $ids['enable-cats-button'];
 }	
 
+function bnc_is_tags_button_enabled() {
+	$ids = bnc_wp_touch_get_menu_pages();
+	return $ids['enable-tags-button'];
+}	
+
 function bnc_is_login_button_enabled() {
 	$ids = bnc_wp_touch_get_menu_pages();
 	return $ids['enable-login-button'];
@@ -496,10 +502,10 @@ function bnc_wp_touch_get_pages() {
 	$keys = array();
 	foreach ($ids as $k => $v) {
 		if ($k == 'main_title' || $k == 'enable-post-excerpts' || $k == 'enable-page-coms' || 
-			 $k == 'enable-cats-button'  || $k == 'enable-login-button' || $k == 'enable-redirect' || 
-			 $k == 'enable-js-header' || $k == 'enable-gravatars' || $k == 'enable-main-home' || 
-			 $k == 'enable-main-rss' || $k == 'enable-main-email' || $k == 'enable-main-name' || 
-			 $k == 'enable-main-tags' || $k == 'enable-main-categories') {
+			 $k == 'enable-cats-button'  || $k == 'enable-tags-button'  || $k == 'enable-login-button' || 
+			 $k == 'enable-redirect' || $k == 'enable-js-header' || $k == 'enable-gravatars' || 
+			 $k == 'enable-main-home' || $k == 'enable-main-rss' || $k == 'enable-main-email' || 
+			 $k == 'enable-main-name' || $k == 'enable-main-tags' || $k == 'enable-main-categories') {
 			} else {
 				if (is_numeric($k)) {
 					$keys[] = $k;
@@ -575,7 +581,6 @@ function bnc_wp_touch_page() {
 			} else {
 		echo('<div class="wrap"><div id="wptouch-theme">');
 		}
-	
 ?>
 
 <?php $icons = bnc_get_icon_list(); ?>

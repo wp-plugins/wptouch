@@ -2,7 +2,7 @@
 
 <div class="metabox-holder">
 	<div class="postbox">
-		<h3 class='hndle'><?php _e( "Style &amp; Color Options", "wptouch" ); ?></h3>
+		<h3><?php _e( "Style &amp; Color Options", "wptouch" ); ?></h3>
 
 			<div class="wptouch-left-content">
 				<p><?php _e( "Customize the appearance of your website title, colors and text WPtouch will use.", "wptouch" ); ?></p>

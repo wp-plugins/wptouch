@@ -24,6 +24,12 @@
 			$a['enable-cats-button'] = 0;
 		}
 
+		if ( isset( $_POST['enable-tags-button'] ) ) {
+			$a['enable-tags-button'] = 1;
+		} else {
+			$a['enable-tags-button'] = 0;
+		}
+
 		if ( isset( $_POST['enable-login-button'] ) ) {
 			$a['enable-login-button'] = 1;
 		} else {
