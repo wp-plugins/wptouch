@@ -154,12 +154,13 @@ blockquote {
 }
 
 #headerbar-menu a {
-	height: 43px;
+	height: 44px;
 	display: block;
 	background: url(images/menu/wptouch-menu-dropper.png) 0 -43px;
-	margin-top: 1px;
+	margin-top: 0;
 	width: 22px;
-	color: #5e1a00;
+	position: relative;
+	bottom: 1px;
 }
 
 #headerbar-menu .open {
@@ -168,22 +169,28 @@ blockquote {
 
 #headerbar-title {
 	text-shadow: #242424 -1px -1px 1px;
-	height: 35px;
 	padding-top: 9px;
 	padding-left: 10px;
 	display: block;
 	margin: 0;
 	border-style: none;
+	padding-bottom: 11px;
+}
+#headerbar-title a {
+	text-decoration: none;
+	font: 18px HelveticaNeue-Bold, sans-serif;
+	letter-spacing: -1px;
+	position: relative;
 }
 
 #headerbar-title img {
 	position: relative;
-	margin-right: 5px;
+	margin-right: 7px;
 	max-width: 30px;
 	bottom: 2px;
 	float: left;
-	width: 30px;
-	height: 30px;
+	width: 28px;
+	height: 28px;
 	padding: 0;
 }
 

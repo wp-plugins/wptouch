@@ -2,14 +2,9 @@
 <style type="text/css">
 #headerbar {
 	width: 100%;
-	height: 45px !important;
 	background: #<?php echo bnc_get_header_background(); ?> url(<?php bloginfo('template_directory'); ?>/images/head-fade-bk.png) repeat-x;
 }
 #headerbar-title a {
-	text-decoration: none;
-	font: 21px HelveticaNeue-Bold, sans-serif;
-	letter-spacing: -1px;
-	position: relative;
 	color: #<?php echo bnc_get_header_color(); ?>;
 }
 #wptouch-menu-inner a:hover {
