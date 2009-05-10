@@ -259,7 +259,7 @@ class WPtouchPlugin {
 		// or something. No guarantees it'll look pretty, though!
 		$useragents = array(
 	//developer mode:		
-	 	"safari",
+	 //	"safari",
 			"iphone", 
 			"ipod", 
 			"aspen", 
