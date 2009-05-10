@@ -327,8 +327,12 @@ class WPtouchPlugin {
 global $wptouch_plugin;
 $wptouch_plugin = & new WPtouchPlugin();
 
+//Thanks to edyoshi:
 function bnc_is_iphone() {
 	global $wptouch_plugin;
+// Insert this begin
+	$wptouch_plugin->bnc_filter_iphone();
+// Insert this end
 	return $wptouch_plugin->applemobile;
 }
   
@@ -593,10 +597,9 @@ function bnc_wp_touch_page() {
 <?php require_once( 'html/javascript-area.php' ); ?>
 <?php require_once( 'html/post-listings-area.php' ); ?>
 <?php require_once( 'html/style-area.php' ); ?>
-<?php require_once( 'html/ads-stats-area.php' ); ?>
 <?php require_once( 'html/icon-area.php' ); ?>
 <?php require_once( 'html/page-area.php' ); ?>
-<?php require_once( 'html/default-menu-area.php' ); ?>
+<?php require_once( 'html/ads-stats-area.php' ); ?>
 <?php require_once( 'html/plugin-compat-area.php' ); ?>		
 <?php require_once( 'html/javascript.php' ); ?>		
 <?php echo('' . WPtouch('<div class="wptouch-version"> This is ','</div>') . ''); ?>
@@ -609,7 +612,10 @@ echo('</div>'); }
 add_action('wp_footer', 'wptouch_switch');
 add_action('admin_head', 'wptouch_admin_css');
 add_action('admin_menu', 'bnc_options_menu'); 
-add_action('the_content', 'wptouch_content_filter');
-//add_filter('the_content_rss', 'do_shortcode', 11);
-//add_filter('the_content', 'do_shortcode', 11);
+//Thanks to edyoshi:
+if (bnc_is_iphone() && $wptouch_plugin->desired_view == 'mobile') {
+	add_action('the_content', 'wptouch_content_filter');
+	add_filter('the_content_rss', 'do_shortcode', 11);
+	add_filter('the_content', 'do_shortcode', 11);
+}
 ?>

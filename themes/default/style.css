@@ -154,11 +154,12 @@ blockquote {
 }
 
 #headerbar-menu a {
-	width: 22px;
 	height: 43px;
 	display: block;
 	background: url(images/menu/wptouch-menu-dropper.png) 0 -43px;
 	margin-top: 1px;
+	width: 22px;
+	color: #5e1a00;
 }
 
 #headerbar-menu .open {
@@ -171,8 +172,8 @@ blockquote {
 	padding-top: 9px;
 	padding-left: 10px;
 	display: block;
-	border-top: 1px solid #5d5d5d;
 	margin: 0;
+	border-style: none;
 }
 
 #headerbar-title img {
@@ -213,6 +214,7 @@ blockquote {
 	border-right: 1px solid #1b1b1b;
 	border-left: 1px solid #1b1b1b;
 	margin-right: 11px;
+	margin-left: -2px;
 }
 
 #drop-fade img {
