@@ -84,8 +84,9 @@
 
 #wptouch-theme input.checkbox {
 	margin-right: 5px;
-	vertical-align: baseline;
+	vertical-align: middle;
 	width: auto;
+	border-style: none;
 }
 
 #wptouch-theme input {
@@ -134,7 +135,8 @@
 	margin: -10px -10px -20px;
 	-webkit-border-top-right-radius: 5px;
 	-webkit-border-top-left-radius: 5px;
-	border: 1px solid #abbbcb;
+	-moz-border-radius-topright: 5px;
+	-moz-border-radius-topleft: 5px;	border: 1px solid #abbbcb;
 }
 
 #wptouch-head-title {
@@ -180,6 +182,7 @@
 #wptouch-head h3 {
 	color: #222;
 	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
 	width: 100%;
 }
 
@@ -288,15 +291,21 @@ textarea#wptouch-stats {
 
 /* @group icons-area.php */
 
+#wptouch-theme ul.wptouch-iconblock {
+	width: auto;
+	height: auto;
+}
+
 #wptouch-theme ul.wptouch-iconblock li {
-	float: left;
-	padding: 8px 5px;
-	text-align: center;
-	width: 85px;
+	width: 80px;
 	color: #666;
-	margin-bottom: 5px;
-	margin-right: 5px;
 	font-size: 9px;
+	text-align: center;
+	margin: 5px;
+	height: 55px;
+	padding-top: 10px;
+	position: relative;
+	float: left;
 }
 
 #wptouch-theme .default ul.wptouch-iconblock li {

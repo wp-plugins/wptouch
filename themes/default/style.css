@@ -191,19 +191,28 @@ blockquote {
 	display: block;
 	text-align: right;
 	position: relative;
-	padding: 4px 0 2px;
 	opacity: 0.98;
 	-webkit-box-shadow: #444 -4px 2px 4px;
-	margin: -1px 0 0;
 	border-top: 1px solid #0d0d0d;
+	margin: -1px 0;
+	padding: 1px 0;
 }
 
 #drop-fade a {
-	color: #eee;
 	font-size: 10px;
+	margin-right: 12px;
 	position: relative;
-	bottom: 4px;
-	margin-right: 15px;
+	bottom: 3px;
+	color: #fff;
+	padding: 4px 5px;
+	margin-left: -1px;
+}
+
+#drop-fade a.baropen {
+	background-color: #4d4d4d;
+	border-right: 1px solid #1b1b1b;
+	border-left: 1px solid #1b1b1b;
+	margin-right: 11px;
 }
 
 #drop-fade img {
@@ -222,6 +231,7 @@ blockquote {
 	margin: 0;
 	padding: 0;
 	border-top: 1px solid #1b1b1b;
+	font-size: 13px;
 }
 
 .dropper ul {
@@ -246,11 +256,10 @@ blockquote {
 }
 
 .dropper a {
-	font-size: 14px;
 	font-weight: bold;
 	display: block;
 	text-shadow: #171717 -1px -1px 0;
-	color: #bfbfbf;
+	color: #d2d2d2;
 	margin: 0;
 	padding: 4px 0;
 	width: 93%;
@@ -288,6 +297,8 @@ blockquote {
 	color: #222;
 	font-weight: bold;
 	margin-top: 6px;
+	border: 1px solid #1b1b1b;
+
 }
 
 #wptouch-login input#pwd {
@@ -298,11 +309,12 @@ blockquote {
 	font-size: 13px;
 	color: #222;
 	font-weight: bold;
+	border: 1px solid #1b1b1b;
 }
 
 #wptouch-login input#logsub {
 	-webkit-border-radius: 10px;
-	border: 1px solid #adadad;
+	border: 1px solid #1b1b1b;
 	font-size: 13px;
 	color: #222;
 	background-color: #fff;
@@ -334,6 +346,7 @@ input#s {
 	margin-right: 3px;
 	text-align: left;
 	margin-top: 6px;
+	border: 1px solid #1b1b1b;
 }
 
 input#ssubmit {
@@ -344,20 +357,7 @@ input#ssubmit {
 	padding: 3px;
 	width: 64px;
 	height: 23px;
-}
-
-/* @end */
-
-/* @group Categories */
-
-#catsmenu-inner img {
-	float: left;
-	position: relative;
-	bottom: 7px;
-	width: 28px;
-	padding-right: 10px;
-	right: 1px;
-	margin-bottom: 3%;
+	border: 1px solid #1b1b1b;
 }
 
 /* @end */
