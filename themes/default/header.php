@@ -37,7 +37,7 @@ include( dirname(__FILE__) . '/../core/core-header.php' );
 
 <?php wp_dropdown_categories('show_option_none=Categories'); ?>
 
-<script type="text/javascript">
+<?php /* <script type="text/javascript">
 
     var dropdown = document.getElementById("cat");
     function onCatChange() {
@@ -46,10 +46,10 @@ include( dirname(__FILE__) . '/../core/core-header.php' );
 		}
     }
     dropdown.onchange = onCatChange;
-</script>
+</script> <?php */ ?>
 		    
-		    <!-- <a id="catsopen" href="javascript:<?php if (bnc_is_js_enabled()) echo "bnc_jquery_cats_drop();"; else echo "document.getElementById('wptouch-cats').style.display='block';" ?>">
-		    <img src="<?php bloginfo('template_directory'); ?>/images/menu/wptouch-menu-cats.png" alt="" /> <?php _e( 'Categories', 'wptouch' ); ?></a>	 -->
+		    <a id="catsopen" href="javascript:<?php if (bnc_is_js_enabled()) echo "bnc_jquery_cats_drop();"; else echo "document.getElementById('wptouch-cats').style.display='block';" ?>">
+		    <img src="<?php bloginfo('template_directory'); ?>/images/menu/wptouch-menu-cats.png" alt="" /> <?php _e( 'Categories', 'wptouch' ); ?></a>
 	<?php } ?>
 	
 	<?php if (bnc_is_tags_button_enabled()) { ?>	

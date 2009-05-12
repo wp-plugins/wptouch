@@ -349,14 +349,15 @@ blockquote {
 /* @group Search */
 
 #wptouch-search-inner {
-	border-top: 1px solid #363636;
+	border-top: 1px solid #4d4d4d;
 	border-bottom: 1px solid #1d1d1d;
 	margin-top: -2px;
 	text-align: center;
 	height: 38px;
-	padding-top: 2px;
+	padding-top: 1px;
 	margin-top: 0;
 	background-color: #3c3c3c;
+	padding-bottom: 1px;
 }
 
 input#s {
