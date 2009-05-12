@@ -113,12 +113,6 @@
 			$a['enable-regular-default'] = 0;
 		}
 
-		if ( isset($_POST['enable-gzip']) ) {
-			$a['enable-gzip'] = 1;
-		} else {
-			$a['enable-gzip'] = 0;
-		}
-
 		if ( isset($_POST['adsense-id']) ) {
 			$a['adsense-id'] = $_POST['adsense-id'];
 		}

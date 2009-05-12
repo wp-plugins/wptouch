@@ -44,9 +44,9 @@
 }
 
 #wptouch-theme .wptouch-left-content {
-	width: 30%;
+	width: 28%;
 	float: left;
-	padding-right: 15px;
+	padding-right: 10px;
 	margin-top: 10px;
 }
 
@@ -301,7 +301,7 @@ textarea#wptouch-stats {
 	color: #666;
 	font-size: 9px;
 	text-align: center;
-	margin: 5px;
+	margin: 3px;
 	height: 55px;
 	padding-top: 10px;
 	position: relative;
@@ -339,9 +339,9 @@ textarea#wptouch-stats {
 }
 
 #wptouch-theme #upload_button {
-	background: url(../images/upload.png);
-	width: 117px;
-	height: 40px;
+	background: url(../images/upload.png) 0 0;
+	width: 119px;
+	height: 32px;
 	cursor: pointer;
 	display: block;
 }
@@ -394,6 +394,7 @@ textarea#wptouch-stats {
 	line-height: 15px;
 	-moz-border-radius: 3px;
 	-webkit-border-radius: 3px;
+	width: 100%;
 }
 
 #wptouch-theme .sort-of {
@@ -406,6 +407,7 @@ textarea#wptouch-stats {
 	line-height: 15px;
 	-moz-border-radius: 3px;
 	-webkit-border-radius: 3px;
+	width: 100%;
 }
 
 #wptouch-theme .too-bad {
@@ -418,6 +420,7 @@ textarea#wptouch-stats {
 	line-height: 15px;
 	-moz-border-radius: 3px;
 	-webkit-border-radius: 3px;
+	width: 100%;
 }
 
 #wptouch-theme img.support {
@@ -430,7 +433,7 @@ textarea#wptouch-stats {
 
 /* @end */
 
-/* @group Save Button Area */
+/* @group Save/Restore Button Area */
 
 #wptouch-theme .wptouch-version {
 	float: right;
@@ -443,9 +446,15 @@ textarea#wptouch-stats {
 	left: 10px;
 }
 
-#wptouch-theme input#wptouch-button {
+#wptouch-theme input#wptouch-button, #wptouch-theme input#wptouch-button-reset {
 	width: 100px;
 	border: 2px solid #dcdcdc;
+	float: left;
+}
+
+#wptouch-theme input#wptouch-button-reset:hover {
+	border-color: red;
+	color: red;
 }
 
 

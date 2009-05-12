@@ -147,6 +147,18 @@ blockquote {
 
 /* @group Header */
 
+#drop-fade select {
+	border-style: none;
+	background-color: transparent;
+	padding: 0;
+	position: relative;
+	bottom: 3px;
+	font-size: 10px;
+	color: #fff;
+	width: 77px;
+	margin: 0 -3px 0 0;
+}
+
 #headerbar-menu {
 	position: fixed;
 	top: 0;

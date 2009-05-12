@@ -24,6 +24,7 @@
 					<p><?php _e( "This will add a categories drop-down item in the WPtouch sub header beside the Login (if also enabled), Search, and Menu link buttons.", "wptouch" ); ?><br /><br /><?php _e( "It will display your top categories, and show the number of entries they have in each.", "wptouch" ); ?></p>
 				</div>
 			</li>
+			
 			<li>
 				<input class="checkbox" type="checkbox" name="enable-tags-button" <?php if ( isset( $wptouch_settings['enable-tags-button']) && $wptouch_settings['enable-tags-button'] == 1) echo('checked'); ?> />
 				<label class="label" for="enable-tags-button"><?php _e( "Enable tags in the header", "wptouch" ); ?> <a href="#tags-info" class="wptouch-fancylink">?</a></label>
@@ -32,6 +33,7 @@
 					<p><?php _e( "This will add a 'Tags' drop-down item in the WPtouch sub header beside the Categories (if also enabled), Login (if also enabled), Search, and Menu link buttons.", "wptouch" ); ?><br /><br /><?php _e( "It will display your most used tags.", "wptouch" ); ?></p>
 				</div>
 			</li>
+			
 			<li>
 				<input class="checkbox" type="checkbox" name="enable-login-button" <?php if (isset($wptouch_settings['enable-login-button']) && $wptouch_settings['enable-login-button'] == 1) echo('checked'); ?> />
 				<label class="label" for="enable-login-button"><?php _e( "Enable login from the header", "wptouch" ); ?> <a href="#login-info" class="wptouch-fancylink">?</a></label>
@@ -43,22 +45,22 @@
 			</li>
 
 			<li>
-				<input class="checkbox" type="checkbox" name="enable-js-header" <?php if (isset($wptouch_settings['enable-js-header']) && $wptouch_settings['enable-js-header'] == 1) echo('checked'); ?> />
-				<label class="label" for="enable-js-header"> <?php _e( "Use advanced", "wptouch" ); ?> <a href="http://www.jquery.com/" target="_blank"><?php _e( "jQuery", "wptouch" ); ?></a> <?php _e( "effects", "wptouch" ); ?> <small>(<?php _e( "ajax entries &amp; comments", "wptouch" ); ?>)</small></label>
-			</li>
-
-			<li>
-				<input class="checkbox" type="checkbox" name="enable-gravatars" <?php if (isset($wptouch_settings['enable-gravatars']) && $wptouch_settings['enable-gravatars'] == 1) echo('checked'); ?> />
-				<label class="label" for="enable-gravatars"> <?php _e( "Enable gravatars in comments", "wptouch" ); ?></label>
-			</li>
-			
-			<li>
 			<input class="checkbox" type="checkbox" name="enable-page-coms" <?php if (isset($wptouch_settings['enable-page-coms']) && $wptouch_settings['enable-page-coms'] == 1) echo('checked'); ?> />
 			<label class="label" for="enable-page-coms"> <?php _e( "Enable comments on pages", "wptouch" ); ?> <a href="#page-coms-info" class="wptouch-fancylink">?</a></label>
 				<div id="page-coms-info" style="display:none">
 					<h2><?php _e( "More Info", "wptouch" ); ?></h2>
 					<p><?php _e( "This will add the comment form to all pages with 'Allow Comments' checked in your WordPress admin.", "wptouch" ); ?></p>
 				</div>
+			</li>			
+
+			<li>
+				<input class="checkbox" type="checkbox" name="enable-gravatars" <?php if (isset($wptouch_settings['enable-gravatars']) && $wptouch_settings['enable-gravatars'] == 1) echo('checked'); ?> />
+				<label class="label" for="enable-gravatars"> <?php _e( "Enable gravatars in comments", "wptouch" ); ?></label>
+			</li>
+
+			<li>
+				<input class="checkbox" type="checkbox" name="enable-js-header" <?php if (isset($wptouch_settings['enable-js-header']) && $wptouch_settings['enable-js-header'] == 1) echo('checked'); ?> />
+				<label class="label" for="enable-js-header"> <?php _e( "Use advanced", "wptouch" ); ?> <a href="http://www.jquery.com/" target="_blank"><?php _e( "jQuery", "wptouch" ); ?></a> <?php _e( "effects", "wptouch" ); ?> <small>(<?php _e( "ajax entries &amp; comments", "wptouch" ); ?>)</small></label>
 			</li>
 
 			<li>

@@ -2,7 +2,7 @@
 /*
    Plugin Name: WPtouch iPhone Theme
    Plugin URI: http://bravenewcode.com/wptouch/
-   Description: A plugin which reformats your site with a mobile theme when viewing with an <a href="http://www.apple.com/iphone/"> Apple iPhone</a>, <a href="http://www.apple.com/ipodtouch/">Apple iPod touch</a>, <a href="http://www.android.com/">Google Android</a> or <a href="http://www.rim.com/storm/">Blackberry Storm</a> touch mobile device. Set options for the theme by visiting the <a href="options-general.php?page=wptouch/wptouch.php">WPtouch Options admin panel</a>. &nbsp;
+   Description: A plugin which formats your site with a mobile theme for the Apple <a href="http://www.apple.com/iphone/">iPhone</a> & <a href="http://www.apple.com/ipodtouch/">iPod touch</a>, <a href="http://www.android.com/">Google Android</a> or <a href="http://www.rim.com/storm/">Blackberry Storm</a> touch mobile devices. Set options by visiting the <a href="options-general.php?page=wptouch/wptouch.php">WPtouch admin panel</a>. &nbsp;
    Author: Dale Mugford & Duane Storey
    Version: 1.9b1
    Author URI: http://www.bravenewcode.com
@@ -11,7 +11,7 @@
    # (http://iwphone.contentrobot.com/) which the detection feature
    # of the plugin was based on.
  
-   # Copyright 2008-2009 BraveNewCode Inc. All Rights Reserved.
+   # Copyright (c) 2009 Duane Storey & Dale Mugford (BraveNewCode Inc.)
  
    # This plugin is free software; you can redistribute it and/or
    # modify it under the terms of the GNU Lesser General Public
@@ -36,8 +36,9 @@ $bnc_wptouch_version = '1.9 Beta 1';
 require_once( 'include/plugin.php' );
 require_once( 'include/compat.php' );
 
-// uncomment this line to create a fresh install scenario
-// update_option( 'bnc_iphone_pages', '' );
+function restore_wptouch_defaults(){
+ update_option( 'bnc_iphone_pages', '' );
+}
 
 //No need to manually change these, they're all admin options saved to the database
 global $wptouch_defaults;
@@ -56,7 +57,6 @@ $wptouch_defaults = array(
 	'enable-main-rss' => true,
 	'enable-main-name' => true,
 	'enable-main-tags' => true,
-	'enable-gzip' => false,
 	'enable-main-categories' => true,
 	'enable-main-email' => true,
 	'header-background-color' => '222222',
@@ -129,15 +129,15 @@ function wptouch_content_filter( $content ) {
 	function wptouch_admin_css() {		
 		if ( isset( $_GET['page'] ) && $_GET['page'] == 'wptouch/wptouch.php' ) {		
 			echo "<link rel='stylesheet' type='text/css' href='" . compat_get_plugin_url( 'wptouch' ) . "/admin-css/wptouch-admin.css' />\n";
-			echo "<link rel='stylesheet' type='text/css' href='" . compat_get_plugin_url( 'wptouch' ) . "/js/fancybox/jquery.fancybox.css' />\n";
+			echo "<link rel='stylesheet' type='text/css' href='" . compat_get_plugin_url( 'wptouch' ) . "/admin-css/jquery.fancybox.css' />\n";
 			
 			$version = (float)get_bloginfo('version');
 			if ( $version <= 2.3 ) {
-				echo "<script src='http://www.google.com/jsapi'></script>\n";
-				echo "<script type='text/javascript'>google.load('jquery', '1'); jQuery.noConflict( ); </script>\n";
+				echo '<script type="text/javascript"> google.load("jquery", "1.3.2"); jQuery.noConflict();</script>\n';
 			}
 			echo "<script type='text/javascript' src='" . compat_get_plugin_url( 'wptouch' ) . "/js/jquery.ajax_upload.1.1.js'></script>\n";
 			echo "<script type='text/javascript' src='" . compat_get_plugin_url( 'wptouch' ) . "/js/fancybox1.2.1.js'></script>\n";
+			echo "<script type='text/javascript' src='" . compat_get_plugin_url( 'wptouch' ) . "/js/wptouch-admin.js'></script>\n";
 		}
 	}
   
@@ -236,18 +236,6 @@ class WPtouchPlugin {
 		  		$this->desired_view = 'mobile';
 			}
 		}
-	
-		$value = ini_get( 'zlib.output_compression' );
-		if ($this->desired_view == 'mobile' && !$this->output_started && !$value) {
-	   	
-			if (substr_count($_SERVER['HTTP_ACCEPT_ENCODING'], 'gzip') && isset($settings['enable-gzip']) && $settings['enable-gzip']) {
-				@ob_start("ob_gzhandler");
-			} else {
-				@ob_start();
-			}
-			
-			$this->output_started = true;
-	   }
 	}
 	
 	function detectAppleMobile($query = '') {
@@ -257,14 +245,13 @@ class WPtouchPlugin {
 		
 		// Add whatever user agents you want here to the array if you want to make this show on a Blackberry 
 		// or something. No guarantees it'll look pretty, though!
-		$useragents = array(
-	//developer mode:		
-	 //	"safari",
-			"iphone", 
+		$useragents = array(		
+	 //	"safari",			// *Developer mode*
+			"iphone",  
 			"ipod", 
-			"aspen", 
-			"dream",
-			"android",
+			"aspen", 		// iPhone simulator
+			"dream", 		// Pre 1.5 Android
+			"android", 	// 1.5+ Android
 			"incognito", 
 			"webmate", 
 			"blackberry9500", 
@@ -582,7 +569,11 @@ function bnc_wp_touch_page() {
 	if (isset($_POST['submit'])) {
 		echo('<div class="wrap"><div id="wptouch-theme">');
 		echo('<div id="wptouchupdated">' . __( "Your new WPtouch settings were saved.", "wptouch" ) . '</div>');
-			} else {
+			} 
+	elseif (isset($_POST['reset'])) {
+		echo('<div class="wrap"><div id="wptouch-theme">');
+		echo('<div id="wptouchupdated">' . __( "WPtouch has been restored to its default settings.", "wptouch" ) . '</div>');
+	} else {
 		echo('<div class="wrap"><div id="wptouch-theme">');
 		}
 ?>
@@ -591,22 +582,25 @@ function bnc_wp_touch_page() {
 
 <?php require_once( 'include/submit.php' ); ?>
 
-<form method="post" action="<?php echo $_SERVER['REQUEST_URI']; ?>">
-<?php require_once( 'html/head-area.php' ); ?>
-<?php require_once( 'html/home-redirect-area.php' ); ?>
-<?php require_once( 'html/javascript-area.php' ); ?>
-<?php require_once( 'html/post-listings-area.php' ); ?>
-<?php require_once( 'html/style-area.php' ); ?>
-<?php require_once( 'html/icon-area.php' ); ?>
-<?php require_once( 'html/page-area.php' ); ?>
-<?php require_once( 'html/ads-stats-area.php' ); ?>
-<?php require_once( 'html/plugin-compat-area.php' ); ?>		
-<?php require_once( 'html/javascript.php' ); ?>		
-<?php echo('' . WPtouch('<div class="wptouch-version"> This is ','</div>') . ''); ?>
-<input type="submit" name="submit" value="<?php _e('Save Options', 'wptouch' ); ?>" id="wptouch-button" class="button-primary" />
-</form>
+	<form method="post" action="<?php echo $_SERVER['REQUEST_URI']; ?>">
+		<?php require_once( 'html/head-area.php' ); ?>
+		<?php require_once( 'html/home-redirect-area.php' ); ?>
+		<?php require_once( 'html/advanced-area.php' ); ?>
+		<?php require_once( 'html/post-listings-area.php' ); ?>
+		<?php require_once( 'html/style-area.php' ); ?>
+		<?php require_once( 'html/icon-area.php' ); ?>
+		<?php require_once( 'html/page-area.php' ); ?>
+		<?php require_once( 'html/ads-stats-area.php' ); ?>
+		<?php require_once( 'html/plugin-compat-area.php' ); ?>		
+		<?php echo('' . WPtouch('<div class="wptouch-version"> This is ','</div>') . ''); ?>
+		<input type="submit" name="submit" value="<?php _e('Save Options', 'wptouch' ); ?>" id="wptouch-button" class="button-primary" />
+	</form>
+	
+	<form method="post" action="<?php restore_wptouch_defaults(); ?>">
+		<input type="submit" onclick="return confirm('Restore the default WPtouch settings?');" name="reset" value="<?php _e('Restore Defaults', 'wptouch' ); ?>" id="wptouch-button-reset" class="button-highlighted" />
+	</form>
+	<div class="wptouch-clearer"></div>
 </div>
-
 <?php 
 echo('</div>'); } 
 add_action('wp_footer', 'wptouch_switch');

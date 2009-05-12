@@ -1,14 +1,12 @@
 /*
- * WPtouch 2.0 -The WPtouch Core Javascript File
+ * WPtouch 1.9 -The WPtouch Core Javascript File
  * This file holds all the default jQuery & Ajax functions all in one neat place.
  * 
- * Copyright (c) 2009 Duane Storey & Dale Mugford (bravenewcode.com)
- * Dual licensed under the MIT (MIT-LICENSE.txt)
- * and GPL (GPL-LICENSE.txt) licenses.
+ * Copyright (c) 2009 Duane Storey & Dale Mugford (BraveNewCode Inc.)
+ * Licensed under GPL.
  *
- * Date: May 2nd, 2009
+ * Date: May 11th, 2009
  */
-
 
 /////// -- Header Bump on page load -- ///////
 
@@ -23,18 +21,9 @@ window.scrollTo(0,1);},500);}}
 setInterval(updateLayout,300);
 
 
-/////// -- jQuery -- ///////
+/////// -- Drop Down Menus -- ///////
 
 $wptouch = jQuery.noConflict();
-	
-	function bnc_scroll_comment(comment_num) {
-	     var h = $("body").height();
-	    var two = parseInt(comment_num)+1;
-	    var first = $('#comment-num-' + comment_num).offset().top;
-	    var numbertwo = $('#comment-num-' + two).offset().top;
-	    var diff = numbertwo - first;
-	    $wptouch(document).scrollTop($(document).scrollTop()+diff);  
-	}
 
 	function bnc_jquery_menu_drop() {
 		$wptouch('#wptouch-menu').slideToggle(200);
@@ -55,3 +44,20 @@ $wptouch = jQuery.noConflict();
 		$wptouch('#wptouch-tags').slideToggle(200);
 		$wptouch("#drop-fade a#tagsopen").toggleClass("baropen");
 	}
+	
+/////// -- Ajax Comments -- ///////
+
+function commentAdded() {
+    if ($wptouch('#errors')) {
+        $wptouch('#errors').hide();
+}
+    $wptouch("#commentform").hide();
+    $wptouch("#some-new-comment").fadeIn(2000);
+    $wptouch("#refresher").fadeIn(2000);
+    if ($wptouch('#nocomment')) {
+        $wptouch('#nocomment').hide();
+    }
+    if($wptouch('#hidelist')) {
+        $wptouch('#hidelist').hide();
+    }
+}
