@@ -33,12 +33,15 @@
 global $bnc_wptouch_version;
 $bnc_wptouch_version = '1.9 Beta 1';
 
+// The Master Kill Switch
+ function wptouch_restore() {
+	 if ( isset( $_POST['reset'] ) ) {
+		update_option( 'bnc_iphone_pages', '' );
+	}
+}
+
 require_once( 'include/plugin.php' );
 require_once( 'include/compat.php' );
-
-function restore_wptouch_defaults(){
- update_option( 'bnc_iphone_pages', '' );
-}
 
 //No need to manually change these, they're all admin options saved to the database
 global $wptouch_defaults;
@@ -133,7 +136,7 @@ function wptouch_content_filter( $content ) {
 			
 			$version = (float)get_bloginfo('version');
 			if ( $version <= 2.3 ) {
-				echo '<script type="text/javascript"> google.load("jquery", "1.3.2"); jQuery.noConflict();</script>\n';
+				echo '<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>\n';
 			}
 			echo "<script type='text/javascript' src='" . compat_get_plugin_url( 'wptouch' ) . "/js/jquery.ajax_upload.1.1.js'></script>\n";
 			echo "<script type='text/javascript' src='" . compat_get_plugin_url( 'wptouch' ) . "/js/fancybox1.2.1.js'></script>\n";
@@ -246,7 +249,7 @@ class WPtouchPlugin {
 		// Add whatever user agents you want here to the array if you want to make this show on a Blackberry 
 		// or something. No guarantees it'll look pretty, though!
 		$useragents = array(		
-	 	//	"safari",			// *Developer mode*
+	 		"safari",			// *Developer mode*
 			"iphone",  
 			"ipod", 
 			"aspen", 		// iPhone simulator
@@ -569,13 +572,14 @@ function bnc_wp_touch_page() {
 	if (isset($_POST['submit'])) {
 		echo('<div class="wrap"><div id="wptouch-theme">');
 		echo('<div id="wptouchupdated">' . __( "Your new WPtouch settings were saved.", "wptouch" ) . '</div>');
-			} 
+	} 
 	elseif (isset($_POST['reset'])) {
-		echo('<div class="wrap"><div id="wptouch-theme">');
-		echo('<div id="wptouchupdated">' . __( "WPtouch has been restored to its default settings.", "wptouch" ) . '</div>');
+		echo('<div class="wrap"><div id="wptouch-theme"><div id="wptouchupdated">');
+		echo sprintf(__( "WPtouch has been restored to its default settings. %sClick Here%s to refresh the page.", "wptouch" ), '<a href="options-general.php?page=wptouch/wptouch.php">','</a>');
+		echo('</div>');
 	} else {
 		echo('<div class="wrap"><div id="wptouch-theme">');
-		}
+}
 ?>
 
 <?php $icons = bnc_get_icon_list(); ?>
@@ -596,7 +600,7 @@ function bnc_wp_touch_page() {
 		<input type="submit" name="submit" value="<?php _e('Save Options', 'wptouch' ); ?>" id="wptouch-button" class="button-primary" />
 	</form>
 	
-	<form method="post" action="<?php restore_wptouch_defaults(); ?>">
+<form method="post" action="<?php wptouch_restore(); ?>">
 		<input type="submit" onclick="return confirm('Restore the default WPtouch settings?');" name="reset" value="<?php _e('Restore Defaults', 'wptouch' ); ?>" id="wptouch-button-reset" class="button-highlighted" />
 	</form>
 	<div class="wptouch-clearer"></div>

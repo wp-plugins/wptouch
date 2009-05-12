@@ -63,8 +63,8 @@ include( dirname(__FILE__) . '/../core/core-header.php' );
 	<div id="wptouch-menu" class="dropper" style="display:none"> 
  		<div id="wptouch-search-inner">
 			<form method="get" id="searchform" action="<?php bloginfo('home'); ?>/">
-			<input type="text" value="<?php the_search_query(); ?>" name="s" id="s" /> 
-			<input name="submit" type="submit" id="ssubmit" tabindex="5" value="Search" />
+			<input type="text" value="Search..." onfocus="this.value=''" onblur="this.value='Search...'" name="s" id="s" /> 
+			<input name="submit" type="hidden" tabindex="5" value="Search"  />
 			</form>
 		</div>
         <div id="wptouch-menu-inner">
