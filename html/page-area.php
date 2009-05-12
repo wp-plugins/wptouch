@@ -2,16 +2,16 @@
 
 <div class="metabox-holder">
 	<div class="postbox">
-		<h3><?php _e( "The Drop Down Menu", "wptouch" ); ?></h3>
+		<h3><?php _e( "Site Menu &amp; Bookmark Icon", "wptouch" ); ?></h3>
 
 			<div class="wptouch-left-content">
 				<h4>Pages/Bookmark Icon</h4>
 				<p><?php _e( "Choose the logo displayed in the header (also your bookmark icon), and the pages you want included in the WPtouch drop-down menu.", "wptouch" ); ?> 						<strong><?php _e( "Remember, only those checked will be shown.", "wptouch" ); ?></strong></p>
-				<p><?php _e( "Next, select the icons from the drop lists that you want to pair with each page/menu item.", "wptouch" ); ?></p>
-				<p><?php _e( "Lastly, you can decide if pages are listed by the page order in WordPress, or by name (default).", "wptouch" ); ?></p>
+				<p><?php _e( "Next, select the icons from the lists that you want to pair with each page menu item.", "wptouch" ); ?></p>
+				<p><?php _e( "You can also decide if pages are listed by the page order (ID) in WordPress, or by name (default).", "wptouch" ); ?></p>
 				
 				<h4>Default Items</h4>
-				<p><?php _e( "Enable/Disable these default items in the WPtouch dropdown menu.", "wptouch"); ?></p>
+				<p><?php _e( "Enable/Disable these default items in the WPtouch site menu.", "wptouch"); ?></p>
 			</div><!-- wptouch-left-content -->
 		
 	<div class="wptouch-right-content wptouch-pages">

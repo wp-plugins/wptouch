@@ -62,6 +62,19 @@
 	margin-top: 0;
 }
 
+#wptouch-theme .wptouch-left-content ul {
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+}
+
+#wptouch-theme .wptouch-left-content li {
+	color: #536e90;
+	margin: 0 5px;
+	padding: 1px 0;
+	list-style-type: circle;
+	list-style-position: inside;
+}
+
 #wptouch-theme .wptouch-right-content {
 	width: 63%;
 	float: left;
@@ -427,6 +440,33 @@ textarea#wptouch-stats {
 	position: relative !important;
 	top: 4px;
 	margin-right: 1px;
+}
+
+#wptouch-theme .wptouch-left-content p.wpv {
+	margin: 2px 0 5px;
+	padding: 0;
+	font-weight: bold;
+}
+
+#wptouch-theme .wptouch-left-content p.wptv {
+	padding: 0 0 10px;
+	border-bottom: 1px solid #dcdcdc;
+	font-style: italic;
+}
+
+#wptouch-theme .wptouch-left-content span.go {
+	font-weight: bold;
+	color: green;
+}
+
+#wptouch-theme .wptouch-left-content span.caution {
+	color: orange;
+	font-weight: bold;
+}
+
+#wptouch-theme .wptouch-left-content span.red {
+	color: red;
+	font-weight: bold;
 }
 
 

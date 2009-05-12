@@ -5,7 +5,8 @@
 		<h3><?php _e( "Post Listings Options", "wptouch" ); ?></h3>
 
 		<div class="wptouch-left-content">
-			<p> <?php _e( "Select which post-meta items are shown under titles on post, search, &amp; archives pages. Also, choose if excerpts are shown/hidden (default is hidden).", "wptouch" ); ?></p>
+			<p><?php _e( "Select which post-meta items are shown under titles on the main, search, &amp; archives pages.", "wptouch" ); ?></p>
+			<p><?php _e( "Also, choose if excerpts are shown/hidden (default is hidden).", "wptouch" ); ?></p>
 		</div>
 	
 	<div class="wptouch-right-content">		
