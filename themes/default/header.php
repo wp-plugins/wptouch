@@ -84,7 +84,8 @@ include( dirname(__FILE__) . '/../core/core-header.php' );
 		</div>
 	</div>
 	
-<!-- #start The Categories Drop-Down -->
+<?php /* 
+#start The Categories Drop-Down
 
 	<div id="wptouch-cats" class="dropper" style="display:none">
             <ul>
@@ -95,7 +96,8 @@ include( dirname(__FILE__) . '/../core/core-header.php' );
 	           	<?php } ?>
             </ul>
 	</div>
-
+ */ ?>
+ 
 <!-- #start The Tags Drop-Down -->
 	<?php if ( function_exists('wp_tag_cloud') ) : ?>
 		<div id="wptouch-tags" class="dropper" style="display:none">
@@ -105,7 +107,7 @@ include( dirname(__FILE__) . '/../core/core-header.php' );
 		</div>
 	<?php endif; ?>  
 
-	<form action="<?php bloginfo('url'); ?>/" id="select-cats" method="get">
+	<form action="<?php bloginfo('home'); ?>/" id="select-cats" method="get">
 <?php
 	$select = wp_dropdown_categories('show_option_none=Select category&show_count=1&orderby=name&echo=0');
 	$select = preg_replace("#<select([^>]*)>#", "<select$1 onchange='return this.form.submit()'>", $select);
