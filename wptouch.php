@@ -33,13 +33,6 @@
 global $bnc_wptouch_version;
 $bnc_wptouch_version = '1.9 Beta 1';
 
-// The Master Kill Switch
- function wptouch_restore() {
-	 if ( isset( $_POST['reset'] ) ) {
-		update_option( 'bnc_iphone_pages', '' );
- 	}
- }
-
 require_once( 'include/plugin.php' );
 require_once( 'include/compat.php' );
 
@@ -105,9 +98,8 @@ function wptouch_init() {
 }
 
 function wptouch_content_filter( $content ) {
-if (bnc_is_iphone() && $wptouch_plugin->desired_view == 'mobile') {
 	$settings = bnc_wptouch_get_settings();
-	if ( isset($settings['adsense-id']) && strlen($settings['adsense-id']) && is_single() ) {
+	if (bnc_is_iphone() && $wptouch_plugin->desired_view == 'mobile' && isset($settings['adsense-id']) && strlen($settings['adsense-id']) && is_single() ) {
 		require_once( 'adsense.php' );
 		
 		$channel = '';
@@ -119,7 +111,6 @@ if (bnc_is_iphone() && $wptouch_plugin->desired_view == 'mobile') {
 		return $content . '<div class="wptouch-adsense-ad">' . $ad . '</div>';	
 	} else {
 		return $content;
-	}
   }
 }
 
@@ -251,7 +242,7 @@ class WPtouchPlugin {
 		// Add whatever user agents you want here to the array if you want to make this show on a Blackberry 
 		// or something. No guarantees it'll look pretty, though!
 		$useragents = array(		
-	 		"safari",			// *Developer mode*
+	 	//	"safari",			// *Developer mode*
 			"iphone",  
 			"ipod", 
 			"aspen", 		// iPhone simulator
@@ -577,7 +568,7 @@ function bnc_wp_touch_page() {
 	} 
 	elseif (isset($_POST['reset'])) {
 		echo('<div class="wrap"><div id="wptouch-theme"><div id="wptouchupdated">');
-		echo sprintf(__( "WPtouch has been restored to its default settings. %sClick Here%s to refresh the page.", "wptouch" ), '<a href="options-general.php?page=wptouch/wptouch.php">','</a>');
+		echo __( "WPtouch has been restored to its default settings. No custom icons were deleted, however.", "wptouch");
 		echo('</div>');
 	} else {
 		echo('<div class="wrap"><div id="wptouch-theme">');
@@ -598,13 +589,14 @@ function bnc_wp_touch_page() {
 		<?php require_once( 'html/page-area.php' ); ?>
 		<?php require_once( 'html/ads-stats-area.php' ); ?>
 		<?php require_once( 'html/plugin-compat-area.php' ); ?>		
-		<?php echo('' . WPtouch('<div class="wptouch-version"> This is ','</div>') . ''); ?>
 		<input type="submit" name="submit" value="<?php _e('Save Options', 'wptouch' ); ?>" id="wptouch-button" class="button-primary" />
 	</form>
 	
-<form method="post" action="<?php wptouch_restore(); ?>">
+<form method="post" action="<?php echo $_SERVER['REQUEST_URI']; ?>">
 		<input type="submit" onclick="return confirm('Restore the default WPtouch settings?');" name="reset" value="<?php _e('Restore Defaults', 'wptouch' ); ?>" id="wptouch-button-reset" class="button-highlighted" />
 	</form>
+		<?php echo('' . WPtouch('<div class="wptouch-version"> This is ','</div>') . ''); ?>
+
 	<div class="wptouch-clearer"></div>
 </div>
 <?php 

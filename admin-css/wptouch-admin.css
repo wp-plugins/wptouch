@@ -1,4 +1,7 @@
-/* @override http://24.36.119.184:9098/wp-content/plugins/wptouch/admin-css/wptouch-admin.css */
+/* @override 
+	http://24.36.119.184:9098/wp-content/plugins/wptouch/admin-css/wptouch-admin.css
+	http://24.36.119.184:9107/wp-content/plugins/wptouch/admin-css/wptouch-admin.css
+*/
 
 /* WPtouch 1.9 Admin */
 
@@ -73,6 +76,10 @@
 	padding: 1px 0;
 	list-style-type: circle;
 	list-style-position: inside;
+}
+
+#wptouch-theme .wptouch-right-content li {
+	list-style-type: none;
 }
 
 #wptouch-theme .wptouch-right-content {
@@ -490,15 +497,21 @@ textarea#wptouch-stats {
 }
 
 #wptouch-theme input#wptouch-button, #wptouch-theme input#wptouch-button-reset {
-	width: 100px;
 	border: 2px solid #dcdcdc;
 	float: left;
+	width: 15%;
 }
 
 #wptouch-theme input#wptouch-button-reset:hover {
 	border-color: red;
 	color: red;
 }
+
+
+
+/* @end */
+
+/* @group WP Pre 2.7 */
 
 
 

@@ -167,7 +167,12 @@
 
 	$values = serialize($a);
 	update_option('bnc_iphone_pages', $values);
-}
+
+
+// The Master Kill Switch
+ 	} elseif ( isset( $_POST['reset'] ) ) {
+		update_option( 'bnc_iphone_pages', '' );
+ }
 
 global $wptouch_settings;
 $wptouch_settings = bnc_wptouch_get_settings();
