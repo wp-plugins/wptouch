@@ -37,8 +37,8 @@ $bnc_wptouch_version = '1.9 Beta 1';
  function wptouch_restore() {
 	 if ( isset( $_POST['reset'] ) ) {
 		update_option( 'bnc_iphone_pages', '' );
-	}
-}
+ 	}
+ }
 
 require_once( 'include/plugin.php' );
 require_once( 'include/compat.php' );
@@ -105,6 +105,7 @@ function wptouch_init() {
 }
 
 function wptouch_content_filter( $content ) {
+if (bnc_is_iphone() && $wptouch_plugin->desired_view == 'mobile') {
 	$settings = bnc_wptouch_get_settings();
 	if ( isset($settings['adsense-id']) && strlen($settings['adsense-id']) && is_single() ) {
 		require_once( 'adsense.php' );
@@ -119,6 +120,7 @@ function wptouch_content_filter( $content ) {
 	} else {
 		return $content;
 	}
+  }
 }
 
 	add_filter('init', 'wptouch_init');
@@ -610,10 +612,5 @@ echo('</div>'); }
 add_action('wp_footer', 'wptouch_switch');
 add_action('admin_head', 'wptouch_admin_css');
 add_action('admin_menu', 'bnc_options_menu'); 
-//Thanks to edyoshi:
-if (bnc_is_iphone() && $wptouch_plugin->desired_view == 'mobile') {
-	add_action('the_content', 'wptouch_content_filter');
-	add_filter('the_content_rss', 'do_shortcode', 11);
-	add_filter('the_content', 'do_shortcode', 11);
-}
+add_action('the_content', 'wptouch_content_filter');
 ?>
