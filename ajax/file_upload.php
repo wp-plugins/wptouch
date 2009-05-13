@@ -20,15 +20,17 @@
 					@move_uploaded_file( $f['tmp_name'], $upload_dir . "/" . $f['name'] );
 					
 					if ( !file_exists( $upload_dir . "/" . $f['name'] ) ) {
-						echo '<p>There seems to have been an error.  Please try your upload again.</p>';
+						echo __('<p style="color:red">There seems to have been an error.<p>Please try your upload again.</p>');
 					} else {
-						echo '<p>File has been saved!</p><p>Click <a href="#" style="color:red" onclick="location.reload(true); return false;">here to refresh the page</a>.</p>';						
+						echo  __( '<p style="color:green">File has been saved!</p>');					
+						echo '<p><strong>';			
+						echo sprintf(__( "%sClick here to refresh the page%s and see your icon.", "wptouch" ), '<a style="text-decoration:underline" href="#" onclick="location.reload(true); return false;">','</a>');
+						echo '</p></strong>';					
 					}					
 				} else {
-					echo __( '<p>Sorry, only PNG, GIF and JPEG images are supported.</p>', 'wptouch' );
+					echo __( '<p style="color:orange">Sorry, only PNG, GIF and JPG images are supported.</p>', 'wptouch' );
 				}
-			} else echo __( '<p>Image too large</p>', 'wptouch' );
+			} else echo __( '<p style="color:orange">Image too large. try something like 59x60.</p>', 'wptouch' );
 		}
-
-	} else echo __( '<p>Insufficient priviledges</p>', 'wptouch' );
+	} else echo __( '<p style="color:orange">Insufficient priviledges.</p><p>You need to either be an admin or have more control over your server.</p>', 'wptouch' );
 ?>

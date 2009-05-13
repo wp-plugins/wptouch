@@ -357,17 +357,20 @@ textarea#wptouch-stats {
 	height: 32px;
 	cursor: pointer;
 	display: block;
+	margin-bottom: 10px;
 }
 
 #wptouch-theme #upload_progress {
 	position: relative;
-	top: 39px;
-	margin-top: -25px;
-	left: 135px;
+	display: block;
+	font-weight: bold;
+	color: #1a4977;
+	margin-top: 10px;
 }
 
-#wptouch-theme #upload_response {
-	
+#wptouch-theme #upload_progress img {
+	position: relative;
+	top: 4px;
 }
 
 
