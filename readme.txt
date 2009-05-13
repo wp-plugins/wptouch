@@ -16,7 +16,7 @@ The admin panel allows you to customize many aspects of its appearance, and deli
 
 The theme also includes the ability for your visitors to easily switch between the *WPtouch* view and your site's regular theme.
 
-= New In Version 1.9 (beta): =
+= New In Version 1.9 (beta 1): =
 
 * Updated compatibility code (Various WordPress install scenarios) -- thanks to Will Norris for the suggestions
 * Modified AJAX calls
