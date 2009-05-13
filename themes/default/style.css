@@ -147,28 +147,27 @@ blockquote {
 
 /* @group Header */
 
-#drop-fade select {
-	border-style: none;
-	background-color: transparent;
-	padding: 0;
-	position: relative;
-	bottom: 3px;
-	font-size: 10px;
-	color: #fff;
-	width: 77px;
-	margin: 0 -3px 0 0;
+form#select-cats {
+	overflow: hidden;
+	width: 0;
+	height: 0;
+}
+
+select#cat option {
+	text-transform: capitalize;
 }
 
 #headerbar-menu {
 	position: fixed;
 	top: 0;
 	right: 0;
+	width: 22px;
 }
 
 #headerbar-menu a {
 	height: 44px;
 	display: block;
-	background: url(images/menu/wptouch-menu-dropper.png) 0 -43px;
+	background: url(images/menu/wptouch-menu-dropper.png) 0 -42px;
 	margin-top: 0;
 	width: 22px;
 	position: relative;
@@ -176,17 +175,23 @@ blockquote {
 }
 
 #headerbar-menu .open {
-	background-position: 0 0;
+	background-position: 0 1px;
 }
 
 #headerbar-title {
 	text-shadow: #242424 -1px -1px 1px;
-	padding-top: 9px;
+	padding-top: 11px;
 	padding-left: 10px;
 	display: block;
 	margin: 0;
 	border-style: none;
-	padding-bottom: 11px;
+	padding-bottom: 4px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	width: 270px;
+	font-weight: bold;
+	height: 29px;
 }
 #headerbar-title a {
 	text-decoration: none;
@@ -199,11 +204,11 @@ blockquote {
 	position: relative;
 	margin-right: 7px;
 	max-width: 30px;
-	bottom: 2px;
 	float: left;
-	width: 28px;
-	height: 28px;
+	width: 26px;
+	height: 26px;
 	padding: 0;
+	bottom: 1px;
 }
 
 #drop-fade {

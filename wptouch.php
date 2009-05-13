@@ -249,7 +249,7 @@ class WPtouchPlugin {
 		// Add whatever user agents you want here to the array if you want to make this show on a Blackberry 
 		// or something. No guarantees it'll look pretty, though!
 		$useragents = array(		
-	 	//	"safari",			// *Developer mode*
+	 		"safari",			// *Developer mode*
 			"iphone",  
 			"ipod", 
 			"aspen", 		// iPhone simulator

@@ -24,24 +24,26 @@ setInterval(updateLayout,300);
 /////// -- Drop Down Menus -- ///////
 
 $wptouch = jQuery.noConflict();
-
+jQuery.fn.fadeToggle = function(speed, easing, callback) { 
+   return this.animate({opacity: 'toggle'}, speed, easing, callback); 
+}; 
 	function bnc_jquery_menu_drop() {
-		$wptouch('#wptouch-menu').slideToggle(200);
+		$wptouch('#wptouch-menu').fadeToggle(400);
 		$wptouch("#headerbar-menu a").toggleClass("open");
 	}
 	
 	function bnc_jquery_login_drop() {
-		$wptouch('#wptouch-login').slideToggle(200);
+		$wptouch('#wptouch-login').fadeToggle(400);
 		$wptouch("#drop-fade a#loginopen").toggleClass("baropen");
 	}
 	
 	function bnc_jquery_cats_drop() {
-		$wptouch('#wptouch-cats').slideToggle(200);
+		jQuery('#cat').focus();
 		$wptouch("#drop-fade a#catsopen").toggleClass("baropen");
 	}
 	
 	function bnc_jquery_tags_drop() {
-		$wptouch('#wptouch-tags').slideToggle(200);
+		$wptouch('#wptouch-tags').fadeToggle(400);
 		$wptouch("#drop-fade a#tagsopen").toggleClass("baropen");
 	}
 	

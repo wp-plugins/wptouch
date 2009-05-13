@@ -4,7 +4,7 @@
 	width: 100%;
 	background: #<?php echo bnc_get_header_background(); ?> url(<?php bloginfo('template_directory'); ?>/images/head-fade-bk.png) repeat-x;
 }
-#headerbar-title a {
+#headerbar-title, #headerbar-title a {
 	color: #<?php echo bnc_get_header_color(); ?>;
 }
 #wptouch-menu-inner a:hover {

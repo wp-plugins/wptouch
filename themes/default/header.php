@@ -33,23 +33,10 @@ include( dirname(__FILE__) . '/../core/core-header.php' );
 	<?php } ?>
 <?php } ?>
 
-	<?php if (bnc_is_cats_button_enabled()) { ?>	
 
 
-<?php /* 
-<?php wp_dropdown_categories('show_option_none=Categories'); ?>
-<script type="text/javascript">
-    var dropdown = document.getElementById("cat");
-    function onCatChange() {
-		if ( dropdown.options[dropdown.selectedIndex].value > 0 ) {
-			location.href = "<?php echo get_option('home'); ?>/?cat="+dropdown.options[dropdown.selectedIndex].value;
-		}
-    }
-    dropdown.onchange = onCatChange;
-</script>
-*/ ?>
-		    
-		    <a id="catsopen" href="javascript:<?php if (bnc_is_js_enabled()) echo "bnc_jquery_cats_drop();"; else echo "document.getElementById('wptouch-cats').style.display='block';" ?>">
+	<?php if (bnc_is_cats_button_enabled()) { ?>			    
+		    <a id="catsopen" href="javascript:bnc_jquery_cats_drop();">
 		    <img src="<?php bloginfo('template_directory'); ?>/images/menu/wptouch-menu-cats.png" alt="" /> <?php _e( 'Categories', 'wptouch' ); ?></a>
 	<?php } ?>
 	
@@ -112,16 +99,19 @@ include( dirname(__FILE__) . '/../core/core-header.php' );
 <!-- #start The Tags Drop-Down -->
 	<?php if ( function_exists('wp_tag_cloud') ) : ?>
 		<div id="wptouch-tags" class="dropper" style="display:none">
-				<ul>
 				<?php wp_tag_cloud('smallest=12&largest=12&unit=px&number=25&format=list&orderby=count&order=DESC'); ?>
 		   			<?php if (!bnc_is_js_enabled()) { ?>
-		           		<li class="noarrow"><a class="menu-close" href="javascript:document.getElementById('wptouch-tags').style.display = 'none';">
-		           			<img src="<?php bloginfo('template_directory'); ?>/images/cross.png" alt="" /> <?php _e( "Close Menu", "wptouch" ); ?></a>
-		           		</li>
 		           	<?php } ?>
-				</ul>
 		</div>
 	<?php endif; ?>  
 
+	<form action="<?php bloginfo('url'); ?>/" id="select-cats" method="get">
+<?php
+	$select = wp_dropdown_categories('show_option_none=Select category&show_count=1&orderby=name&echo=0');
+	$select = preg_replace("#<select([^>]*)>#", "<select$1 onchange='return this.form.submit()'>", $select);
+	echo $select;
+?>
+	</form>
+	
 <!-- #start the wptouch plugin use check -->
 <?php wptouch_core_header_check_use(); ?>
