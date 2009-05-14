@@ -151,6 +151,8 @@ form#select-cats, form#select-tags, form#select-acct {
 	overflow: hidden;
 	width: 0;
 	height: 0;
+	margin: 0;
+	padding: 0;
 }
 
 select#cat option {
@@ -898,14 +900,6 @@ img.small {
 	border-style: none;
 }
 
-.page-title-icon {
-	float: left;
-	margin-right: 10px;
-	position: relative;
-	bottom: 11px;
-	padding-top: 3px;
-}
-
 .pageentry {
 	color: #444;
 	padding: 2px 0 0;
@@ -919,8 +913,11 @@ img.small {
 
 img.pageicon {
 	position: relative;
-	top: 2px;
-	margin-right: 2px;
+	margin-right: 10px;
+	width: 42px;
+	height: 42px;
+	float: left;
+	margin-top: -15px;
 }
 
 .pageentry .wp-caption {
@@ -1087,14 +1084,14 @@ img.pageicon {
 	margin-bottom: 10px;
 }
 
-.comwrap {
+#comment_wrapper .comwrap {
 	-webkit-border-radius: 8px;
 	border: 1px solid #adadad;
 	background-color: #fff;
 	padding: 5px;
 }
 
-.comtop {
+#comment_wrapper .comtop {
 	font-size: 14px;
 	font-weight: bold;
 	position: relative;
@@ -1102,7 +1099,7 @@ img.pageicon {
 	margin: 5px 0 0;
 }
 
-.combody {
+#comment_wrapper .combody {
 	padding: 0 5px;
 	margin: 0;
 	position: relative;
@@ -1112,7 +1109,12 @@ img.pageicon {
 	overflow: hidden;
 }
 
-.comdater {
+#comment_wrapper .combody img {
+	max-width: 100% !important;
+	height: auto !important;
+}
+
+#comment_wrapper .comdater {
 	font-size: 12px;
 	color: #adadad;
 	letter-spacing: 0;
@@ -1120,14 +1122,14 @@ img.pageicon {
 	font-style: normal;
 }
 
-.gravatar {
+#comment_wrapper .gravatar {
 	position: relative;
 	margin-right: 5px;
 	padding: 0px;
 	float: left;
 }
 
-.avatar {
+#comment_wrapper .avatar {
 	position: relative;
 	margin-right: 5px;
 	padding: 0px;
@@ -1380,58 +1382,6 @@ a.dsq-brlink {
 }
 
 /* @end */
-
-/* @end */
-
-/* @group Javascript Off */
-
-a.search-close {
-	float: right;
-	margin-top: 3px;
-	padding: 2px;
-	border: 1px solid #555;
-	background: #444;
-	-webkit-border-radius: 2px;
-	margin-right: 3px;
-}
-
-#dropmenu-inner li.noarrow, #wptouch-cats li.noarrow {
-	border-bottom: 0px;
-	margin: 0;
-	background: none;
-	padding: 9px 20px 7px 10px;
-}
-
-#dropmenu-inner li.noarrow img, #wptouch-cats li.noarrow img {
-	width: 20px;
-	height: 20px;
-	margin-top: 5px;
-	margin-left: 5px;
-}
-
-.main-navigation {
-	display: block;
-	-webkit-border-radius: 8px;
-	border: 1px solid #adadad;
-	background: #fff repeat-x;
-	margin: 10px;
-	clear: both;
-	height: 30px;
-	padding: 4px;
-}
-
-.main-navigation a {
-	color: #222;
-	font-size: 12px;
-	font-weight: bold;
-	padding-bottom: 10px;
-	padding-top: 2px;
-}
-
-.main-navigation img {
-	position: relative;
-	top: 6px;
-}
 
 /* @end */
 
