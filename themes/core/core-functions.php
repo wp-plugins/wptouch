@@ -6,7 +6,7 @@
 function wptouch_core_header_enqueue() {
 	$version = get_bloginfo('version'); 
 		if ($version >= 2.5 && !bnc_wptouch_is_exclusive()) { 
-		wp_enqueue_script('wptouch-core', '/' . PLUGINDIR . '/wptouch/themes/core/core.js', array('jquery'),'1.9' );		
+		wp_enqueue_script('wptouch-core', '/' . compat_get_plugin_url( 'wptouch' ) . '/themes/core/core.js', array('jquery'),'1.9' );		
 		wp_head(); 
 
  			} elseif ($version >= 2.5 && bnc_wptouch_is_exclusive()) { 

@@ -16,7 +16,11 @@ The admin panel allows you to customize many aspects of its appearance, and deli
 
 The theme also includes the ability for your visitors to easily switch between the *WPtouch* view and your site's regular theme.
 
-= New In Version 1.9 (beta 3 - may 14th, 2009): =
+= New In Version 1.9 (beta 4 - may 14th, 2009): =
+* Fixed issue where core.js wasn't found
+* Fixed device-width mobileSafari bug
+
+= Version 1.9 (beta 3 - may 14th, 2009): =
 
 * Fixed style issue for icons on pages
 * Added style declaration for images in comments
@@ -26,7 +30,7 @@ The theme also includes the ability for your visitors to easily switch between t
 * Fixed issue where chosen pages and icons did not appear in the drop down
 * Removed 404 image with English text in it, replaced it with localized 404 text
 
-= New In Version 1.9 (beta 2 - may 14th, 2009): =
+= Version 1.9 (beta 2 - may 14th, 2009): =
 
 * Fixed parse error in core-functions.php
 * Updated ajax upload script to v3.1
@@ -37,7 +41,7 @@ The theme also includes the ability for your visitors to easily switch between t
 * More minor admin styling enhancements
 * Added native select for Tags
 
-= New In Version 1.9 (beta 1 may 13th, 2009): =
+= Version 1.9 (beta 1 may 13th, 2009): =
 
 * Updated compatibility code (Various WordPress install scenarios) -- thanks to Will Norris for the suggestions
 * Modified AJAX calls
