@@ -33,11 +33,12 @@
 			
 			<li>
 				<input class="checkbox" type="checkbox" name="enable-login-button" <?php if (isset($wptouch_settings['enable-login-button']) && $wptouch_settings['enable-login-button'] == 1) echo('checked'); ?> />
-				<label class="label" for="enable-login-button"><?php _e( "Enable login from the header", "wptouch" ); ?> <a href="#login-info" class="wptouch-fancylink">?</a></label>
+				<label class="label" for="enable-login-button"><?php _e( "Enable login/account links from the header", "wptouch" ); ?> <a href="#login-info" class="wptouch-fancylink">?</a></label>
 				<div id="login-info" style="display:none">
 					<h2><?php _e( "More Info", "wptouch" ); ?></h2>
 					<p><?php _e( "This will add a 'Login' item in the WPtouch sub header beside the Tags and Categories link buttons if they are also enabled.", "wptouch" ); ?></p>
 					<p><?php _e( "It will display a username/password drop-down, allowing users to login plus be automatically re-directed back to the page they logged in from without seeing the WP admin.", "wptouch" ); ?></p>
+					<p><?php _e( "Once logged in, a new 'My Account' button will appear beside a logout button. The 'My Account' button shows useful links depending on the type of account (subscriber, admin, etc.).", "wptouch" ); ?></p>
 				</div>
 			</li>
 
@@ -54,13 +55,6 @@
 				<input class="checkbox" type="checkbox" name="enable-gravatars" <?php if (isset($wptouch_settings['enable-gravatars']) && $wptouch_settings['enable-gravatars'] == 1) echo('checked'); ?> />
 				<label class="label" for="enable-gravatars"> <?php _e( "Enable gravatars in comments", "wptouch" ); ?></label>
 			</li>
-
-<?php /*
-			<li>
-				<input class="checkbox" type="checkbox" name="enable-js-header" <?php if (isset($wptouch_settings['enable-js-header']) && $wptouch_settings['enable-js-header'] == 1) echo('checked'); ?> />
-				<label class="label" for="enable-js-header"> <?php _e( "Use advanced", "wptouch" ); ?> <a href="http://www.jquery.com/" target="_blank"><?php _e( "jQuery", "wptouch" ); ?></a> <?php _e( "javascript effects", "wptouch" ); ?> <small>(<?php _e( "ajax entries &amp; comments", "wptouch" ); ?>)</small></label>
-			</li> 
-*/?>
 
 			<li>
 				<input class="checkbox" type="checkbox" name="enable-regular-default" <?php if (isset($wptouch_settings['enable-regular-default']) && $wptouch_settings['enable-regular-default'] == 1) echo('checked'); ?> />

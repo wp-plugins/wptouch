@@ -16,25 +16,6 @@ include( dirname(__FILE__) . '/../core/core-header.php' );
 </div>
 
 <div id="drop-fade">
-<?php if (bnc_is_login_button_enabled()) { ?>
-	<?php if (!is_user_logged_in()) { ?>
-		    <a id="loginopen" href="javascript:bnc_jquery_login_drop();">
-		    	<img src="<?php bloginfo('template_directory'); ?>/images/menu/wptouch-menu-login.png" alt="" /> <?php _e( 'Login', 'wptouch' ); ?>
-		    </a>	
-
-	<?php } else { ?>
-
-	<?php $version = (float)get_bloginfo('version'); if ($version >= 2.7) { ?>
-		<a id="loginopen" href="<?php echo wp_logout_url($_SERVER['REQUEST_URI']); ?>">
-	<?php } else { ?>
-		<a href="<?php bloginfo('wpurl'); ?>/wp-login.php?action=logout&redirect_to=<?php echo $_SERVER['REQUEST_URI']; ?>">
-	<?php } ?>
-		<img src="<?php bloginfo('template_directory'); ?>/images/menu/wptouch-menu-logout.png" alt="" /> <?php _e( 'Logout', 'wptouch' ); ?>
-		</a>
-	<?php } ?>
-<?php } ?>
-
-
 
 	<?php if (bnc_is_cats_button_enabled()) { ?>			    
 	    <a id="catsopen" href="javascript:bnc_jquery_cats_open();">
@@ -47,14 +28,28 @@ include( dirname(__FILE__) . '/../core/core-header.php' );
 	    	<img src="<?php bloginfo('template_directory'); ?>/images/menu/wptouch-menu-tags.png" alt="" /> <?php _e( 'Tags', 'wptouch' ); ?>
 	    </a>
 	<?php } ?>
-</div>
+
+	<?php if (bnc_is_login_button_enabled()) { ?>
+		<?php if (!is_user_logged_in()) { ?>
+			    <a id="loginopen" href="javascript:bnc_jquery_login_drop();">
+			    	<img src="<?php bloginfo('template_directory'); ?>/images/menu/wptouch-menu-login.png" alt="" /> <?php _e( 'Login', 'wptouch' ); ?>
+			    </a>	
+	
+		<?php } else { ?>
+			    <a id="accountopen" href="javascript:bnc_jquery_acct_open();">
+			    	<img src="<?php bloginfo('template_directory'); ?>/images/menu/wptouch-menu-acct.png" alt="" /> <?php _e( 'My Account', 'wptouch' ); ?>
+			    </a>	
+	<?php } } ?>
+	
+
+</div><!-- #drop-fade -->
+
 
 <!-- #start The Search / Menu Drop-Down -->
-
 	<div id="wptouch-menu" class="dropper" style="display:none"> 
  		<div id="wptouch-search-inner">
 			<form method="get" id="searchform" action="<?php bloginfo('home'); ?>/">
-			<input type="text" value="Search..." onfocus="this.value=''" onblur="this.value='Search...'" name="s" id="s" /> 
+			<input type="text" value="Search..." onfocus="this.value=''" onblur="this.value=''" name="s" id="s" /> 
 			<input name="submit" type="hidden" tabindex="5" value="Search"  />
 			</form>
 		</div>
@@ -69,7 +64,6 @@ include( dirname(__FILE__) . '/../core/core-header.php' );
 	</div>
 
 <!--#start The Login Drop-Down -->
-
 	<div id="wptouch-login" class="dropper" style="display:none">
 		<div id="wptouch-login-inner">
 			<form name="loginform" id="loginform" action="<?php bloginfo('wpurl'); ?>/wp-login.php" method="post">
@@ -96,12 +90,29 @@ include( dirname(__FILE__) . '/../core/core-header.php' );
 	</form>
 
  <!-- #start The Tags Select List -->
-<form action="<?php bloginfo('home'); ?>/" id="select-tags" method="get">
-<select id="tag-dropdown" name="tag-dropdown" onchange="document.location.href=this.options[this.selectedIndex].value;">
-	<option value="">Select Tag:</option>
-	<?php dropdown_tag_cloud('number=50&order=asc'); ?>
-</select>
-	</form>
+<form id="select-tags">
+	<select id="tag-dropdown" name="tag-dropdown" onchange="document.location.href=this.options[this.selectedIndex].value;">
+		<option value="">Select Tag:</option>
+		<?php dropdown_tag_cloud('number=50&order=asc'); ?>
+	</select>
+</form>
+
+ <!-- #start The Account Select List -->
+<form id="select-acct">	
+	<select id="acct-dropdown" name="acct-dropdown" onchange="document.location.href=this.options[this.selectedIndex].value;">
+	<option value="#"><?php _e("My Account:", "wptouch"); ?></option>
+			<?php if (current_user_can('edit_posts')) : ?>
+				<option value="<?php bloginfo('wpurl'); ?>/wp-admin/"><?php _e("Admin", "wptouch"); ?></option>
+			<?php endif; ?>
+			<?php if (get_option('comment_registration')) { ?>
+				<option value="<?php bloginfo('wpurl'); ?>/wp-register.php"><?php _e( "Register for this site", "wptouch" ); ?></option>
+			<?php } ?>
+			<?php if (is_user_logged_in()) { ?>
+				<option value="<?php bloginfo('wpurl'); ?>/wp-admin/profile.php"><?php _e( "Account Profile", "wptouch" ); ?></option>
+				<option value="<?php $version = (float)get_bloginfo('version'); if ($version >= 2.7) { ?><?php echo wp_logout_url($_SERVER['REQUEST_URI']); } else { bloginfo('wpurl'); ?>/wp-login.php?action=logout&redirect_to=<?php echo $_SERVER['REQUEST_URI']; ?><?php } ?>"><?php _e( "Logout", "wptouch" ); ?></option>	
+			<?php } ?>
+	</select>
+</form>
 		
 <!-- #start the wptouch plugin use check -->
 <?php wptouch_core_header_check_use(); ?>

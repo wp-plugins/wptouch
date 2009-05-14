@@ -16,11 +16,13 @@ The admin panel allows you to customize many aspects of its appearance, and deli
 
 The theme also includes the ability for your visitors to easily switch between the *WPtouch* view and your site's regular theme.
 
-= Coming In Version 1.9 (beta 3): =
+= New In Version 1.9 (beta 3 - may 14th, 2009): =
 
 * Fixed style issues on pages
 * Added style declarations for code in posts, images in comments
 * More theme styling enhancements, particularly in the header, footer
+* Added 'My Account' button in the sub-header for logged in users. Opens useful links depending on the type of account (admin, subscriber, etc.)
+* Fixed missing jQuery load (due to the half-removal of the disable jQuery function)
 
 = New In Version 1.9 (beta 2 - may 14th, 2009): =
 

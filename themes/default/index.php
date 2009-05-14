@@ -41,7 +41,6 @@
 
     <?php endwhile; ?>	
 
-<?php if (bnc_is_js_enabled()) { ?>
 
 	<div id="call<?php echo md5($_SERVER['REQUEST_URI']); ?>" class="ajax-load-more">
 		<img id="spinner<?php echo md5($_SERVER['REQUEST_URI']); ?>" class="spin" src="<?php bloginfo('template_directory'); ?>/images/main-ajax-loader.gif" style="display:none" alt="" />
@@ -58,18 +57,6 @@
 		</a>
 	</div>
 	<div id="ajaxentries<?php echo md5($_SERVER['REQUEST_URI']); ?>"></div>
-
-	<?php } elseif (!bnc_is_js_enabled()) { ?>
-
-		<div class="main-navigation">
-			<div class="alignleft">
-				<?php previous_posts_link('<img src="' . get_bloginfo('template_directory') . '/themes/default/images/blue_arrow_l.jpg" alt="" /> ' . __( 'Newer', 'wptouch')); ?>
-			</div>
-			<div class="alignright">
-				<?php next_posts_link( __('Older', 'wptouch') . ' <img src="' . get_bloginfo('template_directory') . 'themes/default/images/blue_arrow_r.jpg" alt="" />') ?>
-			</div>
-		</div>
-	<?php } ?>
 	
 </div><!-- #End post -->
 

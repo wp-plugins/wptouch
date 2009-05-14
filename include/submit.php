@@ -42,12 +42,6 @@
 			$a['enable-redirect'] = 0;
 		}
 
-		if ( isset( $_POST['enable-js-header'] ) ) {
-			$a['enable-js-header'] = 1;
-		} else {
-			$a['enable-js-header'] = 0;
-		}
-
 		if ( isset( $_POST['enable-gravatars'] ) ) {
 			$a['enable-gravatars'] = 1;
 		} else {

@@ -4,7 +4,7 @@
    Plugin URI: http://bravenewcode.com/wptouch/
    Description: A plugin which formats your site with a mobile theme for the Apple <a href="http://www.apple.com/iphone/">iPhone</a> & <a href="http://www.apple.com/ipodtouch/">iPod touch</a>, <a href="http://www.android.com/">Google Android</a> or <a href="http://www.rim.com/storm/">Blackberry Storm</a> touch mobile devices. Set options by visiting the <a href="options-general.php?page=wptouch/wptouch.php">WPtouch admin panel</a>. &nbsp;
    Author: Dale Mugford & Duane Storey
-   Version: 1.9b2
+   Version: 1.9b3
    Author URI: http://www.bravenewcode.com
    
    # Special thanks to ContentRobot and the iWPhone theme/plugin
@@ -31,7 +31,7 @@
 
 // WPtouch Theme Options
 global $bnc_wptouch_version;
-$bnc_wptouch_version = '1.9 Beta 2';
+$bnc_wptouch_version = '1.9 Beta 3';
 
 require_once( 'include/plugin.php' );
 require_once( 'include/compat.php' );
@@ -422,11 +422,6 @@ function bnc_is_redirect_enable() {
 	return $ids['enable-redirect'];
 }
 	
-function bnc_is_js_enabled() {
-	$ids = bnc_wp_touch_get_menu_pages();
-	return $ids['enable-js-header'];
-}	
-	
 function bnc_is_gravatars_enabled() {
 	$ids = bnc_wp_touch_get_menu_pages();
 	return $ids['enable-gravatars'];
@@ -476,9 +471,9 @@ function bnc_wp_touch_get_pages() {
 	foreach ($ids as $k => $v) {
 		if ($k == 'main_title' || $k == 'enable-post-excerpts' || $k == 'enable-page-coms' || 
 			 $k == 'enable-cats-button'  || $k == 'enable-tags-button'  || $k == 'enable-login-button' || 
-			 $k == 'enable-redirect' || $k == 'enable-js-header' || $k == 'enable-gravatars' || 
-			 $k == 'enable-main-home' || $k == 'enable-main-rss' || $k == 'enable-main-email' || 
-			 $k == 'enable-main-name' || $k == 'enable-main-tags' || $k == 'enable-main-categories') {
+			 $k == 'enable-redirect' || $k == 'enable-gravatars' || $k == 'enable-main-home' || 
+			 $k == 'enable-main-rss' || $k == 'enable-main-email' || $k == 'enable-main-name' || 
+			 $k == 'enable-main-tags' || $k == 'enable-main-categories') {
 			} else {
 				if (is_numeric($k)) {
 					$keys[] = $k;

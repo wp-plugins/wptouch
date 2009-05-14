@@ -48,6 +48,11 @@ jQuery.fn.fadeToggle = function(speed, easing, callback) {
 		jQuery('#tag-dropdown').focus();
 		//$wptouch("#drop-fade a#tagsopen").toggleClass("baropen");
 	}
+
+	function bnc_jquery_acct_open() {
+		jQuery('#acct-dropdown').focus();
+		//$wptouch("#drop-fade a#tagsopen").toggleClass("baropen");
+	}
 	
 /////// -- Ajax Comments -- ///////
 

@@ -3,24 +3,17 @@
 // WPtouch Core Header Functions
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-function wptouch_core_header_styles() {
-	include('core-styles.php' );
-}
-
 function wptouch_core_header_enqueue() {
 	$version = get_bloginfo('version'); 
-		if ($version >= 2.5 && !bnc_wptouch_is_exclusive() && bnc_is_js_enabled()) { 
+		if ($version >= 2.5 && !bnc_wptouch_is_exclusive()) { 
 		wp_enqueue_script('wptouch-core', '/' . PLUGINDIR . '/wptouch/themes/core/core.js', array('jquery'),'1.9' );		
 		wp_head(); 
 
- 			} elseif ($version >= 2.5 && bnc_wptouch_is_exclusive() && bnc_is_js_enabled()) { 
+ 			} elseif ($version >= 2.5 && bnc_wptouch_is_exclusive()) { 
 			echo '<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>';
 			echo '<script src="' . compat_get_plugin_url( 'wptouch' ) . '/themes/core/core.js" type="text/javascript" charset="utf-8"></script>'; 
 
-		} elseif ($version < 2.5 && bnc_is_js_enabled()) { 
-			echo '<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>';
-			echo '<script src="' . compat_get_plugin_url( 'wptouch' ) . '/themes/core/core.js" type="text/javascript" charset="utf-8"></script>'; 
- 	}
+		}
  }
   
 function wptouch_core_header_home() {
@@ -151,6 +144,10 @@ function core_header_tag_cloud( $tags, $args = '' ) {
 	endswitch;
 
 	return apply_filters( 'core_header_tag_cloud', $return, $tags, $args );
+}
+
+function wptouch_core_header_styles() {
+	include('core-styles.php' );
 }
   
   
