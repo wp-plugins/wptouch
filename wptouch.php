@@ -131,9 +131,9 @@ function wptouch_content_filter( $content ) {
 			if ( $version <= 2.3 ) {
 				echo '<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>\n';
 			}
-			echo "<script type='text/javascript' src='" . compat_get_plugin_url( 'wptouch' ) . "/js/jquery.ajax_upload.1.1.js'></script>\n";
-			echo "<script type='text/javascript' src='" . compat_get_plugin_url( 'wptouch' ) . "/js/fancybox1.2.1.js'></script>\n";
-			echo "<script type='text/javascript' src='" . compat_get_plugin_url( 'wptouch' ) . "/js/wptouch-admin.js'></script>\n";
+			echo "<script type='text/javascript' src='" . compat_get_plugin_url( 'wptouch' ) . "/js/ajax_upload_3.1.js'></script>\n";
+			echo "<script type='text/javascript' src='" . compat_get_plugin_url( 'wptouch' ) . "/js/fancybox_1.2.1.js'></script>\n";
+			echo "<script type='text/javascript' src='" . compat_get_plugin_url( 'wptouch' ) . "/js/wptouch_admin_1.9.js'></script>\n";
 		}
 	}
   
@@ -334,20 +334,6 @@ function bnc_options_menu() {
 	add_options_page( __( 'WPtouch Theme', 'wptouch' ), 'WPtouch', 9, __FILE__, bnc_wp_touch_page );
 }
 
-function bnc_get_ordered_cat_list() {
-	// We created our own function for this as wp_list_categories doesn't make the count linkable
-
-	global $table_prefix;
-	global $wpdb;
-
-	$sql = "select * from " . $table_prefix . "term_taxonomy inner join " . $table_prefix . "terms on " . $table_prefix . "term_taxonomy.term_id = " . $table_prefix . "terms.term_id where taxonomy = 'category' order by count desc";	
-	$results = $wpdb->get_results( $sql );
-	foreach ($results as $result) {
-		echo "<li><a href=\"" . get_category_link( $result->term_id ) . "\">" . $result->name . " (" . $result->count . ")</a></li>";
-	}
-
-}
-
 function bnc_wptouch_get_settings() {
 	return bnc_wp_touch_get_menu_pages();
 }
@@ -504,7 +490,7 @@ function bnc_wp_touch_get_pages() {
 	$results = false;
 
 	if ( count( $keys ) > 0 ) {
-		$query = "select * from {$table_prefix}posts where ID in (" . implode(',', $keys) . ") order by post_title asc";
+		$query = "select * from {$table_prefix} posts where ID in (" . implode(',', $keys) . ") order by post_title asc";
 		$results = $wpdb->get_results( $query, ARRAY_A );
 	}
 
@@ -592,9 +578,10 @@ function bnc_wp_touch_page() {
 		<input type="submit" name="submit" value="<?php _e('Save Options', 'wptouch' ); ?>" id="wptouch-button" class="button-primary" />
 	</form>
 	
-<form method="post" action="<?php echo $_SERVER['REQUEST_URI']; ?>">
+	<form method="post" action="<?php echo $_SERVER['REQUEST_URI']; ?>">
 		<input type="submit" onclick="return confirm('Restore the default WPtouch settings?');" name="reset" value="<?php _e('Restore Defaults', 'wptouch' ); ?>" id="wptouch-button-reset" class="button-highlighted" />
 	</form>
+		
 		<?php echo('' . WPtouch('<div class="wptouch-version"> This is ','</div>') . ''); ?>
 
 	<div class="wptouch-clearer"></div>

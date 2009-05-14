@@ -6,12 +6,7 @@
 
 			<div class="wptouch-left-content">
 				<p><?php _e( "Choose to enable/disable advanced features &amp; options available for WPtouch.", "wptouch"); ?></p>	
-				<p><strong><?php _e( "When  advanced javascript is unchecked:", "wptouch" ); ?></strong></p>
-					<ul>
-						<li><?php _e( "Faster load on 3G/EDGE connections", "wptouch" ); ?></li>
-						<li><?php _e( "Ajax / jQuery not used", "wptouch" ); ?></li>
-						<li><?php _e( "May solve javascript collisions", "wptouch" ); ?></li>
-					</ul>
+				<p><?php _e( "* WPtouch exclusive mode fixes issues where other plugins load scripts which erroneously interfere with WPtouch functions and javascript.", "wptouch" ); ?></p>
 			</div><!-- wptouch-left-content -->
 	
 	<div class="wptouch-right-content">
@@ -60,14 +55,16 @@
 				<label class="label" for="enable-gravatars"> <?php _e( "Enable gravatars in comments", "wptouch" ); ?></label>
 			</li>
 
+<?php /*
 			<li>
 				<input class="checkbox" type="checkbox" name="enable-js-header" <?php if (isset($wptouch_settings['enable-js-header']) && $wptouch_settings['enable-js-header'] == 1) echo('checked'); ?> />
 				<label class="label" for="enable-js-header"> <?php _e( "Use advanced", "wptouch" ); ?> <a href="http://www.jquery.com/" target="_blank"><?php _e( "jQuery", "wptouch" ); ?></a> <?php _e( "javascript effects", "wptouch" ); ?> <small>(<?php _e( "ajax entries &amp; comments", "wptouch" ); ?>)</small></label>
-			</li>
+			</li> 
+*/?>
 
 			<li>
 				<input class="checkbox" type="checkbox" name="enable-regular-default" <?php if (isset($wptouch_settings['enable-regular-default']) && $wptouch_settings['enable-regular-default'] == 1) echo('checked'); ?> />
-				<label class="label" for="enable-regular-default"><?php _e( "First-time mobile users will see regular (non-mobile) site", "wptouch" ); ?> <a href="#reg-info" class="wptouch-fancylink">?</a></label>
+				<label class="label" for="enable-regular-default"><?php echo sprintf(__( "1%sst%s visit mobile users will see desktop theme", "wptouch" ), '<sup>','</sup>'); ?> <a href="#reg-info" class="wptouch-fancylink">?</a></label>
 				<div id="reg-info" style="display:none">
 					<h2><?php _e( "More Info", "wptouch" ); ?></h2>
 					<p><?php _e( "When this option is checked, users will see your regular site theme first, and have the option in your footer to switch to the WPtouch mobile view.", "wptouch" ); ?></p>

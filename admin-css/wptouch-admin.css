@@ -100,6 +100,7 @@
 	vertical-align: baseline;
 	width: 176px;
 	margin-right: 5px;
+	border: 1px solid #6caccd;
 }
 
 #wptouch-theme input.checkbox {
@@ -110,14 +111,15 @@
 }
 
 #wptouch-theme input {
-	border: 1px solid #cadbdf;
+	border: 2px solid #a4c6d3;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	margin-left: 5px;
 	margin-right: 7px;
 	width: 177px;
-	color: #444;
+	color: #555;
 	font-size: 11px;
+	background-color: #ebf1ff;
 }
 
 #wptouch-theme ul.wptouch-make-li-italic li {
@@ -303,6 +305,9 @@ textarea#wptouch-stats {
 	margin-bottom: 15px;
 	color: #444;
 	font-size: 11px;
+	border-width: 2px;
+	border-color: #a4c6d3;
+	background-color: #ebf1ff;
 }
 
 

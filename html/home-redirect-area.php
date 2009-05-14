@@ -12,7 +12,7 @@
 				<p><label for="home-page"><strong><?php _e( "Override Home Page", "wptouch" ); ?></strong></label></p>
 				<p><?php _e( "If you'd like a different home page for your WPtouch mobile site", "wptouch" ); ?><br />
 				<?php _e( "(your posts page for example) select it from the list below.", "wptouch" ); ?></p>
-				<p><?php wp_dropdown_pages( 'show_option_none=Default&name=home-page&selected=' . bnc_get_selected_home_page()); ?></p>
+				<p><?php wp_dropdown_pages( 'show_option_none=WordPress Settings&name=home-page&selected=' . bnc_get_selected_home_page()); ?></p>
 			</div>
 			
 	<div class="wptouch-clearer"></div>

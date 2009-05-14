@@ -15,17 +15,17 @@ function wptouch_core_header_enqueue() {
 
  			} elseif ($version >= 2.5 && bnc_wptouch_is_exclusive() && bnc_is_js_enabled()) { 
 			echo '<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>';
-			echo '<script src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/themes/core/core.js" type="text/javascript" charset="utf-8"></script>'; 
+			echo '<script src="' . compat_get_plugin_url( 'wptouch' ) . '/themes/core/core.js" type="text/javascript" charset="utf-8"></script>'; 
 
 		} elseif ($version < 2.5 && bnc_is_js_enabled()) { 
 			echo '<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>';
-			echo '<script src="' . get_bloginfo('wpurl') . '/wp-content/plugins/wptouch/themes/core/core.js" type="text/javascript" charset="utf-8"></script>'; 
+			echo '<script src="' . compat_get_plugin_url( 'wptouch' ) . '/themes/core/core.js" type="text/javascript" charset="utf-8"></script>'; 
  	}
  }
   
 function wptouch_core_header_home() {
 	if (bnc_is_home_enabled()) {
-		echo '<li><a href="' . get_bloginfo('home') . '"><img src="' . compat_get_plugin_url( 'wptouch' ) . '/images/icon-pool/Home.png" alt="" />' . __( "Home", "wptouch" ) . '</a></li>'; 
+		echo sprintf(__( "%sHome%s", "wptouch" ), '<li><a href="' . get_bloginfo('home') . '"><img src="' . compat_get_plugin_url( 'wptouch' ) . '/images/icon-pool/Home.png" alt="" />','</a></li>');
 	}
 }
   
@@ -44,28 +44,22 @@ function wptouch_core_header_pages() {
  
 function wptouch_core_header_rss() {
 	if (bnc_is_rss_enabled()) {
-		echo '<li><a href="' . get_bloginfo('rss2_url') . '"><img src="' . compat_get_plugin_url( 'wptouch' ) . '/images/icon-pool/RSS.png" alt="" />' . __( "RSS Feed", "wptouch" ) . '</a></li>'; 
+		echo sprintf(__( "%sRSS Feed%s", "wptouch" ), '<li><a href="' . get_bloginfo('rss2_url') . '"><img src="' . compat_get_plugin_url( 'wptouch' ) . '/images/icon-pool/RSS.png" alt="" />','</a></li>');
 	}
 }
 
 function wptouch_core_header_email() {
 	if (bnc_is_email_enabled()) {
-		echo '<li><a href="mailto:' . get_bloginfo('admin_email') . '"><img src="' . compat_get_plugin_url( 'wptouch' ) . '/images/icon-pool/Mail.png" alt="" />' . __( "E-Mail", "wptouch" ) . '</a></li>'; 
+		echo sprintf(__( "%sE-Mail%s", "wptouch" ), '<li><a href="mailto:' . get_bloginfo('admin_email') . '"><img src="' . compat_get_plugin_url( 'wptouch' ) . '/images/icon-pool/Mail.png" alt="" />','</a></li>');
 	}
 } 
-
-function wptouch_core_header_close() {
-	if (!bnc_is_js_enabled()) {
-	echo '<li><a class="menu-close" href="javascript:document.getElementById(\'dropmenu\').style.display = \'none\';"><img src="' . get_bloginfo('template_directory') . '/images/cross.png" alt="" /> ' . __( "Close Menu", "wptouch" ) . '</a></li>';
-	} 
-}
   
 function wptouch_core_header_check_use() {
 	if (false && function_exists('bnc_is_iphone') && !bnc_is_iphone()) {
 		echo '<div class="content post">';
-		echo '<a href="#" class="h2">' . __( 'Warning', 'wptouch' ) . '</a>';
+		echo sprintf(__( "%sWarning%s", "wptouch" ), '<a href="#" class="h2">','</a>');
 		echo '<div class="mainentry">';
-		echo '' . __( "Sorry, this theme is only meant for use with WordPress on Apple's iPhone and iPod Touch.", "wptouch" ) . '';
+		echo __( "Sorry, this theme is only meant for use with WordPress on Apple's iPhone and iPod Touch.", "wptouch" );
 		echo '</div></div>';
 		echo '' .get_footer() . '';
 		echo '</body>';
@@ -107,15 +101,12 @@ function wptouch_core_body_result_text() {
 }
 
 function wptouch_core_body_post_arrows() {  
-	 if (bnc_is_js_enabled() && bnc_excerpt_enabled()) {
+	 if (bnc_excerpt_enabled()) {
+// Down arrow		
 		echo '<a class="post-arrow" id="arrow-' . get_the_ID() . '" href="javascript:$wptouch(\'#entry-' . get_the_ID() . '\').fadeIn(500); $wptouch(\'#arrow-' . get_the_ID() . '\').hide(); $wptouch(\'#arrow-down-' . get_the_ID() . '\').show();"></a>';	
+// Up arrow		
 		echo '<a style="display:none" class="post-arrow-down month-' . get_the_time('m') . '" id="arrow-down-' . get_the_ID() . '" href="javascript:$wptouch(\'#entry-' . get_the_ID() . '\').fadeOut(500); $wptouch(\'#arrow-' . get_the_ID() . '\').show(); $wptouch(\'#arrow-down-' . get_the_ID() . '\').hide();"></a>';
-	
-	} elseif (!bnc_is_js_enabled() && bnc_excerpt_enabled()) {
-
-		echo '<a class="post-arrow" id="arrow-' . get_the_ID() . '" href="javascript:document.getElementById(\'entry-' . get_the_ID() . '\').style.display = \'block\';document.getElementById(\'arrow-' . get_the_ID() . '\').style.display = \'none\';document.getElementById(\'arrow-down-' . get_the_ID() . '\').style.display = \'block\';"></a>';
-		echo '<a style="display:none" class="post-arrow-down" id="arrow-down-' . get_the_ID() . '" href="javascript:document.getElementById(\'entry-' . get_the_ID() . '\').style.display = \'none\';document.getElementById(\'arrow-' . get_the_ID() . '\').style.display = \'block\';document.getElementById(\'arrow-down-' . get_the_ID() . '\').style.display = \'none\';"></a>';
-	}
+	} 
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -152,8 +143,57 @@ function bnc_url_exists($url)
   
   
 // This fetches the .ico files for the Links page generation 
-function bnc_get_ico_file($ico)
-  {
+// Check to see if function exists 
+if (!function_exists('file_put_contents')) { 
+
+    // Define constants used by function, if not defined 
+    if (!defined('FILE_USE_INCLUDE_PATH')) define('FILE_USE_INCLUDE_PATH', 1); 
+    if (!defined('FILE_APPEND'))           define('FILE_APPEND', 8); 
+     
+    // Define function and arguments 
+    function file_put_contents($file, &$data, $flags=0) 
+    { 
+        // Varify arguments are correct types 
+        if (!is_string($file)) return(false); 
+        if (!is_string($data) && !is_array($data)) return(false); 
+        if (!is_int($flags)) return(false); 
+         
+        // Set the include path and mode for fopen 
+        $include = false; 
+        $mode    = 'wb'; 
+         
+        // If data in array type.. 
+        if (is_array($data)) { 
+            // Make sure it's not multi-dimensional 
+            reset($data); 
+            while (list(, $value) = each($data)) { 
+                if (is_array($value)) return(false); 
+            } 
+            unset($value); 
+            reset($data); 
+            // Join the contents 
+            $data = implode('', $data); 
+        } 
+         
+        // Check for flags.. 
+        // If include path flag givin, set include path 
+        if ($flags&FILE_USE_INCLUDE_PATH) $include = true; 
+        // If append flag givin, set append mode 
+        if ($flags&FILE_APPEND) $mode = 'ab'; 
+         
+        // Open the file with givin options 
+        if (!$handle = @fopen($file, $mode, $include)) return(false); 
+        // Write data to file 
+        if (($bytes = fwrite($handle, $data)) === false) return(false); 
+        // Close file 
+        fclose($handle); 
+         
+        // Return number of bytes written 
+        return($bytes); 
+        
+    }  else {
+
+function bnc_get_ico_file($ico) {
       $d = file_get_contents($ico);
       if (!file_exists(bnc_get_local_dir() . '/cache')) {
           mkdir(bnc_get_local_dir() . '/cache', 0755);
@@ -161,7 +201,7 @@ function bnc_get_ico_file($ico)
       file_put_contents(bnc_get_local_dir() . '/cache/' . md5($ico) . '.ico', $d);
       exec('sh convert ico:' . bnc_get_local_dir() . '/cache/' . md5($ico) . '.ico' . bnc_get_local_dir() . '/cache/' . md5($ico) . '.png');
   }
-
+}
 
 // Where's the icon pool? Ah, there it is
 function bnc_get_local_dir()

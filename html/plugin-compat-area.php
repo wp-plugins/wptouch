@@ -15,27 +15,27 @@
 						echo '</p><p class="wptv">';
 						echo __( '' . wptouch() . ' support: ', 'wptouch' );
 						if ($version > 2.8) {
-							echo '<span class="caution">';
-							echo __( 'Untested', 'wptouch' ) . '';
-							echo '</span>';
+
+							echo sprintf(__( "%sUntested%s", "wptouch" ), '<span class="caution">','</span>');
+
 						} elseif ($version >= 2.5) {
-							echo '<span class="go">';
-							echo __('Fully Supported', 'wptouch' );
-							echo '</span>';
+
+							echo sprintf(__( "%sFully Supported%s", "wptouch" ), '<span class="go">','</span>');
+
 						} elseif ($version >= 2.3) {
-							echo '<span class="caution">';
-							echo __( 'Partially Supported, Upgrade Recommended', 'wptouch' );
-							echo '</span>';
+
+							echo sprintf(__( "%Partially Supported%s", "wptouch" ), '<span class="caution">','</span>');
+
 						} else {
-							echo '<span class="red">';
-							echo __( 'NOT Supported! Upgrade ', 'wptouch' ) . ' <u>' . __( 'Required', 'wptouch' ) . '</u>';
-							echo '</span>';
+
+							echo sprintf(__( "%Not Supported! Upgrade Required.%s", "wptouch" ), '<span class="red">','</span>');
+
 						} 
 						echo '</p>';
 					?>	
 				</div>
 				<p><?php _e( "Here you'll find information on additional WPtouch features and their requirements, including those activated with companion plugins.", "wptouch" ); ?></p>
-				<p><?php _e( "For further documentation visit" ); ?> <a href="http://www.bravenewcode.com/wptouch/"><?php _e( "BraveNewCode", "wptouch" ); ?></a>.</p>
+				<p><?php _e( "For further documentation visit" ); ?> <?php echo sprintf(__( "%sBraveNewCode.%s", "wptouch" ), '<a href="http://www.bravenewcode.com/wptouch/">','</a>'); ?></p>
 				<p><?php echo sprintf( __( "To report an incompatible plugin, let us know in our %sSupport Forums%s.", "wptouch"), '<a href="http://support.bravenewcode.com/">', '</a>' ); ?></p>
 		</div>
 		

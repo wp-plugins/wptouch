@@ -5,12 +5,12 @@
 		<h3><?php _e( "Site Menu &amp; Bookmark Icon", "wptouch" ); ?></h3>
 
 			<div class="wptouch-left-content">
-				<h4>Pages/Bookmark Icon</h4>
+				<h4><?php _e( "Pages/Bookmark Icon", "wptouch" ); ?></h4>
 				<p><?php _e( "Choose the logo displayed in the header (also your bookmark icon), and the pages you want included in the WPtouch drop-down menu.", "wptouch" ); ?> 						<strong><?php _e( "Remember, only those checked will be shown.", "wptouch" ); ?></strong></p>
 				<p><?php _e( "Next, select the icons from the lists that you want to pair with each page menu item.", "wptouch" ); ?></p>
 				<p><?php _e( "You can also decide if pages are listed by the page order (ID) in WordPress, or by name (default).", "wptouch" ); ?></p>
 				
-				<h4>Default Items</h4>
+				<h4><?php _e( "Default Items", "wptouch" ); ?></h4>
 				<p><?php _e( "Enable/Disable these default items in the WPtouch site menu.", "wptouch"); ?></p>
 			</div><!-- wptouch-left-content -->
 		
@@ -31,7 +31,7 @@
 			<?php foreach ( $pages as $page ) { ?>
 			<li><span>
 					<input class="checkbox" type="checkbox" name="enable_<?php echo $page->ID; ?>"<?php if ( isset( $wptouch_settings[$page->ID] ) ) echo " checked"; ?> />
-					<label class="wptouch-page-label" for="enable_<?php echo $page->ID; ?>"><?php echo $page->post_title; ?> Page</label>
+					<label class="wptouch-page-label" for="enable_<?php echo $page->ID; ?>"><?php echo $page->post_title; ?> <?php _e( "Page", "wptouch" ); ?></label>
 				</span>
 				<select class="page-select" name="icon_<?php echo $page->ID; ?>">
 					<?php bnc_get_icon_drop_down_list( $wptouch_settings[ $page->ID ]); ?>

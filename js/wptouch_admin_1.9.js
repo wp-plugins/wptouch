@@ -1,5 +1,6 @@
 /*
  * WPtouch admin Javascript
+ * Version: 1.9 (13/05/2009)
  * This file holds all the default jQuery & Ajax functions all in one neat place.
  * 
  * Copyright (c) 2009 Duane Storey & Dale Mugford (BraveNewCode Inc.)
@@ -14,8 +15,8 @@
 			action: '/?wptouch=upload',
 			autoSubmit: true,
 			name: 'submitted_file',
-			onSubmit: function(file, extension) { $j = jQuery.noConflict(); $j("#upload_progress").show(); },
-			onComplete: function(file, response) { $j = jQuery.noConflict(); $j("#upload_progress").hide();
+			onSubmit: function(file, extension) { $j("#upload_progress").show(); },
+			onComplete: function(file, response) { $j("#upload_progress").hide();
 			$j('#upload_response').hide().html(response).fadeIn(); }
 	});
 	

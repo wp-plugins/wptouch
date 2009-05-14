@@ -31,8 +31,8 @@ $oddcomment = 'alt';
 	<div class="comwrap">
 			<div class="comtop">		
 				<?php if (bnc_is_gravatars_enabled()) { if (function_exists('gravatar')) { ?>
-					<img class='gravatar' src="<?php gravatar("R", 28, "' . get_bloginfo('url') . '/wp-content/plugins/wptouch/images/blank_gravatar.png'"); ?>" alt='' />	
-					<?php } elseif (function_exists('get_avatar')) { echo get_avatar( $comment, $size = '28', $default = '' . get_bloginfo('url') . '/wp-content/plugins/wptouch/images/blank_gravatar.png' ); } ?>
+					<img class='gravatar' src="<?php gravatar("R", 28, "' . compat_get_plugin_url( 'wptouch' ) . '/images/blank_gravatar.png'"); ?>" alt='' />	
+					<?php } elseif (function_exists('get_avatar')) { echo get_avatar( $comment, $size = '28', $default = '' . compat_get_plugin_url( 'wptouch' ) . '/images/blank_gravatar.png' ); } ?>
 				<?php } ?>		
 					<a href="<?php comment_author_url(); ?>"><?php comment_author(); ?></a> said:
 			<div class="comdater"><?php comment_time('M jS @ h:i a'); ?></div>  

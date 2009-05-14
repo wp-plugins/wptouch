@@ -94,5 +94,4 @@
 	
 	function bnc_get_master_icon_list() {
 	}
-	
 ?>

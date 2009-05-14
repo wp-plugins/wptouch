@@ -7,8 +7,7 @@
 		}
 		
 		$version = $version / 100;
-		
+
 		return $version;
 	}		
-
 ?>

@@ -24,6 +24,8 @@ setInterval(updateLayout,300);
 /////// -- Drop Down Menus -- ///////
 
 $wptouch = jQuery.noConflict();
+
+// Creating a new function, fadeToggle()
 jQuery.fn.fadeToggle = function(speed, easing, callback) { 
    return this.animate({opacity: 'toggle'}, speed, easing, callback); 
 }; 
@@ -37,7 +39,7 @@ jQuery.fn.fadeToggle = function(speed, easing, callback) {
 		$wptouch("#drop-fade a#loginopen").toggleClass("baropen");
 	}
 	
-	function bnc_jquery_cats_drop() {
+	function bnc_jquery_cats_open() {
 		jQuery('#cat').focus();
 		$wptouch("#drop-fade a#catsopen").toggleClass("baropen");
 	}
