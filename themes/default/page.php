@@ -95,9 +95,12 @@
 	 <?php } elseif (is_search() && ($is_ajax)) { ?>
 	<div class="result-text-footer"><?php _e( "No more search results to display.", "wptouch" ); ?></div>
 	 <?php } elseif (is_search() && (!$is_ajax)) { ?>
-	 <div class="result-text-footer" style="padding-bottom:127px"><?php _e( "No search results results found.", "wptouch" ); ?><br /><?php _e( "Try another query.", "wptouch" ); ?></div>
+	 <div class="result-text-footer" style="padding-bottom:127px"><?php _e( "No search results results found.", "wptouch" ); ?><br /><?php _e( "Try another term.", "wptouch" ); ?></div>
 	<?php } else { ?>
-	  <div class="post"><img src="<?php bloginfo('template_directory'); ?>/images/404.jpg" alt="404 Not Found" /></div>
+	  <div class="post">
+	  	<h2><?php _e( "404 Not Found", "wptouch" ); ?></h2>
+	  	<p><?php _e( "The page or post you were looking for is missing or has been removed.", "wptouch" ); ?></p>
+	  </div>
 	<?php } ?>
 
  <?php endif; ?>

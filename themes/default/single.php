@@ -86,8 +86,11 @@ bloginfo('name'); ?>- <?php the_title();?>&body=<?php _e( "Check out this post:"
 			<?php } elseif (is_search()) { ?>
 		<div class="result-text"><?php _e( "No search results results found. Try another query.", "wptouch" ); ?></div>
 			<?php } else { ?>
-		<div class="post"><img src="<?php bloginfo('template_directory'); ?>/images/404.jpg" alt="404 Not Found" /></div>
-			<?php } ?>
+	  <div class="post">
+	  	<h2><?php _e( "404 Not Found", "wptouch" ); ?></h2>
+	  	<p><?php _e( "The page or post you were looking for is missing or has been removed.", "wptouch" ); ?></p>
+	  </div>
+	  		<?php } ?>
 	<?php endif; ?>
 		</div>
 	
