@@ -27,6 +27,7 @@ The theme also includes the ability for your visitors to easily switch between t
 * More theme styling enhancements, particularly in the header, footer
 * Fixed style issues on pages
 * Added style declarations for code in posts, images in comments
+* Added native select for Tags
 
 = New In Version 1.9 (beta 1): =
 

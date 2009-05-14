@@ -43,7 +43,7 @@ include( dirname(__FILE__) . '/../core/core-header.php' );
 	<?php } ?>
 	
 	<?php if (bnc_is_tags_button_enabled()) { ?>	
-	    <a id="tagsopen" href="javascript:bnc_jquery_tags_drop();">
+	    <a id="tagsopen" href="javascript:bnc_jquery_tags_open();">
 	    	<img src="<?php bloginfo('template_directory'); ?>/images/menu/wptouch-menu-tags.png" alt="" /> <?php _e( 'Tags', 'wptouch' ); ?>
 	    </a>
 	<?php } ?>
@@ -86,20 +86,22 @@ include( dirname(__FILE__) . '/../core/core-header.php' );
 		</div>
 	</div>
  
-<!-- #start The Tags Drop-Down -->
-	<?php if ( function_exists('wp_tag_cloud') ) : ?>
-		<div id="wptouch-tags" class="dropper" style="display:none">
-				<?php wp_tag_cloud('smallest=12&largest=12&unit=px&number=25&format=list&orderby=count&order=DESC'); ?>
-		</div>
-	<?php endif; ?>  
-
+ <!-- #start The Categories Select List -->
 	<form action="<?php bloginfo('home'); ?>/" id="select-cats" method="get">
 <?php
-	$select = wp_dropdown_categories('show_option_none=Select category&show_count=1&orderby=name&echo=0');
+	$select = wp_dropdown_categories('show_option_none=Select category:&show_count=1&orderby=name&echo=0');
 	$select = preg_replace("#<select([^>]*)>#", "<select$1 onchange='return this.form.submit()'>", $select);
 	echo $select;
 ?>
 	</form>
-	
+
+ <!-- #start The Tags Select List -->
+<form action="<?php bloginfo('home'); ?>/" id="select-tags" method="get">
+<select id="tag-dropdown" name="tag-dropdown" onchange="document.location.href=this.options[this.selectedIndex].value;">
+	<option value="">Select Tag:</option>
+	<?php dropdown_tag_cloud('number=50&order=asc'); ?>
+</select>
+	</form>
+		
 <!-- #start the wptouch plugin use check -->
 <?php wptouch_core_header_check_use(); ?>

@@ -147,7 +147,7 @@ blockquote {
 
 /* @group Header */
 
-form#select-cats {
+form#select-cats, form#select-tags {
 	overflow: hidden;
 	width: 0;
 	height: 0;

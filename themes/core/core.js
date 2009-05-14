@@ -41,12 +41,12 @@ jQuery.fn.fadeToggle = function(speed, easing, callback) {
 	
 	function bnc_jquery_cats_open() {
 		jQuery('#cat').focus();
-		$wptouch("#drop-fade a#catsopen").toggleClass("baropen");
+		//$wptouch("#drop-fade a#catsopen").toggleClass("baropen");
 	}
 	
-	function bnc_jquery_tags_drop() {
-		$wptouch('#wptouch-tags').fadeToggle(400);
-		$wptouch("#drop-fade a#tagsopen").toggleClass("baropen");
+	function bnc_jquery_tags_open() {
+		jQuery('#tag-dropdown').focus();
+		//$wptouch("#drop-fade a#tagsopen").toggleClass("baropen");
 	}
 	
 /////// -- Ajax Comments -- ///////
