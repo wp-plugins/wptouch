@@ -24,6 +24,7 @@ The theme also includes the ability for your visitors to easily switch between t
 * Added 'My Account' button in the sub-header for logged in users replacing 'Logout'. Opens useful links depending on the type of account (admin, subscriber, etc.)
 * Fixed missing jQuery load (due to the half-removal of the disable jQuery function)
 * Fixed issue where chosen pages and icons did not appear in the drop down
+* Removed 404 image with English text in it, replaced it with localized 404 text
 
 = New In Version 1.9 (beta 2 - may 14th, 2009): =
 
