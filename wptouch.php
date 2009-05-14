@@ -124,16 +124,16 @@ function wptouch_content_filter( $content ) {
 	// WP Admin stylesheet, jQuery + Ajax Upload
 	function wptouch_admin_css() {		
 		if ( isset( $_GET['page'] ) && $_GET['page'] == 'wptouch/wptouch.php' ) {		
-			echo "<link rel='stylesheet' type='text/css' href='" . compat_get_plugin_url( 'wptouch' ) . "/admin-css/wptouch-admin.css' />\n";
-			echo "<link rel='stylesheet' type='text/css' href='" . compat_get_plugin_url( 'wptouch' ) . "/admin-css/jquery.fancybox.css' />\n";
+			echo "<link rel='stylesheet' type='text/css' href='" . compat_get_plugin_url( 'wptouch' ) . "/admin-css/wptouch-admin.css' />";
+			echo "<link rel='stylesheet' type='text/css' href='" . compat_get_plugin_url( 'wptouch' ) . "/admin-css/jquery.fancybox.css' />";
 			
 			$version = (float)get_bloginfo('version');
 			if ( $version <= 2.3 ) {
-				echo '<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>\n';
+				echo '<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>';
 			}
-			echo "<script type='text/javascript' src='" . compat_get_plugin_url( 'wptouch' ) . "/js/ajax_upload_3.1.js'></script>\n";
-			echo "<script type='text/javascript' src='" . compat_get_plugin_url( 'wptouch' ) . "/js/fancybox_1.2.1.js'></script>\n";
-			echo "<script type='text/javascript' src='" . compat_get_plugin_url( 'wptouch' ) . "/js/wptouch_admin_1.9.js'></script>\n";
+			echo "<script type='text/javascript' src='" . compat_get_plugin_url( 'wptouch' ) . "/js/ajax_upload_3.1.js'></script>";
+			echo "<script type='text/javascript' src='" . compat_get_plugin_url( 'wptouch' ) . "/js/fancybox_1.2.1.js'></script>";
+			echo "<script type='text/javascript' src='" . compat_get_plugin_url( 'wptouch' ) . "/js/wptouch_admin_1.9.js'></script>";
 		}
 	}
   
