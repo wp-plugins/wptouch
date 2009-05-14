@@ -16,20 +16,24 @@ The admin panel allows you to customize many aspects of its appearance, and deli
 
 The theme also includes the ability for your visitors to easily switch between the *WPtouch* view and your site's regular theme.
 
-= New In Version 1.9 (beta 2): =
+= Coming In Version 1.9 (beta 3): =
 
+* Fixed style issues on pages
+* Added style declarations for code in posts, images in comments
+* More theme styling enhancements, particularly in the header, footer
+
+= New In Version 1.9 (beta 2 - may 14th, 2009): =
+
+* Fixed parse error in core-functions.php
 * Updated ajax upload script to v3.1
 * Updated fancybox to compressed v1.2.1
 * Fixed a few areas that had text not yet localized, improperly coded
 * Removed depreciated or unused functions from previous releases
 * Removed ability to disable jQuery; WPtouch Exclusive mode should fix JS issues
 * More minor admin styling enhancements
-* More theme styling enhancements, particularly in the header, footer
-* Fixed style issues on pages
-* Added style declarations for code in posts, images in comments
 * Added native select for Tags
 
-= New In Version 1.9 (beta 1): =
+= New In Version 1.9 (beta 1 may 13th, 2009): =
 
 * Updated compatibility code (Various WordPress install scenarios) -- thanks to Will Norris for the suggestions
 * Modified AJAX calls
