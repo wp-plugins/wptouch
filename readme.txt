@@ -18,8 +18,12 @@ The theme also includes the ability for your visitors to easily switch between t
 
 = New In Version 1.9 (beta 5): =
 
-* Fixed another issue where core.js wouldn't load properly
-* Dropped support for WordPress 2.3, lowest WordPress version supported: 2.5
+* Fixed another issue where core.js wouldn't load properly (core-functions.php)
+* Dropped support for WordPress 2.3, lowest known WordPress version supported: 2.5
+* Fix for custom page icons not showing up on pages
+* Removed unused images
+* Removed some default icons
+* Added link to online icon generator in admin
 
 
 = Version 1.9 (beta 4 - may 14th, 2009): =

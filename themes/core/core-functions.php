@@ -22,7 +22,7 @@ function wptouch_core_header_enqueue() {
   
 function wptouch_core_header_home() {
 	if (bnc_is_home_enabled()) {
-		echo sprintf(__( "%sHome%s", "wptouch" ), '<li><a href="' . get_bloginfo('home') . '"><img src="' . compat_get_plugin_url( 'wptouch' ) . '/images/icon-pool/Home.png" alt="" />','</a></li>');
+		echo sprintf(__( "%sHome%s", "wptouch" ), '<li><a href="' . get_bloginfo('home') . '"><img src="' . compat_get_plugin_url( 'wptouch' ) . '/images/icon-pool/Default.png" alt="" />','</a></li>');
 	}
 }
   
