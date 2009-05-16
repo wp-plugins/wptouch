@@ -84,7 +84,7 @@ $oddcomment = 'alt';
   <!--  Let's check for advanced JS setting, and if it's enabled do fancy ajax comments -->
   
 	<?php if (!function_exists('cas_register_post')) { ?>
-		<div id="refresher" style="display:none">&raquo; <a href="#" onclick="this.location.reload();"><?php _e( "Refresh the page", "wptouch" ); ?></a> <?php _e( "to post a new comment.", "wptouch" ); ?></div>
+		<div id="refresher" style="display:none">&raquo; <a href="#" onclick="this.location.reload(); return false;"><?php _e( "Refresh the page", "wptouch" ); ?></a> <?php _e( "to post a new comment.", "wptouch" ); ?></div>
 			<form id="commentform" action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" onsubmit="$wptouch('#loading').fadeIn(100);var list = $wptouch('#commentlist'); var html = list.html(); var param = $wptouch('form').serialize(); $wptouch.ajax({url: '<?php bloginfo('template_directory'); ?>/comments-ajax.php?' + param, success: function(data, status){ list.append(data); commentAdded(); }, type: 'get' }); return false;">
 	<?php } else { ?>
 		<form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" id="commentform">

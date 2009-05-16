@@ -104,9 +104,9 @@ function wptouch_core_body_result_text() {
 function wptouch_core_body_post_arrows() {  
 	 if (bnc_excerpt_enabled()) {
 // Down arrow		
-		echo '<a class="post-arrow" id="arrow-' . get_the_ID() . '" href="#" onclick="$wptouch(\'#entry-' . get_the_ID() . '\').fadeIn(500); $wptouch(\'#arrow-' . get_the_ID() . '\').hide(); $wptouch(\'#arrow-down-' . get_the_ID() . '\').show();"></a>';	
+		echo '<a class="post-arrow" id="arrow-' . get_the_ID() . '" href="#" onclick="$wptouch(\'#entry-' . get_the_ID() . '\').fadeIn(500); $wptouch(\'#arrow-' . get_the_ID() . '\').hide(); $wptouch(\'#arrow-down-' . get_the_ID() . '\').show(); return false;"></a>';	
 // Up arrow		
-		echo '<a style="display:none" class="post-arrow-down month-' . get_the_time('m') . '" id="arrow-down-' . get_the_ID() . '" href="#" onclick="$wptouch(\'#entry-' . get_the_ID() . '\').fadeOut(500); $wptouch(\'#arrow-' . get_the_ID() . '\').show(); $wptouch(\'#arrow-down-' . get_the_ID() . '\').hide();"></a>';
+		echo '<a style="display:none" class="post-arrow-down month-' . get_the_time('m') . '" id="arrow-down-' . get_the_ID() . '" href="#" onclick="$wptouch(\'#entry-' . get_the_ID() . '\').fadeOut(500); $wptouch(\'#arrow-' . get_the_ID() . '\').show(); $wptouch(\'#arrow-down-' . get_the_ID() . '\').hide(); return false;"></a>';
 	} 
 }
 
@@ -237,7 +237,7 @@ function bnc_get_local_icon_url()
 // This does the fancy favicons as icons for WordPress links
 function bnc_get_favicon_for_site($site)
   {// Yes we know this goes remote to handle things, but we do this to ensure that it works for everyone. No data is collected, as you'll see if you look at the script.
-      $i = 'http://www.bravenewcode.com/code/favicon.php?site=' . urlencode($site) . '&default=' . urlencode(bnc_get_local_icon_url() . '/icon-pool/default.png');
+      $i = 'http://www.bravenewcode.com/code/favicon.php?site=' . urlencode($site) . '&amp;default=' . urlencode(bnc_get_local_icon_url() . '/icon-pool/default.png');
       return $i;
   }
 

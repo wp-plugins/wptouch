@@ -11,32 +11,32 @@ include( dirname(__FILE__) . '/../core/core-header.php' );
 		<a href="<?php bloginfo('home'); ?>"><?php wptouch_core_body_sitetitle(); ?></a>
 	</div>
 	<div id="headerbar-menu">
-		    <a href="#" onclick="bnc_jquery_menu_drop();"></a>
+		    <a href="#" onclick="bnc_jquery_menu_drop(); return false;"></a>
 	</div>
 </div>
 
 <div id="drop-fade">
 
 	<?php if (bnc_is_cats_button_enabled()) { ?>			    
-	    <a id="catsopen" href="#" onclick="bnc_jquery_cats_open();">
+	    <a id="catsopen" href="#" onclick="bnc_jquery_cats_open(); return false;">
 	    	<img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/themes/core/core-images/menu/wptouch-menu-cats.png" alt="" /> <?php _e( 'Categories', 'wptouch' ); ?>
 	    </a>
 	<?php } ?>
 	
 	<?php if (bnc_is_tags_button_enabled()) { ?>	
-	    <a id="tagsopen" href="#" onclick="bnc_jquery_tags_open();">
+	    <a id="tagsopen" href="#" onclick="bnc_jquery_tags_open(); return false;">
 	    	<img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/themes/core/core-images/menu/wptouch-menu-tags.png" alt="" /> <?php _e( 'Tags', 'wptouch' ); ?>
 	    </a>
 	<?php } ?>
 
 	<?php if (bnc_is_login_button_enabled()) { ?>
 		<?php if (!is_user_logged_in()) { ?>
-			    <a id="loginopen" href="#" onclick="bnc_jquery_login_drop();">
+			    <a id="loginopen" href="#" onclick="bnc_jquery_login_drop(); return false;">
 			    	<img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/themes/core/core-images/menu/wptouch-menu-login.png" alt="" /> <?php _e( 'Login', 'wptouch' ); ?>
 			    </a>	
 	
 		<?php } else { ?>
-			    <a id="accountopen" href="#" onclick="bnc_jquery_acct_open();">
+			    <a id="accountopen" href="#" onclick="bnc_jquery_acct_open(); return false;">
 			    	<img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/themes/core/core-images/menu/wptouch-menu-acct.png" alt="" /> <?php _e( 'My Account', 'wptouch' ); ?>
 			    </a>	
 	<?php } } ?>
