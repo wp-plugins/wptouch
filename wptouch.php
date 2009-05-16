@@ -55,7 +55,7 @@ $wptouch_defaults = array(
 	'enable-main-tags' => true,
 	'enable-main-categories' => true,
 	'enable-main-email' => true,
-	'header-background-color' => '222222',
+	'header-background-color' => '000000',
 	'header-border-color' => '333333',
 	'header-text-color' => 'eeeeee',
 	'link-color' => '006bb3',
@@ -242,7 +242,7 @@ class WPtouchPlugin {
 		// Add whatever user agents you want here to the array if you want to make this show on a Blackberry 
 		// or something. No guarantees it'll look pretty, though!
 		$useragents = array(		
-	 	//	"safari",			// *Developer mode*
+	 		"safari",			// *Developer mode*
 			"iphone",  
 			"ipod", 
 			"aspen", 		// iPhone simulator

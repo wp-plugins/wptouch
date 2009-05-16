@@ -19,6 +19,10 @@ Author URI: http://www.bravenewcode.com/
 
 /* @group Body and Theme-Wide Elements */
 
+a {
+	text-decoration: none;
+}
+
 input {
 	max-width: 96%;
 }
@@ -159,25 +163,31 @@ select#cat option {
 	text-transform: capitalize;
 }
 
+#headerbar {
+	width: 100%;
+	background-position: 0 0;
+	background-repeat: repeat-x;
+	height: 45px;
+}
+
 #headerbar-menu {
 	position: fixed;
 	top: 0;
 	right: 0;
-	width: 22px;
+	width: 30px;
+	height: 45px;
 }
 
 #headerbar-menu a {
-	height: 44px;
+	height: 45px;
 	display: block;
-	background: url(../core/core-images/menu/wptouch-menu-dropper.png) 0 -42px;
+	background: url(../core/core-images/menu/wptouch-menu-dropper.png) 0 0;
 	margin-top: 0;
-	width: 22px;
-	position: relative;
-	bottom: 1px;
+	width: 30px;
 }
 
 #headerbar-menu .open {
-	background-position: 0 1px;
+	background-position: 0 -45px;
 }
 
 #headerbar-title {
@@ -772,16 +782,25 @@ img.small {
 	-webkit-border-radius: 8px;
 	border: 1px solid #adadad;
 	background: #fff repeat-x;
-	margin: 10px;
-	padding: 4px 5px 12px;
+	padding: 10px 5px 12px;
 	line-height: 16px;
+	margin: 10px;
+	font-weight: bold;
+	font-size: 12px;
 }
 
-.navigation a {
-	font-size: 11px;
-	font-weight: bold;
-	padding-bottom: 10px;
-	padding-top: 2px;
+.navigation .alignleft a {
+	padding-left: 25px;
+	background: url(../core/core-images/blue_arrow.png) no-repeat left -20px;
+	padding-bottom: 2px;
+	padding-top: 3px;
+}
+
+.navigation .alignright a {
+	background: url(../core/core-images/blue_arrow.png) no-repeat right 0;
+	padding-bottom: 2px;
+	padding-top: 3px;
+	padding-right: 25px;
 }
 
 .navigation img {

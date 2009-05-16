@@ -60,8 +60,8 @@ bloginfo('name'); ?>- <?php the_title();?>&body=<?php _e( "Check out this post:"
 
 <!-- Single post navigation links -->
 
-		<div class="alignleft"><?php next_post_link('<img src="' .  compat_get_plugin_url( 'wptouch' ) . '/themes/core/core-images/blue_arrow_l.jpg" alt="" /> %link', 'Prev Post') ?></div>
-		<div class="alignright"><?php previous_post_link('%link <img src="' .  compat_get_plugin_url( 'wptouch' ) . '/themes/core/core-images/blue_arrow_r.jpg" alt="" />', 'Next Post') ?></div>
+		<div class="alignleft"><?php next_post_link('%link', 'Prev Post') ?></div>
+		<div class="alignright"><?php previous_post_link('%link', 'Next Post') ?></div>
 
 <!-- Let's make sure there's no float strangeness happening. Sometimes plugins get funky here. -->
 		<div class="clearer"></div>
