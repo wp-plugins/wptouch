@@ -1,6 +1,6 @@
 	<div id="footer">
 	<ul id="links">
-		 <li><a onclick="javascript:document.getElementById('switch-on').style.display='none';javascript:document.getElementById('switch-off').style.display='block';" href="<?php echo bloginfo('home') . '/?bnc_view=normal'; ?>"class="text"><?php _e( "Mobile Theme", "wptouch" ); ?></a><img id="switch-on" src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/images/on.jpg" alt="on switch image" class="wptouch-switch-image" /><img id="switch-off" style="display:none" src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/images/off.jpg" alt="off switch image" class="wptouch-switch-image" /></li>
+		 <li><a onclick="javascript:document.getElementById('switch-on').style.display='none';javascript:document.getElementById('switch-off').style.display='block';" href="<?php echo bloginfo('home') . '/?theme_view=normal'; ?>"class="text"><?php _e( "Mobile Theme", "wptouch" ); ?></a><img id="switch-on" src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/images/on.jpg" alt="on switch image" class="wptouch-switch-image" /><img id="switch-off" style="display:none" src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/images/off.jpg" alt="off switch image" class="wptouch-switch-image" /></li>
 	</ul>
 
 			<?php _e( "All content Copyright &copy;", "wptouch" ); ?> <?php $str = bnc_get_header_title(); echo stripslashes($str); ?>

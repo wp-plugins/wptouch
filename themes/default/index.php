@@ -7,7 +7,7 @@
 
   <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 	
-		<?php if (function_exists('dsq_comments_template') || function_exists('intensedebate_id')) { } else { ?>
+		<?php if (!function_exists('dsq_comments_template') || !function_exists('intensedebate_id')) { ?>
 				<?php if (isset($post->comment_count) && $post->comment_count > 0) { ?>
 					<div class="comment-bubble<?php if ($post->comment_count > 99) echo('-big'); ?>">
 						<?php comments_number('0', '1', '%'); ?>
@@ -34,7 +34,7 @@
 		</div>	
 			<div class="clearer"></div>	
             <div id="entry-<?php the_ID(); ?>" <?php if (bnc_excerpt_enabled()) { ?>style="display:none"<?php } ?> class="mainentry <?php echo $wptouch_settings['style-text-size']; ?> <?php echo $wptouch_settings['style-text-justify']; ?>">
- 				<?php the_content_rss('', true, '', 50); ?>
+ 				<?php the_excerpt(); ?>
  		    <a class="read-more" href="<?php the_permalink() ?>"><?php _e( "Read This Post", "wptouch" ); ?></a>
 	        </div>  
       </div>
@@ -43,8 +43,8 @@
 
 
 	<div id="call<?php echo md5($_SERVER['REQUEST_URI']); ?>" class="ajax-load-more">
-		<img id="spinner<?php echo md5($_SERVER['REQUEST_URI']); ?>" class="spin" src="<?php bloginfo('template_directory'); ?>/images/main-ajax-loader.gif" style="display:none" alt="" />
-		<a class="ajax" href="javascript:$wptouch('#spinner<?php echo md5($_SERVER['REQUEST_URI']); ?>').fadeIn(200); $wptouch('#ajaxentries<?php echo md5($_SERVER['REQUEST_URI']); ?>').load('<?php echo get_next_posts_page_link(); ?>', {}, function(){ $wptouch('#call<?php echo md5($_SERVER['REQUEST_URI']); ?>').fadeOut();})">
+		<img id="spinner<?php echo md5($_SERVER['REQUEST_URI']); ?>" class="spin" src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/themes/core/core-images/main-ajax-loader.gif" style="display:none" alt="" />
+		<a class="ajax" href="#" onclick="$wptouch('#spinner<?php echo md5($_SERVER['REQUEST_URI']); ?>').fadeIn(200); $wptouch('#ajaxentries<?php echo md5($_SERVER['REQUEST_URI']); ?>').load('<?php echo get_next_posts_page_link(); ?>', {}, function(){ $wptouch('#call<?php echo md5($_SERVER['REQUEST_URI']); ?>').fadeOut();})">
 		<?php if (is_search()) { ?>
 			<?php _e( "Load more search results...", "wptouch" ); ?>
 		<?php } elseif (is_category()) { ?>
@@ -61,18 +61,10 @@
 </div><!-- #End post -->
 
 <?php else : ?>
-	<?php global $is_ajax; if (($is_ajax) && !is_search()) { ?>
-	  <div class="result-text-footer"><?php _e( "No more entries to display.", "wptouch" ); ?></div>
-	 <?php } elseif (is_search() && ($is_ajax)) { ?>
-	<div class="result-text-footer"><?php _e( "No more search results to display.", "wptouch" ); ?></div>
-	 <?php } elseif (is_search() && (!$is_ajax)) { ?>
-	 <div class="result-text-footer" style="padding-bottom:127px"><?php _e( "No search results results found.", "wptouch" ); ?><br /><?php _e( "Try another query.", "wptouch" ); ?></div>
-	<?php } else { ?>
-	  <div class="post">
-	  	<h2><?php _e( "404 Not Found", "wptouch" ); ?></h2>
-	  	<p><?php _e( "The page or post you were looking for is missing or has been removed.", "wptouch" ); ?></p>
-	  </div>
-	<?php } ?>
+
+	<div class="result-text-footer">
+		<?php wptouch_core_else_text(); ?>
+	</div>
 
  <?php endif; ?>
 

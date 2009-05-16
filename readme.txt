@@ -2,7 +2,7 @@
 Contributors: BraveNewCode
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=paypal%40bravenewcode%2ecom&item_name=WPtouch%20Beer%20Fund&no_shipping=0&no_note=1&tax=0&currency_code=CAD&lc=CA&bn=PP%2dDonationsBF&charset=UTF%2d8
 Tags: wptouch, iphone, ipod touch, theme, apple, mac, bravenewcode, ajax, mobile, mobile, android, blackberry
-Requires at least: 2.3.x
+Requires at least: 2.5
 Tested up to: 2.8
 Stable tag: 1.8.9.1
 
@@ -15,66 +15,6 @@ With a single click, *WPtouch* transforms your WordPress blog into an iPhone app
 The admin panel allows you to customize many aspects of its appearance, and deliver a fast, user-friendly and stylish version of your site to your iPhone, iPod touch, Android or BlackBerry Storm visitors without modifying a single bit of code (or affecting) your regular desktop theme.
 
 The theme also includes the ability for your visitors to easily switch between the *WPtouch* view and your site's regular theme.
-
-= New In Version 1.9 (beta 5): =
-
-* Fixed another issue where core.js wouldn't load properly (core-functions.php)
-* Dropped support for WordPress 2.3, lowest known WordPress version supported: 2.5
-* Fix for custom page icons not showing up on pages
-* Removed unused images
-* Removed some default icons
-* Added link to online icon generator in admin
-
-
-= Version 1.9 (beta 4 - may 14th, 2009): =
-
-* Fixed issue where core.js wasn't found
-* Fixed device-width mobileSafari bug
-
-
-= Version 1.9 (beta 3 - may 14th, 2009): =
-
-* Fixed style issue for icons on pages
-* Added style declaration for images in comments
-* More theme changes/enhancements, particularly in the header, footer
-* Added 'My Account' button in the sub-header for logged in users replacing 'Logout'. Opens useful links depending on the type of account (admin, subscriber, etc.)
-* Fixed missing jQuery load (due to the half-removal of the disable jQuery function)
-* Fixed issue where chosen pages and icons did not appear in the drop down
-* Removed 404 image with English text in it, replaced it with localized 404 text
-
-
-= Version 1.9 (beta 2 - may 14th, 2009): =
-
-* Fixed parse error in core-functions.php
-* Updated ajax upload script to v3.1
-* Updated fancybox to compressed v1.2.1
-* Fixed a few areas that had text not yet localized, improperly coded
-* Removed depreciated or unused functions from previous releases
-* Removed ability to disable jQuery; WPtouch Exclusive mode should fix JS issues
-* More minor admin styling enhancements
-* Added native select for Tags
-
-
-= Version 1.9 (beta 1 may 13th, 2009): =
-
-* Updated compatibility code (Various WordPress install scenarios) -- thanks to Will Norris for the suggestions
-* Modified AJAX calls
-* Made it so administration CSS/JS only loads on WPtouch page
-* Fixed a variety of scenarios where paths to files and images were broken
-* Updated social bookmarking icons
-* More preparation for WPtouch 1.9 and 5 languages
-* Preparation for WPtouch 2.0 and themes support (based on CoreTheme)
-* Fixed switch link issue where regular theme switch link was broken
-* Major re-writes of theme files, css for simplicity, CoreTheme
-* Updates to default theme style
-
-*These beta versions will need to be tested in a variety of situations, 
-so please report any errors to the Support Forums (link below).
-
-Please visit http://bravenewcode.com/wptouch/ for a full description & updates on the *WPtouch* plugin.
-
-You can also checkout our Support Forums at http://support.bravenewcode.com to post questions and learn tips and tricks for *WPtouch* and our other plugins.
-
 
 == What's New ==
 

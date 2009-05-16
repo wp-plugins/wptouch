@@ -33,7 +33,7 @@
 <!-- Mail and Bookmark code -->	
 
 	<div class="single-links">
-		<div class="single-bookmark-right"><a href="javascript:$wptouch('#bookmark-box').slideToggle(300);"><img src="<?php bloginfo('template_directory'); ?>/images/bookmarkit.png" class="small" alt="" /> <?php _e( "Bookmark It", "wptouch" ); ?></a></div>
+		<div class="single-bookmark-right"><a href="#" onclick="$wptouch('#bookmark-box').slideToggle(300);"><img src="<?php bloginfo('template_directory'); ?>/images/bookmarkit.png" class="small" alt="" /> <?php _e( "Bookmark It", "wptouch" ); ?></a></div>
 			<div class="single-mail-left"><a href="mailto:?subject=<?php
 bloginfo('name'); ?>- <?php the_title();?>&body=<?php _e( "Check out this post:", "wptouch" ); ?> <?php the_permalink() ?>"><img src="<?php bloginfo('template_directory'); ?>/images/mailit.png" class="small" alt="" /> <?php _e( "Mail It", "wptouch" ); ?></a></div>
 				<div class="clearer"></div>
@@ -46,13 +46,13 @@ bloginfo('name'); ?>- <?php the_title();?>&body=<?php _e( "Check out this post:"
 	<div id="bookmark-box" style="display:none">
 		<ul>
 			<li><a  href="http://del.icio.us/post?url=<?php echo get_permalink()
-?>&title=<?php the_title(); ?>" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/bookmarks/delicious.jpg" alt="" /> <?php _e( "Del.icio.us", "wptouch" ); ?></a></li>
+?>&title=<?php the_title(); ?>" target="_blank"><img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/themes/core/core-images/bookmarks/delicious.jpg" alt="" /> <?php _e( "Del.icio.us", "wptouch" ); ?></a></li>
 			<li><a href="http://digg.com/submit?phase=2&url=<?php echo get_permalink()
-?>&title=<?php the_title(); ?>" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/bookmarks/digg.jpg" alt="" /> <?php _e( "Digg", "wptouch" ); ?></a></li>
-			<li><a href="http://technorati.com/faves?add=<?php the_permalink() ?>" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/bookmarks/technorati.jpg" alt="" /> <?php _e( "Technorati", "wptouch" ); ?></a></li>
-			<li><a href="http://ma.gnolia.com/bookmarklet/add?url=<?php echo get_permalink() ?>&title=<?php the_title(); ?>" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/bookmarks/magnolia.jpg" alt="" /> <?php _e( "Magnolia", "wptouch" ); ?></a></li>
-			<li><a href="http://www.newsvine.com/_wine/save?popoff=0&u=<?php echo get_permalink() ?>&h=<?php the_title(); ?>" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/bookmarks/newsvine.jpg" target="_blank"> <?php _e( "Newsvine", "wptouch" ); ?></a></li>
-			<li class="noborder"><a href="http://reddit.com/submit?url=<?php echo get_permalink() ?>&title=<?php the_title(); ?>" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/bookmarks/reddit.jpg" alt="" /> <?php _e( "Reddit", "wptouch" ); ?></a></li>
+?>&title=<?php the_title(); ?>" target="_blank"><img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/themes/core/core-images/bookmarks/digg.jpg" alt="" /> <?php _e( "Digg", "wptouch" ); ?></a></li>
+			<li><a href="http://technorati.com/faves?add=<?php the_permalink() ?>" target="_blank"><img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/themes/core/core-images/bookmarks/technorati.jpg" alt="" /> <?php _e( "Technorati", "wptouch" ); ?></a></li>
+			<li><a href="http://ma.gnolia.com/bookmarklet/add?url=<?php echo get_permalink() ?>&title=<?php the_title(); ?>" target="_blank"><img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/themes/core/core-images/bookmarks/magnolia.jpg" alt="" /> <?php _e( "Magnolia", "wptouch" ); ?></a></li>
+			<li><a href="http://www.newsvine.com/_wine/save?popoff=0&u=<?php echo get_permalink() ?>&h=<?php the_title(); ?>" target="_blank"><img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/themes/core/core-images/bookmarks/newsvine.jpg" target="_blank"> <?php _e( "Newsvine", "wptouch" ); ?></a></li>
+			<li class="noborder"><a href="http://reddit.com/submit?url=<?php echo get_permalink() ?>&title=<?php the_title(); ?>" target="_blank"><img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/themes/core/core-images/bookmarks/reddit.jpg" alt="" /> <?php _e( "Reddit", "wptouch" ); ?></a></li>
 		</ul>
 	</div>
 
@@ -60,8 +60,8 @@ bloginfo('name'); ?>- <?php the_title();?>&body=<?php _e( "Check out this post:"
 
 <!-- Single post navigation links -->
 
-		<div class="alignleft"><?php next_post_link('<img src="' . get_bloginfo('template_directory') . '/images/blue_arrow_l.jpg" alt="" /> %link', 'Prev Post') ?></div>
-		<div class="alignright"><?php previous_post_link('%link <img src="' . get_bloginfo('template_directory') . '/images/blue_arrow_r.jpg" alt="" />', 'Next Post') ?></div>
+		<div class="alignleft"><?php next_post_link('<img src="' .  compat_get_plugin_url( 'wptouch' ) . '/themes/core/core-images/blue_arrow_l.jpg" alt="" /> %link', 'Prev Post') ?></div>
+		<div class="alignright"><?php previous_post_link('%link <img src="' .  compat_get_plugin_url( 'wptouch' ) . '/themes/core/core-images/blue_arrow_r.jpg" alt="" />', 'Next Post') ?></div>
 
 <!-- Let's make sure there's no float strangeness happening. Sometimes plugins get funky here. -->
 		<div class="clearer"></div>
@@ -75,20 +75,12 @@ bloginfo('name'); ?>- <?php the_title();?>&body=<?php _e( "Check out this post:"
 
 <!-- Dynamic test for what page this is. A little redundant, but so what? -->
 
-	<?php global $is_ajax; if (($is_ajax) && !is_search()) { ?>
-		<div class="result-text"><?php _e( "No more entries to display.", "wptouch" ); ?></div>
-			<?php } elseif (is_search() && ($is_ajax)) { ?>
-		<div class="result-text"><?php _e( "No more search results to display.", "wptouch" ); ?></div>
-			<?php } elseif (is_search()) { ?>
-		<div class="result-text"><?php _e( "No search results results found. Try another query.", "wptouch" ); ?></div>
-			<?php } else { ?>
-	  <div class="post">
-	  	<h2><?php _e( "404 Not Found", "wptouch" ); ?></h2>
-	  	<p><?php _e( "The page or post you were looking for is missing or has been removed.", "wptouch" ); ?></p>
-	  </div>
-	  		<?php } ?>
+	<div class="result-text-footer">
+		<?php wptouch_core_else_text(); ?>
+	</div>
+
 	<?php endif; ?>
-		</div>
+</div>
 	
 	<!-- Do the footer things -->
 	

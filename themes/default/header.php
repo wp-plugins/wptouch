@@ -11,33 +11,33 @@ include( dirname(__FILE__) . '/../core/core-header.php' );
 		<a href="<?php bloginfo('home'); ?>"><?php wptouch_core_body_sitetitle(); ?></a>
 	</div>
 	<div id="headerbar-menu">
-		    <a href="javascript:bnc_jquery_menu_drop();"></a>
+		    <a href="#" onclick="bnc_jquery_menu_drop();"></a>
 	</div>
 </div>
 
 <div id="drop-fade">
 
 	<?php if (bnc_is_cats_button_enabled()) { ?>			    
-	    <a id="catsopen" href="javascript:bnc_jquery_cats_open();">
-	    	<img src="<?php bloginfo('template_directory'); ?>/images/menu/wptouch-menu-cats.png" alt="" /> <?php _e( 'Categories', 'wptouch' ); ?>
+	    <a id="catsopen" href="#" onclick="bnc_jquery_cats_open();">
+	    	<img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/themes/core/core-images/menu/wptouch-menu-cats.png" alt="" /> <?php _e( 'Categories', 'wptouch' ); ?>
 	    </a>
 	<?php } ?>
 	
 	<?php if (bnc_is_tags_button_enabled()) { ?>	
-	    <a id="tagsopen" href="javascript:bnc_jquery_tags_open();">
-	    	<img src="<?php bloginfo('template_directory'); ?>/images/menu/wptouch-menu-tags.png" alt="" /> <?php _e( 'Tags', 'wptouch' ); ?>
+	    <a id="tagsopen" href="#" onclick="bnc_jquery_tags_open();">
+	    	<img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/themes/core/core-images/menu/wptouch-menu-tags.png" alt="" /> <?php _e( 'Tags', 'wptouch' ); ?>
 	    </a>
 	<?php } ?>
 
 	<?php if (bnc_is_login_button_enabled()) { ?>
 		<?php if (!is_user_logged_in()) { ?>
-			    <a id="loginopen" href="javascript:bnc_jquery_login_drop();">
-			    	<img src="<?php bloginfo('template_directory'); ?>/images/menu/wptouch-menu-login.png" alt="" /> <?php _e( 'Login', 'wptouch' ); ?>
+			    <a id="loginopen" href="#" onclick="bnc_jquery_login_drop();">
+			    	<img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/themes/core/core-images/menu/wptouch-menu-login.png" alt="" /> <?php _e( 'Login', 'wptouch' ); ?>
 			    </a>	
 	
 		<?php } else { ?>
-			    <a id="accountopen" href="javascript:bnc_jquery_acct_open();">
-			    	<img src="<?php bloginfo('template_directory'); ?>/images/menu/wptouch-menu-acct.png" alt="" /> <?php _e( 'My Account', 'wptouch' ); ?>
+			    <a id="accountopen" href="#" onclick="bnc_jquery_acct_open();">
+			    	<img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/themes/core/core-images/menu/wptouch-menu-acct.png" alt="" /> <?php _e( 'My Account', 'wptouch' ); ?>
 			    </a>	
 	<?php } } ?>
 	
@@ -90,7 +90,7 @@ include( dirname(__FILE__) . '/../core/core-header.php' );
 	</form>
 
  <!-- #start The Tags Select List -->
-<form id="select-tags">
+<form id="select-tags" action="">
 	<select id="tag-dropdown" name="tag-dropdown" onchange="document.location.href=this.options[this.selectedIndex].value;">
 		<option value="">Select Tag:</option>
 		<?php dropdown_tag_cloud('number=50&order=asc'); ?>
@@ -98,7 +98,7 @@ include( dirname(__FILE__) . '/../core/core-header.php' );
 </form>
 
  <!-- #start The Account Select List -->
-<form id="select-acct">	
+<form id="select-acct" action="">	
 	<select id="acct-dropdown" name="acct-dropdown" onchange="document.location.href=this.options[this.selectedIndex].value;">
 	<option value="#"><?php _e("My Account:", "wptouch"); ?></option>
 			<?php if (current_user_can('edit_posts')) : ?>

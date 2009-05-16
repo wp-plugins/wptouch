@@ -26,7 +26,8 @@
 <div class="clearer"></div>
   
     <div id="entry-<?php the_ID(); ?>" class="pageentry <?php echo $wptouch_settings['style-text-size']; ?> <?php echo $wptouch_settings['style-text-justify']; ?>">
-        <?php the_content(); ?>  
+        <?php if (!is_page('archives') || is_page('links')) { the_content(); } ?>  
+
 <?php if (is_page('archives')) {
 // If you have a page named 'Archives', the WP tag cloud will be displayed below your content. Simply remove this wrapper. 
 ?>
@@ -66,6 +67,8 @@
 <!-- do nothing... maybe they have a different look for the photos page themselves-->
 	<?php } ?>
 <?php } ?><!-- end if photos page-->
+		</div>
+	</div>   
            		
 <?php if (is_page('links')) {
 // If you have a page named 'Links', a default listing of your Links will be displayed here.
@@ -75,13 +78,15 @@
 
 	<h3 class="result-text">(<?php _e( "Alphabetical Order", "wptouch" ); ?>)</h3>
 		<div id="wptouch-links">
-			<?php foreach (get_bookmarks('categorize=0&title_li=0') as $bm) { echo('<li>'); echo('<img src="http://bravenewcode.com/code/favicon.php?site=' . urlencode($bm->link_url) . '&default=' . urlencode(bnc_get_local_icon_url() . '/icon-pool/Default.png') . '" />'); echo('<a href="' . $bm->link_url . '">' . $bm->link_name . '</a>'); echo('</li>'); } ?>
+		<ul>
+			<?php foreach (get_bookmarks('categorize=0&title_li=0') as $bm) { echo('<li>'); echo('<img src="http://bravenewcode.com/code/favicon.php?site=' . urlencode($bm->link_url) . '&amp;default=' . urlencode(bnc_get_local_icon_url() . '/icon-pool/Default.png') . '" />'); echo('<a href="' . $bm->link_url . '">' . $bm->link_name . '</a>'); echo('</li>'); } ?>
+		</ul>
 		</div>
 <?php } ?><!-- end if links page-->    	
 	
 		<?php wp_link_pages( __('Pages in this article: ', 'wptouch'), '', 'number'); ?>
-	</div>    
-</div>
+
+
     
 <!--If comments are enabled for pages in the WPtouch admin, and 'Allow Comments' is checked on a page-->
 	<?php if (bnc_is_page_coms_enabled() && 'open' == $post->comment_status) : ?>
@@ -91,18 +96,10 @@
     <?php endwhile; ?>	
 
 <?php else : ?>
-	<?php global $is_ajax; if (($is_ajax) && !is_search()) { ?>
-	  <div class="result-text-footer"><?php _e( "No more entries to display.", "wptouch" ); ?></div>
-	 <?php } elseif (is_search() && ($is_ajax)) { ?>
-	<div class="result-text-footer"><?php _e( "No more search results to display.", "wptouch" ); ?></div>
-	 <?php } elseif (is_search() && (!$is_ajax)) { ?>
-	 <div class="result-text-footer" style="padding-bottom:127px"><?php _e( "No search results results found.", "wptouch" ); ?><br /><?php _e( "Try another term.", "wptouch" ); ?></div>
-	<?php } else { ?>
-	  <div class="post">
-	  	<h2><?php _e( "404 Not Found", "wptouch" ); ?></h2>
-	  	<p><?php _e( "The page or post you were looking for is missing or has been removed.", "wptouch" ); ?></p>
-	  </div>
-	<?php } ?>
+
+	<div class="result-text-footer">
+		<?php wptouch_core_else_text(); ?>
+	</div>
 
  <?php endif; ?>
 

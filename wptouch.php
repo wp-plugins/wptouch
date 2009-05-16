@@ -4,7 +4,7 @@
    Plugin URI: http://bravenewcode.com/wptouch/
    Description: A plugin which formats your site with a mobile theme for the Apple <a href="http://www.apple.com/iphone/">iPhone</a> & <a href="http://www.apple.com/ipodtouch/">iPod touch</a>, <a href="http://www.android.com/">Google Android</a> or <a href="http://www.rim.com/storm/">Blackberry Storm</a> touch mobile devices. Set options by visiting the <a href="options-general.php?page=wptouch/wptouch.php">WPtouch admin panel</a>. &nbsp;
    Author: Dale Mugford & Duane Storey
-   Version: 1.9b5
+   Version: 1.9b6
    Author URI: http://www.bravenewcode.com
    
    # Special thanks to ContentRobot and the iWPhone theme/plugin
@@ -31,7 +31,7 @@
 
 // WPtouch Theme Options
 global $bnc_wptouch_version;
-$bnc_wptouch_version = '1.9 Beta 5';
+$bnc_wptouch_version = '1.9 Beta 6';
 
 require_once( 'include/plugin.php' );
 require_once( 'include/compat.php' );
@@ -211,10 +211,10 @@ class WPtouchPlugin {
 	function bnc_filter_iphone() {
 		$key = 'bnc_mobile_' . md5(get_bloginfo('siteurl'));
 		
-	   	if (isset($_GET['bnc_view'])) {
-	   		if ($_GET['bnc_view'] == 'mobile') {
+	   	if (isset($_GET['theme_view'])) {
+	   		if ($_GET['theme_view'] == 'mobile') {
 				setcookie($key, 'mobile', 0); 
-			} elseif ($_GET['bnc_view'] == 'normal') {
+			} elseif ($_GET['theme_view'] == 'normal') {
 				setcookie($key, 'normal', 0);
 			}
 			
@@ -313,9 +313,7 @@ $wptouch_plugin = & new WPtouchPlugin();
 //Thanks to edyoshi:
 function bnc_is_iphone() {
 	global $wptouch_plugin;
-// Insert this begin
 	$wptouch_plugin->bnc_filter_iphone();
-// Insert this end
 	return $wptouch_plugin->applemobile;
 }
   
@@ -325,7 +323,7 @@ function wptouch_switch() {
 	if ( bnc_is_iphone() && $wptouch_plugin->desired_view == 'normal' ) {
 		echo '<div id="wptouch-switch-link">';
 		_e( "Mobile Theme", "wptouch" ); 
-		echo "<a onclick=\"javascript:document.getElementById('switch-on').style.display='block';javascript:document.getElementById('switch-off').style.display='none';\" href=\"" . get_bloginfo('siteurl') . "/?bnc_view=mobile\"><img id=\"switch-on\" src=\"" . compat_get_plugin_url( 'wptouch' ) . "/images/on.jpg\" alt=\"on switch image\" class=\"wptouch-switch-image\" style=\"display:none\" /><img id=\"switch-off\" src=\"" . compat_get_plugin_url( 'wptouch' ) .  "/images/off.jpg\" alt=\"off switch image\" class=\"wptouch-switch-image\" /></a>";
+		echo "<a onclick=\"javascript:document.getElementById('switch-on').style.display='block';javascript:document.getElementById('switch-off').style.display='none';\" href=\"" . get_bloginfo('siteurl') . "/?theme_view=mobile\"><img id=\"switch-on\" src=\"" . compat_get_plugin_url( 'wptouch' ) . "/images/on.jpg\" alt=\"on switch image\" class=\"wptouch-switch-image\" style=\"display:none\" /><img id=\"switch-off\" src=\"" . compat_get_plugin_url( 'wptouch' ) .  "/images/off.jpg\" alt=\"off switch image\" class=\"wptouch-switch-image\" /></a>";
  		echo '</div>';
 	}
 }
@@ -426,16 +424,6 @@ function bnc_is_gravatars_enabled() {
 	$ids = bnc_wp_touch_get_menu_pages();
 	return $ids['enable-gravatars'];
 }	
-	
-function bnc_is_home_enabled() {
-	$ids = bnc_wp_touch_get_menu_pages();
-	return $ids['enable-main-home'];
-}	
-
-function bnc_is_rss_enabled() {
-	$ids = bnc_wp_touch_get_menu_pages();
-	return $ids['enable-main-rss'];
-}	
 
 function bnc_show_author() {
 	$ids = bnc_wp_touch_get_menu_pages();
@@ -452,11 +440,18 @@ function bnc_show_categories() {
 	return $ids['enable-main-categories'];
 }
 
+function bnc_is_home_enabled() {
+	$ids = bnc_wp_touch_get_menu_pages();
+	return $ids['enable-main-home'];
+}	
+
+function bnc_is_rss_enabled() {
+	$ids = bnc_wp_touch_get_menu_pages();
+	return $ids['enable-main-rss'];
+}	
+
 function bnc_is_email_enabled() {
 	$ids = bnc_wp_touch_get_menu_pages();
-		if (!isset($ids['enable-main-email'])) {
-		return true;
-		}
 	return $ids['enable-main-email'];
 }	
 
@@ -574,7 +569,7 @@ function bnc_wp_touch_page() {
 	</form>
 	
 	<form method="post" action="<?php echo $_SERVER['REQUEST_URI']; ?>">
-		<input type="submit" onclick="return confirm('Restore the default WPtouch settings?');" name="reset" value="<?php _e('Restore Defaults', 'wptouch' ); ?>" id="wptouch-button-reset" class="button-highlighted" />
+		<input type="submit" onclick="return confirm('<?php _e('Restore default WPtouch settings?', 'wptouch' ); ?>');" name="reset" value="<?php _e('Restore Defaults', 'wptouch' ); ?>" id="wptouch-button-reset" class="button-highlighted" />
 	</form>
 		
 		<?php echo('' . WPtouch('<div class="wptouch-version"> This is ','</div>') . ''); ?>

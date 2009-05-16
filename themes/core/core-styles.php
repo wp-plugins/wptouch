@@ -2,7 +2,7 @@
 <style type="text/css">
 #headerbar {
 	width: 100%;
-	background: #<?php echo bnc_get_header_background(); ?> url(<?php bloginfo('template_directory'); ?>/images/head-fade-bk.png) repeat-x;
+	background: #<?php echo bnc_get_header_background(); ?> url(<?php echo compat_get_plugin_url( 'wptouch' ); ?>/themes/core/core-images/head-fade-bk.png) repeat-x;
 }
 #headerbar-title, #headerbar-title a {
 	color: #<?php echo bnc_get_header_color(); ?>;

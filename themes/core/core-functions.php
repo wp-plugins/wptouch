@@ -22,7 +22,7 @@ function wptouch_core_header_enqueue() {
   
 function wptouch_core_header_home() {
 	if (bnc_is_home_enabled()) {
-		echo sprintf(__( "%sHome%s", "wptouch" ), '<li><a href="' . get_bloginfo('home') . '"><img src="' . compat_get_plugin_url( 'wptouch' ) . '/images/icon-pool/Default.png" alt="" />','</a></li>');
+		echo sprintf(__( "%sHome%s", "wptouch" ), '<li><a href="' . get_bloginfo('home') . '"><img src="' . bnc_get_title_image() . '" alt=""/>','</a></li>');
 	}
 }
   
@@ -62,92 +62,6 @@ function wptouch_core_header_check_use() {
 		echo '</body>';
 	die; 
 	} 
-}
-
-function dropdown_tag_cloud( $args = '' ) {
-	$defaults = array(
-		'smallest' => 8, 'largest' => 22, 'unit' => 'pt', 'number' => 45,
-		'format' => 'flat', 'orderby' => 'name', 'order' => 'ASC',
-		'exclude' => '', 'include' => ''
-	);
-	$args = wp_parse_args( $args, $defaults );
-
-	$tags = get_tags( array_merge($args, array('orderby' => 'count', 'order' => 'DESC')) ); // Always query top tags
-
-	if ( empty($tags) )
-		return;
-
-	$return = core_header_tag_cloud( $tags, $args ); // Here's where those top tags get sorted according to $args
-	if ( is_wp_error( $return ) )
-		return false;
-	else
-		echo apply_filters( 'dropdown_tag_cloud', $return, $args );
-}
-
-function core_header_tag_cloud( $tags, $args = '' ) {
-	global $wp_rewrite;
-	$defaults = array(
-		'smallest' => 8, 'largest' => 22, 'unit' => 'pt', 'number' => 45,
-		'format' => 'flat', 'orderby' => 'name', 'order' => 'ASC'
-	);
-	$args = wp_parse_args( $args, $defaults );
-	extract($args);
-
-	if ( !$tags )
-		return;
-	$counts = $tag_links = array();
-	foreach ( (array) $tags as $tag ) {
-		$counts[$tag->name] = $tag->count;
-		$tag_links[$tag->name] = get_tag_link( $tag->term_id );
-		if ( is_wp_error( $tag_links[$tag->name] ) )
-			return $tag_links[$tag->name];
-		$tag_ids[$tag->name] = $tag->term_id;
-	}
-
-	$min_count = min($counts);
-	$spread = max($counts) - $min_count;
-	if ( $spread <= 0 )
-		$spread = 1;
-	$font_spread = $largest - $smallest;
-	if ( $font_spread <= 0 )
-		$font_spread = 1;
-	$font_step = $font_spread / $spread;
-
-	// SQL cannot save you; this is a second (potentially different) sort on a subset of data.
-	if ( 'name' == $orderby )
-		uksort($counts, 'strnatcasecmp');
-	else
-		asort($counts);
-
-	if ( 'DESC' == $order )
-		$counts = array_reverse( $counts, true );
-
-	$a = array();
-
-	$rel = ( is_object($wp_rewrite) && $wp_rewrite->using_permalinks() ) ? ' rel="tag"' : '';
-
-	foreach ( $counts as $tag => $count ) {
-		$tag_id = $tag_ids[$tag];
-		$tag_link = clean_url($tag_links[$tag]);
-		$tag = str_replace(' ', '&nbsp;', wp_specialchars( $tag ));
-		$a[] = "\t<option value='$tag_link'>$tag ($count)</option>";
-	}
-
-	switch ( $format ) :
-	case 'array' :
-		$return =& $a;
-		break;
-	case 'list' :
-		$return = "<ul class='wp-tag-cloud'>\n\t<li>";
-		$return .= join("</li>\n\t<li>", $a);
-		$return .= "</li>\n</ul>\n";
-		break;
-	default :
-		$return = join("\n", $a);
-		break;
-	endswitch;
-
-	return apply_filters( 'core_header_tag_cloud', $return, $tags, $args );
 }
 
 function wptouch_core_header_styles() {
@@ -190,17 +104,31 @@ function wptouch_core_body_result_text() {
 function wptouch_core_body_post_arrows() {  
 	 if (bnc_excerpt_enabled()) {
 // Down arrow		
-		echo '<a class="post-arrow" id="arrow-' . get_the_ID() . '" href="javascript:$wptouch(\'#entry-' . get_the_ID() . '\').fadeIn(500); $wptouch(\'#arrow-' . get_the_ID() . '\').hide(); $wptouch(\'#arrow-down-' . get_the_ID() . '\').show();"></a>';	
+		echo '<a class="post-arrow" id="arrow-' . get_the_ID() . '" href="#" onclick="$wptouch(\'#entry-' . get_the_ID() . '\').fadeIn(500); $wptouch(\'#arrow-' . get_the_ID() . '\').hide(); $wptouch(\'#arrow-down-' . get_the_ID() . '\').show();"></a>';	
 // Up arrow		
-		echo '<a style="display:none" class="post-arrow-down month-' . get_the_time('m') . '" id="arrow-down-' . get_the_ID() . '" href="javascript:$wptouch(\'#entry-' . get_the_ID() . '\').fadeOut(500); $wptouch(\'#arrow-' . get_the_ID() . '\').show(); $wptouch(\'#arrow-down-' . get_the_ID() . '\').hide();"></a>';
+		echo '<a style="display:none" class="post-arrow-down month-' . get_the_time('m') . '" id="arrow-down-' . get_the_ID() . '" href="#" onclick="$wptouch(\'#entry-' . get_the_ID() . '\').fadeOut(500); $wptouch(\'#arrow-' . get_the_ID() . '\').show(); $wptouch(\'#arrow-down-' . get_the_ID() . '\').hide();"></a>';
 	} 
 }
+
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // WPtouch Core Footer Functions
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////  
 
-
+function wptouch_core_else_text() {	
+	 global $is_ajax; if (($is_ajax) && !is_search()) {
+		echo '' . __( "No more entries to display.", "wptouch" ) . '';
+	 } elseif (is_search() && ($is_ajax)) {
+		echo '' . __( "No more search results to display.", "wptouch" ) . '';
+	 } elseif (is_search() && (!$is_ajax)) {
+	 	echo '<div style="padding-bottom:127px">' . __( "No search results results found.", "wptouch" ) . '<br />' . __( "Try another query.", "wptouch" ) . '</div>';
+	 } else {
+	  echo '<div class="post">
+	  	<h2>' . __( "404 Not Found", "wptouch" ) . '</h2>
+	  	<p>' . __( "The page or post you were looking for is missing or has been removed.", "wptouch" ) . '</p>
+	  </div>';
+	}
+}
 
 
 
@@ -313,17 +241,9 @@ function bnc_get_favicon_for_site($site)
       return $i;
   }
 
-$bnc_start_content = '[gallery]';
-$bnc_end_content = '';
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// WPtouch Filters
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  
 
-add_filter('the_content_rss', 'rename_content');
-
-function rename_content($content) {
-   global $bnc_start_content;
-   global $bnc_end_content;
-
-   $content = str_replace($bnc_start_content, $bnc_end_content, $content);
-
-   return $content;
-  }
 ?>

@@ -169,7 +169,7 @@ select#cat option {
 #headerbar-menu a {
 	height: 44px;
 	display: block;
-	background: url(images/menu/wptouch-menu-dropper.png) 0 -42px;
+	background: url(../core/core-images/menu/wptouch-menu-dropper.png) 0 -42px;
 	margin-top: 0;
 	width: 22px;
 	position: relative;
@@ -272,7 +272,7 @@ select#cat option {
 .dropper li {
 	border-bottom: 1px solid #1d1d1d;
 	margin: 0;
-	background: url(images/arrow.png) no-repeat right center;
+	background: url(../core/core-images/arrow.png) no-repeat right center;
 	padding: 8px 20px 7px 10px;
 	text-transform: capitalize;
 	border-top: 1px solid #363636;
@@ -403,7 +403,7 @@ a.post-arrow {
 	float: right;
 	margin-top: 1px;
 	padding: 0;
-	background: #f4f4f4 url(images/post-arrow.png) no-repeat -1px -2px;
+	background: #f4f4f4 url(../core/core-images/post-arrow.png) no-repeat -1px -2px;
 	border: 1px solid #ddd;
 	-webkit-border-radius: 5px;
 }
@@ -414,7 +414,7 @@ a.post-arrow-down {
 	float: right;
 	margin-top: 1px;
 	padding: 0;
-	background: #e4e4e4 url(images/post-arrow.png) no-repeat -1px -23px;
+	background: #e4e4e4 url(../core/core-images/post-arrow.png) no-repeat -1px -23px;
 	border: 1px solid #b8b8b8;
 	-webkit-border-radius: 5px;
 }
@@ -469,7 +469,7 @@ a.h2 {
 /* @group Calendar CSS Icons */
 
 .comment-bubble {
-	background: url(images/unread-com.png) no-repeat;
+	background: url(../core/core-images/unread-com.png) no-repeat;
 	width: 25px;
 	height: 21px;
 	opacity: 1;
@@ -490,7 +490,7 @@ a.h2 {
 }
 
 .comment-bubble-big {
-	background: url(images/unread-com-triple.png) no-repeat;
+	background: url(../core/core-images/unread-com-triple.png) no-repeat;
 	width: 30px;
 	height: 20px;
 	opacity: 1;
@@ -1426,15 +1426,15 @@ a.dsq-brlink {
 /* @group Background Options */
 
 .classic-wptouch-bg {
-	background: url(images/pinstripes-classic.gif) repeat;
+	background: url(../core/core-images/pinstripes-classic.gif) repeat;
 }
 
 .horizontal-wptouch-bg {
-	background: url(images/pinstripes-horizontal.gif) repeat;
+	background: url(../core/core-images/pinstripes-horizontal.gif) repeat;
 }
 
 .diagonal-wptouch-bg {
-	background: url(images/pinstripes-diagonal.gif) repeat;
+	background: url(../core/core-images/pinstripes-diagonal.gif) repeat;
 }
 
 /* @end */
