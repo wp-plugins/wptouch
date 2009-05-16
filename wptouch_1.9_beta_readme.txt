@@ -8,9 +8,14 @@ Please visit http://bravenewcode.com/wptouch/ for a full description & updates o
 You can also checkout our Support Forums at http://support.bravenewcode.com to post questions and learn tips and tricks for *WPtouch* and our other plugins.
 
 
+= New In Version 1.9 (beta 7 - May 16th, 2009): =
+* Revised header area styling
+* Search now floats overtop the headerbar
+* Refined drop down button
+* Footer switch link now a part of Core
 
 
-= New In Version 1.9 (beta 6 - May 16th, 2009): =
+= Version 1.9 (beta 6 - May 16th, 2009): =
 * No longer using the_content_rss() for excerpts, created a custom function which handles it nicely
 * Home link in menu drop down now respects the logo/bookmark icon choice
 * Fixed the way javascript is called for a elements, should work better in other mobile browsers

@@ -122,6 +122,7 @@ blockquote {
 
 .content {
 	margin-top: 15px;
+	position: relative;
 }
 
 .result-text {
@@ -156,6 +157,8 @@ blockquote {
 	background-position: 0 0;
 	background-repeat: repeat-x;
 	height: 45px;
+	border-bottom: 1px solid #1e1e1e;
+	font-size: 19px;
 }
 
 #headerbar-title {
@@ -176,9 +179,9 @@ blockquote {
 
 #headerbar-title a {
 	text-decoration: none;
-	font: 18px HelveticaNeue-Bold, sans-serif;
 	letter-spacing: -1px;
 	position: relative;
+	font-family: HelveticaNeue-Bold, sans-serif;
 }
 
 #headerbar-title img {
@@ -196,16 +199,17 @@ blockquote {
 	position: fixed;
 	top: 0;
 	right: 0;
-	width: 30px;
-	height: 45px;
+	margin: 0;
+	padding: 0;
 }
 
 #headerbar-menu a {
 	height: 45px;
 	display: block;
 	background: url(../core/core-images/menu/wptouch-menu-dropper.png) 0 0;
-	margin-top: 0;
 	width: 30px;
+	margin: 0;
+	padding: 0;
 }
 
 #headerbar-menu .open {
@@ -215,13 +219,12 @@ blockquote {
 #drop-fade {
 	width: 100%;
 	display: block;
-	text-align: right;
 	position: relative;
-	opacity: 0.98;
-	-webkit-box-shadow: #444 -4px 2px 4px;
-	border-top: 1px solid #0d0d0d;
-	margin: -1px 0;
-	padding: 1px 0;
+	-webkit-box-shadow: #000 -3px 2px 3px;
+	text-align: right;
+	margin: 0;
+	border-top: 1px solid #3e3e3e;
+	padding: 3px 0;
 }
 
 #drop-fade img {
@@ -245,6 +248,8 @@ blockquote {
 	border-left: 1px solid #1b1b1b;
 	margin-right: 11px;
 	margin-left: -2px;
+	padding-top: 6px;
+	padding-bottom: 6px;
 }
 
 form#select-cats, form#select-tags, form#select-acct {
@@ -262,15 +267,21 @@ select#cat option {
 
 /* @group DropDown Menu */
 
+#wptouch-menu {
+	position: relative;
+	bottom: 26px;
+	z-index: 1;
+}
+
 .dropper {
 	width: 100%;
 	position: relative;
-	background: #2c2c2c no-repeat;
 	z-index: 1;
 	margin: 0;
 	padding: 0;
 	border-top: 1px solid #1b1b1b;
 	font-size: 13px;
+	background-color: #2c2c2c;
 }
 
 .dropper ul {
@@ -320,46 +331,41 @@ select#cat option {
 
 /* @group Login */
 
+#wptouch-login {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	width: 100%;
+}
+
 #wptouch-login-inner {
-	height: 38px;
+	padding-top: 9px;
+	width: 100%;
+	height: 35px;
+	background-repeat: repeat-x;
 	text-align: center;
-	padding-top: 2px;
-	border-top: 1px solid #363636;
 }
 
 #wptouch-login input#log {
-	margin-right: 3px;
-	width: 33%;
+	width: 135px;
 	-webkit-border-radius: 10px;
 	padding: 3px;
 	font-size: 13px;
 	color: #222;
 	font-weight: bold;
-	margin-top: 6px;
 	border: 1px solid #1b1b1b;
-
 }
 
 #wptouch-login input#pwd {
-	width: 33%;
-	margin-right: 5px;
+	width: 135px;
 	-webkit-border-radius: 10px;
 	padding: 3px;
 	font-size: 13px;
 	color: #222;
 	font-weight: bold;
 	border: 1px solid #1b1b1b;
-}
-
-#wptouch-login input#logsub {
-	-webkit-border-radius: 10px;
-	border: 1px solid #1b1b1b;
-	font-size: 13px;
-	color: #222;
-	background-color: #fff;
-	padding: 3px;
-	width: 60px;
-	height: 23px;
+	margin-left: 5px;
 }
 
 /* @end */
@@ -483,13 +489,11 @@ a.h2 {
 	background: url(../core/core-images/unread-com.png) no-repeat;
 	width: 25px;
 	height: 21px;
-	opacity: 1;
 	padding-top: 5px;
 	text-align: center;
 	float: left;
 	position: relative;
 	color: #fff;
-	z-index: 9;
 	left: 13px;
 	padding-left: 0;
 	top: 2px;
@@ -498,13 +502,13 @@ a.h2 {
 	text-shadow: #871521 -1px -1px 1px;
 	padding-right: 0;
 	margin-left: 0;
+	z-index: 1;
 }
 
 .comment-bubble-big {
 	background: url(../core/core-images/unread-com-triple.png) no-repeat;
 	width: 30px;
 	height: 20px;
-	opacity: 1;
 	padding-top: 4px;
 	text-align: center;
 	font-size: 11px;
@@ -512,7 +516,7 @@ a.h2 {
 	display: inline;
 	position: relative;
 	color: #fff;
-	z-index: 9;
+	z-index: 1;
 	left: 15px;
 	padding-left: 0;
 	letter-spacing: -1px;

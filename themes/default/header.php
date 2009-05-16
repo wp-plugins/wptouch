@@ -4,6 +4,20 @@ include( dirname(__FILE__) . '/../core/core-header.php' );
 ?>
 
 <body class="<?php wptouch_core_body_background(); ?>">
+
+<!--#start The Login Drop-Down -->
+	<div id="wptouch-login" style="display:none">
+		<div id="wptouch-login-inner">
+			<form name="loginform" id="loginform" action="<?php bloginfo('wpurl'); ?>/wp-login.php" method="post">
+				<label><input type="text" name="log" id="log" onfocus="if (this.value == 'username') {this.value = ''}" value="username" /></label>
+				<label><input type="password" name="pwd"  onfocus="if (this.value == 'password') {this.value = ''}" id="pwd" value="password" /></label>
+				<input type="hidden" name="rememberme" value="forever" />
+				<input type="hidden" id="logsub" name="submit" value="<?php _e('Login'); ?>" tabindex="9" />
+				<input type="hidden" name="redirect_to" value="<?php echo $_SERVER['REQUEST_URI']; ?>"/>
+			</form>
+		</div>
+	</div>
+	
 <div id="headerbar">
 	<div id="headerbar-title">
 		<!-- This fetches the admin selection logo icon for the header, which is also the bookmark icon -->
@@ -61,23 +75,6 @@ include( dirname(__FILE__) . '/../core/core-header.php' );
 				<?php wptouch_core_header_email(); ?>           
 			</ul>
         </div>
-	</div>
-
-<!--#start The Login Drop-Down -->
-	<div id="wptouch-login" class="dropper" style="display:none">
-		<div id="wptouch-login-inner">
-			<form name="loginform" id="loginform" action="<?php bloginfo('wpurl'); ?>/wp-login.php" method="post">
-				<label>
-					<input type="text" name="log" id="log" onfocus="if (this.value == 'username') {this.value = ''}" value="username" />
-				</label>
-				<label>
-					<input type="password" name="pwd"  onfocus="if (this.value == 'password') {this.value = ''}" id="pwd" value="password" />
-				</label>
-				<input type="hidden" name="rememberme" value="forever" />
-				<input type="submit" id="logsub" name="submit" value="<?php _e('Login'); ?>" tabindex="9" />
-				<input type="hidden" name="redirect_to" value="<?php echo $_SERVER['REQUEST_URI']; ?>"/>
-			</form>
-		</div>
 	</div>
  
  <!-- #start The Categories Select List -->
