@@ -1058,7 +1058,7 @@ img.pageicon {
 	display: block;
 	margin: 0;
 	padding: 0;
-	background: url(images/arrow.png) no-repeat right center;
+	background: url(../core/core-images/arrow.png) no-repeat right center;
 }
 
 /* @end */
@@ -1492,7 +1492,7 @@ a.dsq-brlink {
 	z-index: 1;
 	text-align: left;
 	text-shadow: #fff 0 0 0;
-	font-size: 11px;
+	font-size: 13px;
 }
 
 #wptouch-switch-link img {
