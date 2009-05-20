@@ -8,6 +8,8 @@ Please visit http://bravenewcode.com/wptouch/ for a full description & updates o
 
 You can also checkout our Support Forums at http://support.bravenewcode.com to post questions and learn tips and tricks for *WPtouch* and our other plugins.
 
+= New In Version 1.9 Beta 7.1 // May 20th, 2009 =
+* Fixed theme appearing in safari, chrome
 
 = New In Version 1.9 Beta 7 // May 19th, 2009 =
 
