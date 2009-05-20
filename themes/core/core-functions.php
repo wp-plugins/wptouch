@@ -86,17 +86,17 @@ function wptouch_core_body_sitetitle() {
 function wptouch_core_body_result_text() {  
 	global $is_ajax; if (!$is_ajax) {
 			if (is_search()) {
-				echo sprintf( __("Browsing search results for &lsquo;%s&rsquo;", "wptouch"), get_search_query() );
+				echo sprintf( __("Search results &rsaquo; %s", "wptouch"), get_search_query() );
 			} if (is_category()) {
-				echo sprintf( __("Browsing the category archive &lsquo;%s&rsquo;", "wptouch"), single_cat_title("", false));
+				echo sprintf( __("Categories &rsaquo; %s", "wptouch"), single_cat_title("", false));
 			} elseif (is_tag()) {
-				echo sprintf( __("Browsing the tag archive &lsquo;%s&rsquo;", "wptouch"), single_tag_title("", false));
+				echo sprintf( __("Tags &rsaquo; %s", "wptouch"), single_tag_title("", false));
 			} elseif (is_day()) {
-				echo sprintf( __("Browsing the archive &lsquo;%s&rsquo;", "wptouch"),  get_the_time('F jS, Y'));
+				echo sprintf( __("Archives &rsaquo; %s", "wptouch"),  get_the_time('F jS, Y'));
 			} elseif (is_month()) {
-				echo sprintf( __("Browsing the archive &lsquo;%s&rsquo;", "wptouch"),  get_the_time('F, Y'));
+				echo sprintf( __("Archives &rsaquo; %s", "wptouch"),  get_the_time('F, Y'));
 			} elseif (is_year()) {
-				echo sprintf( __("Browsing the archive &lsquo;%s&rsquo;", "wptouch"),  get_the_time('Y'));
+				echo sprintf( __("Archives &rsaquo; %s", "wptouch"),  get_the_time('Y'));
 		}
 	}
 }
@@ -131,7 +131,7 @@ function wptouch_core_else_text() {
 }
 
 function wptouch_core_footer_switch_link() {	
-echo '<a onclick="document.getElementById(\'switch-on\').style.display=\'none\';document.getElementById(\'switch-off\').style.display=\'block\';" href="' . get_bloginfo('home') . '/?theme_view=normal' . '">' . __( "Mobile Theme", "wptouch" ) . '</a><img id="switch-on" src="' . compat_get_plugin_url( 'wptouch' ) . '/themes/core/core-images/on.jpg" alt="on switch image" /><img id="switch-off" style="display:none" src="' . compat_get_plugin_url( 'wptouch' ) . '/themes/core/core-images/off.jpg" alt="off switch image" />';
+echo '' . __( "Mobile Theme", "wptouch" ) . ' <a onclick="document.getElementById(\'switch-on\').style.display=\'none\';document.getElementById(\'switch-off\').style.display=\'block\';" href="' . get_bloginfo('home') . '/?theme_view=normal' . '"><img id="switch-on" src="' . compat_get_plugin_url( 'wptouch' ) . '/themes/core/core-images/on.jpg" alt="on switch image" /><img id="switch-off" style="display:none" src="' . compat_get_plugin_url( 'wptouch' ) . '/themes/core/core-images/off.jpg" alt="off switch image" /></a>';
 }
 
 
@@ -247,6 +247,6 @@ function bnc_get_favicon_for_site($site)
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // WPtouch Filters
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-  
-
+remove_filter('the_excerpt', 'do_shortcode');   
+remove_filter('the_content', 'do_shortcode'); 
 ?>
