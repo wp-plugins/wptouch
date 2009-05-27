@@ -1,12 +1,12 @@
 /*
- * WPtouch admin Javascript
- * Version: 1.9 (13/05/2009)
+ * WPtouch Admin Javascript
+ * Version: 1.9
  * This file holds all the default jQuery & Ajax functions all in one neat place.
  * 
  * Copyright (c) 2009 Duane Storey & Dale Mugford (BraveNewCode Inc.)
  * Licensed under GPL.
  *
- * Date: May 11th, 2009
+ * Updated: May 27th, 2009
  */
  
 	$j = jQuery.noConflict();
@@ -42,4 +42,15 @@
 		success: function(data) {
 			jQuery("#wptouch-beta-content").html(data).fadeIn();
 		}}); 
+
+	jQuery('#header-text-color, #header-background-color, #header-border-color, #link-color').ColorPicker({
+		onSubmit: function(hsb, hex, rgb, el) {
+			jQuery(el).val(hex);
+			jQuery(el).ColorPickerHide();
+		},
+		onBeforeShow: function () {
+			jQuery(this).ColorPickerSetColor( jQuery(this).attr('value') );
+		}
+	});
+
 });
