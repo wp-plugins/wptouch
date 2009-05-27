@@ -125,6 +125,7 @@ function wptouch_content_filter( $content ) {
 	function wptouch_admin_css() {		
 		if ( isset( $_GET['page'] ) && $_GET['page'] == 'wptouch/wptouch.php' ) {		
 			echo "<link rel='stylesheet' type='text/css' href='" . compat_get_plugin_url( 'wptouch' ) . "/admin-css/wptouch-admin.css' />";
+			echo "<link rel='stylesheet' type='text/css' href='" . compat_get_plugin_url( 'wptouch' ) . "/admin-css/colorpicker.css' />";
 			echo "<link rel='stylesheet' type='text/css' href='" . compat_get_plugin_url( 'wptouch' ) . "/admin-css/jquery.fancybox.css' />";
 			
 			$version = (float)get_bloginfo('version');
@@ -136,6 +137,8 @@ function wptouch_content_filter( $content ) {
 			echo "<script type='text/javascript' src='" . compat_get_plugin_url( 'wptouch' ) . "/js/ajax_upload_3.1.js'></script>";
 			echo "<script type='text/javascript' src='" . compat_get_plugin_url( 'wptouch' ) . "/js/fancybox_1.2.1.js'></script>";
 			echo "<script type='text/javascript' src='" . compat_get_plugin_url( 'wptouch' ) . "/js/wptouch_admin_1.9.js'></script>";
+			echo "<script type='text/javascript' src='" . compat_get_plugin_url( 'wptouch' ) . "/js/colorpicker.js'></script>";
+			echo "<script type='text/javascript' src='" . compat_get_plugin_url( 'wptouch' ) . "/js/admin.js'></script>";
 		}
 	}
   
@@ -244,7 +247,7 @@ class WPtouchPlugin {
 		// Add whatever user agents you want here to the array if you want to make this show on a Blackberry 
 		// or something. No guarantees it'll look pretty, though!
 		$useragents = array(		
-	 		"safari",			// *Developer mode*
+	 		//"safari",			// *Developer mode*
 			"iphone",  
 			"ipod", 
 			"aspen", 		// iPhone simulator
