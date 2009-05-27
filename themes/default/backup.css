@@ -1458,10 +1458,6 @@ a.dsq-brlink {
 	background: url(../core/core-images/pinstripes-diagonal.gif) repeat;
 }
 
-.frog-wptouch-bg {
-	background: url(../core/core-css/frog/frog.png) repeat;
-}
-
 /* @end */
 
 /* @group Footer */
@@ -1497,18 +1493,20 @@ a.dsq-brlink {
 	font-size: 14px;
 }
 
-.offimg {
-	background: url(../core/core-images/off.jpg) no-repeat left top !important;
-}
-
 #wptouch-switch-link a {
 	position: absolute;
-	right: 10px;
-	display: block;
-	width: 77px;
-	background: url(../core/core-images/on.jpg) no-repeat left top;
+	right: 0;
+	top: -3px;
+}
+
+#wptouch-switch-link img {
+	position: absolute;
 	height: 22px;
-	top: 9px;
+	width: auto;
+	top: 12px;
+	right: 0;
+	z-index: 0;
+	margin-right: 10px;
 }
 
 /* @group Switch Link */

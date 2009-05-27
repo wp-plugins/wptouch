@@ -5,7 +5,7 @@
  * Copyright (c) 2009 Duane Storey & Dale Mugford (BraveNewCode Inc.)
  * Licensed under GPL.
  *
- * Date: May 11th, 2009
+ * Last Updated: May 26th, 2009
  */
 
 /////// -- Header Bump on page load -- ///////
@@ -21,9 +21,19 @@ window.scrollTo(0,1);},500);}}
 setInterval(updateLayout,300);
 
 
-/////// -- Drop Down Menus -- ///////
+/////// -- Let's Play Nice -- ///////
 
 $wptouch = jQuery.noConflict();
+
+
+/////// -- Switch Link Background Magic -- ///////
+
+	function bnc_jquery_switch() {
+		$wptouch("#wptouch-switch-link a#switch-link").toggleClass("offimg");
+	}
+
+
+/////// -- Drop Down Menus -- ///////
 
 // Creating a new function, fadeToggle()
 jQuery.fn.fadeToggle = function(speed, easing, callback) { 

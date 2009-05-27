@@ -131,7 +131,7 @@ function wptouch_core_else_text() {
 }
 
 function wptouch_core_footer_switch_link() {	
-echo '' . __( "Mobile Theme", "wptouch" ) . ' <a onclick="document.getElementById(\'switch-on\').style.display=\'none\';document.getElementById(\'switch-off\').style.display=\'block\';" href="' . get_bloginfo('home') . '/?theme_view=normal' . '"><img id="switch-on" src="' . compat_get_plugin_url( 'wptouch' ) . '/themes/core/core-images/on.jpg" alt="on switch image" /><img id="switch-off" style="display:none" src="' . compat_get_plugin_url( 'wptouch' ) . '/themes/core/core-images/off.jpg" alt="off switch image" /></a>';
+echo '' . __( "Mobile Theme", "wptouch" ) . ' <a id="switch-link" onclick="bnc_jquery_switch();alert(\'You can switch back to mobile view again in the footer.\')" href="' . get_bloginfo('home') . '/?theme_view=normal' . '"></a>';
 }
 
 
