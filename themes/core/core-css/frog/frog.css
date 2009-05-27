@@ -8,7 +8,7 @@
 #footer {
 	text-align: center;
 	color: #fff;
-	font-size: 13px;
+	font-size: 12px;
 	font-weight: bold;
 	text-shadow: #14361b 0 -1px 0;
 	padding-bottom: 10px;
@@ -46,7 +46,7 @@ a.ajax {
 	letter-spacing: 0;
 }
 
-.post {
+.post, #wptouch-switch-link {
 	background-color: #f0fee7;
 	border: 1px solid #639e43;
 }
@@ -68,11 +68,60 @@ a.post-arrow-down {
 	float: right;
 	margin-top: 1px;
 	padding: 0;
-	background: #bde88a url(../..//core-images/post-arrow.png) no-repeat -1px -23px;
+	background: #bde88a url(../../core-images/post-arrow.png) no-repeat -1px -23px;
 	border: 1px solid #b8b8b8;
 	-webkit-border-radius: 5px;
 }
 
 .mainentry a.read-more:hover {
 	background-color: #a3db85;
+}
+
+#drop-fade {
+	border-top: 1px solid #353f37;
+}
+
+#drop-fade a {
+	color: #fdf2a5;
+}
+
+/* @group DropDown Menu */
+
+.dropper {
+	border-top: 1px solid #395630;
+	font-size: 13px;
+	background-color: #1e2b1b;
+	border-bottom: 3px solid #0f220f;
+}
+
+.dropper li {
+	border-bottom: 1px solid #161b18;
+	border-top: 1px solid #2c3429;
+}
+
+.dropper li:last-child {
+	padding-bottom: 9px;
+	border-bottom-width: 0;
+}
+
+.dropper a {
+	text-shadow: #0c110a 0 -1px 0;
+	color: #bbd6b8;
+}
+
+#wptouch-menu-inner a:hover {
+	color: #38473d !important;
+	text-shadow: #b2c88f 0 1px 0;
+}
+
+.dropper li:hover {
+	background-color: #769555;
+}
+
+/* @end */
+
+#wptouch-search-inner {
+	border-top: 1px solid #56784f;
+	border-bottom: 1px solid #1e2b1c;
+	background-color: #33472b;
 }

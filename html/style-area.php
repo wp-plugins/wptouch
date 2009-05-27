@@ -5,8 +5,10 @@
 		<h3><?php _e( "Style &amp; Color Options", "wptouch" ); ?></h3>
 
 			<div class="wptouch-left-content">
-				<p><?php _e( "Customize the appearance of your website title, colors and text WPtouch will use.", "wptouch" ); ?></p>
-				<p><a href="http://www.colorpicker.com/" target="_blank"><?php _e( "Click here", "wptouch" ); ?></a> <?php _e( "to view a color picker to help you select hex colors.", "wptouch" ); ?></p>
+				<p><?php _e( "Customize the look of WPtouch on your website.", "wptouch" ); ?></p>
+				<p><?php _e( "A colorpicker box will assist you in picking colors.", "wptouch" ); ?></p>
+				<p><?php _e( "You can also use one of our preset skins, which will update your colors automatically.", "wptouch" ); ?></p>
+				<p><?php _e( "Skins also come with unique backgrounds and other style customizations to enhance WPtouch.", "wptouch" ); ?></p>
 			</div>
 		
 			<div class="wptouch-right-content">
@@ -20,7 +22,19 @@
 					<li><input type="text" id="link-color" name="link-color" value="<?php echo $wptouch_settings['link-color']; ?>" /><?php _e( "Site-wide link hex color", "wptouch" ); ?></li>
 				</ul>
 
+<br />
+
 				<ul class="wptouch-make-li-italic wptouch-select-options">
+					<li>
+					<select name="style-skin">
+						<option <?php if ($wptouch_settings['style-skin'] == "default-skin") echo " selected"; ?> value="default-skin"><?php _e( "Default", "wptouch" ); ?></option>
+						<option <?php if ($wptouch_settings['style-skin'] == "mono-skin") echo " selected"; ?> value="mono-skin"><?php _e( "Mono", "wptouch" ); ?></option>
+						<option <?php if ($wptouch_settings['style-skin'] == "cornflower-skin") echo " selected"; ?> value="conflower-skin"><?php _e( "Cornflower", "wptouch" ); ?></option>
+						<option <?php if ($wptouch_settings['style-skin'] == "frog-skin") echo " selected"; ?> value="frog-skin"><?php _e( "Frog", "wptouch" ); ?></option>
+						<option <?php if ($wptouch_settings['style-skin'] == "sea-skin") echo " selected"; ?> value="sea-skin"><?php _e( "Sea", "wptouch" ); ?></option>															
+						<option <?php if ($wptouch_settings['style-skin'] == "lavender-skin") echo " selected"; ?> value="lavender-skin"><?php _e( "Lavender", "wptouch" ); ?></option>																		</select>
+					<?php _e( "WPtouch Theme Skin (will update colors above)", "wptouch" ); ?>					
+					</li>
 					<li><select name="style-text-size">
 							<option <?php if ($wptouch_settings['style-text-size'] == "small-text") echo " selected"; ?> value="small-text"><?php _e( "Regular", "wptouch" ); ?></option>
 							<option <?php if ($wptouch_settings['style-text-size'] == "medium-text") echo " selected"; ?> value="medium-text"><?php _e( "Medium", "wptouch" ); ?></option>
