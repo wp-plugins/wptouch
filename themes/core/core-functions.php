@@ -131,7 +131,8 @@ function wptouch_core_else_text() {
 }
 
 function wptouch_core_footer_switch_link() {	
-echo '' . __( "Mobile Theme", "wptouch" ) . ' <a id="switch-link" onclick="bnc_jquery_switch();alert(\'You can switch back to mobile view again in the footer.\')" href="' . get_bloginfo('home') . '/?theme_view=normal' . '"></a>';
+echo '<script type="text/javascript">function switch_delayer() { window.location = "' . get_bloginfo('siteurl') . '/?theme_view=normal"}</script>';
+echo '' . __( "Mobile Theme", "wptouch" ) . ' <a id="switch-link" onclick="bnc_jquery_switch();alert(\'You can switch back to mobile view again in the footer.\'); setTimeout(\'switch_delayer()\', 1000); return false;" href="#"></a>';
 }
 
 

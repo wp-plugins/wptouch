@@ -774,10 +774,18 @@ a.sh2 {
 
 .single-mail-left {
 	float: left;
+	background: url(../core/core-images/mailit.png) no-repeat right 1px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	padding-right: 22px;
 }
 
 .single-bookmark-right {
 	float: right;
+	background: url(../core/core-images/mailit.png) no-repeat left 1px;
+	padding-left: 18px;
+	padding-top: 2px;
+	padding-bottom: 2px;
 }
 
 img.small {
@@ -801,15 +809,15 @@ img.small {
 .navigation .alignleft a {
 	padding-left: 25px;
 	background: url(../core/core-images/blue_arrow.png) no-repeat left -20px;
-	padding-bottom: 2px;
-	padding-top: 3px;
+	padding-bottom: 1px;
+	padding-top: 1px;
 	float: left;
 }
 
 .navigation .alignright a {
 	background: url(../core/core-images/blue_arrow.png) no-repeat right 0;
-	padding-bottom: 2px;
-	padding-top: 3px;
+	padding-bottom: 1px;
+	padding-top: 1px;
 	padding-right: 25px;
 	float: right;
 }
@@ -950,73 +958,6 @@ img.pageicon {
 	height: auto !important;
 }
 
-/* @group Links */
-
-#wptouch-links {
-	-webkit-border-radius: 8px;
-	border: 1px solid #adadad;
-	background-color: #fff;
-	margin-right: 10px;
-	margin-left: 10px;
-}
-
-#wptouch-links a {
-	color: #222;
-	display: block;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	padding-left: 10px;
-}
-
-#wptouch-links ul {
-	padding: 0;
-	margin: 0;
-	list-style-type: none;
-}
-
-#wptouch-links li {
-	border-bottom: 1px solid #ccc;
-	list-style-type: none;
-	font-weight: bold;
-	font-size: 13px;
-	color: #222;
-	display: block;
-	margin: 0;
-	background: url(images/arrow.png) no-repeat right center;
-	padding: 2px 0;
-}
-
-#wptouch-links img {
-	float: left;
-	width: 18px;
-	height: 18px;
-	margin-left: 10px;
-	position: relative;
-	top: 10px;
-	margin-right: 10px;
-	padding-bottom: 10px;
-}
-
-/* @end */
-
-/* @group Photos */
-
-#wptouch-flickr {
-	text-align: center;
-	margin-left: 1px;
-}
-
-#wptouch-flickr img {
-	padding: 2px;
-	border-bottom: 1px solid #666;
-	background-color: #999;
-	margin: 3px;
-	width: 55px;
-	height: 55px;
-}
-
-/* @end */
-
 /* @group Archives */
 
 #wptouch-tagcloud {
@@ -1042,19 +983,16 @@ img.pageicon {
 #wptouch-archives a {
 	color: #222;
 	display: block;
-	padding-top: 10px;
 	padding-bottom: 10px;
 	padding-left: 10px;
-}
-
-#wptouch-archives a:hover {
-	color: #006bb3;
+	background: url(../core/core-images/arrow.png) no-repeat right center;
+	padding-top: 10px;
 }
 
 #wptouch-archives ul {
 	padding: 0;
-	margin: 0;
 	list-style-type: none;
+	margin: 0;
 }
 
 #wptouch-archives li {
@@ -1064,9 +1002,92 @@ img.pageicon {
 	font-size: 14px;
 	color: #222;
 	display: block;
-	margin: 0;
 	padding: 0;
+	margin-bottom: 0;
+	margin-left: -10px;
+	margin-right: -10px;
+}
+
+#wptouch-archives li:first-child {
+	margin-top: -10px;
+}
+
+#wptouch-archives li:last-child {
+	margin-bottom: -10px;
+	border-bottom-style: none;
+}
+
+/* @end */
+
+/* @group Links */
+
+#wptouch-links {
+	-webkit-border-radius: 8px;
+	border: 1px solid #adadad;
+	background-color: #fff;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
+#wptouch-links a {
+	color: #222;
+	display: block;
 	background: url(../core/core-images/arrow.png) no-repeat right center;
+	padding: 10px 10% 10px 10px;
+}
+
+#wptouch-links ul {
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+}
+
+#wptouch-links li {
+	border-bottom: 1px solid #ccc;
+	list-style-type: none;
+	font-weight: bold;
+	font-size: 13px;
+	color: #222;
+	display: block;
+	margin: 0 -10px;
+	padding: 0;
+}
+
+#wptouch-links li:first-child {
+	margin-top: -10px;
+}
+
+#wptouch-links li:last-child {
+	margin-bottom: -10px;
+	border-bottom-style: none;
+}
+
+#wptouch-links img {
+	float: left;
+	width: 18px;
+	height: 18px;
+	margin-left: 10px;
+	position: relative;
+	top: 10px;
+	margin-right: 10px;
+	padding-bottom: 10px;
+}
+
+/* @end */
+
+/* @group Photos */
+
+#wptouch-flickr {
+	text-align: center;
+	width: auto;
+}
+
+#wptouch-flickr img {
+	padding: 1px;
+	background-color: #ccc;
+	margin: 5px;
+	width: 55px;
+	height: 55px;
 }
 
 /* @end */
@@ -1237,6 +1258,10 @@ form#commentform input {
 
 form#commentform input#submit {
 	width: 25%;
+	opacity: 1;
+	background-color: #eee;
+	border: 1px solid #ccc;
+	text-shadow: #fff 0 1px 0;
 }
 
 form#commentform small {

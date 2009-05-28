@@ -36,12 +36,12 @@
           
                 <?php if (function_exists('wp_tag_cloud')) { ?>
                 <h3 class="result-text"><?php _e( "Tag Cloud", "wptouch" ); ?></h3>
-            	<div id="wptouch-tagcloud">
+            	<div id="wptouch-tagcloud" class="post">
               	<?php wp_tag_cloud('smallest=11&largest=18&unit=px&orderby=count&order=DESC'); ?>
               <?php } else { ?>
 
             <h3 class="result-text"><?php _e( "Category Cloud", "wptouch" ); ?></h3>
-          <div id="wptouch-tagcloud">
+          <div id="wptouch-tagcloud" class="post">
           <?php wp_list_categories(); // This will print out the default WordPress Categories Listing. ?>                
           <?php } ?>
 		  </div>
@@ -49,7 +49,7 @@
 </div>
 
           <h3 class="result-text"><?php _e( "Monthly Archives", "wptouch" ); ?></h3>
-          <div id="wptouch-archives">
+          <div id="wptouch-archives" class="post">
            <?php wp_get_archives(); // This will print out the default WordPress Monthly Archives Listing. ?> 
           </div>
 		  
@@ -77,7 +77,7 @@
 	</div>          
 
 	<h3 class="result-text">(<?php _e( "Alphabetical Order", "wptouch" ); ?>)</h3>
-		<div id="wptouch-links">
+		<div id="wptouch-links" class="post">
 		<ul>
 			<?php foreach (get_bookmarks('categorize=0&title_li=0') as $bm) { echo('<li>'); echo('<img src="http://bravenewcode.com/code/favicon.php?site=' . urlencode($bm->link_url) . '&amp;default=' . urlencode(bnc_get_local_icon_url() . '/icon-pool/Default.png') . '" />'); echo('<a href="' . $bm->link_url . '">' . $bm->link_name . '</a>'); echo('</li>'); } ?>
 		</ul>

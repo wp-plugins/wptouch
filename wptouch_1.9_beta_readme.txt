@@ -10,10 +10,10 @@ You can also checkout our Support Forums at http://support.bravenewcode.com to p
 
 
 = New In Version 1.9 Beta 8 // May 27th, 2009 =
-* Changed default theme styling regarding images (the now load as background images, easied to skin)
-* Added all-new variation on the default theme as style selections (mono, frog, cornflower, sea, lavender)
+* Changed default theme styling regarding images (now load as background images)
+* Added all-new variation on the default theme as style selections (mono, frog, sea, lavender)
 * Added jQuery color picker in the admin hex areas for easier style selections
-* Fix for categories, tags & login links not working in some mobile browsers
+* Fix for categories, tags & login links not working in some mobile browsers (Android, Etc)
 * Bug fixes
 
 = New In Version 1.9 Beta 7.1 // May 20th, 2009 =

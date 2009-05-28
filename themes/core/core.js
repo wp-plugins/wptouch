@@ -32,7 +32,6 @@ $wptouch = jQuery.noConflict();
 		$wptouch("#wptouch-switch-link a#switch-link").toggleClass("offimg");
 	}
 
-
 /////// -- Drop Down Menus -- ///////
 
 // Creating a new function, fadeToggle()

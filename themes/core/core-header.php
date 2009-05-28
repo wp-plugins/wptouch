@@ -10,6 +10,6 @@
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 	<link rel="apple-touch-icon" href="<?php echo bnc_get_title_image(); ?>" />
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
-	<link rel="stylesheet" href="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/themes/core/core-css/frog/frog.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/themes/core/core-css/frog.css" type="text/css" media="screen" />
 	<?php wptouch_core_header_styles(); wptouch_core_header_enqueue(); ?>
 </head>
