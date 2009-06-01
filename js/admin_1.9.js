@@ -6,7 +6,7 @@
  * Copyright (c) 2009 Duane Storey & Dale Mugford (BraveNewCode Inc.)
  * Licensed under GPL.
  *
- * Updated: May 27th, 2009
+ * Updated: 1 / 6 / 2009
  */
  
 	$j = jQuery.noConflict();
