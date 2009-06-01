@@ -58,7 +58,7 @@
 							<option <?php if ($wptouch_settings['style-background'] == "classic-wptouch-bg") echo " selected"; ?> value="classic-wptouch-bg"><?php _e( "Classic", "wptouch" ); ?></option>
 							<option <?php if ($wptouch_settings['style-background'] == "horizontal-wptouch-bg") echo " selected"; ?> value="horizontal-wptouch-bg"><?php _e( "Horizontal Grey", "wptouch" ); ?></option>
 							<option <?php if ($wptouch_settings['style-background'] == "diagonal-wptouch-bg") echo " selected"; ?> value="diagonal-wptouch-bg"><?php _e( "Diagonal Grey", "wptouch" ); ?></option>
-							<option <?php if ($wptouch_settings['style-background'] == "frog-wptouch-bg") echo " selected"; ?> value="frog-wptouch-bg"><?php _e( "Frog Stripes", "wptouch" ); ?></option>						</select>
+							<option <?php if ($wptouch_settings['style-background'] == "lavender-wptouch-bg") echo " selected"; ?> value="lavender-wptouch-bg"><?php _e( "Lavender Stripes", "wptouch" ); ?></option>						</select>
 						<?php _e( "Background image", "wptouch" ); ?>
 					</li>
 				</ul>	

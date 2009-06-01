@@ -5,7 +5,7 @@
 /*  
 Theme Name: WPtouch Mobile Plugin & Theme For WordPress
 Theme URI: http://www.bravenewcode.com/wptouch/
-Description: A slick theme for your blog or website that is shown only when visitors are using an iPhone/iPod touch.
+Description: A slick theme for your blog or website that is shown only when visitors are using an iPhone, iPod touch, or Android Mobile Device
 Author: Dale Mugford and Duane Storey
 Author URI: http://www.bravenewcode.com/
 	
@@ -227,6 +227,10 @@ blockquote {
 	padding: 3px 0;
 }
 
+#drop-fade a {
+	text-shadow: #000000 0px -1px 1px;	
+}
+
 #drop-fade img {
 	position: relative;
 	top: 5px;
@@ -260,8 +264,8 @@ form#select-cats, form#select-tags, form#select-acct {
 	padding: 0;
 }
 
-select#cat option {
-	text-transform: capitalize;
+form#select-cats option {
+	text-transform: capitalize !important;
 }
 
 
@@ -666,14 +670,22 @@ a.h2 {
 
 .ajax-load-more {
 	display: block;
-	text-align: center;
 	margin-top: 15px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	width: 185px;
 }
 
-img.spin {
-	margin-right: 5px;
+.spin {
+	width: 16px;
+	height: 16px;
+	background: url(../core/core-images/ajax-loader.gif) no-repeat;
+	display: block;
+	float: left;
 	position: relative;
-	margin-bottom: -3px;
+	right: 5px;
+	top: 1px;
 }
 
 a.ajax {
@@ -681,8 +693,8 @@ a.ajax {
 	text-shadow: #eee 1px 1px 0;
 	font-size: 15px;
 	font-weight: bold;
-	margin-right: 10px;
 	letter-spacing: 0;
+	height: 16px;
 }
 
 /* @end */
@@ -808,14 +820,14 @@ img.small {
 
 .navigation .alignleft a {
 	padding-left: 25px;
-	background: url(../core/core-images/blue_arrow.png) no-repeat left -20px;
+	background: url(../core/core-images/nav_arrow.png) no-repeat left -20px;
 	padding-bottom: 1px;
 	padding-top: 1px;
 	float: left;
 }
 
 .navigation .alignright a {
-	background: url(../core/core-images/blue_arrow.png) no-repeat right 0;
+	background: url(../core/core-images/nav_arrow.png) no-repeat right 0;
 	padding-bottom: 1px;
 	padding-top: 1px;
 	padding-right: 25px;
