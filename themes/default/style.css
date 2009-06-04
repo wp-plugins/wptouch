@@ -247,13 +247,7 @@ blockquote {
 }
 
 #drop-fade a.baropen {
-	background-color: #4d4d4d;
-	border-right: 1px solid #1b1b1b;
-	border-left: 1px solid #1b1b1b;
-	margin-right: 11px;
-	margin-left: -2px;
-	padding-top: 6px;
-	padding-bottom: 6px;
+	
 }
 
 #drop-fade #catsopen {
