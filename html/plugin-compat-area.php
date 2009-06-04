@@ -15,21 +15,11 @@
 						echo '</p><p class="wptv">';
 						echo __( '' . wptouch() . ' support: ', 'wptouch' );
 						if ($version > 2.8) {
-
 							echo sprintf(__( "%sUntested%s", "wptouch" ), '<span class="caution">','</span>');
-
-						} elseif ($version >= 2.5) {
-
+						} elseif ($version >= 2.6) {
 							echo sprintf(__( "%sFully Supported%s", "wptouch" ), '<span class="go">','</span>');
-
-						} elseif ($version >= 2.3) {
-
-							echo sprintf(__( "%Partially Supported%s", "wptouch" ), '<span class="caution">','</span>');
-
 						} else {
-
 							echo sprintf(__( "%Not Supported! Upgrade Required.%s", "wptouch" ), '<span class="red">','</span>');
-
 						} 
 						echo '</p>';
 					?>	

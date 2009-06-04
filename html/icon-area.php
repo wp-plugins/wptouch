@@ -7,10 +7,13 @@
 
 			<div class="wptouch-left-content">
 				<p><?php _e( "You can select which icons will be displayed beside pages enabled below in the Site Menu section.", "wptouch" ); ?></p>
-				<p><?php _e( "To add icons to the pool, simply upload a 60x60 .png, .jpeg or .gif image from your computer.", "wptouch" ); ?></p>
+				<strong><?php _e( "Adding Icons", "wptouch" ); ?></strong>
+				<p><?php _e( "To add icons to the pool, simply upload a 32x32.png, .jpeg or .gif image from your computer.", "wptouch" ); ?></p>
+				<strong><?php _e( "Logo/Bookmark Icons", "wptouch" ); ?></strong>
+				<p><?php _e( "If you're adding a logo icon, the best dimensions for it are 59x60px when used as a bookmark icon.", "wptouch" ); ?></p>
 				<p><?php echo sprintf( __( "Need help? You can use %sthis easy online icon generator%s to make one.", "wptouch"), "<a href='http://www.flavorstudios.com/iphone-icon-generator' target='_blank'>", "</a>" ); ?></p>
-				<p><?php echo sprintf( __( "These files will be stored in your wp-content %s/uploads/wptouch/custom-icons%s folder.", "wptouch"), "<strong>", "</strong>" ); ?></p>
-				<p><?php echo sprintf( __( "If upload fails, you can create the folder yourself using FTP and try again.", "wptouch"), "<strong>", "</strong>" ); ?></p>
+				<p><?php echo sprintf( __( "These files will be stored in a wp-content %s/uploads/wptouch/custom-icons%s folder we create.", "wptouch"), "<strong>", "</strong>" ); ?></p>
+				<p><?php echo sprintf( __( "If upload fails (usually it's a permission problem) create the folder yourself using FTP and try again.", "wptouch"), "<strong>", "</strong>" ); ?></p>
 						
 				<div id="upload_button"></div> 
 
