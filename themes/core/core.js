@@ -5,7 +5,7 @@
  * Copyright (c) 2009 Duane Storey & Dale Mugford (BraveNewCode Inc.)
  * Licensed under GPL.
  *
- * Last Updated: May 26th, 2009
+ * Last Updated: June 3rd, 2009
  */
 
 /////// -- Header Bump on page load -- ///////
@@ -45,7 +45,7 @@ jQuery.fn.fadeToggle = function(speed, easing, callback) {
 	
 	function bnc_jquery_login_drop() {
 		$wptouch('#wptouch-login').fadeToggle(400);
-		$wptouch("#drop-fade a#loginopen").toggleClass("baropen");
+//		$wptouch("#drop-fade a#loginopen").toggleClass("baropen");
 	}
 	
 	function bnc_jquery_cats_open() {
