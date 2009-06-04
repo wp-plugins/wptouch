@@ -158,12 +158,12 @@ blockquote {
 	background-repeat: repeat-x;
 	height: 45px;
 	border-bottom: 1px solid #1e1e1e;
-	font-size: 19px;
+	font-size: 20px;
 }
 
 #headerbar-title {
 	text-shadow: #242424 -1px -1px 1px;
-	padding-top: 11px;
+	padding-top: 9px;
 	padding-left: 10px;
 	display: block;
 	margin: 0;
@@ -189,10 +189,10 @@ blockquote {
 	margin-right: 7px;
 	max-width: 30px;
 	float: left;
-	width: 26px;
-	height: 26px;
+	width: 28px;
+	height: 28px;
 	padding: 0;
-	bottom: 1px;
+	bottom: 0;
 }
 
 #headerbar-menu {
@@ -206,7 +206,7 @@ blockquote {
 #headerbar-menu a {
 	height: 45px;
 	display: block;
-	background: url(../core/core-images/menu/wptouch-menu-dropper.png) 0 0;
+	background: url(../core/core-images/wptouch-menu-dropper.png) 0 0;
 	width: 30px;
 	margin: 0;
 	padding: 0;
@@ -216,6 +216,8 @@ blockquote {
 	background-position: 0 -45px;
 }
 
+/* @group Drop-Fade Links */
+
 #drop-fade {
 	width: 100%;
 	display: block;
@@ -224,11 +226,8 @@ blockquote {
 	text-align: right;
 	margin: 0;
 	border-top: 1px solid #3e3e3e;
-	padding: 3px 0;
-}
-
-#drop-fade a {
-	text-shadow: #000000 0px -1px 1px;	
+	padding: 5px 0 3px;
+	overflow: hidden;
 }
 
 #drop-fade img {
@@ -244,6 +243,7 @@ blockquote {
 	color: #fff;
 	padding: 4px 5px;
 	margin-left: -1px;
+	text-shadow: #000000 0px -1px 1px;
 }
 
 #drop-fade a.baropen {
@@ -255,6 +255,30 @@ blockquote {
 	padding-top: 6px;
 	padding-bottom: 6px;
 }
+
+#drop-fade #catsopen {
+	background: url(../core/core-images/menu-sprite.png) no-repeat 0 -47px;
+	padding-left: 16px;
+}
+
+#drop-fade #tagsopen {
+	background: url(../core/core-images/menu-sprite.png) no-repeat 0 5px;
+	padding-left: 16px;
+}
+
+#drop-fade #loginopen {
+	background: url(../core/core-images/menu-sprite.png) no-repeat 0 -31px;
+	padding-left: 16px;
+}
+
+#drop-fade #accountopen {
+	padding-left: 18px;
+	background: url(../core/core-images/menu-sprite.png) no-repeat 0 -16px;
+}
+
+
+
+/* @end */
 
 form#select-cats, form#select-tags, form#select-acct {
 	overflow: hidden;
@@ -491,46 +515,47 @@ a.h2 {
 	height: auto;
 }
 
-/* @group Calendar CSS Icons */
-
 .comment-bubble {
-	background: url(../core/core-images/unread-com.png) no-repeat;
-	width: 25px;
-	height: 21px;
-	padding-top: 5px;
-	text-align: center;
+	background: url(../core/core-images/sprite.png) no-repeat -2px -90px;
+	width: 24px;
+	height: 20px;
+	padding-top: 4px;
 	float: left;
 	position: relative;
 	color: #fff;
 	left: 13px;
 	padding-left: 0;
 	top: 2px;
-	font: bold 12px Helvetica, Arial-BoldMT, Geneva, sans-serif;
+	font: bold 13px Helvetica, Arial-BoldMT, Geneva, sans-serif;
 	letter-spacing: -1px;
 	text-shadow: #871521 -1px -1px 1px;
-	padding-right: 0;
+	padding-right: 1px;
 	margin-left: 0;
 	z-index: 1;
+	text-align: center;
 }
 
 .comment-bubble-big {
-	background: url(../core/core-images/unread-com-triple.png) no-repeat;
-	width: 30px;
-	height: 20px;
-	padding-top: 4px;
-	text-align: center;
-	font-size: 11px;
+	background: url(../core/core-images/sprite.png) no-repeat -2px -66px;
+	width: 27px;
+	height: 21px;
+	padding-top: 3px;
 	float: left;
-	display: inline;
 	position: relative;
 	color: #fff;
-	z-index: 1;
-	left: 15px;
+	left: 13px;
 	padding-left: 0;
+	top: 2px;
+	font: bold 13px Helvetica, Arial-BoldMT, Geneva, sans-serif;
 	letter-spacing: -1px;
-	font-weight: bold;
-	top: 5px;
+	text-shadow: #871521 -1px -1px 1px;
+	padding-right: 2px;
+	margin-left: 0;
+	z-index: 1;
+	text-align: center;
 }
+
+/* @group Calendar CSS Icons */
 
 .calendar {
 	text-align: center;
@@ -786,18 +811,20 @@ a.sh2 {
 
 .single-mail-left {
 	float: left;
-	background: url(../core/core-images/mailit.png) no-repeat right 1px;
-	padding-top: 2px;
-	padding-bottom: 2px;
-	padding-right: 22px;
+	background: url(../core/core-images/sprite.png) no-repeat 35px -12px;
+	padding-top: 0;
+	padding-bottom: 0;
+	padding-right: 20px;
+	margin-top: 5px;
 }
 
 .single-bookmark-right {
 	float: right;
-	background: url(../core/core-images/mailit.png) no-repeat left 1px;
+	background: url(../core/core-images/sprite.png) no-repeat left 0;
 	padding-left: 18px;
-	padding-top: 2px;
-	padding-bottom: 2px;
+	padding-top: 0;
+	padding-bottom: 0;
+	margin-top: 5px;
 }
 
 img.small {
@@ -820,16 +847,16 @@ img.small {
 
 .navigation .alignleft a {
 	padding-left: 25px;
-	background: url(../core/core-images/nav_arrow.png) no-repeat left -20px;
+	background: url(../core/core-images/sprite.png) no-repeat 1px -46px;
 	padding-bottom: 1px;
-	padding-top: 1px;
+	padding-top: 2px;
 	float: left;
 }
 
 .navigation .alignright a {
-	background: url(../core/core-images/nav_arrow.png) no-repeat right 0;
+	background: url(../core/core-images/sprite.png) no-repeat 61px -26px;
 	padding-bottom: 1px;
-	padding-top: 1px;
+	padding-top: 2px;
 	padding-right: 25px;
 	float: right;
 }
@@ -1143,14 +1170,20 @@ img.pageicon {
 	border: 1px solid #adadad;
 	background-color: #fff;
 	padding: 5px;
+	overflow: hidden;
+	position: relative;
 }
 
 #comment_wrapper .comtop {
-	font-size: 14px;
+	font-size: 13px;
 	font-weight: bold;
 	position: relative;
-	padding: 0 5px;
-	margin: 5px 0 0;
+	padding: 8px 5px 3px 15px;
+	margin: -5px -10px 0;
+	border-bottom: 1px solid #c1cfd1;
+	background-color: #eee;
+	-webkit-border-top-left-radius: 15px;
+	-webkit-border-top-right-radius: 15px;
 }
 
 #comment_wrapper .combody {
@@ -1169,18 +1202,25 @@ img.pageicon {
 }
 
 #comment_wrapper .comdater {
-	font-size: 12px;
-	color: #adadad;
+	font-size: 11px;
+	color: #85919d;
 	letter-spacing: 0;
 	font-weight: normal;
 	font-style: normal;
 }
 
-#comment_wrapper .gravatar {
+#comment_wrapper .comdater-big {
+	font-size: 14px;
+	color: #abb7ba;
+	letter-spacing: 0;
+	font-weight: bold;
+	float: right;
+	text-shadow: #fff 1px 1px 1px;
+	text-align: center;
 	position: relative;
-	margin-right: 5px;
-	padding: 0px;
-	float: left;
+	right: 10px;
+	line-height: 110%;
+	top: 3px;
 }
 
 #comment_wrapper .avatar {
@@ -1188,6 +1228,7 @@ img.pageicon {
 	margin-right: 5px;
 	padding: 0px;
 	float: left;
+	border: 1px solid #85919d;
 }
 
 /* @end */

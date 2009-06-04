@@ -30,12 +30,11 @@ $oddcomment = 'alt';
 
 	<div class="comwrap">
 			<div class="comtop">		
-				<?php if (bnc_is_gravatars_enabled()) { if (function_exists('gravatar')) { ?>
-					<img class='gravatar' src="<?php gravatar("R", 28, "' . compat_get_plugin_url( 'wptouch' ) . '/themes/core/core-images/blank_gravatar.png'"); ?>" alt='' />	
-					<?php } elseif (function_exists('get_avatar')) { echo get_avatar( $comment, $size = '28', $default = '' . compat_get_plugin_url( 'wptouch' ) . '/themes/core/core-images/blank_gravatar.png' ); } ?>
+				<?php if (bnc_is_gravatars_enabled()) { if (function_exists('get_avatar')) { echo get_avatar( $comment, $size = '28', $default = '' . compat_get_plugin_url( 'wptouch' ) . '/themes/core/core-images/blank_gravatar.jpg' ); } ?>
 				<?php } ?>		
-					<a href="<?php comment_author_url(); ?>"><?php comment_author(); ?></a> said:
-			<div class="comdater"><?php comment_time('M jS @ h:i a'); ?></div>  
+					<a href="<?php comment_author_url(); ?>"><?php comment_author(); ?></a>
+			<div class="comdater-big"><?php comment_time('M'); ?> <?php comment_time('d'); ?></div>  
+			<div class="comdater"><?php comment_time('h:i a'); ?></div>  
 	</div><!--end comtop-->
 
         <!-- <?php $comment_num++; ?>  -->

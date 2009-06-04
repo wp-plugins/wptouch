@@ -2,7 +2,7 @@
 /*
    Plugin Name: WPtouch iPhone Theme
    Plugin URI: http://bravenewcode.com/wptouch/
-   Description: A plugin which formats your site with a mobile theme for the Apple <a href="http://www.apple.com/iphone/">iPhone</a> & <a href="http://www.apple.com/ipodtouch/">iPod touch</a>, <a href="http://www.android.com/">Google Android</a> or <a href="http://www.rim.com/storm/">Blackberry Storm</a> touch mobile devices. Set options by visiting the <a href="options-general.php?page=wptouch/wptouch.php">WPtouch admin panel</a>. &nbsp;
+   Description: A plugin which formats your site with a mobile theme for the Apple <a href="http://www.apple.com/iphone/">iPhone</a> & <a href="http://www.apple.com/ipodtouch/">iPod touch</a> or <a href="http://www.android.com/">Google Android</a> smartphone. Set options by visiting the <a href="options-general.php?page=wptouch/wptouch.php">WPtouch admin panel</a>. &nbsp;
    Author: Dale Mugford & Duane Storey
    Version: 1.9b8
    Author URI: http://www.bravenewcode.com
@@ -11,7 +11,7 @@
    # (http://iwphone.contentrobot.com/) which the detection feature
    # of the plugin was based on.
  
-   # Copyright (c) 2009 Duane Storey & Dale Mugford (BraveNewCode Inc.)
+   # Copyright (c) 2008-2009 Duane Storey & Dale Mugford of BraveNewCode Inc.
  
    # This plugin is free software; you can redistribute it and/or
    # modify it under the terms of the GNU Lesser General Public
@@ -244,16 +244,17 @@ class WPtouchPlugin {
 		// Add whatever user agents you want here to the array if you want to make this show on a Blackberry 
 		// or something. No guarantees it'll look pretty, though!
 		$useragents = array(		
-	 	//	"safari",			// *Developer mode*
+	 	// "safari",			// *Developer mode*
 			"iphone",  
 			"ipod", 
 			"aspen", 		// iPhone simulator
 			"dream", 		// Pre 1.5 Android
 			"android", 	// 1.5+ Android
+			"cupcake", 	// 1.5+ Android
 			"incognito", 
 			"webmate", 
-			"blackberry9500", 
-			"blackberry9530"
+		//	"blackberry9500", 
+		//	"blackberry9530"
 		);
 		
 		$this->applemobile = false;
