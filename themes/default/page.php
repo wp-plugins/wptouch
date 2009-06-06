@@ -5,7 +5,6 @@
 	 <div class="page">
 		<div class="page-title-icon">		
 			<?php
-			$icon_name = strtolower($post->post_title) . '.png';
 			$mypages = bnc_wp_touch_get_pages();
 			
 			if (isset($mypages[get_the_ID()])) {
