@@ -290,9 +290,10 @@ form#select-cats option {
 /* @group DropDown Menu */
 
 #wptouch-menu {
-	position: relative;
-	bottom: 26px;
-	z-index: 1;
+	position: absolute;
+	z-index: 2;
+	top: 45px;
+	-webkit-box-shadow: #333 -6px 6px 6px;
 }
 
 .dropper {
@@ -324,7 +325,6 @@ form#select-cats option {
 
 .dropper li:last-child {
 	padding-bottom: 9px;
-	border-bottom: 2px solid #868686;	
 }
 
 .dropper a {
@@ -514,12 +514,9 @@ a.h2 {
 	width: 24px;
 	height: 20px;
 	padding-top: 4px;
-	float: left;
-	position: relative;
+	position: absolute;
 	color: #fff;
-	left: 13px;
 	padding-left: 0;
-	top: 2px;
 	font: bold 13px Helvetica, Arial-BoldMT, Geneva, sans-serif;
 	letter-spacing: -1px;
 	text-shadow: #871521 -1px -1px 1px;
@@ -527,6 +524,8 @@ a.h2 {
 	margin-left: 0;
 	z-index: 1;
 	text-align: center;
+	left: 1px;
+	top: 1px;
 }
 
 .comment-bubble-big {
@@ -547,6 +546,28 @@ a.h2 {
 	margin-left: 0;
 	z-index: 1;
 	text-align: center;
+}
+
+.archive-top {
+	margin: -11px -11px 7px;
+	-webkit-border-top-right-radius: 8px;
+	padding: 0;
+}
+
+.archive-top-right .post-arrow, .archive-top-right .post-arrow-down {
+	margin-right: 5px;
+	margin-top: 3px;
+}
+
+.archive-top-left.month-01, #arc-top.month-02, #arc-top.month-03, #arc-top.month-04, #arc-top.month-05, #arc-top.month-06, #arc-top.month-07, #arc-top.month-08, #arc-top.month-09, #arc-top.month-10, #arc-top.month-11, #arc-top.month-12{
+	-webkit-border-top-left-radius: 8px;
+	-webkit-border-top-right-radius: 8px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 10px;
+	font-weight: bold;
+	color: #eee;
+	text-shadow: #444 0 -1px 1px;
 }
 
 /* @group Calendar CSS Icons */
@@ -611,19 +632,19 @@ a.h2 {
 }
 
 .month-05 {
-	background-color: #58b0ea;
+	background-color: #409ad5;
 }
 
 .month-06 {
-	background-color: #8d68b1;
+	background-color: #be63c5;
 }
 
 .month-07 {
-	background-color: #fb9848;
+	background-color: #f79445;
 }
 
 .month-08 {
-	background-color: #639a37;
+	background-color: #4e1e00;
 }
 
 .month-09 {
@@ -631,7 +652,7 @@ a.h2 {
 }
 
 .month-10 {
-	background-color: #1d4362;
+	background-color: #284461;
 }
 
 .month-11 {
@@ -688,23 +709,22 @@ a.h2 {
 /* @group Ajax */
 
 .ajax-load-more {
-	display: block;
 	margin-top: 15px;
-	margin-left: auto;
 	margin-right: auto;
-	text-align: center;
-	width: 185px;
+	display: block;
+	margin-left: auto;
+	width: 155px;
 }
 
 .spin {
-	width: 16px;
 	height: 16px;
 	background: url(../core/core-images/ajax-loader.gif) no-repeat;
-	display: block;
-	float: left;
+	display: inline-block;
+	width: 16px;
 	position: relative;
+	float: left;
+	top: 0;
 	right: 5px;
-	top: 1px;
 }
 
 a.ajax {
@@ -954,12 +974,9 @@ img.small {
 	padding-right: 0;
 	padding-top: 0;
 	padding-bottom: 0;
-	margin-bottom: 0;
-	margin-right: 0;
-	margin-left: 42px;
 	position: relative;
-	bottom: 5px;
 	border-style: none;
+	margin: 10px 0 0 42px;
 }
 
 .pageentry {
@@ -976,10 +993,11 @@ img.small {
 img.pageicon {
 	position: relative;
 	margin-right: 10px;
-	width: 42px;
-	height: 42px;
+	width: auto;
+	height: auto;
 	float: left;
-	margin-top: -15px;
+	margin-top: -5px;
+	margin-left: 0;
 }
 
 .pageentry .wp-caption {

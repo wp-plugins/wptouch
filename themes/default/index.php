@@ -6,24 +6,33 @@
 	<div class="result-text"><?php wptouch_core_body_result_text(); ?></div>
 
   <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-	
-		<?php if (!function_exists('dsq_comments_template') || !function_exists('intensedebate_id')) { ?>
-				<?php if (isset($post->comment_count) && $post->comment_count > 0) { ?>
+ <div class="post" id="post-<?php the_ID(); ?>">
+ 
+ 		<?php if (!function_exists('dsq_comments_template') || !function_exists('intensedebate_id')) { ?>
+				<?php if (isset($post->comment_count) && $post->comment_count > 0 && !is_archive()) { ?>
 					<div class="comment-bubble<?php if ($post->comment_count > 99) echo('-big'); ?>">
 						<?php comments_number('0', '1', '%'); ?>
 					</div>
 				<?php } ?>
-			<?php } ?>		
-
- <div class="post" id="post-<?php the_ID(); ?>">
+			<?php } ?>			
  	
- 	<?php wptouch_core_body_post_arrows(); ?>
-	
-	<div class="calendar">
-		<div class="cal-month month-<?php echo get_the_time('m') ?>"><?php echo get_the_time('M') ?></div>
-		<div class="cal-date"><?php echo get_the_time('j') ?></div>
-	</div>
-
+ 	<?php if (is_archive()) { ?>
+		<div class="archive-top">
+			<div class="archive-top-right">
+				<?php wptouch_core_body_post_arrows(); ?>
+			</div> 
+		 <div id="arc-top" class="archive-top-left month-<?php echo get_the_time('m') ?>">
+			<?php echo get_the_time('M') ?> <?php echo get_the_time('j') ?>, <?php echo get_the_time('Y') ?>
+		 </div>
+		</div>
+ 	<?php } else { ?>	
+ 		<?php wptouch_core_body_post_arrows(); ?>
+			<div class="calendar">
+				<div class="cal-month month-<?php echo get_the_time('m') ?>"><?php echo get_the_time('M') ?></div>
+				<div class="cal-date"><?php echo get_the_time('j') ?></div>
+			</div>
+	<?php } ?>
+ 
 	<a class="h2" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 		<div class="post-author">
 			<?php if (bnc_show_author()) { ?><span class="lead"><?php _e("Author", "wptouch"); ?>:</span> <?php the_author(); ?><br /><?php } ?>
@@ -45,15 +54,7 @@
 	<div id="call<?php echo md5($_SERVER['REQUEST_URI']); ?>" class="ajax-load-more">
 		<span id="spinner<?php echo md5($_SERVER['REQUEST_URI']); ?>" class="spin"	 alt="ajax icon" style="display:none"></span>
 		<a class="ajax" href="javascript: return false;" onclick="$wptouch('#spinner<?php echo md5($_SERVER['REQUEST_URI']); ?>').fadeIn(200); $wptouch('#ajaxentries<?php echo md5($_SERVER['REQUEST_URI']); ?>').load('<?php echo get_next_posts_page_link(); ?>', {}, function(){ $wptouch('#call<?php echo md5($_SERVER['REQUEST_URI']); ?>').fadeOut();}) ">
-		<?php if (is_search()) { ?>
-			<?php _e( "Load more search results...", "wptouch" ); ?>
-		<?php } elseif (is_category()) { ?>
-			<?php _e( "Load more category results...", "wptouch" ); ?>
-		<?php } elseif (function_exists('wp_tag_cloud') && is_tag()) { ?>
-			<?php _e( "Load more tag results...", "wptouch" ); ?>
-		<?php } else { ?>
 			<?php _e( "Load more entries...", "wptouch" ); ?>
-		<?php } ?>
 		</a>
 	</div>
 	<div id="ajaxentries<?php echo md5($_SERVER['REQUEST_URI']); ?>"></div>
