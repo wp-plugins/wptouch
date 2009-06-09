@@ -1160,87 +1160,29 @@ img.pageicon {
 
 /* @group Comments */
 
-#comment_wrapper {
-	margin-left: 10px;
-	margin-right: 10px;
-	color: #444;
-	font: 12px Helvetica, Arial, Geneva, sans-serif;
-}
-
-#comment_wrapper ol {
-	margin: 0;
-	padding: 0;
-	list-style-type: none;
-}
-
-#comment_wrapper li {
-	margin-bottom: 10px;
-}
-
-#comment_wrapper .comwrap {
-	-webkit-border-radius: 8px;
-	border: 1px solid #adadad;
+ol.commentlist {
 	background-color: #fff;
-	padding: 5px;
-	overflow: hidden;
-	position: relative;
+	list-style-type: none;
+	margin: 0 10px;
+	padding: 0;
+	border: 1px solid #b1b1b1;	
+	-webkit-border-radius: 8px;
 }
 
-#comment_wrapper .comtop {
-	font-size: 13px;
-	font-weight: bold;
+ol.commentlist li {
+	padding: 10px;
 	position: relative;
-	padding: 8px 5px 3px 15px;
-	margin: -5px -10px 0;
-	border-bottom: 1px solid #c1cfd1;
-	background-color: #eee;
-	-webkit-border-top-left-radius: 15px;
-	-webkit-border-top-right-radius: 15px;
-}
-
-#comment_wrapper .combody {
-	padding: 0 5px;
 	margin: 0;
-	position: relative;
-	bottom: 4px;
-	text-align: justify;
-	font-size: 13px;
-	overflow: hidden;
+	border-bottom: 1px solid #b1b1b1;
 }
 
-#comment_wrapper .combody img {
-	max-width: 100% !important;
-	height: auto !important;
+ol.commentlist li:last-child {
+	border-bottom-style: none;
 }
 
-#comment_wrapper .comdater {
-	font-size: 11px;
-	color: #85919d;
-	letter-spacing: 0;
-	font-weight: normal;
-	font-style: normal;
-}
-
-#comment_wrapper .comdater-big {
-	font-size: 14px;
-	color: #abb7ba;
-	letter-spacing: 0;
-	font-weight: bold;
-	float: right;
-	text-shadow: #fff 1px 1px 1px;
-	text-align: center;
-	position: relative;
-	right: 10px;
-	line-height: 110%;
-	top: 3px;
-}
-
-#comment_wrapper .avatar {
-	position: relative;
-	margin-right: 5px;
-	padding: 0px;
+ol.commentlist li .avatar {
 	float: left;
-	border: 1px solid #85919d;
+	margin-right: 10px;
 }
 
 /* @end */

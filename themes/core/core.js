@@ -10,15 +10,15 @@
 
 /////// -- Header Bump on page load -- ///////
 
-addEventListener("load",function() {
-setTimeout(updateLayout,0);
-setTimeout(function(){window.scrollTo(0,1);},100);},false);
-var currentWIdth=0;function updateLayout() {
-if(window.innerWIdth!=currentWIdth) {currentWIdth=window.innerWIdth;
-var orient=currentWIdth==320?"profile":"portrait";
-document.body.setAttribute("orient",orient);setTimeout(function() {
-window.scrollTo(0,1);},500);}}
-setInterval(updateLayout,300);
+//addEventListener("load",function() {
+//setTimeout(updateLayout,0);
+//setTimeout(function(){window.scrollTo(0,1);},100);},false);
+//var currentWIdth=0;function updateLayout() {
+//if(window.innerWIdth!=currentWIdth) {currentWIdth=window.innerWIdth;
+//var orient=currentWIdth==320?"profile":"portrait";
+//document.body.setAttribute("orient",orient);setTimeout(function() {
+//window.scrollTo(0,1);},500);}}
+//setInterval(updateLayout,300);
 
 
 /////// -- Let's Play Nice -- ///////

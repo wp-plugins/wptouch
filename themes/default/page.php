@@ -28,29 +28,22 @@
         <?php if (!is_page('archives') || is_page('links')) { the_content(); } ?>  
 
 <?php if (is_page('archives')) {
-// If you have a page named 'Archives', the WP tag cloud will be displayed below your content. Simply remove this wrapper. 
+// If you have a page named 'Archives', the WP tag cloud will be displayed
 ?>
           </div>
-  </div>
-          
-                <?php if (function_exists('wp_tag_cloud')) { ?>
-                <h3 class="result-text"><?php _e( "Tag Cloud", "wptouch" ); ?></h3>
-            	<div id="wptouch-tagcloud" class="post">
-              	<?php wp_tag_cloud('smallest=11&largest=18&unit=px&orderby=count&order=DESC'); ?>
-              <?php } else { ?>
+	</div>
 
-            <h3 class="result-text"><?php _e( "Category Cloud", "wptouch" ); ?></h3>
-          <div id="wptouch-tagcloud" class="post">
-          <?php wp_list_categories(); // This will print out the default WordPress Categories Listing. ?>                
-          <?php } ?>
-		  </div>
+	<h3 class="result-text"><?php _e( "Tag Cloud", "wptouch" ); ?></h3>
+		<div id="wptouch-tagcloud" class="post">
+			<?php wp_tag_cloud('smallest=11&largest=18&unit=px&orderby=count&order=DESC'); ?>
+		</div>
 	</div>
 </div>
 
-          <h3 class="result-text"><?php _e( "Monthly Archives", "wptouch" ); ?></h3>
-          <div id="wptouch-archives" class="post">
-           <?php wp_get_archives(); // This will print out the default WordPress Monthly Archives Listing. ?> 
-          </div>
+	<h3 class="result-text"><?php _e( "Monthly Archives", "wptouch" ); ?></h3>
+		<div id="wptouch-archives" class="post">
+			<?php wp_get_archives(); // This will print out the default WordPress Monthly Archives Listing. ?> 
+		</div>
 		  
 <?php } ?><!-- end if archives page-->
             
@@ -62,8 +55,6 @@
 		<div id="wptouch-flickr">
 			<?php get_flickrRSS(20); ?>
 		</div>
-	<?php } else { ?>
-<!-- do nothing... maybe they have a different look for the photos page themselves-->
 	<?php } ?>
 <?php } ?><!-- end if photos page-->
 		</div>
@@ -85,8 +76,6 @@
 	
 		<?php wp_link_pages( __('Pages in this article: ', 'wptouch'), '', 'number'); ?>
 
-
-    
 <!--If comments are enabled for pages in the WPtouch admin, and 'Allow Comments' is checked on a page-->
 	<?php if (bnc_is_page_coms_enabled() && 'open' == $post->comment_status) : ?>
 		<?php comments_template(); ?>
@@ -102,5 +91,5 @@
 
  <?php endif; ?>
 
-<!-- Here we're establishing whether the page was loaded via Ajax or not, for dynamic purposes. If it's ajax, we're not bringing in footer.php -->
+<!-- If it's ajax, we're not bringing in footer.php -->
 <?php global $is_ajax; if (!$is_ajax) get_footer(); ?>
