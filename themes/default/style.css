@@ -993,8 +993,8 @@ img.small {
 img.pageicon {
 	position: relative;
 	margin-right: 10px;
-	width: auto;
-	height: auto;
+	width: 32px;
+	height: 32px;
 	float: left;
 	margin-top: -5px;
 	margin-left: 0;
@@ -1182,7 +1182,84 @@ ol.commentlist li:last-child {
 
 ol.commentlist li .avatar {
 	float: left;
-	margin-right: 10px;
+	margin-right: 5px;
+	border: 1px solid #ddd;
+
+}
+
+ol.commentlist li ul {
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+}
+
+ol.commentlist .parent {
+	background-color: #fefdec;
+}
+
+ol.commentlist .parent ul.children li {
+	border: 1px solid #ddd;
+	background-color: #e9f8fd;
+	-webkit-border-radius: 8px;
+}
+
+ol.commentlist ul.children .parent ul.children li.alt {
+	border: 1px solid #ddd;
+	background-color: #fff;
+	padding: 10px;
+	margin: 10px 0 0;
+	-webkit-border-radius: 8px;
+
+}
+
+ol.commentlist ul.children .parent ul.children li.even {
+	border: 1px solid #ddd !important;
+	background-color: #f9fbf6;
+	padding: 10px;
+	margin: 10px 0 0;
+	-webkit-border-radius: 8px;
+
+}
+
+ol.commentlist .reply a {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	font-weight: bold;
+	font-size: 11px;
+	background-color: #ededed;
+	padding: 2px 5px;
+	border: 1px solid #ddd;
+	-webkit-border-radius: 3px;
+
+}
+
+ol.commentlist .comment-author {
+	font-weight: bold;
+}
+
+ol.commentlist .comment-meta a {
+	font-size: 11px;
+	color: #999;
+}
+
+.navigation.commentnav {
+	height: 17px;
+	padding-right: 0;
+	padding-top: 10px;
+	padding-left: 10px;
+}
+
+.navigation.commentnav .alignright a {
+	background-repeat: no-repeat;
+	background-position: right -26px;
+	padding-right: 35px;
+}
+
+.navigation.commentnav .alignleft a {
+	background-repeat: no-repeat;
+	background-position: left -46px;
+	padding-left: 25px;
 }
 
 /* @end */
@@ -1222,9 +1299,29 @@ p.logged {
 	top: 2px;
 }
 
-#comment_wrapper form#commentform input#submit {
+form#commentform {
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+form#commentform input {
+	-webkit-border-radius: 8px;
+	border: 1px solid #adadad;
+	padding: 3px;
+	margin: 0;
+	font-size: 13px;
+	color: #444;
+	width: 170px;
+}
+
+form#commentform input#submit {
 	color: #555;
 	font-weight: bold;
+	width: 25%;
+	opacity: 1;
+	background-color: #eee;
+	border: 1px solid #aaa;
+	text-shadow: #fff 0 1px 0;
 }
 
 textarea#comment {
@@ -1253,24 +1350,6 @@ textarea#comment {
 	padding: 51px 3px 1px;
 }
 
-form#commentform input {
-	-webkit-border-radius: 8px;
-	border: 1px solid #adadad;
-	padding: 3px;
-	margin: 0;
-	font-size: 13px;
-	color: #444;
-	width: 170px;
-}
-
-form#commentform input#submit {
-	width: 25%;
-	opacity: 1;
-	background-color: #eee;
-	border: 1px solid #ccc;
-	text-shadow: #fff 0 1px 0;
-}
-
 form#commentform small {
 	color: #475d79;
 	text-shadow: #eee 1px 1px 0;
@@ -1280,15 +1359,30 @@ form#commentform small {
 
 #refresher {
 	-webkit-border-radius: 8px;
-	padding: 5px;
-	border: 1px solid #adadad;
-	background-color: #475d79;
-	color: #eee;
+	padding: 10px 10px 10px 18px;
+	border: 1px solid #b1b1b1;
+	background-color: #e9f5f8;
+	color: #475d79;
 	font-weight: bold;
+	margin-left: 10px;
+	margin-right: 10px;
+	text-shadow: #f5f5f5 0 1px 1px;
+}
+
+#refresher img {
+	float: left;
+	margin-right: 3px;
+	margin-left: -10px;
+}
+
+#refresher h3 {
+	padding: 0;
+	margin: 0 0 5px;
+	color: #475d79;
+	text-shadow: #f5f5f5 0 1px 1px;
 }
 
 #refresher a {
-	color: #8aceff;
 }
 
 p.subscribe-to-comments {

@@ -16,7 +16,7 @@
 				}
 				echo('<img class="pageicon" src="' . $image . '" alt="icon" />'); 
 			} else {
-				// show default image
+				echo ('<img class="pageicon" src="' . compat_get_plugin_url( 'wptouch' ) . '/images/icon-pool/Default.png" alt="pageicon" />');
 			}
 			
 			?> 
