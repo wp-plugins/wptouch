@@ -7,16 +7,18 @@
 			<?php
 			$mypages = bnc_wp_touch_get_pages();
 			
-			if (isset($mypages[get_the_ID()])) {
+			if ( isset( $mypages[get_the_ID()]) ) {
 				$icon_name = $mypages[get_the_ID()]['icon'];
+				if ( file_exists( compat_get_plugin_dir( 'wptouch' ) . '/images/icon-pool/' . $icon_name ) ) {
+					$image = compat_get_plugin_url( 'wptouch' ) . '/images/icon-pool/' . $icon_name;	
+				} else {
+					$image = compat_get_upload_url() . '/wptouch/custom-icons/' . $icon_name;
+				}
+				echo('<img class="pageicon" src="' . $image . '" alt="icon" />'); 
+			} else {
+				// show default image
 			}
 			
-			if ( file_exists( compat_get_plugin_dir( 'wptouch' ) . '/images/icon-pool/' . $icon_name ) ) {
-				$image = compat_get_plugin_url( 'wptouch' ) . '/images/icon-pool/' . $icon_name;	
-			} else {
-				$image = compat_get_upload_url() . '/wptouch/custom-icons/' . $icon_name;
-			}
-				echo('<img class="pageicon" src="' . $image . '" alt="icon" />'); 
 			?> 
 		</div>
 			<h2><?php the_title(); ?></h2>
