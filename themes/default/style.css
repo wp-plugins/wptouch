@@ -1350,7 +1350,7 @@ textarea#comment {
 	padding: 51px 3px 1px;
 }
 
-form#commentform small {
+form#commentform label {
 	color: #475d79;
 	text-shadow: #eee 1px 1px 0;
 	font-size: 12px;

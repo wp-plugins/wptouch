@@ -20,16 +20,13 @@ You can also checkout our Support Forums at http://support.bravenewcode.com to p
 * Updated Ajax Upload script to 3.2
 * Moved adsense.php to include folder
 * Updated screenshots for new designs
-* Revised comment appearance
+* Fix for page icons (broken paths, default icon if on unselected page)
+* Updated style for comments, building support for WP 2.7 comments (replies, threading, pagination) not active yet
+* Updated success message for ajax comments
 * Bug fixes
 
 
 = New In Version 1.9 Beta 7.1 // May 20th, 2009 =
-
-* Fixed theme appearing in safari, chrome
-
-
-= New In Version 1.9 Beta 7 // May 19th, 2009 =
 
 * Fixed missing arrow for read more link
 * Fixed broken images in regular theme switch link
