@@ -1172,8 +1172,8 @@ ol.commentlist {
 ol.commentlist li {
 	padding: 10px;
 	position: relative;
+	border-bottom: 1px solid #c9c9c9;
 	margin: 0;
-	border-bottom: 1px solid #b1b1b1;
 }
 
 ol.commentlist li:last-child {
@@ -1183,8 +1183,6 @@ ol.commentlist li:last-child {
 ol.commentlist li .avatar {
 	float: left;
 	margin-right: 5px;
-	border: 1px solid #ddd;
-
 }
 
 ol.commentlist li ul {
@@ -1221,14 +1219,14 @@ ol.commentlist ul.children .parent ul.children li.even {
 
 }
 
-ol.commentlist .reply a {
+ol.commentlist .reply a, .comdater {
 	position: absolute;
-	top: 10px;
-	right: 10px;
+	top: 5px;
+	right: 5px;
 	font-weight: bold;
 	font-size: 11px;
 	background-color: #ededed;
-	padding: 2px 5px;
+	padding: 2px 5px 1px;
 	border: 1px solid #ddd;
 	-webkit-border-radius: 3px;
 
@@ -1260,6 +1258,25 @@ ol.commentlist .comment-meta a {
 	background-repeat: no-repeat;
 	background-position: left -46px;
 	padding-left: 25px;
+}
+
+.comtop {
+	background-color: #f5f5f5;
+	padding-left: 0;
+	padding-top: 0;
+	margin-top: -10px;
+	margin-left: -10px;
+	margin-right: -10px;
+	padding-bottom: 15px;
+	border-bottom: 1px solid #dedede;
+}
+
+.comtop a {
+	font-weight: bold;
+	text-transform: capitalize;
+	font-size: 14px;
+	position: relative;
+	top: 5px;
 }
 
 /* @end */
@@ -1367,6 +1384,7 @@ form#commentform label {
 	margin-left: 10px;
 	margin-right: 10px;
 	text-shadow: #f5f5f5 0 1px 1px;
+	margin-top: 20px;
 }
 
 #refresher img {
