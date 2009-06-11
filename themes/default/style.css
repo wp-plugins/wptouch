@@ -111,7 +111,7 @@ blockquote {
 	border: 1px solid #ccc;
 	padding: 10px;
 	font-size: 12px;
-	background: #eee url(images/quotes.png) no-repeat right -2px;
+	background: #eee url(../core/core-images/quotes.png) no-repeat right -2px;
 	text-align: left;
 	margin: 5px 1px;
 }
@@ -567,7 +567,7 @@ a.h2 {
 	padding-left: 10px;
 	font-weight: bold;
 	color: #eee;
-	text-shadow: #444 0 -1px 1px;
+	text-shadow: #535353 0 -1px 1px;
 }
 
 /* @group Calendar CSS Icons */
@@ -713,7 +713,7 @@ a.h2 {
 	margin-right: auto;
 	display: block;
 	margin-left: auto;
-	width: 155px;
+	width: 160px;
 }
 
 .spin {
@@ -815,7 +815,7 @@ a.sh2 {
 	line-height: 14px;
 	background-color: #eee;
 	margin: 5px -10px;
-	text-shadow: #fff -1px 1px 0;
+	text-shadow: #fafafa 0 1px 1px;
 }
 
 .single-links {
@@ -852,7 +852,7 @@ img.small {
 	-webkit-border-radius: 8px;
 	border: 1px solid #adadad;
 	background: #fff repeat-x;
-	padding: 10px 5px 12px;
+	padding: 10px 5px;
 	line-height: 16px;
 	margin: 10px;
 	font-weight: bold;
@@ -1163,7 +1163,7 @@ img.pageicon {
 ol.commentlist {
 	background-color: #fff;
 	list-style-type: none;
-	margin: 0 10px;
+	margin: 12px 10px 0;
 	padding: 0;
 	border: 1px solid #b1b1b1;	
 	-webkit-border-radius: 8px;
@@ -1174,15 +1174,29 @@ ol.commentlist li {
 	position: relative;
 	border-bottom: 1px solid #c9c9c9;
 	margin: 0;
+	overflow: hidden;
+	font-size: 12px;
+}
+
+ol.commentlist li#com-head {
+	font-weight: bold;
+	font-size: 14px;
+	-webkit-border-top-left-radius: 7px;
+	-webkit-border-top-right-radius: 7px;
+	text-shadow: #fff 0 1px 0;
+	background: #e4eaee url(../core/core-images/quotes.png) no-repeat right -2px;
 }
 
 ol.commentlist li:last-child {
 	border-bottom-style: none;
 }
 
+ol.commentlist li:first-child {
+}
+
 ol.commentlist li .avatar {
 	float: left;
-	margin-right: 5px;
+	border-right: 1px solid #f9f9f9;
 }
 
 ol.commentlist li ul {
@@ -1221,15 +1235,15 @@ ol.commentlist ul.children .parent ul.children li.even {
 
 ol.commentlist .reply a, .comdater {
 	position: absolute;
-	top: 5px;
+	top: 6px;
 	right: 5px;
 	font-weight: bold;
-	font-size: 11px;
-	background-color: #ededed;
-	padding: 2px 5px 1px;
-	border: 1px solid #ddd;
+	font-size: 10px;
+	background-color: #e5e5e5;
+	padding: 1px 5px;
+	border: 1px solid #fff;
 	-webkit-border-radius: 3px;
-
+	text-shadow: #fff 0 1px 0px;
 }
 
 ol.commentlist .comment-author {
@@ -1276,7 +1290,9 @@ ol.commentlist .comment-meta a {
 	text-transform: capitalize;
 	font-size: 14px;
 	position: relative;
-	top: 5px;
+	top: 7px;
+	margin-left: 5px;
+	text-shadow: #fff 0 1px 0;
 }
 
 /* @end */
@@ -1406,13 +1422,130 @@ form#commentform label {
 p.subscribe-to-comments {
 	padding: 8px;
 	-webkit-border-radius: 8px;
-	background-color: #fff;
+	background-color: #eee;
 	border: 1px solid #adadad;
+}
+
+p.subscribe-to-comments label {
+	text-shadow: #fff 0 1px 0 !important;
+	color: #333 !important;
 }
 
 p.subscribe-to-comments input#subscribe {
 	padding-right: 3px;
+	vertical-align: top;
 }
+
+/* @end */
+
+/* @group Post / Page Images */
+
+#singlentry img {
+	max-width: 100% !important;
+	height: auto !important;
+}
+
+.pageentry img {
+	max-width: 100% !important;
+	height: auto !important;
+}
+
+/* @end */
+
+/* @group Text Options */
+
+.full-justified {
+	text-align: justify;
+}
+
+.left-justifed {
+	text-align: left;
+}
+
+.small-text {
+	font-size: 1.1em;
+}
+
+.medium-text {
+	font-size: 1.2em;
+}
+
+.large-text {
+	font-size: 1.3em;
+}
+
+/* @end */
+
+/* @group Background Options */
+
+.classic-wptouch-bg {
+	background: url(../core/core-images/pinstripes-classic.gif) repeat;
+}
+
+.horizontal-wptouch-bg {
+	background: url(../core/core-images/pinstripes-horizontal.gif) repeat;
+}
+
+.diagonal-wptouch-bg {
+	background: url(../core/core-images/pinstripes-diagonal.gif) repeat;
+}
+
+.frog-wptouch-bg {
+	background: url(../core/core-css/frog/frog.png) repeat;
+}
+
+/* @end */
+
+/* @group Footer */
+
+#footer {
+	text-align: center;
+	color: #475d79;
+	font-size: 11px;
+	font-weight: bold;
+	text-shadow: #eee 1px 1px 0;
+	padding-bottom: 10px;
+	margin-top: 50px;
+}
+
+#footer p {
+	margin: 0 0 5px;
+	padding: 0;
+}
+
+#wptouch-switch-link {
+	-webkit-border-radius: 8px;
+	border: 1px solid #adadad;
+	background-color: #fff;
+	margin-right: 10px;
+	margin-left: 10px;
+	margin-bottom: 25px;
+	position: relative;
+	max-width: 300px;
+	padding: 12px 10px;
+	text-align: left;
+	color: #222;
+	text-shadow: #fff 0 0 0;
+	font-size: 14px;
+}
+
+.offimg {
+	background: url(../core/core-images/off.jpg) no-repeat left top !important;
+}
+
+#wptouch-switch-link a {
+	position: absolute;
+	right: 10px;
+	display: block;
+	width: 77px;
+	background: url(../core/core-images/on.jpg) no-repeat left top;
+	height: 22px;
+	top: 9px;
+}
+
+/* @group Switch Link */
+
+/* @end */
 
 /* @end */
 
@@ -1545,117 +1678,6 @@ a.dsq-brlink {
 	margin-top: 15px;
 	font-family: "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 }
-
-/* @end */
-
-/* @end */
-
-/* @group Post / Page Images */
-
-#singlentry img {
-	max-width: 100% !important;
-	height: auto !important;
-}
-
-.pageentry img {
-	max-width: 100% !important;
-	height: auto !important;
-}
-
-/* @end */
-
-/* @group Text Options */
-
-.full-justified {
-	text-align: justify;
-}
-
-.left-justifed {
-	text-align: left;
-}
-
-.small-text {
-	font-size: 1.1em;
-}
-
-.medium-text {
-	font-size: 1.2em;
-}
-
-.large-text {
-	font-size: 1.3em;
-}
-
-/* @end */
-
-/* @group Background Options */
-
-.classic-wptouch-bg {
-	background: url(../core/core-images/pinstripes-classic.gif) repeat;
-}
-
-.horizontal-wptouch-bg {
-	background: url(../core/core-images/pinstripes-horizontal.gif) repeat;
-}
-
-.diagonal-wptouch-bg {
-	background: url(../core/core-images/pinstripes-diagonal.gif) repeat;
-}
-
-.frog-wptouch-bg {
-	background: url(../core/core-css/frog/frog.png) repeat;
-}
-
-/* @end */
-
-/* @group Footer */
-
-#footer {
-	text-align: center;
-	color: #475d79;
-	font-size: 11px;
-	font-weight: bold;
-	text-shadow: #eee 1px 1px 0;
-	padding-bottom: 10px;
-	margin-top: 50px;
-}
-
-#footer p {
-	margin: 0 0 5px;
-	padding: 0;
-}
-
-#wptouch-switch-link {
-	-webkit-border-radius: 8px;
-	border: 1px solid #adadad;
-	background-color: #fff;
-	margin-right: 10px;
-	margin-left: 10px;
-	margin-bottom: 25px;
-	position: relative;
-	max-width: 300px;
-	padding: 12px 10px;
-	text-align: left;
-	color: #222;
-	text-shadow: #fff 0 0 0;
-	font-size: 14px;
-}
-
-.offimg {
-	background: url(../core/core-images/off.jpg) no-repeat left top !important;
-}
-
-#wptouch-switch-link a {
-	position: absolute;
-	right: 10px;
-	display: block;
-	width: 77px;
-	background: url(../core/core-images/on.jpg) no-repeat left top;
-	height: 22px;
-	top: 9px;
-}
-
-/* @group Switch Link */
 
 /* @end */
 

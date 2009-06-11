@@ -365,8 +365,8 @@ textarea#wptouch-stats {
 
 #wptouch-theme #upload_button {
 	background: url(../images/upload.png) 0 0;
-	width: 119px;
-	height: 32px;
+	width: 174px;
+	height: 45px;
 	cursor: pointer;
 	display: block;
 	margin-bottom: 10px;
@@ -383,6 +383,12 @@ textarea#wptouch-stats {
 #wptouch-theme #upload_progress img {
 	position: relative;
 	top: 4px;
+}
+
+#wptouch-theme #extras_button {
+	display: block;
+	border-top: 1px solid #eee;
+	padding-top: 10px;
 }
 
 

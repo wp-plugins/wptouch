@@ -15,7 +15,12 @@
 				<p><?php echo sprintf( __( "These files will be stored in a wp-content %s/uploads/wptouch/custom-icons%s folder we create.", "wptouch"), "<strong>", "</strong>" ); ?></p>
 				<p><?php echo sprintf( __( "If upload fails (usually it's a permission problem) create the folder yourself using FTP and try again.", "wptouch"), "<strong>", "</strong>" ); ?></p>
 						
-				<div id="upload_button"></div> 
+				<div id="upload_button"></div>
+
+				<div id="extras_button">
+					<a href="javascript:alert ('This does nothing yet : )');"><img src="<?php echo compat_get_plugin_url( 'wptouch' ) . '/images/extras.png'; ?>" alt="extras" /></a>
+				</div> 
+
 
 			<div id="upload_response"></div>
 				<div id="upload_progress" style="display:none">

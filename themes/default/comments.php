@@ -14,10 +14,10 @@ $oddcomment = 'alt';
 
 <!-- You can start editing below here... but make a backup first!  -->
 
-<h3 id="comments"><?php comments_number( __('No Comments', 'wptouch'), __('1 Comment', 'wptouch'), __('% Comments', 'wptouch') ); ?></h3>
 
 <div id="comment_wrapper">
 	<ol class="commentlist" id="commentlist">
+<li id="com-head"><?php comments_number( __('No Comments', 'wptouch'), __('1 Comment', 'wptouch'), __('% Comments', 'wptouch') ); ?></li>
 		<?php if ($comments) : ?>
 			<?php foreach ($comments as $comment) : ?>
 				<?php if (get_comment_type() == "comment") { ?>

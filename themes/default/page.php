@@ -27,7 +27,7 @@
 <div class="clearer"></div>
   
     <div id="entry-<?php the_ID(); ?>" class="pageentry <?php echo $wptouch_settings['style-text-size']; ?> <?php echo $wptouch_settings['style-text-justify']; ?>">
-        <?php if (!is_page('archives') || is_page('links')) { the_content(); } ?>  
+        <?php if (!is_page('archives') || !is_page('links')) { the_content(); } ?>  
 
 <?php if (is_page('archives')) {
 // If you have a page named 'Archives', the WP tag cloud will be displayed

@@ -5,14 +5,14 @@
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 			<div class="post">
 			    <a class="sh2" href="<?php the_permalink() ?>" rel="bookmark" title="<?php _e( "Permanent Link to ", "wptouch" ); ?><?php if (function_exists('the_title_attribute')) the_title_attribute(); else the_title(); ?>"><?php the_title(); ?></a>
-			        <div class="single-post-meta-top"><?php echo get_the_time('M jS @ h:i a') ?> &rsaquo; <?php the_author() ?><br />
+			        <div class="single-post-meta-top"><?php echo get_the_time('M jS, Y @ h:i a') ?> &rsaquo; <?php the_author() ?><br />
 
 		<!-- Let's check for DISQUS... we need to skip to a different div if it's installed and active -->		
 	
 		<?php if (function_exists('dsq_comments_template')) { ?>
 	 		<a href="#dsq-add-new-comment">&darr; <?php _e( "Skip to comments", "wptouch" ); ?></a></div>
 		<?php } else { ?>
-	   	    <a href="#comments">&darr; <?php _e( "Skip to comments", "wptouch" ); ?></a></div>
+	   	    <a href="#com-head">&darr; <?php _e( "Skip to comments", "wptouch" ); ?></a></div>
 		<?php } ?>	
 		<div class="clearer"></div>
 	</div>
