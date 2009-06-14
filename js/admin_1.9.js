@@ -1,16 +1,16 @@
 /*
  * WPtouch 1.9 -The WPtouch Admin Javascript File
  * This file holds all the default jQuery & Ajax functions for the theme
- * THIS FILE IS NOT USED, AND IS MINIFIED WITH EACH CHANGE (admin_min_1.9.js)
+ * //THIS FILE IS NOT USED, AND IS MINIFIED WITH EACH CHANGE (admin_min_1.9.js)
  * Copyright (c) 2009 Duane Storey & Dale Mugford (BraveNewCode Inc.)
  * Licensed under GPL.
  *
- * Last Updated: June 13th, 2009
+ * Last Updated: June 14th, 2009
  */
 
- 
-	$j = jQuery.noConflict();
-	$j(document).ready(function(){
+$j = jQuery.noConflict();
+jQuery(document).ready(function($j) {
+
 		new Ajax_upload('#upload_button', {
 			action: '/?wptouch=upload',
 			autoSubmit: true,
@@ -47,10 +47,9 @@
 		onSubmit: function(hsb, hex, rgb, el) {
 			jQuery(el).val(hex);
 			jQuery(el).ColorPickerHide();
-		},
+			},
 		onBeforeShow: function () {
 			jQuery(this).ColorPickerSetColor( jQuery(this).attr('value') );
-		}
-	});
-
+			}
+		});
 });

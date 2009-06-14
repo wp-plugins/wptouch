@@ -5,7 +5,7 @@
  * Copyright (c) 2009 Duane Storey & Dale Mugford (BraveNewCode Inc.)
  * Licensed under GPL.
  *
- * Last Updated: June 13th, 2009
+ * Last Updated: June 14th, 2009
  */
 
 
@@ -20,62 +20,56 @@ $wptouch = jQuery.noConflict();
 
 /////// -- Switch link background magic -- ///////
 
-	function bnc_jquery_switch() {
-		$wptouch("#wptouch-switch-link a#switch-link").toggleClass("offimg");
-	}
+function bnc_jquery_switch() {
+	$wptouch("#wptouch-switch-link a#switch-link").toggleClass("offimg");
+}
 
 
 /////// -- Menus -- ///////
 
 // Creating a new function, fadeToggle()
-	jQuery.fn.fadeToggle = function(speed, easing, callback) { 
-   return this.animate({opacity: 'toggle'}, speed, easing, callback); 
-	};
-	 
-	function bnc_jquery_menu_drop() {
-		$wptouch('#wptouch-menu').fadeToggle(400);
-		$wptouch("#headerbar-menu a").toggleClass("open");
-	}
-	
-	function bnc_jquery_login_toggle() {
-		$wptouch('#wptouch-login').fadeToggle(400);
-//		$wptouch("#drop-fade a#loginopen").toggleClass("baropen");
-	}
-	
-	function bnc_jquery_cats_open() {
-		jQuery('#cat').focus();
-		//$wptouch("#drop-fade a#catsopen").toggleClass("baropen");
-	}
-	
-	function bnc_jquery_tags_open() {
-		jQuery('#tag-dropdown').focus();
-		//$wptouch("#drop-fade a#tagsopen").toggleClass("baropen");
-	}
+jQuery.fn.fadeToggle = function(speed, easing, callback) { 
+	return this.animate({opacity: 'toggle'}, speed, easing, callback); 
+};
+ 
+function bnc_jquery_menu_drop() {
+	$wptouch('#wptouch-menu').fadeToggle(400);
+	$wptouch("#headerbar-menu a").toggleClass("open");
+}
 
-	function bnc_jquery_acct_open() {
-		jQuery('#acct-dropdown').focus();
-		//$wptouch("#drop-fade a#tagsopen").toggleClass("baropen");
-	}
+function bnc_jquery_login_toggle() {
+	$wptouch('#wptouch-login').fadeToggle(400);
+//		$wptouch("#drop-fade a#loginopen").toggleClass("baropen");
+}
+
+function bnc_jquery_cats_open() {
+	jQuery('#cat').focus();
+	//$wptouch("#drop-fade a#catsopen").toggleClass("baropen");
+}
+
+function bnc_jquery_tags_open() {
+	jQuery('#tag-dropdown').focus();
+	//$wptouch("#drop-fade a#tagsopen").toggleClass("baropen");
+}
+
+function bnc_jquery_acct_open() {
+	jQuery('#acct-dropdown').focus();
+	//$wptouch("#drop-fade a#tagsopen").toggleClass("baropen");
+}
 
 
 /////// -- Ajax comments -- ///////
 
-	function bnc_showhide_coms_toggle() {
-		$wptouch('#commentlist').slideToggle(400);
-		$wptouch("img#com-arrow").toggleClass("com-arrow-down");
-		$wptouch("h3#com-head").toggleClass("highlight");
-
+function bnc_showhide_coms_toggle() {
+	$wptouch('#commentlist').slideToggle(400);
+	$wptouch("img#com-arrow").toggleClass("com-arrow-down");
 }
 
 function commentAdded() {
     if ($wptouch('#errors')) {
         $wptouch('#errors').hide();
 	}
-    
-    $wptouch("#commentform").hide();
-    $wptouch("#some-new-comment").fadeIn(2000);
-    $wptouch("#refresher").fadeIn(2000);
-    
+        
     if ($wptouch('#nocomment')) {
         $wptouch('#nocomment').hide();
     }
@@ -83,4 +77,8 @@ function commentAdded() {
     if($wptouch('#hidelist')) {
         $wptouch('#hidelist').hide();
     }
+
+    $wptouch("#commentform").hide();
+    $wptouch("#some-new-comment").fadeIn(2000);
+    $wptouch("#refresher").fadeIn(2000);
 }

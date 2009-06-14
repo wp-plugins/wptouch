@@ -1,4 +1,4 @@
-<?php require_once( compat_get_plugin_dir( 'wptouch' ) . '/include/icons.php' ); ?>
+<?php require_once( dirname(__FILE__) . '/../include/icons.php' ); ?>
 <?php global $wptouch_settings; ?>
 
 <div class="metabox-holder" id="available_icons">
@@ -18,7 +18,7 @@
 				<div id="upload_button"></div>
 
 				<div id="extras_button">
-					<a href="javascript:alert ('This does nothing yet : )');"><img src="<?php echo compat_get_plugin_url( 'wptouch' ) . '/images/extras.png'; ?>" alt="extras" /></a>
+					<a href="#" onclick="alert('This does nothing yet');return false;"><img src="<?php echo compat_get_plugin_url( 'wptouch' ) . '/images/extras.png'; ?>" alt="extras" /></a>
 				</div> 
 
 

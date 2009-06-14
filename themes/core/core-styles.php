@@ -18,7 +18,7 @@
 #drop-fade {
 background: #<?php echo bnc_get_header_border_color(); ?>;
 }
-a {
+a, h3#com-head {
 	color: #<?php echo bnc_get_link_color(); ?>;
 }
 .mainentry, .pageentry, #wptouch-links, #wptouch-archives, #singlentry, .comwrap, #catsmenu-inner li, #wptouch-menu-inner li{

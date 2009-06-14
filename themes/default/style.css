@@ -434,6 +434,12 @@ input#s {
 	margin-right: 10px;
 	margin-left: 10px;
 	border: 1px solid #b1b1b1;
+	overflow: hidden;
+	height: 53px;
+}
+
+.big {
+	height: 200px;
 }
 
 a.post-arrow {
@@ -1202,14 +1208,6 @@ h3#com-head img#com-arrow {
 	margin-right: 5px;
 	position: relative;
 	top: 1px;
-}
-
-.highlight {
-	background-color: #006bb3 !important;
-	color: #eee  !important;
-	text-shadow: #1f4180 -1px -1px 1px  !important;
-     -webkit-transition-property: -webkit-transform, background-color;
-      -webkit-transition-duration: .2s;
 }
 
 .com-arrow-down {
