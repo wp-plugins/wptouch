@@ -1,49 +1,43 @@
 /*
  * WPtouch 1.9 -The WPtouch Core Javascript File
- * This file holds all the default jQuery & Ajax functions all in one neat place.
- * 
+ * This file holds all the default jQuery & Ajax functions for the theme
+ * THIS FILE IS NOT USED, AND IS MINIFIED WITH EACH CHANGE (core-min.js)
  * Copyright (c) 2009 Duane Storey & Dale Mugford (BraveNewCode Inc.)
  * Licensed under GPL.
  *
- * Last Updated: June 3rd, 2009
+ * Last Updated: June 13th, 2009
  */
 
-/////// -- Header Bump on page load -- ///////
 
-//addEventListener("load",function() {
-//setTimeout(updateLayout,0);
-//setTimeout(function(){window.scrollTo(0,1);},100);},false);
-//var currentWIdth=0;function updateLayout() {
-//if(window.innerWIdth!=currentWIdth) {currentWIdth=window.innerWIdth;
-//var orient=currentWIdth==320?"profile":"portrait";
-//document.body.setAttribute("orient",orient);setTimeout(function() {
-//window.scrollTo(0,1);},500);}}
-//setInterval(updateLayout,300);
+/////// -- Hide addressbar on page load -- ///////
 
+setTimeout(function() { window.scrollTo(0, 1) }, 100);
 
-/////// -- Let's Play Nice -- ///////
+/////// -- Let's play nice in jQuery -- ///////
 
 $wptouch = jQuery.noConflict();
 
 
-/////// -- Switch Link Background Magic -- ///////
+/////// -- Switch link background magic -- ///////
 
 	function bnc_jquery_switch() {
 		$wptouch("#wptouch-switch-link a#switch-link").toggleClass("offimg");
 	}
 
-/////// -- Drop Down Menus -- ///////
+
+/////// -- Menus -- ///////
 
 // Creating a new function, fadeToggle()
-jQuery.fn.fadeToggle = function(speed, easing, callback) { 
+	jQuery.fn.fadeToggle = function(speed, easing, callback) { 
    return this.animate({opacity: 'toggle'}, speed, easing, callback); 
-}; 
+	};
+	 
 	function bnc_jquery_menu_drop() {
 		$wptouch('#wptouch-menu').fadeToggle(400);
 		$wptouch("#headerbar-menu a").toggleClass("open");
 	}
 	
-	function bnc_jquery_login_drop() {
+	function bnc_jquery_login_toggle() {
 		$wptouch('#wptouch-login').fadeToggle(400);
 //		$wptouch("#drop-fade a#loginopen").toggleClass("baropen");
 	}
@@ -62,19 +56,30 @@ jQuery.fn.fadeToggle = function(speed, easing, callback) {
 		jQuery('#acct-dropdown').focus();
 		//$wptouch("#drop-fade a#tagsopen").toggleClass("baropen");
 	}
-	
-/////// -- Ajax Comments -- ///////
+
+
+/////// -- Ajax comments -- ///////
+
+	function bnc_showhide_coms_toggle() {
+		$wptouch('#commentlist').slideToggle(400);
+		$wptouch("img#com-arrow").toggleClass("com-arrow-down");
+		$wptouch("h3#com-head").toggleClass("highlight");
+
+}
 
 function commentAdded() {
     if ($wptouch('#errors')) {
         $wptouch('#errors').hide();
-}
+	}
+    
     $wptouch("#commentform").hide();
     $wptouch("#some-new-comment").fadeIn(2000);
     $wptouch("#refresher").fadeIn(2000);
+    
     if ($wptouch('#nocomment')) {
         $wptouch('#nocomment').hide();
     }
+    
     if($wptouch('#hidelist')) {
         $wptouch('#hidelist').hide();
     }

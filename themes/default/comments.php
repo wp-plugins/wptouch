@@ -14,10 +14,10 @@ $oddcomment = 'alt';
 
 <!-- You can start editing below here... but make a backup first!  -->
 
-
 <div id="comment_wrapper">
-	<ol class="commentlist" id="commentlist">
-<li id="com-head"><?php comments_number( __('No Comments', 'wptouch'), __('1 Comment', 'wptouch'), __('% Comments', 'wptouch') ); ?></li>
+<?php comments_number( __('', 'wptouch'), __('<h3 onclick="bnc_showhide_coms_toggle();" id="com-head"><img id="com-arrow" src="' . compat_get_plugin_url( 'wptouch' ) . '/themes/core/core-images/com_arrow.png" alt="arrow" />1 Comment</h3>', 'wptouch'), __('<h3 onclick="bnc_showhide_coms_toggle();" id="com-head"><img id="com-arrow" src="' . compat_get_plugin_url( 'wptouch' ) . '/themes/core/core-images/com_arrow.png" alt="arrow" />% Comments</h3>', 'wptouch') ); ?>
+
+	<ol class="commentlist" id="commentlist" style="display:none">
 		<?php if ($comments) : ?>
 			<?php foreach ($comments as $comment) : ?>
 				<?php if (get_comment_type() == "comment") { ?>
@@ -120,7 +120,7 @@ $oddcomment = 'alt';
 		<p>
 			<input name="submit" type="submit" id="submit" tabindex="5" value="Publish" />
 			<input type="hidden" name="comment_post_ID" value="<?php echo $id; ?>" />		
-			<div id="loading"  style="display:none">
+			<div id="loading" style="display:none">
 				<img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/themes/core/core-images/comment-ajax-loader.gif" alt="" />
 			</div>
 		</p>

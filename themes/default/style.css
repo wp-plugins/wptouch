@@ -1161,37 +1161,72 @@ img.pageicon {
 /* @group Comments */
 
 ol.commentlist {
-	background-color: #fff;
 	list-style-type: none;
 	margin: 12px 10px 0;
 	padding: 0;
-	border: 1px solid #b1b1b1;	
-	-webkit-border-radius: 8px;
 }
 
 ol.commentlist li {
+	background-color: #fff;
 	padding: 10px;
-	position: relative;
-	border-bottom: 1px solid #c9c9c9;
+	border-bottom: 1px solid #dedede;
 	margin: 0;
 	overflow: hidden;
 	font-size: 12px;
+	border-right: 1px solid #b1b1b1;
+	border-left: 1px solid #b1b1b1;
+	position: relative;
 }
 
-ol.commentlist li#com-head {
+h3#com-head {
 	font-weight: bold;
 	font-size: 14px;
-	-webkit-border-top-left-radius: 7px;
-	-webkit-border-top-right-radius: 7px;
+	-webkit-border-radius: 8px;
+	-webkit-border-radius: 8px;
 	text-shadow: #fff 0 1px 0;
-	background: #e4eaee url(../core/core-images/quotes.png) no-repeat right -2px;
+	margin-left: 10px;
+	margin-right: 10px;
+	border: 1px solid #b1b1b1;
+	background: #eee;
+	color: #444;
+	position: relative;
+	z-index: 1;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	cursor: pointer;
+	display: block;
 }
 
-ol.commentlist li:last-child {
-	border-bottom-style: none;
+h3#com-head img#com-arrow {
+	margin-right: 5px;
+	position: relative;
+	top: 1px;
+}
+
+.highlight {
+	background-color: #006bb3 !important;
+	color: #eee  !important;
+	text-shadow: #1f4180 -1px -1px 1px  !important;
+     -webkit-transition-property: -webkit-transform, background-color;
+      -webkit-transition-duration: .2s;
+}
+
+.com-arrow-down {
+	-webkit-transform: scale(1.0) rotate(90deg);
+	-webkit-transition-duration: 0.6s;
 }
 
 ol.commentlist li:first-child {
+	border-top: 1px solid #b1b1b1;
+	-webkit-border-top-right-radius: 8px;
+
+}
+
+ol.commentlist li:last-child {
+	border-bottom: 1px solid #b1b1b1;
+	-webkit-border-bottom-left-radius: 8px;
+	-webkit-border-bottom-right-radius: 8px;
 }
 
 ol.commentlist li .avatar {
@@ -1285,6 +1320,11 @@ ol.commentlist .comment-meta a {
 	border-bottom: 1px solid #dedede;
 }
 
+.comtop:first-child {
+	-webkit-border-top-right-radius: 9px;
+
+}
+
 .comtop a {
 	font-weight: bold;
 	text-transform: capitalize;
@@ -1330,6 +1370,7 @@ p.logged {
 	font-weight: bold;
 	position: relative;
 	top: 2px;
+	margin-top: 35px;
 }
 
 form#commentform {
@@ -1369,18 +1410,18 @@ textarea#comment {
 
 #loading {
 	position: relative;
-	background-color: #b1cbff;
+	background-color: #c3e3fa;
 	-webkit-border-radius: 8px;
 	border: 1px solid #adadad;
 	opacity: 0.75;
 	z-index: 9;
 	margin: 0;
-	bottom: 175px;
+	bottom: 166px;
 	text-align: center;
 	width: 98%;
-	height: 63px;
+	height: 64px;
 	max-width: 453px;
-	padding: 51px 3px 1px;
+	padding: 40px 3px 12px;
 }
 
 form#commentform label {
