@@ -5,6 +5,6 @@
    {
 		$snoopy->fetch('http://www.bravenewcode.com/custom/wptouch-news.php');
 		$response = $snoopy->results;
-		echo '<h3>Latest News</h3>' . $response;
+		echo '' . $response;
 	}
 ?>

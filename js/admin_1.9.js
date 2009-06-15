@@ -20,6 +20,7 @@ jQuery(document).ready(function($j) {
 			$j('#upload_response').hide().html(response).fadeIn(); }
 	});
 	
+	
 	$j("a.wptouch-fancylink").fancybox({
 		'padding':						5,
 		'imageScale':					true,
@@ -31,16 +32,19 @@ jQuery(document).ready(function($j) {
 		'hideOnContentClick': 	true
 	});
 
+	setTimeout(function() { $j('#wptouchupdated').fadeIn(500); }, 1250);
+	setTimeout(function() { $j('#wptouchupdated').fadeOut(); }, 4250);
+
 	jQuery.ajax({
 		url: "/?wptouch=news",
 		success: function(data) {
-			jQuery("#wptouch-news-content").html(data).fadeIn();
+			jQuery("#wptouch-news-content").html(data).fadeIn(500);
 		}});
 	
 	jQuery.ajax({
 		url: "/?wptouch=beta",
 		success: function(data) {
-			jQuery("#wptouch-beta-content").html(data).fadeIn();
+			jQuery("#wptouch-beta-content").html(data).fadeIn(500);
 		}}); 
 
 	jQuery('#header-text-color, #header-background-color, #header-border-color, #link-color').ColorPicker({

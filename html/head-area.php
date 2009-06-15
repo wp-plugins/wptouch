@@ -15,8 +15,14 @@
 			</div>	
 	
 		<div id="wptouch-news-beta">
-			<div id="wptouch-news-content" style="display: none;"></div>
-			<div id="wptouch-beta-content" style="display: none;"></div>
+			<div id="wptouch-news-wrap">
+			<h3>WPtouch Wire</h3>
+				<div id="wptouch-news-content" style="display: none;"></div>
+			</div>
+			<div id="wptouch-beta-wrap">		
+			<h3>Downloads</h3>
+				<div id="wptouch-beta-content" style="display: none;"></div>
+			</div>
 		</div><!-- wptouch-news-beta -->
 
 	<div class="wptouch-clearer"></div>

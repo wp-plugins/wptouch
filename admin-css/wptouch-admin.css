@@ -1,6 +1,7 @@
 /* @override 
 	http://24.36.119.184:9098/wp-content/plugins/wptouch/admin-css/wptouch-admin.css
 	http://24.36.119.184:9107/wp-content/plugins/wptouch/admin-css/wptouch-admin.css
+	http://wptouch.com/wp-content/plugins/wptouch/admin-css/wptouch-admin.css
 */
 
 /* WPtouch 1.9 Admin CSS */
@@ -127,18 +128,25 @@
 }
 
 #wptouch-theme #wptouchupdated {
-	border: 1px solid #8aceff;
-	background-color: #e2f5fe;
-	display: block;
+	border: 2px solid red;
+	background-color: #fbf8df;
 	font-size: 11px;
 	line-height: 15px;
-	-moz-border-radius: 3px;
-	-webkit-border-radius: 3px;
-	padding: 8px 8px 7px;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
 	font-weight: bold;
-	color: #264761;
-	margin-top: 15px;
-	width: 99%;
+	color: red;
+	position: absolute;
+	top: 0;
+	text-align: center;
+	left: 36%;
+	margin-top: -7px;
+	height: 36px;
+}
+
+#wptouch-theme #wptouchupdated p {
+	margin: 10px;
+	padding: 0;
 }
 
 
@@ -149,6 +157,7 @@
 
 #wptouch-head .postbox {
 	background: #fff url(../images/wptouch-icon.jpg) no-repeat right bottom;
+	overflow: hidden;
 }
 
 #wptouch-head #wptouch-head-colour {
@@ -202,23 +211,24 @@
 }
 
 #wptouch-head h3 {
-	color: #222;
+	color: #444;
 	-webkit-border-radius: 0px;
 	-moz-border-radius: 0px;
-	width: 100%;
 }
 
 /* @group Latest News */
 
-#wptouch-news-content {
+#wptouch-news-wrap {
 	float: left;
-	width: 50%;
+	width: 46%;
 	margin: 0;
 	padding: 0;
 }
 
-#wptouch-news-content h3 {
+#wptouch-news-wrap h3 {
 	padding-left: 10px;
+	display: block;
+	width: 100%;
 }
 
 #wptouch-news-content li {
@@ -228,7 +238,7 @@
 	list-style-type: circle;
 	list-style-position: inside;
 	color: #c1cfd1;
-	width: 95%;
+	width: 80%;
 }
 
 #wptouch-news-content li:last-child {
@@ -239,17 +249,18 @@
 
 /* @group Beta Downloads */
 
-#wptouch-beta-content {
+#wptouch-beta-wrap {
 	color: #777;
 	float: left;
-	width: 50%;
+	width: 54%;
 	padding: 0;
 	margin: 0;
 }
 
-#wptouch-beta-content h3 {
-	padding-right: 0;
+#wptouch-beta-wrap h3 {
 	padding-left: 21px;
+	display: block;
+	width: 100%;
 }
 
 #wptouch-beta-content p {
@@ -510,7 +521,7 @@ textarea#wptouch-stats {
 #wptouch-theme input#wptouch-button, #wptouch-theme input#wptouch-button-reset {
 	border: 2px solid #dcdcdc;
 	float: left;
-	width: 15%;
+	width: 12%;
 }
 
 #wptouch-theme input#wptouch-button-reset:hover {

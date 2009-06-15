@@ -121,23 +121,21 @@ function wptouch_content_filter( $content ) {
 		echo $before . 'WPtouch ' . $bnc_wptouch_version . $after;
 	}
  
-	// WP Admin stylesheet, jQuery + Ajax Upload
-	function wptouch_admin_css() {		
+	// WP Admin stylesheets & javascript
+	function wptouch_admin_files() {		
 		if ( isset( $_GET['page'] ) && $_GET['page'] == 'wptouch/wptouch.php' ) {		
 
-			echo "<link rel='stylesheet' type='text/css' href='" . compat_get_plugin_url( 'wptouch' ) . "/admin-css/wptouch-admin.css' /> \n";
+			echo "<link rel='stylesheet' type='text/css' href='" . compat_get_plugin_url( 'wptouch' ) . "/admin-css/wptouch-admin.css' />\n";
 			
 			$version = (float)get_bloginfo('version');
 			if ( $version <= 2.6 ) {
-				echo "<link rel='stylesheet' type='text/css' href='" . compat_get_plugin_url( 'wptouch' ) . "/admin-css/wptouch-admin-pre27.css' /> \n";
-			} elseif ( $version <= 2.3 ) {
-				echo "<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js'></script> \n";
+				echo "<link rel='stylesheet' type='text/css' href='" . compat_get_plugin_url( 'wptouch' ) . "/admin-css/wptouch-admin-pre27.css' />\n";
 			} 
 		
-			echo "<script type='text/javascript' src='" . compat_get_plugin_url( 'wptouch' ) . "/js/ajax_upload_3.2.js'></script> \n";
-			echo "<script type='text/javascript' src='" . compat_get_plugin_url( 'wptouch' ) . "/js/fancybox_1.2.1.js'></script> \n";
-			echo "<script type='text/javascript' src='" . compat_get_plugin_url( 'wptouch' ) . "/js/colorpicker_1.4.js'></script> \n";
-			echo "<script type='text/javascript' src='" . compat_get_plugin_url( 'wptouch' ) . "/js/admin_1.9.js'></script> \n";
+			echo "<script type='text/javascript' src='" . compat_get_plugin_url( 'wptouch' ) . "/js/ajax_upload_3.2.js'></script>\n";
+			echo "<script type='text/javascript' src='" . compat_get_plugin_url( 'wptouch' ) . "/js/fancybox_1.2.1.js'></script>\n";
+			echo "<script type='text/javascript' src='" . compat_get_plugin_url( 'wptouch' ) . "/js/colorpicker_1.4.js'></script>\n";
+			echo "<script type='text/javascript' src='" . compat_get_plugin_url( 'wptouch' ) . "/js/admin_1.9.js'></script>\n";
 		}
 	}
   
@@ -253,10 +251,10 @@ class WPtouchPlugin {
 			"dream", 		// Pre 1.5 Android
 			"android", 	// 1.5+ Android
 			"cupcake", 	// 1.5+ Android
-			"incognito", 
-			"webmate", 
 		//	"blackberry9500", 
-		//	"blackberry9530"
+		//	"blackberry9530",
+			"incognito", 
+			"webmate"
 		);
 		
 		$this->applemobile = false;
@@ -544,13 +542,14 @@ require_once( 'include/icons.php' );
   
 function bnc_wp_touch_page() {
 	if (isset($_POST['submit'])) {
-		echo('<div class="wrap"><div id="wptouch-theme">');
-		echo('<div id="wptouchupdated">' . __( "Your new WPtouch settings were saved.", "wptouch" ) . '</div>');
-	} 
+		echo('<div class="wrap"><div id="wptouch-theme"><div id="wptouchupdated"  style="display:none"><p>');
+		echo __( "Your new WPtouch settings were saved.", "wptouch");
+		echo('</p></div>');
+		} 
 	elseif (isset($_POST['reset'])) {
-		echo('<div class="wrap"><div id="wptouch-theme"><div id="wptouchupdated">');
-		echo __( "WPtouch has been restored to its default settings. No custom icons were deleted, however.", "wptouch");
-		echo('</div>');
+		echo('<div class="wrap"><div id="wptouch-theme"><div id="wptouchupdated"  style="display:none"><p>');
+		echo __( "Default settings have been restored.", "wptouch");
+		echo('</p></div>');
 	} else {
 		echo('<div class="wrap"><div id="wptouch-theme">');
 }
@@ -584,7 +583,7 @@ function bnc_wp_touch_page() {
 <?php 
 echo('</div>'); } 
 add_action('wp_footer', 'wptouch_switch');
-add_action('admin_head', 'wptouch_admin_css');
+add_action('admin_head', 'wptouch_admin_files');
 add_action('admin_menu', 'bnc_options_menu'); 
 add_action('the_content', 'wptouch_content_filter');
 ?>
