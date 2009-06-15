@@ -54,9 +54,9 @@ include( dirname(__FILE__) . '/../core/core-header.php' );
 $useragent = @$_SERVER['HTTP_USER_AGENT'];
 function agent($browser) { strstr($_GLOBALS['useragent'],$browser); } ?>
 <?php if(agent("android", "dream") != FALSE) { 
-include_once('google_menu.php');
+include( dirname(__FILE__) . '/../core/core-else-menu.php' ); 
  } else { 
- include_once('apple_menu.php'); 
+include( dirname(__FILE__) . '/../core/core-apple-menu.php' ); 
  } ?>
 </div><!-- #drop-fade -->
  		

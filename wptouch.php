@@ -29,14 +29,13 @@
 */
 
 
-// WPtouch Theme Options
 global $bnc_wptouch_version;
 $bnc_wptouch_version = '1.9 Beta 8';
 
 require_once( 'include/plugin.php' );
 require_once( 'include/compat.php' );
 
-//No need to manually change these, they're all admin options saved to the database
+//The WPtouch Settings Defaults
 global $wptouch_defaults;
 $wptouch_defaults = array(
 	'header-title' => get_bloginfo('name'),
@@ -71,9 +70,7 @@ function wptouch_get_plugin_dir_name() {
 	return $wptouch_plugin_dir_name;
 }
 
-function wptouch_get_upload_path() {
-	
-}
+//function wptouch_get_upload_path() {}
 
 function wptouch_delete_icon( $icon ) {
 	if ( !current_user_can( 'upload_files' ) ) {
@@ -91,7 +88,6 @@ function wptouch_init() {
 	
 	if ( isset( $_GET['delete_icon'] ) ) {
 		wptouch_delete_icon( $_GET['delete_icon'] );
-		
 		header( 'Location: ' . get_bloginfo('wpurl') . '/wp-admin/options-general.php?page=wptouch/wptouch.php#available_icons' );
 		die;
 	}	
