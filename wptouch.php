@@ -538,12 +538,12 @@ require_once( 'include/icons.php' );
   
 function bnc_wp_touch_page() {
 	if (isset($_POST['submit'])) {
-		echo('<div class="wrap"><div id="wptouch-theme"><div id="wptouchupdated" style="display:none"><p><span>');
+		echo('<div class="wrap"><div id="wptouch-theme"><div id="wptouchupdated" style="display:none"><p class="saved"><span>');
 		echo __( "Settings saved", "wptouch");
 		echo('</span></p></div>');
 		} 
 	elseif (isset($_POST['reset'])) {
-		echo('<div class="wrap"><div id="wptouch-theme"><div id="wptouchupdated" style="display:none"><p><span>');
+		echo('<div class="wrap"><div id="wptouch-theme"><div id="wptouchupdated" style="display:none"><p class="reset"><span>');
 		echo __( "Defaults restored", "wptouch");
 		echo('</span></p></div>');
 	} else {
