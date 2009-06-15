@@ -135,33 +135,33 @@
 	overflow: hidden;
 	margin-left: auto;
 	margin-right: auto;
+	opacity: 0.9;
+	height: auto;
 	width: 100%;
-	background-color: #fff;
-	height: 100%;
-	opacity: 0.85;
-}
-
-#wptouch-theme #wptouchupdated p img {
-	position: relative;
-	top: 1px;
-	right: 5px;
 }
 
 #wptouch-theme #wptouchupdated p {
-	padding: 12px;
-	margin-top: 20%;
-	background-color: #b8ffc3;
-	color: #333;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	border: 5px solid green;
+	color: #fff;
+	-webkit-border-radius: 22px;
+	-moz-border-radius: 22px;
 	text-align: center;
+	text-shadow: #000 -1px -1px 1px;
+	letter-spacing: -1px;
+	font: bold 22px "Myriad Pro", "Trebuchet MS", "Lucida Sans Unicode", sans-serif;
+	height: 165px;
+	background: #222 url(../images/save.png) no-repeat center 10px;
+	width: 200px;
+	margin-top: 10%;
 	margin-left: auto;
 	margin-right: auto;
-	text-shadow: #fff 1px 1px 1px;
-	letter-spacing: -1px;
-	font: bold 19px "Myriad Pro", "Trebuchet MS", "Lucida Sans Unicode", sans-serif;
-	width: 36%;
+	padding: 12px;
+	-webkit-box-shadow: #000 2px 6px 12px;
+
+}
+
+#wptouch-theme #wptouchupdated p span {
+	display: block;
+	margin-top: 110px;
 }
 
 

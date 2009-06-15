@@ -13,15 +13,22 @@
 
 setTimeout(function() { window.scrollTo(0, 1) }, 100);
 
+
 /////// -- Let's play nice in jQuery -- ///////
 
 $wptouch = jQuery.noConflict();
 
 
-/////// -- Switch link background magic -- ///////
+/////// -- Switch Magic -- ///////
 
-function bnc_jquery_switch() {
+function wptouch_switch_confirmation() {
+	var answer = confirm("Switch to regular view? \n \n You can switch back to mobile view again in the footer.");
+	if (answer){
 	$wptouch("#wptouch-switch-link a#switch-link").toggleClass("offimg");
+	setTimeout('switch_delayer()', 1000); 
+	} else {
+		// stay put
+	}
 }
 
 

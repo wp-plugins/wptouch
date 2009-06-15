@@ -240,7 +240,7 @@ class WPtouchPlugin {
 		// Add whatever user agents you want here to the array if you want to make this show on a Blackberry 
 		// or something. No guarantees it'll look pretty, though!
 		$useragents = array(		
-	 	//	 "safari",			// *Developer mode*
+	 		 "safari",			// *Developer mode*
 			"iphone",  
 			"ipod", 
 			"aspen", 		// iPhone simulator
@@ -538,14 +538,14 @@ require_once( 'include/icons.php' );
   
 function bnc_wp_touch_page() {
 	if (isset($_POST['submit'])) {
-		echo('<div class="wrap"><div id="wptouch-theme"><div id="wptouchupdated"  style="display:none"><p><img src="' . compat_get_plugin_url( 'wptouch' ) . '/images/good.png" alt="" />');
-		echo __( "Your new WPtouch settings were saved.", "wptouch");
-		echo('</p></div>');
+		echo('<div class="wrap"><div id="wptouch-theme"><div id="wptouchupdated" style="display:none"><p><span>');
+		echo __( "Settings saved", "wptouch");
+		echo('</span></p></div>');
 		} 
 	elseif (isset($_POST['reset'])) {
-		echo('<div class="wrap"><div id="wptouch-theme"><div id="wptouchupdated"  style="display:none"><p><img src="' . compat_get_plugin_url( 'wptouch' ) . '/images/good.png" alt="" />');
-		echo __( "Default settings have been restored.", "wptouch");
-		echo('</p></div>');
+		echo('<div class="wrap"><div id="wptouch-theme"><div id="wptouchupdated" style="display:none"><p><span>');
+		echo __( "Defaults restored", "wptouch");
+		echo('</span></p></div>');
 	} else {
 		echo('<div class="wrap"><div id="wptouch-theme">');
 }
