@@ -542,12 +542,12 @@ require_once( 'include/icons.php' );
   
 function bnc_wp_touch_page() {
 	if (isset($_POST['submit'])) {
-		echo('<div class="wrap"><div id="wptouch-theme"><div id="wptouchupdated"  style="display:none"><p>');
+		echo('<div class="wrap"><div id="wptouch-theme"><div id="wptouchupdated"  style="display:none"><p><img src="' . compat_get_plugin_url( 'wptouch' ) . '/images/good.png" alt="" />');
 		echo __( "Your new WPtouch settings were saved.", "wptouch");
 		echo('</p></div>');
 		} 
 	elseif (isset($_POST['reset'])) {
-		echo('<div class="wrap"><div id="wptouch-theme"><div id="wptouchupdated"  style="display:none"><p>');
+		echo('<div class="wrap"><div id="wptouch-theme"><div id="wptouchupdated"  style="display:none"><p><img src="' . compat_get_plugin_url( 'wptouch' ) . '/images/good.png" alt="" />');
 		echo __( "Default settings have been restored.", "wptouch");
 		echo('</p></div>');
 	} else {

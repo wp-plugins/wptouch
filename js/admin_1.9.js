@@ -32,8 +32,8 @@ jQuery(document).ready(function($j) {
 		'hideOnContentClick': 	true
 	});
 
-	setTimeout(function() { $j('#wptouchupdated').fadeIn(500); }, 1250);
-	setTimeout(function() { $j('#wptouchupdated').fadeOut(); }, 4250);
+	setTimeout(function() { $j('#wptouchupdated').fadeIn(350); }, 500);
+	setTimeout(function() { $j('#wptouchupdated').fadeOut(350); }, 2500);
 
 	jQuery.ajax({
 		url: "/?wptouch=news",

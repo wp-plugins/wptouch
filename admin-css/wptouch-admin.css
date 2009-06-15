@@ -128,25 +128,40 @@
 }
 
 #wptouch-theme #wptouchupdated {
-	border: 2px solid red;
-	background-color: #fbf8df;
-	font-size: 11px;
-	line-height: 15px;
-	-moz-border-radius: 8px;
-	-webkit-border-radius: 8px;
-	font-weight: bold;
-	color: red;
-	position: absolute;
+	position: fixed;
 	top: 0;
-	text-align: center;
-	left: 36%;
-	margin-top: -7px;
-	height: 36px;
+	left: 0;
+	z-index: 1000;
+	overflow: hidden;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	background-color: #fff;
+	height: 100%;
+	opacity: 0.85;
+}
+
+#wptouch-theme #wptouchupdated p img {
+	position: relative;
+	top: 1px;
+	right: 5px;
 }
 
 #wptouch-theme #wptouchupdated p {
-	margin: 10px;
-	padding: 0;
+	padding: 12px;
+	margin-top: 20%;
+	background-color: #b8ffc3;
+	color: #333;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border: 5px solid green;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	text-shadow: #fff 1px 1px 1px;
+	letter-spacing: -1px;
+	font: bold 19px "Myriad Pro", "Trebuchet MS", "Lucida Sans Unicode", sans-serif;
+	width: 36%;
 }
 
 

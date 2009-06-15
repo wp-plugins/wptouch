@@ -30,24 +30,11 @@
 		</div>
 		
 		<div class="wptouch-right-content">
-			<h4><?php _e( "WordPress Built-in Functions Support", "wptouch" ); ?></h4>
-				<!-- wp tag cloud -->
-				<?php if (function_exists('wp_tag_cloud')) { ?>
-					<div class="all-good">
-					<img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/images/good.png" class="support" alt="" /> <?php _e( "A tag cloud will automatically show on a page called 'Archives' if you have one.", "wptouch" ); ?>
-					</div>
-				<?php } else { ?>
-					<div class="too-bad">
-					<img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/images/bad.png" class="support" alt="" /> <?php _e( "Since you're using a pre-tag version of WP, your categories will be listed on a page called 'Archives', if you have it.", "wptouch" ); ?>
-					</div>
-				<?php } ?>
-				
-				<br /><br />
 			
 			<h4><?php _e( "WordPress Pages &amp; Feature Support", "wptouch" ); ?></h4>
 			
 				<?php
-				//WordPress Links Page Support
+					//WordPress Links Page Support
 				$links_page_check = new WP_Query('pagename=links');
 				if ($links_page_check->post->ID) {
 				echo '<div class="all-good"><img src="' . compat_get_plugin_url( 'wptouch' ) . '/images/good.png" class="support" alt="" /> ' . __( "All of your WP links will automatically show on your page called 'Links'.", "wptouch" ) . '</div>';
@@ -85,13 +72,13 @@
 			<h4><?php _e( 'Other Plugin Support &amp; Compatibility', 'wptouch' ); ?></h4>
 			
 			<!-- custom anti spam -->
-			<?php if (!function_exists('cas_register_post')) { ?>
+			<?php if (function_exists('cas_register_post')) { ?>
 				<div class="all-good">
-				<img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/images/good.png" class="support" alt="" />  <?php _e( 'Cool! <a href="http://wordpress.org/extend/plugins/peters-custom-anti-spam-image/" target="_blank">Peter\'s Custom Anti-Spam</a>: Your comment form supports it.', 'wptouch'); ?>
+				<img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/images/good.png" class="support" alt="" />  <?php _e( 'Cool! <a href="http://wordpress.org/extend/plugins/peters-custom-anti-spam-image/" target="_blank">Peter\'s Custom Anti-Spam</a>: Your comment form supports it', 'wptouch'); ?>
 				</div>
 			<?php } else { ?>
 				<div class="sort-of">
-				<img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/images/sortof.png" class="support" alt="" /> <?php _e( 'You don\'t have <a href="http://wordpress.org/extend/plugins/peters-custom-anti-spam-image/" target="_blank">Peter\'s Custom Anti-Spam</a> installed (Your commentform supports it).', 'wptouch' ); ?>
+				<img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/images/sortof.png" class="support" alt="" /> <?php _e( 'You don\'t have <a href="http://wordpress.org/extend/plugins/peters-custom-anti-spam-image/" target="_blank">Peter\'s Custom Anti-Spam</a> installed (Your commentform supports it)', 'wptouch' ); ?>
 				</div>
 			<?php } ?>
 			
@@ -124,18 +111,18 @@
 				</div>
 			<?php } else { ?>
 				<div class="all-good">
-				<img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/images/good.png" class="support" alt="" /> <?php _e( 'No <a href="http://mnm.uib.es/gallir/wp-cache-2/" target="_blank">WP-Cache</a> active. If activated, <strong>it requires configuration.</strong> Visit the <a href="http://www.bravenewcode.com/wptouch/">WPtouch page</a> for help.', 'wptouch' ); ?>
+				<img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/images/good.png" class="support" alt="" /> <?php _e( '<a href="http://mnm.uib.es/gallir/wp-cache-2/" target="_blank">WP-Cache</a> inactive. If activated, <strong>it requires configuration.</strong> Visit the <a href="http://www.bravenewcode.com/wptouch/">WPtouch page</a> for more information.', 'wptouch' ); ?>
 				</div>
 			<?php } ?>
 						
 			<!-- wp super cache -->
 			<?php if (function_exists('wp_super_cache_footer')) { ?>
 				<div class="sort-of">
-				<img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/images/sortof.png" class="support" alt="" /> <?php _e( '<a href="http://ocaoimh.ie/wp-super-cache/" target="_blank">WP Super Cache</a> support is currently experimental. Please visit <a href="http://www.bravenewcode.com/2009/01/05/wptouch-and-wp-super-cache/">this page</a> for more information.', 'wptouch' ); ?>
+				<img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/images/sortof.png" class="support" alt="" /> <?php _e( '<a href="http://ocaoimh.ie/wp-super-cache/" target="_blank">WP Super Cache</a> <strong>requires special configuration to work with WPtouch.</strong> Please visit <a href="http://www.bravenewcode.com/2009/01/05/wptouch-and-wp-super-cache/">this page</a> for more information.', 'wptouch' ); ?>
 				</div>
 			<?php } else { ?>
 				<div class="all-good">
-				<img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/images/good.png" class="support" alt="" /> <?php _e( '<a href="http://ocaoimh.ie/wp-super-cache/" target="_blank">WP Super Cache</a> support is currently experimental. Please visit <a href="http://www.bravenewcode.com/2009/01/05/wptouch-and-wp-super-cache/">this page</a> for more information.', 'wptouch' ); ?>
+				<img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/images/good.png" class="support" alt="" /> <?php _e( '<a href="http://ocaoimh.ie/wp-super-cache/" target="_blank">WP Super Cache</a> inactive. If activated, <strong>it requires configuration.</strong> Please visit <a href="http://www.bravenewcode.com/2009/01/05/wptouch-and-wp-super-cache/">this support page</a> for more information.', 'wptouch' ); ?>
 				</div>
 			<?php } ?>
 		</div><!-- right content -->

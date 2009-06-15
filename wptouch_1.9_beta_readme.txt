@@ -13,16 +13,17 @@ You can also checkout our Support Forums at http://support.bravenewcode.com to p
 
 * Changed default theme styles for images (now load as background images)
 * Made sprites for small theme images to load quicker
-* Added all-new variations on the default theme as style selections (Frog, Sea, Lavender, Sunkissed)
+		* Added all-new skins as style selections (Frog, Sea, Lavender, Sunkissed)
 * Added jQuery color picker in the admin hex areas for easier style selections
-* Fix for Categories, Tags & Login links not working in some mobile browsers (Android, etc)
-* Combined CSS files and minified javascript files
+		* Fix for Categories, Tags & Login links not working in some mobile browsers (Android, etc)
+* Minified CSS & javascript files for faster load times
 * Updated Ajax Upload script to 3.2
 * Moved adsense.php to include folder
-* Updated screenshots for new designs
+		* Updated screenshots for new designs 
 * Fix for page icons (broken paths, default icon if on unselected page)
 * Updated style for comments, building support for WP 2.7 comments (replies, threading, pagination) not active yet
 * Updated success message for ajax comments
+* Admin refinements
 * Bug fixes
 
 
