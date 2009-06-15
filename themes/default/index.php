@@ -52,8 +52,8 @@
 
 
 	<div id="call<?php echo md5($_SERVER['REQUEST_URI']); ?>" class="ajax-load-more">
-		<span id="spinner<?php echo md5($_SERVER['REQUEST_URI']); ?>" class="spin"	 alt="ajax icon" style="display:none"></span>
-		<a class="ajax" href="javascript: return false;" onclick="$wptouch('#spinner<?php echo md5($_SERVER['REQUEST_URI']); ?>').fadeIn(200); $wptouch('#ajaxentries<?php echo md5($_SERVER['REQUEST_URI']); ?>').load('<?php echo get_next_posts_page_link(); ?>', {}, function(){ $wptouch('#call<?php echo md5($_SERVER['REQUEST_URI']); ?>').fadeOut();}) ">
+		<div id="spinner<?php echo md5($_SERVER['REQUEST_URI']); ?>" class="spin"	 style="display:none"></div>
+		<a class="ajax" href="#" onclick="$wptouch('#spinner<?php echo md5($_SERVER['REQUEST_URI']); ?>').fadeIn(200); $wptouch('#ajaxentries<?php echo md5($_SERVER['REQUEST_URI']); ?>').load('<?php echo get_next_posts_page_link(); ?>', {}, function(){ $wptouch('#call<?php echo md5($_SERVER['REQUEST_URI']); ?>').fadeOut();}); return false;">
 			<?php _e( "Load more entries...", "wptouch" ); ?>
 		</a>
 	</div>

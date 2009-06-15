@@ -62,7 +62,16 @@ function wptouch_core_header_check_use() {
 function wptouch_core_header_styles() {
 	include('core-styles.php' );
 }
-  
+
+function wptouch_core_subheader() {
+	$useragent = @$_SERVER['HTTP_USER_AGENT'];
+	function agent($browser) { strstr($_GLOBALS['useragent'],$browser); }
+	if(agent("android", "dream") != FALSE) { 
+	include( dirname(__FILE__) . '/../core/core-else-menu.php' ); 
+	 } else { 
+	include( dirname(__FILE__) . '/../core/core-apple-menu.php' ); 
+	 }
+}
   
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // WPtouch Core Body Functions

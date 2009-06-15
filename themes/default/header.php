@@ -50,14 +50,7 @@ include( dirname(__FILE__) . '/../core/core-header.php' );
 
 <div id="drop-fade">
 <!-- Detect if it's Android, and if so, don't do the fancy iPhone thing -->
-<?php  
-$useragent = @$_SERVER['HTTP_USER_AGENT'];
-function agent($browser) { strstr($_GLOBALS['useragent'],$browser); } ?>
-<?php if(agent("android", "dream") != FALSE) { 
-include( dirname(__FILE__) . '/../core/core-else-menu.php' ); 
- } else { 
-include( dirname(__FILE__) . '/../core/core-apple-menu.php' ); 
- } ?>
+<?php wptouch_core_subheader(); ?>
 </div><!-- #drop-fade -->
  		
 <!-- #start the wptouch plugin use check -->
