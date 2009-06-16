@@ -1,10 +1,12 @@
 <?php	
-	require_once( ABSPATH . '/wp-includes/class-snoopy.php');
-	
-   $snoopy = new Snoopy;
-   {
-		$snoopy->fetch('http://www.bravenewcode.com/custom/wptouch-news.php');
-		$response = $snoopy->results;
-		echo '' . $response;
-	}
+require_once( WPINC . '/class-snoopy.php');
+	$snoopy = new Snoopy();
+	$snoopy->maxredirs = 10;
+	$snoopy->offsiteok = true; /* allow a redirect to different domain */
+	$result = $snoopy->fetch( 'http://www.bravenewcode.com/custom/wptouch-news.php' );
+if($result) {
+	echo $snoopy->results;
+} else {
+	echo '<p>We were not able to load the Wire panel on your server.</p>';
+}
 ?>

@@ -34,15 +34,16 @@ jQuery(document).ready(function($j) {
 	setTimeout(function() { $j('#wptouchupdated').fadeOut(350); }, 2300);
 
 	jQuery.ajax({
-		url: "/?wptouch=news",
+		url: "self.location.hostname/?wptouch=news",
 		success: function(data) {
-			jQuery("#wptouch-news-content").html(data).fadeIn(500);
-		}});
+			$j("#wptouch-news-content").html(data).fadeIn(500);
+		}
+		});
 	
 	jQuery.ajax({
-		url: "/?wptouch=beta",
+		url: "self.location.hostname/?wptouch=beta",
 		success: function(data) {
-			jQuery("#wptouch-beta-content").html(data).fadeIn(500);
+			$j("#wptouch-beta-content").html(data).fadeIn(500);
 		}}); 
 
 	jQuery('#header-text-color, #header-background-color, #header-border-color, #link-color').ColorPicker({
