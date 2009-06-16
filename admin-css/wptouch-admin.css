@@ -192,6 +192,7 @@
 #wptouch-head .postbox {
 	background: #fff url(../images/wptouch-icon.jpg) no-repeat right bottom;
 	overflow: hidden;
+	position: relative;
 }
 
 #wptouch-head #wptouch-head-colour {
@@ -212,6 +213,12 @@
 	margin: 0;
 	padding: 0;
 	float: left;
+}
+
+#wptouch-head .postbox img.ajax-load {
+	position: absolute;
+	top: 14px;
+	left: 205px;
 }
 
 #wptouch-head-links {
@@ -240,8 +247,8 @@
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	margin-top: 30px;
-	height: 170px;
 	width: 100%;
+	height: 170px;
 }
 
 #wptouch-head h3 {

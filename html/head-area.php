@@ -3,7 +3,10 @@
 <div class="metabox-holder" id="wptouch-head">
 	<div class="postbox">
 		<div id="wptouch-head-colour">
-			<div id="wptouch-head-title"><?php WPtouch(); ?></div>
+			<div id="wptouch-head-title">
+				<?php WPtouch(); ?>
+				<img class="ajax-load" src="<?php echo compat_get_plugin_url('wptouch'); ?>/images/admin-ajax-loader.gif" alt="ajax"/>
+			</div>
 				<div id="wptouch-head-links">
 					<ul>
 						<li><?php echo sprintf(__( "%sSupport Forums%s", "wptouch" ), '<a href="http://support.bravenewcode.com" target="_blank">','</a>'); ?> | </li>
@@ -17,12 +20,13 @@
 		<div id="wptouch-news-beta">
 			<div id="wptouch-news-wrap">
 			<h3>WPtouch Wire</h3>
-				<div id="wptouch-news-content" style="display: none;"></div>
+				<div id="wptouch-news-content" style="display:none"></div>
 			</div>
 			<div id="wptouch-beta-wrap">		
 			<h3>Downloads</h3>
-				<div id="wptouch-beta-content" style="display: none;"></div>
+				<div id="wptouch-beta-content" style="display:none"></div>
 			</div>
+			
 		</div><!-- wptouch-news-beta -->
 
 	<div class="wptouch-clearer"></div>

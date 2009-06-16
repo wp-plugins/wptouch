@@ -4,7 +4,7 @@
  * Copyright (c) 2009 Duane Storey & Dale Mugford (BraveNewCode Inc.)
  * Licensed under GPL.
  *
- * Last Updated: June 15th, 2009
+ * Last Updated: June 16th, 2009
  */
 
 $j = jQuery.noConflict();
@@ -33,18 +33,24 @@ jQuery(document).ready(function($j) {
 	setTimeout(function() { $j('#wptouchupdated').fadeIn(350); }, 300);
 	setTimeout(function() { $j('#wptouchupdated').fadeOut(350); }, 2300);
 
+	setTimeout(function() { $j('img.ajax-load').fadeOut(1000); }, 2000);
+
+	setTimeout(function() { 	
 	jQuery.ajax({
-		url: "self.location.hostname/?wptouch=news",
+		url: "/?wptouch=news",
 		success: function(data) {
-			$j("#wptouch-news-content").html(data).fadeIn(500);
-		}
+			$j("#wptouch-news-content").html(data).fadeIn(500);}
 		});
-	
+ 	}, 1000);
+
+	setTimeout(function() { 	
 	jQuery.ajax({
-		url: "self.location.hostname/?wptouch=beta",
+		url: "/?wptouch=beta",
 		success: function(data) {
-			$j("#wptouch-beta-content").html(data).fadeIn(500);
-		}}); 
+			$j("#wptouch-beta-content").html(data).fadeIn(500);}
+		});
+ 	}, 1000);
+
 
 	jQuery('#header-text-color, #header-background-color, #header-border-color, #link-color').ColorPicker({
 		onSubmit: function(hsb, hex, rgb, el) {
