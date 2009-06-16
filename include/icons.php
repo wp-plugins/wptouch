@@ -65,7 +65,7 @@
 		$files = array();
 		
 		foreach ( $locations as $key => $value ) {
-			foreach ( $icons[$key] as $icon) {
+			foreach ( $icons[ $key ] as $icon ) {
 				$files[ $icon['name'] ] = $icon;
 			}	
 		}
