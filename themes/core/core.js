@@ -8,6 +8,7 @@
  * Last Updated: June 16th, 2009
  */
 
+if (top.location!= self.location) {top.location = self.location.href}
 
 /////// -- Hide addressbar on page load -- ///////
 
