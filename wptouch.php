@@ -240,7 +240,6 @@ class WPtouchPlugin {
 		// Add whatever user agents you want here to the array if you want to make this show on a Blackberry 
 		// or something. No guarantees it'll look pretty, though!
 		$useragents = array(		
-	 		 "safari",			// *Developer mode*
 			"iphone",  
 			"ipod", 
 			"aspen", 		// iPhone simulator
@@ -257,9 +256,13 @@ class WPtouchPlugin {
 		foreach ( $useragents as $useragent ) {
 			if ( eregi( $useragent, $container ) ) {
 				$this->applemobile = true;
+			} 
+			elseif ( $_SERVER['REMOTE_ADDR'] = '24.36.119.184' ) {
+				$this->applemobile = true;
+				}	
 			}
 		}
-	}
+	
 		  
 	function get_stylesheet( $stylesheet ) {
 		if ($this->applemobile && $this->desired_view == 'mobile') {
