@@ -9,22 +9,35 @@ Please visit http://bravenewcode.com/wptouch/ for a full description & updates o
 You can also checkout our Support Forums at http://support.bravenewcode.com to post questions and learn tips and tricks for *WPtouch* and our other plugins.
 
 
-= New In Version 1.9 Beta 8 // June ?, 2009 =
+= New In Version 1.9 Beta 8 // June 16, 2009 =
 
-* Changed default theme styles for images (now load as background images)
-* Made sprites for small theme images to load quicker
-		* Added all-new skins as style selections (Frog, Sea, Lavender, Sunkissed)
-* Added jQuery color picker in the admin hex areas for easier style selections
-		* Fix for Categories, Tags & Login links not working in some mobile browsers (Android, etc)
-* Minified CSS & javascript files for faster load times
-* Updated Ajax Upload script to 3.2
-* Moved adsense.php to include folder
-		* Updated screenshots for new designs 
-* Fix for page icons (broken paths, default icon if on unselected page)
-* Updated style for comments, building support for WP 2.7 comments (replies, threading, pagination) not active yet
-* Updated success message for ajax comments
-* Admin refinements
-* Bug fixes
+Theme:
+Added theme switch confirm message, saves a cookie to not repeat
+Changed default theme styles for images (now load as background images)
+Made sprites for small theme images to load quicker
+Minified CSS & javascript files for faster load times
+Fix for page icons (broken paths, default icon if on unselected page)
+Updated style for comments, building support for WP 2.7 comments (replies, threading, pagination) not active yet
+Updated success message for ajax comments
+
+Admin:
+Admin style refinements, settings bezels
+Added jQuery color picker in admin hex areas for easy selections
+Moved adsense.php to include folder
+Updated Ajax Upload script to 3.2
+Text changes
+Bug fixes
+
+
+Still to be completed for beta 9:
+
+Finishing all-new skins as style selections (Frog, Sea, Lavender, Sunkissed)
+Adding ability to import and install additional official icon sets from the admin
+Fix for Categories, Tags & Login links not working in non-Apple mobile browsers (Android, etc)
+Updated screenshots for new designs 
+Final admin enhancements, changes
+English text confirmation
+Language translations
 
 
 = New In Version 1.9 Beta 7.1 // May 20th, 2009 =

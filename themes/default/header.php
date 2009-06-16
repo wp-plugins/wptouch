@@ -48,10 +48,10 @@ include( dirname(__FILE__) . '/../core/core-header.php' );
 	</div>
 
 
-<div id="drop-fade">
-<!-- Detect if it's Android, and if so, don't do the fancy iPhone thing -->
-<?php wptouch_core_subheader(); ?>
-</div><!-- #drop-fade -->
+<div id="drop-fade" <?php if (bnc_is_login_button_enabled() || bnc_is_tags_button_enabled() || bnc_is_cats_button_enabled()) { echo 'class="sub-on"'; }?>
+	<!-- Detect if it's Android, and if so, don't do the fancy iPhone thing -->
+	<?php wptouch_core_subheader(); ?>
+</div>
  		
 <!-- #start the wptouch plugin use check -->
 <?php wptouch_core_header_check_use(); ?>

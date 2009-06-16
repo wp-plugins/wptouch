@@ -1,11 +1,11 @@
 /*
- * WPtouch 1.9 -The WPtouch Core Javascript File
+ * WPtouch 1.9 -The WPtouch Core jS File
  * This file holds all the default jQuery & Ajax functions for the theme
- * THIS FILE IS NOT USED, AND IS MINIFIED WITH EACH CHANGE (core-min.js)
+ * THIS FILE IS NOT USED, AND IS MINIFIED WITH EACH CHANGE (core_min.js)
  * Copyright (c) 2009 Duane Storey & Dale Mugford (BraveNewCode Inc.)
  * Licensed under GPL.
  *
- * Last Updated: June 14th, 2009
+ * Last Updated: June 16th, 2009
  */
 
 
@@ -93,5 +93,4 @@ function commentAdded() {
     $wptouch("#some-new-comment").fadeIn(2000);
     $wptouch("#refresher").fadeIn(2000);
 }
-
-/////// -- Cookies -- ///////
+// End WPtouch jS

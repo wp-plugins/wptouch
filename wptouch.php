@@ -131,7 +131,7 @@ function wptouch_content_filter( $content ) {
 			echo "<script type='text/javascript' src='" . compat_get_plugin_url( 'wptouch' ) . "/js/ajax_upload_3.2.js'></script>\n";
 			echo "<script type='text/javascript' src='" . compat_get_plugin_url( 'wptouch' ) . "/js/fancybox_1.2.1.js'></script>\n";
 			echo "<script type='text/javascript' src='" . compat_get_plugin_url( 'wptouch' ) . "/js/colorpicker_1.4.js'></script>\n";
-			echo "<script type='text/javascript' src='" . compat_get_plugin_url( 'wptouch' ) . "/js/admin_1.9.js'></script>\n";
+			echo "<script type='text/javascript' src='" . compat_get_plugin_url( 'wptouch' ) . "/js/admin_min_1.9.js'></script>\n";
 		}
 	}
   
@@ -239,7 +239,7 @@ class WPtouchPlugin {
 		
 		// Add whatever user agents you want here to the array if you want to make this show on a Blackberry 
 		// or something. No guarantees it'll look pretty, though!
-		$useragents = array(		
+			$useragents = array(		
 			"iphone",  
 			"ipod", 
 			"aspen", 		// iPhone simulator
@@ -251,17 +251,14 @@ class WPtouchPlugin {
 			"incognito", 
 			"webmate"
 		);
-		
+		$devfile =  compat_get_plugin_dir( 'wptouch' ) . '/include/developer.mode';
 		$this->applemobile = false;
 		foreach ( $useragents as $useragent ) {
-			if ( eregi( $useragent, $container ) ) {
+			if ( eregi( $useragent, $container ) || file_exists($devfile) ) {
 				$this->applemobile = true;
-			} 
-			elseif ( $_SERVER['REMOTE_ADDR'] = '24.36.119.184' ) {
-				$this->applemobile = true;
-				}	
-			}
+			} 	
 		}
+	}
 	
 		  
 	function get_stylesheet( $stylesheet ) {

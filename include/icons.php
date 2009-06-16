@@ -22,7 +22,7 @@
 		
 			if ( $dir ) {
 				while ( false !== ( $file = readdir( $dir ) ) ) { 
-					if ($file == '.' || $file == '..' || $file == '.svn' || $file == 'Archive.zip' || $file == 'template.psd' || $file == '.DS_Store' || $file == 'more' || $file == '_default') {
+					if ($file == '.' || $file == '..' || $file == '.svn' || $file == 'Archive.zip' || $file == '.DS_Store') {
 						continue;
 					}
 				
