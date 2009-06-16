@@ -246,8 +246,8 @@ class WPtouchPlugin {
 			"dream", 		// Pre 1.5 Android
 			"android", 	// 1.5+ Android
 			"cupcake", 	// 1.5+ Android
-		//	"blackberry9500", 
-		//	"blackberry9530",
+			"blackberry9500", 
+			"blackberry9530",
 			"incognito", 
 			"webmate"
 		);
