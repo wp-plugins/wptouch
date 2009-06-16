@@ -207,7 +207,7 @@ class WPtouchPlugin {
 	}
 	
 	function bnc_filter_iphone() {
-		$key = 'bnc_mobile_' . md5(get_bloginfo('siteurl'));
+		$key = 'wptouch_switch_cookie';
 		
 	   	if (isset($_GET['theme_view'])) {
 	   		if ($_GET['theme_view'] == 'mobile') {

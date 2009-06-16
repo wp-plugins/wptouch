@@ -22,15 +22,18 @@ $wptouch = jQuery.noConflict();
 /////// -- Switch Magic -- ///////
 
 function wptouch_switch_confirmation() {
+if (document.cookie == 'wptouch_switch_cookie') {
+// just switch
+	$wptouch("#wptouch-switch-link a#switch-link").toggleClass("offimg");
+	setTimeout('switch_delayer()', 1000); 
+} else {
 	var answer = confirm("Switch to regular view? \n \n You can switch back to mobile view again in the footer.");
 	if (answer){
 	$wptouch("#wptouch-switch-link a#switch-link").toggleClass("offimg");
 	setTimeout('switch_delayer()', 1000); 
-	} else {
-		// stay put
+		}
 	}
 }
-
 
 /////// -- Menus -- ///////
 
@@ -89,3 +92,5 @@ function commentAdded() {
     $wptouch("#some-new-comment").fadeIn(2000);
     $wptouch("#refresher").fadeIn(2000);
 }
+
+/////// -- Cookies -- ///////
