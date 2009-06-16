@@ -2,30 +2,34 @@
 
 <div class="metabox-holder">
 	<div class="postbox">
-		<h3><?php _e( "Site Menu &amp; Bookmark Icon", "wptouch" ); ?></h3>
+		<h3><?php _e( "Logo + Bookmark Icon // Drop Down Menu", "wptouch" ); ?></h3>
 
 			<div class="wptouch-left-content">
-				<h4><?php _e( "Pages/Bookmark Icon", "wptouch" ); ?></h4>
-				<p><?php _e( "Choose the logo displayed in the header (also your bookmark icon), and the pages you want included in the WPtouch drop-down menu.", "wptouch" ); ?> 						<strong><?php _e( "Remember, only those checked will be shown.", "wptouch" ); ?></strong></p>
+				<h4><?php _e( "Logo + Bookmark Icon", "wptouch" ); ?></h4>
+				<p><?php _e( "Choose the logo displayed in the header (also your bookmark icon), and the pages you want included in the WPtouch drop-down menu.", "wptouch" ); ?> 						
+				<strong><?php _e( "Remember, only those checked will be shown.", "wptouch" ); ?></strong></p>
+
+				<h4><?php _e( "Pages + Icons", "wptouch" ); ?></h4>
 				<p><?php _e( "Next, select the icons from the lists that you want to pair with each page menu item.", "wptouch" ); ?></p>
 				<p><?php _e( "You can also decide if pages are listed by the page order (ID) in WordPress, or by name (default).", "wptouch" ); ?></p>
 				
-				<h4><?php _e( "Default Items", "wptouch" ); ?></h4>
+				<h4><?php _e( "Default Menu Items", "wptouch" ); ?></h4>
 				<p><?php _e( "Enable/Disable these default items in the WPtouch site menu.", "wptouch"); ?></p>
 			</div><!-- wptouch-left-content -->
 		
 	<div class="wptouch-right-content wptouch-pages">
 		<ul>
+			<li><select name="enable_main_title">
+					<?php bnc_get_icon_drop_down_list( $wptouch_settings['main_title']); ?>
+				</select>
+				<?php _e( "Logo &amp; Home Screen Bookmark Icon", "wptouch" ); ?>
+				<br /><br />
+			</li>
 			<li><select name="sort-order">
 					<option value="name"<?php if ( $wptouch_settings['sort-order'] == 'name') echo " selected"; ?>><?php _e( "By Name", "wptouch" ); ?></option>
 					<option value="page"<?php if ( $wptouch_settings['sort-order'] == 'page') echo " selected"; ?>><?php _e( "By Page ID", "wptouch" ); ?></option>
 				</select>
 				<?php _e( "Menu List Sort Order", "wptouch" ); ?>
-			</li>
-			<li><select name="enable_main_title">
-					<?php bnc_get_icon_drop_down_list( $wptouch_settings['main_title']); ?>
-				</select>
-				<?php _e( "Logo &amp; Home Screen Bookmark Icon", "wptouch" ); ?>
 			</li>
 			<?php $pages = bnc_get_pages_for_icons(); ?>
 			<?php foreach ( $pages as $page ) { ?>

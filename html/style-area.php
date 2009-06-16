@@ -7,8 +7,8 @@
 			<div class="wptouch-left-content">
 				<p><?php _e( "Customize the look of WPtouch on your website.", "wptouch" ); ?></p>
 				<p><?php _e( "A colorpicker box will assist you in picking colors.", "wptouch" ); ?></p>
-				<p><?php _e( "You can also use one of our preset skins, which will update your colors automatically.", "wptouch" ); ?></p>
-				<p><?php _e( "Skins also come with unique backgrounds and other style customizations to enhance WPtouch.", "wptouch" ); ?></p>
+				<!-- <p><?php _e( "You can also use one of our preset skins, which will update your colors automatically.", "wptouch" ); ?></p>
+				 <p><?php _e( "Skins also come with unique backgrounds and other style customizations to enhance WPtouch.", "wptouch" ); ?></p> -->
 			</div>
 		
 			<div class="wptouch-right-content">
