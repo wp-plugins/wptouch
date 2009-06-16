@@ -22,15 +22,16 @@ $wptouch = jQuery.noConflict();
 /////// -- Switch Magic -- ///////
 
 function wptouch_switch_confirmation() {
-if (document.cookie == 'wptouch_switch_cookie') {
+if (document.cookie && document.cookie.indexOf("wptouch_switch_cookie") > -1) {
 // just switch
 	$wptouch("#wptouch-switch-link a#switch-link").toggleClass("offimg");
-	setTimeout('switch_delayer()', 1000); 
+	setTimeout('switch_delayer()', 1250); 
 } else {
+// ask first
 	var answer = confirm("Switch to regular view? \n \n You can switch back to mobile view again in the footer.");
 	if (answer){
 	$wptouch("#wptouch-switch-link a#switch-link").toggleClass("offimg");
-	setTimeout('switch_delayer()', 1000); 
+	setTimeout('switch_delayer()', 1250); 
 		}
 	}
 }
