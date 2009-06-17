@@ -16,6 +16,7 @@
 
 #wptouch-theme .postbox {
 	padding: 10px;
+	position: relative;
 }
 
 #wptouch-theme .postbox h3 {
@@ -216,9 +217,8 @@
 }
 
 #wptouch-head .postbox img.ajax-load {
-	position: absolute;
-	top: 14px;
-	left: 205px;
+	margin-left: 5px;
+	margin-bottom: -2px;
 }
 
 #wptouch-head-links {
@@ -419,7 +419,7 @@ textarea#wptouch-stats {
 	background: url(../images/upload.png) 0 0;
 	width: 174px;
 	height: 45px;
-	cursor: pointer;
+	cursor: pointer !important;
 	display: block;
 	margin-bottom: 10px;
 }

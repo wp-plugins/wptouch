@@ -43,12 +43,12 @@
 				
 				<?php
 				//WordPress Photos Page with and without FlickRSS Support	 
-				$links_page_check = new WP_Query('pagename=photos');
-				if ($links_page_check->post->ID && function_exists('get_flickrRSS')) {
+				$photos_page_check = new WP_Query('pagename=photos');
+				if ($photos_page_check->post->ID && function_exists('get_flickrRSS')) {
 				echo '<div class="all-good"><img src="' . compat_get_plugin_url( 'wptouch' ) . '/images/good.png" class="support" alt="" /> ' . __( 'All your <a href="http://eightface.com/wordpress/flickrrss/" target="_blank">FlickrRSS</a> images will automatically show on your page called \'Photos\'.', 'wptouch' ) . '</div>';
-				} elseif ($links_page_check->post->ID && !function_exists('get_flickrRSS')) {
+				} elseif ($photos_page_check->post->ID && !function_exists('get_flickrRSS')) {
 				echo '<div class="sort-of"><img src="' . compat_get_plugin_url( 'wptouch' ) . '/images/sortof.png" class="support" alt="" /> ' . __( 'You have a page called \'Photos\', but don\'t have <a href="http://eightface.com/wordpress/flickrrss/" target="_blank">FlickrRSS</a> installed.', 'wptouch' ) . '</div>';
-				} elseif (!$links_page_check->post->ID && function_exists('get_flickrRSS')) {
+				} elseif (!$photos_page_check->post->ID && function_exists('get_flickrRSS')) {
 				echo '<div class="sort-of"><img src="' . compat_get_plugin_url( 'wptouch' ) . '/images/sortof.png" class="support" alt="" /> ' . __( 'If you create a page called \'Photos\', all your <a href="http://eightface.com/wordpress/flickrrss/" target="_blank">FlickrRSS</a> photos would display in <em>WPtouch</em> style.', 'wptouch' ) . '</div>';
 				} else {
 				
@@ -58,10 +58,10 @@
 				
 				<?php
 				//WordPress Archives Page Support with checks for Tags Support or Not
-				$links_page_check = new WP_Query('pagename=archives');
-				if ($links_page_check->post->ID && function_exists('wp_tag_cloud')) {
+				$archives_page_check = new WP_Query('pagename=archives');
+				if ($archives_page_check->post->ID && function_exists('wp_tag_cloud')) {
 				echo '<div class="all-good"><img src="' . compat_get_plugin_url( 'wptouch' ) . '/images/good.png" class="support" alt="" /> ' . __( 'Your tags and your monthly listings will automatically show on your page called \'Archives\'.', 'wptouch' ) . '</div>';
-				} elseif ($links_page_check->post->ID && !function_exists('wp_tag_cloud')) {
+				} elseif ($archives_page_check->post->ID && !function_exists('wp_tag_cloud')) {
 				echo '<div class="sort-of"><img src="' . compat_get_plugin_url( 'wptouch' ) . '/images/good.png" class="support" alt="" /> ' . __( 'You don\'t have WordPress 2.3 or above, so no Tags will show, but your categories and monthly listings will automatically show on your page called \'Archives\'.', 'wptouch' ) . '</div>';
 				} else {		   
 				echo '<div class="too-bad"><img src="' . compat_get_plugin_url( 'wptouch' ) . '/images/bad.png" class="support" alt="" /> ' . __( 'If you create a page called \'Archives\', your tags/categories and monthly listings would display in <em>WPtouch</em> style.', 'wptouch' ) . '</div>';
