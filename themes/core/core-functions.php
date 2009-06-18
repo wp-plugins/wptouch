@@ -72,6 +72,21 @@ function wptouch_core_subheader() {
 	include( dirname(__FILE__) . '/../core/core-apple-menu.php' ); 
 	 }
 }
+
+function bnc_get_ordered_cat_list() {
+	// We created our own function for this as wp_list_categories doesn't make the count linkable
+
+	global $table_prefix;
+	global $wpdb;
+
+	$sql = "select * from " . $table_prefix . "term_taxonomy inner join " . $table_prefix . "terms on " . $table_prefix . "term_taxonomy.term_id = " . $table_prefix . "terms.term_id where taxonomy = 'category' order by count desc";	
+	$results = $wpdb->get_results( $sql );
+	foreach ($results as $result) {
+		echo "<li><a href=\"" . get_category_link( $result->term_id ) . "\">" . $result->name . " (" . $result->count . ")</a></li>";
+	}
+
+}
+
   
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // WPtouch Core Body Functions
@@ -236,9 +251,8 @@ function bnc_get_local_dir()
 
 
 // This detects where the admin images are located, for all the page icons and such
-function bnc_get_local_icon_url()
-  {
-      return compat_get_plugin_url( 'wptouch' ) . '/images/';
+function bnc_get_local_icon_url() {
+	return compat_get_plugin_url( 'wptouch' ) . '/images/';
   }
 
 

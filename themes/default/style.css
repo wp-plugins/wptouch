@@ -237,7 +237,7 @@ blockquote {
 	height: auto;
 }
 
-#drop-fade a {
+#drop-fade a.top {
 	font-size: 10px;
 	margin-right: 12px;
 	position: relative;
@@ -256,7 +256,7 @@ blockquote {
 }
 
 #drop-fade #tagsopen {
-	background: url(../core/core-images/menu-sprite.png) no-repeat 0 7px;
+	background: url(../core/core-images/menu-sprite.png) no-repeat 0 8px;
 	padding-left: 16px;
 }
 
@@ -270,10 +270,6 @@ blockquote {
 	background: url(../core/core-images/menu-sprite.png) no-repeat 0 -14px;
 }
 
-
-
-/* @end */
-
 form#select-cats, form#select-tags, form#select-acct {
 	overflow: hidden;
 	width: 0;
@@ -285,6 +281,25 @@ form#select-cats, form#select-tags, form#select-acct {
 form#select-cats option {
 	text-transform: capitalize !important;
 }
+
+#drop-fade .dropper {
+	position: relative;
+	top: 20px;
+}
+
+#drop-fade .dropper ul {
+	margin-top: 20px;
+	position: relative;
+	bottom: 20px;
+}
+
+#drop-fade .dropper ul li {
+	padding-left: 15px;
+}
+
+
+
+/* @end */
 
 
 /* @group DropDown Menu */
@@ -302,7 +317,8 @@ form#select-cats option {
 	bottom: 5px;
 	width: 28px;
 	padding-right: 10px;
-	right: 1px;
+	right: 0;
+	padding-left: 10px;
 }
 
 .dropper {
@@ -316,38 +332,41 @@ form#select-cats option {
 	background-color: #2c2c2c;
 }
 
-.dropper a {
-	font-weight: bold;
-	display: block;
-	text-shadow: #171717 -1px -1px 0;
-	color: #d2d2d2;
-	margin: 0;
-	padding: 4px 0;
-	width: 93%;
-}
-
 .dropper ul {
 	margin: 0;
 	padding: 0;
 	list-style-type: none;
-	position: relative;	
+	position: relative;
 }
 
 .dropper li {
 	border-bottom: 1px solid #1d1d1d;
 	margin: 0;
 	background: url(../core/core-images/arrow.png) no-repeat right center;
-	padding: 8px 20px 7px 10px;
 	text-transform: capitalize;
 	border-top: 1px solid #363636;
+	padding: 0;
+	text-align: left;
+}
+
+.dropper a {
+	font-weight: bold;
+	display: block;
+	text-shadow: #000 -1px -1px 1px;
+	color: #d2d2d2;
+	margin: 0;
+	width: auto;
+	padding: 10px 35px 10px 0;
+	text-align: left;
+	clear: both;
 }
 
 .dropper li:hover {
 	background-color: #222;
+	border-top: 1px solid #222;
 }
 
 .dropper li:last-child {
-	padding-bottom: 9px;
 }
 
 /* @end */
