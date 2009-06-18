@@ -32,16 +32,20 @@
 				<?php _e( "Menu List Sort Order", "wptouch" ); ?>
 			</li>
 			<?php $pages = bnc_get_pages_for_icons(); ?>
-			<?php foreach ( $pages as $page ) { ?>
-			<li><span>
-					<input class="checkbox" type="checkbox" name="enable_<?php echo $page->ID; ?>"<?php if ( isset( $wptouch_settings[$page->ID] ) ) echo " checked"; ?> />
-					<label class="wptouch-page-label" for="enable_<?php echo $page->ID; ?>"><?php echo $page->post_title; ?> <?php _e( "Page", "wptouch" ); ?></label>
-				</span>
-				<select class="page-select" name="icon_<?php echo $page->ID; ?>">
-					<?php bnc_get_icon_drop_down_list( $wptouch_settings[ $page->ID ]); ?>
-				</select>
-			</li>
-		<?php } ?>
+			<?php if ( count( $pages ) ) { ?>
+				<?php foreach ( $pages as $page ) { ?>
+				<li><span>
+						<input class="checkbox" type="checkbox" name="enable_<?php echo $page->ID; ?>"<?php if ( isset( $wptouch_settings[$page->ID] ) ) echo " checked"; ?> />
+						<label class="wptouch-page-label" for="enable_<?php echo $page->ID; ?>"><?php echo $page->post_title; ?> <?php _e( "Page", "wptouch" ); ?></label>
+					</span>
+					<select class="page-select" name="icon_<?php echo $page->ID; ?>">
+						<?php bnc_get_icon_drop_down_list( $wptouch_settings[ $page->ID ]); ?>
+					</select>
+				</li>
+				<?php } ?>
+			<?php } else { ?>
+				<strong><?php _e( "Sorry, you have no pages defined.", "wptouch" ); ?></strong>
+			<?php } ?>
 		</ul>
 		<h4><?php _e( "Default Menu Items", "wptouch" ); ?></h4>
 		<ul>
