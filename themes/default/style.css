@@ -1,5 +1,5 @@
 /* @override 
-	http://24.36.119.184:9098/wp-content/plugins/wptouch/themes/default/style_min.css
+	http://24.36.119.184:9098/wp-content/plugins/wptouch/themes/default/style.css
 */
 
 /*  
@@ -132,7 +132,6 @@ blockquote {
 	background-color: #eee;
 	margin: 5px -10px;
 	text-shadow: #fff -1px 1px 0;
-
 }
 
 .pageentry h4, .mainentry h4 {
@@ -152,7 +151,6 @@ blockquote {
 .mainentry img, #singlentry img, .pageentry img, ol.commentlist li img {
 	max-width: 100%;
 	height: auto;
-
 }
 
 /* @end */
@@ -293,14 +291,11 @@ form#select-cats option {
 	bottom: 20px;
 }
 
-#drop-fade .dropper ul li {
+#drop-fade .dropper ul li a {
 	padding-left: 15px;
 }
 
-
-
 /* @end */
-
 
 /* @group DropDown Menu */
 
@@ -367,6 +362,7 @@ form#select-cats option {
 }
 
 .dropper li:last-child {
+	
 }
 
 /* @end */
@@ -579,7 +575,7 @@ a.h2 {
 	margin-top: 3px;
 }
 
-.archive-top-left.month-01, #arc-top.month-02, #arc-top.month-03, #arc-top.month-04, #arc-top.month-05, #arc-top.month-06, #arc-top.month-07, #arc-top.month-08, #arc-top.month-09, #arc-top.month-10, #arc-top.month-11, #arc-top.month-12{
+.archive-top-left.month-01, #arc-top.month-02, #arc-top.month-03, #arc-top.month-04, #arc-top.month-05, #arc-top.month-06, #arc-top.month-07, #arc-top.month-08, #arc-top.month-09, #arc-top.month-10, #arc-top.month-11, #arc-top.month-12 {
 	-webkit-border-top-left-radius: 8px;
 	-webkit-border-top-right-radius: 8px;
 	padding-top: 5px;
@@ -1174,11 +1170,11 @@ img.pageicon {
 
 /* @group Comments */
 
-ol.commentlist {
+ol#commentlist {
 	list-style-type: none;
 	margin: 12px 10px 0;
 	padding: 0;
-}
+ 	}
 
 ol.commentlist li {
 	background-color: #fff;
@@ -1225,7 +1221,6 @@ h3#com-head img#com-arrow {
 ol.commentlist li:first-child {
 	border-top: 1px solid #b1b1b1;
 	-webkit-border-top-right-radius: 8px;
-
 }
 
 ol.commentlist li:last-child {
@@ -1261,7 +1256,6 @@ ol.commentlist ul.children .parent ul.children li.alt {
 	padding: 10px;
 	margin: 10px 0 0;
 	-webkit-border-radius: 8px;
-
 }
 
 ol.commentlist ul.children .parent ul.children li.even {
@@ -1270,7 +1264,6 @@ ol.commentlist ul.children .parent ul.children li.even {
 	padding: 10px;
 	margin: 10px 0 0;
 	-webkit-border-radius: 8px;
-
 }
 
 ol.commentlist .reply a, .comdater {
@@ -1327,7 +1320,6 @@ ol.commentlist .comment-meta a {
 
 .comtop:first-child {
 	-webkit-border-top-right-radius: 9px;
-
 }
 
 .comtop a {
@@ -1340,7 +1332,9 @@ ol.commentlist .comment-meta a {
 	text-shadow: #fff 0 1px 0;
 }
 
-/* @end */
+/*
+
+@end */
 
 /* @group Leaving A Comment */
 
@@ -1463,6 +1457,7 @@ form#commentform label {
 }
 
 #refresher a {
+	
 }
 
 p.subscribe-to-comments {
@@ -1581,8 +1576,6 @@ p.subscribe-to-comments input#subscribe {
 /* @group Compatibility CSS */
 
 /* @group Intense Debate */
-
-
 
 /* @end */
 
