@@ -107,22 +107,22 @@
 			<!-- wp cache -->		  
 			<?php if (function_exists('wp_cache_is_enabled')) { ?>
 				<div class="sort-of">
-				<?php _e( '<a href="http://mnm.uib.es/gallir/wp-cache-2/" target="_blank">WP-Cache</a> active. It <strong><a href="http://www.bravenewcode.com/wptouch/">requires special configuration</a></strong> to work with WPtouch.', 'wptouch' ); ?>
+				<?php _e( '<a href="http://mnm.uib.es/gallir/wp-cache-2/" target="_blank">WP-Cache</a> active. If activated, add <em>ipod</em>, <em>iphone</em>, <em>android</em>, <em>dream</em>, <em>blackberry9500</em> and <em>blackberry9530</em> to the list of rejected user agents, then empty the plugin\'s cache.', 'wptouch' ); ?>
 				</div>
 			<?php } else { ?>
 				<div class="all-good">
-				<?php _e( '<a href="http://mnm.uib.es/gallir/wp-cache-2/" target="_blank">WP-Cache</a> inactive. If activated, <strong>it requires configuration.</strong> Visit the <a href="http://www.bravenewcode.com/wptouch/">WPtouch page</a> for more information.', 'wptouch' ); ?>
+				<?php _e( '<a href="http://mnm.uib.es/gallir/wp-cache-2/" target="_blank">WP-Cache</a> inactive. If activated, add <em>ipod</em>, <em>iphone</em>, <em>android</em>, <em>dream</em>, <em>blackberry9500</em> and <em>blackberry9530</em> to the list of rejected user agents, then empty the plugin\'s cache.', 'wptouch' ); ?>
 				</div>
 			<?php } ?>
 						
 			<!-- wp super cache -->
 			<?php if (function_exists('wp_super_cache_footer')) { ?>
 				<div class="sort-of">
-				<?php _e( '<a href="http://ocaoimh.ie/wp-super-cache/" target="_blank">WP Super Cache</a> <strong>requires special configuration to work with WPtouch.</strong> Please visit <a href="http://www.bravenewcode.com/2009/01/05/wptouch-and-wp-super-cache/">this page</a> for more information.', 'wptouch' ); ?>
+				<?php _e( '<a href="http://ocaoimh.ie/wp-super-cache/" target="_blank">WP Super Cache</a> If activated, enable "mobile support" and add <em>ipod</em>, <em>iphone</em>, <em>android</em>, <em>dream</em>, <em>blackberry9500</em> and <em>blackberry9530</em> to the list of rejected user agents, then empty the plugin\'s cache.', 'wptouch' ); ?>
 				</div>
 			<?php } else { ?>
 				<div class="all-good">
-				<?php _e( '<a href="http://ocaoimh.ie/wp-super-cache/" target="_blank">WP Super Cache</a> inactive. If activated, <strong>it requires configuration.</strong> Please visit <a href="http://www.bravenewcode.com/2009/01/05/wptouch-and-wp-super-cache/">this support page</a> for more information.', 'wptouch' ); ?>
+				<?php _e( '<a href="http://ocaoimh.ie/wp-super-cache/" target="_blank">WP Super Cache</a> inactive. If activated, enable "mobile support" and add <em>ipod</em>, <em>iphone</em>, <em>android</em>, <em>dream</em>, <em>blackberry9500</em> and <em>blackberry9530</em> to the list of rejected user agents, then empty the plugin\'s cache.', 'wptouch' ); ?>
 				</div>
 			<?php } ?>
 		</div><!-- right content -->
