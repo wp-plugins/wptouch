@@ -37,22 +37,22 @@
 					//WordPress Links Page Support
 				$links_page_check = new WP_Query('pagename=links');
 				if ($links_page_check->post->ID) {
-				echo '<div class="all-good"><img src="' . compat_get_plugin_url( 'wptouch' ) . '/images/good.png" class="support" alt="" /> ' . __( "All of your WP links will automatically show on your page called 'Links'.", "wptouch" ) . '</div>';
+				echo '<div class="all-good">' . __( "All of your WP links will automatically show on your page called 'Links'.", "wptouch" ) . '</div>';
 				} else {
-				echo '<div class="too-bad"><img src="' . compat_get_plugin_url( 'wptouch' ) . '/images/bad.png" class="support" alt="" /> ' . __( "If you create a page called 'Links', all your WP links would display in <em>WPtouch</em> style.", "wptouch" ) . '</div>'; } ?>
+				echo '<div class="too-bad">' . __( "If you create a page called 'Links', all your WP links would display in <em>WPtouch</em> style.", "wptouch" ) . '</div>'; } ?>
 				
 				<?php
 				//WordPress Photos Page with and without FlickRSS Support	 
 				$photos_page_check = new WP_Query('pagename=photos');
 				if ($photos_page_check->post->ID && function_exists('get_flickrRSS')) {
-				echo '<div class="all-good"><img src="' . compat_get_plugin_url( 'wptouch' ) . '/images/good.png" class="support" alt="" /> ' . __( 'All your <a href="http://eightface.com/wordpress/flickrrss/" target="_blank">FlickrRSS</a> images will automatically show on your page called \'Photos\'.', 'wptouch' ) . '</div>';
+				echo '<div class="all-good">' . __( 'All your <a href="http://eightface.com/wordpress/flickrrss/" target="_blank">FlickrRSS</a> images will automatically show on your page called \'Photos\'.', 'wptouch' ) . '</div>';
 				} elseif ($photos_page_check->post->ID && !function_exists('get_flickrRSS')) {
-				echo '<div class="sort-of"><img src="' . compat_get_plugin_url( 'wptouch' ) . '/images/sortof.png" class="support" alt="" /> ' . __( 'You have a page called \'Photos\', but don\'t have <a href="http://eightface.com/wordpress/flickrrss/" target="_blank">FlickrRSS</a> installed.', 'wptouch' ) . '</div>';
+				echo '<div class="sort-of">' . __( 'You have a page called \'Photos\', but don\'t have <a href="http://eightface.com/wordpress/flickrrss/" target="_blank">FlickrRSS</a> installed.', 'wptouch' ) . '</div>';
 				} elseif (!$photos_page_check->post->ID && function_exists('get_flickrRSS')) {
-				echo '<div class="sort-of"><img src="' . compat_get_plugin_url( 'wptouch' ) . '/images/sortof.png" class="support" alt="" /> ' . __( 'If you create a page called \'Photos\', all your <a href="http://eightface.com/wordpress/flickrrss/" target="_blank">FlickrRSS</a> photos would display in <em>WPtouch</em> style.', 'wptouch' ) . '</div>';
+				echo '<div class="sort-of">' . __( 'If you create a page called \'Photos\', all your <a href="http://eightface.com/wordpress/flickrrss/" target="_blank">FlickrRSS</a> photos would display in <em>WPtouch</em> style.', 'wptouch' ) . '</div>';
 				} else {
 				
-				echo '<div class="too-bad"><img src="' . compat_get_plugin_url( 'wptouch' ) . '/images/bad.png" class="support" alt="" /> ' . __( 'If you create a page called \'Photos\', and install the <a href="http://eightface.com/wordpress/flickrrss/" target="_blank">FlickrRSS</a> plugin, your photos would display in <em>WPtouch</em> style.', 'wptouch' ) . '</div>';
+				echo '<div class="too-bad">' . __( 'If you create a page called \'Photos\', and install the <a href="http://eightface.com/wordpress/flickrrss/" target="_blank">FlickrRSS</a> plugin, your photos would display in <em>WPtouch</em> style.', 'wptouch' ) . '</div>';
 				}
 				?>
 				
@@ -60,11 +60,11 @@
 				//WordPress Archives Page Support with checks for Tags Support or Not
 				$archives_page_check = new WP_Query('pagename=archives');
 				if ($archives_page_check->post->ID && function_exists('wp_tag_cloud')) {
-				echo '<div class="all-good"><img src="' . compat_get_plugin_url( 'wptouch' ) . '/images/good.png" class="support" alt="" /> ' . __( 'Your tags and your monthly listings will automatically show on your page called \'Archives\'.', 'wptouch' ) . '</div>';
+				echo '<div class="all-good">' . __( 'Your tags and your monthly listings will automatically show on your page called \'Archives\'.', 'wptouch' ) . '</div>';
 				} elseif ($archives_page_check->post->ID && !function_exists('wp_tag_cloud')) {
-				echo '<div class="sort-of"><img src="' . compat_get_plugin_url( 'wptouch' ) . '/images/good.png" class="support" alt="" /> ' . __( 'You don\'t have WordPress 2.3 or above, so no Tags will show, but your categories and monthly listings will automatically show on your page called \'Archives\'.', 'wptouch' ) . '</div>';
+				echo '<div class="sort-of">' . __( 'You don\'t have WordPress 2.3 or above, so no Tags will show, but your categories and monthly listings will automatically show on your page called \'Archives\'.', 'wptouch' ) . '</div>';
 				} else {		   
-				echo '<div class="too-bad"><img src="' . compat_get_plugin_url( 'wptouch' ) . '/images/bad.png" class="support" alt="" /> ' . __( 'If you create a page called \'Archives\', your tags/categories and monthly listings would display in <em>WPtouch</em> style.', 'wptouch' ) . '</div>';
+				echo '<div class="too-bad">' . __( 'If you create a page called \'Archives\', your tags/categories and monthly listings would display in <em>WPtouch</em> style.', 'wptouch' ) . '</div>';
 				}
 				?>
 				<br /><br />
@@ -74,55 +74,55 @@
 			<!-- custom anti spam -->
 			<?php if (function_exists('cas_register_post')) { ?>
 				<div class="all-good">
-				<img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/images/good.png" class="support" alt="" />  <?php _e( 'Cool! <a href="http://wordpress.org/extend/plugins/peters-custom-anti-spam-image/" target="_blank">Peter\'s Custom Anti-Spam</a>: Your comment form supports it', 'wptouch'); ?>
+				<?php _e( 'Cool! <a href="http://wordpress.org/extend/plugins/peters-custom-anti-spam-image/" target="_blank">Peter\'s Custom Anti-Spam</a>: Your comment form supports it', 'wptouch'); ?>
 				</div>
 			<?php } else { ?>
 				<div class="sort-of">
-				<img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/images/sortof.png" class="support" alt="" /> <?php _e( 'You don\'t have <a href="http://wordpress.org/extend/plugins/peters-custom-anti-spam-image/" target="_blank">Peter\'s Custom Anti-Spam</a> installed (Your commentform supports it)', 'wptouch' ); ?>
+				<?php _e( 'You don\'t have <a href="http://wordpress.org/extend/plugins/peters-custom-anti-spam-image/" target="_blank">Peter\'s Custom Anti-Spam</a> installed (Your commentform supports it)', 'wptouch' ); ?>
 				</div>
 			<?php } ?>
 			
 			<!-- flickr rss -->	  
 			<?php if (function_exists('get_flickrRSS')) { ?>
 				<div class="all-good">
-				<img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/images/good.png" class="support" alt="" /> <?php _e( 'Cool! <a href="http://eightface.com/wordpress/flickrrss/" target="_blank">FlickrRSS</a>: Your photos will automatically show on a page called \'Photos\'.', 'wptouch' ); ?>
+				<?php _e( 'Cool! <a href="http://eightface.com/wordpress/flickrrss/" target="_blank">FlickrRSS</a>: Your photos will automatically show on a page called \'Photos\'.', 'wptouch' ); ?>
 				</div>
 			<?php } else { ?>
 				<div class="sort-of">
-				<img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/images/sortof.png" class="support" alt="" /> <?php _e( 'You don\'t have <a href="http://eightface.com/wordpress/flickrrss/" target="_blank">FlickrRSS</a> installed (No automatic photos page support)', 'wptouch' ); ?>
+				<?php _e( 'You don\'t have <a href="http://eightface.com/wordpress/flickrrss/" target="_blank">FlickrRSS</a> installed (No automatic photos page support)', 'wptouch' ); ?>
 				</div>
 			<?php } ?>
 			
 			<!-- blipit -->
 			<?php if (function_exists('bnc_blipit_head')) { ?>
 				<div class="all-good">
-				<img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/images/good.png" class="support" alt="" /> <?php _e( 'Cool! <a href="http://www.bravenewcode.com/blipit/" target="_blank">Blip.it</a>: Your videos will automatically show on your posts in iPhone version.', 'wptouch' ); ?>
+				<?php _e( 'Cool! <a href="http://www.bravenewcode.com/blipit/" target="_blank">Blip.it</a>: Your videos will automatically show on your posts in iPhone version.', 'wptouch' ); ?>
 				</div>
 			<?php } else { ?>
 				<div class="sort-of">
-				<img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/images/sortof.png" class="support" alt="" /> <?php _e( 'You don\'t have <a href="http://www.bravenewcode.com/blipit/" target="_blank">Blip.it</a> installed: (No automatic iPhone compatible video support)', 'wptouch' ); ?>
+				<?php _e( 'You don\'t have <a href="http://www.bravenewcode.com/blipit/" target="_blank">Blip.it</a> installed: (No automatic iPhone compatible video support)', 'wptouch' ); ?>
 				</div>
 			<?php } ?>
 			
 			<!-- wp cache -->		  
 			<?php if (function_exists('wp_cache_is_enabled')) { ?>
 				<div class="sort-of">
-				<img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/images/sortof.png" class="support" alt="" /> <?php _e( '<a href="http://mnm.uib.es/gallir/wp-cache-2/" target="_blank">WP-Cache</a> active. It <strong><a href="http://www.bravenewcode.com/wptouch/">requires special configuration</a></strong> to work with WPtouch.', 'wptouch' ); ?>
+				<?php _e( '<a href="http://mnm.uib.es/gallir/wp-cache-2/" target="_blank">WP-Cache</a> active. It <strong><a href="http://www.bravenewcode.com/wptouch/">requires special configuration</a></strong> to work with WPtouch.', 'wptouch' ); ?>
 				</div>
 			<?php } else { ?>
 				<div class="all-good">
-				<img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/images/good.png" class="support" alt="" /> <?php _e( '<a href="http://mnm.uib.es/gallir/wp-cache-2/" target="_blank">WP-Cache</a> inactive. If activated, <strong>it requires configuration.</strong> Visit the <a href="http://www.bravenewcode.com/wptouch/">WPtouch page</a> for more information.', 'wptouch' ); ?>
+				<?php _e( '<a href="http://mnm.uib.es/gallir/wp-cache-2/" target="_blank">WP-Cache</a> inactive. If activated, <strong>it requires configuration.</strong> Visit the <a href="http://www.bravenewcode.com/wptouch/">WPtouch page</a> for more information.', 'wptouch' ); ?>
 				</div>
 			<?php } ?>
 						
 			<!-- wp super cache -->
 			<?php if (function_exists('wp_super_cache_footer')) { ?>
 				<div class="sort-of">
-				<img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/images/sortof.png" class="support" alt="" /> <?php _e( '<a href="http://ocaoimh.ie/wp-super-cache/" target="_blank">WP Super Cache</a> <strong>requires special configuration to work with WPtouch.</strong> Please visit <a href="http://www.bravenewcode.com/2009/01/05/wptouch-and-wp-super-cache/">this page</a> for more information.', 'wptouch' ); ?>
+				<?php _e( '<a href="http://ocaoimh.ie/wp-super-cache/" target="_blank">WP Super Cache</a> <strong>requires special configuration to work with WPtouch.</strong> Please visit <a href="http://www.bravenewcode.com/2009/01/05/wptouch-and-wp-super-cache/">this page</a> for more information.', 'wptouch' ); ?>
 				</div>
 			<?php } else { ?>
 				<div class="all-good">
-				<img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/images/good.png" class="support" alt="" /> <?php _e( '<a href="http://ocaoimh.ie/wp-super-cache/" target="_blank">WP Super Cache</a> inactive. If activated, <strong>it requires configuration.</strong> Please visit <a href="http://www.bravenewcode.com/2009/01/05/wptouch-and-wp-super-cache/">this support page</a> for more information.', 'wptouch' ); ?>
+				<?php _e( '<a href="http://ocaoimh.ie/wp-super-cache/" target="_blank">WP Super Cache</a> inactive. If activated, <strong>it requires configuration.</strong> Please visit <a href="http://www.bravenewcode.com/2009/01/05/wptouch-and-wp-super-cache/">this support page</a> for more information.', 'wptouch' ); ?>
 				</div>
 			<?php } ?>
 		</div><!-- right content -->

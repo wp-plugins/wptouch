@@ -25,12 +25,14 @@
 				<?php _e( "Logo &amp; Home Screen Bookmark Icon", "wptouch" ); ?>
 				<br /><br />
 			</li>
+		<?php if ( count( $pages ) ) { ?>
 			<li><select name="sort-order">
 					<option value="name"<?php if ( $wptouch_settings['sort-order'] == 'name') echo " selected"; ?>><?php _e( "By Name", "wptouch" ); ?></option>
 					<option value="page"<?php if ( $wptouch_settings['sort-order'] == 'page') echo " selected"; ?>><?php _e( "By Page ID", "wptouch" ); ?></option>
 				</select>
 				<?php _e( "Menu List Sort Order", "wptouch" ); ?>
 			</li>
+			<?php } ?>
 			<?php $pages = bnc_get_pages_for_icons(); ?>
 			<?php if ( count( $pages ) ) { ?>
 				<?php foreach ( $pages as $page ) { ?>
@@ -44,7 +46,7 @@
 				</li>
 				<?php } ?>
 			<?php } else { ?>
-				<strong><?php _e( "Sorry, you have no pages defined.", "wptouch" ); ?></strong>
+				<strong ><?php _e( "You have no pages yet. Create some first!", "wptouch" ); ?></strong>
 			<?php } ?>
 		</ul>
 		<h4><?php _e( "Default Menu Items", "wptouch" ); ?></h4>
