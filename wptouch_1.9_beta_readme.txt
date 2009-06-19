@@ -23,6 +23,7 @@ Added fix for WPtouch appearing zoomed out and wide
 Fix for Categories, Tags & Login links not working in non-Apple mobile browsers (Android, etc)
 
 Admin:
+Another fix for some domains not showing the beta download/news areas.
 Admin style refinements, settings bezels
 Added jQuery color picker in admin hex areas for easy selections
 Moved adsense.php to include folder

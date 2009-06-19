@@ -4,7 +4,7 @@
    Plugin URI: http://bravenewcode.com/wptouch/
    Description: A plugin which formats your site with a mobile theme for the Apple <a href="http://www.apple.com/iphone/">iPhone</a> & <a href="http://www.apple.com/ipodtouch/">iPod touch</a> or <a href="http://www.android.com/">Google Android</a> smartphone. Set options by visiting the <a href="options-general.php?page=wptouch/wptouch.php">WPtouch admin panel</a>. &nbsp;
    Author: Dale Mugford & Duane Storey
-   Version: 1.9b8.3
+   Version: 1.9b8.4
    Author URI: http://www.bravenewcode.com
    
    # Special thanks to ContentRobot and the iWPhone theme/plugin
@@ -30,7 +30,7 @@
 
 
 global $bnc_wptouch_version;
-$bnc_wptouch_version = '1.9 Beta 8.3';
+$bnc_wptouch_version = '1.9 Beta 8.4';
 
 require_once( 'include/plugin.php' );
 require_once( 'include/compat.php' );
@@ -131,7 +131,7 @@ function wptouch_content_filter( $content ) {
 			echo "<script type='text/javascript' src='" . compat_get_plugin_url( 'wptouch' ) . "/js/ajax_upload_3.2.js'></script>\n";
 			echo "<script type='text/javascript' src='" . compat_get_plugin_url( 'wptouch' ) . "/js/fancybox_1.2.1.js'></script>\n";
 			echo "<script type='text/javascript' src='" . compat_get_plugin_url( 'wptouch' ) . "/js/colorpicker_1.4.js'></script>\n";
-			echo "<script type='text/javascript' src='" . compat_get_plugin_url( 'wptouch' ) . "/js/admin_min_1.9.js'></script>\n";
+			echo "<script type='text/javascript' src='" . compat_get_plugin_url( 'wptouch' ) . "/js/admin_1.9.js'></script>\n";
 		}
 	}
   
@@ -575,6 +575,7 @@ function bnc_wp_touch_page() {
 		<?php echo('' . WPtouch('<div class="wptouch-version"> This is ','</div>') . ''); ?>
 
 	<div class="wptouch-clearer"></div>
+
 </div>
 <?php 
 echo('</div>'); } 

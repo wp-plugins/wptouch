@@ -1,7 +1,6 @@
 <?php	
 require_once( WPINC . '/class-snoopy.php');
 	$snoopy = new Snoopy();
-	$snoopy->maxredirs = 10;
 	$snoopy->offsiteok = true; /* allow a redirect to different domain */
 	$result = $snoopy->fetch( 'http://www.bravenewcode.com/custom/wptouch-news.php' );
 if($result) {
