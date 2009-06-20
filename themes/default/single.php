@@ -8,7 +8,7 @@
 			        <div class="single-post-meta-top"><?php echo get_the_time('M jS, Y @ h:i a') ?> &rsaquo; <?php the_author() ?><br />
 
 		<!-- Let's check for DISQUS... we need to skip to a different div if it's installed and active -->		
-		<?php if ('open' == $post->comment_status)) : ?>
+		<?php if ('open' == $post->comment_status) : ?>
 		<?php if (function_exists('dsq_comments_template')) { ?>
 	 		<a href="#dsq-add-new-comment">&darr; <?php _e( "Skip to comments", "wptouch" ); ?></a></div>
 		<?php } elseif (function_exists('id_comments_template')) { ?>
