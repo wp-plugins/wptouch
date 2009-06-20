@@ -1,5 +1,5 @@
 <?php
-	$max_size = 128*1024; // 128k	
+	$max_size = 128*2048; // 256k	
 	$directory_list = array();
 	
 	if ( current_user_can( 'upload_files' ) ) {

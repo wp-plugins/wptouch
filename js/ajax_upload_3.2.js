@@ -5,7 +5,6 @@
  * Licensed under the MIT license (http://valums.com/mit-license/)
  * Version 3.2 (19.05.2009)
  **/
-
 (function(){var d=document,w=window;function get(element){if(typeof element=="string")
 element=d.getElementById(element);return element;}
 function addEvent(el,type,fn){if(w.addEventListener){el.addEventListener(type,fn,false);}else if(w.attachEvent){var f=function(){fn.call(el,w.event);};el.attachEvent('on'+type,f)}}

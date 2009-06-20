@@ -2,9 +2,7 @@
 include( dirname(__FILE__) . '/../core/core-functions.php' ); 
 // End WPtouch Core Functions
 
-
 //---------------- Custom Drop-Down Tags Function ----------------// 
-
 function dropdown_tag_cloud( $args = '' ) {
 	$defaults = array(
 		'smallest' => 8, 'largest' => 22, 'unit' => 'pt', 'number' => 45,
@@ -93,7 +91,6 @@ function core_header_tag_cloud( $tags, $args = '' ) {
 
 
 //---------------- Custom Excerpts Function ----------------//
-
 function wptouch_trim_excerpt($text) {
 	$raw_excerpt = $text;
 	if ( '' == $text ) {

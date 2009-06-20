@@ -169,5 +169,4 @@
 
 global $wptouch_settings;
 $wptouch_settings = bnc_wptouch_get_settings();
-
 ?>

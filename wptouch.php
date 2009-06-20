@@ -1,23 +1,23 @@
 <?php
 /*
    Plugin Name: WPtouch iPhone Theme
-   Plugin URI: http://bravenewcode.com/wptouch/
-   Description: A plugin which formats your site with a mobile theme for the Apple <a href="http://www.apple.com/iphone/">iPhone</a> & <a href="http://www.apple.com/ipodtouch/">iPod touch</a> or <a href="http://www.android.com/">Google Android</a> smartphone. Set options by visiting the <a href="options-general.php?page=wptouch/wptouch.php">WPtouch admin panel</a>. &nbsp;
-   Author: Dale Mugford & Duane Storey
-   Version: 1.9b8.5
-   Author URI: http://www.bravenewcode.com
+   Plugin URI: http://bravenewcode.com/wptouch
+   Description: A plugin which formats your site with a mobile theme for the Apple <a href="http://www.apple.com/iphone/">iPhone</a> & <a href="http://www.apple.com/ipodtouch/">iPod touch</a> or <a href="http://www.android.com/">Google Android</a>, and other touch-based smartphones. Set options by visiting the <a href="options-general.php?page=wptouch/wptouch.php">WPtouch admin panel</a>. &nbsp;
+	Author: Dale Mugford & Duane Storey
+	Version: 1.9b8.5
+	Author URI: http://www.bravenewcode.com
    
-   # Special thanks to ContentRobot and the iWPhone theme/plugin
-   # (http://iwphone.contentrobot.com/) which the detection feature
-   # of the plugin was based on.
- 
-   # Copyright (c) 2008-2009 Duane Storey & Dale Mugford of BraveNewCode Inc.
- 
-   # This plugin is free software; you can redistribute it and/or
-   # modify it under the terms of the GNU Lesser General Public
-   # License as published by the Free Software Foundation; either
-   # version 2.1 of the License, or (at your option) any later version.
-
+	# Special thanks to ContentRobot and the iWPhone theme/plugin
+	# (http://iwphone.contentrobot.com/) which the detection feature
+	# of the plugin was based on.
+	
+	# Copyright (c) 2008-2009 Duane Storey & Dale Mugford of BraveNewCode Inc.
+	
+	# This plugin is free software; you can redistribute it and/or
+	# modify it under the terms of the GNU Lesser General Public
+	# License as published by the Free Software Foundation; either
+	# version 2.1 of the License, or (at your option) any later version.
+	
 	# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
 	# EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
 	# MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
@@ -25,7 +25,8 @@
 	# LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
 	# OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 	# WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. 
-   # See the GNU lesser General Public License for more details.
+	#
+	# See the GNU lesser General Public License for more details.
 */
 
 
@@ -69,8 +70,6 @@ function wptouch_get_plugin_dir_name() {
 	global $wptouch_plugin_dir_name;
 	return $wptouch_plugin_dir_name;
 }
-
-//function wptouch_get_upload_path() {}
 
 function wptouch_delete_icon( $icon ) {
 	if ( !current_user_can( 'upload_files' ) ) {
@@ -127,7 +126,7 @@ function wptouch_content_filter( $content ) {
 			if ( $version <= 2.6 ) {
 				echo "<link rel='stylesheet' type='text/css' href='" . compat_get_plugin_url( 'wptouch' ) . "/admin-css/wptouch-admin-pre27.css' />\n";
 			} 
-		
+
 			echo "<script type='text/javascript' src='" . compat_get_plugin_url( 'wptouch' ) . "/js/ajax_upload_3.2.js'></script>\n";
 			echo "<script type='text/javascript' src='" . compat_get_plugin_url( 'wptouch' ) . "/js/fancybox_1.2.1.js'></script>\n";
 			echo "<script type='text/javascript' src='" . compat_get_plugin_url( 'wptouch' ) . "/js/colorpicker_1.4.js'></script>\n";
@@ -143,7 +142,7 @@ class WPtouchPlugin {
 	function WPtouchPlugin() {
 		$this->output_started = false;
 		$this->applemobile = false;
-		
+
 		add_action( 'plugins_loaded', array(&$this, 'detectAppleMobile') );
 		add_filter( 'stylesheet', array(&$this, 'get_stylesheet') );
 		add_filter( 'theme_root', array(&$this, 'theme_root') );
@@ -162,7 +161,7 @@ class WPtouchPlugin {
 		$vars[] = "wptouch";
 		return $vars;
 	}
-	
+
 	function wptouch_parse_request( $wp ) {
 		if  (array_key_exists( "wptouch", $wp->query_vars ) ) {
 			switch ( $wp->query_vars["wptouch"] ) {
@@ -205,7 +204,7 @@ class WPtouchPlugin {
 	      }
 	   }
 	}
-	
+
 	function bnc_filter_iphone() {
 		$key = 'wptouch_switch_cookie';
 		
@@ -219,7 +218,7 @@ class WPtouchPlugin {
 			header('Location: ' . get_bloginfo('siteurl'));
 			die;
 		}
-			
+
 		$settings = bnc_wptouch_get_settings();
 		if (isset($_COOKIE[$key])) {
 			$this->desired_view = $_COOKIE[$key];
@@ -259,8 +258,7 @@ class WPtouchPlugin {
 			} 	
 		}
 	}
-	
-		  
+
 	function get_stylesheet( $stylesheet ) {
 		if ($this->applemobile && $this->desired_view == 'mobile') {
 			return 'default';

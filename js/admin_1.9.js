@@ -4,7 +4,7 @@
  * Copyright (c) 2008-2009 Duane Storey & Dale Mugford (BraveNewCode Inc.)
  * Licensed under GPL.
  *
- * Last Updated: June 19th, 2009
+ * Last Updated: June 20th, 2009
  */
 
 $j = jQuery.noConflict();
@@ -20,31 +20,18 @@ jQuery(document).ready(function($j) {
 	});
 	
 	setTimeout(function() { 	
-	jQuery.ajax({
-		url: "../?wptouch=news",
-		success: function(data) {
-			$j("#wptouch-news-content").html(data).fadeIn(500);}
+		jQuery.ajax({
+			url: "../?wptouch=news",
+			success: function(data) {$j("#wptouch-news-content").html(data).fadeIn(500);}
 		});
- 	}, 1000);
+	}, 1000);
 
 	setTimeout(function() { 	
-	jQuery.ajax({
-		url: "../?wptouch=beta",
-		success: function(data) {
-			$j("#wptouch-beta-content").html(data).fadeIn(250);}
+		jQuery.ajax({
+			url: "../?wptouch=beta",
+			success: function(data) {$j("#wptouch-beta-content").html(data).fadeIn(250);}
 		});
- 	}, 1000);
-	
-	$j("a.wptouch-fancylink").fancybox({
-		'padding':						5,
-		'imageScale':					true,
-		'zoomSpeedIn':				250, 
-		'zoomSpeedOut':			250,
-		'zoomOpacity':				true, 
-		'overlayShow':				false,
-		'frameHeight':				250,
-		'hideOnContentClick': 	true
-	});
+	}, 1000);
 
 	setTimeout(function() { $j('#wptouchupdated').fadeIn(350); }, 300);
 	setTimeout(function() { $j('#wptouchupdated').fadeOut(350); }, 2300);
@@ -59,4 +46,15 @@ jQuery(document).ready(function($j) {
 			jQuery(this).ColorPickerSetColor( jQuery(this).attr('value') );
 			}
 		});
+
+	$j("a.wptouch-fancylink").fancybox({
+		'padding':						5,
+		'imageScale':					true,
+		'zoomSpeedIn':				250, 
+		'zoomSpeedOut':			250,
+		'zoomOpacity':				true, 
+		'overlayShow':				false,
+		'frameHeight':				250,
+		'hideOnContentClick': 	true
+	});
 });

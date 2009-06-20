@@ -1,8 +1,7 @@
 /*
  * WPtouch 1.9 -The WPtouch Core jS File
  * This file holds all the default jQuery & Ajax functions for the theme
- * THIS FILE IS NOT USED, AND IS MINIFIED WITH EACH CHANGE (core_min.js)
- * Copyright (c) 2009 Duane Storey & Dale Mugford (BraveNewCode Inc.)
+ * Copyright (c) 2008-2009 Duane Storey & Dale Mugford (BraveNewCode Inc.)
  * Licensed under GPL.
  *
  * Last Updated: June 20th, 2009
@@ -11,17 +10,12 @@
 if (top.location!= self.location) {top.location = self.location.href}
 
 /////// -- Hide addressbar on page load -- ///////
-
 setTimeout(function() { window.scrollTo(0, 1) }, 100);
 
-
 /////// -- Let's play nice in jQuery -- ///////
-
 $wptouch = jQuery.noConflict();
 
-
 /////// -- Switch Magic -- ///////
-
 function wptouch_switch_confirmation() {
 if (document.cookie && document.cookie.indexOf("wptouch_switch_cookie") > -1) {
 // just switch
@@ -37,9 +31,7 @@ if (document.cookie && document.cookie.indexOf("wptouch_switch_cookie") > -1) {
 	}
 }
 
-
 /////// -- Menus -- ///////
-
 // Creating a new function, fadeToggle()
 jQuery.fn.fadeToggle = function(speed, easing, callback) { 
 	return this.animate({opacity: 'toggle'}, speed, easing, callback); 
@@ -66,9 +58,7 @@ function bnc_jquery_acct_open() {
 	jQuery('#acct-dropdown').focus();
 }
 
-
 /////// -- Ajax comments -- ///////
-
 function bnc_showhide_coms_toggle() {
 	$wptouch('#commentlist').fadeToggle(400);
 	$wptouch("img#com-arrow").toggleClass("com-arrow-down");
@@ -94,7 +84,6 @@ function commentAdded() {
 }
 
 /////// -- Tweak jQuery Timer -- ///////
-
 jQuery.timerId = setInterval(function(){
 	var timers = jQuery.timers;
 	for (var i = 0; i < timers.length; i++) {

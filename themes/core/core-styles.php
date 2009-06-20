@@ -1,4 +1,3 @@
-<!-- These styles pull info from the WPtouch admin panel. you can override them, if you wish -->
 <style type="text/css">
 #headerbar {
 	background: #<?php echo bnc_get_header_background(); ?> url(<?php echo compat_get_plugin_url( 'wptouch' ); ?>/themes/core/core-images/head-fade-bk.png);

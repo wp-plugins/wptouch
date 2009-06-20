@@ -10,13 +10,11 @@
 	}
 	
 	function bnc_get_icon_list() {
-		$locations = bnc_get_icon_locations();
-        
+		$locations = bnc_get_icon_locations();     
 		$files = array();
 
 		foreach ( $locations as $key => $value ) {
-			$current_path = $value[0];
-			
+			$current_path = $value[0];	
 			$dir = @opendir( $current_path );
 			$files[ $key ] = array();
 		
