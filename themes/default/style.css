@@ -304,6 +304,7 @@ form#select-cats option {
 	z-index: 2;
 	top: 45px;
 	-webkit-box-shadow: #333 -6px 6px 6px;
+	display: none;
 }
 
 #wptouch-menu-inner img {
@@ -375,6 +376,7 @@ form#select-cats option {
 	left: 0;
 	z-index: 1;
 	width: 100%;
+	display: none;
 }
 
 #wptouch-login-inner {
@@ -750,32 +752,6 @@ a.ajax {
 	font-weight: bold;
 	letter-spacing: 0;
 	height: 16px;
-}
-
-/* @end */
-
-/* @group Image Gallery */
-
-/* @end */
-
-/* @group Post Page Mav */
-
-.post-page-nav {
-	background-color: #eee;
-	margin-bottom: 15px;
-	font-size: 14px;
-	font-weight: bold;
-	color: #777;
-	margin-top: 5px;
-}
-
-.post-page-nav a {
-	font-weight: bold;
-	font-size: 14px;
-	padding: 2px 5px;
-	-webkit-border-radius: 5px;
-	border: 1px solid #ffde63;
-	background-color: #f3f3f3;
 }
 
 /* @end */
@@ -1172,9 +1148,14 @@ img.pageicon {
 
 ol#commentlist {
 	list-style-type: none;
-	margin: 12px 10px 0;
-	padding: 0;
- 	}
+	display: none;
+	margin: 0 10px 0;
+	position: relative;
+	z-index: 1;
+	padding-right: 0;
+	padding-bottom: 0;
+	padding-left: 0;
+}
 
 ol.commentlist li {
 	background-color: #fff;
@@ -1190,8 +1171,7 @@ ol.commentlist li {
 
 h3#com-head {
 	font-weight: bold;
-	font-size: 14px;
-	-webkit-border-radius: 8px;
+	font-size: 13px;
 	-webkit-border-radius: 8px;
 	text-shadow: #fff 0 1px 0;
 	margin-left: 10px;
@@ -1213,6 +1193,13 @@ h3#com-head img#com-arrow {
 	top: 1px;
 }
 
+.comhead-open {
+	-webkit-border-bottom-left-radius: 0px !important;
+	-webkit-border-bottom-right-radius: 0px !important;
+	margin-bottom: -1px;
+	background-color: #eee !important;
+}
+
 .com-arrow-down {
 	-webkit-transform: scale(1.0) rotate(90deg);
 	-webkit-transition-duration: 0.6s;
@@ -1220,7 +1207,6 @@ h3#com-head img#com-arrow {
 
 ol.commentlist li:first-child {
 	border-top: 1px solid #b1b1b1;
-	-webkit-border-top-right-radius: 8px;
 }
 
 ol.commentlist li:last-child {
@@ -1311,15 +1297,11 @@ ol.commentlist .comment-meta a {
 	background-color: #f5f5f5;
 	padding-left: 0;
 	padding-top: 0;
+	padding-bottom: 15px;
+	border-bottom: 1px solid #dedede;
 	margin-top: -10px;
 	margin-left: -10px;
 	margin-right: -10px;
-	padding-bottom: 15px;
-	border-bottom: 1px solid #dedede;
-}
-
-.comtop:first-child {
-	-webkit-border-top-right-radius: 9px;
 }
 
 .comtop a {
@@ -1330,6 +1312,7 @@ ol.commentlist .comment-meta a {
 	top: 7px;
 	margin-left: 5px;
 	text-shadow: #fff 0 1px 0;
+	-webkit-border-top-right-radius: 0px;
 }
 
 /*
@@ -1347,19 +1330,19 @@ h3#comments, h3#respond {
 	padding-top: 20px;
 }
 
-#preview {
-	-webkit-border-radius: 8px;
-	border: 1px solid #adadad;
-	background-color: #475d79;
-	text-align: center;
-	margin-bottom: 10px;
+.preview {
+	background-color: #fdeeab;
+	color: #bf7b20;
+	font-weight: bold;
+	text-shadow: #fff 0 1px 1px;
+	font-size: 11px;
+	height: 17px;
 }
 
-#preview h2 {
-	font-size: 12px;
-	color: #eee;
-	margin: 0;
-	padding: 7px;
+.preview span {
+	position: relative;
+	top: 6px;
+	left: 5px;
 }
 
 p.logged {
@@ -1517,10 +1500,6 @@ p.subscribe-to-comments input#subscribe {
 	background: url(../core/core-images/pinstripes-diagonal.gif) repeat;
 }
 
-.frog-wptouch-bg {
-	background: url(../core/core-css/frog/frog.png) repeat;
-}
-
 /* @end */
 
 /* @group Footer */
@@ -1635,7 +1614,7 @@ p.subscribe-to-comments input#subscribe {
 
 /* @group YouTube Plugin */
 
-p > object, embed {
+object, embed {
 	width: 100% !important;
 	height: auto;
 	position: relative;

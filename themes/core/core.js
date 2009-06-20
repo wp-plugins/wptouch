@@ -5,7 +5,7 @@
  * Copyright (c) 2009 Duane Storey & Dale Mugford (BraveNewCode Inc.)
  * Licensed under GPL.
  *
- * Last Updated: June 16th, 2009
+ * Last Updated: June 20th, 2009
  */
 
 if (top.location!= self.location) {top.location = self.location.href}
@@ -32,7 +32,7 @@ if (document.cookie && document.cookie.indexOf("wptouch_switch_cookie") > -1) {
 	var answer = confirm("Switch to regular view? \n \n You can switch back to mobile view again in the footer.");
 	if (answer){
 	$wptouch("#wptouch-switch-link a#switch-link").toggleClass("offimg");
-	setTimeout('switch_delayer()', 1250); 
+	setTimeout('switch_delayer()', 1350); 
 		}
 	}
 }
@@ -72,6 +72,7 @@ function bnc_jquery_acct_open() {
 function bnc_showhide_coms_toggle() {
 	$wptouch('#commentlist').fadeToggle(400);
 	$wptouch("img#com-arrow").toggleClass("com-arrow-down");
+	$wptouch("h3#com-head").toggleClass("comhead-open");
 }
 
 function commentAdded() {

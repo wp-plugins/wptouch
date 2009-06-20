@@ -66,7 +66,7 @@ function wptouch_core_header_styles() {
 function wptouch_core_subheader() {
 	$useragent = @$_SERVER['HTTP_USER_AGENT'];
 	function agent($browser) { strstr($_GLOBALS['useragent'],$browser); }
-	if(agent("android", "dream") != FALSE) { 
+	if(agent("iphone", "ipod") != FALSE) { 
 	include( dirname(__FILE__) . '/../core/core-else-menu.php' ); 
 	 } else { 
 	include( dirname(__FILE__) . '/../core/core-apple-menu.php' ); 

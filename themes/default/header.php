@@ -6,7 +6,7 @@ include( dirname(__FILE__) . '/../core/core-header.php' );
 <body class="<?php wptouch_core_body_background(); ?>">
 
 <!--#start The Login Overlay -->
-	<div id="wptouch-login" style="display:none">
+	<div id="wptouch-login">
 		<div id="wptouch-login-inner">
 			<form name="loginform" id="loginform" action="<?php bloginfo('wpurl'); ?>/wp-login.php" method="post">
 				<label><input type="text" name="log" id="log" onfocus="if (this.value == 'username') {this.value = ''}" value="username" /></label>
@@ -30,10 +30,10 @@ include( dirname(__FILE__) . '/../core/core-header.php' );
 </div>
 
 <!-- #start The Search / Menu Drop-Down -->
-	<div id="wptouch-menu" class="dropper" style="display:none"> 
+	<div id="wptouch-menu" class="dropper"> 
  		<div id="wptouch-search-inner">
 			<form method="get" id="searchform" action="<?php bloginfo('home'); ?>/">
-			<input type="text" value="Search..." onfocus="this.value=''" onblur="this.value=''" name="s" id="s" /> 
+			<input type="text" value="Search..." onfocus="if (this.value == 'Search...') {this.value = ''}" name="s" id="s" /> 
 			<input name="submit" type="hidden" tabindex="5" value="Search"  />
 			</form>
 		</div>
@@ -49,7 +49,7 @@ include( dirname(__FILE__) . '/../core/core-header.php' );
 
 
 <div id="drop-fade" <?php if (bnc_is_login_button_enabled() || bnc_is_tags_button_enabled() || bnc_is_cats_button_enabled()) { echo 'class="sub-on"'; }?>
-	<!-- Detect if it's Android, and if so, don't do the fancy iPhone thing -->
+	<!-- Detect if we're Apple-based and if not, don't do the fancy select thing -->
 	<?php wptouch_core_subheader(); ?>
 </div>
  		

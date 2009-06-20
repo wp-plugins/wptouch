@@ -17,19 +17,15 @@ $oddcomment = 'alt';
 <div id="comment_wrapper">
 <?php comments_number( __('', 'wptouch'), __('<h3 onclick="bnc_showhide_coms_toggle();" id="com-head"><img id="com-arrow" src="' . compat_get_plugin_url( 'wptouch' ) . '/themes/core/core-images/com_arrow.png" alt="arrow" />1 Comment</h3>', 'wptouch'), __('<h3 onclick="bnc_showhide_coms_toggle();" id="com-head"><img id="com-arrow" src="' . compat_get_plugin_url( 'wptouch' ) . '/themes/core/core-images/com_arrow.png" alt="arrow" />% Comments</h3>', 'wptouch') ); ?>
 
-	<ol class="commentlist" id="commentlist" style="display:none">
+	<ol class="commentlist" id="commentlist">
 		<?php if ($comments) : ?>
 			<?php foreach ($comments as $comment) : ?>
 				<?php if (get_comment_type() == "comment") { ?>
 					<li class="<?php  echo $oddcomment; ?>" id="comment-<?php comment_ID(); ?>">
-						<?php if ($comment->comment_approved == '0') : ?>
-							<div id="preview"><h2><?php _e( 'Preview only: (moderation required)', 'wptouch'); ?></h2></div>
-						<?php endif; ?>
-
 						<div class="comwrap">
-								<div class="comtop">		
+								<div class="comtop <?php if ($comment->comment_approved == '0') : echo 'preview'; endif; ?>">		
 									<?php if (bnc_is_gravatars_enabled()) { echo get_avatar( $comment, $size = '32', $default = '' . compat_get_plugin_url( 'wptouch' ) . '/themes/core/core-images/blank_gravatar.jpg' ); } ?>
-									<a href="<?php comment_author_url(); ?>"><?php comment_author(); ?></a>
+									<a href="<?php comment_author_url(); ?>"><?php comment_author(); ?></a> 	<?php if ($comment->comment_approved == '0') : echo '<span>(moderation preview)</span>'; endif; ?>
 									<div class="comdater">
 										<?php $d = (time() - strtotime(get_comment_date('F jS, Y')))/(60*60*24); if ($d < 1) echo (' ' . comment_time('h:ia') . ' '); else if ($d < 2) echo floor($d) . ' day ago'; else echo floor($d) . ' days ago'; ?>
 									</div>  
