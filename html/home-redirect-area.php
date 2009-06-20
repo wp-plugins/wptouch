@@ -13,6 +13,7 @@
 				<p><?php _e( "If you'd like a different home page for your WPtouch mobile site", "wptouch" ); ?><br />
 				<?php _e( "(your posts page for example) select it from the list below.", "wptouch" ); ?></p>
 				<p>
+				<?php $pages = bnc_get_pages_for_icons(); ?>
 				<?php if ( count( $pages ) ) { ?>
 					<?php wp_dropdown_pages( 'show_option_none=WordPress Settings&name=home-page&selected=' . bnc_get_selected_home_page()); ?>
 				<?php } else {?>
