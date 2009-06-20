@@ -11,6 +11,8 @@
 	
 		<?php if (function_exists('dsq_comments_template')) { ?>
 	 		<a href="#dsq-add-new-comment">&darr; <?php _e( "Skip to comments", "wptouch" ); ?></a></div>
+		<?php } elseif (function_exists('id_comments_template')) { ?>
+	 		<a href="#idc-container-parent">&darr; <?php _e( "Skip to comments", "wptouch" ); ?></a></div>
 		<?php } else { ?>
 	   	    <a href="#com-head">&darr; <?php _e( "Skip to comments", "wptouch" ); ?></a></div>
 		<?php } ?>	
