@@ -58,8 +58,10 @@
 							<option <?php if ($wptouch_settings['style-background'] == "classic-wptouch-bg") echo " selected"; ?> value="classic-wptouch-bg"><?php _e( "Classic", "wptouch" ); ?></option>
 							<option <?php if ($wptouch_settings['style-background'] == "horizontal-wptouch-bg") echo " selected"; ?> value="horizontal-wptouch-bg"><?php _e( "Horizontal Grey", "wptouch" ); ?></option>
 							<option <?php if ($wptouch_settings['style-background'] == "diagonal-wptouch-bg") echo " selected"; ?> value="diagonal-wptouch-bg"><?php _e( "Diagonal Grey", "wptouch" ); ?></option>
-							<option <?php if ($wptouch_settings['style-background'] == "frog-wptouch-bg") echo " selected"; ?> value="frog-wptouch-bg"><?php _e( "Frog Stripes", "wptouch" ); ?></option>	
-							<option <?php if ($wptouch_settings['style-background'] == "lavender-wptouch-bg") echo " selected"; ?> value="lavender-wptouch-bg"><?php _e( "Lavender Stripes", "wptouch" ); ?></option>						</select>
+							<option <?php if ($wptouch_settings['style-background'] == "skated-wptouch-bg") echo " selected"; ?> value="skated-wptouch-bg"><?php _e( "Skated Concrete", "wptouch" ); ?></option>
+							<option <?php if ($wptouch_settings['style-background'] == "argyle-wptouch-bg") echo " selected"; ?> value="argyle-wptouch-bg"><?php _e( "Argyle Tie", "wptouch" ); ?></option>
+							<option <?php if ($wptouch_settings['style-background'] == "grid-wptouch-bg") echo " selected"; ?> value="grid-wptouch-bg"><?php _e( "Thatches", "wptouch" ); ?></option>
+						</select>
 						<?php _e( "Background image", "wptouch" ); ?>
 					</li>
 				</ul>	

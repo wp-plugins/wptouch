@@ -335,6 +335,24 @@
 
 /* @end */
 
+/* @group home-redirect-area.php */
+
+#wptouch-theme strong.no-pages {
+	color: red;
+	padding: 6px 15px 7px 25px;
+	display: inline-block;
+	margin-bottom: 15px;
+	border: 1px dashed #cf931d;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	background: #fee8b9 url(../images/sortof.png) no-repeat 5px center;
+	margin-top: 5px;
+}
+
+
+
+/* @end */
+
 /* @group style-area.php */
 
 #wptouch-theme ul.wptouch-select-options li {

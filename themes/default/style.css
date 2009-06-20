@@ -1500,6 +1500,18 @@ p.subscribe-to-comments input#subscribe {
 	background: url(../core/core-images/pinstripes-diagonal.gif) repeat;
 }
 
+.skated-wptouch-bg {
+	background: url(../core/core-images/skated-concrete.gif) repeat;
+}
+
+.argyle-wptouch-bg {
+	background: url(../core/core-images/argyle-tie.gif) repeat;
+}
+
+.grid-wptouch-bg {
+	background: url(../core/core-images/grid.gif) repeat;
+}
+
 /* @end */
 
 /* @group Footer */
