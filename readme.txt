@@ -35,11 +35,8 @@ The theme also includes the ability for your visitors to easily switch between t
 * Refined styling of header logo, text shadow, general appearance
 * Removed unneeded declarations from the WPtouch stylesheet
 * Tested and works efficiently with WordPress MU when installed site-wide (Finally!)
-* Please read the details in this readme regarding use on WordPress MU
 * Disqus commenting plugins out-of-the-box styling enhancements
 * Changed post nav on the single post page to prev/next post, instead of entry titles for length's sake
-* We're working on IntenseDebate plugin support, should be out with the next revision
-* Added javascript to support framesets and screen size detection
 * Fixed bug related to RSS feeds being broken in some situations
 * Fixed fatal error on line 153 undefined 'is_front_page' function for WP 2.3.x users
 * Fixed jQuery failing to load for WP 2.3.x users
@@ -57,7 +54,7 @@ The theme also includes the ability for your visitors to easily switch between t
 * Fixed path issues related to custom icons (sites on windows servers)
 * Fixed issues related to ajax comments not working in some situations
 * Added check for 'Allow Comments' on pages
-* Fixed hidden Apache error (reported in logs)
+* Fixed Apache error (reported in logs)
 * Fixed admin styling issues on IE7, Firefox
 * Fixed issue with custom icons and the header logo
 * Fixed issue with the Classic background not appearing
@@ -80,7 +77,6 @@ The theme also includes the ability for your visitors to easily switch between t
 * Fixed issue with default icon case
 * Fixed issue with switch code on systems with PHP4
 * Fixed issue related to fresh installs
-* Fixed issue with pre 2.7 versions of WordPress admin
 * Fixed issue with Android and the sub-header menu links not working
 
 
