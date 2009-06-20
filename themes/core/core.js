@@ -88,8 +88,8 @@ function commentAdded() {
     }
 
     $wptouch("#commentform").hide();
-    $wptouch("#some-new-comment").fadeIn(2000);
-    $wptouch("#refresher").fadeIn(2000);
+    $wptouch("#the-new-comment").fadeIn(1500);
+    $wptouch("#refresher").fadeIn(1500);
 }
 
 /////// -- Tweak jQuery Timer -- ///////
