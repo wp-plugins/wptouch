@@ -116,12 +116,12 @@
 	border: 2px solid #a4c6d3;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
-	margin-left: 5px;
 	margin-right: 7px;
 	width: 177px;
 	color: #555;
 	font-size: 11px;
 	background-color: #ebf1ff;
+	margin-left: 5px;
 }
 
 #wptouch-theme ul.wptouch-make-li-italic li {
@@ -335,7 +335,12 @@
 
 /* @end */
 
-/* @group home-redirect-area.php */
+/* @group general-settings.php */
+
+input.no-right-margin {
+	position: relative;
+	right: 5px;
+}
 
 #wptouch-theme strong.no-pages {
 	color: red;
@@ -501,7 +506,7 @@ textarea#wptouch-stats {
 /* @group plugin-compat-area.php */
 
 #wptouch-theme .all-good {
-	border: 1px dashed #8aceff;
+	border: 1px solid #8aceff;
 	padding: 3px 15px 4px 27px;
 	display: block;
 	margin-bottom: 5px;
@@ -513,7 +518,7 @@ textarea#wptouch-stats {
 }
 
 #wptouch-theme .sort-of {
-	border: 1px dashed #cf931d;
+	border: 1px solid #f8c44f;
 	background: #fee8b9 url(../images/sortof.png) no-repeat 5px center;
 	padding: 3px 15px 4px 27px;
 	display: block;
@@ -525,7 +530,7 @@ textarea#wptouch-stats {
 }
 
 #wptouch-theme .too-bad {
-	border: 1px dashed #f96764;
+	border: 1px solid #f96764;
 	padding: 3px 15px 4px 27px;
 	display: block;
 	margin-bottom: 5px;

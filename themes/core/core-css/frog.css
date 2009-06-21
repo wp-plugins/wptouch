@@ -2,17 +2,18 @@
 	http://24.36.119.184:9098/themes/core/core-css/frog/frog.css
 	http://24.36.119.184:9098/wp-content/plugins/wptouch/themes/core/core-css/frog/frog.css
 	http://24.36.119.184:9098/wp-content/plugins/wptouch/themes/core/core-css/frog.css
+	http://wptouch.com/wp-content/plugins/wptouch/themes/core/core-css/frog.css
 */
 
 /* WPtouch Froggy Styles */
 
 /* @group General */
 
-.frog-wptouch-bg {
+.classic-wptouch-bg {
 	background: url(frog/frog.png) repeat;
 }
 
-.post, #wptouch-switch-link, .navigation, #bookmark-box, .comwrap, input#author, input#email, input#url, textarea#comment, form#commentform input#submit {
+.post, #wptouch-switch-link, .navigation, #bookmark-box, input#author, input#email, input#url, textarea#comment, form#commentform input#submit {
 	background-color: #f0fee7		 	!important;
 	border: 1px solid #639e43 		 	!important;
 }
@@ -160,19 +161,19 @@ a.post-arrow-down {
 }
 
 .single-mail-left {
-	background: url(frog/mailit.png) no-repeat right 1px;
+	background: url(frog/mailit.png) no-repeat 101% -1px;
 }
 
 .single-bookmark-right {
-	background: url(frog/bookmarkit.png) no-repeat 0 1px;
+	background: url(frog/bookmarkit.png) no-repeat 0 -1px;
 }
 
 .single-mail-left a, .single-bookmark-right a  {
 	color: #39794d;
 }
 
-.result-text, h3#comments, h3#respond, p label small {
-	color: #fff 					!important;
+.result-text, h3#comments, #respond, p label small, p label {
+	color: #fff 	!important;
 	text-shadow: #1c2521 0 -1px 0  	!important;
 }
 
@@ -189,5 +190,69 @@ a.post-arrow-down {
 	border-bottom-color: #639e43;
 }
 
+ol#commentlist li {
+	background-color: #e2fdea;
+}
+
+.comtop {
+	background-color: #d2ffbd;
+}
+
+.comhead-open {
+	background-color: #b9e09d !important;
+}
+
+
+/* @end */
+
+/* @group Cal Month Colors */
+
+.month-01 {
+	background-color: #bdfed2;
+}
+
+.month-02 {
+	background-color: #b8edbe;
+}
+
+.month-03 {
+	background-color: #91e895;
+}
+
+.month-04 {
+	background-color: #5de071;
+}
+
+.month-05 {
+	background-color: #4aa352;
+}
+
+.month-06 {
+	background-color: #529946;
+}
+
+.month-07 {
+	background-color: #49732f;
+}
+
+.month-08 {
+	background-color: #3a633d;
+}
+
+.month-09 {
+	background-color: #225623;
+}
+
+.month-10 {
+	background-color: #11430f;
+}
+
+.month-11 {
+	background-color: #10350e;
+}
+
+.month-12 {
+	background-color: #002b00;
+}
 
 /* @end */

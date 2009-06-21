@@ -554,7 +554,7 @@ function bnc_wp_touch_page() {
 
 	<form method="post" action="<?php echo $_SERVER['REQUEST_URI']; ?>">
 		<?php require_once( 'html/head-area.php' ); ?>
-		<?php require_once( 'html/home-redirect-area.php' ); ?>
+		<?php require_once( 'html/general-settings-area.php' ); ?>
 		<?php require_once( 'html/advanced-area.php' ); ?>
 		<?php require_once( 'html/post-listings-area.php' ); ?>
 		<?php require_once( 'html/style-area.php' ); ?>
