@@ -6,13 +6,19 @@
 
 			<div class="wptouch-left-content">
 				<h4><?php _e( "Home Page Re-Direction", "wptouch" ); ?></h4>
-				<p><?php echo sprintf( __( "WPtouch uses front page you've defined in the %sWordPress &raquo; Reading Options%s.", "wptouch"), '<a href="options-reading.php">', '</a>' ); ?> <?php _e( "You can however select a unique one for WPtouch.", "wptouch" ); ?><br />
+				<p><?php echo sprintf( __( "WPtouch by default follows your %sWordPress &raquo; Reading Options%s. You can also set a different one for WPtouch.", "wptouch"), '<a href="options-reading.php">', '</a>' ); ?></p>
 
 				<h4><?php _e( "Site Title", "wptouch" ); ?></h4>
-				<p><?php _e( "You can shorten your site title here so it won't be truncated by WPtouch.", "wptouch" ); ?><br />
+				<p><?php _e( "You can shorten your site title here so it won't be truncated by WPtouch.", "wptouch" ); ?></p>
 
 				<h4><?php _e( "Font Options", "wptouch" ); ?></h4>
-				<p><?php _e( "Set the default size, paragraph and zoom for text.", "wptouch" ); ?><br />
+				<p><?php _e( "Set the default size, paragraph and zoom for text.", "wptouch" ); ?></p>
+
+				<br /><br /><br /><br /><br /><br />				
+				
+				<h4><?php _e( "Post Listings Options", "wptouch" ); ?></h4>
+				<p><?php _e( "Select which post-meta items are shown under titles on the main, search, &amp; archives pages.", "wptouch" ); ?></p>
+				<p><?php _e( "Also, choose if excerpts are shown/hidden (default is hidden).", "wptouch" ); ?></p>
 			</div>
 
 			<div class="wptouch-right-content">
@@ -51,6 +57,27 @@
 							<option <?php if ($wptouch_settings['bnc-zoom-state'] == "none") echo " selected"; ?> value="none"><?php _e( "None", "wptouch" ); ?></option>
 						</select>
 						<?php _e( "Font zoom (accessibilty)", "wptouch" ); ?>
+					</li>
+				</ul>	
+				
+				<br />
+				
+				<ul>
+					<li>
+						<input type="checkbox" class="checkbox" name="enable-main-name" <?php if (isset($wptouch_settings['enable-main-name']) && $wptouch_settings['enable-main-name'] == 1) echo('checked'); ?> />
+						<label for="enable-authorname"> <?php _e( "Show Author's Name", "wptouch" ); ?></label>
+					</li>			
+					<li>
+						<input type="checkbox" class="checkbox" name="enable-main-categories" <?php if (isset($wptouch_settings['enable-main-categories']) && $wptouch_settings['enable-main-categories'] == 1) echo('checked'); ?> />
+						<label for="enable-categories"> <?php _e( "Show Categories", "wptouch" ); ?></label>
+					</li>			
+					<li>
+						<input type="checkbox" class="checkbox" name="enable-main-tags" <?php if (isset($wptouch_settings['enable-main-tags']) && $wptouch_settings['enable-main-tags'] == 1) echo('checked'); ?> />
+						<label for="enable-tags"> <?php _e( "Show Tags", "wptouch" ); ?></label>
+					</li>			
+					<li>
+						<input type="checkbox" class="checkbox" name="enable-post-excerpts" <?php if (isset($wptouch_settings['enable-post-excerpts']) && $wptouch_settings['enable-post-excerpts'] == 1) echo('checked'); ?> />
+						<label for="enable-excerpts"><?php _e( "Hide Excerpts", "wptouch" ); ?></label>
 					</li>
 				</ul>	
 			</div>

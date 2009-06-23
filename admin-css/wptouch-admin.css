@@ -17,6 +17,7 @@
 #wptouch-theme .postbox {
 	padding: 10px;
 	position: relative;
+	overflow: hidden;
 }
 
 #wptouch-theme .postbox h3 {
@@ -53,6 +54,7 @@
 	float: left;
 	padding-right: 10px;
 	margin-top: 10px;
+	position: relative;
 }
 
 #wptouch-theme .wptouch-left-content h4 {
@@ -363,6 +365,85 @@ input.no-right-margin {
 #wptouch-theme ul.wptouch-select-options li {
 	margin-left: 6px;
 }
+
+/* @group Skins-Menu */
+
+#wptouch-theme .skins-fixed {
+	position: relative;
+}
+
+#wptouch-theme .skins-desc {
+	padding-top: 4%;
+	width: 55%;
+	margin-top: 5px;
+	margin-left: 30%;
+}
+
+#wptouch-theme .skins-desc input {
+	width: 60px;
+}
+
+#wptouch-theme .skins-desc h4 {
+	font-size: 18px;
+}
+
+#wptouch-theme .skins-desc p {
+}
+
+#wptouch-theme .skins-desc img {
+	position: absolute;
+	top: 0;
+	right: -7%;
+}
+
+#wptouch-theme #skins-menu {
+	position: relative;
+	border-right: 1px solid #dcdcdc;
+	width: 30%;
+	height: 314px;
+	z-index: 2;
+	background-color: white;
+	margin-left: -10px;
+	float: left;
+}
+
+#wptouch-theme #skins-menu ul {
+	margin: 0;
+	padding-right: 0;
+	padding-top: 0;
+	padding-left: 0;
+}
+
+#wptouch-theme #skins-menu li {
+	margin: 0;
+	padding: 0;
+}
+
+#wptouch-theme #skins-menu li a {
+	font-size: 16px;
+	font-weight: bold;
+	color: #444;
+	display: block;
+	background-color: #eee;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	border-bottom: 1px solid #ddd;
+	text-shadow: #fff 0 1px 0;
+}
+
+#wptouch-theme #skins-menu li a:hover {
+	background-color: #e2f5fe;
+	color: #003346;
+}
+
+#wptouch-theme #skins-menu li a.active {
+	background-color: #fff7cb;
+}
+
+
+
+/* @end */
 
 
 
