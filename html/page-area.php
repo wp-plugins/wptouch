@@ -2,19 +2,17 @@
 
 <div class="metabox-holder">
 	<div class="postbox">
-		<h3><?php _e( "Logo + Bookmark Icon // Drop Down Menu", "wptouch" ); ?></h3>
+		<h3><?php _e( "Bookmark &amp; Home Screen Icon // Menu Items &amp; Pages", "wptouch" ); ?></h3>
 
 			<div class="wptouch-left-content">
-				<h4><?php _e( "Logo + Bookmark Icon", "wptouch" ); ?></h4>
+				<h4><?php _e( "Logo &amp; Home Screen Icon / Default Menu Items", "wptouch" ); ?></h4>
 				<p><?php _e( "Choose the logo displayed in the header (also your bookmark icon), and the pages you want included in the WPtouch drop-down menu.", "wptouch" ); ?> 						
 				<strong><?php _e( "Remember, only those checked will be shown.", "wptouch" ); ?></strong></p>
-
+				<p><?php _e( "Enable/Disable default items in the WPtouch site menu.", "wptouch"); ?></p>
+<br /><br />
 				<h4><?php _e( "Pages + Icons", "wptouch" ); ?></h4>
 				<p><?php _e( "Next, select the icons from the lists that you want to pair with each page menu item.", "wptouch" ); ?></p>
 				<p><?php _e( "You can also decide if pages are listed by the page order (ID) in WordPress, or by name (default).", "wptouch" ); ?></p>
-				
-				<h4><?php _e( "Default Menu Items", "wptouch" ); ?></h4>
-				<p><?php _e( "Enable/Disable these default items in the WPtouch site menu.", "wptouch"); ?></p>
 			</div><!-- wptouch-left-content -->
 		
 	<div class="wptouch-right-content wptouch-pages">
@@ -23,10 +21,18 @@
 					<?php bnc_get_icon_drop_down_list( $wptouch_settings['main_title']); ?>
 				</select>
 				<?php _e( "Logo &amp; Home Screen Bookmark Icon", "wptouch" ); ?>
-				<br /><br /><br /><br /><br />
+				<br />
 			</li>
+
+		<ul>
+			<li><input type="checkbox" class="checkbox" name="enable-main-home" <?php if (isset($wptouch_settings['enable-main-home']) && $wptouch_settings['enable-main-home'] == 1) echo('checked'); ?> /><label for="enable-main-home"><?php _e( "Enable Home Menu Item", "wptouch" ); ?></label></li>
+			<li><input type="checkbox" class="checkbox" name="enable-main-rss" <?php if (isset($wptouch_settings['enable-main-rss']) && $wptouch_settings['enable-main-rss'] == 1) echo('checked'); ?> /><label for="enable-main-rss"><?php _e( "Enable RSS Menu Item", "wptouch" ); ?></label></li>
+			<li><input type="checkbox" class="checkbox" name="enable-main-email" <?php if (isset($wptouch_settings['enable-main-email']) && $wptouch_settings['enable-main-email'] == 1) echo('checked'); ?> /><label for="enable-main-email"><?php _e( "Enable Email Menu Item", "wptouch" ); ?> <small>(<?php _e( "Uses default WordPress admin e-mail", "wptouch" ); ?>)</small></label></li>
+		</ul>
+
 		<?php if ( count( $pages ) ) { ?>
-			<li><select name="sort-order">
+			<li><br /><br />
+			<select name="sort-order">
 					<option value="name"<?php if ( $wptouch_settings['sort-order'] == 'name') echo " selected"; ?>><?php _e( "By Name", "wptouch" ); ?></option>
 					<option value="page"<?php if ( $wptouch_settings['sort-order'] == 'page') echo " selected"; ?>><?php _e( "By Page ID", "wptouch" ); ?></option>
 				</select>
@@ -49,13 +55,6 @@
 			<?php } else { ?>
 				<strong ><?php _e( "You have no pages yet. Create some first!", "wptouch" ); ?></strong>
 			<?php } ?>
-		</ul>
-		<br /><br /><br />
-		<h4><?php _e( "Default Menu Items", "wptouch" ); ?></h4>
-		<ul>
-			<li><input type="checkbox" class="checkbox" name="enable-main-home" <?php if (isset($wptouch_settings['enable-main-home']) && $wptouch_settings['enable-main-home'] == 1) echo('checked'); ?> /><label for="enable-main-home"><?php _e( "Enable Home Link", "wptouch" ); ?></label></li>
-			<li><input type="checkbox" class="checkbox" name="enable-main-rss" <?php if (isset($wptouch_settings['enable-main-rss']) && $wptouch_settings['enable-main-rss'] == 1) echo('checked'); ?> /><label for="enable-main-rss"><?php _e( "Enable RSS Link", "wptouch" ); ?></label></li>
-			<li><input type="checkbox" class="checkbox" name="enable-main-email" <?php if (isset($wptouch_settings['enable-main-email']) && $wptouch_settings['enable-main-email'] == 1) echo('checked'); ?> /><label for="enable-main-email"><?php _e( "Enable Email Link", "wptouch" ); ?> <small>(<?php _e( "Uses default WordPress admin e-mail", "wptouch" ); ?>)</small></label></li>
 		</ul>
 	</div><!-- wptouch-right-content -->		
 	<div class="wptouch-clearer"></div>
