@@ -15,10 +15,10 @@
 				 <div id="skins-menu">
 					 <ul>
 						 <li><a href="#" class="active">Default</a></li>
-						 <li><a href="#">Lavender</a></li>
-						 <li><a href="#">Sunkissed</a></li>
-						 <li><a href="#">Frog</a></li>
-						 <li><a href="#">Sea</a></li>
+						 <li><a href="#" onclick="return false;">Lavender</a></li>
+						 <li><a href="#" onclick="return false;">Sunkissed</a></li>
+						 <li><a href="#" onclick="return false;">Frog</a></li>
+						 <li><a href="#" onclick="return false;">Sea</a></li>
 					 </ul>
 				 </div>
 
@@ -50,14 +50,14 @@
 					
 				</ul>	
 				-->
-		<div class="skins-desc" style="display:none"> <!-- Lavender -->
+		<div class="skins-desc" id="lavender-skin" style="display:none"> <!-- Lavender -->
 			<h4><?php _e( "Lavender", "wptouch" ); ?></h4>
 			<p><?php _e( "Lavender features lush deep plum purples.", "wptouch" ); ?></p>
 			<p><?php _e( "There are no configurable options for this skin.", "wptouch" ); ?></p>
 			<img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/images/skins/lavender.jpg" alt="" />
 		</div>
 
-		<div class="skins-desc"> <!-- Default -->
+		<div class="skins-desc" id="default-skin"> <!-- Default -->
 			<h4><?php _e( "Default", "wptouch" ); ?></h4>
 			<p><?php _e( "The default WPtouch skin emulates a native iPhone application.", "wptouch" ); ?></p>
 			<ul class="wptouch-make-li-italic">
@@ -66,7 +66,7 @@
 				<li>#<input type="text" id="header-border-color" name="header-border-color" value="<?php echo $wptouch_settings['header-border-color']; ?>" /><?php _e( "Sub-header background", "wptouch" ); ?></li>
 				<li>#<input type="text" id="link-color" name="link-color" value="<?php echo $wptouch_settings['link-color']; ?>" /><?php _e( "Site-wide links", "wptouch" ); ?></li>
 			</ul> 
-			<img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/images/skins/lavender.jpg" alt="" />
+			<img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/images/skins/default.jpg" alt="" />
 		</div>
 
 

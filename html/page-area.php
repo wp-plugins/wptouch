@@ -23,7 +23,7 @@
 					<?php bnc_get_icon_drop_down_list( $wptouch_settings['main_title']); ?>
 				</select>
 				<?php _e( "Logo &amp; Home Screen Bookmark Icon", "wptouch" ); ?>
-				<br /><br />
+				<br /><br /><br /><br /><br />
 			</li>
 		<?php if ( count( $pages ) ) { ?>
 			<li><select name="sort-order">
@@ -43,12 +43,14 @@
 					<select class="page-select" name="icon_<?php echo $page->ID; ?>">
 						<?php bnc_get_icon_drop_down_list( $wptouch_settings[ $page->ID ]); ?>
 					</select>
+					
 				</li>
 				<?php } ?>
 			<?php } else { ?>
 				<strong ><?php _e( "You have no pages yet. Create some first!", "wptouch" ); ?></strong>
 			<?php } ?>
 		</ul>
+		<br /><br /><br />
 		<h4><?php _e( "Default Menu Items", "wptouch" ); ?></h4>
 		<ul>
 			<li><input type="checkbox" class="checkbox" name="enable-main-home" <?php if (isset($wptouch_settings['enable-main-home']) && $wptouch_settings['enable-main-home'] == 1) echo('checked'); ?> /><label for="enable-main-home"><?php _e( "Enable Home Link", "wptouch" ); ?></label></li>

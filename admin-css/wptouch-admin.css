@@ -368,34 +368,6 @@ input.no-right-margin {
 
 /* @group Skins-Menu */
 
-#wptouch-theme .skins-fixed {
-	position: relative;
-}
-
-#wptouch-theme .skins-desc {
-	padding-top: 4%;
-	width: 55%;
-	margin-top: 5px;
-	margin-left: 30%;
-}
-
-#wptouch-theme .skins-desc input {
-	width: 60px;
-}
-
-#wptouch-theme .skins-desc h4 {
-	font-size: 18px;
-}
-
-#wptouch-theme .skins-desc p {
-}
-
-#wptouch-theme .skins-desc img {
-	position: absolute;
-	top: 0;
-	right: -7%;
-}
-
 #wptouch-theme #skins-menu {
 	position: relative;
 	border-right: 1px solid #dcdcdc;
@@ -403,8 +375,8 @@ input.no-right-margin {
 	height: 314px;
 	z-index: 2;
 	background-color: white;
-	margin-left: -10px;
 	float: left;
+	margin-right: 10px;
 }
 
 #wptouch-theme #skins-menu ul {
@@ -439,6 +411,32 @@ input.no-right-margin {
 
 #wptouch-theme #skins-menu li a.active {
 	background-color: #fff7cb;
+}
+
+#wptouch-theme .skins-fixed {
+	position: relative;
+	padding: 0;
+}
+
+#wptouch-theme .skins-desc {
+	width: 80%;
+}
+
+#wptouch-theme .skins-desc input {
+	width: 54px;
+}
+
+#wptouch-theme .skins-desc h4 {
+	font-size: 18px;
+}
+
+#wptouch-theme .skins-desc p {
+}
+
+#wptouch-theme .skins-desc img {
+	position: absolute;
+	top: 0;
+	right: -7%;
 }
 
 
