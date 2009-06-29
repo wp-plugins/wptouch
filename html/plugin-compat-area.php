@@ -59,12 +59,10 @@
 				<?php
 				//WordPress Archives Page Support with checks for Tags Support or Not
 				$archives_page_check = new WP_Query('pagename=archives');
-				if ($archives_page_check->post->ID && function_exists('wp_tag_cloud')) {
+				if ($archives_page_check->post->ID) {
 				echo '<div class="all-good">' . __( 'Your tags and your monthly listings will automatically show on your page called \'Archives\'.', 'wptouch' ) . '</div>';
-				} elseif ($archives_page_check->post->ID && !function_exists('wp_tag_cloud')) {
-				echo '<div class="sort-of">' . __( 'You don\'t have WordPress 2.3 or above, so no Tags will show, but your categories and monthly listings will automatically show on your page called \'Archives\'.', 'wptouch' ) . '</div>';
 				} else {		   
-				echo '<div class="too-bad">' . __( 'If you create a page called \'Archives\', your tags/categories and monthly listings would display in <em>WPtouch</em> style.', 'wptouch' ) . '</div>';
+				echo '<div class="too-bad">' . __( 'If you had a page called \'Archives\', your tags and monthly listings would display in <em>WPtouch</em> style.', 'wptouch' ) . '</div>';
 				}
 				?>
 				<br /><br />
