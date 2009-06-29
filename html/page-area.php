@@ -2,10 +2,10 @@
 
 <div class="metabox-holder">
 	<div class="postbox">
-		<h3><?php _e( "Bookmark &amp; Home Screen Icon // Menu Items &amp; Pages", "wptouch" ); ?></h3>
+		<h3><?php _e( "Logo Icon // Menu Items &amp; Pages Icons", "wptouch" ); ?></h3>
 
 			<div class="wptouch-left-content">
-				<h4><?php _e( "Logo &amp; Home Screen Icon / Default Menu Items", "wptouch" ); ?></h4>
+				<h4><?php _e( "Logo / Home Screen Icon <br />&amp; Default Menu Items", "wptouch" ); ?></h4>
 				<p><?php _e( "Choose the logo displayed in the header (also your bookmark icon), and the pages you want included in the WPtouch drop-down menu.", "wptouch" ); ?> 						
 				<strong><?php _e( "Remember, only those checked will be shown.", "wptouch" ); ?></strong></p>
 				<p><?php _e( "Enable/Disable default items in the WPtouch site menu.", "wptouch"); ?></p>
@@ -27,7 +27,7 @@
 		<ul>
 			<li><input type="checkbox" class="checkbox" name="enable-main-home" <?php if (isset($wptouch_settings['enable-main-home']) && $wptouch_settings['enable-main-home'] == 1) echo('checked'); ?> /><label for="enable-main-home"><?php _e( "Enable Home Menu Item", "wptouch" ); ?></label></li>
 			<li><input type="checkbox" class="checkbox" name="enable-main-rss" <?php if (isset($wptouch_settings['enable-main-rss']) && $wptouch_settings['enable-main-rss'] == 1) echo('checked'); ?> /><label for="enable-main-rss"><?php _e( "Enable RSS Menu Item", "wptouch" ); ?></label></li>
-			<li><input type="checkbox" class="checkbox" name="enable-main-email" <?php if (isset($wptouch_settings['enable-main-email']) && $wptouch_settings['enable-main-email'] == 1) echo('checked'); ?> /><label for="enable-main-email"><?php _e( "Enable Email Menu Item", "wptouch" ); ?> <small>(<?php _e( "Uses default WordPress admin e-mail", "wptouch" ); ?>)</small></label></li>
+			<li><input type="checkbox" class="checkbox" name="enable-main-email" <?php if (isset($wptouch_settings['enable-main-email']) && $wptouch_settings['enable-main-email'] == 1) echo('checked'); ?> /><label for="enable-main-email"><?php _e( "Enable Email Menu Item", "wptouch" ); ?> <small>(<?php _e( "Uses default WordPress admin e-mail", "wptouch" ); ?>)</small></label><br /><br /><br /></li>
 		</ul>
 
 		<?php if ( count( $pages ) ) { ?>

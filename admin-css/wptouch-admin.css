@@ -1,8 +1,4 @@
-/* @override 
-	http://24.36.119.184:9098/wp-content/plugins/wptouch/admin-css/wptouch-admin.css
-	http://24.36.119.184:9107/wp-content/plugins/wptouch/admin-css/wptouch-admin.css
-	http://wptouch.com/wp-content/plugins/wptouch/admin-css/wptouch-admin.css
-*/
+/* @override http://24.36.119.184:9098/wp-content/plugins/wptouch/admin-css/wptouch-admin.css */
 
 /* WPtouch 1.9 Admin CSS */
 
@@ -426,8 +422,13 @@ input.no-right-margin {
 	width: 54px;
 }
 
+#wptouch-theme .skins-desc select {
+	width: 125px;
+	margin-left: 12px;
+}
+
 #wptouch-theme .skins-desc h4 {
-	font-size: 18px;
+	font-size: 16px;
 }
 
 #wptouch-theme .skins-desc p {
@@ -435,8 +436,8 @@ input.no-right-margin {
 
 #wptouch-theme .skins-desc img {
 	position: absolute;
-	top: 0;
-	right: -7%;
+	top: 10px;
+	right: -44px;
 }
 
 
@@ -555,7 +556,7 @@ textarea#wptouch-stats {
 	display: block;
 	margin-top: 5px;
 	text-align: left;
-	width: 66%;
+	width: 68%;
 	float: right;
 }
 
@@ -572,7 +573,7 @@ textarea#wptouch-stats {
 }
 
 #wptouch-theme .wptouch-pages select {
-	width: 32%;
+	width: 30%;
 }
 
 #wptouch-theme .wptouch-pages .checkbox {

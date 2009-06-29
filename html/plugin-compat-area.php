@@ -14,12 +14,12 @@
 						echo '' . get_bloginfo('version') . '';
 						echo '</p><p class="wptv">';
 						echo __( '' . wptouch() . ' support: ', 'wptouch' );
-						if ($version > 2.8) {
+						if ($version > 2.81) {
 							echo sprintf(__( "%sUntested%s", "wptouch" ), '<span class="caution">','</span>');
 						} elseif ($version >= 2.6) {
 							echo sprintf(__( "%sFully Supported%s", "wptouch" ), '<span class="go">','</span>');
 						} else {
-							echo sprintf(__( "%Not Supported! Upgrade Required.%s", "wptouch" ), '<span class="red">','</span>');
+							echo sprintf(__( "%Unsupported. Upgrade Required.%s", "wptouch" ), '<span class="red">','</span>');
 						} 
 						echo '</p>';
 					?>	

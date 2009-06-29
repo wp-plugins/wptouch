@@ -15,10 +15,10 @@
 				 <div id="skins-menu">
 					 <ul>
 						 <li><a href="#" class="active">Default</a></li>
-						 <li><a href="#" onclick="return false;">Lavender</a></li>
+						 <!-- <li><a href="#" onclick="return false;">Lavender</a></li>
 						 <li><a href="#" onclick="return false;">Sunkissed</a></li>
 						 <li><a href="#" onclick="return false;">Frog</a></li>
-						 <li><a href="#" onclick="return false;">Sea</a></li>
+						 <li><a href="#" onclick="return false;">Sea</a></li> -->
 					 </ul>
 				 </div>
 
@@ -37,6 +37,18 @@
 						<option <?php if ($wptouch_settings['style-skin'] == "lavender-skin") echo " selected"; ?> value="lavender-skin"><?php _e( "Lavender", "wptouch" ); ?></option>																		</select>
 					<?php _e( "WPtouch Theme Skin (will update colors above)", "wptouch" ); ?>					
 					</li>
+					
+				</ul>	
+				-->
+		<div class="skins-desc" id="lavender-skin" style="display:none"> <!-- Lavender -->
+			<p><?php _e( "Lavender features lush deep plum purples.", "wptouch" ); ?></p>
+			<p><?php _e( "There are no configurable options for this skin.", "wptouch" ); ?></p>
+			<img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/images/skins/lavender.jpg" alt="" />
+		</div>
+
+		<div class="skins-desc" id="default-skin"> <!-- Default -->
+			<p><?php _e( "The default WPtouch skin emulates a native iPhone application.", "wptouch" ); ?></p>
+			<ul class="wptouch-make-li-italic">
 					<li><select name="style-background">
 							<option <?php if ($wptouch_settings['style-background'] == "classic-wptouch-bg") echo " selected"; ?> value="classic-wptouch-bg"><?php _e( "Classic", "wptouch" ); ?></option>
 							<option <?php if ($wptouch_settings['style-background'] == "horizontal-wptouch-bg") echo " selected"; ?> value="horizontal-wptouch-bg"><?php _e( "Horizontal Grey", "wptouch" ); ?></option>
@@ -45,22 +57,8 @@
 							<option <?php if ($wptouch_settings['style-background'] == "argyle-wptouch-bg") echo " selected"; ?> value="argyle-wptouch-bg"><?php _e( "Argyle Tie", "wptouch" ); ?></option>
 							<option <?php if ($wptouch_settings['style-background'] == "grid-wptouch-bg") echo " selected"; ?> value="grid-wptouch-bg"><?php _e( "Thatches", "wptouch" ); ?></option>
 						</select>
-						<?php _e( "Background image", "wptouch" ); ?>
+						<?php _e( "Background", "wptouch" ); ?>
 					</li> 
-					
-				</ul>	
-				-->
-		<div class="skins-desc" id="lavender-skin" style="display:none"> <!-- Lavender -->
-			<h4><?php _e( "Lavender", "wptouch" ); ?></h4>
-			<p><?php _e( "Lavender features lush deep plum purples.", "wptouch" ); ?></p>
-			<p><?php _e( "There are no configurable options for this skin.", "wptouch" ); ?></p>
-			<img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/images/skins/lavender.jpg" alt="" />
-		</div>
-
-		<div class="skins-desc" id="default-skin"> <!-- Default -->
-			<h4><?php _e( "Default", "wptouch" ); ?></h4>
-			<p><?php _e( "The default WPtouch skin emulates a native iPhone application.", "wptouch" ); ?></p>
-			<ul class="wptouch-make-li-italic">
 				<li>#<input type="text" id="header-text-color" name="header-text-color" value="<?php echo $wptouch_settings['header-text-color']; ?>" /><?php _e( "Title text color", "wptouch" ); ?></li>
 				<li>#<input type="text" id="header-background-color" name="header-background-color" value="<?php echo $wptouch_settings['header-background-color']; ?>" /><?php _e( "Header background color", "wptouch" ); ?></li>
 				<li>#<input type="text" id="header-border-color" name="header-border-color" value="<?php echo $wptouch_settings['header-border-color']; ?>" /><?php _e( "Sub-header background color", "wptouch" ); ?></li>
