@@ -31,10 +31,6 @@ if (document.cookie && document.cookie.indexOf("wptouch_switch_cookie") > -1) {
 	}
 }
 
-function wptouch_mail_confirmation() {
-	var answer = confirm("Mail a link to this post?");
-}
-
 function wptouch_toggle_text() {
 	$wptouch("p").toggleClass("fontsize");
 }

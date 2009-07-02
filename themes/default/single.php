@@ -37,23 +37,23 @@
 		    </div>   
 
 		<ul id="post-options">
-		<li><a href="<?php $prevPost = get_previous_post(true); $prevURL = get_permalink($prevPost->ID); echo $prevURL; ?>" id="oprev"></a></li>
+		<li><a href="<?php $prevPost = get_previous_post(false); $prevURL = get_permalink($prevPost->ID); echo $prevURL; ?>" id="oprev"></a></li>
 		<li><a href="mailto:?subject=<?php
-bloginfo('name'); ?>- <?php the_title();?>&body=<?php _e( "Check out this post:", "wptouch" ); ?> <?php the_permalink() ?>" onclick="wptouch_mail_confirmation();" id="omail"></a></li>
+bloginfo('name'); ?>- <?php the_title();?>&body=<?php _e( "Check out this post:", "wptouch" ); ?>%20<?php the_permalink() ?>" onclick="return confirm('<?php _e( "Mail a link to this post?", "wptouch" ); ?>');" id="omail"></a></li>
 		<li><a href="javascript:return false;" onclick="$wptouch('#twitter-box').slideToggle(300);" id="otweet"></a></li>
 		<li><a href="javascript:return false;" onclick="$wptouch('#bookmark-box').slideToggle(300);" id="obook"></a></li>
-		<li><a href="javascript:var%20d%3Ddocument%2Cz%3Dd.createElement%28%27scr%27%2B%27ipt%27%29%2Cb%3Dd.body%3Btry%7Bif%28%21b%29throw%280%29%3Bd.title%3D%27%28Saving...%29%20%27%2Bd.title%3Bz.setAttribute%28%27src%27%2C%27http%3A%2F%2Fwww.instapaper.com%2Fj%2F%27%29%3Bb.appendChild%28z%29%3B%7Dcatch%28e%29%7Balert%28%27Please%20wait%20until%20the%20page%20has%20loaded.%27%29%3B%7Dvoid%280%29" id="opaper"></a></li>
+		<li><a href="javascript:var%20db=document.body,sb='%3Cspan%20style=\'background-color:#FFFF00;\'%3E',tm=prompt('Find%20text%20on%20this%20page:'),sm='/('+escape(tm)+')/gi',se='%3C/span%3E';void(db.innerHTML=db.innerHTML.replace(eval(sm),sb+'$1'+se));" id="osearch"></a></li>
 		<li><a href="javascript:return false;" onclick="wptouch_toggle_text();" id="otext"></a></li>
-		<li><a href="<?php $nextPost = get_next_post(true); $nextURL = get_permalink($nextPost->ID); echo $nextURL; ?>" id="onext"></a></li>
+		<li><a href="<?php $nextPost = get_next_post(false); $nextURL = get_permalink($nextPost->ID); echo $nextURL; ?>" id="onext"></a></li>
 		</ul>
 
     </div>
 
   	<div id="twitter-box" style="display:none">
 		<ul>
-			<li><a href="javascript:return false;" onclick="window.location='tweetie:'+window.location"><img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/themes/core/core-images/tweetie.png" alt="tweetie" /> Post to Tweetie</a></li>
-			<li><a href="javascript:return false;" onclick="window.location='twitterrific:///post?message='+escape(window.location)"><img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/themes/core/core-images/twitteriffic.png" alt="twitteriffic" /> Post to Twitteriffic</a></li>
-			<li><a href="javascript:return false;" onclick="window.location='twit:'+window.location"><img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/themes/core/core-images/twittelator.png" alt="twittelator" /> Post to Twittelator Pro</a></li>
+			<li><a href="javascript:return false;" onclick="window.location='tweetie:'+window.location"><img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/themes/core/core-images/tweetie.png" alt="tweetie" /> <?php _e( "Post to Tweetie", "wptouch" ); ?></a></li>
+			<li><a href="javascript:return false;" onclick="window.location='twitterrific:///post?message='+escape(window.location)"><img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/themes/core/core-images/twitteriffic.png" alt="twitteriffic" /> <?php _e( "Post to Twitteriffic", "wptouch" ); ?></a></li>
+			<li><a href="javascript:return false;" onclick="window.location='twit:'+window.location"><img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/themes/core/core-images/twittelator.png" alt="twittelator" /> <?php _e( "Post to Twittelator Pro", "wptouch" ); ?></a></li>
 		</ul>
 	</div>
     	
