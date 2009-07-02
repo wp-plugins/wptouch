@@ -23,14 +23,6 @@
 		<div class="clearer"></div>
 	</div>
 
-		<ul id="post-options">
-		<li><a href="" id="omail"></a></li>
-		<li><a href="" id="otweet"></a></li>
-		<li><a href="" id="obook"></a></li>
-		<li><a href="" id="opaper"></a></li>
-		<li><a href="" id="otext"></a></li>
-		</ul>
-
          <div class="post" id="post-<?php the_ID(); ?>">
          	<div id="singlentry" class="<?php echo $wptouch_settings['style-text-size']; ?> <?php echo $wptouch_settings['style-text-justify']; ?>">
             	<?php the_content(); ?>				
@@ -42,8 +34,23 @@
 				<?php link_pages('<div class="post-page-nav">' . __( "Article Pages", "wptouch" ) . ': ', '</div>', 'number', ' &raquo;', '&laquo; '); ?>          
 			    <?php _e( "Categories", "wptouch" ); ?>: <?php if (the_category(', ')) the_category(); ?>
 			    <?php if (function_exists('get_the_tags')) the_tags('<br />' . __( 'Tags', 'wptouch' ) . ': ', ', ', ''); ?>  
-		    </div>
-    
+		    </div>   
+		    
+	<div class="navigation">
+
+<!-- Single post navigation links -->
+
+		<div class="alignleft"><?php next_post_link('%link', 'Prev Post') ?></div>
+		<div class="alignright"><?php previous_post_link('%link', 'Next Post') ?></div>
+
+<!-- Let's make sure there's no float strangeness happening. Sometimes plugins get funky here. -->
+		<div class="clearer"></div>
+	</div>
+
+		     
+    	</div>
+<?php /*
+
 <!-- Mail and Bookmark code -->	
 
 	<div class="single-links">
@@ -53,7 +60,7 @@ bloginfo('name'); ?>- <?php the_title();?>&body=<?php _e( "Check out this post:"
 				<div class="clearer"></div>
 			</div>
 		<div class="post-spacer"></div>
-	</div>
+
 
 <!-- Hidden bookmark box code (activated by the above link) -->
 
@@ -68,18 +75,15 @@ bloginfo('name'); ?>- <?php the_title();?>&body=<?php _e( "Check out this post:"
 			<li><a href="http://www.newsvine.com/_wine/save?popoff=0&u=<?php echo get_permalink() ?>&h=<?php the_title(); ?>" target="_blank"><img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/themes/core/core-images/bookmarks/newsvine.jpg" target="_blank"> <?php _e( "Newsvine", "wptouch" ); ?></a></li>
 			<li class="noborder"><a href="http://reddit.com/submit?url=<?php echo get_permalink() ?>&title=<?php the_title(); ?>" target="_blank"><img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/themes/core/core-images/bookmarks/reddit.jpg" alt="" /> <?php _e( "Reddit", "wptouch" ); ?></a></li>
 		</ul>
-	</div>
+	</div> */ ?>
 
-	<div class="navigation">
-
-<!-- Single post navigation links -->
-
-		<div class="alignleft"><?php next_post_link('%link', 'Prev Post') ?></div>
-		<div class="alignright"><?php previous_post_link('%link', 'Next Post') ?></div>
-
-<!-- Let's make sure there's no float strangeness happening. Sometimes plugins get funky here. -->
-		<div class="clearer"></div>
-	</div>
+		<ul id="post-options">
+		<li><a href="" id="omail"></a></li>
+		<li><a href="" id="otweet"></a></li>
+		<li><a href="" id="obook"></a></li>
+		<li><a href="" id="opaper"></a></li>
+		<li><a href="" id="otext"></a></li>
+		</ul>
 
 <!-- Let's rock the comments -->
 
