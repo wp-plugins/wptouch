@@ -1,6 +1,4 @@
-/* @override 
-	http://24.36.119.184:9098/wp-content/plugins/wptouch/themes/default/style.css
-*/
+/* @override http://wptouch.com/wp-content/plugins/wptouch/themes/default/style.css */
 
 /*  
 Theme Name: WPtouch Mobile Plugin & Theme For WordPress
@@ -1768,5 +1766,58 @@ a.dsq-brlink {
 #idc-container-parent label.idc-nofloat {
 	display: none;
 }
+
+/* @end */
+
+/* @group Post Options Bar */
+
+ul#post-options {
+	list-style-type: none;
+	background-color: #768ba7;
+	margin: 0 10px 10px;
+	padding: 0;
+	border: 1px solid #b1b1b1;
+	-webkit-border-radius: 8px;
+
+}
+
+ul#post-options li {
+	margin: 0;
+	padding: 0;
+	display: inline-block;
+}
+
+ul#post-options li a {
+	height: 34px;
+	margin: 0;
+	padding: 0;
+	display: inline-block;
+	width: 74px;
+}
+
+ul#post-options li a#omail {
+	background: url(../core/core-images/post-options.png) no-repeat 10px 4px;	
+}
+
+ul#post-options li a#otweet {
+	background: url(../core/core-images/post-options.png) no-repeat -140px 4px;
+	
+}
+
+ul#post-options li a#obook {
+	background: url(../core/core-images/post-options.png) no-repeat -70px 4px;
+}
+
+ul#post-options li a#opaper {
+	background: url(../core/core-images/post-options.png) no-repeat -220px 4px;
+	
+}
+
+ul#post-options li a#otext {
+	background: url(../core/core-images/post-options.png) no-repeat -305px 4px;
+	
+}
+
+
 
 /* @end */

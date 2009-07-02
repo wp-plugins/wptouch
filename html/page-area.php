@@ -23,13 +23,12 @@
 				<?php _e( "Logo &amp; Home Screen Bookmark Icon", "wptouch" ); ?>
 				<br />
 			</li>
-
+		</ul>
 		<ul>
 			<li><input type="checkbox" class="checkbox" name="enable-main-home" <?php if (isset($wptouch_settings['enable-main-home']) && $wptouch_settings['enable-main-home'] == 1) echo('checked'); ?> /><label for="enable-main-home"><?php _e( "Enable Home Menu Item", "wptouch" ); ?></label></li>
 			<li><input type="checkbox" class="checkbox" name="enable-main-rss" <?php if (isset($wptouch_settings['enable-main-rss']) && $wptouch_settings['enable-main-rss'] == 1) echo('checked'); ?> /><label for="enable-main-rss"><?php _e( "Enable RSS Menu Item", "wptouch" ); ?></label></li>
 			<li><input type="checkbox" class="checkbox" name="enable-main-email" <?php if (isset($wptouch_settings['enable-main-email']) && $wptouch_settings['enable-main-email'] == 1) echo('checked'); ?> /><label for="enable-main-email"><?php _e( "Enable Email Menu Item", "wptouch" ); ?> <small>(<?php _e( "Uses default WordPress admin e-mail", "wptouch" ); ?>)</small></label><br /><br /><br /></li>
-		</ul>
-
+		
 		<?php if ( count( $pages ) ) { ?>
 			<li><br /><br />
 			<select name="sort-order">

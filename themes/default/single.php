@@ -23,6 +23,14 @@
 		<div class="clearer"></div>
 	</div>
 
+		<ul id="post-options">
+		<li><a href="" id="omail"></a></li>
+		<li><a href="" id="otweet"></a></li>
+		<li><a href="" id="obook"></a></li>
+		<li><a href="" id="opaper"></a></li>
+		<li><a href="" id="otext"></a></li>
+		</ul>
+
          <div class="post" id="post-<?php the_ID(); ?>">
          	<div id="singlentry" class="<?php echo $wptouch_settings['style-text-size']; ?> <?php echo $wptouch_settings['style-text-justify']; ?>">
             	<?php the_content(); ?>				
