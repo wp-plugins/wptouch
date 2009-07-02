@@ -35,36 +35,29 @@
 			    <?php _e( "Categories", "wptouch" ); ?>: <?php if (the_category(', ')) the_category(); ?>
 			    <?php if (function_exists('get_the_tags')) the_tags('<br />' . __( 'Tags', 'wptouch' ) . ': ', ', ', ''); ?>  
 		    </div>   
-		    
-	<div class="navigation">
 
-<!-- Single post navigation links -->
+		<ul id="post-options">
+		<li><a href="<?php $prevPost = get_previous_post(true); $prevURL = get_permalink($prevPost->ID); echo $prevURL; ?>" id="oprev"></a></li>
+		<li><a href="mailto:?subject=<?php
+bloginfo('name'); ?>- <?php the_title();?>&body=<?php _e( "Check out this post:", "wptouch" ); ?> <?php the_permalink() ?>" onclick="wptouch_mail_confirmation();" id="omail"></a></li>
+		<li><a href="javascript:return false;" onclick="$wptouch('#twitter-box').slideToggle(300);" id="otweet"></a></li>
+		<li><a href="javascript:return false;" onclick="$wptouch('#bookmark-box').slideToggle(300);" id="obook"></a></li>
+		<li><a href="javascript:var%20d%3Ddocument%2Cz%3Dd.createElement%28%27scr%27%2B%27ipt%27%29%2Cb%3Dd.body%3Btry%7Bif%28%21b%29throw%280%29%3Bd.title%3D%27%28Saving...%29%20%27%2Bd.title%3Bz.setAttribute%28%27src%27%2C%27http%3A%2F%2Fwww.instapaper.com%2Fj%2F%27%29%3Bb.appendChild%28z%29%3B%7Dcatch%28e%29%7Balert%28%27Please%20wait%20until%20the%20page%20has%20loaded.%27%29%3B%7Dvoid%280%29" id="opaper"></a></li>
+		<li><a href="javascript:return false;" onclick="wptouch_toggle_text();" id="otext"></a></li>
+		<li><a href="<?php $nextPost = get_next_post(true); $nextURL = get_permalink($nextPost->ID); echo $nextURL; ?>" id="onext"></a></li>
+		</ul>
 
-		<div class="alignleft"><?php next_post_link('%link', 'Prev Post') ?></div>
-		<div class="alignright"><?php previous_post_link('%link', 'Next Post') ?></div>
+    </div>
 
-<!-- Let's make sure there's no float strangeness happening. Sometimes plugins get funky here. -->
-		<div class="clearer"></div>
+  	<div id="twitter-box" style="display:none">
+		<ul>
+			<li><a href="javascript:return false;" onclick="window.location='tweetie:'+window.location"><img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/themes/core/core-images/tweetie.png" alt="tweetie" /> Post to Tweetie</a></li>
+			<li><a href="javascript:return false;" onclick="window.location='twitterrific:///post?message='+escape(window.location)"><img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/themes/core/core-images/twitteriffic.png" alt="twitteriffic" /> Post to Twitteriffic</a></li>
+			<li><a href="javascript:return false;" onclick="window.location='twit:'+window.location"><img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/themes/core/core-images/twittelator.png" alt="twittelator" /> Post to Twittelator Pro</a></li>
+		</ul>
 	</div>
-
-		     
-    	</div>
-<?php /*
-
-<!-- Mail and Bookmark code -->	
-
-	<div class="single-links">
-		<div class="single-bookmark-right"><a href="#" onclick="$wptouch('#bookmark-box').slideToggle(300); return false;"><?php _e( "Bookmark It", "wptouch" ); ?></a></div>
-			<div class="single-mail-left"><a href="mailto:?subject=<?php
-bloginfo('name'); ?>- <?php the_title();?>&body=<?php _e( "Check out this post:", "wptouch" ); ?> <?php the_permalink() ?>"><?php _e( "Mail It", "wptouch" ); ?></a></div>
-				<div class="clearer"></div>
-			</div>
-		<div class="post-spacer"></div>
-
-
-<!-- Hidden bookmark box code (activated by the above link) -->
-
-	<div id="bookmark-box" style="display:none">
+    	
+  	<div id="bookmark-box" style="display:none">
 		<ul>
 			<li><a  href="http://del.icio.us/post?url=<?php echo get_permalink()
 ?>&title=<?php the_title(); ?>" target="_blank"><img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/themes/core/core-images/bookmarks/delicious.jpg" alt="" /> <?php _e( "Del.icio.us", "wptouch" ); ?></a></li>
@@ -75,15 +68,7 @@ bloginfo('name'); ?>- <?php the_title();?>&body=<?php _e( "Check out this post:"
 			<li><a href="http://www.newsvine.com/_wine/save?popoff=0&u=<?php echo get_permalink() ?>&h=<?php the_title(); ?>" target="_blank"><img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/themes/core/core-images/bookmarks/newsvine.jpg" target="_blank"> <?php _e( "Newsvine", "wptouch" ); ?></a></li>
 			<li class="noborder"><a href="http://reddit.com/submit?url=<?php echo get_permalink() ?>&title=<?php the_title(); ?>" target="_blank"><img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/themes/core/core-images/bookmarks/reddit.jpg" alt="" /> <?php _e( "Reddit", "wptouch" ); ?></a></li>
 		</ul>
-	</div> */ ?>
-
-		<ul id="post-options">
-		<li><a href="" id="omail"></a></li>
-		<li><a href="" id="otweet"></a></li>
-		<li><a href="" id="obook"></a></li>
-		<li><a href="" id="opaper"></a></li>
-		<li><a href="" id="otext"></a></li>
-		</ul>
+	</div>
 
 <!-- Let's rock the comments -->
 

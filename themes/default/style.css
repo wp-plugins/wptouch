@@ -1,4 +1,7 @@
-/* @override http://wptouch.com/wp-content/plugins/wptouch/themes/default/style.css */
+/* @override 
+	http://wptouch.com/wp-content/plugins/wptouch/themes/default/style.css
+	http://24.36.119.184:9098/wp-content/plugins/wptouch/themes/default/style.css
+*/
 
 /*  
 Theme Name: WPtouch Mobile Plugin & Theme For WordPress
@@ -149,6 +152,11 @@ blockquote {
 .mainentry img, #singlentry img, .pageentry img, ol.commentlist li img {
 	max-width: 100%;
 	height: auto;
+}
+
+.fontsize {
+	font-size: 1.2em;
+	line-height: 140%;
 }
 
 /* @end */
@@ -797,62 +805,9 @@ a.sh2 {
 	padding: 10px;
 	font-weight: bold;
 	line-height: 14px;
-	background-color: #eee;
+	background-color: #e5eff5;
 	margin: 5px -10px;
 	text-shadow: #fafafa 0 1px 1px;
-}
-
-.single-links {
-	position: relative;
-	top: 5px;
-}
-
-.single-mail-left {
-	float: left;
-	background: url(../core/core-images/sprite.png) no-repeat 35px -12px;
-	padding-top: 0;
-	padding-bottom: 0;
-	padding-right: 20px;
-	margin-top: 5px;
-}
-
-.single-bookmark-right {
-	float: right;
-	background: url(../core/core-images/sprite.png) no-repeat left 0;
-	padding-left: 18px;
-	padding-top: 0;
-	padding-bottom: 0;
-	margin-top: 5px;
-}
-
-img.small {
-	position: relative;
-	top: 2px;
-}
-
-.navigation {
-	display: block;
-	clear: both;
-	line-height: 16px;
-	font-weight: bold;
-	font-size: 12px;
-	padding-top: 5px;
-}
-
-.navigation .alignleft a {
-	padding-left: 25px;
-	background: url(../core/core-images/sprite.png) no-repeat 1px -46px;
-	padding-bottom: 1px;
-	padding-top: 2px;
-	float: left;
-}
-
-.navigation .alignright a {
-	background: url(../core/core-images/sprite.png) no-repeat 61px -26px;
-	padding-bottom: 1px;
-	padding-top: 2px;
-	padding-right: 25px;
-	float: right;
 }
 
 /* @group Gallery / Captions */
@@ -895,7 +850,48 @@ img.small {
 
 /* @end */
 
-/* @group Social Bookmarking */
+/* @group Twitter / Bookmarking */
+
+#twitter-box {
+	-webkit-border-radius: 8px;
+	border: 1px solid #adadad;
+	margin: 10px;
+	background-color: #fff;
+}
+
+#twitter-box img {
+	float: left;
+	margin-right: 5px;
+	position: relative;
+	bottom: 4px;
+	right: 3px;
+	width: 28px;
+	height: 28px;
+}
+
+#twitter-box ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+#twitter-box li {
+	clear: both;
+	border-bottom: 1px solid #cbcbcb;
+	margin: 0;
+	padding: 0;
+}
+
+#twitter-box li a {
+	display: block;
+	color: #222;
+	font-size: 13px;
+	font-weight: bold;
+	padding-top: 10px;
+	padding-bottom: 13px;
+	padding-left: 10px;
+	margin: 0;
+}
 
 #bookmark-box {
 	-webkit-border-radius: 8px;
@@ -906,10 +902,12 @@ img.small {
 
 #bookmark-box img {
 	float: left;
-	margin-right: 4px;
+	margin-right: 5px;
 	position: relative;
 	bottom: 4px;
 	right: 3px;
+	margin-left: 3px;
+	margin-top: 1px;
 }
 
 #bookmark-box ul {
@@ -920,21 +918,23 @@ img.small {
 
 #bookmark-box li {
 	clear: both;
-	border-bottom: 1px solid #adadad;
+	border-bottom: 1px solid #cbcbcb;
 	margin: 0;
-	padding-top: 2px;
-	padding-bottom: 2px;
+	padding: 0;
 }
 
 #bookmark-box li a {
 	display: block;
-	padding: 13px;
 	color: #222;
 	font-size: 13px;
 	font-weight: bold;
+	padding-top: 10px;
+	padding-bottom: 13px;
+	padding-left: 10px;
+	margin: 0;
 }
 
-#bookmark-box li.noborder {
+#twitter-box li:last-child, #bookmark-box li:last-child {
 	border-bottom-style: none;
 }
 
@@ -1768,13 +1768,14 @@ a.dsq-brlink {
 /* @group Post Options Bar */
 
 ul#post-options {
+	-webkit-border-bottom-left-radius: 7px;
+	-webkit-border-bottom-right-radius: 7px;
 	list-style-type: none;
-	background-color: #768ba7;
-	padding: 0;
-	border: 1px solid #b1b1b1;
-	-webkit-border-radius: 8px;
-	margin: 0 10px 10px;
+	background-color: #e6e6e6;
+	padding: 0 4px 0 0;
 	text-align: center;
+	position: relative;
+	margin: -5px -10px -10px;
 }
 
 ul#post-options li {
@@ -1784,15 +1785,22 @@ ul#post-options li {
 }
 
 ul#post-options li a {
-	margin: 0;
+	margin: 0 0 -3px;
 	display: inline-block;
-	width: 53px;
-	padding-top: 17px;
-	padding-bottom: 17px;
+	padding-top: 20px;
+	padding-bottom: 16px;
+	width: 38px;
+}
+
+ul#post-options li a#oprev {
+	background: url(../core/core-images/post-options.png) no-repeat 5px -210px;
+	margin-left: 3px;
+	border-right: 1px solid #cfcfcf;
+	width: 38px;
 }
 
 ul#post-options li a#omail {
-	background: url(../core/core-images/post-options.png) no-repeat center -1px;	
+	background: url(../core/core-images/post-options.png) no-repeat center -1px;
 }
 
 ul#post-options li a#otweet {
@@ -1812,6 +1820,13 @@ ul#post-options li a#opaper {
 ul#post-options li a#otext {
 	background: url(../core/core-images/post-options.png) no-repeat center -168px;
 	
+}
+
+ul#post-options li a#onext {
+	background: url(../core/core-images/post-options.png) no-repeat -15px -244px;
+	margin-right: 3px;
+	border-left: 1px solid #cfcfcf;
+	width: 34px;
 }
 
 
