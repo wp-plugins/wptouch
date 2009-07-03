@@ -554,19 +554,18 @@ a.h2 {
 
 .comment-bubble-big {
 	background: url(../core/core-images/sprite.png) no-repeat -2px -66px;
-	width: 27px;
+	width: 26px;
 	height: 21px;
 	padding-top: 3px;
-	float: left;
-	position: relative;
+	position: absolute;
 	color: #fff;
-	left: 13px;
-	padding-left: 0;
-	top: 2px;
+	left: 2px;
+	   top: 0;	
+	   padding-left: 0;
 	font: bold 13px Helvetica, Arial-BoldMT, Geneva, sans-serif;
 	letter-spacing: -1px;
 	text-shadow: #871521 -1px -1px 1px;
-	padding-right: 2px;
+	padding-right: 4px;
 	margin-left: 0;
 	z-index: 1;
 	text-align: center;

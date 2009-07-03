@@ -16,7 +16,7 @@
 				<?php } ?>
 			<?php } ?>			
  	
- 	<?php if (is_archive()) { ?>
+ 	<?php if (is_archive() || is_search()) { ?>
 		<div class="archive-top">
 			<div class="archive-top-right">
 				<?php wptouch_core_body_post_arrows(); ?>
@@ -37,9 +37,7 @@
 		<div class="post-author">
 			<?php if (bnc_show_author()) { ?><span class="lead"><?php _e("Author", "wptouch"); ?>:</span> <?php the_author(); ?><br /><?php } ?>
 			<?php if (bnc_show_categories()) { echo('<span class="lead">' . __( 'Categories', 'wptouch' ) . ':</span> '); the_category(', '); echo('<br />'); } ?> 
-			<?php if (function_exists('wp_tag_cloud')) { ?>
-			<?php if (bnc_show_tags() && get_the_tags()) { echo(''); the_tags('<span class="lead">' . __( 'Tags', 'wptouch' ) . ':</span> ', ', ', ''); echo(''); } ?> 
-			<?php } ?>
+			<?php if (bnc_show_tags() && get_the_tags()) { the_tags('<span class="lead">' . __( 'Tags', 'wptouch' ) . ':</span> ', ', ', ''); } ?>
 		</div>	
 			<div class="clearer"></div>	
             <div id="entry-<?php the_ID(); ?>" <?php  if (bnc_excerpt_enabled()) { ?>style="display:none"<?php } ?> class="mainentry <?php echo $wptouch_settings['style-text-size']; ?> <?php echo $wptouch_settings['style-text-justify']; ?>">
