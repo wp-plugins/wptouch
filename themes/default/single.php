@@ -46,17 +46,16 @@ bloginfo('name'); ?>- <?php the_title();?>&body=<?php _e( "Check out this post:"
 		<li><a href="javascript:return false;" onclick="wptouch_toggle_text();" id="otext"></a></li>
 		<li><a href="<?php $nextPost = get_next_post(false); $nextURL = get_permalink($nextPost->ID); echo $nextURL; ?>" id="onext"></a></li>
 		</ul>
-
     </div>
 
   	<div id="twitter-box" style="display:none">
 		<ul>
-			<li><a href="javascript:return false;" onclick="window.location='tweetie:'+window.location"><img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/themes/core/core-images/tweetie.png" alt="tweetie" /> <?php _e( "Post to Tweetie", "wptouch" ); ?></a></li>
-			<li><a href="javascript:return false;" onclick="window.location='twitterrific:///post?message='+escape(window.location)"><img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/themes/core/core-images/twitteriffic.png" alt="twitteriffic" /> <?php _e( "Post to Twitteriffic", "wptouch" ); ?></a></li>
-			<li><a href="javascript:return false;" onclick="window.location='twit:'+window.location"><img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/themes/core/core-images/twittelator.png" alt="twittelator" /> <?php _e( "Post to Twittelator Pro", "wptouch" ); ?></a></li>
-		</ul>
+			<li><a href="javascript:return false;" onclick="window.location='tweetie:'+window.location"><img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/themes/core/core-images/twitter/tweetie.png" alt="tweetie" /> <?php _e( "Post to Tweetie", "wptouch" ); ?></a></li>
+			<li><a href="javascript:return false;" onclick="window.location='twitterrific:///post?message='+escape(window.location)"><img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/themes/core/core-images/twitter/twitteriffic.png" alt="twitteriffic" /> <?php _e( "Post to Twitteriffic", "wptouch" ); ?></a></li>
+			<li><a href="javascript:return false;" onclick="window.location='twit:'+window.location"><img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/themes/core/core-images/twitter/twittelator.png" alt="twittelator" /> <?php _e( "Post to Twittelator Pro", "wptouch" ); ?></a></li>
+			<!-- <li><a href="javascript:return false;" onclick="window.location='twinkle:///post?message='+escape(window.location)"><img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/themes/core/core-images/twitter/twinkle.png" alt="twinkle" /> <?php _e( "Post to Twinkle", "wptouch" ); ?></a></li> -->		</ul>
 	</div>
-    	
+
   	<div id="bookmark-box" style="display:none">
 		<ul>
 			<li><a  href="http://del.icio.us/post?url=<?php echo get_permalink()
