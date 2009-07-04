@@ -126,10 +126,6 @@
 		if ( isset($_POST['style-background']) ) {
 			$a['style-background'] = $_POST['style-background'];
 		}
-
-		if ( isset( $_POST['bnc-zoom-state']) ) {
-			$a['bnc-zoom-state'] = $_POST['bnc-zoom-state'];
-		}
 		
 		if ( isset( $_POST['enable-exclusive'] ) ) {
 			$a['enable-exclusive'] = 1;	

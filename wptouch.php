@@ -61,7 +61,6 @@ $wptouch_defaults = array(
 	'link-color' => '006bb3',
 	'style-text-justify' => 'full-justified',
 	'style-text-size' => 'small-text',
-	'bnc-zoom-state' => 'auto',
 	'style-background' => 'classic-wptouch-bg',
 	'enable-exclusive' => false
 );
@@ -524,11 +523,6 @@ function bnc_get_header_color() {
 function bnc_get_link_color() {
 	$v = bnc_wp_touch_get_menu_pages();
 	return $v['link-color'];
-}
-
-function bnc_get_zoom_state() {
-	$v = bnc_wp_touch_get_menu_pages();
-	return $v['bnc-zoom-state'];
 }
 
 require_once( 'include/icons.php' );

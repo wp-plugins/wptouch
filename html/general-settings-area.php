@@ -12,7 +12,7 @@
 				<p><?php _e( "You can shorten your site title here so it won't be truncated by WPtouch.", "wptouch" ); ?></p>
 
 				<h4><?php _e( "Font Options", "wptouch" ); ?></h4>
-				<p><?php _e( "Set the default size, paragraph and zoom for text.", "wptouch" ); ?></p>
+				<p><?php _e( "Set the default size and alignment for text.", "wptouch" ); ?></p>
 
 				<br /><br /><br /><br /><br />
 				
@@ -51,12 +51,6 @@
 							<option <?php if ($wptouch_settings['style-text-justify'] == "full-justified") echo " selected"; ?> value="full-justified"><?php _e( "Full", "wptouch" ); ?></option>
 						</select>
 						<?php _e( "Font justification", "wptouch" ); ?>
-					</li>
-					<li><select name="bnc-zoom-state">
-							<option <?php if ($wptouch_settings['bnc-zoom-state'] == "auto") echo " selected"; ?> value="auto"><?php _e( "On Rotate", "wptouch" ); ?></option>
-							<option <?php if ($wptouch_settings['bnc-zoom-state'] == "none") echo " selected"; ?> value="none"><?php _e( "None", "wptouch" ); ?></option>
-						</select>
-						<?php _e( "Font zoom (accessibilty)", "wptouch" ); ?>
 					</li>
 				</ul>	
 				

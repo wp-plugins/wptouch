@@ -4,13 +4,17 @@
  * Copyright (c) 2008-2009 Duane Storey & Dale Mugford (BraveNewCode Inc.)
  * Licensed under GPL.
  *
- * Last Updated: June 20th, 2009
+ * Last Updated: July 4th, 2009
  */
 
+/////// -- Get out of frames! -- ///////
 if (top.location!= self.location) {top.location = self.location.href}
 
 /////// -- Hide addressbar on page load -- ///////
-setTimeout(function() { window.scrollTo(0, 1) }, 100);
+addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+	function hideURLbar(){
+		window.scrollTo(0,1);
+	}
 
 /////// -- Let's play nice in jQuery -- ///////
 $wptouch = jQuery.noConflict();
