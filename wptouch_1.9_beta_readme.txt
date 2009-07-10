@@ -11,7 +11,6 @@ You can also checkout our Support Forums at http://support.bravenewcode.com to p
 
 = New In Version 1.9 Beta 8 Series // June 16, 2009 =
 
-Theme:
 Added theme switch confirm message, saves a cookie to not repeat
 Changed default theme styles for images (now load as background images)
 Made sprites for small theme images to load quicker
@@ -21,20 +20,16 @@ Updated style for comments, building support for WP 2.7 comments (replies, threa
 Updated success message for ajax comments
 Added fix for WPtouch appearing zoomed out and wide
 Fix for Categories, Tags & Login links not working in non-Apple mobile browsers (Android, etc)
-
 Font zoom replaced by font-size adjust button
 Fix for +100 comment bubbles
 Post-options bar added
 Check if comments are open before showing the comments link
 Local jquery in exclusive mode not Google
 Deleted unused theme images
-
-Admin:
 Layout changes
 Backbone for skins integrated
 Deleted unused images
 3 new backgrounds
-
 Another fix for some domains not showing the beta download/news areas
 Admin style refinements, settings bezels
 Added jQuery color picker in admin hex areas for easy selections
