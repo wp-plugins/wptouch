@@ -22,7 +22,19 @@ Updated success message for ajax comments
 Added fix for WPtouch appearing zoomed out and wide
 Fix for Categories, Tags & Login links not working in non-Apple mobile browsers (Android, etc)
 
+Font zoom replaced by font-size adjust button
+Fix for +100 comment bubbles
+Post-options bar added
+Check if comments are open before showing the comments link
+Local jquery in exclusive mode not Google
+Deleted unused theme images
+
 Admin:
+Layout changes
+Backbone for skins integrated
+Deleted unused images
+3 new backgrounds
+
 Another fix for some domains not showing the beta download/news areas
 Admin style refinements, settings bezels
 Added jQuery color picker in admin hex areas for easy selections
@@ -30,7 +42,6 @@ Moved adsense.php to include folder
 Updated Ajax Upload script to 3.2
 Text changes
 Bug fixes
-
 
 Still to be completed for beta 9:
 
