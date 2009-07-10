@@ -2,7 +2,7 @@
 /*
    Plugin Name: WPtouch iPhone Theme
    Plugin URI: http://bravenewcode.com/wptouch
-   Description: A plugin which formats your site with a mobile theme for the Apple <a href="http://www.apple.com/iphone/">iPhone</a> & <a href="http://www.apple.com/ipodtouch/">iPod touch</a> or <a href="http://www.android.com/">Google Android</a>, and other touch-based smartphones. Set options by visiting the <a href="options-general.php?page=wptouch/wptouch.php">WPtouch admin panel</a>. &nbsp;
+   Description: A plugin which formats your site with a mobile theme for the Apple <a href="http://www.apple.com/iphone/">iPhone</a> / <a href="http://www.apple.com/ipodtouch/">iPod touch</a>, <a href="http://www.android.com/">Google Android</a> and other touch-based smartphones.
 	Author: Dale Mugford & Duane Storey
 	Version: 1.9b8.6
 	Author URI: http://www.bravenewcode.com
@@ -114,6 +114,15 @@ function wptouch_content_filter( $content ) {
 		global $bnc_wptouch_version;
 		echo $before . 'WPtouch ' . $bnc_wptouch_version . $after;
 	}
+
+//Add a link to settings on the plugin listings page
+function wptouch_settings_link( $links, $file ) {
+ 	if( $file == 'wptouch/wptouch.php' && function_exists( "admin_url" ) ) {
+		$settings_link = '<a href="' . admin_url( 'options-general.php?page=wptouch/wptouch.php' ) . '">' . __('Settings') . '</a>';
+		array_unshift( $links, $settings_link ); // before other links
+	}
+	return $links;
+}
  
 	// WP Admin stylesheets & javascript
 	function wptouch_admin_files() {		
@@ -573,4 +582,5 @@ add_action('wp_footer', 'wptouch_switch');
 add_action('admin_head', 'wptouch_admin_files');
 add_action('admin_menu', 'bnc_options_menu'); 
 add_action('the_content', 'wptouch_content_filter');
+add_filter( 'plugin_action_links', 'wptouch_settings_link', 10, 2 );
 ?>
