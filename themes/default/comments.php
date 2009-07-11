@@ -110,7 +110,7 @@ $oddcomment = 'alt';
 		</p>
 
 	<?php endif; ?>
-
+		<?php do_action('comment_form', $post->ID); ?>
 		<p><textarea name="comment" id="comment" tabindex="4"></textarea></p>
 		
 		<p>
@@ -123,7 +123,6 @@ $oddcomment = 'alt';
 		<div id="errors" style="display:none">
 			<?php _e( "There was an error. Please refresh the page and try again.", "wptouch" ); ?>
 		</div>				
-		<?php do_action('comment_form', $post->ID); ?>
 		</form>
 
 	<?php endif; // If registration required and not logged in ?>

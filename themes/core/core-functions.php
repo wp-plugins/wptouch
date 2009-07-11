@@ -262,6 +262,15 @@ function bnc_get_favicon_for_site($site)
       $i = 'http://www.bravenewcode.com/code/favicon.php?site=' . urlencode($site) . '&amp;default=' . urlencode(bnc_get_local_icon_url() . '/icon-pool/default.png');
       return $i;
   }
+  
+  
+// Check if certain plugins are active
+function wptouch_is_plugin_active($plugin_filename) {
+	$plugins = get_option('active_plugins');
+		if( !is_array($plugins) ) settype($plugins,'array');			
+		return ( in_array($plugin_filename, $plugins) ) ;
+}
+
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // WPtouch Filters
