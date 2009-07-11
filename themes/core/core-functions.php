@@ -271,6 +271,20 @@ function wptouch_is_plugin_active($plugin_filename) {
 		return ( in_array($plugin_filename, $plugins) ) ;
 }
 
+//Filter out pingbacks and trackbacks
+add_filter('get_comments_number', 'comment_count', 0);
+function comment_count( $count ) {
+	global $id;
+	$comments = get_approved_comments($id);
+	$comment_count = 0;
+	foreach($comments as $comment){
+		if($comment->comment_type == ""){
+			$comment_count++;
+		}
+	}
+	return $comment_count;
+}
+
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // WPtouch Filters
