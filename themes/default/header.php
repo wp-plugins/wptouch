@@ -47,7 +47,7 @@ include( dirname(__FILE__) . '/../core/core-header.php' );
         </div>
 	</div>
 
-<div id="drop-fade" <?php if (bnc_is_login_button_enabled() || bnc_is_tags_button_enabled() || bnc_is_cats_button_enabled()) { echo 'class="sub-on"'; }?>
+<div id="drop-fade" <?php if (bnc_is_login_button_enabled() || bnc_is_tags_button_enabled() || bnc_is_cats_button_enabled()) { echo 'class="sub-on"'; }?>>
 	<!-- Detect if we're Apple-based and if not, don't do the fancy select thing -->
 	<?php wptouch_core_subheader(); ?>
 </div>

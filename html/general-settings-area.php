@@ -14,7 +14,7 @@
 				<h4><?php _e( "Font Options", "wptouch" ); ?></h4>
 				<p><?php _e( "Set the default size and alignment for text.", "wptouch" ); ?></p>
 
-				<br /><br /><br /><br /><br />
+				<br /><br />
 				
 				<h4><?php _e( "Post Listings Options", "wptouch" ); ?></h4>
 				<p><?php _e( "Select which post-meta items are shown under titles on the main, search, &amp; archives pages.", "wptouch" ); ?></p>

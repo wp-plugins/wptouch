@@ -1,4 +1,7 @@
-/* @override http://24.36.119.184:9098/wp-content/plugins/wptouch/admin-css/wptouch-admin.css */
+/* @override 
+	http://24.36.119.184:9098/wp-content/plugins/wptouch/admin-css/wptouch-admin.css
+	http://wptouch.com/wp-content/plugins/wptouch/admin-css/wptouch-admin.css
+*/
 
 /* WPtouch 1.9 Admin CSS */
 
@@ -195,7 +198,7 @@
 }
 
 #wptouch-head #wptouch-head-colour {
-	background-color: #a1c3dc;
+	background-color: #9dc6e6;
 	padding: 10px;
 	margin: -10px -10px -20px;
 	-webkit-border-top-right-radius: 5px;
@@ -205,9 +208,9 @@
 }
 
 #wptouch-head-title {
-	font: bold 20px Georgia, "Times New Roman", Times, serif;
+	font: bold 22px Georgia, "Times New Roman", Times, serif;
 	color: #333c42;
-	text-shadow: #d5e5f1 0 1px 0;
+	text-shadow: #cddce8 0 1px 0;
 	letter-spacing: -1px;
 	margin: 0;
 	padding: 0;
@@ -228,7 +231,7 @@
 #wptouch-head-links a {
 	color: #333c42;
 	font-weight: bold;
-	text-shadow: #daeaf7 0 1px 0;
+	text-shadow: #cddce8 0 1px 0;
 }
 
 #wptouch-head-links a:hover {
@@ -238,7 +241,8 @@
 
 #wptouch-head-links li {
 	display: inline;
-	color: #213147;
+	color: #618299;
+	text-shadow: #bfdfe8 1px 1px 0;
 }
 
 #wptouch-news-beta {
