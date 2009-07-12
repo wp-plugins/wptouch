@@ -9,7 +9,7 @@
 
 /* @group General */
 
-.classic-wptouch-bg {
+.classic-wptouch-bg, .argyle-wptouch-bg, .horizontal-wptouch-bg, .diagonal-wptouch-bg, .skated-wptouch-bg, .grid-wptouch-bg {
 	background: url(frog/frog.png) repeat;
 }
 
@@ -254,5 +254,42 @@ ol#commentlist li {
 .month-12 {
 	background-color: #002b00;
 }
+
+/* @end */
+
+/* @group Override Defaults */
+
+a.h2 {
+	color: #012d00 !important;
+}
+
+#headerbar, #wptouch-login {
+	background-color: #002302 !important;
+}
+
+#headerbar-title, #headerbar-title a {
+	color: #fffcd6 !important;
+}
+
+#wptouch-menu-inner a:hover {
+	color: #a3ffb0 !important;
+}
+
+#catsmenu-inner a:hover {
+	color: #8effa6 !important;
+}
+
+#drop-fade {
+	background-color: #012d00 !important;
+}
+
+#drop-fade a {
+	color: #edfeca !important;
+}
+
+a, h3#com-head {
+	color: #39794d !important;
+}
+
 
 /* @end */

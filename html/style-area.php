@@ -14,48 +14,38 @@
 			<div class="wptouch-right-content skins-fixed">
 				 <div id="skins-menu">
 					 <ul>
-						 <li><a href="#" class="active">Default</a></li>
-						 <!-- <li><a href="#" onclick="return false;">Lavender</a></li>
-						 <li><a href="#" onclick="return false;">Sunkissed</a></li>
-						 <li><a href="#" onclick="return false;">Frog</a></li>
+						 <li><a href="#" onclick="return false;">Default</a></li>
+						 <li><a href="#" onclick="return false;">Lavender</a></li>
+						 <li><a href="#" onclick="return false;" class="active">Frog</a></li>
+						 <!-- <li><a href="#" onclick="return false;">Sunkissed</a></li>
 						 <li><a href="#" onclick="return false;">Sea</a></li> -->
 					 </ul>
 				 </div>
 
-				<!-- 
-
-<br />
-
-				<ul class="wptouch-make-li-italic wptouch-select-options">
-					<li>
-					<select name="style-skin">
-						<option <?php if ($wptouch_settings['style-skin'] == "default-skin") echo " selected"; ?> value="default-skin"><?php _e( "Default", "wptouch" ); ?></option>
-						<option <?php if ($wptouch_settings['style-skin'] == "cocoa-skin") echo " selected"; ?> value="mono-skin"><?php _e( "Cocoa", "wptouch" ); ?></option>
-						<option <?php if ($wptouch_settings['style-skin'] == "sunkissed-skin") echo " selected"; ?> value="conflower-skin"><?php _e( "Sunkissed", "wptouch" ); ?></option>
-						<option <?php if ($wptouch_settings['style-skin'] == "frog-skin") echo " selected"; ?> value="frog-skin"><?php _e( "Frog", "wptouch" ); ?></option>
-						<option <?php if ($wptouch_settings['style-skin'] == "sea-skin") echo " selected"; ?> value="sea-skin"><?php _e( "Sea", "wptouch" ); ?></option>															
-						<option <?php if ($wptouch_settings['style-skin'] == "lavender-skin") echo " selected"; ?> value="lavender-skin"><?php _e( "Lavender", "wptouch" ); ?></option>																		</select>
-					<?php _e( "WPtouch Theme Skin (will update colors above)", "wptouch" ); ?>					
-					</li>
-					
-				</ul>	
-				-->
-		<div class="skins-desc" id="lavender-skin" style="display:none"> <!-- Lavender -->
-			<p><?php _e( "Lavender features lush deep plum purples.", "wptouch" ); ?></p>
-			<p><?php _e( "There are no configurable options for this skin.", "wptouch" ); ?></p>
-			<img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/images/skins/lavender.jpg" alt="" />
-		</div>
-
-		<div class="skins-desc" id="default-skin"> <!-- Default -->
+ <!-- Default skin -->
+ 
+		<div class="skins-desc" id="default-skin" style="display:none">
 			<p><?php _e( "The default WPtouch skin emulates a native iPhone application.", "wptouch" ); ?></p>
 			<ul class="wptouch-make-li-italic">
 					<li><select name="style-background">
-							<option <?php if ($wptouch_settings['style-background'] == "classic-wptouch-bg") echo " selected"; ?> value="classic-wptouch-bg"><?php _e( "Classic", "wptouch" ); ?></option>
-							<option <?php if ($wptouch_settings['style-background'] == "horizontal-wptouch-bg") echo " selected"; ?> value="horizontal-wptouch-bg"><?php _e( "Horizontal Grey", "wptouch" ); ?></option>
-							<option <?php if ($wptouch_settings['style-background'] == "diagonal-wptouch-bg") echo " selected"; ?> value="diagonal-wptouch-bg"><?php _e( "Diagonal Grey", "wptouch" ); ?></option>
-							<option <?php if ($wptouch_settings['style-background'] == "skated-wptouch-bg") echo " selected"; ?> value="skated-wptouch-bg"><?php _e( "Skated Concrete", "wptouch" ); ?></option>
-							<option <?php if ($wptouch_settings['style-background'] == "argyle-wptouch-bg") echo " selected"; ?> value="argyle-wptouch-bg"><?php _e( "Argyle Tie", "wptouch" ); ?></option>
-							<option <?php if ($wptouch_settings['style-background'] == "grid-wptouch-bg") echo " selected"; ?> value="grid-wptouch-bg"><?php _e( "Thatches", "wptouch" ); ?></option>
+							<option <?php if ($wptouch_settings['style-background'] == "classic-wptouch-bg") echo " selected"; ?> value="classic-wptouch-bg">
+								<?php _e( "Classic", "wptouch" ); ?>
+							</option>
+							<option <?php if ($wptouch_settings['style-background'] == "horizontal-wptouch-bg") echo " selected"; ?> value="horizontal-wptouch-bg">
+								<?php _e( "Horizontal Grey", "wptouch" ); ?>
+							</option>
+							<option <?php if ($wptouch_settings['style-background'] == "diagonal-wptouch-bg") echo " selected"; ?> value="diagonal-wptouch-bg">
+								<?php _e( "Diagonal Grey", "wptouch" ); ?>
+							</option>
+							<option <?php if ($wptouch_settings['style-background'] == "skated-wptouch-bg") echo " selected"; ?> value="skated-wptouch-bg">
+								<?php _e( "Skated Concrete", "wptouch" ); ?>
+							</option>
+							<option <?php if ($wptouch_settings['style-background'] == "argyle-wptouch-bg") echo " selected"; ?> value="argyle-wptouch-bg">
+								<?php _e( "Argyle Tie", "wptouch" ); ?>
+							</option>
+							<option <?php if ($wptouch_settings['style-background'] == "grid-wptouch-bg") echo " selected"; ?> value="grid-wptouch-bg">
+								<?php _e( "Thatches", "wptouch" ); ?>
+							</option>
 						</select>
 						<?php _e( "Background", "wptouch" ); ?>
 					</li> 
@@ -66,7 +56,20 @@
 			</ul> 
 			<img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/images/skins/default.jpg" alt="" />
 		</div>
+		
+<!-- Lavender skin -->
 
+		<div class="skins-desc" id="lavender-skin" style="display:none">
+			<p><?php _e( "Lavender features lush deep plum purples.", "wptouch" ); ?></p>
+			<p><?php _e( "There are no configurable options for this skin.", "wptouch" ); ?></p>
+			<img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/images/skins/lavender.jpg" alt="" />
+		</div>
+
+		<div class="skins-desc" id="frog-skin">
+			<p><?php _e( "Frog is all about greens.", "wptouch" ); ?></p>
+			<p><?php _e( "There are no configurable options for this skin.", "wptouch" ); ?></p>
+			<img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/images/skins/frog.jpg" alt="" />
+		</div>
 
 		</div><!-- right content -->
 	<div class="wptouch-clearer"></div>

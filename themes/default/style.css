@@ -1485,6 +1485,10 @@ p.subscribe-to-comments input#subscribe {
 	background: url(../core/core-images/pinstripes-classic.gif) repeat;
 }
 
+.argyle-wptouch-bg {
+	background: url(../core/core-images/argyle-tie.gif) repeat;
+}
+
 .horizontal-wptouch-bg {
 	background: url(../core/core-images/pinstripes-horizontal.gif) repeat;
 }
@@ -1495,10 +1499,6 @@ p.subscribe-to-comments input#subscribe {
 
 .skated-wptouch-bg {
 	background: url(../core/core-images/skated-concrete.gif) repeat;
-}
-
-.argyle-wptouch-bg {
-	background: url(../core/core-images/argyle-tie.gif) repeat;
 }
 
 .grid-wptouch-bg {
