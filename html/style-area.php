@@ -14,17 +14,17 @@
 			<div class="wptouch-right-content skins-fixed">
 				 <div id="skins-menu">
 					 <ul>
-						 <li><a href="#" onclick="return false;">Default</a></li>
-						 <li><a href="#" onclick="return false;">Lavender</a></li>
-						 <li><a href="#" onclick="return false;" class="active">Frog</a></li>
-						 <!-- <li><a href="#" onclick="return false;">Sunkissed</a></li>
+						 <li><a href="#" onclick="return false;" class="active">Default</a></li>
+						 <!-- <li><a href="#" onclick="return false;">Lavender</a></li>
+						 <li><a href="#" onclick="return false;">Frog</a></li>
+						 <li><a href="#" onclick="return false;">Sunkissed</a></li>
 						 <li><a href="#" onclick="return false;">Sea</a></li> -->
 					 </ul>
 				 </div>
 
  <!-- Default skin -->
  
-		<div class="skins-desc" id="default-skin" style="display:none">
+		<div class="skins-desc" id="default-skin">
 			<p><?php _e( "The default WPtouch skin emulates a native iPhone application.", "wptouch" ); ?></p>
 			<ul class="wptouch-make-li-italic">
 					<li><select name="style-background">
@@ -65,7 +65,7 @@
 			<img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/images/skins/lavender.jpg" alt="" />
 		</div>
 
-		<div class="skins-desc" id="frog-skin">
+		<div class="skins-desc" id="frog-skin" style="display:none">
 			<p><?php _e( "Frog is all about greens.", "wptouch" ); ?></p>
 			<p><?php _e( "There are no configurable options for this skin.", "wptouch" ); ?></p>
 			<img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/images/skins/frog.jpg" alt="" />

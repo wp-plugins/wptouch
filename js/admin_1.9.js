@@ -55,6 +55,6 @@ jQuery(document).ready(function($j) {
 		'zoomOpacity':				true, 
 		'overlayShow':				false,
 		'frameHeight':				250,
-		'hideOnContentClick': 	true
+		'hideOnContentClick': 	false
 	});
 });

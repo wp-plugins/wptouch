@@ -1,7 +1,4 @@
-/* @override 
-	http://24.36.119.184:9098/wp-content/plugins/wptouch/admin-css/wptouch-admin.css
-	http://wptouch.com/wp-content/plugins/wptouch/admin-css/wptouch-admin.css
-*/
+/* @override http://www.bnclocal.com/wp-content/plugins/wptouch/admin-css/wptouch-admin.css */
 
 /* WPtouch 1.9 Admin CSS */
 
@@ -1254,6 +1251,26 @@ td#fancy_title_right {
 	height: 32px;
 	width: 15px;
 	background: transparent url('../images/fancybox/fancy_title_right.png') repeat-x;
+}
+
+
+
+/* @end */
+
+/* @group push-area.php */
+
+#push-area li input {
+	position: relative;
+	right: 5px;
+}
+
+#push-area li input.checkbox {
+	position: relative;
+	left: 0;
+}
+
+#push-area li select {
+	width: auto;
 }
 
 
