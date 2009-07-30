@@ -1831,3 +1831,26 @@ ul#post-options li a#onext {
 
 
 /* @end */
+
+/* @group No Script */
+
+#noscript {
+	position: absolute;
+	top: 0;
+	background-color: #111;
+	opacity: 0.95;
+	z-index: 1000;
+	color: #ddd;
+	font-size: 22px;
+	display: block;
+	margin: 10px;
+	height: 100%;
+	padding: 25px;
+	text-shadow: #000000 -1px -1px 0;
+	-webkit-border-radius: 15px;
+	width: auto;
+}
+
+
+
+/* @end */
