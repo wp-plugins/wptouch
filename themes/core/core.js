@@ -95,11 +95,11 @@ function commentAdded() {
 /////// --Single Post Page -- ///////
 
 function wptouch_toggle_twitter() {
-	$wptouch('#twitter-box').slideToggle(300);
+	$wptouch('#twitter-box').fadeToggle(400);
 }
 
 function wptouch_toggle_bookmarks() {
-	$wptouch('#bookmark-box').slideToggle(300);
+	$wptouch('#bookmark-box').fadeToggle(400);
 }
 
 
