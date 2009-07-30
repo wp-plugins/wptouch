@@ -92,18 +92,29 @@ function commentAdded() {
     $wptouch("#refresher").fadeIn(1500);
 }
 
+/////// --Single Post Page -- ///////
+
+function wptouch_toggle_twitter() {
+	$wptouch('#twitter-box').slideToggle(300);
+}
+
+function wptouch_toggle_bookmarks() {
+	$wptouch('#bookmark-box').slideToggle(300);
+}
+
+
 /////// -- Tweak jQuery Timer -- ///////
-jQuery.timerId = setInterval(function(){
-	var timers = jQuery.timers;
-	for (var i = 0; i < timers.length; i++) {
-		if (!timers[i]()) {
-			timers.splice(i--, 1);
-		}
-	}
-	if (!timers.length) {
-		clearInterval(jQuery.timerId);
-		jQuery.timerId = null;
-	}
-}, 83);
+//jQuery.timerId = setInterval(function(){
+//	var timers = jQuery.timers;
+//	for (var i = 0; i < timers.length; i++) {
+//		if (!timers[i]()) {
+//			timers.splice(i--, 1);
+//		}
+//	}
+//	if (!timers.length) {
+//		clearInterval(jQuery.timerId);
+//		jQuery.timerId = null;
+//	}
+//}, 83);
 
 // End WPtouch jS
