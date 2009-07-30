@@ -4,11 +4,15 @@ include( dirname(__FILE__) . '/../core/core-header.php' );
 ?>
 
 <body class="<?php wptouch_core_body_background(); ?>">
-<div id="noscript">
-<p>JavaScript is turned off.</p>
-<p>Turn it on in <a href="javascript:return false;" onclick="window.location='settings://'">Settings - > Safari</a> to view this site fully.</p>
+<noscript>
+<div id="noscript-wrap">
+	<div id="noscript">
+		<h2>Notice</h2>
+		<p>JavaScript for Mobile Safari is currently turned off.</p>
+		<p>Turn it on in <em>Settings &rsaquo; Safari</em><br /> to view this website.</p>
+	</div>
 </div>
-
+</noscript>
 <!--#start The Login Overlay -->
 	<div id="wptouch-login">
 		<div id="wptouch-login-inner">
