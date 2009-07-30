@@ -10,8 +10,8 @@ function wptouch_core_header_enqueue() {
 		wp_head(); 
 
 		} elseif (bnc_wptouch_is_exclusive()) { 
-		echo "<script type='text/javascript' src='' . get_bloginfo('wpurl') . '/wp-includes/js/jquery/jquery.js'></script> /n";
-		echo "<script src='' . compat_get_plugin_url( 'wptouch' ) . '/themes/core/core.js' type='text/javascript' charset='utf-8'></script> /n"; 
+		echo '<script type="text/javascript" src="' . get_bloginfo('wpurl') . '/wp-includes/js/jquery/jquery.js"></script>';
+		echo '<script src="' . compat_get_plugin_url( 'wptouch' ) . '/themes/core/core.js" type="text/javascript" charset="utf-8"></script>'; 
 		 }
 	}
   
