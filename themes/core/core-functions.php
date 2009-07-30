@@ -6,13 +6,12 @@
 function wptouch_core_header_enqueue() {
 	$version = get_bloginfo('version'); 
 		if (!bnc_wptouch_is_exclusive()) { 
-		echo '<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>';
 		wp_enqueue_script('wptouch-core', '' . compat_get_plugin_url( 'wptouch' ) . '/themes/core/core.js', array('jquery'),'1.9' );		
 		wp_head(); 
 
 		} elseif (bnc_wptouch_is_exclusive()) { 
-		//echo '<script type="text/javascript" src="' . get_bloginfo('wpurl') . '/wp-includes/js/jquery/jquery.js"></script>';
-		echo '<script src="' . compat_get_plugin_url( 'wptouch' ) . '/themes/core/core.js" type="text/javascript" charset="utf-8"></script>'; 
+		echo "<script type='text/javascript' src='' . get_bloginfo('wpurl') . '/wp-includes/js/jquery/jquery.js'></script> /n";
+		echo "<script src='' . compat_get_plugin_url( 'wptouch' ) . '/themes/core/core.js' type='text/javascript' charset='utf-8'></script> /n"; 
 		 }
 	}
   
