@@ -41,7 +41,7 @@
 			<li><a href="<?php $prevPost = get_previous_post(false); $prevURL = get_permalink($prevPost->ID); echo $prevURL; ?>" id="oprev"></a></li>
 		<?php } ?>
 		<li><a href="mailto:?subject=<?php
-bloginfo('name'); ?>- <?php the_title();?>&body=<?php _e( "Check out this post:", "wptouch" ); ?>%20<?php the_permalink() ?>" onclick="return confirm('<?php _e( "Mail a link to this post?", "wptouch" ); ?>');" id="omail"></a></li>
+bloginfo('name'); ?>- <?php the_title();?>&body=<?php _e( "Check out this post:", "wptouch" ); ?>%20<?php the_permalink() ?>; javascript:return false;" onclick="return confirm('<?php _e( "Mail a link to this post?", "wptouch" ); ?>');" id="omail"></a></li>
 		<li><a href="javascript:return false;" onclick="wptouch_toggle_twitter();" id="otweet"></a></li>
 		<li><a href="javascript:return false;" onclick="wptouch_toggle_bookmarks();" id="obook"></a></li>
 		<li><a href="javascript:var%20db=document.body,sb='%3Cspan%20style=\'background-color:#FFFF00;\'%3E',tm=prompt('Find%20text%20on%20this%20page:'),sm='/('+escape(tm)+')/gi',se='%3C/span%3E';void(db.innerHTML=db.innerHTML.replace(eval(sm),sb+'$1'+se));" id="osearch"></a></li>
