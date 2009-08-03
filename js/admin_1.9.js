@@ -29,7 +29,7 @@ jQuery(document).ready(function($j) {
 	setTimeout(function() { 	
 		jQuery.ajax({
 			url: "../?wptouch=beta",
-			success: function(data) {$j("#wptouch-beta-content").html(data).fadeIn(350);}
+			success: function(data) {$j("#wptouch-beta-content").html(data).fadeIn(550);}
 		});
 	}, 1000);
 	
