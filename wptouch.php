@@ -200,6 +200,11 @@ class WPtouchPlugin {
 		}
 	}
 	
+	function wptouch_prowl_direct_message_enabled() {
+		$settings = bnc_wptouch_get_settings();
+		return ( isset( $settings['enable-prowl-message-button'] ) && $settings['enable-prowl-message-button'] );
+	}
+	
 	function wptouch_handle_new_user( $user_id ) {
 		$settings = bnc_wptouch_get_settings();
 		
