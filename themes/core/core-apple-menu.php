@@ -4,7 +4,7 @@
 	<?php } else { ?>
 		    <a id="accountopen" class="top" href="#" onclick="bnc_jquery_acct_open(); return false;"><?php _e( 'My Account', 'wptouch' ); ?></a>	
 	<?php } ?>
-<?php }  // End fancy iPhone stuff ?>
+<?php } ?>
 
 	<?php if (bnc_is_tags_button_enabled()) { ?>			    
     	<a id="prowlopen" class="top" href="#" onclick="bnc_jquery_prowl_open(); return false;"><?php _e( 'Message Me', 'wptouch' ); ?></a>
@@ -61,6 +61,6 @@
 			<?php if (is_user_logged_in()) { ?>
 				<option value="<?php bloginfo('wpurl'); ?>/wp-admin/profile.php"><?php _e( "Account Profile", "wptouch" ); ?></option>
 				<option value="<?php $version = (float)get_bloginfo('version'); if ($version >= 2.7) { ?><?php echo wp_logout_url($_SERVER['REQUEST_URI']); } else { bloginfo('wpurl'); ?>/wp-login.php?action=logout&redirect_to=<?php echo $_SERVER['REQUEST_URI']; ?><?php } ?>"><?php _e( "Logout", "wptouch" ); ?></option>	
-			<?php } ?>
+			<?php } // End fancy iPhone stuff ?>
 	</select>
 </form>
