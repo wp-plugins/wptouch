@@ -24,7 +24,7 @@ jQuery(document).ready(function($j) {
 			url: "../?wptouch=news",
 			success: function(data) {$j("#wptouch-news-content").html(data).fadeIn(350);}
 		});
-	}, 1000);
+	}, 750);
 
 	setTimeout(function() { 	
 		jQuery.ajax({
