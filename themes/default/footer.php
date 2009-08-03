@@ -1,4 +1,5 @@
 <div id="footer">
+
 	<center>
 		<div id="wptouch-switch-link">
 			<?php wptouch_core_footer_switch_link(); ?>

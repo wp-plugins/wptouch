@@ -1,6 +1,7 @@
 /* @override 
 	http://wptouch.com/wp-content/plugins/wptouch/themes/default/style.css
 	http://24.36.119.184:9098/wp-content/plugins/wptouch/themes/default/style.css
+	http://www.bnclocal.com/wp-content/plugins/wptouch/themes/default/style.css
 */
 
 /*  
@@ -272,6 +273,11 @@ blockquote {
 #drop-fade #accountopen {
 	padding-left: 18px;
 	background: url(../core/core-images/menu-sprite.png) no-repeat 0 -14px;
+}
+
+#drop-fade #prowlopen {
+	padding-left: 18px;
+	background: url(../core/core-images/menu-sprite.png) no-repeat 2px -57px;
 }
 
 form#select-cats, form#select-tags, form#select-acct {
@@ -1861,6 +1867,76 @@ ul#post-options li a#onext {
 	border: 3px solid #444;
 	font: 14px Helvetica, Arial, sans-serif;
 	margin: 25px;
+}
+
+
+
+/* @end */
+
+/* @group Push Message Area */
+
+#prowl-message {
+	color: #eee;
+	text-shadow: #000000 0px -1px 0px;
+	clear: both;
+	padding: 10px;
+	text-align: left;
+	font-size: 11px;
+	border-top: 1px solid #3e3e3e;
+}
+
+#prowl-message #prowl-style-bar {
+	display: block;
+	border-top: 1px solid #1e1e1e;
+	margin-left: -10px;
+	margin-right: -10px;
+	margin-top: -10px;
+	padding-top: 10px;
+}
+
+#prowl-message form p {
+	font-weight: bold;
+	font-size: 12px;
+	position: relative;
+	margin-bottom: 20px;
+	margin-top: 20px;
+}
+
+#prowl-message input {
+	width: 135px;
+	-webkit-border-radius: 10px;
+	padding: 3px;
+	font-size: 13px;
+	color: #222;
+	font-weight: bold;
+	border: 1px solid #1b1b1b;
+	margin-left: 15px;
+	position: absolute;
+	left: 40px;
+	top: -7px;
+}
+
+#prowl-message textarea {
+	width: 98%;
+	-webkit-border-radius: 10px;
+	padding: 3px;
+	font-size: 13px;
+	color: #222;
+	font-weight: bold;
+	border: 1px solid #1b1b1b;
+	height: 70px;
+	overflow: auto;
+}
+
+#prowl-message h4 {
+	font-size: 14px;
+	margin: 10px 0 15px;
+	padding: 0;
+}
+
+#prowl-message img {
+	float: left;
+	margin-right: 10px;
 }
 
 

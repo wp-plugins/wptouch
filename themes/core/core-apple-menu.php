@@ -6,6 +6,10 @@
 	<?php } ?>
 <?php }  // End fancy iPhone stuff ?>
 
+	<?php if (bnc_is_tags_button_enabled()) { ?>			    
+    	<a id="prowlopen" class="top" href="#" onclick="bnc_jquery_prowl_open(); return false;"><?php _e( 'Message Me', 'wptouch' ); ?></a>
+	<?php } ?>
+
 	<?php if (bnc_is_cats_button_enabled()) { ?>			    
     	<a id="catsopen" class="top" href="#" onclick="bnc_jquery_cats_open(); return false;"><?php _e( 'Categories', 'wptouch' ); ?></a>
 	<?php } ?>
@@ -14,8 +18,20 @@
     	<a id="tagsopen" class="top" href="#" onclick="bnc_jquery_tags_open(); return false;"><?php _e( 'Tags', 'wptouch' ); ?></a>
 	<?php } ?>
 
+ <!-- #start the Prowl Message Area -->
+ <div id="prowl-message" style="display:none">
+ <div id="prowl-style-bar"></div>
+	 <img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/themes/core/core-images/push-icon.png" alt="push icon" />
+	 <h4>Send a Push notification</h4>
+	 <p>This message will be pushed to my iPhone immediately.</p>
+	<form>
+	<p>Name: <input></input></p>
+	<p>E-mail: <input></input></p>
+	 <textarea></textarea>
+	 </form>
+ </div>
 
- <!-- #start The Categories Select List -->
+ <!-- #start the Categories Select List -->
 	<form action="<?php bloginfo('home'); ?>/" id="select-cats" method="get">
 <?php
 	$select = wp_dropdown_categories('show_option_none=Select category:&show_count=1&orderby=name&echo=0');
@@ -24,7 +40,7 @@
 ?>
 	</form>
 
- <!-- #start The Tags Select List -->
+ <!-- #start the Tags Select List -->
 <form id="select-tags" action="">
 	<select id="tag-dropdown" name="tag-dropdown" onchange="document.location.href=this.options[this.selectedIndex].value;">
 		<option value="">Select Tag:</option>
@@ -32,7 +48,7 @@
 	</select>
 </form>
 
- <!-- #start The Account Select List -->
+ <!-- #start the Account Select List -->
 <form id="select-acct" action="">	
 	<select id="acct-dropdown" name="acct-dropdown" onchange="document.location.href=this.options[this.selectedIndex].value;">
 	<option value="#"><?php _e("My Account:", "wptouch"); ?></option>

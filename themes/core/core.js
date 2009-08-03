@@ -55,6 +55,10 @@ function bnc_jquery_login_toggle() {
 	$wptouch('#wptouch-login').fadeToggle(400);
 }
 
+function bnc_jquery_prowl_open() {
+	$wptouch('#prowl-message').fadeToggle(400);
+}
+
 function bnc_jquery_cats_open() {
 	jQuery('#cat').focus();
 }
