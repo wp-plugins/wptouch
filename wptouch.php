@@ -36,6 +36,8 @@ $bnc_wptouch_version = '1.9 Beta 9';
 require_once( 'include/plugin.php' );
 require_once( 'include/compat.php' );
 
+define( 'WPTOUCH_PROWL_APPNAME', 'WPtouch' );
+
 //The WPtouch Settings Defaults
 global $wptouch_defaults;
 $wptouch_defaults = array(
@@ -166,9 +168,64 @@ class WPtouchPlugin {
 		add_filter( 'wp_head', array(&$this, 'bnc_head') );
 		add_filter( 'query_vars', array( &$this, 'wptouch_query_vars' ) );
 		add_filter( 'parse_request', array( &$this, 'wptouch_parse_request' ) );
+		add_action( 'comment_post', array( &$this, 'wptouch_handle_new_comment' ) );
+		add_action( 'user_register', array( &$this, 'wptouch_handle_new_user' ) );
 		
 		$this->detectAppleMobile();
 	}
+	
+	private function wptouch_cleanup_growl( $msg ) {
+		$msg = str_replace("\r\n","\n", $msg);
+		$msg = str_replace("\r","\n", $msg);
+		return $msg;	
+	}
+	
+	function wptouch_handle_new_comment( $comment_id, $approval_status = '1' ) {
+		$settings = bnc_wptouch_get_settings();
+
+		if ( $approval_status != 'spam' && isset( $settings['prowl-api'] ) && isset( $settings['enable-prowl-comments-button'] ) ) {
+			$api_key = $settings['prowl-api'];
+			
+			require_once( 'class.prowl.php' );
+			
+			$comment = get_comment( $comment_id );
+			$prowl = new Prowl( $api_key, WPTOUCH_PROWL_APPNAME );
+			
+			$result = $prowl->add( 	1, 
+											__( "New Comment", "wptouch" ),
+											'From: '. $this->wptouch_cleanup_growl( $comment->comment_author ) . 
+											"\nE-Mail: ". $this->wptouch_cleanup_growl( $comment->comment_author_email ) .
+											"\nMessage: ". $this->wptouch_cleanup_growl( $comment->comment_content ) 
+										);			
+		}
+	}
+	
+	function wptouch_handle_new_user( $user_id ) {
+		$settings = bnc_wptouch_get_settings();
+		
+		if ( isset( $settings['prowl-api'] ) && isset( $settings['enable-prowl-users-button'] ) ) {
+			global $wpdb;
+			
+			$api_key = $settings['prowl-api'];
+			
+			require_once( 'class.prowl.php' );
+			
+			global $table_prefix;
+			$sql = $wpdb->prepare( "SELECT * from " . $table_prefix . "users WHERE ID = %d", $user_id );
+			$user = $wpdb->get_row( $sql );
+			
+			if ( $user ) {
+				$prowl = new Prowl( $api_key, WPTOUCH_PROWL_APPNAME );
+				
+				$result = $prowl->add( 	1, 
+												__( "User Registration", "wptouch" ),
+												'Name: '. $this->wptouch_cleanup_growl( $user->user_login ) . 
+												"\nE-Mail: ". $this->wptouch_cleanup_growl( $user->user_email ) 
+											);			
+			}
+		}
+	}
+	
 
 	function wptouch_query_vars( $vars ) {
 		$vars[] = "wptouch";
