@@ -24,8 +24,8 @@
 	 <h4>Send a Push notification</h4>
 	 <p>This message will be pushed to my iPhone immediately.</p>
 	<form>
-	<p>Name: <input></input></p>
-	<p>E-mail: <input></input></p>
+	<p><input></input> Name</p>
+	<p><input></input> E-Mail</p>
 	 <textarea></textarea>
 	 </form>
  </div>

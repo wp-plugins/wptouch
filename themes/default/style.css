@@ -1877,7 +1877,7 @@ ul#post-options li a#onext {
 
 #prowl-message {
 	color: #eee;
-	text-shadow: #000000 0px -1px 0px;
+	text-shadow: #000000 0 -1px 1px;
 	clear: both;
 	padding: 10px;
 	text-align: left;
@@ -1898,22 +1898,18 @@ ul#post-options li a#onext {
 	font-weight: bold;
 	font-size: 12px;
 	position: relative;
-	margin-bottom: 20px;
-	margin-top: 20px;
+	margin-bottom: 10px;
+	margin-top: 10px;
 }
 
 #prowl-message input {
-	width: 135px;
+	width: 40%;
 	-webkit-border-radius: 10px;
 	padding: 3px;
 	font-size: 13px;
 	color: #222;
 	font-weight: bold;
 	border: 1px solid #1b1b1b;
-	margin-left: 15px;
-	position: absolute;
-	left: 40px;
-	top: -7px;
 }
 
 #prowl-message textarea {
@@ -1926,6 +1922,7 @@ ul#post-options li a#onext {
 	border: 1px solid #1b1b1b;
 	height: 70px;
 	overflow: auto;
+	margin-top: 2px;
 }
 
 #prowl-message h4 {
