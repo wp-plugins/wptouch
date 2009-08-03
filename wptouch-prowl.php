@@ -1,5 +1,32 @@
 <?php
-//Built into WPtouch now, called into core-functions.php
+/*
+   Plugin Name: WPtouch Prowl Messages
+   Plugin URI: http:/www.wptouch.com
+   Description: A plugin which adds push notifications to WPtouch.
+	Author: Dale Mugford & Duane Storey
+	Version: 1.9
+	Author URI: http://www.bravenewcode.com
+   
+	# Special thanks to Henrik Urlund who's 'Prowl Me' plugin was used as the basis for this addition.
+	
+	# Copyright (c) 2008-2009 Duane Storey & Dale Mugford of BraveNewCode Inc.
+	
+	# This plugin is free software; you can redistribute it and/or
+	# modify it under the terms of the GNU Lesser General Public
+	# License as published by the Free Software Foundation; either
+	# version 2.1 of the License, or (at your option) any later version.
+	
+	# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+	# EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+	# MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+	# NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+	# LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+	# OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+	# WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. 
+	#
+	# See the GNU lesser General Public License for more details.
+*/
+
 // make sure the session is started
 session_start();
 
@@ -24,7 +51,7 @@ class wptouchprowl
 		// Add settings menu
 		add_action('admin_menu', array($this, 'my_plugin_menu'));
 		
-		// add / remove settings on activation/deactivation
+		// add/remove settings on activation/deactivation
 		register_deactivation_hook(__FILE__, array($this, 'deactivation'));
 		register_activation_hook(__FILE__, array($this, 'activation'));
 		
