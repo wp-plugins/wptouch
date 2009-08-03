@@ -55,6 +55,12 @@ $wptouch_defaults = array(
 	'enable-main-tags' => true,
 	'enable-main-categories' => true,
 	'enable-main-email' => true,
+// Prowl
+	'prowl-api' => '',
+	'enable-prowl-comments-button' => false,
+	'enable-prowl-users-button' => false,
+	'enable-prowl-message-button' => false,
+//
 	'header-background-color' => '000000',
 	'header-border-color' => '333333',
 	'header-text-color' => 'eeeeee',
@@ -475,7 +481,8 @@ function bnc_wp_touch_get_pages() {
 			 $k == 'enable-cats-button'  || $k == 'enable-tags-button'  || $k == 'enable-login-button' || 
 			 $k == 'enable-redirect' || $k == 'enable-gravatars' || $k == 'enable-main-home' || 
 			 $k == 'enable-main-rss' || $k == 'enable-main-email' || $k == 'enable-main-name' || 
-			 $k == 'enable-main-tags' || $k == 'enable-main-categories') {
+			 $k == 'enable-main-tags' || $k == 'enable-main-categories' || $k == 'enable-prowl-comments-button' || 
+			 $k == 'enable-prowl-users-button' || $k == 'enable-prowl-message-button') {
 			} else {
 				if (is_numeric($k)) {
 					$keys[] = $k;

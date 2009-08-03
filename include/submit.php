@@ -84,6 +84,26 @@
 			$a['enable-main-categories'] = 0;
 		}
 
+//Prowl
+		if ( isset( $_POST['enable-prowl-comments-button'] ) ) {
+			$a['enable-prowl-comments-button'] = 1;
+		} else {
+			$a['enable-prowl-comments-button'] = 0;
+		}
+		
+		if ( isset( $_POST['enable-prowl-users-button'] ) ) {
+			$a['enable-prowl-users-button'] = 1;
+		} else {
+			$a['enable-prowl-users-button'] = 0;
+		}
+
+		if ( isset( $_POST['enable-prowl-message-button'] ) ) {
+			$a['enable-prowl-message-button'] = 1;
+		} else {
+			$a['enable-prowl-message-button'] = 0;
+		}
+//
+
 		if ( isset( $_POST['home-page'] ) ) {
 			$a['home-page'] = $_POST['home-page'];
 			if (strlen($a['home-page']) == 0) {
@@ -126,6 +146,15 @@
 		if ( isset($_POST['style-background']) ) {
 			$a['style-background'] = $_POST['style-background'];
 		}
+//Prowl
+		if ( isset($_POST['prowl-maximum']) ) {
+			$a['prowl-maximum'] = $_POST['prowl-maximum'];
+		}
+
+		if ( isset($_POST['prowl-api']) ) {
+			$a['prowl-api'] = $_POST['prowl-api'];
+		}
+//
 		
 		if ( isset( $_POST['enable-exclusive'] ) ) {
 			$a['enable-exclusive'] = 1;	
@@ -154,6 +183,8 @@
 	$a['header-border-color'] = $_POST['header-border-color'];
 	$a['header-text-color'] = $_POST['header-text-color'];
 	$a['link-color'] = $_POST['link-color'];
+//Prowl
+	$a['prowl-api'] = $_POST['prowl-api'];
 
 	$values = serialize($a);
 	update_option('bnc_iphone_pages', $values);
