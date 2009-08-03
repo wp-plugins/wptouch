@@ -29,9 +29,9 @@ jQuery(document).ready(function($j) {
 	setTimeout(function() { 	
 		jQuery.ajax({
 			url: "../?wptouch=beta",
-			success: function(data) {$j("#wptouch-beta-content").html(data).fadeIn(550);}
+			success: function(data) {$j("#wptouch-beta-content").html(data).fadeIn(350);}
 		});
-	}, 1000);
+	}, 1250);
 	
 	setTimeout(function() { 	
 		jQuery.ajax({
