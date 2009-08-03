@@ -1,5 +1,6 @@
 <?php 
 include( dirname(__FILE__) . '/../core/core-functions.php' ); 
+include( dirname(__FILE__) . '/../../notifications/wptouch-prowl.php' ); 
 // End WPtouch Core Functions
 
 //---------------- Custom Drop-Down Tags Function ----------------// 
