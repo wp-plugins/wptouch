@@ -8,6 +8,22 @@ Please visit http://bravenewcode.com/wptouch/ for a full description & updates o
 
 You can also checkout our Support Forums at http://support.bravenewcode.com to post questions and learn tips and tricks for *WPtouch* and our other plugins.
 
+= New In Version 1.9 Beta 9 RC1 // June 16, 2009 =
+
+- Fully compatible with WordPress 2.8.2
+- Filter trackbacks and pingbacks from display in comment counts
+- Custom post page nav links now check if next/prev post exists before showing arrow
+- Finished 2 all-new skins as style selections (Frog, Lavender)
+- Added friendly 'noscript' display bezel for users with javascript Turned off
+- Fixed an issue where WP Spam Free users may have had new comments blocked
+
+- English text confirmation
+- Minor admin refinements, bug fix, style declaration for closed comments added
+- Plugin compatibility listing now loads from bravenewcode.com for an always up-to-date listing of plugin compatibility and conflicts
+- Updated screenshots for new designs 
+- Added ability to import and install additional official icon sets from the admin
+- Turned on skin selection support
+- Added and enabled Prowl Push Notifications settings panel
 
 = New In Version 1.9 Beta 8 Series // June 16, 2009 =
 
@@ -37,15 +53,6 @@ Moved adsense.php to include folder
 Updated Ajax Upload script to 3.2
 Text changes
 Bug fixes
-
-Still to be completed for beta 9:
-
-Finishing all-new skins as style selections (Frog, Sea, Lavender, Sunkissed)
-Adding ability to import and install additional official icon sets from the admin
-Updated screenshots for new designs 
-Final admin enhancements, changes
-English text confirmation
-Language translations
 
 
 = New In Version 1.9 Beta 7.1 // May 20th, 2009 =

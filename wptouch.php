@@ -181,6 +181,9 @@ class WPtouchPlugin {
 				case "beta":
 					include( 'ajax/load-beta.php' );
 					break;
+				case "plugins":
+					include( 'ajax/load-plugins.php' );
+					break;
 			}
 			exit;
 		}	

@@ -4,7 +4,7 @@
  * Copyright (c) 2008-2009 Duane Storey & Dale Mugford (BraveNewCode Inc.)
  * Licensed under GPL.
  *
- * Last Updated: July 4th, 2009
+ * Last Updated: August 1st, 2009
  */
 
 /////// -- Get out of frames! -- ///////
@@ -91,6 +91,7 @@ function commentAdded() {
     $wptouch("#the-new-comment").fadeIn(1500);
     $wptouch("#refresher").fadeIn(1500);
 }
+
 
 /////// --Single Post Page -- ///////
 

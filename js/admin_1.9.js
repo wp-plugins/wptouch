@@ -4,7 +4,7 @@
  * Copyright (c) 2008-2009 Duane Storey & Dale Mugford (BraveNewCode Inc.)
  * Licensed under GPL.
  *
- * Last Updated: June 20th, 2009
+ * Last Updated: August 3rd, 2009
  */
 
 $j = jQuery.noConflict();
@@ -22,20 +22,27 @@ jQuery(document).ready(function($j) {
 	setTimeout(function() { 	
 		jQuery.ajax({
 			url: "../?wptouch=news",
-			success: function(data) {$j("#wptouch-news-content").html(data).fadeIn(500);}
+			success: function(data) {$j("#wptouch-news-content").html(data).fadeIn(350);}
 		});
 	}, 1000);
 
 	setTimeout(function() { 	
 		jQuery.ajax({
 			url: "../?wptouch=beta",
-			success: function(data) {$j("#wptouch-beta-content").html(data).fadeIn(250);}
+			success: function(data) {$j("#wptouch-beta-content").html(data).fadeIn(350);}
 		});
 	}, 1000);
+	
+	setTimeout(function() { 	
+		jQuery.ajax({
+			url: "../?wptouch=plugins",
+			success: function(data) {$j("#wptouch-plugin-content").html(data).fadeIn(350);}
+		});
+	}, 1500);
 
-	setTimeout(function() { $j('#wptouchupdated').fadeIn(350); }, 300);
-	setTimeout(function() { $j('#wptouchupdated').fadeOut(350); }, 2300);
-	setTimeout(function() { $j('img.ajax-load').fadeOut(1000); }, 2000);
+	setTimeout(function() { $j('#wptouchupdated').fadeIn(350); }, 750);
+	setTimeout(function() { $j('#wptouchupdated').fadeOut(350); }, 1750);
+	setTimeout(function() { $j('img.ajax-load').fadeOut(750); }, 2000);
 
 	jQuery('#header-text-color, #header-background-color, #header-border-color, #link-color').ColorPicker({
 		onSubmit: function(hsb, hex, rgb, el) {

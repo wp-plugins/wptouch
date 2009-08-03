@@ -65,64 +65,9 @@
 				echo '<div class="too-bad">' . __( 'If you had a page called \'Archives\', your tags and monthly listings would display in <em>WPtouch</em> style.', 'wptouch' ) . '</div>';
 				}
 				?>
-				<br /><br />
 				
-			<h4><?php _e( 'Other Plugin Support &amp; Compatibility', 'wptouch' ); ?></h4>
-			
-			<!-- custom anti spam -->
-			<?php if (function_exists('cas_register_post')) { ?>
-				<div class="all-good">
-				<?php _e( 'Cool! <a href="http://wordpress.org/extend/plugins/peters-custom-anti-spam-image/" target="_blank">Peter\'s Custom Anti-Spam</a>: Your comment form supports it', 'wptouch'); ?>
-				</div>
-			<?php } else { ?>
-				<div class="sort-of">
-				<?php _e( 'You don\'t have <a href="http://wordpress.org/extend/plugins/peters-custom-anti-spam-image/" target="_blank">Peter\'s Custom Anti-Spam</a> installed (Your commentform supports it)', 'wptouch' ); ?>
-				</div>
-			<?php } ?>
-			
-			<!-- flickr rss -->	  
-			<?php if (function_exists('get_flickrRSS')) { ?>
-				<div class="all-good">
-				<?php _e( 'Cool! <a href="http://eightface.com/wordpress/flickrrss/" target="_blank">FlickrRSS</a>: Your photos will automatically show on a page called \'Photos\'.', 'wptouch' ); ?>
-				</div>
-			<?php } else { ?>
-				<div class="sort-of">
-				<?php _e( 'You don\'t have <a href="http://eightface.com/wordpress/flickrrss/" target="_blank">FlickrRSS</a> installed (No automatic photos page support)', 'wptouch' ); ?>
-				</div>
-			<?php } ?>
-			
-			<!-- blipit -->
-			<?php if (function_exists('bnc_blipit_head')) { ?>
-				<div class="all-good">
-				<?php _e( 'Cool! <a href="http://www.bravenewcode.com/blipit/" target="_blank">Blip.it</a>: Your videos will automatically show on your posts in iPhone version.', 'wptouch' ); ?>
-				</div>
-			<?php } else { ?>
-				<div class="sort-of">
-				<?php _e( 'You don\'t have <a href="http://www.bravenewcode.com/blipit/" target="_blank">Blip.it</a> installed: (No automatic iPhone compatible video support)', 'wptouch' ); ?>
-				</div>
-			<?php } ?>
-			
-			<!-- wp cache -->		  
-			<?php if (function_exists('wp_cache_is_enabled')) { ?>
-				<div class="sort-of">
-				<?php _e( '<a href="http://mnm.uib.es/gallir/wp-cache-2/" target="_blank">WP-Cache</a> active. If activated, add <em>ipod</em>, <em>iphone</em>, <em>android</em>, <em>dream</em>, <em>blackberry9500</em> and <em>blackberry9530</em> to the list of rejected user agents, then empty the plugin\'s cache.', 'wptouch' ); ?>
-				</div>
-			<?php } else { ?>
-				<div class="all-good">
-				<?php _e( '<a href="http://mnm.uib.es/gallir/wp-cache-2/" target="_blank">WP-Cache</a> inactive. If activated, add <em>ipod</em>, <em>iphone</em>, <em>android</em>, <em>dream</em>, <em>blackberry9500</em> and <em>blackberry9530</em> to the list of rejected user agents, then empty the plugin\'s cache.', 'wptouch' ); ?>
-				</div>
-			<?php } ?>
-						
-			<!-- wp super cache -->
-			<?php if (function_exists('wp_super_cache_footer')) { ?>
-				<div class="sort-of">
-				<?php _e( '<a href="http://ocaoimh.ie/wp-super-cache/" target="_blank">WP Super Cache</a> If activated, enable "mobile support" and add <em>ipod</em>, <em>iphone</em>, <em>android</em>, <em>dream</em>, <em>blackberry9500</em> and <em>blackberry9530</em> to the list of rejected user agents, then empty the plugin\'s cache.', 'wptouch' ); ?>
-				</div>
-			<?php } else { ?>
-				<div class="all-good">
-				<?php _e( '<a href="http://ocaoimh.ie/wp-super-cache/" target="_blank">WP Super Cache</a> inactive. If activated, enable "mobile support" and add <em>ipod</em>, <em>iphone</em>, <em>android</em>, <em>dream</em>, <em>blackberry9500</em> and <em>blackberry9530</em> to the list of rejected user agents, then empty the plugin\'s cache.', 'wptouch' ); ?>
-				</div>
-			<?php } ?>
+			<h4><?php _e( 'Known Plugin Support &amp; Conflicts', 'wptouch' ); ?></h4>
+				<div id="wptouch-plugin-content" style="display:none"></div>				
 		</div><!-- right content -->
 	<div class="wptouch-clearer"></div>
 	</div><!-- postbox -->
