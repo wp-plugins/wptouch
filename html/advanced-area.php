@@ -13,21 +13,21 @@
 		<ul>
 			<li>
 				<input class="checkbox" type="checkbox" name="enable-cats-button" <?php if ( isset( $wptouch_settings['enable-cats-button']) && $wptouch_settings['enable-cats-button'] == 1) echo('checked'); ?> />
-				<label class="label" for="enable-cats-button"><?php _e( "Enable categories in the header", "wptouch" ); ?> <a href="#cats-info" class="wptouch-fancylink">?</a></label>
+				<label class="label" for="enable-cats-button"><?php _e( "Enable Categories select in the header", "wptouch" ); ?> <a href="#cats-info" class="wptouch-fancylink">?</a></label>
 				<div id="cats-info" style="display:none">
 					<h2><?php _e( "More Info", "wptouch" ); ?></h2>
 					<p><?php _e( "This will add a 'Categories' item in the WPtouch sub header beside the Tags and Login link buttons if they are also enabled.", "wptouch" ); ?></p>
-					<p><?php _e( "It will display your top Categories as an option listing.", "wptouch" ); ?></p>
+					<p><?php _e( "It will display your top Categories as a select/drop-down option listing, depending on the device.", "wptouch" ); ?></p>
 				</div>
 			</li>
 			
 			<li>
 				<input class="checkbox" type="checkbox" name="enable-tags-button" <?php if ( isset( $wptouch_settings['enable-tags-button']) && $wptouch_settings['enable-tags-button'] == 1) echo('checked'); ?> />
-				<label class="label" for="enable-tags-button"><?php _e( "Enable tags in the header", "wptouch" ); ?> <a href="#tags-info" class="wptouch-fancylink">?</a></label>
+				<label class="label" for="enable-tags-button"><?php _e( "Enable Tags select in the header", "wptouch" ); ?> <a href="#tags-info" class="wptouch-fancylink">?</a></label>
 				<div id="tags-info" style="display:none">
 					<h2><?php _e( "More Info", "wptouch" ); ?></h2>
 					<p><?php _e( "This will add a 'Tags' item in the WPtouch sub header beside the Categories and Login link buttons if they are also enabled.", "wptouch" ); ?></p>
-					<p><?php _e( "It will display your top Tags as an option listing.", "wptouch" ); ?></p>
+					<p><?php _e( "It will display your top Tags as a select/drop-down option listing, depending on the device.", "wptouch" ); ?></p>
 				</div>
 			</li>
 			
