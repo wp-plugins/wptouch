@@ -1952,6 +1952,54 @@ ul#post-options li a#onext {
 	margin-right: 10px;
 }
 
+/* @group Success */
+
+#prowl-success {
+	color: #eee;
+	text-shadow: #000000 0 -1px 1px;
+	font: bold 16px "Helvetica Neue", Helvetica, Geneva, Arial, sans-serif;
+	text-align: center;
+	background: #000 url(../core/core-images/push-success.png) no-repeat center 50px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	opacity: 0.9;
+	width: 90%;
+	margin-left: 5%;
+	margin-top: 25px;
+	-webkit-border-radius: 15px;
+	-webkit-box-shadow: #444 0px 0px 15px;
+}
+
+#prowl-success p, #prowl-fail p {
+	margin-top: 125px;
+	margin-left: 20%;
+	margin-right: 20%;
+}
+
+#prowl-fail {
+	color: #eee;
+	text-shadow: #000000 0 -1px 1px;
+	font: bold 16px "Helvetica Neue", Helvetica, Geneva, Arial, sans-serif;
+	text-align: center;
+	background: #000 url(../core/core-images/push-fail.png) no-repeat center 50px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	opacity: 0.9;
+	width: 90%;
+	margin-left: 5%;
+	margin-top: 25px;
+	-webkit-border-radius: 15px;
+	-webkit-box-shadow: #444 0px 0px 15px;
+}
+
+
+
+/* @end */
+
 
 
 /* @end */

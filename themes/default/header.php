@@ -14,6 +14,12 @@ include( dirname(__FILE__) . '/../core/core-header.php' );
 </div>
 </noscript>
 
+<?php if (bnc_prowl_did_try_message()) { if (bnc_prowl_message_success()) { ?>
+<div id="prowl-success"><p>Your Push Notification was sent.</p></div>
+	<?php } else { ?>
+<div id="prowl-fail"><p>Your Push Notification cannot be delivered at this time.</p></div>
+<?php } } ?>
+
 <!--#start The Login Overlay -->
 	<div id="wptouch-login">
 		<div id="wptouch-login-inner">
@@ -63,10 +69,3 @@ include( dirname(__FILE__) . '/../core/core-header.php' );
  		
 <!-- #start the wptouch plugin use check -->
 <?php wptouch_core_header_check_use(); ?>
-<?php 
-if (bnc_prowl_did_try_message()) { 
-	if (bnc_prowl_message_success()) {
-	echo "<div id=\"prowl-success\">yes</div>";
-	} else {
-	echo "<div id=\"prowl-fail\">no</div>";
-} } ?>

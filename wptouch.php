@@ -574,7 +574,7 @@ function bnc_is_email_enabled() {
 	return $ids['enable-main-email'];
 }
 
-//Prowl Functions
+// Prowl Functions //
 function wptouch_prowl_direct_message_enabled() {
 	$settings = bnc_wptouch_get_settings();
 	return ( isset( $settings['enable-prowl-message-button'] ) && $settings['enable-prowl-message-button'] && $settings['prowl-api'] );
