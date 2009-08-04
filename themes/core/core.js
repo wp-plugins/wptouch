@@ -35,8 +35,8 @@ if (document.cookie && document.cookie.indexOf("wptouch_switch_cookie") > -1) {
 	}
 }
 
-setTimeout(function() { $wptouch('#prowl-success').fadeOut(350); }, 6500);
-setTimeout(function() { $wptouch('#prowl-fail').fadeOut(350); }, 6500);
+setTimeout(function() { $wptouch('#prowl-success').fadeOut(350); }, 5500);
+setTimeout(function() { $wptouch('#prowl-fail').fadeOut(350); }, 5500);
 
 function wptouch_toggle_text() {
 	$wptouch("p").toggleClass("fontsize");
