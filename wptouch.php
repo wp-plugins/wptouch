@@ -195,7 +195,7 @@ class WPtouchPlugin {
 			$prowl = new Prowl( $api_key, WPTOUCH_PROWL_APPNAME );
 				
 			$this->prowl_output = true;
-			$result = $prowl->add( 	1, $title, $this->wptouch_cleanup_growl( $message ) );	
+			$result = $prowl->add( 	1, $title, $this->wptouch_cleanup_growl( stripslashes( $message ) ) );	
 			
 			if ( $result ) {
 				$this->prowl_success = true;
@@ -220,9 +220,9 @@ class WPtouchPlugin {
 			
 			$result = $prowl->add( 	1, 
 											__( "New Comment", "wptouch" ),
-											'From: '. $this->wptouch_cleanup_growl( $comment->comment_author ) . 
-											"\nE-Mail: ". $this->wptouch_cleanup_growl( $comment->comment_author_email ) .
-											"\nMessage: ". $this->wptouch_cleanup_growl( $comment->comment_content ) 
+											'From: '. $this->wptouch_cleanup_growl( stripslashes( $comment->comment_author ) ) . 
+											"\nE-Mail: ". $this->wptouch_cleanup_growl( stripslashes( $comment->comment_author_email ) ) .
+											"\nMessage: ". $this->wptouch_cleanup_growl( stripslashes( $comment->comment_content ) ) 
 										);			
 		}
 	}
@@ -247,8 +247,8 @@ class WPtouchPlugin {
 				
 				$result = $prowl->add( 	1, 
 												__( "User Registration", "wptouch" ),
-												'Name: '. $this->wptouch_cleanup_growl( $user->user_login ) . 
-												"\nE-Mail: ". $this->wptouch_cleanup_growl( $user->user_email ) 
+												'Name: '. $this->wptouch_cleanup_growl( stripslashes( $user->user_login ) ) . 
+												"\nE-Mail: ". $this->wptouch_cleanup_growl( stripslashes( $user->user_email ) ) 
 											);			
 			}
 		}
