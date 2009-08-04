@@ -5,8 +5,8 @@
 		<h3><?php _e( "Push Notifications Options", "wptouch" ); ?></h3>
 
 			<div class="wptouch-left-content">
-					<p><?php echo sprintf(__( "Here you can configure WPtouch to push selected notifications through your %sProwl%s account to your iPhone or iPod touch.", "wptouch" ), '<a href="http://prowl.weks.net/" target="_blank">','</a>'); ?></p>
-					<p><?php echo sprintf(__( "%sMake sure you generate an API key%s and enter it on the right otherwise no notifications will be pushed to you.", "wptouch" ), '<strong>','</strong>'); ?></p>
+					<p><?php echo sprintf(__( "Here you can configure WPtouch to push selected notifications through your %sProwl%s account to your iPhone, iPod touch and Growl enabled Mac.", "wptouch" ), '<a href="http://prowl.weks.net/" target="_blank">','</a>'); ?></p>
+					<p><?php echo sprintf(__( "%sMake sure you generate a Prowl API key%s and enter it on the right otherwise no notifications will be pushed to you.", "wptouch" ), '<strong>','</strong>'); ?></p>
 			</div><!-- left content -->
 
 			<div class="wptouch-right-content">
