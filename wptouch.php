@@ -283,6 +283,7 @@ class WPtouchPlugin {
 			$title = __( "New Direct Message", "wptouch" );
 			$prowl_message = 'From: '. $this->wptouch_cleanup_growl( $name ) . 
 				"\nE-Mail: ". $this->wptouch_cleanup_growl( $email ) .
+				"\nIP: " . $_SERVER["REMOTE_ADDR"] .
 				"\nMessage: ". $this->wptouch_cleanup_growl( $msg );
 				
 			$this->wptouch_send_prowl_message( $title, $prowl_message );
