@@ -44,7 +44,7 @@
 				<br />
 
 				<ul class="wptouch-make-li-italic">			
-				<li><input name="excluded-cat-ids" class="no-right-margin" type="text" value="<?php $str = $wptouch_settings['excluded-cat-ids']; echo stripslashes($str); ?>" /><?php _e( "Comma separated list of Excluded Categories", "wptouch" ); ?></li>
+				<li><input name="excluded-cat-ids" class="no-right-margin" type="text" value="<?php $str = $wptouch_settings['excluded-cat-ids']; echo stripslashes($str); ?>" /><?php _e( "Comma separated list of ID's, example: -1,-2,-3", "wptouch" ); ?></li>
 				</ul>
 
 				<br />

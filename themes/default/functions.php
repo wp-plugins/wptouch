@@ -89,6 +89,16 @@ function core_header_tag_cloud( $tags, $args = '' ) {
 	return apply_filters( 'core_header_tag_cloud', $return, $tags, $args );
 }
 
+//---------------- Custom Exclude Cats Function ----------------//
+function exclude_category($query) {
+$cats = wptouch_excluded_cats();
+if ( $query->is_home ) {
+$query->set('cat', $cats);
+}
+return $query;
+}
+add_filter('pre_get_posts', 'exclude_category');
+
 
 //---------------- Custom Excerpts Function ----------------//
 function wptouch_trim_excerpt($text) {
