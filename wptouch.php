@@ -430,16 +430,6 @@ function bnc_is_iphone() {
 	$wptouch_plugin->bnc_filter_iphone();
 	return $wptouch_plugin->applemobile;
 }
-
-function bnc_prowl_did_try_message() {
-	global $wptouch_plugin;
-	return $wptouch_plugin->prowl_output;
-}
-
-function bnc_prowl_message_success() {
-	global $wptouch_plugin;
-	return $wptouch_plugin->prowl_success;
-}
   
 // The Automatic Footer Template Switch Code (into "wp_footer()" in regular theme's footer.php)
 function wptouch_switch() {
@@ -584,9 +574,20 @@ function bnc_is_email_enabled() {
 	return $ids['enable-main-email'];
 }
 
+//Prowl Functions
 function wptouch_prowl_direct_message_enabled() {
 	$settings = bnc_wptouch_get_settings();
 	return ( isset( $settings['enable-prowl-message-button'] ) && $settings['enable-prowl-message-button'] && $settings['prowl-api'] );
+}
+
+function bnc_prowl_did_try_message() {
+	global $wptouch_plugin;
+	return $wptouch_plugin->prowl_output;
+}
+
+function bnc_prowl_message_success() {
+	global $wptouch_plugin;
+	return $wptouch_plugin->prowl_success;
 }
   
 function bnc_wp_touch_get_pages() {
