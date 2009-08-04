@@ -461,6 +461,11 @@ function bnc_get_title_image() {
 	return $image;
 }
 
+function wptouch_excluded_cats() {
+	$settings = bnc_wptouch_get_settings();
+	return stripslashes($settings['excluded-cat-ids']);
+}
+
 function bnc_excerpt_enabled() {
 	$ids = bnc_wp_touch_get_menu_pages();
 	return $ids['enable-post-excerpts'];

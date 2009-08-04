@@ -127,6 +127,10 @@
 			$a['enable-regular-default'] = 0;
 		}
 
+		if ( isset($_POST['excluded-cat-ids']) ) {
+			$a['excluded-cat-ids'] = $_POST['excluded-cat-ids'];
+		}
+
 		if ( isset($_POST['adsense-id']) ) {
 			$a['adsense-id'] = $_POST['adsense-id'];
 		}

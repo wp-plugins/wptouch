@@ -11,6 +11,11 @@
 				<h4><?php _e( "Site Title", "wptouch" ); ?></h4>
 				<p><?php _e( "You can shorten your site title here so it won't be truncated by WPtouch.", "wptouch" ); ?></p>
 
+
+
+				<h4><?php _e( "Excluded Categories", "wptouch" ); ?></h4>
+				<p><?php _e( "Choose categories you want excluded from the main post listings in WPtouch.", "wptouch" ); ?></p>
+
 				<h4><?php _e( "Font Options", "wptouch" ); ?></h4>
 				<p><?php _e( "Set the default size and alignment for text.", "wptouch" ); ?></p>
 
@@ -34,6 +39,12 @@
 
 				<ul class="wptouch-make-li-italic">
 					<li><input type="text" class="no-right-margin" name="header-title" value="<?php $str = $wptouch_settings['header-title']; echo stripslashes($str); ?>" /><?php _e( "Site title text", "wptouch" ); ?></li>
+				</ul>
+
+				<br />
+
+				<ul class="wptouch-make-li-italic">			
+				<li><input name="excluded-cat-ids" class="no-right-margin" type="text" value="<?php $str = $wptouch_settings['excluded-cat-ids']; echo stripslashes($str); ?>" /><?php _e( "Comma separated list of Excluded Categories", "wptouch" ); ?></li>
 				</ul>
 
 				<br />

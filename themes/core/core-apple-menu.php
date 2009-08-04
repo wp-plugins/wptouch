@@ -6,7 +6,7 @@
 	<?php } ?>
 <?php } ?>
 
-	<?php if (bnc_is_tags_button_enabled()) { ?>			    
+	<?php if (wptouch_prowl_direct_message_enabled()) { ?>			    
     	<a id="prowlopen" class="top" href="#" onclick="bnc_jquery_prowl_open(); return false;"><?php _e( 'Message Me', 'wptouch' ); ?></a>
 	<?php } ?>
 
