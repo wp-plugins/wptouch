@@ -198,9 +198,9 @@ class WPtouchPlugin {
 			$result = $prowl->add( 	1, $title, $this->wptouch_cleanup_growl( $message ) );	
 			
 			if ( $result ) {
-				$this->prowl_output = true;
+				$this->prowl_success = true;
 			} else {				
-				$this->prowl_output = false;
+				$this->prowl_success = false;
 			}		
 		} else {
 			return false;	
