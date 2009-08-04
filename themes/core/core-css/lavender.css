@@ -1,11 +1,14 @@
-/* @override http://24.36.119.184:9098/wp-content/plugins/wptouch/themes/core/core-css/lavender.css */
+/* @override 
+	http://24.36.119.184:9098/wp-content/plugins/wptouch/themes/core/core-css/lavender.css
+	http://wptouch.com/wp-content/plugins/wptouch/themes/core/core-css/lavender.css
+*/
 
 /* WPtouch Lavender Styles */
 
 /* @group General */
 
-.lavender-wptouch-bg {
-	background: url(lavender/lavender.png) repeat;
+.classic-wptouch-bg, .argyle-wptouch-bg, .horizontal-wptouch-bg, .diagonal-wptouch-bg, .skated-wptouch-bg, .grid-wptouch-bg {
+	background: url(lavender/lavender	.png) repeat;
 }
 
 .post, #wptouch-switch-link, .navigation, #bookmark-box, .comwrap, input#author, input#email, input#url, textarea#comment, form#commentform input#submit {

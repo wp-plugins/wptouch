@@ -1,7 +1,4 @@
 /* @override 
-	http://24.36.119.184:9098/themes/core/core-css/frog/frog.css
-	http://24.36.119.184:9098/wp-content/plugins/wptouch/themes/core/core-css/frog/frog.css
-	http://24.36.119.184:9098/wp-content/plugins/wptouch/themes/core/core-css/frog.css
 	http://wptouch.com/wp-content/plugins/wptouch/themes/core/core-css/frog.css
 */
 
@@ -23,13 +20,19 @@
 	color: #fff;
 	font-size: 12px;
 	font-weight: bold;
-	text-shadow: #14361b 0 -1px 0;
+	text-shadow: #14361b 0 -1px 1px;
 	padding-bottom: 10px;
 	margin-top: 50px;
 }
 
+#footer a {
+	color: #a1dcab !important;
+;
+	
+}
+
 .result-text {
-	color: #fff;
+	color: #fff !important;
 	text-shadow: #eee 1px 1px 0;
 	font-size: 15px;
 	margin-bottom: 10px;
@@ -39,7 +42,7 @@
 }
 
 .result-text-footer {
-	color: #fff;
+	color: #fff !important;
 	text-shadow: #eee 1px 1px 0;
 	letter-spacing: 0;
 	font-size: 15px;
@@ -51,7 +54,7 @@
 }
 
 a.ajax {
-	color: #fff;
+	color: #fff !important;
 	text-shadow: #14361b 0 -1px 0;
 	font-size: 16px;
 	font-weight: bold;
@@ -62,6 +65,43 @@ a.ajax {
 #wptouch-switch-link a {
 	background: url(frog/on.jpg) no-repeat left top;
 }
+
+/* @end */
+
+/* @group Override Defaults */
+
+a.h2 {
+	color: #012d00 !important;
+}
+
+#headerbar, #wptouch-login {
+	background-color: #002302 !important;
+}
+
+#headerbar-title, #headerbar-title a {
+	color: #e7fad6 !important;
+}
+
+#wptouch-menu-inner a:hover {
+	color: #a3ffb0 !important;
+}
+
+#catsmenu-inner a:hover {
+	color: #8effa6 !important;
+}
+
+#drop-fade {
+	background-color: #012d00 !important;
+}
+
+#drop-fade a {
+	color: #edfeca !important;
+}
+
+a, h3#com-head {
+	color: #39794d !important;
+}
+
 
 /* @end */
 
@@ -79,14 +119,9 @@ a.ajax {
 	border-top: 1px solid #2c3429;
 }
 
-.dropper li:last-child {
-	padding-bottom: 9px;
-	border-bottom-width: 0;
-}
-
 .dropper a {
-	text-shadow: #0c110a 0 -1px 0;
-	color: #bbd6b8;
+	text-shadow: #0c110a 0 -1px 1px;
+	color: #e7fad6 !important;
 }
 
 #wptouch-menu-inner a:hover {
@@ -191,7 +226,7 @@ a.post-arrow-down {
 }
 
 ol#commentlist li {
-	background-color: #e2fdea;
+	background-color: #f0fee7;
 }
 
 .comtop {
@@ -200,6 +235,10 @@ ol#commentlist li {
 
 .comhead-open {
 	background-color: #b9e09d !important;
+}
+
+form#commentform p label, h3#respond {
+	text-shadow: #000000 1px -1px 1px !important;
 }
 
 
@@ -254,42 +293,5 @@ ol#commentlist li {
 .month-12 {
 	background-color: #002b00;
 }
-
-/* @end */
-
-/* @group Override Defaults */
-
-a.h2 {
-	color: #012d00 !important;
-}
-
-#headerbar, #wptouch-login {
-	background-color: #002302 !important;
-}
-
-#headerbar-title, #headerbar-title a {
-	color: #fffcd6 !important;
-}
-
-#wptouch-menu-inner a:hover {
-	color: #a3ffb0 !important;
-}
-
-#catsmenu-inner a:hover {
-	color: #8effa6 !important;
-}
-
-#drop-fade {
-	background-color: #012d00 !important;
-}
-
-#drop-fade a {
-	color: #edfeca !important;
-}
-
-a, h3#com-head {
-	color: #39794d !important;
-}
-
 
 /* @end */
