@@ -180,6 +180,18 @@ class WPtouchPlugin {
 		return $msg;	
 	}
 	
+	function wptouch_send_prowl_message( $title, $message ) {
+		if ( isset( $settings['prowl-api'] ) ) {
+			$api_key = $settings['prowl-api'];
+			
+			$prowl = new Prowl( $api_key, WPTOUCH_PROWL_APPNAME );
+				
+			$result = $prowl->add( 	1, $title, $this->wptouch_cleanup_growl( $message ) );			
+		} else {
+			return false;	
+		}
+	}
+	
 	function wptouch_handle_new_comment( $comment_id, $approval_status = '1' ) {
 		$settings = bnc_wptouch_get_settings();
 
