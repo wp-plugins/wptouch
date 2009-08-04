@@ -20,13 +20,6 @@
 							<p><?php echo sprintf(__( "%sVisit the Prowl web admin%s", "wptouch" ), '<a href="http://prowl.weks.net/settings.php" target="_blank">','</a>'); ?> | <?php echo sprintf(__( "%sVisit iTunes and Download Prowl%s", "wptouch" ), '<a href="http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=320876271&amp;mt=8" target="_blank">','</a>'); ?></p>
 						</div>
 					</li>
-					<li><select name="prowl-maximum">
-							<option <?php if ($wptouch_settings['prowl-maximum'] == "five") echo " selected"; ?> value="five"><?php _e( "5", "wptouch" ); ?></option>
-							<option <?php if ($wptouch_settings['prowl-maximum'] == "ten") echo " selected"; ?> value="ten"><?php _e( "10", "wptouch" ); ?></option>
-							<option <?php if ($wptouch_settings['prowl-maximum'] == "twenty") echo " selected"; ?> value="twenty"><?php _e( "20", "wptouch" ); ?></option>
-							<option <?php if ($wptouch_settings['prowl-maximum'] == "fifty") echo " selected"; ?> value="fifty"><?php _e( "50", "wptouch" ); ?></option>
-						   </select>
-						   <?php _e( "Maximum notifications per hour", "wptouch" ); ?></li>
 				</ul>
 			
 				<ul>
@@ -40,8 +33,14 @@
 				</li>
 				<li>
 					<input class="checkbox" type="checkbox" name="enable-prowl-message-button" <?php if ( isset( $wptouch_settings['enable-prowl-message-button']) && $wptouch_settings['enable-prowl-message-button'] == 1) echo('checked'); ?> />
-					<label class="label" for="enable-prowl-message-button"><?php _e( "Allow users to send me direct messages", "wptouch" ); ?></label>
-				</li>				</ul>
+					<label class="label" for="enable-prowl-message-button"><?php _e( "Allow users to send me direct messages", "wptouch" ); ?> <a href="#dm-info" class="wptouch-fancylink">?</a></label>
+						<div id="dm-info" style="display:none">
+						<h2><?php _e( "More Info", "wptouch" ); ?></h2>
+						<p><?php _e( "This enables a new link to a drop-down in the submenu bar for WPtouch ('Message Me').", "wptouch" ); ?></p>
+						<p><?php _e( "When opened, a form is shown for users to fill in. The name, e-mail address, and message area is shown. Thier IP will also be sent to you, in case you want to ban it in the WordPress admin.", "wptouch" ); ?></p>
+						</div>
+					</li>				
+				</ul>
 			</div><!-- right content -->
 		<div class="wptouch-clearer"></div>
 	</div><!-- postbox -->

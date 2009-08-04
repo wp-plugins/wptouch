@@ -95,7 +95,7 @@ $cats = wptouch_excluded_cats();
 $icats = explode( ",", $cats );
 $new_cats = array();
 foreach( $icats as $icat ) {
-	$new_cats[] = "-" . $ichat;
+	$new_cats[] = "-" . $icat;
 }
 $cats = implode( ",",  $new_cats );
 

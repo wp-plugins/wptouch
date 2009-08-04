@@ -19,22 +19,31 @@
 	<?php } ?>
 
  <!-- #start the Prowl Message Area -->
- <div id="prowl-message" style="display:none">
+ <div id="prowl-message">
  <div id="prowl-style-bar"></div>
 	 <img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/themes/core/core-images/push-icon.png" alt="push icon" />
-	 <h4>Send a Push notification</h4>
-	 <p>This message will be pushed to my iPhone immediately.</p>
+	 <h4><?php _e( 'Send a Push Notification', 'wptouch' ); ?></h4>
+	 <p><?php _e( 'This message will be pushed to the admin\'s iPhone immediately.', 'wptouch' ); ?></p>
 	 
 	 <form id="prowl-direct-message" method="post" action="<?php echo $_SERVER['REQUEST_URI']; ?>">
-	 	<label for="prowl-msg-name">Name</label>
-		<input name="prowl-msg-name"  id="prowl-msg-name" type="text" />
-		<label for="prowl-msg-email">E-Mail</label>
-		<input name="prowl-msg-email" id="prowl-msg-email" type="text" />
+
+	 	<p>
+	 		<input name="prowl-msg-name"  id="prowl-msg-name" type="text" />
+	 		<label for="prowl-msg-name"><?php _e( 'Name', 'wptouch' ); ?></label>
+	 	</p>
+
+		<p>
+			<input name="prowl-msg-email" id="prowl-msg-email" type="text" />
+			<label for="prowl-msg-email"><?php _e( 'E-Mail', 'wptouch' ); ?></label>
+		</p>
 
 		<textarea name="prowl-msg-text"></textarea>
+
 		<input type="hidden" name="wptouch-prowl-message" value="1" /> 
-		<input type="submit" name="prowl-submit" value="<?php _e('Send Message', 'wptouch' ); ?>" id="prowl-submit" />
+		<input type="submit" name="prowl-submit" value="<?php _e('Send Now', 'wptouch' ); ?>" id="prowl-submit" />
+	
 	 </form>
+	<div class="clearer"></div>
  </div>
 
  <!-- #start the Categories Select List -->

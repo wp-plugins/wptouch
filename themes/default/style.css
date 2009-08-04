@@ -1900,6 +1900,11 @@ ul#post-options li a#onext {
 	position: relative;
 	margin-bottom: 10px;
 	margin-top: 10px;
+	clear: both;
+}
+
+#prowl-message label {
+	margin-left: 5px;
 }
 
 #prowl-message input {
@@ -1910,6 +1915,17 @@ ul#post-options li a#onext {
 	color: #222;
 	font-weight: bold;
 	border: 1px solid #1b1b1b;
+}
+
+#prowl-message input#prowl-submit {
+	width: 100px;
+	text-align: center;
+	color: #fff;
+	text-shadow: #333 0 -1px 1px;
+	font-weight: bold;
+	border: 1px solid #333;
+	margin-top: 10px;
+	float: right;
 }
 
 #prowl-message textarea {
