@@ -200,11 +200,7 @@ class WPtouchPlugin {
 		}
 	}
 	
-	function wptouch_prowl_direct_message_enabled() {
-		$settings = bnc_wptouch_get_settings();
-		return ( isset( $settings['enable-prowl-message-button'] ) && $settings['enable-prowl-message-button'] );
-	}
-	
+
 	function wptouch_handle_new_user( $user_id ) {
 		$settings = bnc_wptouch_get_settings();
 		
@@ -528,8 +524,12 @@ function bnc_is_rss_enabled() {
 function bnc_is_email_enabled() {
 	$ids = bnc_wp_touch_get_menu_pages();
 	return $ids['enable-main-email'];
-}	
+}
 
+function wptouch_prowl_direct_message_enabled() {
+	$settings = bnc_wptouch_get_settings();
+	return ( isset( $settings['enable-prowl-message-button'] ) && $settings['enable-prowl-message-button'] && $settings['prowl-api'] );
+}
   
 function bnc_wp_touch_get_pages() {
 	global $table_prefix;
