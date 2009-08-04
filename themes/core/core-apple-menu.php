@@ -24,10 +24,12 @@
 	 <img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/themes/core/core-images/push-icon.png" alt="push icon" />
 	 <h4>Send a Push notification</h4>
 	 <p>This message will be pushed to my iPhone immediately.</p>
-	<form>
-	<p><input></input> Name</p>
-	<p><input></input> E-Mail</p>
-	 <textarea></textarea>
+	 
+	 <form id="prowl-direct-message" method="post">
+	<p><input name="prowl-msg-name" type="text" /></input> Name</p>
+	<p><input name="prowl-msg-email" type="text" /><input></input> E-Mail</p>
+	 <textarea name="prowl-msg-text"></textarea>
+		<input type="submit" name="prowl-submit" value="<?php _e('Send Message', 'wptouch' ); ?>" id="prowl-submit" />
 	 </form>
  </div>
 
