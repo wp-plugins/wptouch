@@ -19,8 +19,8 @@
 	<?php } ?>
 
  <!-- #start the Prowl Message Area -->
- <div id="prowl-message">
- <div id="prowl-style-bar"></div>
+ <div id="prowl-message" style="display:none">
+ 	 <div id="prowl-style-bar"></div><!-- filler to get the styling just right -->
 	 <img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/themes/core/core-images/push-icon.png" alt="push icon" />
 	 <h4><?php _e( 'Send a Push Notification', 'wptouch' ); ?></h4>
 	 <p><?php _e( 'This message will be pushed to the admin\'s iPhone immediately.', 'wptouch' ); ?></p>
