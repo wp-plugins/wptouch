@@ -25,10 +25,14 @@
 	 <h4>Send a Push notification</h4>
 	 <p>This message will be pushed to my iPhone immediately.</p>
 	 
-	 <form id="prowl-direct-message" method="post">
-	<p><input name="prowl-msg-name" type="text" /></input> Name</p>
-	<p><input name="prowl-msg-email" type="text" /><input></input> E-Mail</p>
-	 <textarea name="prowl-msg-text"></textarea>
+	 <form id="prowl-direct-message" method="post" action="<?php echo $_SERVER['REQUEST_URI']; ?>">
+	 	<label for="prowl-msg-name">Name</label>
+		<input name="prowl-msg-name"  id="prowl-msg-name" type="text" />
+		<label for="prowl-msg-email">E-Mail</label>
+		<input name="prowl-msg-email" id="prowl-msg-email" type="text" />
+
+		<textarea name="prowl-msg-text"></textarea>
+		<input type="hidden" name="wptouch-prowl-message" value="1" /> 
 		<input type="submit" name="prowl-submit" value="<?php _e('Send Message', 'wptouch' ); ?>" id="prowl-submit" />
 	 </form>
  </div>

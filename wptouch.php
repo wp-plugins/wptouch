@@ -90,13 +90,13 @@ function wptouch_delete_icon( $icon ) {
 	unlink( $loc );
 }
 
-function wptouch_init() {
-	
+function wptouch_init() {	
 	if ( isset( $_GET['delete_icon'] ) ) {
 		wptouch_delete_icon( $_GET['delete_icon'] );
 		header( 'Location: ' . get_bloginfo('wpurl') . '/wp-admin/options-general.php?page=wptouch/wptouch.php#available_icons' );
 		die;
 	}	
+
 }
 
 function wptouch_content_filter( $content ) {
@@ -181,6 +181,10 @@ class WPtouchPlugin {
 	}
 	
 	function wptouch_send_prowl_message( $title, $message ) {
+		require_once( 'class.prowl.php' );		
+		
+		$settings = bnc_wptouch_get_settings();
+				
 		if ( isset( $settings['prowl-api'] ) ) {
 			$api_key = $settings['prowl-api'];
 			
@@ -269,6 +273,20 @@ class WPtouchPlugin {
 		if ( $this->applemobile && $this->desired_view == 'normal' ) {
 			echo "<link rel='stylesheet' type='text/css' href='" . compat_get_plugin_url( 'wptouch' ) . "/themes/core/core-css/wptouch-switch-link.css'></link>\n";
 		}
+				
+		// check for wptouch prowl direct messages		
+		if ( isset( $_POST['wptouch-prowl-message'] ) ) {
+			$email = $_POST['prowl-msg-email'];
+			$name = $_POST['prowl-msg-name'];
+			$msg = $_POST['prowl-msg-text'];
+			
+			$title = __( "New Direct Message", "wptouch" );
+			$prowl_message = 'From: '. $this->wptouch_cleanup_growl( $name ) . 
+				"\nE-Mail: ". $this->wptouch_cleanup_growl( $email ) .
+				"\nMessage: ". $this->wptouch_cleanup_growl( $msg );
+				
+			$this->wptouch_send_prowl_message( $title, $prowl_message );
+		}			
 	}
 
 	function bnc_do_redirect() {
@@ -291,8 +309,9 @@ class WPtouchPlugin {
 	   }
 	}
 
-	function bnc_filter_iphone() {
-		$key = 'wptouch_switch_cookie';
+	function bnc_filter_iphone() {		
+		
+			$key = 'wptouch_switch_cookie';
 		
 	   	if (isset($_GET['theme_view'])) {
 	   		if ($_GET['theme_view'] == 'mobile') {
@@ -314,7 +333,7 @@ class WPtouchPlugin {
 			} else {
 		  		$this->desired_view = 'mobile';
 			}
-		}
+		}		
 	}
 	
 	function detectAppleMobile($query = '') {
