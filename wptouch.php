@@ -153,10 +153,14 @@ class WPtouchPlugin {
 	var $applemobile;
 	var $desired_view;
 	var $output_started;
+	var $prowl_output;
+	var $prowl_success;
 		
 	function WPtouchPlugin() {
 		$this->output_started = false;
 		$this->applemobile = false;
+		$this->prowl_output = false;
+		$this->prowl_success = false;
 
 		add_action( 'plugins_loaded', array(&$this, 'detectAppleMobile') );
 		add_filter( 'stylesheet', array(&$this, 'get_stylesheet') );
@@ -190,7 +194,14 @@ class WPtouchPlugin {
 			
 			$prowl = new Prowl( $api_key, WPTOUCH_PROWL_APPNAME );
 				
-			$result = $prowl->add( 	1, $title, $this->wptouch_cleanup_growl( $message ) );			
+			$this->prowl_output = true;
+			$result = $prowl->add( 	1, $title, $this->wptouch_cleanup_growl( $message ) );	
+			
+			if ( $result ) {
+				$this->prowl_output = true;
+			} else {				
+				$this->prowl_output = false;
+			}		
 		} else {
 			return false;	
 		}
@@ -418,6 +429,16 @@ function bnc_is_iphone() {
 	global $wptouch_plugin;
 	$wptouch_plugin->bnc_filter_iphone();
 	return $wptouch_plugin->applemobile;
+}
+
+function bnc_prowl_did_try_message() {
+	global $wptouch_plugin;
+	return $wptouch_plugin->prowl_output;
+}
+
+function bnc_prowl_message_success() {
+	global $wptouch_plugin;
+	return $wptouch_plugin->prowl_success;
 }
   
 // The Automatic Footer Template Switch Code (into "wp_footer()" in regular theme's footer.php)
