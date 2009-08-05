@@ -1,4 +1,4 @@
-	<?php
+<?php
 /*
    Plugin Name: WPtouch iPhone Theme
    Plugin URI: http://bravenewcode.com/wptouch
@@ -260,7 +260,7 @@ class WPtouchPlugin {
 				$result = $prowl->add( 	1, 
 												__( "User Registration", "wptouch" ),
 												'Name: '. $this->wptouch_cleanup_growl( stripslashes( $user->user_login ) ) . 
-												"\nE-Mail: ". $this->wptouch_cleanup_growl( stripslashes( $user->user_email ) ) 
+												"\nE-Mail: ". $this->wptouch_cleanup_growl( stripslashes( $user->user_email ) )
 											);			
 			}
 		}
@@ -303,7 +303,7 @@ class WPtouchPlugin {
 			$name = $_POST['prowl-msg-name'];
 			$msg = $_POST['prowl-msg-text'];
 			
-			$title = __( "New Direct Message", "wptouch" );
+			$title = __( "Direct Message", "wptouch" );
 			$prowl_message = 'From: '. $this->wptouch_cleanup_growl( $name ) . 
 				"\nE-Mail: ". $this->wptouch_cleanup_growl( $email ) .
 				"\nIP: " . $_SERVER["REMOTE_ADDR"] .
