@@ -10,24 +10,22 @@ You can also checkout our Support Forums at http://support.bravenewcode.com to p
 
 = New In Version 1.9 Beta 9 RC1 //August 4th, 2009 =
 
-Admin:
-- Fully compatible with WordPress 2.8.2
+Theme:
+- Style declaration for closed comments added
 - Filter trackbacks and pingbacks from display in comment counts
 - Custom post page nav links now check if next/prev post exists before showing arrow
 - Added friendly 'noscript' display bezel for users with javascript Turned off
 - Fixed an issue where WP Spam Free users may have had new comments blocked
+- Added Prowl Push notifications direct messages submenu item (if enabled)
+
+Admin:
+- Fully compatible with WordPress 2.8.2
 - Added ability to exclude categories
+- Added and enabled Prowl Push Notifications settings panel
 - Added Prowl Push notifications for comments, user registrations, and direct messages
+- Turned on skin selection support, still no skins enabled yet
 - Plugin compatibility listing now loads from bravenewcode.com for an always 
    up-to-date listing of plugin compatibility and conflicts
-
-Theme:
-- Minor admin refinements, bug fixes, style declaration for closed comments added
-- Updated screenshots for new designs 
-- Added ability to import and install additional official icon sets from the admin
-- Turned on skin selection support, still no skins enabled yet
-- Added and enabled Prowl Push Notifications settings panel
-- Added Prowl Push notifications direct messages submenu item (if enabled)
 
 
 = New In Version 1.9 Beta 8 Series // June 16, 2009 =
