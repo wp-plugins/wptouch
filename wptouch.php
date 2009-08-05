@@ -1,4 +1,4 @@
-<?php
+	<?php
 /*
    Plugin Name: WPtouch iPhone Theme
    Plugin URI: http://bravenewcode.com/wptouch
@@ -7,14 +7,18 @@
 	Version: 1.9b9
 	Author URI: http://www.bravenewcode.com
    
-	# Special thanks to ContentRobot and the iWPhone theme/plugin
+	# Thanks to ContentRobot and the iWPhone theme/plugin
 	# (http://iwphone.contentrobot.com/) which the detection feature
 	# of the plugin was based on.
 	
-	# Copyright (c) 2008-2009 Duane Storey & Dale Mugford of BraveNewCode Inc.
+	# Also thanks to Henrik Urlund, who's "Prowl Me" plugin inspired
+	# the Push notification additions.
+	# (http://codework.dk/referencer/wp-plugins/prowl-me/)
 	
-	# This plugin is free software; you can redistribute it and/or
-	# modify it under the terms of the GNU Lesser General Public
+	#All design & CSS Copyright (c) 2008-2009 Duane Storey & Dale Mugford of BraveNewCode Inc.
+	
+	# This plugin is free software; you can redistribute the code aspects of it and/or
+	# modify the code under the terms of the GNU Lesser General Public
 	# License as published by the Free Software Foundation; either
 	# version 2.1 of the License, or (at your option) any later version.
 	
@@ -36,7 +40,7 @@ $bnc_wptouch_version = '1.9 Beta 9';
 require_once( 'include/plugin.php' );
 require_once( 'include/compat.php' );
 
-define( 'WPTOUCH_PROWL_APPNAME', 'WPtouch' );
+define( 'WPTOUCH_PROWL_APPNAME', 'WPtouch');
 
 //The WPtouch Settings Defaults
 global $wptouch_defaults;
@@ -185,7 +189,7 @@ class WPtouchPlugin {
 	}
 	
 	function wptouch_send_prowl_message( $title, $message ) {
-		require_once( 'class.prowl.php' );		
+		require_once( 'include/class.prowl.php' );		
 		
 		$settings = bnc_wptouch_get_settings();
 				
@@ -213,18 +217,26 @@ class WPtouchPlugin {
 		if ( $approval_status != 'spam' && isset( $settings['prowl-api'] ) && isset( $settings['enable-prowl-comments-button'] ) ) {
 			$api_key = $settings['prowl-api'];
 			
-			require_once( 'class.prowl.php' );
+			require_once( 'include/class.prowl.php' );
 			
 			$comment = get_comment( $comment_id );
 			$prowl = new Prowl( $api_key, WPTOUCH_PROWL_APPNAME );
+			if ($comment->comment_type == 'trackback' || $comment->comment_type == 'pingback') {
 			
 			$result = $prowl->add( 	1, 
-											__( "New Comment", "wptouch" ),
+											__( "New Ping/Trackback", "wptouch" ),
 											'From: '. $this->wptouch_cleanup_growl( stripslashes( $comment->comment_author ) ) . 
-											"\nE-Mail: ". $this->wptouch_cleanup_growl( stripslashes( $comment->comment_author_email ) ) .
-											"\nMessage: ". $this->wptouch_cleanup_growl( stripslashes( $comment->comment_content ) ) 
+											"\nPost: ". $this->wptouch_cleanup_growl( stripslashes( $comment->comment_content ) ) 
 										);			
-		}
+		 	} else {
+			$result = $prowl->add( 	1, 
+											__( "New Comment", "wptouch" ),
+											'Name: '. $this->wptouch_cleanup_growl( stripslashes( $comment->comment_author ) ) . 
+											"\nE-Mail: ". $this->wptouch_cleanup_growl( stripslashes( $comment->comment_author_email ) ) .
+											"\nComment: ". $this->wptouch_cleanup_growl( stripslashes( $comment->comment_content ) )
+										);		 
+		 	}
+		 }
 	}
 	
 
@@ -236,7 +248,7 @@ class WPtouchPlugin {
 			
 			$api_key = $settings['prowl-api'];
 			
-			require_once( 'class.prowl.php' );
+			require_once( 'include/class.prowl.php' );
 			
 			global $table_prefix;
 			$sql = $wpdb->prepare( "SELECT * from " . $table_prefix . "users WHERE ID = %d", $user_id );
@@ -443,7 +455,7 @@ function wptouch_switch() {
 }
   
 function bnc_options_menu() {
-	add_options_page( __( 'WPtouch Theme', 'wptouch' ), 'WPtouch', 9, __FILE__, bnc_wp_touch_page );
+	add_options_page( __( 'WPtouch iPhone Theme', 'wptouch' ), 'WPtouch', 9, __FILE__, bnc_wp_touch_page );
 }
 
 function bnc_wptouch_get_settings() {
@@ -574,7 +586,7 @@ function bnc_is_email_enabled() {
 	return $ids['enable-main-email'];
 }
 
-// Prowl Functions //
+// Prowl Functions
 function wptouch_prowl_direct_message_enabled() {
 	$settings = bnc_wptouch_get_settings();
 	return ( isset( $settings['enable-prowl-message-button'] ) && $settings['enable-prowl-message-button'] && $settings['prowl-api'] );
@@ -589,6 +601,7 @@ function bnc_prowl_message_success() {
 	global $wptouch_plugin;
 	return $wptouch_plugin->prowl_success;
 }
+// End prowl functions
   
 function bnc_wp_touch_get_pages() {
 	global $table_prefix;
@@ -684,8 +697,7 @@ function bnc_wp_touch_page() {
 
 <?php $icons = bnc_get_icon_list(); ?>
 
-<?php require_once( 'include/submit.php' ); ?>
-
+	<?php require_once( 'include/submit.php' ); ?>
 	<form method="post" action="<?php echo $_SERVER['REQUEST_URI']; ?>">
 		<?php require_once( 'html/head-area.php' ); ?>
 		<?php require_once( 'html/general-settings-area.php' ); ?>
@@ -706,7 +718,6 @@ function bnc_wp_touch_page() {
 		<?php echo('' . WPtouch('<div class="wptouch-version"> This is ','</div>') . ''); ?>
 
 	<div class="wptouch-clearer"></div>
-
 </div>
 <?php 
 echo('</div>'); } 

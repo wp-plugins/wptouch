@@ -1,6 +1,5 @@
 /* @override 
 	http://wptouch.com/wp-content/plugins/wptouch/themes/default/style.css
-	http://24.36.119.184:9098/wp-content/plugins/wptouch/themes/default/style.css
 	http://www.bnclocal.com/wp-content/plugins/wptouch/themes/default/style.css
 */
 
@@ -1908,13 +1907,12 @@ ul#post-options li a#onext {
 }
 
 #prowl-message input {
-	width: 40%;
+	width: 60%;
 	-webkit-border-radius: 10px;
 	padding: 3px;
-	font-size: 13px;
 	color: #222;
-	font-weight: bold;
 	border: 1px solid #1b1b1b;
+	font: 14px "Helvetica Neue", Helvetica, Geneva, Arial, sans-serif;
 }
 
 #prowl-message input#prowl-submit {
@@ -1932,13 +1930,12 @@ ul#post-options li a#onext {
 	width: 98%;
 	-webkit-border-radius: 10px;
 	padding: 3px;
-	font-size: 13px;
 	color: #222;
-	font-weight: bold;
 	border: 1px solid #1b1b1b;
 	height: 70px;
 	overflow: auto;
 	margin-top: 2px;
+	font: 14px "Helvetica Neue", Helvetica, Geneva, Arial, sans-serif;
 }
 
 #prowl-message h4 {

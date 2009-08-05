@@ -4,20 +4,21 @@ include( dirname(__FILE__) . '/../core/core-header.php' );
 ?>
 
 <body class="<?php wptouch_core_body_background(); ?>">
+<!-- New noscript check, we need js on now folks -->
 <noscript>
 <div id="noscript-wrap">
 	<div id="noscript">
-		<h2>Notice</h2>
-		<p>JavaScript for Mobile Safari is currently turned off.</p>
-		<p>Turn it on in <em>Settings &rsaquo; Safari</em><br /> to view this website.</p>
+		<h2><?php _e("Notice", "wptouch"); ?></h2>
+		<p><?php _e("JavaScript for Mobile Safari is currently turned off.", "wptouch"); ?></p>
+		<p><?php _e("Turn it on in ", "wptouch"); ?><em><?php _e("Settings &rsaquo; Safari", "wptouch"); ?></em><br /><?php _e(" to view this website.", "wptouch"); ?></p>
 	</div>
 </div>
 </noscript>
-
+<!-- Prowl: if DM is sent, let's tell the user what happened -->
 <?php if (bnc_prowl_did_try_message()) { if (bnc_prowl_message_success()) { ?>
-<div id="prowl-success"><p>Your Push Notification was sent.</p></div>
+<div id="prowl-success"><p><?php _e("Your Push Notification was sent.", "wptouch"); ?></p></div>
 	<?php } else { ?>
-<div id="prowl-fail"><p>Your Push Notification cannot be delivered at this time.</p></div>
+<div id="prowl-fail"><p><?php _e("Your Push Notification cannot be delivered at this time.", "wptouch"); ?></p></div>
 <?php } } ?>
 
 <!--#start The Login Overlay -->

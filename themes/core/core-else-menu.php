@@ -6,7 +6,7 @@
 	<?php } } ?>
 
 	<?php if (wptouch_prowl_direct_message_enabled()) { ?>			    
-    	<a id="prowlopen" class="top" href="#" onclick="bnc_jquery_prowl_open(); return false;"><?php _e( 'Message Me', 'wptouch' ); ?></a>
+    	<a id="prowlopen" class="top" href="#" onclick="bnc_jquery_prowl_open(); return false;"><?php _e( 'Direct Message', 'wptouch' ); ?></a>
 	<?php } ?>
 
 	<?php if (bnc_is_cats_button_enabled()) { ?>			    
@@ -44,7 +44,6 @@
 	 </form>
 	<div class="clearer"></div>
  </div>
-
 
 <!-- #start The Categories Drop Down List -->
 
