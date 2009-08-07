@@ -25,7 +25,7 @@
 	 <h4><?php _e( 'Send a Push Notification', 'wptouch' ); ?></h4>
 	 <p><?php _e( 'This message will be pushed to the admin\'s iPhone immediately.', 'wptouch' ); ?></p>
 	 
-	 <form id="prowl-direct-message" onsubmit="return validate_form(this);" method="post">
+	 <form id="prowl-direct-message" method="post" action="<?php echo $_SERVER['REQUEST_URI']; ?>">
 	 	<p>
 	 		<input name="name"  id="prowl-msg-name" type="text" />
 	 		<label for="name"><?php _e( 'Name', 'wptouch' ); ?></label>
