@@ -299,9 +299,9 @@ class WPtouchPlugin {
 				
 		// check for wptouch prowl direct messages		
 		if ( isset( $_POST['wptouch-prowl-message'] ) ) {
-			$name = $_POST['name'];
-			$email = $_POST['email'];
-			$msg = $_POST['message'];
+			$name = $_POST['prowl-msg-name'];
+			$email = $_POST['prowl-msg-email'];
+			$msg = $_POST['prowl-msg-message'];
 			
 			$title = __( "Direct Message", "wptouch" );
 			$prowl_message = 'From: '. $this->wptouch_cleanup_growl( $name ) . 

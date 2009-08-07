@@ -49,8 +49,8 @@ include( dirname(__FILE__) . '/../core/core-header.php' );
 	<div id="wptouch-menu" class="dropper"> 
  		<div id="wptouch-search-inner">
 			<form method="get" id="searchform" action="<?php bloginfo('home'); ?>/">
-			<input type="text" value="Search..." onfocus="if (this.value == 'Search...') {this.value = ''}" name="s" id="s" /> 
-			<input name="submit" type="hidden" tabindex="5" value="Search"  />
+				<input type="text" value="Search..." onfocus="if (this.value == 'Search...') {this.value = ''}" name="s" id="s" /> 
+				<input name="submit" type="hidden" tabindex="5" value="Search"  />
 			</form>
 		</div>
         <div id="wptouch-menu-inner">
