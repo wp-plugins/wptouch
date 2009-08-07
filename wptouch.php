@@ -4,7 +4,7 @@
    Plugin URI: http://bravenewcode.com/wptouch
    Description: A plugin which formats your site with a mobile theme for the Apple <a href="http://www.apple.com/iphone/">iPhone</a> / <a href="http://www.apple.com/ipodtouch/">iPod touch</a>, <a href="http://www.android.com/">Google Android</a> and other touch-based smartphones.
 	Author: Dale Mugford & Duane Storey
-	Version: 1.9b9
+	Version: 1.9
 	Author URI: http://www.bravenewcode.com
    
 	# Thanks to ContentRobot and the iWPhone theme/plugin
@@ -35,7 +35,7 @@
 
 
 global $bnc_wptouch_version;
-$bnc_wptouch_version = '1.9 Beta 9';
+$bnc_wptouch_version = '1.9';
 
 require_once( 'include/plugin.php' );
 require_once( 'include/compat.php' );
@@ -182,7 +182,7 @@ class WPtouchPlugin {
 		$this->detectAppleMobile();
 	}
 	
-	private function wptouch_cleanup_growl( $msg ) {
+	function wptouch_cleanup_growl( $msg ) {
 		$msg = str_replace("\r\n","\n", $msg);
 		$msg = str_replace("\r","\n", $msg);
 		return $msg;	
@@ -299,15 +299,15 @@ class WPtouchPlugin {
 				
 		// check for wptouch prowl direct messages		
 		if ( isset( $_POST['wptouch-prowl-message'] ) ) {
-			$email = $_POST['prowl-msg-email'];
-			$name = $_POST['prowl-msg-name'];
-			$msg = $_POST['prowl-msg-text'];
+			$name = $_POST['name'];
+			$email = $_POST['email'];
+			$msg = $_POST['message'];
 			
 			$title = __( "Direct Message", "wptouch" );
 			$prowl_message = 'From: '. $this->wptouch_cleanup_growl( $name ) . 
 				"\nE-Mail: ". $this->wptouch_cleanup_growl( $email ) .
-				"\nIP: " . $_SERVER["REMOTE_ADDR"] .
 				"\nMessage: ". $this->wptouch_cleanup_growl( $msg );
+				"\nIP: " . $_SERVER["REMOTE_ADDR"] .
 				
 			$this->wptouch_send_prowl_message( $title, $prowl_message );
 		}			

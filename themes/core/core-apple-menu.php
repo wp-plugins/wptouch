@@ -25,23 +25,20 @@
 	 <h4><?php _e( 'Send a Push Notification', 'wptouch' ); ?></h4>
 	 <p><?php _e( 'This message will be pushed to the admin\'s iPhone immediately.', 'wptouch' ); ?></p>
 	 
-	 <form id="prowl-direct-message" method="post" action="<?php echo $_SERVER['REQUEST_URI']; ?>">
-
+	 <form action="<?php echo $_SERVER['REQUEST_URI']; ?>" id="prowl-direct-message" onsubmit="return validate_form(this);" method="post">
 	 	<p>
-	 		<input name="prowl-msg-name"  id="prowl-msg-name" type="text" />
-	 		<label for="prowl-msg-name"><?php _e( 'Name', 'wptouch' ); ?></label>
+	 		<input name="name"  id="prowl-msg-name" type="text" />
+	 		<label for="name"><?php _e( 'Name', 'wptouch' ); ?></label>
 	 	</p>
 
 		<p>
-			<input name="prowl-msg-email" id="prowl-msg-email" type="text" />
-			<label for="prowl-msg-email"><?php _e( 'E-Mail', 'wptouch' ); ?></label>
+			<input name="email" id="prowl-msg-email" type="text" />
+			<label for="email"><?php _e( 'E-Mail', 'wptouch' ); ?></label>
 		</p>
 
-		<textarea name="prowl-msg-text"></textarea>
-
-		<input type="hidden" name="wptouch-prowl-message" value="1" /> 
+		<textarea name="message"></textarea>
+		<input type="hidden" name="wptouch-prowl-message" value="1" /> 	
 		<input type="submit" name="prowl-submit" value="<?php _e('Send Now', 'wptouch' ); ?>" id="prowl-submit" />
-	
 	 </form>
 	<div class="clearer"></div>
  </div>
