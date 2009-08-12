@@ -85,6 +85,10 @@
 		}
 
 //Prowl
+		if ( isset($_POST['prowl-api']) ) {
+			$a['prowl-api'] = $_POST['prowl-api'];
+		}
+		
 		if ( isset( $_POST['enable-prowl-comments-button'] ) ) {
 			$a['enable-prowl-comments-button'] = 1;
 		} else {
@@ -139,10 +143,6 @@
 			$a['adsense-channel'] = $_POST['adsense-channel'];
 		}		
 
-		if ( isset($_POST['style-text-size']) ) {
-			$a['style-text-size'] = $_POST['style-text-size'];
-		}
-
 		if ( isset($_POST['style-text-justify']) ) {
 			$a['style-text-justify'] = $_POST['style-text-justify'];
 		}
@@ -150,16 +150,7 @@
 		if ( isset($_POST['style-background']) ) {
 			$a['style-background'] = $_POST['style-background'];
 		}
-//Prowl
-		if ( isset($_POST['prowl-maximum']) ) {
-			$a['prowl-maximum'] = $_POST['prowl-maximum'];
-		}
 
-		if ( isset($_POST['prowl-api']) ) {
-			$a['prowl-api'] = $_POST['prowl-api'];
-		}
-//
-		
 		if ( isset( $_POST['enable-exclusive'] ) ) {
 			$a['enable-exclusive'] = 1;	
 		} else {

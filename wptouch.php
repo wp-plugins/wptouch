@@ -53,7 +53,6 @@ $wptouch_defaults = array(
 	'enable-tags-button' => true,
 	'enable-login-button' => false,
 	'enable-redirect' => true,
-	'enable-js-header' => true,
 	'enable-gravatars' => true,
 	'enable-main-home' => true,
 	'enable-main-rss' => true,
@@ -72,9 +71,7 @@ $wptouch_defaults = array(
 	'header-text-color' => 'eeeeee',
 	'link-color' => '006bb3',
 	'style-text-justify' => 'full-justified',
-	'style-text-size' => 'small-text',
 	'style-background' => 'classic-wptouch-bg',
-	'enable-exclusive' => false
 );
 
 function wptouch_get_plugin_dir_name() {
@@ -214,11 +211,14 @@ class WPtouchPlugin {
 	function wptouch_handle_new_comment( $comment_id, $approval_status = '1' ) {
 		$settings = bnc_wptouch_get_settings();
 
-		if ( $approval_status != 'spam' && isset( $settings['prowl-api'] ) && isset( $settings['enable-prowl-comments-button'] ) ) {
+		if ( $approval_status != 'spam' 
+		&& isset( $settings['prowl-api'] ) 
+		&& isset( $settings['enable-prowl-comments-button'])
+		&& $settings['enable-prowl-comments-button'] == 1 ) {
+			
 			$api_key = $settings['prowl-api'];
 			
 			require_once( 'include/class.prowl.php' );
-			
 			$comment = get_comment( $comment_id );
 			$prowl = new Prowl( $api_key, WPTOUCH_PROWL_APPNAME );
 			if ($comment->comment_type == 'trackback' || $comment->comment_type == 'pingback') {
@@ -243,13 +243,13 @@ class WPtouchPlugin {
 	function wptouch_handle_new_user( $user_id ) {
 		$settings = bnc_wptouch_get_settings();
 		
-		if ( isset( $settings['prowl-api'] ) && isset( $settings['enable-prowl-users-button'] ) ) {
-			global $wpdb;
-			
+		if ( isset( $settings['prowl-api'] ) 
+		&& isset( $settings['enable-prowl-users-button'] ) 
+		&& $settings['enable-prowl-users-button'] == 1 ) {
+
+			global $wpdb;			
 			$api_key = $settings['prowl-api'];
-			
 			require_once( 'include/class.prowl.php' );
-			
 			global $table_prefix;
 			$sql = $wpdb->prepare( "SELECT * from " . $table_prefix . "users WHERE ID = %d", $user_id );
 			$user = $wpdb->get_row( $sql );
@@ -546,7 +546,7 @@ function bnc_is_login_button_enabled() {
 	return $ids['enable-login-button'];
 }		
 
-function bnc_is_redirect_enable() {
+function bnc_is_redirect_enabled() {
 	$ids = bnc_wp_touch_get_menu_pages();
 	return $ids['enable-redirect'];
 }
