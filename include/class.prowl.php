@@ -2,8 +2,8 @@
 
 class Prowl
 {
-   $apikey;
-   $application;
+   var $apikey;
+   var $application;
    
    function Prowl($apikey, $application)
    {
