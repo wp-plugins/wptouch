@@ -2,8 +2,8 @@
 
 class Prowl
 {
-   private $apikey;
-   private $application;
+   $apikey;
+   $application;
    
    function Prowl($apikey, $application)
    {
@@ -45,7 +45,7 @@ class Prowl
       $this->request('https://prowl.weks.net/publicapi/verify', $options);
    }
    
-   private function request($file, $options)
+   function request($file, $options)
    {
       $url = $file;
       

@@ -8,6 +8,17 @@ Please visit http://bravenewcode.com/wptouch/ for a full description & updates o
 
 You can also checkout our Support Forums at http://support.bravenewcode.com to post questions and learn tips and tricks for *WPtouch* and our other plugins.
 
+
+= New In Version 1.9 Beta 9 RC2 //August 12th, 2009 =
+
+- Javascript bug in mail button on post page
+- Push notification options not respected in the admin are fixed (when turned off push was still active)
+- Minor code corrections and obsolete settings removed
+- Fixed colorpicker black image bug
+- Moved ip to bottom of comments so that more text shows in an alert
+- Fixed calls to private functions in wptouch.php (line 185), class.prowl.php (line5)
+
+
 = New In Version 1.9 Beta 9 RC1 //August 4th, 2009 =
 
 Theme:
