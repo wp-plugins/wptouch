@@ -1,6 +1,6 @@
 <?php
 // This relative path will find what we need... kinda dirty, but it's a failsafe
-require_once( dirname(__FILE__) . '../../../../../../wp-blog-header.php' ); 
+require_once( dirname(__FILE__) . '../../../../../../wp-load.php' ); 
 // Make sure the server returns the fact that this is a real file and it exists, even though its outside WordPress
 header("HTTP/1.1 200 OK");
 
