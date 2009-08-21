@@ -210,15 +210,11 @@ class WPtouchPlugin {
 	
 	function wptouch_handle_new_comment( $comment_id, $approval_status = '1' ) {
 		$settings = bnc_wptouch_get_settings();
-
-	echo 'here ';
-
+		
 		if ( $approval_status != 'spam' 
 		&& isset( $settings['prowl-api'] ) 
 		&& isset( $settings['enable-prowl-comments-button'])
 		&& $settings['enable-prowl-comments-button'] == 1 ) {
-			
-			echo 'in here';
 			
 			$api_key = $settings['prowl-api'];
 			
@@ -226,7 +222,6 @@ class WPtouchPlugin {
 			$comment = get_comment( $comment_id );
 			$prowl = new Prowl( $api_key, WPTOUCH_PROWL_APPNAME );
 			
-			echo 'made it';
 			if ($comment->comment_type == 'trackback' || $comment->comment_type == 'pingback') {
 			
 			$result = $prowl->add( 	1, 
@@ -243,8 +238,7 @@ class WPtouchPlugin {
 										);		 
 		 	}
 		 }
-		 
-		 die;
+
 	}
 	
 
