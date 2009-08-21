@@ -371,13 +371,15 @@ class WPtouchPlugin {
 			$useragents = array(		
 			"iphone",  
 			"ipod", 
-			"aspen", 		// iPhone simulator
-			"dream", 		// Pre 1.5 Android
-			"android", 	// 1.5+ Android
-			"cupcake", 	// 1.5+ Android
+			"aspen", 		 // iPhone simulator
+			"dream", 		 // Pre 1.5 Android
+			"android", 	 // 1.5+ Android
+			"cupcake", 	 // 1.5+ Android
 			"blackberry9500", 
 			"blackberry9530",
-			"incognito", 
+			"opera mini", //Experimental
+			"webos",		 //Experimental
+			"incognito",
 			"webmate"
 		);
 		$devfile =  compat_get_plugin_dir( 'wptouch' ) . '/include/developer.mode';

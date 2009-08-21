@@ -6,13 +6,13 @@ Requires at least: 2.6
 Tested up to: 2.8.4
 Stable tag: 1.8.9.1
 
-WPtouch automatically transforms your WordPress blog into an iPhone application-style theme, complete with ajax loading articles and effects, when viewed from an iPhone, iPod touch, Android or BlackBerry touch mobile device.
+WPtouch automatically transforms your WordPress blog into an iPhone application-style theme, complete with ajax loading articles and effects, when viewed from an iPhone, iPod touch, Android, Opera Mini, Palm Pre and BlackBerry Storm mobile devices.
 
 == Description ==
 
 With a single click, *WPtouch* transforms your WordPress blog into an iPhone application-style theme, complete with ajax loading articles and effects, when viewed from an iPhone, iPod touch, Android or BlackBerry touch mobile device.
 
-The admin panel allows you to customize many aspects of its appearance, and deliver a fast, user-friendly and stylish version of your site to your iPhone, iPod touch, Android or BlackBerry Storm visitors without modifying a single bit of code (or affecting) your regular desktop theme.
+The admin panel allows you to customize many aspects of its appearance, and deliver a fast, user-friendly and stylish version of your site to your iPhone, iPod touch, Android, Opera Mini mobile, Palm Pre and BlackBerry Storm visitors without modifying a single bit of code (or affecting) your regular desktop theme.
 
 The theme also includes the ability for your visitors to easily switch between the *WPtouch* view and your site's regular theme.
 
@@ -20,70 +20,55 @@ The theme also includes the ability for your visitors to easily switch between t
 
 = Version 1.9 =
 
+* Fully compatible with WordPress 2.6 - 2.8.x
+* Major rewrites of theme files, css for simplicity, CoreTheme
 * Adsense has been temporarily disabled until we update code for new Google API changes
-* Fixed ajax in admin menu not working
-* Style declaration for closed comments added
-* Filter trackbacks and pingbacks from display in comment counts
-* Custom post page nav links now check if next/prev post exists before showing arrow
+* Added experimental support for Opera Mini & Palm Pre mobile browsers
+* Added filter trackbacks and pingbacks from display in comment counts
 * Added friendly 'noscript' display bezel for users with javascript Turned off
-* Fixed an issue where WP Spam Free users may have had new comments blocked
-* Added Prowl Push notifications direct messages submenu item (if enabled)
-* Fully compatible with WordPress 2.8.x
+* Added support for Prowl Push notifications for comments, user registrations, and direct messages (if Curl exists on the server)
 * Added ability to exclude categories
-* Added and enabled Prowl Push Notifications settings panel
-* Added Prowl Push notifications for comments, user registrations, and direct messages
-* Turned on skin selection support, still no other skins enabled yet
-* Plugin compatibility listing now loads from bravenewcode.com for an always 
-   up-to-date listing of plugin compatibility and conflicts
+* Added native select for Tags
 * Added theme switch confirm message, saves a cookie to not repeat
-* Changed default theme styles for images (now load as background images)
-* Made sprites for small theme images to load quicker
-* Updated style for comments, building support for WP 2.7 comments (replies, threading, pagination) not active yet
-* Updated success message for ajax comments
-* Added fix for WPtouch appearing zoomed out and wide
-* Font zoom replaced by font-size adjust button
-* Post-options bar added
-* Check if comments are open before showing the comments link
-* Local jquery in exclusive mode not Google
-* Deleted unused theme images
-* New background selections
-* Another fix for some domains not showing the beta download/news areas
-* Admin style refinements, settings bezels
 * Added jQuery color picker in admin hex areas for easy selections
-* Updated Ajax Upload script to 3.2
-* Search now floats overtop the headerbar
-* No longer using the_content_rss() for excerpts, created a custom function which handles it nicely
-* Home link in menu drop down now respects the logo/bookmark icon choice
-* Fixed the way javascript is called for a elements, should work better in other mobile browsers
-* Some code cleanups here and there
-* Moved several images into the core images folder, building more dependency on CoreTheme
-* Dropped support for WordPress 2.3, lowest known WordPress version supported: 2.6
-* Fix for custom page icons not showing up on pages
-* Removed unused images
-* Removed some default icons
 * Added link to online icon generator in admin
-* Fixed device//width mobileSafari bug
-* Fixed style issue for icons on pages
 * Added style declaration for images in comments
 * Added 'My Account' button in the sub//header for logged in users replacing 'Logout'
-* Fixed issue where chosen pages and icons did not appear in the drop down
-* Removed 404 image with English text in it, replaced it with localized 404 text
+* Added theme skin selection support, still no other skins enabled yet
+* Added post-options bar on single post page
+* Added new background selections
+* Updated plugin compatibility listing now loads from bravenewcode.com
+* Updated style for comments, working on full support for WP 2.7 comments, Intense Debate
+* Updated success message for ajax comments
+* Updated font zoom replaced by font-size adjust button
 * Updated ajax upload script to v3.1
 * Updated fancybox to compressed v1.2.1
-* Fixed a few areas that had text not yet localized, improperly coded
+* Updated Ajax Upload script to 3.2
+* Updated compatibility code (Various WordPress install scenarios) ~ thanks to Will Norris for the suggestions
+* Updated a check if comments are open before showing the comments link
+* Updated local jquery in exclusive mode to use WP, not Google
+* Updated admin style and design
+* Updated search now floats overtop the headerbar
+* Updated the_content_rss() for excerpts, created a custom function which handles it nicely
+* Updated several images in the core images folder, building more dependency on CoreTheme
+* Removed support for WordPress 2.3, lowest known WordPress version supported: 2.6
+* Removed 404 image with English text in it, replaced it with localized 404 text
 * Removed depreciated or unused functions from previous releases
 * Removed ability to disable jQuery; WPtouch Exclusive mode should fix JS issues
-* Added native select for Tags
-* Updated compatibility code (Various WordPress install scenarios) ~ thanks to Will Norris for the suggestions
-* Modified AJAX calls for better WP compatibility
-* Made it so administration CSS/JS only loads on WPtouch page
+* Fixed home link in menu drop down now respects the logo/bookmark icon choice
+* Fixed WP Spam Free users having had new comments blocked
+* Fixed WPtouch appearing zoomed out and wide
+* Fixed custom page icons not showing up on pages
+* Fixed some domains not showing the beta download/news areas
+* Fixed style issue for icons on pages
+* Fixed the way javascript is called for a elements, should work better in other mobile browsers
+* Fixed switch link issue where regular theme switch link was broken
+* Fixed issue where chosen pages and icons did not appear in the drop down
 * Fixed a variety of scenarios where paths to files and images were broken
-* Updated social bookmarking icons
+* Fixed a few areas that had text not yet localized, improperly coded
 * More preparation for languages support
 * Preparation for WPtouch 2.0 and themes support (based on CoreTheme)
-* Fixed switch link issue where regular theme switch link was broken
-* Major re//writes of theme files, css for simplicity, CoreTheme
-* Updates to default theme style
+* Other minor optimizations, fixes, changes
 
 
 (Here's the complete changelog for past versions)

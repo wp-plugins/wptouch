@@ -74,8 +74,8 @@
 				<label class="label" for="enable-exclusive"> <?php _e( "Enable WPtouch exclusive mode", "wptouch" ); ?> <a href="#exclusive-info" class="wptouch-fancylink">?</a></label>
 					<div id="exclusive-info" style="display:none">
 						<h2><?php _e( "More Info", "wptouch" ); ?></h2>
-						<p><?php _e( "Disallows other plugins from loading into WPtouch.", "wptouch" ); ?></p> 
-						<p><?php _e( "Fixes difficult to fix incompatibilities and speeds up WPtouch.", "wptouch" ); ?></p>
+						<p><?php _e( "Attempts to disallow other plugins from loading into WPtouch.", "wptouch" ); ?></p> 
+						<p><?php _e( "Sometimes fixes difficult to fix incompatibilities and speeds up WPtouch.", "wptouch" ); ?></p>
 						<p><?php _e( "Some plugins load conflicting javascript, extra CSS style sheets, and other functional code into your theme to accomplish what they add to your site. As WPtouch works complete on its own without any other plugin installed, in some cases (where you have several plugins or find something doesn't work right with WPtouch) you may want to enable Exclusive Mode to ensure that WPtouch works properly, and loads quickly for mobile users.", "wptouch" ); ?></p>
 					</div>
 			</li>
