@@ -70,7 +70,7 @@
 <script type="text/javascript">
 	setTimeout(function() { 	
 		jQuery.ajax({
-			url: "<?php get_bloginfo('siteurl'); ?>/?wptouch=plugins",
+			url: "<?php get_bloginfo('wpurl'); ?>/?wptouch=plugins",
 			success: function(data) {$j("#wptouch-plugin-content").html(data).fadeIn(350);}
 		});
 	}, 1500);

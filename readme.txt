@@ -3,7 +3,7 @@ Contributors: BraveNewCode
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=paypal%40bravenewcode%2ecom&item_name=WPtouch%20Beer%20Fund&no_shipping=0&no_note=1&tax=0&currency_code=CAD&lc=CA&bn=PP%2dDonationsBF&charset=UTF%2d8
 Tags: wptouch, iphone, ipod touch, theme, apple, mac, bravenewcode, ajax, mobile, mobile, android, blackberry
 Requires at least: 2.6
-Tested up to: 2.8
+Tested up to: 2.8.4
 Stable tag: 1.8.9.1
 
 WPtouch automatically transforms your WordPress blog into an iPhone application-style theme, complete with ajax loading articles and effects, when viewed from an iPhone, iPod touch, Android or BlackBerry touch mobile device.
@@ -17,6 +17,74 @@ The admin panel allows you to customize many aspects of its appearance, and deli
 The theme also includes the ability for your visitors to easily switch between the *WPtouch* view and your site's regular theme.
 
 == What's New ==
+
+= Version 1.9 =
+
+* Adsense has been temporarily disabled until we update code for new Google API changes
+* Fixed ajax in admin menu not working
+* Style declaration for closed comments added
+* Filter trackbacks and pingbacks from display in comment counts
+* Custom post page nav links now check if next/prev post exists before showing arrow
+* Added friendly 'noscript' display bezel for users with javascript Turned off
+* Fixed an issue where WP Spam Free users may have had new comments blocked
+* Added Prowl Push notifications direct messages submenu item (if enabled)
+* Fully compatible with WordPress 2.8.x
+* Added ability to exclude categories
+* Added and enabled Prowl Push Notifications settings panel
+* Added Prowl Push notifications for comments, user registrations, and direct messages
+* Turned on skin selection support, still no other skins enabled yet
+* Plugin compatibility listing now loads from bravenewcode.com for an always 
+   up-to-date listing of plugin compatibility and conflicts
+* Added theme switch confirm message, saves a cookie to not repeat
+* Changed default theme styles for images (now load as background images)
+* Made sprites for small theme images to load quicker
+* Updated style for comments, building support for WP 2.7 comments (replies, threading, pagination) not active yet
+* Updated success message for ajax comments
+* Added fix for WPtouch appearing zoomed out and wide
+* Font zoom replaced by font-size adjust button
+* Post-options bar added
+* Check if comments are open before showing the comments link
+* Local jquery in exclusive mode not Google
+* Deleted unused theme images
+* New background selections
+* Another fix for some domains not showing the beta download/news areas
+* Admin style refinements, settings bezels
+* Added jQuery color picker in admin hex areas for easy selections
+* Updated Ajax Upload script to 3.2
+* Search now floats overtop the headerbar
+* No longer using the_content_rss() for excerpts, created a custom function which handles it nicely
+* Home link in menu drop down now respects the logo/bookmark icon choice
+* Fixed the way javascript is called for a elements, should work better in other mobile browsers
+* Some code cleanups here and there
+* Moved several images into the core images folder, building more dependency on CoreTheme
+* Dropped support for WordPress 2.3, lowest known WordPress version supported: 2.6
+* Fix for custom page icons not showing up on pages
+* Removed unused images
+* Removed some default icons
+* Added link to online icon generator in admin
+* Fixed device//width mobileSafari bug
+* Fixed style issue for icons on pages
+* Added style declaration for images in comments
+* Added 'My Account' button in the sub//header for logged in users replacing 'Logout'
+* Fixed issue where chosen pages and icons did not appear in the drop down
+* Removed 404 image with English text in it, replaced it with localized 404 text
+* Updated ajax upload script to v3.1
+* Updated fancybox to compressed v1.2.1
+* Fixed a few areas that had text not yet localized, improperly coded
+* Removed depreciated or unused functions from previous releases
+* Removed ability to disable jQuery; WPtouch Exclusive mode should fix JS issues
+* Added native select for Tags
+* Updated compatibility code (Various WordPress install scenarios) ~ thanks to Will Norris for the suggestions
+* Modified AJAX calls for better WP compatibility
+* Made it so administration CSS/JS only loads on WPtouch page
+* Fixed a variety of scenarios where paths to files and images were broken
+* Updated social bookmarking icons
+* More preparation for languages support
+* Preparation for WPtouch 2.0 and themes support (based on CoreTheme)
+* Fixed switch link issue where regular theme switch link was broken
+* Major re//writes of theme files, css for simplicity, CoreTheme
+* Updates to default theme style
+
 
 (Here's the complete changelog for past versions)
 
@@ -211,7 +279,7 @@ The theme also includes the ability for your visitors to easily switch between t
 
 == Installation ==
 
-= Pre 2.7 =
+= 2.6 =
 Download, unzip, and upload the 'wptouch' folder and all its contents to your WordPress wp-content/plugins folder using FTP. Visit the plugin tab in the WordPress admin, and activate *WPtouch*. You can then setup your plugin options by visiting the *Settings - >WPtouch* tab.
 
 = 2.7+ =
@@ -238,18 +306,16 @@ There's a mobile switch option in the footer on *WPtouch* for your users to easi
 
 = Will it slow down my blog, or increase my server load? =
 
-Not bloody likely! Unless of course you're getting slammed with all sorts of traffic because you've installed this sexy thang. The entire theme files package for *WPtouch* is small (300kb or so without the screenshots in the download). It was designed to be as lightweight and speedy as possible, while still serving your site's content in a richly presented way, sparing no essential features like search, login, categories, tags, comments etc.
+Not bloody likely! Unless of course you're getting slammed with all sorts of traffic because you've installed this sexy thang. The entire theme files package for *WPtouch* is small. It was designed to be as lightweight and speedy as possible, while still serving your site's content in a richly presented way, sparing no essential features like search, login, categories, tags, comments etc.
 
 == Screenshots ==
 
 1. Posts on the front page
 2. Drop down menu navigation
-3. Single post page w/ YouTube video
-4. Post meta data, mail, social bookmarking and navigation
-5. Comment box (ajax powered)
-6. Links with automatic favicon support
-7. Archives page with tag cloud & monthly list 
-8. Sample post with image auto-size
-9. Built-in 'e-mail post' capability
-10. WordPress Photo Gallery & Post Nav Support
-11. Theme switch link appearance
+3. Push Messaging
+4. iPhone native select support for tags & categories
+5. Single post page post meta, options bar, comments
+6. Ajax comment form
+7. Switch link in the footer
+8. Archives page appearance (auto-generated if you have a page called 'Archives')
+9. Sample regular page

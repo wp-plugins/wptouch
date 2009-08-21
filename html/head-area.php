@@ -2,14 +2,14 @@
 <script type="text/javascript">
 	setTimeout(function() { 	
 		jQuery.ajax({
-			url: "<?php get_bloginfo('siteurl'); ?>/?wptouch=news",
+			url: "<?php get_bloginfo('wpurl'); ?>/?wptouch=news",
 			success: function(data) {$j("#wptouch-news-content").html(data).fadeIn(350);}
 		});
 	}, 750);
 
 	setTimeout(function() { 	
 		jQuery.ajax({
-			url: "<?php get_bloginfo('siteurl'); ?>/?wptouch=beta",
+			url: "<?php get_bloginfo('wpurl'); ?>/?wptouch=beta",
 			success: function(data) {$j("#wptouch-beta-content").html(data).fadeIn(350);}
 		});
 	}, 1250);

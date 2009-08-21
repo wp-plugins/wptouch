@@ -36,12 +36,6 @@
 			$a['enable-login-button'] = 0;
 		}
 
-		if ( isset($_POST['enable-redirect'] ) ) {
-			$a['enable-redirect'] = 1;
-		} else {
-			$a['enable-redirect'] = 0;
-		}
-
 		if ( isset( $_POST['enable-gravatars'] ) ) {
 			$a['enable-gravatars'] = 1;
 		} else {
