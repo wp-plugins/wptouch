@@ -1,5 +1,19 @@
 <?php global $wptouch_settings; ?>
+<script type="text/javascript">
+	setTimeout(function() { 	
+		jQuery.ajax({
+			url: "<?php get_bloginfo('siteurl'); ?>/?wptouch=news",
+			success: function(data) {$j("#wptouch-news-content").html(data).fadeIn(350);}
+		});
+	}, 750);
 
+	setTimeout(function() { 	
+		jQuery.ajax({
+			url: "<?php get_bloginfo('siteurl'); ?>/?wptouch=beta",
+			success: function(data) {$j("#wptouch-beta-content").html(data).fadeIn(350);}
+		});
+	}, 1250);
+</script>
 <div class="metabox-holder" id="wptouch-head">
 	<div class="postbox">
 		<div id="wptouch-head-colour">

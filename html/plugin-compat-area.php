@@ -67,6 +67,14 @@
 				?>
 				
 			<h4><?php _e( 'Known Plugin Support &amp; Conflicts', 'wptouch' ); ?></h4>
+<script type="text/javascript">
+	setTimeout(function() { 	
+		jQuery.ajax({
+			url: "<?php get_bloginfo('siteurl'); ?>/?wptouch=plugins",
+			success: function(data) {$j("#wptouch-plugin-content").html(data).fadeIn(350);}
+		});
+	}, 1500);
+</script>
 				<div id="wptouch-plugin-content" style="display:none"></div>				
 		</div><!-- right content -->
 	<div class="wptouch-clearer"></div>

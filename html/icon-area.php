@@ -21,6 +21,16 @@
 					<a href="#" onclick="alert('This does nothing yet');return false;"><img src="<?php echo compat_get_plugin_url( 'wptouch' ) . '/images/extras.png'; ?>" alt="extras" /></a>
 				</div> 
 
+<script type="text/javascript">
+	new Ajax_upload('#upload_button', {
+		action: '<?php get_bloginfo('siteurl'); ?>/?wptouch=upload',
+		autoSubmit: true,
+		name: 'submitted_file',
+		onSubmit: function(file, extension) { $j("#upload_progress").show(); },
+		onComplete: function(file, response) { $j("#upload_progress").hide();
+		$j('#upload_response').hide().html(response).fadeIn(); }
+	});
+</script>
 
 			<div id="upload_response"></div>
 				<div id="upload_progress" style="display:none">
