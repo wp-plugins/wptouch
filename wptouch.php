@@ -101,10 +101,10 @@ function wptouch_init() {
 }
 
 function wptouch_content_filter( $content ) {
+	global $wptouch_plugin;
 	$settings = bnc_wptouch_get_settings();
-	if (bnc_is_iphone() && $wptouch_plugin->desired_view == 'mobile' && isset($settings['adsense-id']) && strlen($settings['adsense-id']) && is_single() ) {
+	if ( bnc_is_iphone() && $wptouch_plugin->desired_view == 'mobile' && isset($settings['adsense-id']) && strlen($settings['adsense-id']) && is_single() ) {
 		require_once( 'include/adsense.php' );
-		
 		$channel = '';
 		if ( isset($settings['adsense-channel']) ) {
 			$channel = $settings['adsense-channel'];
@@ -211,16 +211,22 @@ class WPtouchPlugin {
 	function wptouch_handle_new_comment( $comment_id, $approval_status = '1' ) {
 		$settings = bnc_wptouch_get_settings();
 
+	echo 'here ';
+
 		if ( $approval_status != 'spam' 
 		&& isset( $settings['prowl-api'] ) 
 		&& isset( $settings['enable-prowl-comments-button'])
 		&& $settings['enable-prowl-comments-button'] == 1 ) {
+			
+			echo 'in here';
 			
 			$api_key = $settings['prowl-api'];
 			
 			require_once( 'include/class.prowl.php' );
 			$comment = get_comment( $comment_id );
 			$prowl = new Prowl( $api_key, WPTOUCH_PROWL_APPNAME );
+			
+			echo 'made it';
 			if ($comment->comment_type == 'trackback' || $comment->comment_type == 'pingback') {
 			
 			$result = $prowl->add( 	1, 
@@ -237,6 +243,8 @@ class WPtouchPlugin {
 										);		 
 		 	}
 		 }
+		 
+		 die;
 	}
 	
 
@@ -702,7 +710,7 @@ function bnc_wp_touch_page() {
 		<?php require_once( 'html/head-area.php' ); ?>
 		<?php require_once( 'html/general-settings-area.php' ); ?>
 		<?php require_once( 'html/advanced-area.php' ); ?>
-		<?php require_once( 'html/push-area.php' ); ?>
+		<?php if ( function_exists( 'curl_init' ) ) { require_once( 'html/push-area.php' ); } ?>
 		<?php require_once( 'html/style-area.php' ); ?>
 		<?php require_once( 'html/icon-area.php' ); ?>
 		<?php require_once( 'html/page-area.php' ); ?>
