@@ -4,7 +4,7 @@
    Plugin URI: http://bravenewcode.com/wptouch
    Description: A plugin which formats your site with a mobile theme for the Apple <a href="http://www.apple.com/iphone/">iPhone</a> / <a href="http://www.apple.com/ipodtouch/">iPod touch</a>, <a href="http://www.android.com/">Google Android</a> and other touch-based smartphones.
 	Author: Dale Mugford & Duane Storey
-	Version: 1.9
+	Version: 1.9.1
 	Author URI: http://www.bravenewcode.com
    
 	# Thanks to ContentRobot and the iWPhone theme/plugin
@@ -35,7 +35,7 @@
 
 
 global $bnc_wptouch_version;
-$bnc_wptouch_version = '1.9';
+$bnc_wptouch_version = '1.9.1';
 
 require_once( 'include/plugin.php' );
 require_once( 'include/compat.php' );
@@ -224,17 +224,17 @@ class WPtouchPlugin {
 			if ($comment->comment_type == 'trackback' || $comment->comment_type == 'pingback') {
 			
 			$result = $prowl->add( 	1, 
-											__( "New Ping/Trackback", "wptouch" ),
-											'From: '. $this->wptouch_cleanup_growl( stripslashes( $comment->comment_author ) ) . 
-											"\nPost: ". $this->wptouch_cleanup_growl( stripslashes( $comment->comment_content ) ) 
-										);			
+					__( "New Ping/Trackback", "wptouch" ),
+					'From: '. $this->wptouch_cleanup_growl( stripslashes( $comment->comment_author ) ) . 
+					"\nPost: ". $this->wptouch_cleanup_growl( stripslashes( $comment->comment_content ) ) 
+				);			
 		 	} else {
 			$result = $prowl->add( 	1, 
-											__( "New Comment", "wptouch" ),
-											'Name: '. $this->wptouch_cleanup_growl( stripslashes( $comment->comment_author ) ) . 
-											"\nE-Mail: ". $this->wptouch_cleanup_growl( stripslashes( $comment->comment_author_email ) ) .
-											"\nComment: ". $this->wptouch_cleanup_growl( stripslashes( $comment->comment_content ) )
-										);		 
+					__( "New Comment", "wptouch" ),
+					'Name: '. $this->wptouch_cleanup_growl( stripslashes( $comment->comment_author ) ) . 
+					"\nE-Mail: ". $this->wptouch_cleanup_growl( stripslashes( $comment->comment_author_email ) ) .
+					"\nComment: ". $this->wptouch_cleanup_growl( stripslashes( $comment->comment_content ) )
+				);		 
 		 	}
 		 }
 
@@ -256,13 +256,12 @@ class WPtouchPlugin {
 			$user = $wpdb->get_row( $sql );
 			
 			if ( $user ) {
-				$prowl = new Prowl( $api_key, WPTOUCH_PROWL_APPNAME );
-				
+				$prowl = new Prowl( $api_key, WPTOUCH_PROWL_APPNAME );	
 				$result = $prowl->add( 	1, 
-												__( "User Registration", "wptouch" ),
-												'Name: '. $this->wptouch_cleanup_growl( stripslashes( $user->user_login ) ) . 
-												"\nE-Mail: ". $this->wptouch_cleanup_growl( stripslashes( $user->user_email ) )
-											);			
+					__( "User Registration", "wptouch" ),
+					'Name: '. $this->wptouch_cleanup_growl( stripslashes( $user->user_login ) ) . 
+					"\nE-Mail: ". $this->wptouch_cleanup_growl( stripslashes( $user->user_email ) )
+				);			
 			}
 		}
 	}
@@ -319,18 +318,13 @@ class WPtouchPlugin {
 	   if ( $this->applemobile && $this->desired_view == 'mobile' ) {
 			$version = (float)get_bloginfo('version');
 			$is_front = 0;
-			
-			if ( $version <= 2.3 ) {
-				$is_front = (is_home() && (bnc_get_selected_home_page() > 0));
-			} else {
-				$is_front = (is_front_page() && (bnc_get_selected_home_page() > 0));
-			}
-			
+			$is_front = (is_front_page() && (bnc_get_selected_home_page() > 0));
+
 			if ( $is_front ) {
-	         $url = get_permalink( bnc_get_selected_home_page() );
-	         header('Location: ' . $url);
-	         die;
-	      }
+	    	     $url = get_permalink( bnc_get_selected_home_page() );
+	        	 header('Location: ' . $url);
+	         	die;
+	   	     }
 	   }
 	}
 
@@ -365,9 +359,8 @@ class WPtouchPlugin {
 		$container = $_SERVER['HTTP_USER_AGENT'];
 		// The below prints out the user agent array. Uncomment to see it shown on the page.
 		// print_r($container); 
-		
-		// Add whatever user agents you want here to the array if you want to make this show on a Blackberry 
-		// or something. No guarantees it'll look pretty, though!
+		// Add whatever user agents you want here to the array if you want to make this show on another device.
+		// No guarantees it'll look pretty, though!
 			$useragents = array(		
 			"iphone",  
 			"ipod", 
@@ -437,7 +430,7 @@ class WPtouchPlugin {
 }
   
 global $wptouch_plugin;
-$wptouch_plugin = & new WPtouchPlugin();
+$wptouch_plugin = new WPtouchPlugin();
 
 //Thanks to edyoshi:
 function bnc_is_iphone() {
@@ -723,5 +716,5 @@ add_action('wp_footer', 'wptouch_switch');
 add_action('admin_head', 'wptouch_admin_files');
 add_action('admin_menu', 'bnc_options_menu'); 
 add_action('the_content', 'wptouch_content_filter');
-add_filter( 'plugin_action_links', 'wptouch_settings_link', 10, 2 );
+add_filter( 'plugin_action_links', 'wptouch_settings_link', 9, 2 );
 ?>

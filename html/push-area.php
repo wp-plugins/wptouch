@@ -1,5 +1,4 @@
 <?php global $wptouch_settings; ?>
-
 <div class="metabox-holder">
 	<div class="postbox" id="push-area">
 		<h3><?php _e( "Push Notification Options", "wptouch" ); ?></h3>

@@ -18,6 +18,13 @@ The theme also includes the ability for your visitors to easily switch between t
 
 == What's New ==
 
+= Version 1.9.1 =
+
+* Adsense re-enabled
+* CSS Spacing around page numbers for mutli-page articles increased
+* Push Notifications area now announces if Curl is not available, instead of not appearing at all
+* Minor code corrections
+
 = Version 1.9 =
 
 * Fully compatible with WordPress 2.6 - 2.8.x
