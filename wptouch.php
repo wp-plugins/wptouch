@@ -221,7 +221,7 @@ class WPtouchPlugin {
 			$comment = get_comment( $comment_id );
 			$prowl = new Prowl( $api_key, WPTOUCH_PROWL_APPNAME );
 			
-			if ($comment->comment_type == 'trackback' || $comment->comment_type == 'pingback') {
+			if ( ( $comment->comment_type == 'trackback' || $comment->comment_type == 'pingback' ) && $comment->comment_approved != 'spam' ) {
 			
 			$result = $prowl->add( 	1, 
 					__( "New Ping/Trackback", "wptouch" ),
