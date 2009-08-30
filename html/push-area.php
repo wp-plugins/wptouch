@@ -10,7 +10,7 @@
 
 			<div class="wptouch-right-content">
 				<ul class="wptouch-make-li-italic">
-				<?php if ( !function_exists( 'curl_init' ) ) { ?>
+				<?php if ( function_exists( 'curl_init' ) ) { ?>
 					<li>
 						<input name="prowl-api" type="text" value="<?php echo $wptouch_settings['prowl-api']; ?>" /><?php _e( "Prowl API Key", "wptouch" ); ?> (<?php echo sprintf(__( "%sCreate a key now%s", "wptouch" ), '<a href="https://prowl.weks.net/settings.php" target="_blank">','</a>'); ?> - <a href="#prowl-info" class="wptouch-fancylink">?</a>)
 						<div id="prowl-info" style="display:none">
