@@ -22,9 +22,9 @@ The theme also includes the ability for your visitors to easily switch between t
 
 * Adsense re-enabled
 * CSS Spacing around page numbers for mutli-page articles increased
-* Push Notifications area now announces if Curl is not available, instead of not appearing at all
+* Push Notification options now announces if Curl is not available, instead of not appearing at all
 * Minor code corrections
-* Fixed bug where SPAM comments were PUSHed via Growl
+* Fixed bug where SPAM comments were pushed via Prowl
 
 = Version 1.9 =
 

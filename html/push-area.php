@@ -10,6 +10,7 @@
 
 			<div class="wptouch-right-content">
 				<ul class="wptouch-make-li-italic">
+				<?php if ( !function_exists( 'curl_init' ) ) { ?>
 					<li>
 						<input name="prowl-api" type="text" value="<?php echo $wptouch_settings['prowl-api']; ?>" /><?php _e( "Prowl API Key", "wptouch" ); ?> (<?php echo sprintf(__( "%sCreate a key now%s", "wptouch" ), '<a href="https://prowl.weks.net/settings.php" target="_blank">','</a>'); ?> - <a href="#prowl-info" class="wptouch-fancylink">?</a>)
 						<div id="prowl-info" style="display:none">
@@ -38,7 +39,10 @@
 						<p><?php _e( "This enables a new link to a drop-down in the submenu bar for WPtouch ('Message Me').", "wptouch" ); ?></p>
 						<p><?php _e( "When opened, a form is shown for users to fill in. The name, e-mail address, and message area is shown. Thier IP will also be sent to you, in case you want to ban it in the WordPress admin.", "wptouch" ); ?></p>
 						</div>
-					</li>				
+					</li>			
+					<?php } else { ?>
+					<li><strong class="no-pages"><?php echo sprintf(__( "%sCURL is required%s on your werbserver to use the Push capabilities of WPtouch.", "wptouch" ), '<a href="http://en.wikipedia.org/wiki/CURL" target="_blank">','</a>'); ?></strong></li>
+					<?php } ?>	
 				</ul>
 			</div><!-- right content -->
 		<div class="wptouch-clearer"></div>

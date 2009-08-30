@@ -62,13 +62,13 @@
 		<div class="skins-desc" id="lavender-skin" style="display:none">
 			<p><?php _e( "Lavender features lush deep plum purples.", "wptouch" ); ?></p>
 			<p><?php _e( "There are no configurable options for this skin.", "wptouch" ); ?></p>
-			<img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/images/skins/lavender.jpg" alt="" />
+			<!-- <img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/images/skins/lavender.jpg" alt="" /> -->
 		</div>
 
 		<div class="skins-desc" id="frog-skin" style="display:none">
 			<p><?php _e( "Frog is all about greens.", "wptouch" ); ?></p>
 			<p><?php _e( "There are no configurable options for this skin.", "wptouch" ); ?></p>
-			<img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/images/skins/frog.jpg" alt="" />
+			<!-- <img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/images/skins/frog.jpg" alt="" /> -->
 		</div>
 
 		</div><!-- right content -->

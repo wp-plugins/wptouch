@@ -693,7 +693,7 @@ function bnc_wp_touch_page() {
 		<?php require_once( 'html/head-area.php' ); ?>
 		<?php require_once( 'html/general-settings-area.php' ); ?>
 		<?php require_once( 'html/advanced-area.php' ); ?>
-		<?php if ( function_exists( 'curl_init' ) ) { require_once( 'html/push-area.php' ); } ?>
+		<?php require_once( 'html/push-area.php' ); ?>
 		<?php require_once( 'html/style-area.php' ); ?>
 		<?php require_once( 'html/icon-area.php' ); ?>
 		<?php require_once( 'html/page-area.php' ); ?>

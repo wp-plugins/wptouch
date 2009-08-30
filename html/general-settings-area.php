@@ -17,7 +17,7 @@
 				<p><?php _e( "Choose categories you want excluded from the main post listings in WPtouch.", "wptouch" ); ?></p>
 
 				<h4><?php _e( "Font Options", "wptouch" ); ?></h4>
-				<p><?php _e( "Set the default size and alignment for text.", "wptouch" ); ?></p>
+				<p><?php _e( "Set the alignment for text.", "wptouch" ); ?></p>
 
 				<br /><br />
 				
@@ -50,13 +50,7 @@
 				<br />
 
 				<ul class="wptouch-make-li-italic">
-					<li><select name="style-text-size">
-							<option <?php if ($wptouch_settings['style-text-size'] == "small-text") echo " selected"; ?> value="small-text"><?php _e( "Regular", "wptouch" ); ?></option>
-							<option <?php if ($wptouch_settings['style-text-size'] == "medium-text") echo " selected"; ?> value="medium-text"><?php _e( "Medium", "wptouch" ); ?></option>
-							<option <?php if ($wptouch_settings['style-text-size'] == "large-text") echo " selected"; ?> value="large-text"><?php _e( "Large", "wptouch" ); ?></option>
-						   </select>
-						   <?php _e( "Font size", "wptouch" ); ?>
-					</li>
+
 					<li><select name="style-text-justify">
 							<option <?php if ($wptouch_settings['style-text-justify'] == "left-justified") echo " selected"; ?> value="left-justified"><?php _e( "Left", "wptouch" ); ?></option>
 							<option <?php if ($wptouch_settings['style-text-justify'] == "full-justified") echo " selected"; ?> value="full-justified"><?php _e( "Full", "wptouch" ); ?></option>
