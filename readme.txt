@@ -24,6 +24,7 @@ The theme also includes the ability for your visitors to easily switch between t
 * Adsense re-enabled
 * Fixed bug where SPAM comments were pushed via Prowl
 * Push Notification options now announces if Curl is not available, instead of not appearing at all
+* Removed text-size adjust option, now replaced with user-adjustable font sizes
 * Minor code corrections
 
 = Version 1.9 =
