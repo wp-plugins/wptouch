@@ -18,6 +18,10 @@ The theme also includes the ability for your visitors to easily switch between t
 
 == What's New ==
 
+= Version 1.9.2.1 =
+* Added check for wp-load.php before attempting ajax comments. Should fix WP comment posting issues. Working on better Disqus and Intense Debate support as well.
+
+
 = Version 1.9.2 =
 * Fixed bug where WPtouch admin would report that CURL wasn't installed even if it was
 

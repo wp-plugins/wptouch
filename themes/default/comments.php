@@ -31,7 +31,8 @@ $oddcomment = 'alt';
 									</div>  
 								</div><!--end comtop-->
 								<div class="combody">  
-									<?php comment_text(); ?>
+									<?php comment_text(); //delete_comment_link(get_comment_ID()); ?>
+									
 								</div>
 						</div><!--end comwrap-->
 					</li>
