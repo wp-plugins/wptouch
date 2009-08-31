@@ -20,7 +20,8 @@ The theme also includes the ability for your visitors to easily switch between t
 
 = Version 1.9.2.1 =
 * Added check for wp-load.php before attempting ajax comments. Should fix WP comment posting issues. Working on better Disqus and Intense Debate support as well.
-
+* Removed 'Find in this page' button, until bugs are resolved
+* Now WPtouch will not hide addressbar on single post pages, for readers on slower connections (page won't awkwardly bump them to the top when reading an article)
 
 = Version 1.9.2 =
 * Fixed bug where WPtouch admin would report that CURL wasn't installed even if it was
