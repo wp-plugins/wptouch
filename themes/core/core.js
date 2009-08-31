@@ -15,6 +15,10 @@ if (top.location!= self.location) {top.location = self.location.href}
 $wptouch = jQuery.noConflict();
 
 
+/////// -- Hide addressbar on page load -- ///////
+function wptouch_initScreen() { setTimeout("window.scrollTo(0,1);",100); }
+
+
 /////// -- Switch Magic -- ///////
 function wptouch_switch_confirmation() {
 if (document.cookie && document.cookie.indexOf("wptouch_switch_cookie") > -1) {

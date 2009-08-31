@@ -12,16 +12,4 @@
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/style.css" type="text/css" media="screen" />
 	<!--<link rel="stylesheet" href="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/themes/core/core-css/lavender.css" type="text/css" />-->
 	<?php wptouch_core_header_styles(); wptouch_core_header_enqueue(); ?>
-	<?php if (!is_single()) { ?>
-	<script type="text/javascript">
-	/////// -- Hide addressbar on page load -- ///////
-	addEventListener('load', function() {
-		setTimeout(hideAddressBar, 0);
-	}, false);
-	function hideAddressBar() {
-		window.scrollTo(0, 1);
-	}
-}
-</script>
-<?php } ?>
 </head>
