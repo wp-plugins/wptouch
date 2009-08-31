@@ -25,6 +25,7 @@ body {
 	padding: 0;
 	font: 12px Helvetica;
 	-webkit-text-size-adjust: none;
+	min-height: 460px;
 }
 
 ul {
