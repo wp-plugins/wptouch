@@ -599,6 +599,39 @@ a.h2 {
 	text-shadow: #535353 0 -1px 1px;
 }
 
+.main-navigation {
+	-webkit-border-radius: 8px;
+	background-color: #fff;
+	margin-bottom: 12px;
+	position: relative;
+	margin-right: 10px;
+	margin-left: 10px;
+	border: 1px solid #b1b1b1;
+	overflow: hidden;
+	font-weight: bold;
+	padding: 10px;
+}
+
+.main-navigation .alignleft a {
+	float: left;
+	display: block;
+	background: url(../core/core-images/sprite.png) no-repeat 0 -46px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	padding-left: 23px;
+}
+
+.main-navigation .alignright a {
+	float: right;
+	display: block;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	padding-right: 35px;
+	background: url(../core/core-images/sprite.png) no-repeat right -26px;
+	position: relative;
+	left: 15px;
+}
+
 /* @group Calendar CSS Icons */
 
 .calendar {

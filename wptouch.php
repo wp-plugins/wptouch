@@ -4,7 +4,7 @@
    Plugin URI: http://bravenewcode.com/wptouch
    Description: A plugin which formats your site with a mobile theme for the Apple <a href="http://www.apple.com/iphone/">iPhone</a> / <a href="http://www.apple.com/ipodtouch/">iPod touch</a>, <a href="http://www.android.com/">Google Android</a> and other touch-based smartphones.
 	Author: Dale Mugford & Duane Storey
-	Version: 1.9.2.1
+	Version: 1.9.2.2
 	Author URI: http://www.bravenewcode.com
    
 	# Thanks to ContentRobot and the iWPhone theme/plugin
@@ -35,7 +35,7 @@
 
 
 global $bnc_wptouch_version;
-$bnc_wptouch_version = '1.9.2.1';
+$bnc_wptouch_version = '1.9.2.2';
 
 require_once( 'include/plugin.php' );
 require_once( 'include/compat.php' );
@@ -295,6 +295,7 @@ class WPtouchPlugin {
 	function bnc_head() {
 		if ( $this->applemobile && $this->desired_view == 'normal' ) {
 			echo "<link rel='stylesheet' type='text/css' href='" . compat_get_plugin_url( 'wptouch' ) . "/themes/core/core-css/wptouch-switch-link.css'></link>\n";
+			echo "<meta name=\"viewport\" content=\"initial-scale=auto; maximum-scale=auto; user-scalable=1;\" /> \n";
 		}
 				
 		// check for wptouch prowl direct messages		
@@ -362,18 +363,18 @@ class WPtouchPlugin {
 		// Add whatever user agents you want here to the array if you want to make this show on another device.
 		// No guarantees it'll look pretty, though!
 			$useragents = array(		
-			"iphone",  
-			"ipod", 
-			"aspen", 		 // iPhone simulator
-			"dream", 		 // Pre 1.5 Android
-			"android", 	 // 1.5+ Android
-			"cupcake", 	 // 1.5+ Android
-			"blackberry9500", 
-			"blackberry9530",
-			"opera mini", //Experimental
-			"webos",		 //Experimental
-			"incognito",
-			"webmate"
+			"iphone",  				 // Apple iPhone
+			"ipod", 					 // Apple iPod touch
+			"aspen", 				 // iPhone simulator
+			"dream", 				 // Pre 1.5 Android
+			"android", 			 // 1.5+ Android
+			"cupcake", 			 // 1.5+ Android
+			"blackberry9500",	 // Storm
+			"blackberry9530",	 // Storm
+			"opera mini", 		 // Experimental
+			"webos",				 // Experimental
+			"incognito", 			 // Other iPhone browser
+			"webmate" 			 // Other iPhone browser
 		);
 		$devfile =  compat_get_plugin_dir( 'wptouch' ) . '/include/developer.mode';
 		$this->applemobile = false;
@@ -619,7 +620,7 @@ function bnc_wp_touch_get_pages() {
 	$results = false;
 
 	if ( count( $keys ) > 0 ) {
-		$query = "select * from {$table_prefix}posts where ID in (" . implode(',', $keys) . ") order by post_title asc";
+		$query = "select * from {$table_prefix}posts where ID in (" . implode(',', $keys) . ") and post_status = 'publish' order by post_title asc";
 		$results = $wpdb->get_results( $query, ARRAY_A );
 	}
 

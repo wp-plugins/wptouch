@@ -1,5 +1,5 @@
 /*
- * WPtouch 1.9 -The WPtouch Core jS File
+ * WPtouch 1.9 -The WPtouch Core JS File
  * This file holds all the default jQuery & Ajax functions for the theme
  * Copyright (c) 2008-2009 Duane Storey & Dale Mugford (BraveNewCode Inc.)
  * Licensed under GPL.

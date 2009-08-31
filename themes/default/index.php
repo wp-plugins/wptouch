@@ -48,6 +48,7 @@
 
     <?php endwhile; ?>	
 
+<?php if (!function_exists('dsq_comments_template') && !function_exists('id_comments_template')) { ?>
 
 	<div id="call<?php echo md5($_SERVER['REQUEST_URI']); ?>" class="ajax-load-more">
 		<div id="spinner<?php echo md5($_SERVER['REQUEST_URI']); ?>" class="spin"	 style="display:none"></div>
@@ -57,6 +58,16 @@
 	</div>
 	<div id="ajaxentries<?php echo md5($_SERVER['REQUEST_URI']); ?>"></div>
 	
+<?php } else { ?>
+				<div class="main-navigation">
+					<div class="alignleft">
+						<?php previous_posts_link( __( 'Newer Entries', 'wptouch') ) ?>
+					</div>
+					<div class="alignright">
+						<?php next_posts_link( __('Older Entries', 'wptouch')) ?>
+					</div>
+				</div>
+<?php } ?>
 </div><!-- #End post -->
 
 <?php else : ?>
