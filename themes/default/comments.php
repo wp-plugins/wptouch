@@ -72,7 +72,8 @@ $oddcomment = 'alt';
 
 	<?php else : ?>
   	
-	<?php if (!function_exists('cas_register_post')) { ?>
+	<?php $filename = ABSPATH . 'wp-load.php';
+	 if (!function_exists('cas_register_post') && file_exists($filename)) { ?>
 
 		<div id="refresher" style="display:none;">
 			<img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/images/good.png" alt="checkmark" />
