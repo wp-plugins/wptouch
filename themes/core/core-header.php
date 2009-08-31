@@ -23,4 +23,5 @@
 	}
 }
 </script>
+<?php } ?>
 </head>
