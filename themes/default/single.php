@@ -44,7 +44,7 @@
 bloginfo('name'); ?>- <?php the_title();?>&body=<?php _e( "Check out this post:", "wptouch" ); ?>%20<?php the_permalink() ?>" onclick="return confirm('<?php _e( "Mail a link to this post?", "wptouch" ); ?>');" id="omail"></a></li>
 		<li><a href="javascript:return false;" onclick="wptouch_toggle_twitter();" id="otweet"></a></li>
 		<li><a href="javascript:return false;" onclick="wptouch_toggle_bookmarks();" id="obook"></a></li>
-		<li><a href="javascript:var%20db=document.body,sb='%3Cspan%20style=\'background-color:#FFFF00;\'%3E',tm=prompt('Find%20text%20on%20this%20page:'),sm='/('+escape(tm)+')/gi',se='%3C/span%3E';void(db.innerHTML=db.innerHTML.replace(eval(sm),sb+'$1'+se));" id="osearch"></a></li>
+		<!-- <li><a href="javascript:var%20db=document.body,sb='%3Cspan%20style=\'background-color:#FFFF00;\'%3E',tm=prompt('Find%20text%20on%20this%20page:'),sm='/('+escape(tm)+')/gi',se='%3C/span%3E';void(db.innerHTML=db.innerHTML.replace(eval(sm),sb+'$1'+se));" id="osearch"></a></li> -->
 		<li><a href="javascript:return false;" onclick="wptouch_toggle_text();" id="otext"></a></li>
 		<?php $nextPost = get_next_post(); if ($nextPost) { ?>
 			<li><a href="<?php $nextPost = get_next_post(false); $nextURL = get_permalink($nextPost->ID); echo $nextURL; ?>" id="onext"></a></li>

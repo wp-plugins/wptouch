@@ -4,20 +4,16 @@
  * Copyright (c) 2008-2009 Duane Storey & Dale Mugford (BraveNewCode Inc.)
  * Licensed under GPL.
  *
- * Last Updated: August 1st, 2009
+ * Last Updated: August 31st, 2009
  */
 
 /////// -- Get out of frames! -- ///////
 if (top.location!= self.location) {top.location = self.location.href}
 
-/////// -- Hide addressbar on page load -- ///////
-addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
-	function hideURLbar(){
-		window.scrollTo(0,1);
-	}
 
 /////// -- Let's play nice in jQuery -- ///////
 $wptouch = jQuery.noConflict();
+
 
 /////// -- Switch Magic -- ///////
 function wptouch_switch_confirmation() {
@@ -42,23 +38,6 @@ function wptouch_toggle_text() {
 	$wptouch("p").toggleClass("fontsize");
 }
 
-
-//function validate_email(field,alerttxt) {
-//with (field) {
-//  apos=value.indexOf("@");
-//  dotpos=value.lastIndexOf(".");
-//  if (apos<1||dotpos-apos<2)
-//    {alert(alerttxt);return false;}
-//  else {return true;}
-//  }
-//}
-//
-//function validate_form(thisform) {
-//with (thisform) {
-//  if (validate_email(email,"Not a valid e-mail address. We need one to contact you back.")==false)
-//    {email.focus();return false;}
-//  }
-//}
 
 /////// -- Menus -- ///////
 // Creating a new function, fadeToggle()
@@ -93,7 +72,7 @@ function bnc_jquery_acct_open() {
 
 /////// -- Ajax comments -- ///////
 function bnc_showhide_coms_toggle() {
-	$wptouch('#commentlist').fadeToggle(400);
+	$wptouch('#commentlist').fadeToggle(350);
 	$wptouch("img#com-arrow").toggleClass("com-arrow-down");
 	$wptouch("h3#com-head").toggleClass("comhead-open");
 }
