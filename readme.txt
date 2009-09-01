@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=paypa
 Tags: wptouch, iphone, ipod touch, theme, apple, mac, bravenewcode, ajax, mobile, mobile, android, blackberry
 Requires at least: 2.6
 Tested up to: 2.8.4
-Stable tag: 1.9.2.1
+Stable tag: 1.9.2.2
 
 WPtouch automatically transforms your WordPress blog into an iPhone application-style theme, complete with ajax loading articles and effects, when viewed from an iPhone, iPod touch, Android, Opera Mini, Palm Pre and BlackBerry Storm mobile devices.
 
