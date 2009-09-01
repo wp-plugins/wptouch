@@ -19,6 +19,9 @@ The theme also includes the ability for your visitors to easily switch between t
 == What's New ==
 
 = Version 1.9.2.2 =
+* Fixed issue where regular theme view would not allow pinching for zoom
+
+= Version 1.9.2.2 =
 * Fixed issue where mobile switch to regular theme was always zoomed in and required refresh
 * Fixed issue where pages changed from published to unpublished still showed in the WPtouch menu
 * Fixed issue where 'Load More Entries' caused blank page or other issues. WPtouch now detect possible issues and defaults to pagination
