@@ -27,7 +27,7 @@ $oddcomment = 'alt';
 									<?php if (bnc_is_gravatars_enabled()) { echo get_avatar( $comment, $size = '32', $default = '' . compat_get_plugin_url( 'wptouch' ) . '/themes/core/core-images/blank_gravatar.jpg' ); } ?>
 									<div class="com-author"><?php comment_author_link(); ?></div> 	<?php if ($comment->comment_approved == '0') : echo '<span>(moderation preview)</span>'; endif; ?>
 									<div class="comdater">
-										<?php $d = (time() - strtotime(get_comment_date('F jS, Y')))/(60*60*24); if ($d < 1) echo (' ' . comment_time('h:ia') . ' '); else if ($d < 2) echo floor($d) . ' day ago'; else echo floor($d) . ' days ago'; ?>
+										<?php $d = (time() - strtotime(get_comment_time('F jS, Y')))/(60*60*24); if ($d < 1) echo (' ' . comment_time('h:ia') . ' '); else if ($d < 2) echo floor($d) . ' day ago'; else echo floor($d) . ' days ago'; ?>
 									</div>  
 								</div><!--end comtop-->
 								<div class="combody">  

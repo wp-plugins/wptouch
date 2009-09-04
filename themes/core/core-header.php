@@ -9,4 +9,13 @@
 	<link rel="apple-touch-icon" href="<?php echo bnc_get_title_image(); ?>" />
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/style_min.css" type="text/css" media="screen" />
 	<?php wptouch_core_header_styles(); wptouch_core_header_enqueue(); ?>
+	<?php if (!is_single()) { ?>
+<script type="text/javascript">
+	addEventListener("load", function() { 
+		setTimeout(hideURLbar, 0); }, false);
+		function hideURLbar(){
+		window.scrollTo(0,1);
+	}
+</script>
+<?php } ?>
 </head>

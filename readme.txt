@@ -18,8 +18,11 @@ The theme also includes the ability for your visitors to easily switch between t
 
 == What's New ==
 
-= Version 1.9.2.2 =
+= Version 1.9.2.3 =
 * Fixed issue where regular theme view would not allow pinching for zoom
+* FIxed JS bug in theme
+* Possible fix for time since on comments not working in some situations
+* Added option to disable Ajax comments for those who can't get them working
 
 = Version 1.9.2.2 =
 * Fixed issue where mobile switch to regular theme was always zoomed in and required refresh
