@@ -18,7 +18,7 @@ The theme also includes the ability for your visitors to easily switch between t
 
 == What's New ==
 
-= Version 1.9.2.3 =
+= Version 1.9.3 =
 * Fixed issue where regular theme view would not allow pinching for zoom
 * FIxed JS bug in theme
 * Possible fix for time since on comments not working in some situations

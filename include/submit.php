@@ -42,6 +42,12 @@
 			$a['enable-gravatars'] = 0;
 		}
 
+		if ( isset( $_POST['enable-ajax-comments'] ) ) {
+			$a['enable-ajax-comments'] = 1;
+		} else {
+			$a['enable-ajax-comments'] = 0;
+		}
+		
 		if ( isset( $_POST['enable-main-home'] ) ) {
 			$a['enable-main-home'] = 1;
 		} else {

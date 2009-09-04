@@ -40,6 +40,21 @@
 					<p><?php _e( "It will display a username/password drop-down, allowing users to login plus be automatically re-directed back to the page they logged in from without seeing the WP admin.", "wptouch" ); ?></p>
 					<p><?php _e( "Once logged in, a new 'My Account' button will appear. The 'My Account' button shows useful links depending on the type of account (subscriber, admin, etc.).", "wptouch" ); ?></p>
 				</div>
+			<br /><br /></li>
+
+			<li>
+				<input class="checkbox" type="checkbox" name="enable-ajax-comments" <?php if (isset($wptouch_settings['enable-ajax-comments']) && $wptouch_settings['enable-ajax-comments'] == 1) echo('checked'); ?> />
+				<label class="label" for="enable-ajax-comments"> <?php _e( "Enable ajax for comments", "wptouch" ); ?> <a href="#ajax-com-info" class="wptouch-fancylink">?</a></label>
+							<div id="ajax-com-info" style="display:none">
+					<h2><?php _e( "More Info", "wptouch" ); ?></h2>
+					<p><?php _e( "When this option is checked, comments are submitted and returned in real time using Ajax.", "wptouch" ); ?></p>
+					<p><?php _e( "However, some server enviornments and other WordPress plugins prevent WPtouch's implementation of Ajax comments. Uncheck this option if you're having problems.", "wptouch" ); ?></p>
+				</div>
+			</li>
+
+			<li>
+				<input class="checkbox" type="checkbox" name="enable-gravatars" <?php if (isset($wptouch_settings['enable-gravatars']) && $wptouch_settings['enable-gravatars'] == 1) echo('checked'); ?> />
+				<label class="label" for="enable-gravatars"> <?php _e( "Enable gravatars in comments", "wptouch" ); ?></label>
 			</li>
 			
 			<?php //If we actually have pages, show this option 
@@ -54,12 +69,7 @@
 			</li>
 			<?php } ?>
 
-			<li>
-				<input class="checkbox" type="checkbox" name="enable-gravatars" <?php if (isset($wptouch_settings['enable-gravatars']) && $wptouch_settings['enable-gravatars'] == 1) echo('checked'); ?> />
-				<label class="label" for="enable-gravatars"> <?php _e( "Enable gravatars in comments", "wptouch" ); ?></label>
-			</li>
-
-			<li>
+			<li><br />
 				<input class="checkbox" type="checkbox" name="enable-regular-default" <?php if (isset($wptouch_settings['enable-regular-default']) && $wptouch_settings['enable-regular-default'] == 1) echo('checked'); ?> />
 				<label class="label" for="enable-regular-default"><?php echo sprintf(__( "1%sst%s visit mobile users will see desktop theme", "wptouch" ), '<sup>','</sup>'); ?> <a href="#reg-info" class="wptouch-fancylink">?</a></label>
 				<div id="reg-info" style="display:none">

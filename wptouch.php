@@ -4,7 +4,7 @@
    Plugin URI: http://bravenewcode.com/wptouch
    Description: A plugin which formats your site with a mobile theme for the Apple <a href="http://www.apple.com/iphone/">iPhone</a> / <a href="http://www.apple.com/ipodtouch/">iPod touch</a>, <a href="http://www.android.com/">Google Android</a> and other touch-based smartphones.
 	Author: Dale Mugford & Duane Storey
-	Version: 1.9.2.3
+	Version: 1.9.3
 	Author URI: http://www.bravenewcode.com
    
 	# Thanks to ContentRobot and the iWPhone theme/plugin
@@ -35,7 +35,7 @@
 
 
 global $bnc_wptouch_version;
-$bnc_wptouch_version = '1.9.2.3';
+$bnc_wptouch_version = '1.9.3';
 
 require_once( 'include/plugin.php' );
 require_once( 'include/compat.php' );
@@ -52,6 +52,7 @@ $wptouch_defaults = array(
 	'enable-cats-button' => true,
 	'enable-tags-button' => true,
 	'enable-login-button' => false,
+	'enable-ajax-comments' => true,
 	'enable-gravatars' => true,
 	'enable-main-home' => true,
 	'enable-main-rss' => true,
@@ -548,6 +549,11 @@ function bnc_is_gravatars_enabled() {
 	return $ids['enable-gravatars'];
 }	
 
+function bnc_is_ajax_coms_enabled() {
+	$ids = bnc_wp_touch_get_menu_pages();
+	return $ids['enable-ajax-comments'];
+}	
+
 function bnc_show_author() {
 	$ids = bnc_wp_touch_get_menu_pages();
 	return $ids['enable-main-name'];
@@ -605,10 +611,11 @@ function bnc_wp_touch_get_pages() {
 	foreach ($ids as $k => $v) {
 		if ($k == 'main_title' || $k == 'enable-post-excerpts' || $k == 'enable-page-coms' || 
 			 $k == 'enable-cats-button'  || $k == 'enable-tags-button'  || $k == 'enable-login-button' || 
-			 $k == 'enable-gravatars' || $k == 'enable-main-home' || $k == 'enable-main-rss' || 
-			 $k == 'enable-main-email' || $k == 'enable-main-name' || $k == 'enable-main-tags' || 
-			 $k == 'enable-main-categories' || $k == 'enable-prowl-comments-button' || 
-			 $k == 'enable-prowl-users-button' || $k == 'enable-prowl-message-button') {
+			 $k == 'enable-gravatars' || $k == 'enable-ajax-comments' || $k == 'enable-main-home' || 
+			 $k == 'enable-main-rss' || $k == 'enable-main-email' || $k == 'enable-main-name' || 
+			 $k == 'enable-main-tags' || $k == 'enable-main-categories' || 
+			 $k == 'enable-prowl-comments-button' || $k == 'enable-prowl-users-button' || 
+			 $k == 'enable-prowl-message-button') {
 			} else {
 				if (is_numeric($k)) {
 					$keys[] = $k;

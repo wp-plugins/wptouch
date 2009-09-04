@@ -12,7 +12,7 @@
 			    <h4><?php _e( "Stats &amp; Custom Code", "wptouch" ); ?></h4>
 			 		<p><?php _e( "If you'd like to capture traffic statistics ", "wptouch" ); ?><br /><?php _e( "(Google Analytics, MINT, etc.)", "wptouch" ); ?></p>
 			 		<p><?php _e( "Enter the code snippet(s) for your statistics tracking here.", "wptouch" ); ?></p>
-			 		<p><?php _e( "You can also enter custom CSS & other code here.", "wptouch" ); ?></p>
+			 		<p><?php _e( "You can also enter custom CSS &amp; other code here.", "wptouch" ); ?></p>
 			</div><!-- left content -->
 
 			<div class="wptouch-right-content">
