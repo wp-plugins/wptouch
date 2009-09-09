@@ -20,10 +20,11 @@ The theme also includes the ability for your visitors to easily switch between t
 
 = Version 1.9.3 =
 * Fixed issue where regular theme view would not allow pinching for zoom
-* FIxed JS bug in theme
+* Fixed JS bug in theme
 * Possible fix for time since on comments not working in some situations
 * Added option to disable Ajax comments for those who can't get them working
 * Fix for display of '0' comments badge
+
 
 = Version 1.9.2.2 =
 * Fixed issue where mobile switch to regular theme was always zoomed in and required refresh
@@ -31,16 +32,18 @@ The theme also includes the ability for your visitors to easily switch between t
 * Fixed issue where 'Load More Entries' caused blank page or other issues. WPtouch now detect possible issues and defaults to pagination
 * WPtouch now loads minified versions of its CSS and JS for the theme, speeding up load times
 
+
 = Version 1.9.2.1 =
-* Added check for wp-load.php before attempting ajax comments. Should fix WP comment posting issues. Working on better Disqus and Intense Debate support as well.
+* Added check for wp-load.php before attempting ajax comments. Should fix WP comment posting issues. Working on better Disqus and Intense Debate support as well
 * Removed 'Find in this page' button, until bugs are resolved
 * Now WPtouch will not hide mobileSafari addressbar on single post pages, for readers on slower connections (page won't awkwardly bump them to the top when reading an article)
+
 
 = Version 1.9.2 =
 * Fixed bug where WPtouch admin would report that CURL wasn't installed even if it was
 
-= Version 1.9.1 =
 
+= Version 1.9.1 =
 * Fixed bug for admin panel Ajax not working in some situations
 * Adsense re-enabled
 * Fixed bug where SPAM comments were pushed via Prowl
@@ -48,8 +51,8 @@ The theme also includes the ability for your visitors to easily switch between t
 * Removed text-size adjust option, now replaced with user-adjustable font sizes
 * Minor code corrections
 
-= Version 1.9 =
 
+= Version 1.9 =
 * Fully compatible with WordPress 2.6 - 2.8.x
 * Major rewrites of theme files, css for simplicity, CoreTheme
 * Adsense has been temporarily disabled until we update code for new Google API changes
