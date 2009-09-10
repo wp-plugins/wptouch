@@ -1,6 +1,7 @@
 /* @override 
 	http://wptouch.com/wp-content/plugins/wptouch/themes/default/style.css
 	http://www.bnclocal.com/wp-content/plugins/wptouch/themes/default/style.css
+	http://wptouch.com/wp-content/plugins/wptouch/themes/default/style_min.css
 */
 
 /*  
@@ -1250,6 +1251,7 @@ ol.commentlist li:last-child {
 ol.commentlist li .avatar {
 	float: left;
 	border-right: 1px solid #f9f9f9;
+	margin-right: 5px;
 }
 
 ol.commentlist li ul {
@@ -1333,14 +1335,13 @@ ol.commentlist .comment-meta a {
 	margin-top: -10px;
 	margin-left: -10px;
 	margin-right: -10px;
+	height: 17px;
 }
 
 .com-author a {
 	font-weight: bold;
 	text-transform: capitalize;
 	font-size: 14px;
-	position: relative;
-	top: 7px;
 	text-shadow: #fff 0 1px 0;
 	-webkit-border-top-right-radius: 0px;
 }
@@ -1350,10 +1351,10 @@ ol.commentlist .comment-meta a {
 	text-transform: capitalize;
 	font-size: 14px;
 	position: relative;
-	top: 7px;
 	text-shadow: #fff 0 1px 0;
 	-webkit-border-top-right-radius: 0px;
-	padding-left: 40px;
+	padding-left: 10px;
+	padding-top: 7px;
 }
 
 /*
@@ -1377,13 +1378,12 @@ h3#comments, h3#respond {
 	font-weight: bold;
 	text-shadow: #fff 0 1px 1px;
 	font-size: 11px;
-	height: 17px;
 }
 
 .preview span {
-	position: relative;
-	top: 6px;
-	left: 5px;
+	position: absolute;
+	right: 62px;
+	top: 8px;
 }
 
 p.logged {

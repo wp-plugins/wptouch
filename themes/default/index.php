@@ -9,12 +9,14 @@
  <div class="post" id="post-<?php the_ID(); ?>">
  
  		<?php if (!function_exists('dsq_comments_template') && !function_exists('id_comments_template')) { ?>
+				<?php if (get_comment_type() == "comment") { ?>
 				<?php if ($post->comment_count > 0 && !is_archive() && !is_search()) { ?>
 					<div class="comment-bubble<?php if ($post->comment_count > 99) echo('-big'); ?>">
-						<?php wptouch_comment_type_count('comment'); ?>
+						<?php comments_number('0','1','%'); ?>
 					</div>
 				<?php } ?>
-			<?php } ?>			
+				<?php } ?>
+		<?php } ?>			
  	
  	<?php if (is_archive() || is_search()) { ?>
 		<div class="archive-top">
