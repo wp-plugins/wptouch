@@ -64,13 +64,12 @@ function wptouch_core_header_styles() {
 }
 
 function wptouch_core_subheader() {
-	$useragent = @$_SERVER['HTTP_USER_AGENT'];
-	function agent($browser) { strstr($_GLOBALS['useragent'],$browser); }
-	if(agent("iphone", "ipod") != FALSE) { 
-	include( dirname(__FILE__) . '/../core/core-else-menu.php' ); 
-	 } else { 
-	include( dirname(__FILE__) . '/../core/core-apple-menu.php' ); 
-	 }
+	function agent($browser) { strstr($_SERVER['HTTP_USER_AGENT'],$browser); }
+	if(agent("iphone", "ipod") != FALSE) {
+		include( dirname(__FILE__) . '/../core/core-else-menu.php' );
+	} else {
+		include( dirname(__FILE__) . '/../core/core-apple-menu.php' );
+	}
 }
 
 function bnc_get_ordered_cat_list() {
