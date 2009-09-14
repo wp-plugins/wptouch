@@ -4,7 +4,7 @@
    Plugin URI: http://bravenewcode.com/wptouch
    Description: A plugin which formats your site with a mobile theme for the Apple <a href="http://www.apple.com/iphone/">iPhone</a> / <a href="http://www.apple.com/ipodtouch/">iPod touch</a>, <a href="http://www.android.com/">Google Android</a> and other touch-based smartphones.
 	Author: Dale Mugford & Duane Storey
-	Version: 1.9.3.1
+	Version: 1.9.3.2
 	Author URI: http://www.bravenewcode.com
    
 	# Thanks to ContentRobot and the iWPhone theme/plugin
@@ -35,7 +35,7 @@
 
 
 global $bnc_wptouch_version;
-$bnc_wptouch_version = '1.9.3.1';
+$bnc_wptouch_version = '1.9.3.2';
 
 require_once( 'include/plugin.php' );
 require_once( 'include/compat.php' );
@@ -222,21 +222,22 @@ class WPtouchPlugin {
 			$comment = get_comment( $comment_id );
 			$prowl = new Prowl( $api_key, WPTOUCH_PROWL_APPNAME );
 			
-			if ( ( $comment->comment_type == 'trackback' || $comment->comment_type == 'pingback'  || $comment->comment_type != 'spam' ) && $comment->comment_approved != 'spam' ) {
-			
-			$result = $prowl->add( 	1, 
-					__( "New Ping/Trackback", "wptouch" ),
-					'From: '. $this->wptouch_cleanup_growl( stripslashes( $comment->comment_author ) ) . 
-					"\nPost: ". $this->wptouch_cleanup_growl( stripslashes( $comment->comment_content ) ) 
-				);			
-		 	} else {
-			$result = $prowl->add( 	1, 
-					__( "New Comment", "wptouch" ),
-					'Name: '. $this->wptouch_cleanup_growl( stripslashes( $comment->comment_author ) ) . 
-					"\nE-Mail: ". $this->wptouch_cleanup_growl( stripslashes( $comment->comment_author_email ) ) .
-					"\nComment: ". $this->wptouch_cleanup_growl( stripslashes( $comment->comment_content ) )
-				);		 
-		 	}
+			if ( $comment->comment_type != 'spam' && $comment->comment_approved != 'spam' ) {
+				if ( $comment->comment_type == 'trackback' || $comment->comment_type == 'pingback' ) {
+					$result = $prowl->add( 	1, 
+						__( "New Ping/Trackback", "wptouch" ),
+						'From: '. $this->wptouch_cleanup_growl( stripslashes( $comment->comment_author ) ) . 
+						"\nPost: ". $this->wptouch_cleanup_growl( stripslashes( $comment->comment_content ) ) 
+					);			
+			 	} else {
+					$result = $prowl->add( 	1, 
+						__( "New Comment", "wptouch" ),
+						'Name: '. $this->wptouch_cleanup_growl( stripslashes( $comment->comment_author ) ) . 
+						"\nE-Mail: ". $this->wptouch_cleanup_growl( stripslashes( $comment->comment_author_email ) ) .
+						"\nComment: ". $this->wptouch_cleanup_growl( stripslashes( $comment->comment_content ) )
+					);		 
+			 	}
+			}
 		 }
 
 	}
