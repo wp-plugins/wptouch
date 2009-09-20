@@ -6,7 +6,7 @@
 			// if there's a password
 			if ($_COOKIE['wp-postpass_' . COOKIEHASH] != $post->post_password) {
 			// and it doesn't match the cookie ?>	
-		<p class="nocomments"><?php _e('This post is password protected. Enter the password to view comments.', 'wptouch'); ?><p>
+		<p class="nocomments"><?php _e('This post is password protected. Enter the password to view comments.', 'wptouch'); ?></p>
 <?php return; 	} }
 /* This variable is for alternating comment background */
 $oddcomment = 'alt'; 
