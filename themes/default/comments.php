@@ -28,7 +28,7 @@ $oddcomment = 'alt';
 									<div class="com-author"><?php comment_author_link(); ?></div> 	<?php if ($comment->comment_approved == '0') : echo '<span>(moderation preview)</span>'; endif; ?>
 										<div class="comdater">
 											<?php $d = (time() - strftime('%s',strtotime(get_comment_date('c'))))/(60*60*24); 
-											if ($d < 1) echo (' ' . comment_time('H:i') . ' '); 
+											if ($d < 1) echo (' ' . comment_time('g:ia') . ' '); 
 											else if ($d < 2) echo floor($d) . ' day ago'; 
 											else echo floor($d) . ' days ago'; ?>
 										</div>									
