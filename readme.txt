@@ -18,6 +18,9 @@ The theme also includes the ability for your visitors to easily switch between t
 
 == What's New ==
 
+= Version 1.9.3.4 =
+* Fixed time since code bug on comments
+
 = Version 1.9.3.3 =
 * Fixed international languages display of time since on comments
 
