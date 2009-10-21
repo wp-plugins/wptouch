@@ -18,11 +18,17 @@ The theme also includes the ability for your visitors to easily switch between t
 
 == What's New ==
 
+= Version 1.9.3.4 =
+* Fixed time since code bug on comments
+
+
 = Version 1.9.3.3 =
 * Fixed international languages display of time since on comments
 
+
 = Version 1.9.3.2 =
 * Fixed logic with PUSH notification via Prowl
+
 
 = Version 1.9.3.1 =
 * Removed unneeded files
@@ -47,7 +53,7 @@ The theme also includes the ability for your visitors to easily switch between t
 = Version 1.9.2.1 =
 * Added check for wp-load.php before attempting ajax comments. Should fix WP comment posting issues. Working on better Disqus and Intense Debate support as well
 * Removed 'Find in this page' button, until bugs are resolved
-* Now WPtouch will not hide mobileSafari addressbar on single post pages, for readers on slower connections (page won't awkwardly bump them to the top when reading an article)
+* Now WPtouch will not hide mobileSafari addressbar on single post pages on slower connections
 
 
 = Version 1.9.2 =
@@ -77,7 +83,7 @@ The theme also includes the ability for your visitors to easily switch between t
 * Added jQuery color picker in admin hex areas for easy selections
 * Added link to online icon generator in admin
 * Added style declaration for images in comments
-* Added 'My Account' button in the sub//header for logged in users replacing 'Logout'
+* Added 'My Account' button in the sub//header for logged in users replacing Logout
 * Added theme skin selection support, still no other skins enabled yet
 * Added post-options bar on single post page
 * Added new background selections
@@ -115,8 +121,6 @@ The theme also includes the ability for your visitors to easily switch between t
 * Other minor optimizations, fixes, changes
 
 
-(Here's the complete changelog for past versions)
-
 = Version 1.8.9.1 =
 
 * Fixed refresh issue (some pages keep re-loading)
@@ -125,6 +129,7 @@ The theme also includes the ability for your visitors to easily switch between t
 * Minor revisions to new CSS calendar icon styling
 * Added exclusive mode feature to help in situations where other plugins are incompatible, load too many scripts/css files and both break and slow down WPtouch
 * Added Fancybox for some feature descriptions in the admin
+
 
 = Versions 1.8.1 to 1.8.8 =
 
