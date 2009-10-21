@@ -16,7 +16,7 @@ The admin panel allows you to customize many aspects of its appearance, and deli
 
 The theme also includes the ability for your visitors to easily switch between the *WPtouch* view and your site's regular theme.
 
-== What's New ==
+== Changelog ==
 
 = Version 1.9.3.4 =
 * Fixed time since code bug on comments
