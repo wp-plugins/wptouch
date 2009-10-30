@@ -136,7 +136,7 @@
 		}
 
 		if ( isset($_POST['adsense-id']) ) {
-			$a['adsense-id'] = $_POST['adsense-id'];
+			$a['adsense-id'] = trim( $_POST['adsense-id'] );
 		}
 
 		if ( isset($_POST['adsense-channel']) ) {

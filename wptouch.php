@@ -4,7 +4,7 @@
    Plugin URI: http://bravenewcode.com/wptouch
    Description: A plugin which formats your site with a mobile theme for the Apple <a href="http://www.apple.com/iphone/">iPhone</a> / <a href="http://www.apple.com/ipodtouch/">iPod touch</a>, <a href="http://www.android.com/">Google Android</a> and other touch-based smartphones.
 	Author: Dale Mugford & Duane Storey
-	Version: 1.9.3.3
+	Version: 1.9.3.4
 	Author URI: http://www.bravenewcode.com
    
 	# Thanks to ContentRobot and the iWPhone theme/plugin
@@ -35,7 +35,7 @@
 
 
 global $bnc_wptouch_version;
-$bnc_wptouch_version = '1.9.3.3';
+$bnc_wptouch_version = '1.9.3.4';
 
 require_once( 'include/plugin.php' );
 require_once( 'include/compat.php' );
@@ -112,14 +112,15 @@ function wptouch_content_filter( $content ) {
 	global $wptouch_plugin;
 	$settings = bnc_wptouch_get_settings();
 	if ( bnc_is_iphone() && $wptouch_plugin->desired_view == 'mobile' && isset($settings['adsense-id']) && strlen($settings['adsense-id']) && is_single() ) {
-		require_once( 'include/adsense.php' );
-		$channel = '';
-		if ( isset($settings['adsense-channel']) ) {
-			$channel = $settings['adsense-channel'];
-		}
+		global $wptouch_settings;
+		$wptouch_settings = $settings;
 		
-		$ad = google_show_ad( $settings['adsense-id'], $channel );
-		return $content . '<div class="wptouch-adsense-ad">' . $ad . '</div>';	
+		ob_start();
+		include( 'include/adsense-new.php' );
+		$ad_contents = ob_get_contents();
+		ob_end_clean();
+		
+		return $content . '<div class="wptouch-adsense-ad">' . $ad_contents . '</div>';	
 	} else {
 		return $content;
   }
