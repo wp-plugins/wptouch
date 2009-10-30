@@ -152,6 +152,7 @@ function wptouch_settings_link( $links, $file ) {
 			if ( $version <= 2.6 ) {
 				echo "<link rel='stylesheet' type='text/css' href='" . compat_get_plugin_url( 'wptouch' ) . "/admin-css/wptouch-admin-pre27.css' />\n";
 			} 
+			echo "<link rel='stylesheet' type='text/css' href='" . compat_get_plugin_url( 'wptouch' ) . "/admin-css/bnc-global.css' />\n";
 			echo "<script type='text/javascript' src='" . compat_get_plugin_url( 'wptouch' ) . "/js/ajax_upload_3.2.js'></script>\n";
 			echo "<script type='text/javascript' src='" . compat_get_plugin_url( 'wptouch' ) . "/js/colorpicker_1.4.js'></script>\n";
 			echo "<script type='text/javascript' src='" . compat_get_plugin_url( 'wptouch' ) . "/js/fancybox_1.2.1.js'></script>\n";
@@ -691,16 +692,16 @@ require_once( 'include/icons.php' );
   
 function bnc_wp_touch_page() {
 	if (isset($_POST['submit'])) {
-		echo('<div class="wrap"><div id="wptouch-theme"><div id="wptouchupdated" style="display:none"><p class="saved"><span>');
+		echo('<div class="wrap"><div id="bnc-global"><div id="wptouchupdated" style="display:none"><p class="saved"><span>');
 		echo __( "Settings saved", "wptouch");
 		echo('</span></p></div>');
 		} 
 	elseif (isset($_POST['reset'])) {
-		echo('<div class="wrap"><div id="wptouch-theme"><div id="wptouchupdated" style="display:none"><p class="reset"><span>');
+		echo('<div class="wrap"><div id="bnc-global"><div id="wptouchupdated" style="display:none"><p class="reset"><span>');
 		echo __( "Defaults restored", "wptouch");
 		echo('</span></p></div>');
 	} else {
-		echo('<div class="wrap"><div id="wptouch-theme">');
+		echo('<div class="wrap"><div id="bnc-global">');
 }
 ?>
 
