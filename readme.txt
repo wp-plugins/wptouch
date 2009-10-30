@@ -20,6 +20,8 @@ The theme also includes the ability for your visitors to easily switch between t
 
 = Version 1.9.3.4 =
 * Fixed time since code bug on comments
+* Minor admin refinements
+* Porting CSS styles to a global sheet applicable to all our plugins
 
 
 = Version 1.9.3.3 =
