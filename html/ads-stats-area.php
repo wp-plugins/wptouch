@@ -2,7 +2,7 @@
 
 <div class="metabox-holder">
 	<div class="postbox">
-		<h3><?php _e( "Adsense, Stats &amp; Custom Code", "wptouch" ); ?></h3>
+		<h3><span class="adsense-options"></span><?php _e( "Adsense, Stats &amp; Custom Code", "wptouch" ); ?></h3>
 
 			<div class="left-content">
 				<h4><?php _e( "Adsense", "wptouch" ); ?></h4>

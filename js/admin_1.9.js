@@ -54,7 +54,7 @@ jQuery(document).ready(function($j) {
 			}
 		});
 
-	$j("a.wptouch-fancylink").fancybox({
+	$j("a.fancylink").fancybox({
 		'padding':						5,
 		'imageScale':					true,
 		'zoomSpeedIn':				250, 

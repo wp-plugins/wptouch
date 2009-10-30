@@ -19,9 +19,13 @@ The theme also includes the ability for your visitors to easily switch between t
 == What's New ==
 
 = Version 1.9.3.4 =
+* Fixed issues with adsense ads
 * Fixed time since code bug on comments
 * Minor admin refinements
 * Porting CSS styles to a global sheet applicable to all our plugins
+* Push messages now come from blogname not wptouch
+* Switch link now re-directs to the page the switch request came from, not back to home
+* Fix or scenarios where someone has chosen a different uploads folder path or name
 
 
 = Version 1.9.3.3 =

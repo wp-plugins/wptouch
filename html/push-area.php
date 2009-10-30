@@ -1,7 +1,7 @@
 <?php global $wptouch_settings; ?>
 <div class="metabox-holder">
 	<div class="postbox" id="push-area">
-		<h3><?php _e( "Push Notification Options", "wptouch" ); ?></h3>
+		<h3><span class="push-options"></span><?php _e( "Push Notification Options", "wptouch" ); ?></h3>
 
 			<div class="left-content">
 					<p><?php echo sprintf(__( "Here you can configure WPtouch to push selected notifications through your %sProwl%s account to your iPhone, iPod touch and Growl-enabled Mac.", "wptouch" ), '<a href="http://prowl.weks.net/" target="_blank">','</a>'); ?></p>

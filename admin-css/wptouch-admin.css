@@ -465,7 +465,7 @@ textarea#wptouch-stats {
 }
 
 #bnc-global .wptouch-left-content span.caution {
-	color: orange;
+	color: #f8b615;
 	font-weight: bold;
 }
 
@@ -523,5 +523,65 @@ textarea#wptouch-stats {
 }
 
 
+
+/* @end */
+
+/* @group Settings/Reset Updated */
+
+#bnc-global #wptouchupdated {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	overflow: hidden;
+	margin-left: auto;
+	margin-right: auto;
+	opacity: 0.9;
+	height: auto;
+	width: 100%;
+}
+
+#bnc-global #wptouchupdated p.saved {
+	color: #daeffe;
+	-webkit-border-radius: 22px;
+	-moz-border-radius: 22px;
+	text-align: center;
+	text-shadow: #000 -1px -1px 1px;
+	letter-spacing: -1px;
+	font: bold 22px "Myriad Pro", "Trebuchet MS", "Lucida Sans Unicode", sans-serif;
+	height: 155px;
+	background: #222 url(../images/saved.png) no-repeat center 10px;
+	width: 170px;
+	margin-top: 15%;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 12px;
+	-webkit-box-shadow: #000 0px 0px 32px;
+
+}
+
+#bnc-global #wptouchupdated p.reset {
+	color: #dcdcdc;
+	-webkit-border-radius: 22px;
+	-moz-border-radius: 22px;
+	text-align: center;
+	text-shadow: #000 -1px -1px 1px;
+	letter-spacing: -1px;
+	font: bold 22px "Myriad Pro", "Trebuchet MS", "Lucida Sans Unicode", sans-serif;
+	height: 155px;
+	background: #222 url(../images/reset.png) no-repeat center 10px;
+	width: 170px;
+	margin-top: 15%;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 12px;
+	-webkit-box-shadow: #000 0px 0px 32px;
+
+}
+
+#bnc-global #wptouchupdated p span {
+	display: block;
+	margin-top: 110px;
+}
 
 /* @end */

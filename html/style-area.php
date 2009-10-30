@@ -2,7 +2,7 @@
 
 <div class="metabox-holder">
 	<div class="postbox">
-		<h3><?php _e( "Style &amp; Color Options", "wptouch" ); ?></h3>
+		<h3><span class="style-options"></span><?php _e( "Style &amp; Color Options", "wptouch" ); ?></h3>
 
 			<div class="left-content skins-left-content">
 				<p><img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/images/skins/skins-title.jpg" alt="" /></p>
