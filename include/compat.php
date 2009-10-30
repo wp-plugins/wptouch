@@ -73,7 +73,8 @@ if ( !function_exists( 'compat_get_upload_dir' ) ) {
 			global $blog_id;
 			return compat_get_wp_content_dir() . '/blogs.dir/' . $blog_id . '/uploads';
 		} else {	
-			return compat_get_wp_content_dir() . '/uploads';
+			$upload_info = wp_upload_dir();		
+			return $upload_info['basedir'];
 		}		
 	}
 }
@@ -84,7 +85,8 @@ if ( !function_exists( 'compat_get_upload_url' ) ) {
 			global $blog_id;
 			return compat_get_wp_content_url() . '/blogs.dir/' . $blog_id . '/uploads';
 		} else {	
-			return compat_get_wp_content_url() . '/uploads';
+			$upload_info = wp_upload_dir();		
+			return $upload_info['baseurl'];
 		}			
 	}	
 }

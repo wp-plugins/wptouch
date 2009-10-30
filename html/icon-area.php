@@ -12,7 +12,7 @@
 				<strong><?php _e( "Logo/Bookmark Icons", "wptouch" ); ?></strong>
 				<p><?php _e( "If you're adding a logo icon, the best dimensions for it are 59x60px when used as a bookmark icon.", "wptouch" ); ?></p>
 				<p><?php echo sprintf( __( "Need help? You can use %sthis easy online icon generator%s to make one.", "wptouch"), "<a href='http://www.flavorstudios.com/iphone-icon-generator' target='_blank'>", "</a>" ); ?></p>
-				<p><?php echo sprintf( __( "These files will be stored in a wp-content %s/uploads/wptouch/custom-icons%s folder we create.", "wptouch"), "<strong>", "</strong>" ); ?></p>
+				<p><?php echo sprintf( __( "These files will be stored in the<br />%s%s/wptouch/custom-icons%s<br />folder we create.", "wptouch"), "<strong>", str_replace( ABSPATH, "", compat_get_upload_dir() ), "</strong>" ); ?></p>
 				<p><?php echo sprintf( __( "If an upload fails (usually it's a permission problem) create the folder yourself using FTP and try again.", "wptouch"), "<strong>", "</strong>" ); ?></p>
 						
 				<div id="upload_button"></div>
