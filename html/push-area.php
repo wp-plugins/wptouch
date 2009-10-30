@@ -3,16 +3,16 @@
 	<div class="postbox" id="push-area">
 		<h3><?php _e( "Push Notification Options", "wptouch" ); ?></h3>
 
-			<div class="wptouch-left-content">
+			<div class="left-content">
 					<p><?php echo sprintf(__( "Here you can configure WPtouch to push selected notifications through your %sProwl%s account to your iPhone, iPod touch and Growl-enabled Mac.", "wptouch" ), '<a href="http://prowl.weks.net/" target="_blank">','</a>'); ?></p>
 					<p><?php echo sprintf(__( "%sMake sure you generate a Prowl API key to use here%s otherwise no notifications will be pushed to you.", "wptouch" ), '<strong>','</strong>'); ?></p>
 			</div><!-- left content -->
 
-			<div class="wptouch-right-content">
+			<div class="right-content">
 				<ul class="wptouch-make-li-italic">
 				<?php if ( function_exists( 'curl_init' ) ) { ?>
 					<li>
-						<input name="prowl-api" type="text" value="<?php echo $wptouch_settings['prowl-api']; ?>" /><?php _e( "Prowl API Key", "wptouch" ); ?> (<?php echo sprintf(__( "%sCreate a key now%s", "wptouch" ), '<a href="https://prowl.weks.net/settings.php" target="_blank">','</a>'); ?> - <a href="#prowl-info" class="wptouch-fancylink">?</a>)
+						<input name="prowl-api" type="text" value="<?php echo $wptouch_settings['prowl-api']; ?>" /><?php _e( "Prowl API Key", "wptouch" ); ?> (<?php echo sprintf(__( "%sCreate a key now%s", "wptouch" ), '<a href="https://prowl.weks.net/settings.php" target="_blank">','</a>'); ?> - <a href="#prowl-info" class="fancylink">?</a>)
 						<div id="prowl-info" style="display:none">
 							<h2><?php _e( "More Info", "wptouch" ); ?></h2>
 							<p><?php _e( "In order to enable Prowl notifications, you must create a Prowl account, and download/configure the Prowl application for iPhone.", "wptouch" ); ?></p>
@@ -33,7 +33,7 @@
 				</li>
 				<li>
 					<input class="checkbox" type="checkbox" name="enable-prowl-message-button" <?php if ( isset( $wptouch_settings['enable-prowl-message-button']) && $wptouch_settings['enable-prowl-message-button'] == 1) echo('checked'); ?> />
-					<label class="label" for="enable-prowl-message-button"><?php _e( "Allow users to send me direct messages", "wptouch" ); ?> <a href="#dm-info" class="wptouch-fancylink">?</a></label>
+					<label class="label" for="enable-prowl-message-button"><?php _e( "Allow users to send me direct messages", "wptouch" ); ?> <a href="#dm-info" class="fancylink">?</a></label>
 						<div id="dm-info" style="display:none">
 						<h2><?php _e( "More Info", "wptouch" ); ?></h2>
 						<p><?php _e( "This enables a new link to a drop-down in the submenu bar for WPtouch ('Message Me').", "wptouch" ); ?></p>
@@ -45,6 +45,6 @@
 					<?php } ?>	
 				</ul>
 			</div><!-- right content -->
-		<div class="wptouch-clearer"></div>
+		<div class="bnc-clearer"></div>
 	</div><!-- postbox -->
 </div><!-- metabox -->

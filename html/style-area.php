@@ -4,14 +4,14 @@
 	<div class="postbox">
 		<h3><?php _e( "Style &amp; Color Options", "wptouch" ); ?></h3>
 
-			<div class="wptouch-left-content skins-left-content">
+			<div class="left-content skins-left-content">
 				<p><img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/images/skins/skins-title.jpg" alt="" /></p>
 				<p><?php _e( "Skins are built around colour palettes for enhanced customization. Choose a skin that works with your website’s colours.", "wptouch" ); ?></p>
 				 <p><?php _e( "Skins also come with unique backgrounds and other style customizations to enhance WPtouch.", "wptouch" ); ?></p>
 				 <p><?php _e( "If a skin has options they will be shown here.", "wptouch" ); ?></p>
 			</div>
 		
-			<div class="wptouch-right-content skins-fixed">
+			<div class="right-content skins-fixed">
 				 <div id="skins-menu">
 					 <ul>
 						 <li><a href="#" onclick="return false;" class="active">Default</a></li>
@@ -72,6 +72,6 @@
 		</div>
 
 		</div><!-- right content -->
-	<div class="wptouch-clearer"></div>
+	<div class="bnc-clearer"></div>
 	</div><!-- postbox -->
 </div><!-- metabox -->

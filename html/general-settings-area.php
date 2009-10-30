@@ -4,7 +4,7 @@
 	<div class="postbox">
 		<h3><?php _e( "General Settings", "wptouch" ); ?></h3>
 
-			<div class="wptouch-left-content">
+			<div class="left-content">
 				<h4><?php _e( "Home Page Re-Direction", "wptouch" ); ?></h4>
 				<p><?php echo sprintf( __( "WPtouch by default follows your %sWordPress &raquo; Reading Options%s. You can also set a different one for WPtouch.", "wptouch"), '<a href="options-reading.php">', '</a>' ); ?></p>
 
@@ -26,7 +26,7 @@
 				<p><?php _e( "Also, choose if excerpts are shown/hidden (default is hidden).", "wptouch" ); ?></p>
 			</div>
 
-			<div class="wptouch-right-content">
+			<div class="right-content">
 				<p><label for="home-page"><strong><?php _e( "WPtouch Home Page", "wptouch" ); ?></strong></label></p>
 				<?php $pages = bnc_get_pages_for_icons(); ?>
 				<?php if ( count( $pages ) ) { ?>
@@ -81,6 +81,6 @@
 				</ul>	
 			</div>
 			
-	<div class="wptouch-clearer"></div>
+	<div class="bnc-clearer"></div>
 	</div><!-- postbox -->
 </div><!-- metabox -->

@@ -4,16 +4,16 @@
 	<div class="postbox">
 		<h3><?php _e( "Advanced Options", "wptouch" ); ?></h3>
 
-			<div class="wptouch-left-content">
+			<div class="left-content">
 				<p><?php _e( "Choose to enable/disable advanced features &amp; options available for WPtouch.", "wptouch"); ?></p>	
 				<p><?php _e( "* WPtouch exclusive mode fixes issues where other plugins load scripts which erroneously interfere with WPtouch functions and javascript.", "wptouch" ); ?></p>
-			</div><!-- wptouch-left-content -->
+			</div><!-- left-content -->
 	
-	<div class="wptouch-right-content">
+	<div class="right-content">
 		<ul>
 			<li>
 				<input class="checkbox" type="checkbox" name="enable-cats-button" <?php if ( isset( $wptouch_settings['enable-cats-button']) && $wptouch_settings['enable-cats-button'] == 1) echo('checked'); ?> />
-				<label class="label" for="enable-cats-button"><?php _e( "Enable Categories select in the header", "wptouch" ); ?> <a href="#cats-info" class="wptouch-fancylink">?</a></label>
+				<label class="label" for="enable-cats-button"><?php _e( "Enable Categories select in the header", "wptouch" ); ?> <a href="#cats-info" class="fancylink">?</a></label>
 				<div id="cats-info" style="display:none">
 					<h2><?php _e( "More Info", "wptouch" ); ?></h2>
 					<p><?php _e( "This will add a 'Categories' item in the WPtouch sub header beside the Tags and Login link buttons if they are also enabled.", "wptouch" ); ?></p>
@@ -23,7 +23,7 @@
 			
 			<li>
 				<input class="checkbox" type="checkbox" name="enable-tags-button" <?php if ( isset( $wptouch_settings['enable-tags-button']) && $wptouch_settings['enable-tags-button'] == 1) echo('checked'); ?> />
-				<label class="label" for="enable-tags-button"><?php _e( "Enable Tags select in the header", "wptouch" ); ?> <a href="#tags-info" class="wptouch-fancylink">?</a></label>
+				<label class="label" for="enable-tags-button"><?php _e( "Enable Tags select in the header", "wptouch" ); ?> <a href="#tags-info" class="fancylink">?</a></label>
 				<div id="tags-info" style="display:none">
 					<h2><?php _e( "More Info", "wptouch" ); ?></h2>
 					<p><?php _e( "This will add a 'Tags' item in the WPtouch sub header beside the Categories and Login link buttons if they are also enabled.", "wptouch" ); ?></p>
@@ -33,7 +33,7 @@
 			
 			<li>
 				<input class="checkbox" type="checkbox" name="enable-login-button" <?php if (isset($wptouch_settings['enable-login-button']) && $wptouch_settings['enable-login-button'] == 1) echo('checked'); ?> />
-				<label class="label" for="enable-login-button"><?php _e( "Enable Login/My Account link in the header", "wptouch" ); ?> <a href="#login-info" class="wptouch-fancylink">?</a></label>
+				<label class="label" for="enable-login-button"><?php _e( "Enable Login/My Account link in the header", "wptouch" ); ?> <a href="#login-info" class="fancylink">?</a></label>
 				<div id="login-info" style="display:none">
 					<h2><?php _e( "More Info", "wptouch" ); ?></h2>
 					<p><?php _e( "This will add a 'Login' item in the WPtouch sub header beside the Tags and Categories link buttons if they are also enabled.", "wptouch" ); ?></p>
@@ -44,7 +44,7 @@
 
 			<li>
 				<input class="checkbox" type="checkbox" name="enable-ajax-comments" <?php if (isset($wptouch_settings['enable-ajax-comments']) && $wptouch_settings['enable-ajax-comments'] == 1) echo('checked'); ?> />
-				<label class="label" for="enable-ajax-comments"> <?php _e( "Enable ajax for comments", "wptouch" ); ?> <a href="#ajax-com-info" class="wptouch-fancylink">?</a></label>
+				<label class="label" for="enable-ajax-comments"> <?php _e( "Enable ajax for comments", "wptouch" ); ?> <a href="#ajax-com-info" class="fancylink">?</a></label>
 							<div id="ajax-com-info" style="display:none">
 					<h2><?php _e( "More Info", "wptouch" ); ?></h2>
 					<p><?php _e( "When this option is checked, comments are submitted and returned in real time using Ajax.", "wptouch" ); ?></p>
@@ -61,7 +61,7 @@
 			if ( count( $pages ) ) { ?>
 			<li>
 			<input class="checkbox" type="checkbox" name="enable-page-coms" <?php if (isset($wptouch_settings['enable-page-coms']) && $wptouch_settings['enable-page-coms'] == 1) echo('checked'); ?> />
-			<label class="label" for="enable-page-coms"> <?php _e( "Enable comments on pages", "wptouch" ); ?> <a href="#page-coms-info" class="wptouch-fancylink">?</a></label>
+			<label class="label" for="enable-page-coms"> <?php _e( "Enable comments on pages", "wptouch" ); ?> <a href="#page-coms-info" class="fancylink">?</a></label>
 				<div id="page-coms-info" style="display:none">
 					<h2><?php _e( "More Info", "wptouch" ); ?></h2>
 					<p><?php _e( "This will add the comment form to all pages with 'Allow Comments' checked in your WordPress admin.", "wptouch" ); ?></p>
@@ -71,7 +71,7 @@
 
 			<li><br />
 				<input class="checkbox" type="checkbox" name="enable-regular-default" <?php if (isset($wptouch_settings['enable-regular-default']) && $wptouch_settings['enable-regular-default'] == 1) echo('checked'); ?> />
-				<label class="label" for="enable-regular-default"><?php echo sprintf(__( "1%sst%s visit mobile users will see desktop theme", "wptouch" ), '<sup>','</sup>'); ?> <a href="#reg-info" class="wptouch-fancylink">?</a></label>
+				<label class="label" for="enable-regular-default"><?php echo sprintf(__( "1%sst%s visit mobile users will see desktop theme", "wptouch" ), '<sup>','</sup>'); ?> <a href="#reg-info" class="fancylink">?</a></label>
 				<div id="reg-info" style="display:none">
 					<h2><?php _e( "More Info", "wptouch" ); ?></h2>
 					<p><?php _e( "When this option is checked, users will see your regular site theme first, and have the option in your footer to switch to the WPtouch mobile view.", "wptouch" ); ?></p>
@@ -81,7 +81,7 @@
 
 			<li>
 				<input class="checkbox" type="checkbox" name="enable-exclusive" <?php if (isset($wptouch_settings['enable-exclusive']) && $wptouch_settings['enable-exclusive'] == 1) echo('checked'); ?> />
-				<label class="label" for="enable-exclusive"> <?php _e( "Enable WPtouch exclusive mode", "wptouch" ); ?> <a href="#exclusive-info" class="wptouch-fancylink">?</a></label>
+				<label class="label" for="enable-exclusive"> <?php _e( "Enable WPtouch exclusive mode", "wptouch" ); ?> <a href="#exclusive-info" class="fancylink">?</a></label>
 					<div id="exclusive-info" style="display:none">
 						<h2><?php _e( "More Info", "wptouch" ); ?></h2>
 						<p><?php _e( "Attempts to disallow other plugins from loading into WPtouch.", "wptouch" ); ?></p> 
@@ -92,6 +92,6 @@
 
 			</ul>
 		</div><!-- right content -->
-	<div class="wptouch-clearer"></div>
+	<div class="bnc-clearer"></div>
 	</div><!-- postbox -->
 </div><!-- metabox -->

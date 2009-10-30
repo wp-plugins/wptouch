@@ -6,7 +6,7 @@
 	<div class="postbox">
 		<h3><?php _e( "Plugin Support &amp; Compatibility", "wptouch" ); ?></h3>
 
-			<div class="wptouch-left-content">
+			<div class="left-content">
 				<div class="wptouch-version-support">
 					<?php
 						echo '<p class="wpv">';
@@ -29,7 +29,7 @@
 				<p><?php echo sprintf( __( "To report an incompatible plugin, let us know in our %sSupport Forums%s.", "wptouch"), '<a href="http://support.bravenewcode.com/">', '</a>' ); ?></p>
 		</div>
 		
-		<div class="wptouch-right-content">
+		<div class="right-content">
 			
 			<h4><?php _e( "WordPress Pages &amp; Feature Support", "wptouch" ); ?></h4>
 			
@@ -69,6 +69,6 @@
 			<h4><?php _e( 'Known Plugin Support &amp; Conflicts', 'wptouch' ); ?></h4>
 				<div id="wptouch-plugin-content" style="display:none"></div>				
 		</div><!-- right content -->
-	<div class="wptouch-clearer"></div>
+	<div class="bnc-clearer"></div>
 	</div><!-- postbox -->
 </div><!-- metabox -->

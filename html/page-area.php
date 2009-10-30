@@ -4,7 +4,7 @@
 	<div class="postbox">
 		<h3><?php _e( "Logo Icon // Menu Items &amp; Pages Icons", "wptouch" ); ?></h3>
 
-			<div class="wptouch-left-content">
+			<div class="left-content">
 				<h4><?php _e( "Logo / Home Screen Icon <br />&amp; Default Menu Items", "wptouch" ); ?></h4>
 				<p><?php _e( "Choose the logo displayed in the header (also your bookmark icon), and the pages you want included in the WPtouch drop-down menu.", "wptouch" ); ?> 						
 				<strong><?php _e( "Remember, only those checked will be shown.", "wptouch" ); ?></strong></p>
@@ -13,9 +13,9 @@
 				<h4><?php _e( "Pages + Icons", "wptouch" ); ?></h4>
 				<p><?php _e( "Next, select the icons from the lists that you want to pair with each page menu item.", "wptouch" ); ?></p>
 				<p><?php _e( "You can also decide if pages are listed by the page order (ID) in WordPress, or by name (default).", "wptouch" ); ?></p>
-			</div><!-- wptouch-left-content -->
+			</div><!-- left-content -->
 		
-	<div class="wptouch-right-content wptouch-pages">
+	<div class="right-content wptouch-pages">
 		<ul>
 			<li><select name="enable_main_title">
 					<?php bnc_get_icon_drop_down_list( $wptouch_settings['main_title']); ?>
@@ -55,7 +55,7 @@
 				<strong ><?php _e( "You have no pages yet. Create some first!", "wptouch" ); ?></strong>
 			<?php } ?>
 		</ul>
-	</div><!-- wptouch-right-content -->		
-	<div class="wptouch-clearer"></div>
+	</div><!-- right-content -->		
+	<div class="bnc-clearer"></div>
 	</div><!-- postbox -->
 </div><!-- metabox -->

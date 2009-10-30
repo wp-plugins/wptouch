@@ -5,7 +5,7 @@
 	<div class="postbox">
 		<h3><?php _e( "Default &amp; Custom Icon Pool", "wptouch" ); ?></h3>
 
-			<div class="wptouch-left-content">
+			<div class="left-content">
 				<p><?php _e( "You can select which icons will be displayed beside the pages you enable in the next section.", "wptouch" ); ?></p>
 				<strong><?php _e( "Adding Icons", "wptouch" ); ?></strong>
 				<p><?php _e( "To add icons to the pool, simply upload a 32x32.png, .jpeg or .gif image from your computer.", "wptouch" ); ?></p>
@@ -26,12 +26,12 @@
 					<p><img src="<?php echo compat_get_plugin_url( 'wptouch' ) . '/images/progress.gif'; ?>" alt="" /> <?php _e( "Uploading..."); ?></p>
 				</div>
 								
-			</div><!-- wptouch-left-content -->
+			</div><!-- left-content -->
 		
-	<div class="wptouch-right-content">	
+	<div class="right-content">	
 		<?php bnc_show_icons(); ?>
 	</div>
 	
-	<div class="wptouch-clearer"></div>
+	<div class="bnc-clearer"></div>
 	</div><!-- postbox -->
 </div><!-- metabox -->
