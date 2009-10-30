@@ -42,6 +42,20 @@ require_once( 'include/compat.php' );
 
 define( 'WPTOUCH_PROWL_APPNAME', 'WPtouch');
 
+
+function wp_touch_get_comment_count() {
+	global $wpdb;
+	global $post;
+	
+	$result = $wpdb->get_row( $wpdb->prepare( "SELECT count(*) as c FROM {$wpdb->comments} WHERE comment_type = '' AND comment_approved = 1 AND comment_post_ID = %d", $post->ID ) );
+	if ( $result ) {
+		return $result->c;
+	} else {
+		return 0;	
+	}
+}
+
+
 //The WPtouch Settings Defaults
 global $wptouch_defaults;
 $wptouch_defaults = array(
@@ -203,7 +217,7 @@ class WPtouchPlugin {
 		if ( isset( $settings['prowl-api'] ) ) {
 			$api_key = $settings['prowl-api'];
 			
-			$prowl = new Prowl( $api_key, WPTOUCH_PROWL_APPNAME );
+			$prowl = new Prowl( $api_key, $settings['header-title'] );
 				
 			$this->prowl_output = true;
 			$result = $prowl->add( 	1, $title, $this->wptouch_cleanup_growl( stripslashes( $message ) ) );	
@@ -230,7 +244,7 @@ class WPtouchPlugin {
 			
 			require_once( 'include/class.prowl.php' );
 			$comment = get_comment( $comment_id );
-			$prowl = new Prowl( $api_key, WPTOUCH_PROWL_APPNAME );
+			$prowl = new Prowl( $api_key, $settings['header-title'] );
 			
 			if ( $comment->comment_type != 'spam' && $comment->comment_approved != 'spam' ) {
 				if ( $comment->comment_type == 'trackback' || $comment->comment_type == 'pingback' ) {
@@ -268,7 +282,7 @@ class WPtouchPlugin {
 			$user = $wpdb->get_row( $sql );
 			
 			if ( $user ) {
-				$prowl = new Prowl( $api_key, WPTOUCH_PROWL_APPNAME );	
+				$prowl = new Prowl( $api_key, $settings['header-title'] );	
 				$result = $prowl->add( 	1, 
 					__( "User Registration", "wptouch" ),
 					'Name: '. $this->wptouch_cleanup_growl( stripslashes( $user->user_login ) ) . 
