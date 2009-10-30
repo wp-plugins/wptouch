@@ -3,7 +3,7 @@
 <head profile="http://gmpg.org/xfn/11">
 	<meta name="generator" content="WordPress <?php bloginfo('version'); ?>" />
 	<meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
-	<meta name="viewport" content="initial-scale=1.0; maximum-scale=1.0; user-scalable=no;" />
+	<meta name="viewport" content="width=320; initial-scale=1.0; maximum-scale=1.0; user-scalable=no;" />
 	<title><?php $str = bnc_get_header_title(); echo stripslashes($str); ?></title>
 	<link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php bloginfo('rss2_url'); ?>" />
 	<link rel="apple-touch-icon" href="<?php echo bnc_get_title_image(); ?>" />
