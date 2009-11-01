@@ -1614,15 +1614,6 @@ p.subscribe-to-comments input#subscribe {
 /* @group WPtouch Adsense area */
 
 .wptouch-adsense-ad {
-	-webkit-border-radius: 8px		!important;
-	border: 1px solid #adadad		!important;
-	background-color: #fff				!important;
-	display: block							!important;
-	margin-bottom: 15px				!important;
-	max-width: 100%						!important;
-	padding: 5px							!important;
-	text-align: left						    !important;
-	font-size: 12px						!important;
 }
 
 /* @end */

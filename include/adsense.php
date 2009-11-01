@@ -57,11 +57,11 @@ if (!function_exists('google_append_url')) {
 	$GLOBALS['google']['useragent']=read_global('HTTP_USER_AGENT');
 	$google_dt = time();
 
-	$GLOBALS['google']['color_border']='FFFFFF';
-	$GLOBALS['google']['color_bg']='FFFFFF';
-	$GLOBALS['google']['color_link']='0000CC';
-	$GLOBALS['google']['color_text']='333333';
-	$GLOBALS['google']['color_url']='008000';
+// $GLOBALS['google']['color_border']='FFFFFF';
+//	$GLOBALS['google']['color_bg']='FFFFFF';
+//	$GLOBALS['google']['color_link']='0000CC';
+//	$GLOBALS['google']['color_text']='333333';
+//	$GLOBALS['google']['color_url']='008000';
 	
 	function google_append_url(&$url, $param, $value) {
 	  $url .= '&' . $param . '=' . urlencode($value);
