@@ -304,12 +304,6 @@ class WPtouchPlugin {
 				case "upload":
 					include( 'ajax/file_upload.php' );	
 					break;
-				case "news":
-					include( 'ajax/load-news.php' );
-					break;
-				case "beta":
-					include( 'ajax/load-beta.php' );
-					break;
 				case "plugins":
 					include( 'ajax/load-plugins.php' );
 					break;

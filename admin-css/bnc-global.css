@@ -54,11 +54,12 @@
 }
 
 #bnc-global .left-content h4 {
-	font-size: 14px;
+	margin: 2px 0 3px;
+	padding: 0 0 5px;
+	letter-spacing: 0;
+	border-bottom: 1px solid #c5e0e2;
+	font: 13px Georgia, "Times New Roman", Times, serif;
 	color: #d54e21;
-	letter-spacing: -1px;
-	margin: 0 0 5px;
-	padding: 0;
 }
 
 #bnc-global .left-content p {
@@ -173,6 +174,10 @@
 
 #bnc-global h3 span.plugin-options {
 	background: url(../images/h3_icons/plugin.png);
+}
+
+#bnc-global h3 span.rss-head {
+	background: url(../images/h3_icons/rss.png) 0 1px;
 }
 
 

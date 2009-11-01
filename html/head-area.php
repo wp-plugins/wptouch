@@ -18,17 +18,39 @@
 	<div class="bnc-clearer"></div>
 			</div>	
 	
-		<div id="wptouch-news-beta">
+		<div id="wptouch-news-support">
+
 			<div id="wptouch-news-wrap">
-			<h3><?php _e( "WPtouch Wire", "wptouch" ); ?></h3>
-				<div id="wptouch-news-content" style="display:none"></div>
+			<h3><span class="rss-head"></span><?php _e( "WPtouch Wire", "wptouch" ); ?></h3>
+				<div id="wptouch-news-content" style="display:none">
+					<?php require_once (ABSPATH . WPINC . '/rss.php');
+					$rss = @fetch_rss('http://www.bravenewcode.com/tag/wptouch/feed/');						
+					if ( isset($rss->items) && 0 != count($rss->items) ) { ?>
+					<ul>
+						<?php $rss->items = array_slice($rss->items, 0, 5); foreach ($rss->items as $item ) { ?>
+						<li><a target="_blank" class="orange-link" href='<?php echo wp_filter_kses($item['link']); ?>'><?php echo wp_specialchars($item['title']); ?></a></li>
+						<?php } ?>
+					</ul>
+					<?php } ?>				
+				</div>
 			</div>
-			<div id="wptouch-beta-wrap">		
-			<h3><?php _e( "Downloads", "wptouch" ); ?></h3>
-				<div id="wptouch-beta-content" style="display:none"></div>
+
+			<div id="wptouch-support-wrap">			
+			<h3><span class="rss-head"></span><?php _e( "Support Topics", "wptouch" ); ?></h3>
+				<div id="wptouch-support-content" style="display:none">
+					<?php require_once (ABSPATH . WPINC . '/rss.php');
+					$rss = @fetch_rss('http://support.bravenewcode.com/rss/forum/wptouch/topics');						
+					if ( isset($rss->items) && 0 != count($rss->items) ) { ?>
+					<ul>
+						<?php $rss->items = array_slice($rss->items, 0, 5); foreach ($rss->items as $item ) { ?>
+						<li><a target="_blank" class="orange-link" href='<?php echo wp_filter_kses($item['link']); ?>'><?php echo wp_specialchars($item['title']); ?></a></li>
+						<?php } ?>
+					</ul>
+					<?php } ?>
+				</div>
 			</div>
 			
-		</div><!-- wptouch-news-downloads -->
+		</div><!-- wptouch-news-support -->
 
 	<div class="bnc-clearer"></div>
 	</div><!-- postbox -->

@@ -21,11 +21,15 @@ The theme also includes the ability for your visitors to easily switch between t
 = Version 1.9.3.4 =
 * Fixed issues with adsense ads
 * Fixed time since code bug on comments
+* Fixed issue where comment count could read as 0 when there were no comments
+* Fix for width bug in some situations when switching themes
+* Fix for scenarios where a different uploads folder path or name is used
 * Minor admin refinements
 * Porting CSS styles to a global sheet applicable to all our plugins
-* Push messages now come from blogname not wptouch
+* Push messages now come from your blogname not 'wptouch'
 * Switch link now re-directs to the page the switch request came from, not back to home
-* Fix or scenarios where someone has chosen a different uploads folder path or name
+* Changed downloads admin area to support topics rss feed
+* Added additional icons in the admin
 
 
 = Version 1.9.3.3 =

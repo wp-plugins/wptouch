@@ -21,6 +21,7 @@
 	-webkit-border-top-left-radius: 5px;
 	-moz-border-radius-topright: 5px;
 	-moz-border-radius-topleft: 5px;	border: 1px solid #e5f0f2;
+	border-bottom: 1px solid #a2bdbf;
 }
 
 #wptouch-head-title {
@@ -51,7 +52,7 @@
 }
 
 #wptouch-head-links a:hover {
-	color: #d54e21;
+	color: #b23f19;
 	text-shadow: #daeaf7 0 1px 0;
 }
 
@@ -61,7 +62,7 @@
 	text-shadow: #bfdfe8 1px 1px 0;
 }
 
-#wptouch-news-beta {
+#wptouch-news-support {
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	margin-top: 30px;
@@ -79,7 +80,7 @@
 
 #wptouch-news-wrap {
 	float: left;
-	width: 46%;
+	width: 44%;
 	margin: 0;
 	padding: 0;
 }
@@ -90,7 +91,22 @@
 	width: 100%;
 }
 
-#wptouch-news-content li {
+#wptouch-support-wrap {
+	color: #777;
+	float: left;
+	width: 56%;
+	padding: 0;
+	margin: 0;
+}
+
+#wptouch-support-wrap h3 {
+	display: block;
+	width: 100%;
+	position: relative;
+	padding-right: 12px;
+}
+
+#wptouch-news-support li {
 	border-bottom: 1px solid #e6e6e6;
 	margin: 0;
 	padding: 3px 0;
@@ -100,51 +116,8 @@
 	width: 80%;
 }
 
-#wptouch-news-content li:last-child {
+#wptouch-news-support li:last-child {
 	border-bottom-style: none;
-}
-
-/* @end */
-
-/* @group Beta Downloads */
-
-#wptouch-beta-wrap {
-	color: #777;
-	float: left;
-	width: 54%;
-	padding: 0;
-	margin: 0;
-}
-
-#wptouch-beta-wrap h3 {
-	padding-left: 21px;
-	display: block;
-	width: 100%;
-}
-
-#wptouch-beta-content p {
-	margin: 0 150px 5px 0;
-	padding: 0 0 0 13px;
-}
-
-#wptouch-beta-content img {
-	float: left;
-	position: relative;
-	bottom: 10px;
-	margin-right: 10px;
-}
-
-#wptouch-beta-content a {
-	font-weight: bold;
-}
-
-#wptouch-beta-content .wptouch-beta-dl {
-	margin-top: 15px;
-	margin-left: 8px;
-}
-
-#wptouch-beta-content .wptouch-beta-dl p {
-	color: #bbb;
 }
 
 /* @end */
@@ -188,18 +161,16 @@ input.no-right-margin {
 	position: relative;
 	border-right: 1px solid #dcdcdc;
 	width: 30%;
-	height: 314px;
+	height: 330px;
 	z-index: 2;
 	background-color: white;
 	float: left;
-	margin-right: 10px;
+	right: 10px;
 }
 
 #bnc-global #skins-menu ul {
 	margin: 0;
-	padding-right: 0;
-	padding-top: 0;
-	padding-left: 0;
+	padding: 0;
 }
 
 #bnc-global #skins-menu li {
@@ -232,6 +203,9 @@ input.no-right-margin {
 #bnc-global .skins-fixed {
 	position: relative;
 	padding: 0;
+	height: 320px;
+	width: 0;
+	margin: 0;
 }
 
 #bnc-global .skins-desc {
@@ -243,7 +217,7 @@ input.no-right-margin {
 }
 
 #bnc-global .skins-desc select {
-	width: 125px;
+	width: 120px;
 	margin-left: 12px;
 }
 
