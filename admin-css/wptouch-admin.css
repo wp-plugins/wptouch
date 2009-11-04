@@ -1,6 +1,7 @@
 /* @override 
 	http://www.bnclocal.com/wp-content/plugins/wptouch/admin-css/wptouch-admin.css
 	http://www.wptouch.com/wp-content/plugins/wptouch/admin-css/wptouch-admin.css
+	http://wptouch.com/wp-content/plugins/wptouch/admin-css/wptouch-admin.css
 */
 
 /* WPtouch 1.9 Admin CSS */
@@ -52,8 +53,8 @@
 }
 
 #wptouch-head-links a:hover {
-	color: #b23f19;
-	text-shadow: #daeaf7 0 1px 0;
+	color: #d54e21;
+	text-shadow: #cedeea 0 1px 0;
 }
 
 #wptouch-head-links li {
@@ -68,6 +69,7 @@
 	margin-top: 30px;
 	width: 100%;
 	height: 170px;
+	text-transform: capitalize;
 }
 
 #wptouch-head h3 {
@@ -457,6 +459,7 @@ textarea#wptouch-stats {
 #push-area li input {
 	position: relative;
 	right: 5px;
+	width: 275px;
 }
 
 #push-area li input.checkbox {

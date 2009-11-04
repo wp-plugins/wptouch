@@ -12,14 +12,12 @@
 				<p><?php _e( "You can shorten your site title here so it won't be truncated by WPtouch.", "wptouch" ); ?></p>
 
 
-
 				<h4><?php _e( "Excluded Categories", "wptouch" ); ?></h4>
 				<p><?php _e( "Choose categories you want excluded from the main post listings in WPtouch.", "wptouch" ); ?></p>
 
 				<h4><?php _e( "Font Options", "wptouch" ); ?></h4>
 				<p><?php _e( "Set the alignment for text.", "wptouch" ); ?></p>
 
-				<br /><br />
 				
 				<h4><?php _e( "Post Listings Options", "wptouch" ); ?></h4>
 				<p><?php _e( "Select which post-meta items are shown under titles on the main, search, &amp; archives pages.", "wptouch" ); ?></p>
@@ -35,7 +33,7 @@
 					<strong class="no-pages"><?php _e( "You have no pages yet. Create some first!", "wptouch" ); ?></strong>
 				<?php } ?>
 
-				<br /><br />
+				<br /><br /><br />
 
 				<ul class="wptouch-make-li-italic">
 					<li><input type="text" class="no-right-margin" name="header-title" value="<?php $str = $wptouch_settings['header-title']; echo stripslashes($str); ?>" /><?php _e( "Site title text", "wptouch" ); ?></li>

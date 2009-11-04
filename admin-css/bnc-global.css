@@ -1,4 +1,7 @@
-/* @override http://www.wptouch.com/wp-content/plugins/wptouch/admin-css/bnc-global.css */
+/* @override 
+	http://www.wptouch.com/wp-content/plugins/wptouch/admin-css/bnc-global.css
+	http://wptouch.com/wp-content/plugins/wptouch/admin-css/bnc-global.css
+*/
 
 /* Global styles applied to BraveNewCode plugins */
 
@@ -54,12 +57,11 @@
 }
 
 #bnc-global .left-content h4 {
-	margin: 2px 0 3px;
-	padding: 0 0 5px;
+	margin: 2px 0 0;
+	padding: 0 0 4px;
 	letter-spacing: 0;
-	border-bottom: 1px solid #c5e0e2;
-	font: 13px Georgia, "Times New Roman", Times, serif;
 	color: #d54e21;
+	font-size: 11px;
 }
 
 #bnc-global .left-content p {

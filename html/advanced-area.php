@@ -6,7 +6,7 @@
 
 			<div class="left-content">
 				<p><?php _e( "Choose to enable/disable advanced features &amp; options available for WPtouch.", "wptouch"); ?></p>	
-				<p><?php _e( "* WPtouch exclusive mode fixes issues where other plugins load scripts which erroneously interfere with WPtouch functions and javascript.", "wptouch" ); ?></p>
+				<p><?php _e( "* WPtouch exclusive mode attempt to fixes issues where other plugins load scripts which erroneously interfere with WPtouch functions and javascript.", "wptouch" ); ?></p>
 			</div><!-- left-content -->
 	
 	<div class="right-content">
