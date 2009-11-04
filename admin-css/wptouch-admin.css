@@ -211,7 +211,7 @@ input.no-right-margin {
 }
 
 #bnc-global .skins-desc {
-	width: 80%;
+	width: 75%;
 }
 
 #bnc-global .skins-desc input {
@@ -232,8 +232,8 @@ input.no-right-margin {
 
 #bnc-global .skins-desc img {
 	position: absolute;
-	top: 10px;
-	right: -44px;
+	top: 2px;
+	right: -40px;
 }
 
 

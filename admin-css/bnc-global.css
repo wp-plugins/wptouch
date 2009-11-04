@@ -17,6 +17,7 @@
 	padding: 10px;
 	position: relative;
 	overflow: hidden;
+	-webkit-box-shadow: #ccc 0px 1px 6px;
 }
 
 #bnc-global .postbox h3 {
