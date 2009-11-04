@@ -381,6 +381,10 @@ textarea#wptouch-stats {
 
 /* @group plugin-compat-area.php */
 
+* {
+	
+}
+
 #bnc-global .all-good {
 	border: 1px solid #8aceff;
 	padding: 3px 15px 4px 27px;
@@ -423,29 +427,29 @@ textarea#wptouch-stats {
 	margin-right: 1px;
 }
 
-#bnc-global .wptouch-left-content p.wpv {
+#bnc-global .left-content p.wpv {
 	margin: 2px 0 5px;
 	padding: 0;
 	font-weight: bold;
 }
 
-#bnc-global .wptouch-left-content p.wptv {
+#bnc-global .left-content p.wptv {
 	padding: 0 0 10px;
 	border-bottom: 1px solid #dcdcdc;
 	font-style: italic;
 }
 
-#bnc-global .wptouch-left-content span.go {
+#bnc-global .left-content span.go {
 	font-weight: bold;
 	color: green;
 }
 
-#bnc-global .wptouch-left-content span.caution {
+#bnc-global .left-content span.caution {
 	color: #f8b615;
 	font-weight: bold;
 }
 
-#bnc-global .wptouch-left-content span.red {
+#bnc-global .left-content span.red {
 	color: red;
 	font-weight: bold;
 }
