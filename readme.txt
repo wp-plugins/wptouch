@@ -25,6 +25,7 @@ The theme also includes the ability for your visitors to easily switch between t
 * Dropped official support for WP 2.6 (sorry folks, you should update!)
 * Added spam check for Push messages via a nonce
 * Fixes and changes for Adsense appearance
+* Added check to see if Prowl API key is valid
 
 
 = Version 1.9.3.4 =
