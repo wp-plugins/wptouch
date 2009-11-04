@@ -6,6 +6,15 @@
 			<div class="left-content">
 					<p><?php echo sprintf(__( "Here you can configure WPtouch to push selected notifications through your %sProwl%s account to your iPhone, iPod touch and Growl-enabled Mac.", "wptouch" ), '<a href="http://prowl.weks.net/" target="_blank">','</a>'); ?></p>
 					<p><?php echo sprintf(__( "%sMake sure you generate a Prowl API key to use here%s otherwise no notifications will be pushed to you.", "wptouch" ), '<strong>','</strong>'); ?></p>
+					
+							
+							<?php if ( isset( $wptouch_settings['prowl-api'] ) && strlen( $wptouch_settings['prowl-api'] ) ) { ?>
+								<?php if ( bnc_wptouch_is_prowl_key_valid() ) { ?>
+									<p class="valid"><?php _e( "Congratulations, your Prowl API key is valid.", "wptouch" ); ?></p>
+								<?php } else { ?>
+									<p class="invalid"><?php _e( "Sorry, your Prowl API key is not valid", "wptouch" ); ?></p>
+								<?php } ?>
+							<?php } ?>					
 			</div><!-- left content -->
 
 			<div class="right-content">
@@ -17,6 +26,7 @@
 							<h2><?php _e( "More Info", "wptouch" ); ?></h2>
 							<p><?php _e( "In order to enable Prowl notifications, you must create a Prowl account, and download/configure the Prowl application for iPhone.", "wptouch" ); ?></p>
 							<p><?php _e( "Next, visit the Prowl website and generate your API key, which we use to connect securely and send your notifications.", "wptouch" ); ?></p>
+							
 							<p><?php echo sprintf(__( "%sVisit the Prowl Website%s", "wptouch" ), '<a href="http://prowl.weks.net/settings.php" target="_blank">','</a>'); ?> | <?php echo sprintf(__( "%sVisit iTunes to Download Prowl%s", "wptouch" ), '<a href="http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=320876271&amp;mt=8" target="_blank">','</a>'); ?></p>
 						</div>
 					</li>

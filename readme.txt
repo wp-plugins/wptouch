@@ -23,7 +23,7 @@ The theme also includes the ability for your visitors to easily switch between t
 * Fix for re-direct issues introduced with 1.9.3.4
 * Minor admin styling changes
 * Dropped official support for WP 2.6 (sorry folks, you should update!)
-* Added spam check for Push messages
+* Added spam check for Push messages via a nonce
 * Fixes and changes for Adsense appearance
 
 

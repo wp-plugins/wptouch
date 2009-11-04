@@ -37,6 +37,7 @@
 
 		<textarea name="prowl-msg-message"></textarea>
 		<input type="hidden" name="wptouch-prowl-message" value="1" /> 	
+		<input type="hidden" name="_nonce" value="<?php echo wp_create_nonce( 'wptouch-prowl' ); ?>" />
 		<input type="submit" name="prowl-submit" value="<?php _e('Send Now', 'wptouch' ); ?>" id="prowl-submit" />
 	 </form>
 	<div class="clearer"></div>

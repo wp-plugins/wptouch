@@ -4,7 +4,7 @@
    Plugin URI: http://bravenewcode.com/wptouch
    Description: A plugin which formats your site with a mobile theme for the Apple <a href="http://www.apple.com/iphone/">iPhone</a> / <a href="http://www.apple.com/ipodtouch/">iPod touch</a>, <a href="http://www.android.com/">Google Android</a> and other touch-based smartphones.
 	Author: Dale Mugford & Duane Storey
-	Version: 1.9.3.5
+	Version: 1.9.4
 	Author URI: http://www.bravenewcode.com
    
 	# Thanks to ContentRobot and the iWPhone theme/plugin
@@ -35,13 +35,12 @@
 
 
 global $bnc_wptouch_version;
-$bnc_wptouch_version = '1.9.3.5';
+$bnc_wptouch_version = '1.9.4';
 
 require_once( 'include/plugin.php' );
 require_once( 'include/compat.php' );
 
 define( 'WPTOUCH_PROWL_APPNAME', 'WPtouch');
-
 
 function wp_touch_get_comment_count() {
 	global $wpdb;
@@ -93,7 +92,8 @@ $wptouch_defaults = array(
 	'sort-order' => 'name',
 	'adsense-id' => '',
 	'statistics' => '',
-	'adsense-channel' => ''
+	'adsense-channel' => '',
+	'custom-user-agents' => array()
 );
 
 function wptouch_get_plugin_dir_name() {
@@ -137,7 +137,7 @@ function wptouch_content_filter( $content ) {
 		return  '<div class="wptouch-adsense-ad">' . $ad_contents . '</div>' . $content;	
 	} else {
 		return $content;
-  }
+	}
 }
 
 	add_filter('init', 'wptouch_init');
@@ -156,23 +156,72 @@ function wptouch_settings_link( $links, $file ) {
 	return $links;
 }
  
-	// WP Admin stylesheets & javascript
-	function wptouch_admin_files() {		
-		if ( isset( $_GET['page'] ) && $_GET['page'] == 'wptouch/wptouch.php' ) {		
+// WP Admin stylesheets & javascript
+function wptouch_admin_files() {		
+	if ( isset( $_GET['page'] ) && $_GET['page'] == 'wptouch/wptouch.php' ) {		
 
-			echo "<link rel='stylesheet' type='text/css' href='" . compat_get_plugin_url( 'wptouch' ) . "/admin-css/wptouch-admin.css' />\n";
-			
-			$version = (float)get_bloginfo('version');
-			if ( $version <= 2.6 ) {
-				echo "<link rel='stylesheet' type='text/css' href='" . compat_get_plugin_url( 'wptouch' ) . "/admin-css/wptouch-admin-pre27.css' />\n";
-			} 
-			echo "<link rel='stylesheet' type='text/css' href='" . compat_get_plugin_url( 'wptouch' ) . "/admin-css/bnc-global.css' />\n";
-			echo "<script type='text/javascript' src='" . compat_get_plugin_url( 'wptouch' ) . "/js/ajax_upload_3.2.js'></script>\n";
-			echo "<script type='text/javascript' src='" . compat_get_plugin_url( 'wptouch' ) . "/js/colorpicker_1.4.js'></script>\n";
-			echo "<script type='text/javascript' src='" . compat_get_plugin_url( 'wptouch' ) . "/js/fancybox_1.2.1.js'></script>\n";
-			echo "<script type='text/javascript' src='" . compat_get_plugin_url( 'wptouch' ) . "/js/admin_1.9.js'></script>\n";
-		}
+		echo "<link rel='stylesheet' type='text/css' href='" . compat_get_plugin_url( 'wptouch' ) . "/admin-css/wptouch-admin.css' />\n";
+		
+		$version = (float)get_bloginfo('version');
+		if ( $version <= 2.6 ) {
+			echo "<link rel='stylesheet' type='text/css' href='" . compat_get_plugin_url( 'wptouch' ) . "/admin-css/wptouch-admin-pre27.css' />\n";
+		} 
+		echo "<link rel='stylesheet' type='text/css' href='" . compat_get_plugin_url( 'wptouch' ) . "/admin-css/bnc-global.css' />\n";
+		echo "<script type='text/javascript' src='" . compat_get_plugin_url( 'wptouch' ) . "/js/ajax_upload_3.2.js'></script>\n";
+		echo "<script type='text/javascript' src='" . compat_get_plugin_url( 'wptouch' ) . "/js/colorpicker_1.4.js'></script>\n";
+		echo "<script type='text/javascript' src='" . compat_get_plugin_url( 'wptouch' ) . "/js/fancybox_1.2.1.js'></script>\n";
+		echo "<script type='text/javascript' src='" . compat_get_plugin_url( 'wptouch' ) . "/js/admin_1.9.js'></script>\n";
 	}
+}
+
+function bnc_wptouch_get_user_agents() {
+	$useragents = array(		
+		"iphone",  				 // Apple iPhone
+		"ipod", 					 // Apple iPod touch
+		"aspen", 				 // iPhone simulator
+		"dream", 				 // Pre 1.5 Android
+		"android", 			 // 1.5+ Android
+		"cupcake", 			 // 1.5+ Android
+		"blackberry9500",	 // Storm
+		"blackberry9530",	 // Storm
+		"opera mini", 		 // Experimental
+		"webos",				 // Experimental
+		"incognito", 			 // Other iPhone browser
+		"webmate" 			 // Other iPhone browser
+	);
+	
+	$settings = bnc_wptouch_get_settings();
+	if ( isset( $settings['custom-user-agents'] ) ) {
+		foreach( $settings['custom-user-agents'] as $agent ) {
+			if ( !strlen( $agent ) ) continue;
+			
+			$useragents[] = $agent;	
+		}	
+	}
+	
+	asort( $useragents );
+
+	// WPtouch User Agent Filter
+	$useragents = apply_filters( 'wptouch_user_agents', $useragents );
+	
+	return $useragents;
+}
+
+function bnc_wptouch_is_prowl_key_valid() {
+	require_once( 'include/class.prowl.php' );		
+		
+	$settings = bnc_wptouch_get_settings();
+				
+	if ( isset( $settings['prowl-api'] ) ) {
+		$api_key = $settings['prowl-api'];
+			
+		$prowl = new Prowl( $api_key, $settings['header-title'] );	
+		$verify = $prowl->verify();
+		return ( $verify === true );
+	}
+	
+	return false;
+}
   
 class WPtouchPlugin {
 	var $applemobile;
@@ -318,8 +367,13 @@ class WPtouchPlugin {
 			echo "<meta name=\"viewport\" content=\"width=device-width,initial-scale=0,user-scalable=yes\" /> \n";
 		}
 				
-		// check for wptouch prowl direct messages		
-		if ( isset( $_POST['wptouch-prowl-message'] ) ) {
+		// check for wptouch prowl direct messages	
+		$nonce = '';
+		if ( isset( $_POST['_nonce'] ) ) {
+			$nonce = $_POST['_nonce'];	
+		}
+			
+		if ( isset( $_POST['wptouch-prowl-message'] ) && wp_verify_nonce( $nonce, 'wptouch-prowl' )  ) {
 			$name = $_POST['prowl-msg-name'];
 			$email = $_POST['prowl-msg-email'];
 			$msg = $_POST['prowl-msg-message'];
@@ -386,20 +440,8 @@ class WPtouchPlugin {
 		// print_r($container); 
 		// Add whatever user agents you want here to the array if you want to make this show on another device.
 		// No guarantees it'll look pretty, though!
-			$useragents = array(		
-			"iphone",  				 // Apple iPhone
-			"ipod", 					 // Apple iPod touch
-			"aspen", 				 // iPhone simulator
-			"dream", 				 // Pre 1.5 Android
-			"android", 			 // 1.5+ Android
-			"cupcake", 			 // 1.5+ Android
-			"blackberry9500",	 // Storm
-			"blackberry9530",	 // Storm
-			"opera mini", 		 // Experimental
-			"webos",				 // Experimental
-			"incognito", 			 // Other iPhone browser
-			"webmate" 			 // Other iPhone browser
-		);
+		$useragents = bnc_wptouch_get_user_agents();
+
 		$devfile =  compat_get_plugin_dir( 'wptouch' ) . '/include/developer.mode';
 		$this->applemobile = false;
 		foreach ( $useragents as $useragent ) {

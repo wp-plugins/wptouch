@@ -9,7 +9,7 @@ class Prowl
    {
       $this->apikey = $apikey;
       $this->application = $application;
-      $this->verify();
+     // $this->verify();
    }
    
    function add($priority, $event, $description)
@@ -26,23 +26,22 @@ class Prowl
       return $this->getresult($response);
    }
    
-   function getresult($response)
-   {
-	$response = str_replace("\n", " ", $response);
+   function getresult($response) {
+		$response = str_replace("\n", " ", $response);
 	
-	if(preg_match("/code=\"200\"/i", $response))
-		return true;
-	else
-	{
-		preg_match("/<error.*?>(.*?)<\/error>/i", $response, $out);
-		return $out[1];
-	}
+		if(preg_match("/code=\"200\"/i", $response))
+			return true;
+		else
+		{
+			preg_match("/<error.*?>(.*?)<\/error>/i", $response, $out);
+			return $out[1];
+		}
    }
    
    function verify()
    {
       $options = array('apikey' => $this->apikey);
-      $this->request('https://prowl.weks.net/publicapi/verify', $options);
+      return $this->getresult( $this->request('https://prowl.weks.net/publicapi/verify', $options) );
    }
    
    function request($file, $options)

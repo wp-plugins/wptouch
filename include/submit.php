@@ -130,6 +130,21 @@
 		} else {
 			$a['enable-regular-default'] = 0;
 		}
+		
+		if ( isset( $_POST['custom-user-agents'] ) ) {
+			$new_array = array();
+			if ( !strlen( trim( $_POST['custom-user-agents'] ) ) ) {
+				$a['custom-user-agents'] = array();
+			} else {				
+				$a['custom-user-agents'] = explode( ",", $_POST['custom-user-agents'] );
+				foreach( $a['custom-user-agents'] as $agent ) {
+					$new_array[] = trim( $agent );	
+				}
+				$a['custom-user-agents'] = $new_array;
+			}
+		} else {
+			$a['custom-user-agents'] = array();	
+		}
 
 		if ( isset($_POST['excluded-cat-ids']) ) {
 			$a['excluded-cat-ids'] = $_POST['excluded-cat-ids'];
