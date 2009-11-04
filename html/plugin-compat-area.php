@@ -16,7 +16,7 @@
 						echo __( '' . wptouch() . ' support: ', 'wptouch' );
 						if ($version > 2.9) {
 							echo sprintf(__( "%sUntested%s", "wptouch" ), '<span class="caution">','</span>');
-						} elseif ($version >= 2.6) {
+						} elseif ($version >= 2.7) {
 							echo sprintf(__( "%sFully Supported%s", "wptouch" ), '<span class="go">','</span>');
 						} else {
 							echo sprintf(__( "%Unsupported. Upgrade Required.%s", "wptouch" ), '<span class="red">','</span>');

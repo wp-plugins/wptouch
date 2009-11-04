@@ -2,7 +2,7 @@
 Contributors: BraveNewCode, duanestorey, dalemugford
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=paypal%40bravenewcode%2ecom&item_name=WPtouch%20Beer%20Fund&no_shipping=0&no_note=1&tax=0&currency_code=CAD&lc=CA&bn=PP%2dDonationsBF&charset=UTF%2d8
 Tags: wptouch, iphone, ipod, theme, apple, mac, bravenewcode, ajax, mobile, android, blackberry, smartphone
-Requires at least: 2.6
+Requires at least: 2.7
 Tested up to: 2.9
 Stable tag: 1.9.3.4
 
@@ -16,7 +16,16 @@ The admin panel allows you to customize many aspects of its appearance, and deli
 
 The theme also includes the ability for your visitors to easily switch between the *WPtouch* view and your site's regular theme.
 
-== What's New ==
+== Changelog ==
+
+= Version 1.9.4 =
+* Added ability to define custom user agents in the admin
+* Fix for re-direct issues introduced with 1.9.3.4
+* Minor admin styling changes
+* Dropped official support for WP 2.6 (sorry folks, you should update!)
+* Added spam check for Push messages
+* Fixes and changes for Adsense appearance
+
 
 = Version 1.9.3.4 =
 * Fixed issues with adsense ads
