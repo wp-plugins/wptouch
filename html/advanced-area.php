@@ -7,6 +7,11 @@
 			<div class="left-content">
 				<p><?php _e( "Choose to enable/disable advanced features &amp; options available for WPtouch.", "wptouch"); ?></p>	
 				<p><?php _e( "* WPtouch exclusive mode attempt to fixes issues where other plugins load scripts which erroneously interfere with WPtouch functions and javascript.", "wptouch" ); ?></p>
+			 	<br />
+			 		<h4><?php _e( "Custom User-Agents", "wptouch" ); ?></h4>
+			 		<p><?php _e( "Enter a comma-separated list of user-agents to enable WPtouch for a device that isn't currently officially supported.", "wptouch" ); ?></p>
+			 		<p><?php echo sprintf( __( "The currently enabled user-agents are: <em class='supported'>%s</em>", "wptouch" ), implode( ", ", bnc_wptouch_get_user_agents() ) ); ?></p>
+
 			</div><!-- left-content -->
 	
 	<div class="right-content">
@@ -45,11 +50,12 @@
 			<li>
 				<input class="checkbox" type="checkbox" name="enable-ajax-comments" <?php if (isset($wptouch_settings['enable-ajax-comments']) && $wptouch_settings['enable-ajax-comments'] == 1) echo('checked'); ?> />
 				<label class="label" for="enable-ajax-comments"> <?php _e( "Enable ajax for comments", "wptouch" ); ?> <a href="#ajax-com-info" class="fancylink">?</a></label>
-							<div id="ajax-com-info" style="display:none">
-					<h2><?php _e( "More Info", "wptouch" ); ?></h2>
-					<p><?php _e( "When this option is checked, comments are submitted and returned in real time using Ajax.", "wptouch" ); ?></p>
-					<p><?php _e( "However, some server enviornments and other WordPress plugins prevent WPtouch's implementation of Ajax comments. Uncheck this option if you're having problems.", "wptouch" ); ?></p>
-				</div>
+					<div id="ajax-com-info" style="display:none">
+						<h2><?php _e( "More Info", "wptouch" ); ?></h2>
+						<p><?php _e( "When this option is checked, comments are submitted and returned in real time using Ajax.", "wptouch" ); ?></p>
+						<p><?php _e( "However, some server environments and other WordPress plugins prevent WPtouch's Ajax comments from working.", "wptouch" ); ?></p>
+						<p><?php _e( "Uncheck this option if you're having problems or would prefer to use the standard WordPress comment submission format.", "wptouch" ); ?></p>
+					</div>
 			</li>
 
 			<li>
@@ -89,6 +95,9 @@
 						<p><?php _e( "Some plugins load conflicting javascript, extra CSS style sheets, and other functional code into your theme to accomplish what they add to your site. As WPtouch works complete on its own without any other plugin installed, in some cases (where you have several plugins or find something doesn't work right with WPtouch) you may want to enable Exclusive Mode to ensure that WPtouch works properly, and loads quickly for mobile users.", "wptouch" ); ?></p>
 					</div>
 			</li>
+	<ul class="wptouch-make-li-italic">
+					<li><input type="text" name="custom-user-agents" value="<?php if ( isset( $wptouch_settings['custom-user-agents'] ) ) echo implode( ', ', $wptouch_settings['custom-user-agents'] ); ?>" /><?php _e( "Custom user-agents", "wptouch" ); ?></li>
+				</ul>
 
 			</ul>
 		</div><!-- right content -->

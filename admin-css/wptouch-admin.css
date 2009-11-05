@@ -439,7 +439,7 @@ textarea#wptouch-stats {
 	font-style: italic;
 }
 
-#bnc-global .left-content span.go {
+#bnc-global .left-content span.go, #bnc-global .right-content p.valid {
 	font-weight: bold;
 	color: green;
 }
@@ -449,7 +449,7 @@ textarea#wptouch-stats {
 	font-weight: bold;
 }
 
-#bnc-global .left-content span.red {
+#bnc-global .left-content span.red, .right-content p.invalid {
 	color: red;
 	font-weight: bold;
 }
@@ -564,5 +564,18 @@ textarea#wptouch-stats {
 	display: block;
 	margin-top: 110px;
 }
+
+/* @end */
+
+/* @group advanced-area.php */
+
+em.supported {
+	color: #8a9ba8;
+	display: block;
+	line-height: 16px;
+	margin-top: 3px;
+}
+
+
 
 /* @end */
