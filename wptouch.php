@@ -426,7 +426,8 @@ class WPtouchPlugin {
 			
 			$redirect_location = get_bloginfo( 'siteurl' );
 			if ( isset( $_GET['wptouch_redirect'] ) ) {
-				$redirect_location = $_GET['wptouch_redirect'];
+				$protocol = ($_SERVER['HTTPS'] == 'on') ? 'https://' : 'http://';
+				$redirect_location = $protocol . $_GET['wptouch_redirect'];
 			}
 			
 			header( 'Location: ' . $redirect_location );
