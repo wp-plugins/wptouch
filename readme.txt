@@ -19,16 +19,18 @@ The theme also includes the ability for your visitors to easily switch between t
 == Changelog ==
 
 = Version 1.9.4 =
-* Added ability to define custom user agents in the admin
+
+* Added ability to define custom user agents in the admin (go nuts!)
 * Fix for re-direct issues introduced with 1.9.3.4
 * Minor admin styling changes
 * Dropped official support for WP 2.6 (sorry folks, you should update!)
 * Added spam check for Push messages via a nonce
 * Fixes and changes for Adsense appearance
-* Added check to see if Prowl API key is valid
+* Added verification for Prowl API key
 
 
 = Version 1.9.3.4 =
+
 * Fixed issues with adsense ads
 * Fixed time since code bug on comments
 * Fixed issue where comment count could read as 0 when there were no comments
@@ -43,20 +45,24 @@ The theme also includes the ability for your visitors to easily switch between t
 
 
 = Version 1.9.3.3 =
+
 * Fixed international languages display of time since on comments
 
 
 = Version 1.9.3.2 =
+
 * Fixed logic with PUSH notification via Prowl
 
 
 = Version 1.9.3.1 =
+
 * Removed unneeded files
 * Bug fixes
 * Style fixes for the display of comments
 
 
 = Version 1.9.3 =
+
 * Fixed issue where regular theme view would not allow pinching for zoom
 * Fixed JS bug in theme
 * Possible fix for time since on comments not working in some situations
@@ -64,6 +70,7 @@ The theme also includes the ability for your visitors to easily switch between t
 
 
 = Version 1.9.2.2 =
+
 * Fixed issue where mobile switch to regular theme was always zoomed in and required refresh
 * Fixed issue where pages changed from published to unpublished still showed in the WPtouch menu
 * Fixed issue where 'Load More Entries' caused blank page or other issues. WPtouch now detect possible issues and defaults to pagination
@@ -71,16 +78,19 @@ The theme also includes the ability for your visitors to easily switch between t
 
 
 = Version 1.9.2.1 =
+
 * Added check for wp-load.php before attempting ajax comments. Should fix WP comment posting issues. Working on better Disqus and Intense Debate support as well
 * Removed 'Find in this page' button, until bugs are resolved
 * Now WPtouch will not hide mobileSafari addressbar on single post pages on slower connections
 
 
 = Version 1.9.2 =
+
 * Fixed bug where WPtouch admin would report that CURL wasn't installed even if it was
 
 
 = Version 1.9.1 =
+
 * Fixed bug for admin panel Ajax not working in some situations
 * Adsense re-enabled
 * Fixed bug where SPAM comments were pushed via Prowl
@@ -90,6 +100,7 @@ The theme also includes the ability for your visitors to easily switch between t
 
 
 = Version 1.9 =
+
 * Fully compatible with WordPress 2.6 - 2.8.x
 * Major rewrites of theme files, css for simplicity, CoreTheme
 * Adsense has been temporarily disabled until we update code for new Google API changes
@@ -333,11 +344,13 @@ The theme also includes the ability for your visitors to easily switch between t
 
 == Installation ==
 
-= 2.6 =
-Download, unzip, and upload the 'wptouch' folder and all its contents to your WordPress wp-content/plugins folder using FTP. Visit the plugin tab in the WordPress admin, and activate *WPtouch*. You can then setup your plugin options by visiting the *Settings - >WPtouch* tab.
+= 2.6 and Older =
+Sorry, we do not officially support installations on WordPress 2.6 or older. You can use WPtouch 1.9.3.4 or older on these installations, however.
 
-= 2.7+ =
-You can now install *WPtouch* directly from the WordPress admin!
+= 2.7, 2.8+ =
+You can install *WPtouch* directly from the WordPress admin! Visit the *Plugins/Add New* page and search for 'WPtouch'. Click to install.
+
+Once installed and activated visit the WPtouch admin page (*Settings/WPtouch*) to customize your WPtouch appearance.
 
 = WordPress MU =
 If you'd like to use *WPtouch* with WordPress MU as a site-wide plugin, simple install the wptouch folder in the mu-plugins directory.  Once complete, either move wptouch.php back a directory (into the mu-plugins directory), or create a symbolic link to it.
@@ -350,17 +363,17 @@ You can also checkout our Support Forums at http://support.bravenewcode.com to p
 
 == Frequently Asked Questions ==
 
-= I thought the iPhone/iPod touch/Android shows my website fine the way it is now? =
+= I thought the iPhone/iPod touch/Pre/Storm/Android shows my website fine the way it is now? =
 
-Yes, that's true for the most part. However, not all websites are created equal, with some sites failing to translate well in the viewport of a small mobile device. Many WordPress sites today make heavy use of different javascripts which significantly increase the load time of pages, and drive your visitors on 3G/EDGE batty. So we've come up with *WPtouch*, a lightweight, fast-loading, feature-rich and highly-customized "theme application" which includes an admin interface to let you customize many aspects of your site's presentation.
+Yes, that's true for the most part. However, not all websites are created equal, with some sites failing to translate well in the viewport of a small mobile device. Many WordPress sites today make heavy use of different javascript files which significantly increase the load time of pages, and drive your visitors on 3G/EDGE batty. So we've come up with *WPtouch*, a lightweight, fast-loading, feature-rich and highly-customized "theme application" which includes an admin interface to let you customize many aspects of your site's presentation.
 
 = Well, what if my users don't like it and want to see my regular site? =
 
-There's a mobile switch option in the footer on *WPtouch* for your users to easily switch between the *WPtouch* view and your site's regular appearance. It's that easy. We even automatically put a little snippet of code into your current theme which will be shown only to iPhone, iPod touch, Android or BlackBerry touch mobile device visitors, giving them control to switch between the two site themes easily.
+There's a mobile switch option in the footer on *WPtouch* for your users with browsers that support cookies to easily switch between the *WPtouch* view and your site's regular appearance. It's that easy. We even automatically put a little snippet of code into your current theme which will be shown only to iPhone, iPod touch, Android or BlackBerry touch mobile device visitors, giving them control to switch between the two site themes easily.
 
 = Will it slow down my blog, or increase my server load? =
 
-Not bloody likely! Unless of course you're getting slammed with all sorts of traffic because you've installed this sexy thang. The entire theme files package for *WPtouch* is small. It was designed to be as lightweight and speedy as possible, while still serving your site's content in a richly presented way, sparing no essential features like search, login, categories, tags, comments etc.
+Not bloody likely! Unless of course you're getting slammed with all sorts of traffic because you've installed this sexy plugin. The entire theme files footprint for *WPtouch* is small. It was designed to be as lightweight and speedy as possible, while still serving your site's content in a richly presented way, sparing no essential features like search, login, categories, tags, comments etc.
 
 == Screenshots ==
 
