@@ -1,8 +1,4 @@
-/* @override 
-	http://wptouch.com/wp-content/plugins/wptouch/themes/default/style.css
-	http://www.bnclocal.com/wp-content/plugins/wptouch/themes/default/style.css
-	http://wptouch.com/wp-content/plugins/wptouch/themes/default/style_min.css
-*/
+/* @override http://www.wptouch.com/wp-content/plugins/wptouch/themes/default/style.css */
 
 /*  
 Theme Name: WPtouch Mobile Plugin & Theme For WordPress
@@ -1612,9 +1608,6 @@ p.subscribe-to-comments input#subscribe {
 /* @end */
 
 /* @group WPtouch Adsense area */
-
-.wptouch-adsense-ad {
-}
 
 /* @end */
 

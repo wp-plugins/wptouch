@@ -15,11 +15,6 @@ window.googleAfmcRequest = {
 <?php } else { ?>
   oe: 'utf8',
 <?php } ?>
-  color_border: '336699',
-  color_bg: 'FFFFFF',
-  color_link: '0000FF',
-  color_text: '000000',
-  color_url: '336699',
 };
 //--></script>
 <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_afmc_ads.js"></script>

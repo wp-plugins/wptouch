@@ -15,7 +15,7 @@
 	# the Push notification additions.
 	# (http://codework.dk/referencer/wp-plugins/prowl-me/)
 	
-	#All design & CSS Copyright (c) 2008-2009 Duane Storey & Dale Mugford of BraveNewCode Inc.
+	#All Design & CSS Copyright (c) 2008-2009 Duane Storey & Dale Mugford of BraveNewCode Inc.
 	
 	# This plugin is free software; you can redistribute the code aspects of it and/or
 	# modify the code under the terms of the GNU Lesser General Public
@@ -169,14 +169,8 @@ function wptouch_settings_link( $links, $file ) {
  
 // WP Admin stylesheets & javascript
 function wptouch_admin_files() {		
-	if ( isset( $_GET['page'] ) && $_GET['page'] == 'wptouch/wptouch.php' ) {		
-
+	if ( isset( $_GET['page'] ) && $_GET['page'] == 'wptouch/wptouch.php' ) {
 		echo "<link rel='stylesheet' type='text/css' href='" . compat_get_plugin_url( 'wptouch' ) . "/admin-css/wptouch-admin.css' />\n";
-		
-		$version = (float)get_bloginfo('version');
-		if ( $version <= 2.6 ) {
-			echo "<link rel='stylesheet' type='text/css' href='" . compat_get_plugin_url( 'wptouch' ) . "/admin-css/wptouch-admin-pre27.css' />\n";
-		} 
 		echo "<link rel='stylesheet' type='text/css' href='" . compat_get_plugin_url( 'wptouch' ) . "/admin-css/bnc-global.css' />\n";
 		echo "<script type='text/javascript' src='" . compat_get_plugin_url( 'wptouch' ) . "/js/ajax_upload_3.2.js'></script>\n";
 		echo "<script type='text/javascript' src='" . compat_get_plugin_url( 'wptouch' ) . "/js/colorpicker_1.4.js'></script>\n";
@@ -351,7 +345,6 @@ class WPtouchPlugin {
 			}
 		}
 	}
-	
 
 	function wptouch_query_vars( $vars ) {
 		$vars[] = "wptouch";
@@ -425,6 +418,7 @@ class WPtouchPlugin {
 			}
 			
 			$redirect_location = get_bloginfo( 'siteurl' );
+// fix by cybrstudd
 			if ( isset( $_GET['wptouch_redirect'] ) ) {
 				$protocol = ($_SERVER['HTTPS'] == 'on') ? 'https://' : 'http://';
 				$redirect_location = $protocol . $_GET['wptouch_redirect'];

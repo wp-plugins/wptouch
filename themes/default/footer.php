@@ -12,8 +12,8 @@
 </div>
 
 <?php wptouch_get_stats(); 
-//WPtouch theme designed and developed by Dale Mugford and Duane Storey for BraveNewCode.com
-//If you modify it, please keep the link credit *visible* in the footer (and keep the WordPress credit, too!) that's all we ask folks.
+// WPtouch theme designed and developed by Dale Mugford and Duane Storey for BraveNewCode.com
+// If you modify it for yourself, please keep the link credit *visible* in the footer (and keep the WordPress credit, too!) that's all we ask folks.
 ?>
 </body>
 </html>

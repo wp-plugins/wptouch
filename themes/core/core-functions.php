@@ -65,7 +65,7 @@ function wptouch_core_header_styles() {
 
 function wptouch_core_subheader() {
 	function agent($browser) { strstr($_SERVER['HTTP_USER_AGENT'],$browser); }
-	if(agent("iphone", "ipod") != FALSE) {
+	if(agent("iphone", "ipod", "aspen") != FALSE) {
 		include( dirname(__FILE__) . '/../core/core-else-menu.php' );
 	} else {
 		include( dirname(__FILE__) . '/../core/core-apple-menu.php' );
@@ -161,7 +161,8 @@ echo '' . __( "Mobile Theme", "wptouch" ) . ' <a id="switch-link" onclick="wptou
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-//Favicon fetch and convert script // This script will convert favicons for the links listed on your Links page (if you have one).
+//Favicon fetch and convert script 
+// This script will convert favicons for the links listed on your Links page (if you have one).
 function bnc_url_exists($url)
   {
 // Version 4.x supported
@@ -287,19 +288,12 @@ function comment_count( $count ) {
 }
 
 // Add 'Delete | Spam' links in comments for logged in admins
-function delete_comment_link($id) {  
-  if (current_user_can('edit_post')) {  
-    echo '| <a href="' . admin_url("comment.php?action=cdc&c=$id") . '">delete</a> ';  
-    echo '| <a href="' . admin_url("comment.php?action=cdc&dt=spam&c=$id") . '">spam</a>';  
-  }  
-}  
-
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// Bring in WPtouch Prowl
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-// include( dirname(__FILE__) . '/../../notifications/wptouch-prowl.php' ); 
-
+// function delete_comment_link($id) {  
+//   if (current_user_can('edit_post')) {  
+//     echo '| <a href="' . admin_url("comment.php?action=cdc&c=$id") . '">delete</a> ';  
+//     echo '| <a href="' . admin_url("comment.php?action=cdc&dt=spam&c=$id") . '">spam</a>';  
+//   }  
+// }  
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // WPtouch Filters
