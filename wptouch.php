@@ -122,6 +122,17 @@ function wptouch_init() {
 
 }
 
+function wptouch_include_adsense() {
+	global $wptouch_plugin;
+	$settings = bnc_wptouch_get_settings();
+	if ( bnc_is_iphone() && $wptouch_plugin->desired_view == 'mobile' && isset( $settings['adsense-id'] ) && strlen( $settings['adsense-id'] ) && is_single() ) {
+		global $wptouch_settings;
+		$wptouch_settings = $settings;
+		
+		include( 'include/adsense-new.php' );
+	}
+}
+
 function wptouch_content_filter( $content ) {
 	global $wptouch_plugin;
 	$settings = bnc_wptouch_get_settings();
@@ -788,6 +799,5 @@ echo('</div>'); }
 add_action('wp_footer', 'wptouch_switch');
 add_action('admin_head', 'wptouch_admin_files');
 add_action('admin_menu', 'bnc_options_menu'); 
-add_action('the_content', 'wptouch_content_filter');
 add_filter( 'plugin_action_links', 'wptouch_settings_link', 9, 2 );
 ?>
