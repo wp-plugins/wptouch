@@ -1,5 +1,3 @@
-/* @override http://www.wptouch.com/wp-content/plugins/wptouch/themes/default/style.css */
-
 /*  
 Theme Name: WPtouch Mobile Plugin & Theme For WordPress
 Theme URI: http://www.bravenewcode.com/wptouch/
@@ -7,9 +5,6 @@ Description: A slick theme for your blog or website that is shown only when visi
 Author: Dale Mugford and Duane Storey
 Author URI: http://www.bravenewcode.com/
 	
-	This theme was designed and built by Dale Mugford and Duane Storey,
-	whose site you will find at http://www.bravenewcode.com/
-
 	The CSS, XHTML and design is released under GPL:
 	http://www.opensource.org/licenses/gpl-license.php
 
@@ -563,8 +558,8 @@ a.h2 {
 	position: absolute;
 	color: #fff;
 	left: 2px;
-	   top: 0;	
-	   padding-left: 0;
+	top: 0;
+	padding-left: 0;
 	font: bold 13px Helvetica, Arial-BoldMT, Geneva, sans-serif;
 	letter-spacing: -1px;
 	text-shadow: #871521 -1px -1px 1px;
@@ -797,7 +792,9 @@ a.ajax {
 
 /* @end */
 
-/* @end */
+/* @en
+
+d */
 
 /* @group Single Post Page */
 
@@ -1476,10 +1473,6 @@ form#commentform label {
 	text-shadow: #f5f5f5 0 1px 1px;
 }
 
-#refresher a {
-	
-}
-
 p.subscribe-to-comments {
 	padding: 8px;
 	-webkit-border-radius: 8px;
@@ -1497,7 +1490,9 @@ p.subscribe-to-comments input#subscribe {
 	vertical-align: top;
 }
 
-/* @end */
+/*
+
+ @end */
 
 /* @group Text Options */
 
@@ -1794,7 +1789,7 @@ a.dsq-brlink {
 	max-width: 100px;
 }
 
-#idc-container-parent form div   {
+#idc-container-parent form div {
 	margin-bottom: 10px;
 }
 
@@ -1848,7 +1843,6 @@ ul#post-options li a#omail {
 
 ul#post-options li a#otweet {
 	background: url(../core/core-images/post-options.png) no-repeat center -82px;
-	
 }
 
 ul#post-options li a#obook {
@@ -1857,12 +1851,10 @@ ul#post-options li a#obook {
 
 ul#post-options li a#osearch {
 	background: url(../core/core-images/post-options.png) no-repeat center -127px;
-	
 }
 
 ul#post-options li a#otext {
 	background: url(../core/core-images/post-options.png) no-repeat center -168px;
-	
 }
 
 ul#post-options li a#onext {
@@ -1871,8 +1863,6 @@ ul#post-options li a#onext {
 	border-left: 1px solid #cfcfcf;
 	width: 34px;
 }
-
-
 
 /* @end */
 
@@ -1906,8 +1896,6 @@ ul#post-options li a#onext {
 	font: 14px Helvetica, Arial, sans-serif;
 	margin: 25px;
 }
-
-
 
 /* @end */
 
@@ -2032,10 +2020,6 @@ ul#post-options li a#onext {
 	-webkit-box-shadow: #444 0px 0px 15px;
 }
 
-
-
 /* @end */
-
-
 
 /* @end */

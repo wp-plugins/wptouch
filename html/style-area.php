@@ -43,7 +43,7 @@
 				<li>#<input type="text" id="header-border-color" name="header-border-color" value="<?php echo $wptouch_settings['header-border-color']; ?>" /><?php _e( "Sub-header background color", "wptouch" ); ?></li>
 				<li>#<input type="text" id="link-color" name="link-color" value="<?php echo $wptouch_settings['link-color']; ?>" /><?php _e( "Site-wide links color", "wptouch" ); ?></li>
 			</ul> 
-			<img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/images/skins/default.jpg" alt="" />
+			<img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/images/default.jpg" alt="" />
 		</div>
 		
 		</div><!-- right content -->
