@@ -369,7 +369,11 @@ class WPtouchPlugin {
 		if ( $this->applemobile && $this->desired_view == 'normal' ) {
 			echo "<link rel='stylesheet' type='text/css' href='" . compat_get_plugin_url( 'wptouch' ) . "/themes/core/core-css/wptouch-switch-link.css'></link>\n";
 			echo "<meta name=\"viewport\" content=\"width=device-width,initial-scale=0,user-scalable=yes\" /> \n";
-		}
+		}		
+	}
+
+	function bnc_do_redirect() {
+	   global $post;
 				
 		// check for wptouch prowl direct messages	
 		$nonce = '';
@@ -389,11 +393,8 @@ class WPtouchPlugin {
 				"\nIP: " . $_SERVER["REMOTE_ADDR"] .
 				
 			$this->wptouch_send_prowl_message( $title, $prowl_message );
-		}			
-	}
-
-	function bnc_do_redirect() {
-	   global $post;
+		}		   
+	   
 	   if ( $this->applemobile && $this->desired_view == 'mobile' ) {
 			$version = (float)get_bloginfo('version');
 			$is_front = 0;
