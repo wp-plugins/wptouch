@@ -440,6 +440,7 @@ textarea#wptouch-stats {
 	margin-top: 2px;
 	position: relative;
 	left: 10px;
+	margin-bottom: 25px;
 }
 
 #bnc-global input#wptouch-button, #bnc-global input#wptouch-button-reset {
