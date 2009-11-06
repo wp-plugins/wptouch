@@ -5,22 +5,11 @@
 		<h3><span class="style-options"></span><?php _e( "Style &amp; Color Options", "wptouch" ); ?></h3>
 
 			<div class="left-content skins-left-content">
-				<p><img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/images/skins/skins-title.jpg" alt="" /></p>
-				<p><?php _e( "Skins are built around colour palettes for enhanced customization. Choose a skin that works with your website’s colours.", "wptouch" ); ?></p>
-				 <p><?php _e( "Skins also come with unique backgrounds and other style customizations to enhance WPtouch.", "wptouch" ); ?></p>
-				 <p><?php _e( "If a skin has options they will be shown here.", "wptouch" ); ?></p>
+				<p><?php _e( "Here you can customize some of the more prominent style features of WPtouch.", "wptouch" ); ?></p>
 			</div>
 		
 			<div class="right-content skins-fixed">
-				 <div id="skins-menu">
-					 <ul>
-						 <li><a href="#" onclick="return false;" class="active">Default</a></li>
-						 <!-- <li><a href="#" onclick="return false;">Lavender</a></li>
-						 <li><a href="#" onclick="return false;">Frog</a></li>
-						 <li><a href="#" onclick="return false;">Sunkissed</a></li>
-						 <li><a href="#" onclick="return false;">Sea</a></li> -->
-					 </ul>
-				 </div>
+
 
  <!-- Default skin -->
  
@@ -57,20 +46,6 @@
 			<img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/images/skins/default.jpg" alt="" />
 		</div>
 		
-<!-- Lavender skin -->
-
-		<div class="skins-desc" id="lavender-skin" style="display:none">
-			<p><?php _e( "Lavender features lush deep plum purples.", "wptouch" ); ?></p>
-			<p><?php _e( "There are no configurable options for this skin.", "wptouch" ); ?></p>
-			<!-- <img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/images/skins/lavender.jpg" alt="" /> -->
-		</div>
-
-		<div class="skins-desc" id="frog-skin" style="display:none">
-			<p><?php _e( "Frog is all about greens.", "wptouch" ); ?></p>
-			<p><?php _e( "There are no configurable options for this skin.", "wptouch" ); ?></p>
-			<!-- <img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/images/skins/frog.jpg" alt="" /> -->
-		</div>
-
 		</div><!-- right content -->
 	<div class="bnc-clearer"></div>
 	</div><!-- postbox -->

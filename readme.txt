@@ -20,13 +20,15 @@ The theme also includes the ability for your visitors to easily switch between t
 
 = Version 1.9.4 =
 
-* Added ability to define custom user agents in the admin (go nuts!)
 * Fix for re-direct issues introduced with 1.9.3.4
+* Fixes and changes for Adsense appearance
+* Fix for direct messages not working with WPtouch exclusive mode
+* Added spam check for Push direct messages via a nonce
+* Added verification for Prowl API key
+* Added ability to define custom user agents in the admin (go nuts!)
 * Minor admin styling changes
 * Dropped official support for WP 2.6 (sorry folks, you should update!)
-* Added spam check for Push messages via a nonce
-* Fixes and changes for Adsense appearance
-* Added verification for Prowl API key
+* Dropped 'skins' references, they'll be a part of WPtouch 2.0
 
 
 = Version 1.9.3.4 =

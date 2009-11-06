@@ -9,7 +9,7 @@
 /* @group head-area.php */
 
 #wptouch-head .postbox {
-	background: #fff url(../images/wptouch-icon.jpg) no-repeat right 109%;
+	background: #fff url(../images/wptouch-icon.jpg) no-repeat 101% 100%;
 	overflow: hidden;
 	position: relative;
 }
@@ -82,7 +82,7 @@
 
 #wptouch-news-wrap {
 	float: left;
-	width: 44%;
+	width: 38%;
 	margin: 0;
 	padding: 0;
 }
@@ -96,9 +96,13 @@
 #wptouch-support-wrap {
 	color: #777;
 	float: left;
-	width: 56%;
+	width: 62%;
 	padding: 0;
 	margin: 0;
+}
+
+#wptouch-support-wrap ul {
+	width: 83%;
 }
 
 #wptouch-support-wrap h3 {
@@ -159,59 +163,12 @@ input.no-right-margin {
 
 /* @group Skins-Menu */
 
-#bnc-global #skins-menu {
-	position: relative;
-	border-right: 1px solid #dcdcdc;
-	width: 30%;
-	height: 330px;
-	z-index: 2;
-	background-color: white;
-	float: left;
-	right: 10px;
-}
-
-#bnc-global #skins-menu ul {
-	margin: 0;
-	padding: 0;
-}
-
-#bnc-global #skins-menu li {
-	margin: 0;
-	padding: 0;
-}
-
-#bnc-global #skins-menu li a {
-	font-size: 16px;
-	font-weight: bold;
-	color: #444;
-	display: block;
-	background-color: #eee;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	padding-left: 10px;
-	border-bottom: 1px solid #ddd;
-	text-shadow: #fff 0 1px 0;
-}
-
-#bnc-global #skins-menu li a:hover {
-	background-color: #e2f5fe;
-	color: #003346;
-}
-
-#bnc-global #skins-menu li a.active {
-	background-color: #fff7cb;
-}
-
 #bnc-global .skins-fixed {
 	position: relative;
 	padding: 0;
 	height: 320px;
 	width: 0;
 	margin: 0;
-}
-
-#bnc-global .skins-desc {
-	width: 75%;
 }
 
 #bnc-global .skins-desc input {
@@ -223,17 +180,10 @@ input.no-right-margin {
 	margin-left: 12px;
 }
 
-#bnc-global .skins-desc h4 {
-	font-size: 16px;
-}
-
-#bnc-global .skins-desc p {
-}
-
 #bnc-global .skins-desc img {
 	position: absolute;
-	top: 2px;
-	right: -40px;
+	top: 15px;
+	right: -35px;
 }
 
 
