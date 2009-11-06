@@ -23,7 +23,9 @@
 		<div class="clearer"></div>
 	</div>
 
+	<div id="adsense-area">
 		<?php wptouch_include_adsense(); ?>
+	</div>
 
          <div class="post" id="post-<?php the_ID(); ?>">
          	<div id="singlentry" class="<?php echo $wptouch_settings['style-text-size']; ?> <?php echo $wptouch_settings['style-text-justify']; ?>">

@@ -1609,7 +1609,16 @@ p.subscribe-to-comments input#subscribe {
 
 /* @group WPtouch Adsense area */
 
-.wptouch-adsense-ad {
+#adsense-area {
+	height: 50px;
+	overflow: none;
+	margin-bottom: 12px;
+	background: transparent;
+}
+
+#adsense-area iframe {
+	height: 50px!important;
+	overflow: none;
 }
 
 /* @end */
