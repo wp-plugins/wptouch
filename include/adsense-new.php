@@ -1,4 +1,5 @@
 <?php global $wptouch_settings; global $wpdb; ?>
+<?php echo '<div id="adsense-area">'; ?>
 <script type="text/javascript"><!--
 window.googleAfmcRequest = {
   client: 'ca-mb-<?php echo $wptouch_settings['adsense-id']; ?>',
@@ -18,3 +19,4 @@ window.googleAfmcRequest = {
 };
 //--></script>
 <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_afmc_ads.js"></script>
+<?php echo '</div>'; ?>

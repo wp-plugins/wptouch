@@ -4,7 +4,7 @@
    Plugin URI: http://bravenewcode.com/wptouch
    Description: A plugin which formats your site with a mobile theme for the Apple <a href="http://www.apple.com/iphone/">iPhone</a> / <a href="http://www.apple.com/ipodtouch/">iPod touch</a>, <a href="http://www.android.com/">Google Android</a> and other touch-based smartphones.
 	Author: Dale Mugford & Duane Storey
-	Version: 1.9.4
+	Version: 1.9.4.1
 	Author URI: http://www.bravenewcode.com
    
 	# Thanks to ContentRobot and the iWPhone theme/plugin
@@ -35,7 +35,7 @@
 
 
 global $bnc_wptouch_version;
-$bnc_wptouch_version = '1.9.4';
+$bnc_wptouch_version = '1.9.4.1';
 
 require_once( 'include/plugin.php' );
 require_once( 'include/compat.php' );
@@ -172,9 +172,10 @@ function wptouch_admin_files() {
 	if ( isset( $_GET['page'] ) && $_GET['page'] == 'wptouch/wptouch.php' ) {
 		echo "<link rel='stylesheet' type='text/css' href='" . compat_get_plugin_url( 'wptouch' ) . "/admin-css/wptouch-admin.css' />\n";
 		echo "<link rel='stylesheet' type='text/css' href='" . compat_get_plugin_url( 'wptouch' ) . "/admin-css/bnc-global.css' />\n";
-		echo "<script type='text/javascript' src='" . compat_get_plugin_url( 'wptouch' ) . "/js/ajax_upload_3.2.js'></script>\n";
+		echo "<link rel='stylesheet' type='text/css' href='" . compat_get_plugin_url( 'wptouch' ) . "/admin-css/bnc-compressed-global.css' />\n";
+		echo "<script type='text/javascript' src='" . compat_get_plugin_url( 'wptouch' ) . "/js/ajax_upload_3.6.js'></script>\n";
 		echo "<script type='text/javascript' src='" . compat_get_plugin_url( 'wptouch' ) . "/js/colorpicker_1.4.js'></script>\n";
-		echo "<script type='text/javascript' src='" . compat_get_plugin_url( 'wptouch' ) . "/js/fancybox_1.2.1.js'></script>\n";
+		echo "<script type='text/javascript' src='" . compat_get_plugin_url( 'wptouch' ) . "/js/fancybox_1.2.5.js'></script>\n";
 		echo "<script type='text/javascript' src='" . compat_get_plugin_url( 'wptouch' ) . "/js/admin_1.9.js'></script>\n";
 	}
 }
@@ -779,16 +780,16 @@ function bnc_wp_touch_page() {
 		<?php require_once( 'html/page-area.php' ); ?>
 		<?php require_once( 'html/ads-stats-area.php' ); ?>
 		<?php require_once( 'html/plugin-compat-area.php' ); ?>		
-		<input type="submit" name="submit" value="<?php _e('Save Options', 'wptouch' ); ?>" id="wptouch-button" class="button-primary" />
+		<input type="submit" name="submit" value="<?php _e('Save Options', 'wptouch' ); ?>" id="bnc-button" class="button-primary" />
 	</form>
 	
 	<form method="post" action="<?php echo $_SERVER['REQUEST_URI']; ?>">
-		<input type="submit" onclick="return confirm('<?php _e('Restore default WPtouch settings?', 'wptouch' ); ?>');" name="reset" value="<?php _e('Restore Defaults', 'wptouch' ); ?>" id="wptouch-button-reset" class="button-highlighted" />
+		<input type="submit" onclick="return confirm('<?php _e('Restore default WPtouch settings?', 'wptouch' ); ?>');" name="reset" value="<?php _e('Restore Defaults', 'wptouch' ); ?>" id="bnc-button-reset" class="button-highlighted" />
 	</form>
 		
-		<?php echo('' . WPtouch('<div class="wptouch-version"> This is ','</div>') . ''); ?>
+		<?php echo('' . WPtouch('<div class="bnc-plugin-version"> This is ','</div>') . ''); ?>
 
-	<div class="wptouch-clearer"></div>
+	<div class="bnc-clearer"></div>
 </div>
 <?php 
 echo('</div>'); } 

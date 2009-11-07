@@ -4,7 +4,7 @@
  * Copyright (c) 2008-2009 Duane Storey & Dale Mugford (BraveNewCode Inc.)
  * Licensed under GPL.
  *
- * Last Updated: Novemeber 1st, 2009
+ * Last Updated: Novemeber 7th, 2009
  */
 
 $j = jQuery.noConflict();
@@ -45,13 +45,13 @@ jQuery(document).ready(function($j) {
 		});
 
 	$j("a.fancylink").fancybox({
-		'padding':						5,
-		'imageScale':					true,
+		'padding':						10,
 		'zoomSpeedIn':				250, 
 		'zoomSpeedOut':			250,
 		'zoomOpacity':				true, 
 		'overlayShow':				false,
-		'frameHeight':				250,
-		'hideOnContentClick': 	false
+		'frameHeight':				320,
+		'frameWidth':				450,
+		'hideOnContentClick': 	true
 	});
 });

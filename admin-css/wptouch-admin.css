@@ -1,8 +1,4 @@
-/* @override 
-	http://www.bnclocal.com/wp-content/plugins/wptouch/admin-css/wptouch-admin.css
-	http://www.wptouch.com/wp-content/plugins/wptouch/admin-css/wptouch-admin.css
-	http://wptouch.com/wp-content/plugins/wptouch/admin-css/wptouch-admin.css
-*/
+/* @override http://wptouch.com/wp-content/plugins/wptouch/admin-css/wptouch-admin.css */
 
 /* WPtouch 1.9 Admin CSS */
 
@@ -21,7 +17,8 @@
 	-webkit-border-top-right-radius: 5px;
 	-webkit-border-top-left-radius: 5px;
 	-moz-border-radius-topright: 5px;
-	-moz-border-radius-topleft: 5px;	border: 1px solid #e5f0f2;
+	-moz-border-radius-topleft: 5px;
+	border: 1px solid #e5f0f2;
 	border-bottom: 1px solid #a2bdbf;
 }
 
@@ -128,8 +125,6 @@
 
 /* @end */
 
-
-
 /* @end */
 
 /* @group general-settings.php */
@@ -151,7 +146,35 @@ input.no-right-margin {
 	margin-top: 5px;
 }
 
+/* @end */
 
+/* @group advanced-area.php */
+
+em.supported {
+	color: #8a9ba8;
+	display: block;
+	line-height: 16px;
+	margin-top: 3px;
+}
+
+/* @end */
+
+/* @group push-area.php */
+
+#push-area li input {
+	position: relative;
+	right: 5px;
+	width: 275px;
+}
+
+#push-area li input.checkbox {
+	position: relative;
+	left: 0;
+}
+
+#push-area li select {
+	width: auto;
+}
 
 /* @end */
 
@@ -163,14 +186,6 @@ input.no-right-margin {
 
 /* @group Skins-Menu */
 
-#bnc-global .skins-fixed {
-	position: relative;
-	padding: 0;
-	height: 320px;
-	width: 0;
-	margin: 0;
-}
-
 #bnc-global .skins-desc input {
 	width: 54px;
 }
@@ -180,38 +195,7 @@ input.no-right-margin {
 	margin-left: 12px;
 }
 
-#bnc-global .skins-desc img {
-	position: absolute;
-	top: 15px;
-	right: -35px;
-}
-
-
-
 /* @end */
-
-
-
-/* @end */
-
-/* @group ads-stats-area.php */
-
-textarea#wptouch-stats {
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	width: 95%;
-	margin-left: 5px;
-	margin-top: 45px;
-	height: 100px;
-	margin-bottom: 15px;
-	color: #444;
-	font-size: 11px;
-	border-width: 2px;
-	border-color: #a4c6d3;
-	background-color: #ebf1ff;
-}
-
-
 
 /* @end */
 
@@ -292,8 +276,6 @@ textarea#wptouch-stats {
 	padding-top: 10px;
 }
 
-
-
 /* @end */
 
 /* @group page-area.php */
@@ -326,14 +308,28 @@ textarea#wptouch-stats {
 	margin-left: -1px;
 }
 
+/* @end */
+
+/* @group ads-stats-area.php */
+
+textarea#wptouch-stats {
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	width: 95%;
+	margin-left: 5px;
+	margin-top: 45px;
+	height: 100px;
+	margin-bottom: 15px;
+	color: #444;
+	font-size: 11px;
+	border-width: 2px;
+	border-color: #a4c6d3;
+	background-color: #ebf1ff;
+}
 
 /* @end */
 
 /* @group plugin-compat-area.php */
-
-* {
-	
-}
 
 #bnc-global .all-good {
 	border: 1px solid #8aceff;
@@ -404,58 +400,6 @@ textarea#wptouch-stats {
 	font-weight: bold;
 }
 
-
-
-/* @end */
-
-/* @group push-area.php */
-
-#push-area li input {
-	position: relative;
-	right: 5px;
-	width: 275px;
-}
-
-#push-area li input.checkbox {
-	position: relative;
-	left: 0;
-}
-
-#push-area li select {
-	width: auto;
-}
-
-
-
-/* @end */
-
-/* @group Save/Restore Button Area */
-
-#bnc-global .wptouch-version {
-	float: right;
-	font: 18px Georgia, "Times New Roman", Times, serif;
-	color: #70777a;
-	text-shadow: #fff -1px -1px 0;
-	letter-spacing: -1px;
-	margin-top: 2px;
-	position: relative;
-	left: 10px;
-	margin-bottom: 25px;
-}
-
-#bnc-global input#wptouch-button, #bnc-global input#wptouch-button-reset {
-	border: 2px solid #dcdcdc;
-	float: left;
-	width: 12%;
-}
-
-#bnc-global input#wptouch-button-reset:hover {
-	border-color: red;
-	color: red;
-}
-
-
-
 /* @end */
 
 /* @group Settings/Reset Updated */
@@ -489,7 +433,6 @@ textarea#wptouch-stats {
 	margin-right: auto;
 	padding: 12px;
 	-webkit-box-shadow: #000 0px 0px 32px;
-
 }
 
 #bnc-global #wptouchupdated p.reset {
@@ -508,25 +451,11 @@ textarea#wptouch-stats {
 	margin-right: auto;
 	padding: 12px;
 	-webkit-box-shadow: #000 0px 0px 32px;
-
 }
 
 #bnc-global #wptouchupdated p span {
 	display: block;
 	margin-top: 110px;
 }
-
-/* @end */
-
-/* @group advanced-area.php */
-
-em.supported {
-	color: #8a9ba8;
-	display: block;
-	line-height: 16px;
-	margin-top: 3px;
-}
-
-
 
 /* @end */

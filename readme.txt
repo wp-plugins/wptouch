@@ -18,6 +18,12 @@ The theme also includes the ability for your visitors to easily switch between t
 
 == Changelog ==
 
+= Version 1.9.4.1 =
+* Fixed space appearing below title on single post pages
+* Added compressed js for the admin
+* Updated Fancybox script & files to v1.2.5
+* Updated Ajax Upload script to v3.6
+
 = Version 1.9.4 =
 
 * Fix for re-direct issues introduced with 1.9.3.4
