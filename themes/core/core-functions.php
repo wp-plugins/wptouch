@@ -70,10 +70,8 @@ function wptouch_core_subheader() {
 		}
 	if(wptouch_agent("iphone", "ipod", "aspen") != FALSE) {
 		include( dirname(__FILE__) . '/../core/core-else-menu.php' );
-	echo 'no';
 	} else {
 		include( dirname(__FILE__) . '/../core/core-apple-menu.php' );
-	echo 'yes';
 	}
 }
 
