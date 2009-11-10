@@ -64,11 +64,24 @@ function wptouch_core_header_styles() {
 }
 
 function wptouch_core_subheader() {
-	function agent($browser) { strstr($_SERVER['HTTP_USER_AGENT'],$browser); }
-	if(agent("iphone", "ipod", "aspen") != FALSE) {
+	function wptouch_agent($browser) {
+		$useragent = $_SERVER['HTTP_USER_AGENT'];
+			return strstr($useragent,$browser);
+		}
+	if(wptouch_agent("iphone", "ipod", "aspen") != FALSE) {
 		include( dirname(__FILE__) . '/../core/core-else-menu.php' );
+	echo 'no';
 	} else {
 		include( dirname(__FILE__) . '/../core/core-apple-menu.php' );
+	echo 'yes';
+	}
+}
+
+function wptouch_twitter_link() {
+	if(wptouch_agent("iphone", "ipod", "aspen") != FALSE) {
+		echo '<li><a href="javascript:return false;" onclick="wptouch_toggle_twitter();" id="otweet"></a></li>';
+	} else {
+		echo '<li><a href="javascript:(function(){var%20f=false,t=true,a=f,b=f,u=\'\',w=window,d=document,g=w.open(),p,linkArr=d.getElementsByTagName(\'link\');for(var%20i=0;i%3ClinkArr.length&&!a;i++){var%20l=linkArr[i];for(var%20x=0;x%3Cl.attributes.length;x++){if(l.attributes[x].nodeName.toLowerCase()==\'rel\'){p=l.attributes[x].nodeValue.split(\'%20\');for(y=0;y%3Cp.length;y++){if(p[y]==\'short_url\'||p[y]==\'shorturl\'||p[y]==\'shortlink\'){a=t;}}}if(l.attributes[x].nodeName.toLowerCase()==\'rev\'&&l.attributes[x].nodeValue==\'canonical\'){a=t;}if(a){u=l.href;}}}if(a){go(u);}else{var%20h=d.getElementsByTagName(\'head\')[0]||d.documentElement,s=d.createElement(\'script\');s.src=\'http://api.bit.ly/shorten?callback=bxtShCb&longUrl=\'+encodeURIComponent(window.location.href)+\'&version=2.0.1&login=amoebe&apiKey=R_60a24cf53d0d1913c5708ea73fa69684\';s.charSet=\'utf-8\';h.appendChild(s);}bxtShCb=function(data){var%20rs,r;for(r%20in%20data.results){rs=data.results[r];break;}go(rs[\'shortUrl\']);};function%20go(u){return%20g.document.location.href=(\'http://twitter.com/home/?status=\'+encodeURIComponent(document.title+\'%20\'+u));}})();" id="otweet"></a></li>';
 	}
 }
 
@@ -117,15 +130,6 @@ function wptouch_core_body_result_text() {
 				echo sprintf( __("Archives &rsaquo; %s", "wptouch"),  get_the_time('Y'));
 		}
 	}
-}
-
-function wptouch_core_body_post_arrows() {  
-	 if (bnc_excerpt_enabled()) {
-// Down arrow		
-		echo '<a class="post-arrow" id="arrow-' . get_the_ID() . '" href="#" onclick="$wptouch(\'#entry-' . get_the_ID() . '\').fadeIn(500); $wptouch(\'#arrow-' . get_the_ID() . '\').hide(); $wptouch(\'#arrow-down-' . get_the_ID() . '\').show(); return false;"></a>';	
-// Up arrow		
-		echo '<a style="display:none" class="post-arrow-down month-' . get_the_time('m') . '" id="arrow-down-' . get_the_ID() . '" href="#" onclick="$wptouch(\'#entry-' . get_the_ID() . '\').fadeOut(500); $wptouch(\'#arrow-' . get_the_ID() . '\').show(); $wptouch(\'#arrow-down-' . get_the_ID() . '\').hide(); return false;"></a>';
-	} 
 }
 
 

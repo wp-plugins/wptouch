@@ -16,17 +16,31 @@
 				<?php } ?>
 		<?php } ?>			
  	
+ 	
  	<?php if (is_archive() || is_search()) { ?>
 		<div class="archive-top">
 			<div class="archive-top-right">
-				<?php wptouch_core_body_post_arrows(); ?>
+				<?php if (bnc_excerpt_enabled()) { ?>
+					<a class="post-arrow" id="arrow-<?php the_ID(); ?>" href="javascript: return false;" onclick="bnc_post_arrow_open();"></a>				
+				<?php } ?>
 			</div> 
 		 <div id="arc-top" class="archive-top-left month-<?php echo get_the_time('m') ?>">
 			<?php echo get_the_time('M') ?> <?php echo get_the_time('j') ?>, <?php echo get_the_time('Y') ?>
 		 </div>
 		</div>
  	<?php } else { ?>	
- 		<?php wptouch_core_body_post_arrows(); ?>
+				<?php if (bnc_excerpt_enabled()) { ?>
+				<script type="text/javascript">
+					$wptouch(document).ready(function(){
+						$wptouch("a#arrow-<?php the_ID(); ?>").click(function(event) {
+							$wptouch(this).toggleClass("post-arrow-down");
+							$wptouch('#entry-<?php the_ID(); ?>').fadeToggle(500);
+						});	
+						 });					
+				</script>
+
+					<a class="post-arrow" id="arrow-<?php the_ID(); ?>" href="javascript: return false;"></a>				
+				<?php } ?>
 			<div class="calendar">
 				<div class="cal-month month-<?php echo get_the_time('m') ?>"><?php echo get_the_time('M') ?></div>
 				<div class="cal-date"><?php echo get_the_time('j') ?></div>

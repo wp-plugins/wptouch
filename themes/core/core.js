@@ -41,7 +41,7 @@ function wptouch_toggle_text() {
 
 /////// -- Menus -- ///////
 // Creating a new function, fadeToggle()
-jQuery.fn.fadeToggle = function(speed, easing, callback) { 
+$wptouch.fn.fadeToggle = function(speed, easing, callback) { 
 	return this.animate({opacity: 'toggle'}, speed, easing, callback); 
 };
  
@@ -59,16 +59,17 @@ function bnc_jquery_prowl_open() {
 }
 
 function bnc_jquery_cats_open() {
-	jQuery('#cat').focus();
+	$wptouch('#cat').focus();
 }
 
 function bnc_jquery_tags_open() {
-	jQuery('#tag-dropdown').focus();
+	$wptouch('#tag-dropdown').focus();
 }
 
 function bnc_jquery_acct_open() {
-	jQuery('#acct-dropdown').focus();
+	$wptouch('#acct-dropdown').focus();
 }
+
 
 /////// -- Ajax comments -- ///////
 function bnc_showhide_coms_toggle() {
@@ -108,7 +109,7 @@ function wptouch_toggle_bookmarks() {
 
 
 /////// -- Tweak jQuery Timer -- ///////
-jQuery.timerId = setInterval(function(){
+$wptouch.timerId = setInterval(function(){
 	var timers = jQuery.timers;
 	for (var i = 0; i < timers.length; i++) {
 		if (!timers[i]()) {
