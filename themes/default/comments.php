@@ -1,15 +1,13 @@
 <?php
-// Do not delete these lines**********
+// Do not delete these lines
 	if (!empty($_SERVER['SCRIPT_FILENAME']) && 'comments.php' == basename($_SERVER['SCRIPT_FILENAME']))
-	die( __('Please do not load this page directly. Thanks!', 'wptouch') );
-		if (!empty($post->post_password)) {
-			// if there's a password
-			if ($_COOKIE['wp-postpass_' . COOKIEHASH] != $post->post_password) {
-			// and it doesn't match the cookie ?>	
-		<p class="nocomments"><?php _e('This post is password protected. Enter the password to view comments.', 'wptouch'); ?></p>
-<?php return; 	} }
-/* This variable is for alternating comment background */
-$oddcomment = 'alt'; 
+		die ('Please do not load this page directly. Thanks!');
+
+	if ( post_password_required() ) { ?>
+		<p class="nocomments">This post is password protected. Enter the password to view comments.</p>
+	<?php
+		return;
+	}
 ?>
 
 <!-- You can start editing below here... but make a backup first!  -->
@@ -36,7 +34,6 @@ $oddcomment = 'alt';
 								</div><!--end comtop-->
 								<div class="combody">  
 									<?php comment_text(); //delete_comment_link(get_comment_ID()); ?>
-									
 								</div>
 						</div><!--end comwrap-->
 					</li>
@@ -123,7 +120,7 @@ $oddcomment = 'alt';
 			<input name="submit" type="submit" id="submit" tabindex="5" value="Publish" />
 			<input type="hidden" name="comment_post_ID" value="<?php echo $id; ?>" />		
 			<div id="loading" style="display:none">
-				<img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/themes/core/core-images/comment-ajax-loader.gif" alt="" />
+				<img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/themes/core/core-images/comment-ajax-loader.gif" alt="" /> <p><?php _e( 'Publishing...', 'wptouch' ); ?></p>
 			</div>
 		</p>
 		<div id="errors" style="display:none">
