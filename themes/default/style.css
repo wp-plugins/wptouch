@@ -1,7 +1,4 @@
-/* @override 
-	http://www.wptouch.com/wp-content/plugins/wptouch/themes/default/style-compressed.css
-	http://www.wptouch.com/wp-content/plugins/wptouch/themes/default/style.css
-*/
+/* @override http://www.wptouch.com/wp-content/plugins/wptouch/themes/default/style.css */
 
 /*  
 Theme Name: WPtouch Mobile Plugin & Theme For WordPress
@@ -233,7 +230,6 @@ blockquote {
 	position: relative;
 	-webkit-box-shadow: #000 -3px 2px 3px;
 	text-align: right;
-	margin: 0;
 	border-top: 1px solid #3e3e3e;
 	overflow: hidden;
 	height: auto;
@@ -241,15 +237,14 @@ blockquote {
 
 #drop-fade a.top {
 	font-size: 10px;
-	margin-right: 12px;
+	margin-right: 8px;
 	position: relative;
 	bottom: 3px;
 	color: #fff;
-	padding: 6px 5px 2px;
-	margin-left: -1px;
 	text-shadow: #000000 0px -1px 1px;
 	display: block;
 	float: right;
+	padding: 6px 2px 2px 0;
 }
 
 #drop-fade #catsopen {
