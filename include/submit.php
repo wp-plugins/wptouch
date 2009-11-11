@@ -131,6 +131,12 @@
 			$a['enable-regular-default'] = 0;
 		}
 		
+		if ( isset($_POST['enable-show-tweets']) ) {
+			$a['enable-show-tweets'] = 1;
+		} else {
+			$a['enable-show-tweets'] = 0;
+		}		
+		
 		if ( isset( $_POST['custom-user-agents'] ) ) {
 			$new_array = array();
 			if ( !strlen( trim( $_POST['custom-user-agents'] ) ) ) {

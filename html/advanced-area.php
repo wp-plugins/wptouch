@@ -57,6 +57,7 @@
 						<p><?php _e( "Uncheck this option if you're having problems or would prefer to use the standard WordPress comment submission format.", "wptouch" ); ?></p>
 					</div>
 			</li>
+		
 
 			<li>
 				<input class="checkbox" type="checkbox" name="enable-gravatars" <?php if (isset($wptouch_settings['enable-gravatars']) && $wptouch_settings['enable-gravatars'] == 1) echo('checked'); ?> />
@@ -74,6 +75,16 @@
 				</div>
 			</li>
 			<?php } ?>
+
+			
+			<li>
+				<input class="checkbox" type="checkbox" name="enable-show-tweets" <?php if (isset($wptouch_settings['enable-show-tweets']) && $wptouch_settings['enable-show-tweets'] == 1) echo('checked'); ?> />
+				<label class="label" for="enable-show-tweets"> <?php _e( "Display my recent tweets (requires the <a href='http://www.bravenewcode.com/wordtwit/' target='_blank'>WordTwit</a> plugin)", "wptouch" ); ?> <a href="#ajax-tweet-info" class="fancylink">?</a></label>
+					<div id="ajax-tweet-info" style="display:none">
+						<h2><?php _e( "More Info", "wptouch" ); ?></h2>
+						<p><?php _e( "When this option is checked and the WordTwit plugin is installed, a list of your Tweets will be viewable from your site's main page.", "wptouch" ); ?></p>
+					</div>
+			</li>	
 
 			<li><br />
 				<input class="checkbox" type="checkbox" name="enable-regular-default" <?php if (isset($wptouch_settings['enable-regular-default']) && $wptouch_settings['enable-regular-default'] == 1) echo('checked'); ?> />

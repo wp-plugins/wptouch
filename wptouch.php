@@ -93,7 +93,8 @@ $wptouch_defaults = array(
 	'adsense-id' => '',
 	'statistics' => '',
 	'adsense-channel' => '',
-	'custom-user-agents' => array()
+	'custom-user-agents' => array(),
+	'enable-show-tweets' => false
 );
 
 function wptouch_get_plugin_dir_name() {
@@ -545,6 +546,11 @@ function bnc_validate_wptouch_settings( &$settings ) {
 function bnc_wptouch_is_exclusive() {
 	$settings = bnc_wptouch_get_settings();
 	return $settings['enable-exclusive'];
+}
+
+function bnc_can_show_tweets() {
+	$settings = bnc_wptouch_get_settings();
+	return $settings['enable-show-tweets'];
 }
 
 function bnc_wp_touch_get_menu_pages() {

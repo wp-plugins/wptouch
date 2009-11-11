@@ -18,9 +18,9 @@
     	<a id="tagsopen" class="top" href="#" onclick="bnc_jquery_tags_open(); return false;"><?php _e( 'Tags', 'wptouch' ); ?></a>
 	<?php } ?>
 
-	<?php // if (wptouch_wordtwit_enabled()) { ?>			    
+	<?php if ( function_exists( 'wordtwit_get_recent_tweets' ) && wordtwit_is_valid() && bnc_can_show_tweets() ) { ?>		    
     	<a id="wordtwitopen" class="top" href="#" onclick="bnc_jquery_wordtwit_open(); return false;"><?php _e( 'Twitter', 'wptouch' ); ?></a>
-	<?php //} ?>
+	<?php } ?>
 
  <!-- #start the Prowl Message Area -->
  <div id="prowl-message" style="display:none">
@@ -82,17 +82,24 @@
 	</select>
 </form>
 
+<?php if ( function_exists( 'wordtwit_get_recent_tweets' ) && wordtwit_is_valid() && bnc_can_show_tweets() ) { ?>
  <!-- #start the WordTwit Twitter Integration -->
+ 	<?php $tweets = wordtwit_get_recent_tweets(); ?>
 	<div id="wptouch-wordtwit" class="dropper" style="display:none">
-            <div id="wordtwit-avatar">
-            	<img src="http://a1.twimg.com/profile_images/359969318/3717943096_00752017f6-1_normal.jpg" alt="Twitter Avatar" />
-            		<p class="twitter_username">duanestorey</p>
-            		<p><a href="http://twitter.com/duanestorey">Follow me on Twitter</a></p>
-            </div>
-            <ul id="tweets">
-	  	 	<li>awesome, just picked up the phone and called myself...<p class="time">29 minutes ago</p></li>
-	  	 	<li>@jennmae just stay by the airport, it's too much of a pain to head downtown..<p class="time">about 1 hour ago</p></li>
-	  	 	<li>someone set up an 'official' wptouch twitter feed last week. thankfully twitter shut them down for us..<p class="time">about 5 hours ago</p></li>
-	  	 	<li>going out for some soup...<p class="time">about 5 hours ago</p></li>
-            </ul>
+		<div id="wordtwit-avatar">
+			<img src="<?php echo wordtwit_get_profile_url(); ?>" alt="Twitter Avatar" />
+				<p class="twitter_username"><?php echo wordtwit_get_username(); ?></p>
+				<p><a href="http://twitter.com/<?php echo wordtwit_get_username(); ?>">Follow me on Twitter</a></p>
+		</div>
+
+		<?php $now = time(); ?>
+		<ul id="tweets">
+			<?php foreach( $tweets as $tweet ) { ?>
+			<li>
+				<?php echo strip_tags( $tweet['content'], ''); ?>
+				<p class="time"><?php echo wordtwit_friendly_date( strtotime( $tweet['published'] ) ); ?></p>
+			</li>
+	  	 	<?php } ?>
+		</ul>
 	</div>
+<?php } ?>
