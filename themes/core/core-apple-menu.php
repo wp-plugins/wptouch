@@ -2,12 +2,12 @@
 	<?php if (!is_user_logged_in()) { ?>
 		    <a id="loginopen" class="top" href="#" onclick="bnc_jquery_login_toggle(); return false;"><?php _e( 'Login', 'wptouch' ); ?></a>	
 	<?php } else { ?>
-		    <a id="accountopen" class="top" href="#" onclick="bnc_jquery_acct_open(); return false;"><?php _e( 'My Account', 'wptouch' ); ?></a>	
+		    <a id="accountopen" class="top" href="#" onclick="bnc_jquery_acct_open(); return false;"><?php _e( 'Account', 'wptouch' ); ?></a>	
 	<?php } ?>
 <?php } ?>
 
 	<?php if (wptouch_prowl_direct_message_enabled()) { ?>			    
-    	<a id="prowlopen" class="top" href="#" onclick="bnc_jquery_prowl_open(); return false;"><?php _e( 'Direct Message', 'wptouch' ); ?></a>
+    	<a id="prowlopen" class="top" href="#" onclick="bnc_jquery_prowl_open(); return false;"><?php _e( 'Message', 'wptouch' ); ?></a>
 	<?php } ?>
 
 	<?php if (bnc_is_cats_button_enabled()) { ?>			    
@@ -18,12 +18,16 @@
     	<a id="tagsopen" class="top" href="#" onclick="bnc_jquery_tags_open(); return false;"><?php _e( 'Tags', 'wptouch' ); ?></a>
 	<?php } ?>
 
+	<?php // if (wptouch_wordtwit_enabled()) { ?>			    
+    	<a id="wordtwitopen" class="top" href="#" onclick="bnc_jquery_wordtwit_open(); return false;"><?php _e( 'Twitter', 'wptouch' ); ?></a>
+	<?php //} ?>
+
  <!-- #start the Prowl Message Area -->
  <div id="prowl-message" style="display:none">
  	 <div id="prowl-style-bar"></div><!-- filler to get the styling just right -->
 	 <img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/themes/core/core-images/push-icon.png" alt="push icon" />
-	 <h4><?php _e( 'Send a Push Notification', 'wptouch' ); ?></h4>
-	 <p><?php _e( 'This message will be pushed to the admin\'s iPhone immediately.', 'wptouch' ); ?></p>
+	 <h4><?php _e( 'Send a Message', 'wptouch' ); ?></h4>
+	 <p><?php _e( 'This message will be pushed to the admin\'s iPhone instantly.', 'wptouch' ); ?></p>
 	 
 	 <form id="prowl-direct-message" method="post" action="<?php echo $_SERVER['REQUEST_URI']; ?>">
 	 	<p>
@@ -77,3 +81,18 @@
 			<?php } // End fancy iPhone stuff ?>
 	</select>
 </form>
+
+ <!-- #start the WordTwit Twitter Integration -->
+	<div id="wptouch-wordtwit" class="dropper" style="display:none">
+            <div id="wordtwit-avatar">
+            	<img src="http://a1.twimg.com/profile_images/359969318/3717943096_00752017f6-1_normal.jpg" alt="Twitter Avatar" />
+            		<p class="twitter_username">duanestorey</p>
+            		<p><a href="http://twitter.com/duanestorey">Follow me on Twitter</a></p>
+            </div>
+            <ul id="tweets">
+	  	 	<li>awesome, just picked up the phone and called myself...<p class="time">29 minutes ago</p></li>
+	  	 	<li>@jennmae just stay by the airport, it's too much of a pain to head downtown..<p class="time">about 1 hour ago</p></li>
+	  	 	<li>someone set up an 'official' wptouch twitter feed last week. thankfully twitter shut them down for us..<p class="time">about 5 hours ago</p></li>
+	  	 	<li>going out for some soup...<p class="time">about 5 hours ago</p></li>
+            </ul>
+	</div>

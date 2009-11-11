@@ -58,6 +58,11 @@ function bnc_jquery_prowl_open() {
 	$wptouch('#prowl-message').fadeToggle(400);
 }
 
+function bnc_jquery_wordtwit_open() {
+	$wptouch('#wptouch-wordtwit').fadeToggle(400);
+}
+
+
 function bnc_jquery_cats_open() {
 	$wptouch('#cat').focus();
 }

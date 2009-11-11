@@ -277,6 +277,11 @@ blockquote {
 	background: url(../core/core-images/menu-sprite.png) no-repeat 2px -57px;
 }
 
+#drop-fade #wordtwitopen {
+	padding-left: 18px;
+	background: url(../core/core-images/menu-sprite.png) no-repeat 2px -74px;
+}
+
 form#select-cats, form#select-tags, form#select-acct {
 	overflow: hidden;
 	width: 0;
@@ -370,6 +375,75 @@ form#select-cats option {
 	background-color: #222;
 	border-top: 1px solid #222;
 }
+
+/* @end */
+
+/* @group WordTwit Menu */
+
+#wptouch-wordtwit {
+	
+}
+
+#wordtwit-avatar {
+	margin: 10px 10px 30px;
+	text-align: left;
+	padding-bottom: 10px;
+	-webkit-border-radius: 8px;
+	padding-left: 5px;
+	padding-top: 5px;
+	border: 2px solid #111;
+	background: #444 url(../core/core-images/twitter-arrow.jpg) no-repeat 97% center;
+}
+
+#wordtwit-avatar img {
+-webkit-box-reflect:below 2px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0.8, transparent), to(white));
+	border: 1px solid #222;
+	float: left;
+	margin-right: 15px;
+	-webkit-border-radius: 2px;
+	width: 32px;
+	height: 32px;
+}
+
+#wordtwit-avatar p {
+	padding: 0;
+	margin: 0;
+	color: #777;
+}
+
+#wordtwit-avatar p.twitter_username {
+	color: #eee;
+	text-shadow: #222 0 -1px 1px;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+#wordtwit-avatar a {
+	display: inline-block;
+	font-size: 11px;
+	color: #999;
+	text-shadow: #222 0 -1px 0;
+	padding: 3px 0 0;
+}
+
+#wptouch-wordtwit ul {
+}
+
+#wptouch-wordtwit li {
+	color: #ccc;
+	font-size: 12px;
+	text-shadow: #000000 0 -1px 0;
+	padding-top: 10px;
+	padding-right: 50px;
+	padding-left: 10px;
+}
+
+#wptouch-wordtwit li p.time {
+	color: #777;
+	font-size: 11px;
+}
+
+
 
 /* @end */
 
