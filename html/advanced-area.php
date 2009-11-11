@@ -45,7 +45,16 @@
 					<p><?php _e( "It will display a username/password drop-down, allowing users to login plus be automatically re-directed back to the page they logged in from without seeing the WP admin.", "wptouch" ); ?></p>
 					<p><?php _e( "Once logged in, a new 'My Account' button will appear. The 'My Account' button shows useful links depending on the type of account (subscriber, admin, etc.).", "wptouch" ); ?></p>
 				</div>
-			<br /><br /></li>
+			</li>
+
+			<li>
+				<input class="checkbox" type="checkbox" <?php if (!function_exists( 'wordtwit_get_recent_tweets' )) : ?>disabled="true"<?php endif; ?> name="enable-show-tweets" <?php if (isset($wptouch_settings['enable-show-tweets']) && $wptouch_settings['enable-show-tweets'] == 1 && function_exists( 'wordtwit_get_recent_tweets' )) echo('checked'); ?> />
+				<label class="label" for="enable-show-tweets"> <?php _e( "Display Twitter link in the header (requires the <a href='http://www.bravenewcode.com/wordtwit/' target='_blank'>WordTwit 2.2.1</a> or higher plugin)", "wptouch" ); ?> <a href="#ajax-tweet-info" class="fancylink">?</a></label>
+					<div id="ajax-tweet-info" style="display:none">
+						<h2><?php _e( "More Info", "wptouch" ); ?></h2>
+						<p><?php _e( "When this option is checked and the WordTwit plugin is installed, a list of your Tweets will be viewable from a drop-down in the WPtouch header.", "wptouch" ); ?></p>
+					</div><br /><br />
+			</li>	
 
 			<li>
 				<input class="checkbox" type="checkbox" name="enable-ajax-comments" <?php if (isset($wptouch_settings['enable-ajax-comments']) && $wptouch_settings['enable-ajax-comments'] == 1) echo('checked'); ?> />
@@ -75,16 +84,6 @@
 				</div>
 			</li>
 			<?php } ?>
-
-			
-			<li>
-				<input class="checkbox" type="checkbox" name="enable-show-tweets" <?php if (isset($wptouch_settings['enable-show-tweets']) && $wptouch_settings['enable-show-tweets'] == 1) echo('checked'); ?> />
-				<label class="label" for="enable-show-tweets"> <?php _e( "Display my recent tweets (requires the <a href='http://www.bravenewcode.com/wordtwit/' target='_blank'>WordTwit</a> plugin)", "wptouch" ); ?> <a href="#ajax-tweet-info" class="fancylink">?</a></label>
-					<div id="ajax-tweet-info" style="display:none">
-						<h2><?php _e( "More Info", "wptouch" ); ?></h2>
-						<p><?php _e( "When this option is checked and the WordTwit plugin is installed, a list of your Tweets will be viewable from your site's main page.", "wptouch" ); ?></p>
-					</div>
-			</li>	
 
 			<li><br />
 				<input class="checkbox" type="checkbox" name="enable-regular-default" <?php if (isset($wptouch_settings['enable-regular-default']) && $wptouch_settings['enable-regular-default'] == 1) echo('checked'); ?> />

@@ -1,4 +1,7 @@
-/* @override http://www.wptouch.com/wp-content/plugins/wptouch/themes/default/style.css */
+/* @override 
+	http://www.wptouch.com/wp-content/plugins/wptouch/themes/default/style.css
+	http://www.wptouch.com/wp-content/plugins/wptouch/themes/default/style-compressed.css
+*/
 
 /*  
 Theme Name: WPtouch Mobile Plugin & Theme For WordPress
@@ -386,12 +389,13 @@ form#select-cats option {
 	-webkit-border-radius: 8px;
 	padding-left: 5px;
 	padding-top: 5px;
-	border: 2px solid #111;
-	background: #444 url(../core/core-images/twitter-arrow.jpg) no-repeat 97% center;
+	border: 1px solid #222;
+	background-color: #444;
+	background-image: none;
 }
 
 #wordtwit-avatar img {
--webkit-box-reflect:below 2px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0.8, transparent), to(white));
+-webkit-box-reflect:below -1px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0.8, transparent), to(white));
 	border: 1px solid #222;
 	float: left;
 	margin-right: 15px;
@@ -409,7 +413,7 @@ form#select-cats option {
 #wordtwit-avatar p.twitter_username {
 	color: #eee;
 	text-shadow: #222 0 -1px 1px;
-	font-size: 14px;
+	font-size: 15px;
 	font-weight: bold;
 }
 
@@ -431,6 +435,8 @@ form#select-cats option {
 	padding-top: 10px;
 	padding-right: 50px;
 	padding-left: 10px;
+	text-transform: none;
+	background-image: none;
 }
 
 #wptouch-wordtwit li p.time {
