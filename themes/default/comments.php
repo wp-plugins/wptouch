@@ -119,7 +119,7 @@
 		<p>
 			<input name="submit" type="submit" id="submit" tabindex="5" value="Publish" />
 			<input type="hidden" name="comment_post_ID" value="<?php echo $id; ?>" />		
-			<div id="loading">
+			<div id="loading" style="display:none">
 				<img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/themes/core/core-images/comment-ajax-loader.gif" alt="" /> <p><?php _e( 'Publishing...', 'wptouch' ); ?></p>
 			</div>
 		</p>
