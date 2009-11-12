@@ -18,11 +18,25 @@ The theme also includes the ability for your visitors to easily switch between t
 
 == Changelog ==
 
+= Version 1.9.5 =
+
+* Added CSS for TweetThis and AddThis plugins to be hidden
+* Added page/post title to HEAD for Tweet purposes
+* Added user agent detection for non-apple mobile devices to be served Twitter link correctly
+* Added Twitter updates menu item support for WordTwit's new features
+* Added 180-degree animation to post-arrow dropper and removed excess JS and code
+* Changed default OBJECT and EMBED css to only apply to .post, not site-wide
+* Changed comment ajax routine
+* Made progress towards reply and pagination in comments, not there yet
+
+
 = Version 1.9.4.1 =
+
 * Fixed space appearing below title on single post pages
 * Added compressed js for the admin
 * Updated Fancybox script & files to v1.2.5
 * Updated Ajax Upload script to v3.6
+
 
 = Version 1.9.4 =
 
@@ -39,7 +53,7 @@ The theme also includes the ability for your visitors to easily switch between t
 * Removed unused files
 
 
-= Version 1.9.3.4 =
+= Versions 1.9.3.x =
 
 * Fixed issues with adsense ads
 * Fixed time since code bug on comments
@@ -52,50 +66,26 @@ The theme also includes the ability for your visitors to easily switch between t
 * Switch link now re-directs to the page the switch request came from, not back to home
 * Changed downloads admin area to support topics rss feed
 * Added additional icons in the admin
-
-
-= Version 1.9.3.3 =
-
 * Fixed international languages display of time since on comments
-
-
-= Version 1.9.3.2 =
-
 * Fixed logic with PUSH notification via Prowl
-
-
-= Version 1.9.3.1 =
-
 * Removed unneeded files
 * Bug fixes
 * Style fixes for the display of comments
-
-
-= Version 1.9.3 =
-
 * Fixed issue where regular theme view would not allow pinching for zoom
 * Fixed JS bug in theme
 * Possible fix for time since on comments not working in some situations
 * Added option to disable Ajax comments for those who can't get them working
 
 
-= Version 1.9.2.2 =
+= Versions 1.9.2.x =
 
 * Fixed issue where mobile switch to regular theme was always zoomed in and required refresh
 * Fixed issue where pages changed from published to unpublished still showed in the WPtouch menu
 * Fixed issue where 'Load More Entries' caused blank page or other issues. WPtouch now detect possible issues and defaults to pagination
 * WPtouch now loads minified versions of its CSS and JS for the theme, speeding up load times
-
-
-= Version 1.9.2.1 =
-
 * Added check for wp-load.php before attempting ajax comments. Should fix WP comment posting issues. Working on better Disqus and Intense Debate support as well
 * Removed 'Find in this page' button, until bugs are resolved
 * Now WPtouch will not hide mobileSafari addressbar on single post pages on slower connections
-
-
-= Version 1.9.2 =
-
 * Fixed bug where WPtouch admin would report that CURL wasn't installed even if it was
 
 
@@ -172,7 +162,7 @@ The theme also includes the ability for your visitors to easily switch between t
 * Added Fancybox for some feature descriptions in the admin
 
 
-= Versions 1.8.1 to 1.8.8 =
+= Versions 1.8.x =
 
 * Changed calendar icons from images to CSS-based only (they look sexay!)
 * Refined styling of header logo, text shadow, general appearance
@@ -223,7 +213,7 @@ The theme also includes the ability for your visitors to easily switch between t
 * Fixed issue with Android and the sub-header menu links not working
 
 
-= Version 1.7 =
+= Versions 1.7.x =
 
 * Added option to do GZIP compression
 * Suppressed warning about multiple gzhandlers
@@ -246,7 +236,7 @@ The theme also includes the ability for your visitors to easily switch between t
 * Auto-adjusting width/height for MobileSafari plugin objects (YouTube, Quicktime)
 
 
-= Version 1.6 =
+= Versions 1.6.x =
 
 * Auto-resizing images in posts/pages on orientation change!
 * Auto-resizing WP image galleries
@@ -264,7 +254,7 @@ The theme also includes the ability for your visitors to easily switch between t
 * Other theme style cleanups and enhancements
 
 
-= Version 1.5 =
+= Versions 1.5.x =
 
 * Added support for WordPress image galleries
 * Added support for single post page split navigation
@@ -275,7 +265,7 @@ The theme also includes the ability for your visitors to easily switch between t
 * WPtouch now supports WordPress 2.3 or higher
 
 
-= Version 1.4 =
+= Versions 1.4.x =
 
 * More jQuery tune-ups, now loads through wp_enqueue_script() or Google to prevent collisions
 * Changed $J to $wptouch to prevent collisions using jQuery
@@ -290,7 +280,7 @@ The theme also includes the ability for your visitors to easily switch between t
 * Code cleanups and optimizations
 
 
-= Version 1.3 =
+= Versions 1.3.x =
 
 * Tweaks for the jQuery bugs
 * No conflict setting added for jQuery
@@ -309,7 +299,7 @@ The theme also includes the ability for your visitors to easily switch between t
 * Admin wording changes
 
 
-= Version 1.2 =
+= Versions 1.2.x =
 
 * Fix for the theme appearing in Safari browsers
 * Switch from Prototype to the more WordPress-native jQuery for javascript (much faster!)

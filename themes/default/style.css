@@ -379,7 +379,13 @@ form#select-cats option {
 /* @group WordTwit Menu */
 
 #wptouch-wordtwit {
-	
+	position: relative;
+	border-top: 1px solid #3e3e3e;
+}
+
+#wptouch-wordtwit #twitter-style-bar {
+	display: block;
+	border-top: 1px solid #1e1e1e;
 }
 
 #wordtwit-avatar {
@@ -402,6 +408,17 @@ form#select-cats option {
 	-webkit-border-radius: 2px;
 	width: 32px;
 	height: 32px;
+}
+
+#wptouch-wordtwit a#follow-arrow {
+	border-style: none;
+	width: 18px;
+	height: 18px;
+	position: absolute;
+	top: 22px;
+	right: 15px;
+	padding: 5px;
+	margin: 0;
 }
 
 #wordtwit-avatar p {
@@ -445,6 +462,131 @@ form#select-cats option {
 }
 
 
+
+/* @end */
+
+/* @group Push Message Area */
+
+#prowl-message {
+	color: #eee;
+	text-shadow: #000000 0 -1px 1px;
+	clear: both;
+	padding: 10px;
+	text-align: left;
+	font-size: 11px;
+	border-top: 1px solid #3e3e3e;
+}
+
+#prowl-message #push-style-bar {
+	display: block;
+	border-top: 1px solid #1e1e1e;
+	margin-left: -10px;
+	margin-right: -10px;
+	margin-top: -10px;
+	padding-top: 10px;
+}
+
+#prowl-message form p {
+	font-weight: bold;
+	font-size: 12px;
+	position: relative;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	clear: both;
+}
+
+#prowl-message label {
+	margin-left: 5px;
+}
+
+#prowl-message input {
+	width: 60%;
+	-webkit-border-radius: 10px;
+	padding: 3px;
+	color: #222;
+	border: 1px solid #1b1b1b;
+	font: 14px "Helvetica Neue", Helvetica, Geneva, Arial, sans-serif;
+}
+
+#prowl-message input#prowl-submit {
+	width: 100px;
+	text-align: center;
+	color: #fff;
+	text-shadow: #333 0 -1px 1px;
+	font-weight: bold;
+	border: 1px solid #333;
+	margin-top: 10px;
+	float: right;
+}
+
+#prowl-message textarea {
+	width: 98%;
+	-webkit-border-radius: 10px;
+	padding: 3px;
+	color: #222;
+	border: 1px solid #1b1b1b;
+	height: 70px;
+	overflow: auto;
+	margin-top: 2px;
+	font: 14px "Helvetica Neue", Helvetica, Geneva, Arial, sans-serif;
+}
+
+#prowl-message h4 {
+	font-size: 14px;
+	margin: 10px 0 15px;
+	padding: 0;
+}
+
+#prowl-message img {
+	float: left;
+	margin-right: 10px;
+}
+
+/* @group Success */
+
+#prowl-success {
+	color: #eee;
+	text-shadow: #000000 0 -1px 1px;
+	font: bold 16px "Helvetica Neue", Helvetica, Geneva, Arial, sans-serif;
+	text-align: center;
+	background: #000 url(../core/core-images/push-success.png) no-repeat center 50px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	opacity: 0.9;
+	width: 90%;
+	margin-left: 5%;
+	margin-top: 25px;
+	-webkit-border-radius: 15px;
+	-webkit-box-shadow: #444 0px 0px 15px;
+}
+
+#prowl-success p, #prowl-fail p {
+	margin-top: 125px;
+	margin-left: 20%;
+	margin-right: 20%;
+}
+
+#prowl-fail {
+	color: #eee;
+	text-shadow: #000000 0 -1px 1px;
+	font: bold 16px "Helvetica Neue", Helvetica, Geneva, Arial, sans-serif;
+	text-align: center;
+	background: #000 url(../core/core-images/push-fail.png) no-repeat center 50px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	opacity: 0.9;
+	width: 90%;
+	margin-left: 5%;
+	margin-top: 25px;
+	-webkit-border-radius: 15px;
+	-webkit-box-shadow: #444 0px 0px 15px;
+}
+
+/* @end */
 
 /* @end */
 
@@ -1993,130 +2135,5 @@ ul#post-options li a#onext {
 	font: 14px Helvetica, Arial, sans-serif;
 	margin: 25px;
 }
-
-/* @end */
-
-/* @group Push Message Area */
-
-#prowl-message {
-	color: #eee;
-	text-shadow: #000000 0 -1px 1px;
-	clear: both;
-	padding: 10px;
-	text-align: left;
-	font-size: 11px;
-	border-top: 1px solid #3e3e3e;
-}
-
-#prowl-message #prowl-style-bar {
-	display: block;
-	border-top: 1px solid #1e1e1e;
-	margin-left: -10px;
-	margin-right: -10px;
-	margin-top: -10px;
-	padding-top: 10px;
-}
-
-#prowl-message form p {
-	font-weight: bold;
-	font-size: 12px;
-	position: relative;
-	margin-bottom: 10px;
-	margin-top: 10px;
-	clear: both;
-}
-
-#prowl-message label {
-	margin-left: 5px;
-}
-
-#prowl-message input {
-	width: 60%;
-	-webkit-border-radius: 10px;
-	padding: 3px;
-	color: #222;
-	border: 1px solid #1b1b1b;
-	font: 14px "Helvetica Neue", Helvetica, Geneva, Arial, sans-serif;
-}
-
-#prowl-message input#prowl-submit {
-	width: 100px;
-	text-align: center;
-	color: #fff;
-	text-shadow: #333 0 -1px 1px;
-	font-weight: bold;
-	border: 1px solid #333;
-	margin-top: 10px;
-	float: right;
-}
-
-#prowl-message textarea {
-	width: 98%;
-	-webkit-border-radius: 10px;
-	padding: 3px;
-	color: #222;
-	border: 1px solid #1b1b1b;
-	height: 70px;
-	overflow: auto;
-	margin-top: 2px;
-	font: 14px "Helvetica Neue", Helvetica, Geneva, Arial, sans-serif;
-}
-
-#prowl-message h4 {
-	font-size: 14px;
-	margin: 10px 0 15px;
-	padding: 0;
-}
-
-#prowl-message img {
-	float: left;
-	margin-right: 10px;
-}
-
-/* @group Success */
-
-#prowl-success {
-	color: #eee;
-	text-shadow: #000000 0 -1px 1px;
-	font: bold 16px "Helvetica Neue", Helvetica, Geneva, Arial, sans-serif;
-	text-align: center;
-	background: #000 url(../core/core-images/push-success.png) no-repeat center 50px;
-	position: absolute;
-	top: 0;
-	left: 0;
-	z-index: 1000;
-	opacity: 0.9;
-	width: 90%;
-	margin-left: 5%;
-	margin-top: 25px;
-	-webkit-border-radius: 15px;
-	-webkit-box-shadow: #444 0px 0px 15px;
-}
-
-#prowl-success p, #prowl-fail p {
-	margin-top: 125px;
-	margin-left: 20%;
-	margin-right: 20%;
-}
-
-#prowl-fail {
-	color: #eee;
-	text-shadow: #000000 0 -1px 1px;
-	font: bold 16px "Helvetica Neue", Helvetica, Geneva, Arial, sans-serif;
-	text-align: center;
-	background: #000 url(../core/core-images/push-fail.png) no-repeat center 50px;
-	position: absolute;
-	top: 0;
-	left: 0;
-	z-index: 1000;
-	opacity: 0.9;
-	width: 90%;
-	margin-left: 5%;
-	margin-top: 25px;
-	-webkit-border-radius: 15px;
-	-webkit-box-shadow: #444 0px 0px 15px;
-}
-
-/* @end */
 
 /* @end */

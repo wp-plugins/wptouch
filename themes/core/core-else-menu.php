@@ -83,10 +83,12 @@
  <!-- #start the WordTwit Twitter Integration -->
  	<?php $tweets = wordtwit_get_recent_tweets(); ?>
 	<div id="wptouch-wordtwit" class="dropper" style="display:none">
+ 	 <div class="wptouch-style-bar"></div><!-- filler to get the styling just right -->
+			<a  id="follow-arrow" href="http://twitter.com/<?php echo wordtwit_get_username(); ?>" target="_blank"><img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/themes/core/core-images/twitter-arrow.jpg" alt="follow me" /></a>
 		<div id="wordtwit-avatar">
 			<img src="<?php echo wordtwit_get_profile_url(); ?>" alt="Twitter Avatar" />
 				<p class="twitter_username"><?php echo wordtwit_get_username(); ?></p>
-				<p><a href="http://twitter.com/<?php echo wordtwit_get_username(); ?>">Follow me on Twitter</a></p>
+				<p><a href="http://twitter.com/<?php echo wordtwit_get_username(); ?>" target="_blank">Follow me on Twitter</a></p>
 		</div>
 
 		<?php $now = time(); ?>
