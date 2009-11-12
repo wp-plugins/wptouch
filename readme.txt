@@ -3,7 +3,7 @@ Contributors: BraveNewCode, duanestorey, dalemugford
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=paypal%40bravenewcode%2ecom&item_name=WPtouch%20Beer%20Fund&no_shipping=0&no_note=1&tax=0&currency_code=CAD&lc=CA&bn=PP%2dDonationsBF&charset=UTF%2d8
 Tags: wptouch, iphone, ipod, theme, apple, mac, bravenewcode, ajax, mobile, android, blackberry, smartphone
 Requires at least: 2.7
-Tested up to: 2.9
+Tested up to: 2.8.6
 Stable tag: 1.9.4.1
 
 WPtouch automatically transforms your WordPress blog into an iPhone application-style theme, complete with ajax loading articles and effects, when viewed from an iPhone, iPod touch, Android, Opera Mini, Palm Pre and BlackBerry Storm mobile devices.
@@ -20,16 +20,18 @@ The theme also includes the ability for your visitors to easily switch between t
 
 = Version 1.9.5 =
 
+* Added Twitter updates menu item support for WordTwit's new features
 * Added CSS for TweetThis and AddThis plugins to be hidden
 * Added page/post title to HEAD for Tweet purposes
 * Added user agent detection for non-apple mobile devices to be served Twitter link correctly
-* Added Twitter updates menu item support for WordTwit's new features
 * Added 180-degree animation to post-arrow dropper and removed excess JS and code
+* Added new tab pane for the header (menu, tags, categories, account)
+* Added more theme compatibility for other touch devices
 * Changed default OBJECT and EMBED css to only apply to .post, not site-wide
 * Changed comment ajax routine
-* Changed 'Links Page' appearance, removed favicon script
+* Changed 'Links' appearance adding support for link categories, removed favicon scripts
+* Changed the way the header links are setup
 * Made progress towards reply and pagination in comments, not there yet
-
 
 = Version 1.9.4.1 =
 
