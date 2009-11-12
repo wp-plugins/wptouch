@@ -275,17 +275,6 @@ blockquote {
 	background: url(../core/core-images/menu-sprite.png) no-repeat 2px -92px;
 }
 
-/* @group Account Links */
-
-#wptouch-acct, #wptouch-acct ul, #wptouch-acct li {
-	padding: 0;
-	margin: 0;
-}
-
-
-
-/* @end */
-
 /* @end */
 
 /* @group DropDown Menu */
