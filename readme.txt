@@ -385,7 +385,7 @@ Not bloody likely! Unless of course you're getting slammed with all sorts of tra
 1. Posts on the front page
 2. Drop down menu navigation
 3. Push Messaging
-4. iPhone native select support for tags & categories
+4. WordTwit plugin Twitter integration
 5. Single post page post meta, options bar, comments
 6. Ajax comment form
 7. Switch link in the footer
