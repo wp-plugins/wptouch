@@ -27,10 +27,12 @@ The theme also includes the ability for your visitors to easily switch between t
 * Added 180-degree animation to post-arrow dropper and removed excess JS and code
 * Added new tab pane for the header (menu, tags, categories, account)
 * Added more theme compatibility for other touch devices
+* Added 'edit, delete, spam' links for admins on comments
 * Changed default OBJECT and EMBED css to only apply to .post, not site-wide
 * Changed comment ajax routine
 * Changed 'Links' appearance adding support for link categories, removed favicon scripts
 * Changed the way the header links are setup
+* Small refinements in the theme CSS all-around
 * Made progress towards reply and pagination in comments, not there yet
 
 = Version 1.9.4.1 =

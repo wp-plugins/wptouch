@@ -4,7 +4,7 @@
 		die ('Please do not load this page directly. Thanks!');
 
 	if ( post_password_required() ) { ?>
-		<p class="nocomments">This post is password protected. Enter the password to view comments.</p>
+		<p class="nocomments"><?php _e( "This post is password protected. Enter the password to view comments.", "wptouch" ); ?></p>
 	<?php
 		return;
 	}
@@ -24,11 +24,11 @@
 								<div class="comtop<?php if ($comment->comment_approved == '0') : echo ' preview'; endif; ?>">		
 									<?php if (bnc_is_gravatars_enabled()) { echo get_avatar( $comment, $size = '32', $default = '' . compat_get_plugin_url( 'wptouch' ) . '/themes/core/core-images/blank_gravatar.jpg' ); } ?>
 									<div class="com-author"><?php comment_author_link(); ?></div> 	<?php if ($comment->comment_approved == '0') : echo '<span>(moderation preview)</span>'; endif; ?>
-										<div class="comdater">
+										<div class="comdater"><span><?php wptouch_moderate_comment_link(get_comment_ID()); ?></span>
 											<?php $d = (time() - @strftime('%s',strtotime(get_comment_date('c'))))/(60*60*24);
 											if ($d < 1) echo (' ' . comment_time('g:ia') . ' '); 
-											else if ($d < 2) echo floor($d) . ' day ago'; 
-											else echo floor($d) . ' days ago'; ?>
+											else if ($d < 2) echo floor($d) . '' . __(' day ago') . ''; 
+											else echo floor($d) . '' . __(' days ago') . ''; ?>
 										</div>									
 
 								</div><!--end comtop-->

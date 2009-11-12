@@ -418,7 +418,6 @@ blockquote {
 }
 
 #wordtwit-avatar {
-	margin: 10px 10px 30px;
 	text-align: left;
 	padding-bottom: 10px;
 	-webkit-border-radius: 8px;
@@ -427,6 +426,7 @@ blockquote {
 	border: 1px solid #555;
 	background-image: none;
 	background-color: #444;
+	margin: 10px;
 }
 
 #wordtwit-avatar img {
@@ -985,34 +985,13 @@ a.h2 {
 	font-weight: bold;
 	letter-spacing: 0;
 	text-align: left;
-	width: 75%;
+	width: 72%;
 	height: auto;
 }
 
 .post-author span.lead {
 	font-weight: normal;
 	font-style: normal;
-}
-
-.post-author a {
-	padding-top: 1px;
-	padding-bottom: 10px;
-	font-weight: bold;
-	text-align: left;
-}
-
-.post-dropper {
-	position: relative;
-	z-index: 1;
-	bottom: 1px;
-	left: 30px;
-	display: none;
-	float: left;
-}
-
-.post-spacer {
-	height: 10px;
-	clear: both;
 }
 
 /* @end */
@@ -1094,6 +1073,75 @@ a.sh2 {
 	margin: 5px -10px;
 	text-shadow: #fafafa 0 1px 1px;
 }
+
+/* @group Post Options Bar */
+
+ul#post-options {
+	-webkit-border-bottom-left-radius: 7px;
+	-webkit-border-bottom-right-radius: 7px;
+	list-style-type: none;
+	background-color: #e6e6e6;
+	padding: 0 4px 0 0;
+	text-align: center;
+	position: relative;
+	margin: -5px -10px -10px;
+	border-top: 1px solid #fbfbfb;
+}
+
+ul#post-options li {
+	margin: 0;
+	padding: 0;
+	display: inline-block;
+}
+
+ul#post-options li a {
+	margin: 0 0 -3px;
+	display: inline-block;
+	padding-top: 20px;
+	padding-bottom: 16px;
+	width: 38px;
+}
+
+ul#post-options li a#oprev {
+	background: url(../core/core-images/post-options.png) no-repeat 5px -210px;
+	border-right: 1px solid #cfcfcf;
+	width: 38px;
+}
+
+ul#post-options li a#omail {
+	background: url(../core/core-images/post-options.png) no-repeat center -1px;
+	border-left: 1px solid #fbfbfb;
+	margin-left: -3px;
+	padding-left: 6px;
+}
+
+ul#post-options li a#otweet {
+	background: url(../core/core-images/post-options.png) no-repeat center -82px;
+}
+
+ul#post-options li a#obook {
+	background: url(../core/core-images/post-options.png) no-repeat center -39px;
+}
+
+ul#post-options li a#osearch {
+	background: url(../core/core-images/post-options.png) no-repeat center -127px;
+}
+
+ul#post-options li a#otext {
+	background: url(../core/core-images/post-options.png) no-repeat center -168px;
+	border-right: 1px solid #fbfbfb;
+	margin-right: -3px;
+	padding-right: 6px;
+}
+
+ul#post-options li a#onext {
+	background: url(../core/core-images/post-options.png) no-repeat -15px -244px;
+	margin-right: 3px;
+	border-left: 1px solid #cfcfcf;
+	width: 34px;
+}
+
+/* @end */
 
 /* @group Gallery / Captions */
 
@@ -1544,6 +1592,21 @@ ol.commentlist .reply a, .comdater {
 	text-shadow: #fff 0 1px 0px;
 }
 
+ol.commentlist .comdater span {
+	margin-right: 3px;
+	border-right: 1px solid #fefefe;
+	display: inline-block;
+}
+
+ol.commentlist .comdater span a {
+	padding-right: 7px;
+}
+
+ol.commentlist .comdater span a:last-child {
+	border-right: 1px solid #ccc;
+	display: inline-block;
+}
+
 ol.commentlist .comment-author {
 	font-weight: bold;
 }
@@ -1586,7 +1649,7 @@ ol.commentlist .comment-meta a {
 .com-author a {
 	font-weight: bold;
 	text-transform: capitalize;
-	font-size: 14px;
+	font-size: 13px;
 	text-shadow: #fff 0 1px 0;
 	-webkit-border-top-right-radius: 0px;
 }
@@ -1594,7 +1657,7 @@ ol.commentlist .comment-meta a {
 .com-author {
 	font-weight: bold;
 	text-transform: capitalize;
-	font-size: 14px;
+	font-size: 13px;
 	position: relative;
 	text-shadow: #fff 0 1px 0;
 	-webkit-border-top-right-radius: 0px;
@@ -2075,69 +2138,6 @@ a.dsq-brlink {
 
 #idc-container-parent label.idc-nofloat {
 	display: none;
-}
-
-/* @end */
-
-/* @group Post Options Bar */
-
-ul#post-options {
-	-webkit-border-bottom-left-radius: 7px;
-	-webkit-border-bottom-right-radius: 7px;
-	list-style-type: none;
-	background-color: #e6e6e6;
-	padding: 0 4px 0 0;
-	text-align: center;
-	position: relative;
-	margin: -5px -10px -10px;
-}
-
-ul#post-options li {
-	margin: 0;
-	padding: 0;
-	display: inline-block;
-}
-
-ul#post-options li a {
-	margin: 0 0 -3px;
-	display: inline-block;
-	padding-top: 20px;
-	padding-bottom: 16px;
-	width: 38px;
-}
-
-ul#post-options li a#oprev {
-	background: url(../core/core-images/post-options.png) no-repeat 5px -210px;
-	margin-left: 3px;
-	border-right: 1px solid #cfcfcf;
-	width: 38px;
-}
-
-ul#post-options li a#omail {
-	background: url(../core/core-images/post-options.png) no-repeat center -1px;
-}
-
-ul#post-options li a#otweet {
-	background: url(../core/core-images/post-options.png) no-repeat center -82px;
-}
-
-ul#post-options li a#obook {
-	background: url(../core/core-images/post-options.png) no-repeat center -39px;
-}
-
-ul#post-options li a#osearch {
-	background: url(../core/core-images/post-options.png) no-repeat center -127px;
-}
-
-ul#post-options li a#otext {
-	background: url(../core/core-images/post-options.png) no-repeat center -168px;
-}
-
-ul#post-options li a#onext {
-	background: url(../core/core-images/post-options.png) no-repeat -15px -244px;
-	margin-right: 3px;
-	border-left: 1px solid #cfcfcf;
-	width: 34px;
 }
 
 /* @end */
