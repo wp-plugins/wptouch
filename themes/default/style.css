@@ -193,7 +193,7 @@ blockquote {
 	font-family: HelveticaNeue-Bold, sans-serif;
 }
 
-#headerbar-title img {
+#headerbar-title img#logo-icon {
 	position: relative;
 	margin-right: 7px;
 	max-width: 30px;
@@ -225,7 +225,7 @@ blockquote {
 	background-position: 0 -45px;
 }
 
-/* @group Drop-Fade Links */
+/* @group Sub-Menu */
 
 #drop-fade {
 	width: 100%;
@@ -234,8 +234,8 @@ blockquote {
 	-webkit-box-shadow: #000 -3px 2px 3px;
 	text-align: right;
 	border-top: 1px solid #3e3e3e;
-	overflow: hidden;
 	height: auto;
+	overflow: hidden;
 }
 
 #drop-fade a.top {
@@ -248,16 +248,6 @@ blockquote {
 	display: block;
 	float: right;
 	padding: 6px 2px 2px 0;
-}
-
-#drop-fade #catsopen {
-	background: url(../core/core-images/menu-sprite.png) no-repeat 0 -45px;
-	padding-left: 16px;
-}
-
-#drop-fade #tagsopen {
-	background: url(../core/core-images/menu-sprite.png) no-repeat 0 8px;
-	padding-left: 16px;
 }
 
 #drop-fade #loginopen {
@@ -285,89 +275,86 @@ blockquote {
 	background: url(../core/core-images/menu-sprite.png) no-repeat 2px -92px;
 }
 
-form#select-cats, form#select-tags, form#select-acct {
-	overflow: hidden;
-	width: 0;
-	height: 0;
-	margin: 0;
+/* @group Account Links */
+
+#wptouch-acct, #wptouch-acct ul, #wptouch-acct li {
 	padding: 0;
+	margin: 0;
 }
 
-form#select-cats option {
-	text-transform: capitalize !important;
-}
 
-#drop-fade .dropper {
-	position: relative;
-	top: 20px;
-}
 
-#drop-fade .dropper ul {
-	margin-top: 20px;
-	position: relative;
-	bottom: 20px;
-}
-
-#drop-fade .dropper ul li a {
-	padding-left: 15px;
-}
+/* @end */
 
 /* @end */
 
 /* @group DropDown Menu */
 
-/* @group Sub-Menu */
-
-#menu-head {
-	background-color: #444;
-	padding-top: 7px;
-	padding-bottom: 5px;
+.dropper {
+	top: 20px;
+	width: 100%;
 	position: relative;
 	z-index: 1;
-	border-bottom: 1px solid #1b1b1b;
-}
-
-#menu-head ul {
-	padding: 0;
-	margin: 0 10px;
-}
-
-#menu-head li, #menu-head li:hover {
-	display: inline;
 	margin: 0;
-	padding: 3px 6px 8px;
-	background-image: none;
-	border-style: none;
-	font-size: 12px;
-	font-weight: bold;
-	color: #aaa;
-	background-color: transparent;
-}
-
-#menu-head li.menu-head-active {
+	padding: 0;
+	border-top: 1px solid #1b1b1b;
+	font-size: 13px;
 	background-color: #2c2c2c;
-	border: 1px solid #1b1b1b;
-	border-bottom-style: none;
-	-webkit-border-top-left-radius: 4px;
-	-webkit-border-top-right-radius: 4px;
-	text-shadow: #000000 0 -1px 1px;
-	padding-bottom: 9px;
-	color: #fff;
 }
 
-#menu-head li a, #menu-head li a:hover {
-	display: inline;
-	font-size: 12px;
+.dropper ul {
+	position: relative;
+	list-style-type: none;
 	margin: 0;
 	padding: 0;
-	background-image: none;
-	background-color: transparent;
-	color: #aaa;
 }
 
+.dropper li {
+	border-bottom: 1px solid #1d1d1d;
+	margin: 0;
+	background: url(../core/core-images/arrow.png) no-repeat right center;
+	text-transform: capitalize;
+	border-top: 1px solid #363636;
+	padding: 0;
+	text-align: left;
+}
 
+.dropper li.text {
+	color: #eee;
+	text-shadow: #111 0 -1px 1px;
+	text-align: center;
+	background-image: none;
+	padding-top: 25px;
+	padding-bottom: 25px;
+	text-transform: none;
+}
 
-/* @end */
+.dropper li.text a {
+	display: inline;
+	margin: 0;
+	padding: 0;
+	text-decoration: underline;
+}
+
+.dropper li:hover {
+	background-color: #222;
+	border-top: 1px solid #222;
+	position: relative;
+	z-index: 2;
+}
+
+.dropper a {
+	font-weight: bold;
+	display: block;
+	text-shadow: #000 -1px -1px 1px;
+	color: #d2d2d2;
+	margin: 0;
+	width: auto;
+	padding: 11px 35px 11px 15px;
+	text-align: left;
+}
+
+/* @group Tab Menus */
 
 #wptouch-menu {
 	position: absolute;
@@ -384,53 +371,47 @@ form#select-cats option {
 	width: 28px;
 	padding-right: 10px;
 	right: 0;
-	padding-left: 10px;
 }
 
-.dropper {
-	width: 100%;
+#tabnav {
+	background-color: #444;
+	padding-top: 3px;
+	border-bottom: 1px solid #1b1b1b;
+	border-top: 1px solid #575757;
+	padding-left: 10px;
+	height: 24px;
+}
+
+#tabnav a {
+	display: inline-block;
+	margin: 0;
+	padding: 2px 8px 7px;
+	color: #999;
+	text-shadow: #111 0 -1px 1px;
+}
+
+#tabnav a.selected {
+	background-color: #2c2c2c;
 	position: relative;
 	z-index: 1;
-	margin: 0;
-	padding: 0;
-	border-top: 1px solid #1b1b1b;
-	font-size: 13px;
-	background-color: #2c2c2c;
+	-webkit-border-top-left-radius: 4px;
+	-webkit-border-top-right-radius: 4px;
+	border: 1px solid #1b1b1b;
+	margin-left: -1px;
+	margin-right: -1px;
+	color: #fff !important;
+	-webkit-box-shadow: #222 0px -2px 3px;
+	border-bottom: 1px solid #2c2c2c;
+	text-shadow: #000000 0 -1px 1px;
 }
 
-.dropper ul {
-	margin: 0;
-	padding: 0;
-	list-style-type: none;
-	position: relative;
+#tabnav a:hover, #tabnav a:active {
+	color: #fff;
 }
 
-.dropper li {
-	border-bottom: 1px solid #1d1d1d;
-	margin: 0;
-	background: url(../core/core-images/arrow.png) no-repeat right center;
-	text-transform: capitalize;
-	border-top: 1px solid #363636;
-	padding: 0;
-	text-align: left;
-}
 
-.dropper a {
-	font-weight: bold;
-	display: block;
-	text-shadow: #000 -1px -1px 1px;
-	color: #d2d2d2;
-	margin: 0;
-	width: auto;
-	padding: 10px 35px 10px 0;
-	text-align: left;
-	clear: both;
-}
 
-.dropper li:hover {
-	background-color: #222;
-	border-top: 1px solid #222;
-}
+/* @end */
 
 /* @end */
 
@@ -650,7 +631,7 @@ form#select-cats option {
 
 /* @end */
 
-/* @group Login */
+/* @group Login & Search */
 
 #wptouch-login {
 	position: absolute;
@@ -662,15 +643,16 @@ form#select-cats option {
 }
 
 #wptouch-login-inner {
-	padding-top: 9px;
+	padding-top: 8px;
 	width: 100%;
 	height: 35px;
 	background-repeat: repeat-x;
 	text-align: center;
+	padding-bottom: 2px;
 }
 
 #wptouch-login input#log {
-	width: 135px;
+	width: 120px;
 	-webkit-border-radius: 10px;
 	padding: 3px;
 	font-size: 13px;
@@ -680,7 +662,7 @@ form#select-cats option {
 }
 
 #wptouch-login input#pwd {
-	width: 135px;
+	width: 120px;
 	-webkit-border-radius: 10px;
 	padding: 3px;
 	font-size: 13px;
@@ -689,10 +671,6 @@ form#select-cats option {
 	border: 1px solid #1b1b1b;
 	margin-left: 5px;
 }
-
-/* @end */
-
-/* @group Search */
 
 #wptouch-search {
 	position: absolute;
@@ -714,14 +692,20 @@ form#select-cats option {
 input#s {
 	-webkit-border-radius: 10px;
 	padding: 4px;
-	width: 90%;
+	width: 80%;
 	font-size: 13px;
 	color: #222;
-	margin-right: 3px;
 	text-align: left;
 	margin-top: 6px;
 	border: 1px solid #1b1b1b;
 	font-weight: bold;
+}
+
+img.head-close {
+	display: inline;
+	position: relative;
+	top: 6px;
+	left: 5px;
 }
 
 /* @end */

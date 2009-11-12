@@ -37,6 +37,16 @@
 			</li>
 			
 			<li>
+				<input class="checkbox" type="checkbox" name="enable-search-button" <?php if (isset($wptouch_settings['enable-search-button']) && $wptouch_settings['enable-search-button'] == 1) echo('checked'); ?> />
+				<label class="label" for="enable-search-button"><?php _e( "Enable Search link in the header", "wptouch" ); ?> <a href="#search-info" class="fancylink">?</a></label>
+				<div id="search-info" style="display:none">
+					<h2><?php _e( "More Info", "wptouch" ); ?></h2>
+					<p><?php _e( "This will add a 'Search' item in the WPtouch sub header.", "wptouch" ); ?></p>
+					<p><?php _e( "It will display an overlay on the title area allowing users to search your website.", "wptouch" ); ?></p>
+				</div>
+			</li>
+			
+			<li>
 				<input class="checkbox" type="checkbox" name="enable-login-button" <?php if (isset($wptouch_settings['enable-login-button']) && $wptouch_settings['enable-login-button'] == 1) echo('checked'); ?> />
 				<label class="label" for="enable-login-button"><?php _e( "Enable Login/My Account link in the header", "wptouch" ); ?> <a href="#login-info" class="fancylink">?</a></label>
 				<div id="login-info" style="display:none">

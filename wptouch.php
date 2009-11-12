@@ -64,6 +64,7 @@ $wptouch_defaults = array(
 	'enable-page-coms' => false,
 	'enable-cats-button' => true,
 	'enable-tags-button' => true,
+	'enable-search-button' => true,
 	'enable-login-button' => false,
 	'enable-ajax-comments' => true,
 	'enable-gravatars' => true,
@@ -618,6 +619,11 @@ function bnc_is_tags_button_enabled() {
 	return $ids['enable-tags-button'];
 }	
 
+function bnc_is_search_enabled() {
+	$ids = bnc_wp_touch_get_menu_pages();
+	return $ids['enable-search-button'];
+}	
+
 function bnc_is_login_button_enabled() {
 	$ids = bnc_wp_touch_get_menu_pages();
 	return $ids['enable-login-button'];
@@ -664,7 +670,7 @@ function bnc_is_email_enabled() {
 }
 
 // Prowl Functions
-function wptouch_prowl_direct_message_enabled() {
+function bnc_is_prowl_direct_message_enabled() {
 	$settings = bnc_wptouch_get_settings();
 	return ( isset( $settings['enable-prowl-message-button'] ) && $settings['enable-prowl-message-button'] && $settings['prowl-api'] );
 }
@@ -689,11 +695,12 @@ function bnc_wp_touch_get_pages() {
 	$keys = array();
 	foreach ($ids as $k => $v) {
 		if ($k == 'main_title' || $k == 'enable-post-excerpts' || $k == 'enable-page-coms' || 
-			 $k == 'enable-cats-button'  || $k == 'enable-tags-button'  || $k == 'enable-login-button' || 
-			 $k == 'enable-gravatars' || $k == 'enable-ajax-comments' || $k == 'enable-main-home' || 
-			 $k == 'enable-main-rss' || $k == 'enable-main-email' || $k == 'enable-main-name' || 
-			 $k == 'enable-main-tags' || $k == 'enable-main-categories' || $k == 'enable-prowl-comments-button' || 
-			 $k == 'enable-prowl-users-button' || $k == 'enable-prowl-message-button') {
+			 $k == 'enable-cats-button'  || $k == 'enable-tags-button'  || $k == 'enable-search-button'  || 
+			 $k == 'enable-login-button' || $k == 'enable-gravatars' || $k == 'enable-ajax-comments' || 
+			 $k == 'enable-main-home' || $k == 'enable-main-rss' || $k == 'enable-main-email' || 
+			 $k == 'enable-main-name' || $k == 'enable-main-tags' || $k == 'enable-main-categories' || 
+			 $k == 'enable-prowl-comments-button' || $k == 'enable-prowl-users-button' || 
+			 $k == 'enable-prowl-message-button') {
 			} else {
 				if (is_numeric($k)) {
 					$keys[] = $k;

@@ -63,23 +63,38 @@ function wptouch_core_header_styles() {
 	include('core-styles.php' );
 }
 
-function wptouch_core_subheader() {
-	function wptouch_agent($browser) {
-		$useragent = $_SERVER['HTTP_USER_AGENT'];
-			return strstr($useragent,$browser);
-		}
-	if(wptouch_agent("iphone", "ipod", "aspen") != FALSE) {
-		include( dirname(__FILE__) . '/../core/core-else-menu.php' );
+function wptouch_agent($browser) {
+	$useragent = $_SERVER['HTTP_USER_AGENT'];
+		return strstr($useragent,$browser);
+	}
+
+//  function wptouch_core_subheader() {
+//  	if(wptouch_agent("iphone") || wptouch_agent("ipod") || wptouch_agent("aspen") != FALSE) {
+//  		include( dirname(__FILE__) . '/../core/core-else-menu.php' );
+//  	} else {
+//  		include( dirname(__FILE__) . '/../core/core-apple-menu.php' );
+//  	}
+//  }
+
+function wptouch_twitter_link() {
+	if(wptouch_agent("iphone") || wptouch_agent("ipod") || wptouch_agent("aspen") != FALSE) {
+		echo '<li><a href="javascript:(function(){var%20f=false,t=true,a=f,b=f,u=\'\',w=window,d=document,g=w.open(),p,linkArr=d.getElementsByTagName(\'link\');for(var%20i=0;i%3ClinkArr.length&&!a;i++){var%20l=linkArr[i];for(var%20x=0;x%3Cl.attributes.length;x++){if(l.attributes[x].nodeName.toLowerCase()==\'rel\'){p=l.attributes[x].nodeValue.split(\'%20\');for(y=0;y%3Cp.length;y++){if(p[y]==\'short_url\'||p[y]==\'shorturl\'||p[y]==\'shortlink\'){a=t;}}}if(l.attributes[x].nodeName.toLowerCase()==\'rev\'&&l.attributes[x].nodeValue==\'canonical\'){a=t;}if(a){u=l.href;}}}if(a){go(u);}else{var%20h=d.getElementsByTagName(\'head\')[0]||d.documentElement,s=d.createElement(\'script\');s.src=\'http://api.bit.ly/shorten?callback=bxtShCb&longUrl=\'+encodeURIComponent(window.location.href)+\'&version=2.0.1&login=amoebe&apiKey=R_60a24cf53d0d1913c5708ea73fa69684\';s.charSet=\'utf-8\';h.appendChild(s);}bxtShCb=function(data){var%20rs,r;for(r%20in%20data.results){rs=data.results[r];break;}go(rs[\'shortUrl\']);};function%20go(u){return%20g.document.location.href=(\'http://twitter.com/home/?status=\'+encodeURIComponent(document.title+\'%20\'+u));}})();" id="otweet"></a></li>';
 	} else {
-		include( dirname(__FILE__) . '/../core/core-apple-menu.php' );
+		echo '<li><a href="javascript:return false;" onclick="wptouch_toggle_twitter();" id="otweet"></a></li>';
 	}
 }
 
-function wptouch_twitter_link() {
-	if(wptouch_agent("iphone", "ipod", "aspen") != FALSE) {
-		echo '<li><a href="javascript:return false;" onclick="wptouch_toggle_twitter();" id="otweet"></a></li>';
+function wptouch_tags_link() {
+	if(wptouch_agent("iphone") || wptouch_agent("ipod") || wptouch_agent("aspen") != FALSE) {
 	} else {
-		echo '<li><a href="javascript:(function(){var%20f=false,t=true,a=f,b=f,u=\'\',w=window,d=document,g=w.open(),p,linkArr=d.getElementsByTagName(\'link\');for(var%20i=0;i%3ClinkArr.length&&!a;i++){var%20l=linkArr[i];for(var%20x=0;x%3Cl.attributes.length;x++){if(l.attributes[x].nodeName.toLowerCase()==\'rel\'){p=l.attributes[x].nodeValue.split(\'%20\');for(y=0;y%3Cp.length;y++){if(p[y]==\'short_url\'||p[y]==\'shorturl\'||p[y]==\'shortlink\'){a=t;}}}if(l.attributes[x].nodeName.toLowerCase()==\'rev\'&&l.attributes[x].nodeValue==\'canonical\'){a=t;}if(a){u=l.href;}}}if(a){go(u);}else{var%20h=d.getElementsByTagName(\'head\')[0]||d.documentElement,s=d.createElement(\'script\');s.src=\'http://api.bit.ly/shorten?callback=bxtShCb&longUrl=\'+encodeURIComponent(window.location.href)+\'&version=2.0.1&login=amoebe&apiKey=R_60a24cf53d0d1913c5708ea73fa69684\';s.charSet=\'utf-8\';h.appendChild(s);}bxtShCb=function(data){var%20rs,r;for(r%20in%20data.results){rs=data.results[r];break;}go(rs[\'shortUrl\']);};function%20go(u){return%20g.document.location.href=(\'http://twitter.com/home/?status=\'+encodeURIComponent(document.title+\'%20\'+u));}})();" id="otweet"></a></li>';
+		echo '<a href="#head-tags">' . __( "Tags", "wptouch" ) . '</a>';
+	}
+}
+
+function wptouch_cats_link() {
+	if(wptouch_agent("iphone") || wptouch_agent("ipod") || wptouch_agent("aspen") != FALSE) {
+	} else {
+		echo '<a href="#head-cats">' . __( "Categories", "wptouch" ) . '</a>';
 	}
 }
 

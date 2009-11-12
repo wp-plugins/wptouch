@@ -30,6 +30,12 @@
 			$a['enable-tags-button'] = 0;
 		}
 
+		if ( isset( $_POST['enable-search-button'] ) ) {
+			$a['enable-search-button'] = 1;
+		} else {
+			$a['enable-search-button'] = 0;
+		}
+
 		if ( isset( $_POST['enable-login-button'] ) ) {
 			$a['enable-login-button'] = 1;
 		} else {

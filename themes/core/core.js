@@ -67,19 +67,6 @@ function bnc_jquery_wordtwit_open() {
 }
 
 
-function bnc_jquery_cats_open() {
-	$wptouch('#cat').focus();
-}
-
-function bnc_jquery_tags_open() {
-	$wptouch('#tag-dropdown').focus();
-}
-
-function bnc_jquery_acct_open() {
-	$wptouch('#acct-dropdown').focus();
-}
-
-
 /////// -- Ajax comments -- ///////
 function bnc_showhide_coms_toggle() {
 	$wptouch('#commentlist').fadeToggle(350);
@@ -116,6 +103,20 @@ function wptouch_toggle_bookmarks() {
 	$wptouch('#bookmark-box').fadeToggle(400);
 }
 
+/////// --jQuery Tabs-- ///////
+
+$wptouch(function () {
+    var tabContainers = $wptouch('#menu-head > ul');
+    
+    $wptouch('#tabnav a').click(function () {
+        tabContainers.hide().filter(this.hash).show();
+        
+        $wptouch('#tabnav a').removeClass('selected');
+        $wptouch(this).addClass('selected');
+        
+        return false;
+    }).filter(':first').click();
+});
 
 /////// -- Tweak jQuery Timer -- ///////
 $wptouch.timerId = setInterval(function(){
