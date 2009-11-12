@@ -18,7 +18,7 @@
 		<ul>
 			<li>
 				<input class="checkbox" type="checkbox" name="enable-cats-button" <?php if ( isset( $wptouch_settings['enable-cats-button']) && $wptouch_settings['enable-cats-button'] == 1) echo('checked'); ?> />
-				<label class="label" for="enable-cats-button"><?php _e( "Enable categories tab in the header", "wptouch" ); ?> <a href="#cats-info" class="fancylink">?</a></label>
+				<label class="label" for="enable-cats-button"><?php _e( "Enable Categories tab in the header", "wptouch" ); ?> <a href="#cats-info" class="fancylink">?</a></label>
 				<div id="cats-info" style="display:none">
 					<h2><?php _e( "More Info", "wptouch" ); ?></h2>
 					<p><?php _e( "This will add a 'Categories' tab item in the WPtouch drop-down.", "wptouch" ); ?></p>
@@ -28,7 +28,7 @@
 			
 			<li>
 				<input class="checkbox" type="checkbox" name="enable-tags-button" <?php if ( isset( $wptouch_settings['enable-tags-button']) && $wptouch_settings['enable-tags-button'] == 1) echo('checked'); ?> />
-				<label class="label" for="enable-tags-button"><?php _e( "Enable tags tab in the header", "wptouch" ); ?> <a href="#tags-info" class="fancylink">?</a></label>
+				<label class="label" for="enable-tags-button"><?php _e( "Enable Tags tab in the header", "wptouch" ); ?> <a href="#tags-info" class="fancylink">?</a></label>
 				<div id="tags-info" style="display:none">
 					<h2><?php _e( "More Info", "wptouch" ); ?></h2>
 					<p><?php _e( "This will add a 'Tags' tab item in the WPtouch drop-down.", "wptouch" ); ?></p>
