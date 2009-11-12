@@ -91,19 +91,20 @@ function core_header_tag_cloud( $tags, $args = '' ) {
 
 //---------------- Custom Exclude Cats Function ----------------//
 function exclude_category($query) {
-$cats = wptouch_excluded_cats();
-$icats = explode( ",", $cats );
-$new_cats = array();
-foreach( $icats as $icat ) {
-	$new_cats[] = "-" . $icat;
+	$cats = wptouch_excluded_cats();
+	$icats = explode( ",", $cats );
+	$new_cats = array();
+	foreach( $icats as $icat ) {
+		$new_cats[] = "-" . $icat;
 }
-$cats = implode( ",",  $new_cats );
-
-if ( $query->is_home ) {
-$query->set('cat', $cats);
-}
+	$cats = implode( ",",  $new_cats );
+	
+	if ( $query->is_home ) {
+	$query->set('cat', $cats);
+	}
 return $query;
 }
+
 add_filter('pre_get_posts', 'exclude_category');
 
 

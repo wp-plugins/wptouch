@@ -27,6 +27,7 @@ The theme also includes the ability for your visitors to easily switch between t
 * Added 180-degree animation to post-arrow dropper and removed excess JS and code
 * Changed default OBJECT and EMBED css to only apply to .post, not site-wide
 * Changed comment ajax routine
+* Changed 'Links Page' appearance, removed favicon script
 * Made progress towards reply and pagination in comments, not there yet
 
 

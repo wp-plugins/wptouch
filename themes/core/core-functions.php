@@ -160,113 +160,7 @@ echo '' . __( "Mobile Theme", "wptouch" ) . ' <a id="switch-link" onclick="wptou
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // WPtouch Standard Functions
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
-//Favicon fetch and convert script 
-// This script will convert favicons for the links listed on your Links page (if you have one).
-function bnc_url_exists($url)
-  {
-// Version 4.x supported
-      $handle = curl_init($url);
-      if (false === $handle) {
-          return false;
-      }
-      curl_setopt($handle, CURLOPT_HEADER, false);
-      // this works
-      curl_setopt($handle, CURLOPT_FAILONERROR, true);
-      curl_setopt($handle, CURLOPT_NOBODY, true);
-      curl_setopt($handle, CURLOPT_RETURNTRANSFER, false);
-      curl_setopt($handle, CURLOPT_TIMEOUT, 1);
-      $connectable = curl_exec($handle);
-      $d = curl_getinfo($handle, CURLINFO_CONTENT_LENGTH_DOWNLOAD);
-      return($d > 0);
-  }
-  
-  
-// This fetches the .ico files for the Links page generation 
-// Check to see if function exists 
-if (!function_exists('file_put_contents')) { 
-
-    // Define constants used by function, if not defined 
-    if (!defined('FILE_USE_INCLUDE_PATH')) define('FILE_USE_INCLUDE_PATH', 1); 
-    if (!defined('FILE_APPEND'))           define('FILE_APPEND', 8); 
-     
-    // Define function and arguments 
-    function file_put_contents($file, &$data, $flags=0) 
-    { 
-        // Varify arguments are correct types 
-        if (!is_string($file)) return(false); 
-        if (!is_string($data) && !is_array($data)) return(false); 
-        if (!is_int($flags)) return(false); 
-         
-        // Set the include path and mode for fopen 
-        $include = false; 
-        $mode    = 'wb'; 
-         
-        // If data in array type.. 
-        if (is_array($data)) { 
-            // Make sure it's not multi-dimensional 
-            reset($data); 
-            while (list(, $value) = each($data)) { 
-                if (is_array($value)) return(false); 
-            } 
-            unset($value); 
-            reset($data); 
-            // Join the contents 
-            $data = implode('', $data); 
-        } 
-         
-        // Check for flags.. 
-        // If include path flag givin, set include path 
-        if ($flags&FILE_USE_INCLUDE_PATH) $include = true; 
-        // If append flag givin, set append mode 
-        if ($flags&FILE_APPEND) $mode = 'ab'; 
-         
-        // Open the file with givin options 
-        if (!$handle = @fopen($file, $mode, $include)) return(false); 
-        // Write data to file 
-        if (($bytes = fwrite($handle, $data)) === false) return(false); 
-        // Close file 
-        fclose($handle); 
-         
-        // Return number of bytes written 
-        return($bytes); 
-        
-    }
-  }  else {
-
-function bnc_get_ico_file($ico) {
-      $d = file_get_contents($ico);
-      if (!file_exists(bnc_get_local_dir() . '/cache')) {
-          mkdir(bnc_get_local_dir() . '/cache', 0755);
-      }
-      file_put_contents(bnc_get_local_dir() . '/cache/' . md5($ico) . '.ico', $d);
-      exec('sh convert ico:' . bnc_get_local_dir() . '/cache/' . md5($ico) . '.ico' . bnc_get_local_dir() . '/cache/' . md5($ico) . '.png');
-  }
-}
-
-// Where's the icon pool? Ah, there it is
-function bnc_get_local_dir()
-  {
-      $dir = preg_split("#/plugins/wptouch/images/icon-pool/#", __FILE__, $test);
-      return $dir[0] . '/plugins/wptouch/images/icon-pool';
-  }
-
-
-// This detects where the admin images are located, for all the page icons and such
-function bnc_get_local_icon_url() {
-	return compat_get_plugin_url( 'wptouch' ) . '/images/';
-  }
-
-
-// This does the fancy favicons as icons for WordPress links
-function bnc_get_favicon_for_site($site)
-  {// Yes we know this goes remote to handle things, but we do this to ensure that it works for everyone. No data is collected, as you'll see if you look at the script.
-      $i = 'http://www.bravenewcode.com/code/favicon.php?site=' . urlencode($site) . '&amp;default=' . urlencode(bnc_get_local_icon_url() . '/icon-pool/default.png');
-      return $i;
-  }
-  
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////  
   
 // Check if certain plugins are active
 function wptouch_is_plugin_active($plugin_filename) {
@@ -290,12 +184,12 @@ function comment_count( $count ) {
 }
 
 // Add 'Delete | Spam' links in comments for logged in admins
-// function delete_comment_link($id) {  
-//   if (current_user_can('edit_post')) {  
-//     echo '| <a href="' . admin_url("comment.php?action=cdc&c=$id") . '">delete</a> ';  
-//     echo '| <a href="' . admin_url("comment.php?action=cdc&dt=spam&c=$id") . '">spam</a>';  
-//   }  
-// }  
+ function delete_comment_link($id) {  
+   if (current_user_can('edit_post')) {  
+     echo '| <a href="' . admin_url("comment.php?action=cdc&c=$id") . '">delete</a> ';  
+     echo '| <a href="' . admin_url("comment.php?action=cdc&dt=spam&c=$id") . '">spam</a>';  
+   }  
+ }  
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // WPtouch Filters

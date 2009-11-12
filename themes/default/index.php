@@ -21,7 +21,15 @@
 		<div class="archive-top">
 			<div class="archive-top-right">
 				<?php if (bnc_excerpt_enabled()) { ?>
-					<a class="post-arrow" id="arrow-<?php the_ID(); ?>" href="javascript: return false;" onclick="bnc_post_arrow_open();"></a>				
+				<script type="text/javascript">
+					$wptouch(document).ready(function(){
+						$wptouch("a#arrow-<?php the_ID(); ?>").click(function(event) {
+							$wptouch(this).toggleClass("post-arrow-down");
+							$wptouch('#entry-<?php the_ID(); ?>').fadeToggle(500);
+						});	
+					 });					
+				</script>
+					<a class="post-arrow" id="arrow-<?php the_ID(); ?>" href="javascript: return false;"></a>
 				<?php } ?>
 			</div> 
 		 <div id="arc-top" class="archive-top-left month-<?php echo get_the_time('m') ?>">
@@ -36,7 +44,7 @@
 							$wptouch(this).toggleClass("post-arrow-down");
 							$wptouch('#entry-<?php the_ID(); ?>').fadeToggle(500);
 						});	
-						 });					
+					});					
 				</script>
 
 					<a class="post-arrow" id="arrow-<?php the_ID(); ?>" href="javascript: return false;"></a>				

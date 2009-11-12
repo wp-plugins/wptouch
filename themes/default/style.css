@@ -167,12 +167,12 @@ blockquote {
 	background-repeat: repeat-x;
 	height: 45px;
 	border-bottom: 1px solid #1e1e1e;
-	font-size: 20px;
+	font-size: 19px;
 }
 
 #headerbar-title {
 	text-shadow: #242424 -1px -1px 1px;
-	padding-top: 9px;
+	padding-top: 10px;
 	padding-left: 10px;
 	display: block;
 	margin: 0;
@@ -181,7 +181,7 @@ blockquote {
 	text-overflow: ellipsis;
 	white-space: nowrap;
 	overflow: hidden;
-	width: 270px;
+	width: 85%;
 	font-weight: bold;
 	height: 29px;
 }
@@ -201,11 +201,11 @@ blockquote {
 	width: 28px;
 	height: 28px;
 	padding: 0;
-	bottom: 0;
+	bottom: 1px;
 }
 
 #headerbar-menu {
-	position: fixed;
+	position: absolute;
 	top: 0;
 	right: 0;
 	margin: 0;
@@ -381,6 +381,7 @@ form#select-cats option {
 #wptouch-wordtwit {
 	position: relative;
 	border-top: 1px solid #3e3e3e;
+	background-color: #222;
 }
 
 #wptouch-wordtwit #twitter-style-bar {
@@ -395,9 +396,9 @@ form#select-cats option {
 	-webkit-border-radius: 8px;
 	padding-left: 5px;
 	padding-top: 5px;
-	border: 1px solid #222;
-	background-color: #444;
+	border: 1px solid #555;
 	background-image: none;
+	background-color: #444;
 }
 
 #wordtwit-avatar img {
@@ -454,6 +455,7 @@ form#select-cats option {
 	padding-left: 10px;
 	text-transform: none;
 	background-image: none;
+	background-color: #2c2c2c;
 }
 
 #wptouch-wordtwit li p.time {
@@ -686,7 +688,7 @@ a.post-arrow {
 	float: right;
 	margin-top: 1px;
 	padding: 0;
-	background: #f4f4f4 url(../core/core-images/post-arrow.png) no-repeat -1px -2px;
+	background: #f4f4f4 url(../core/core-images/post-arrow.png) no-repeat center 5px;
 	border: 1px solid #ddd;
 	-webkit-border-radius: 5px;
 	-webkit-transform: scale(1.0) rotate(0deg);
@@ -696,6 +698,8 @@ a.post-arrow {
 a.post-arrow-down {
 	-webkit-transform: scale(1.0) rotate(180deg);
 	-webkit-transition-duration: 0.6s;
+	background: #d9e3e1 url(../core/core-images/post-arrow.png) no-repeat center -14px;
+	border: 1px solid #b8b8b8;
 }
 
 a.h2 {
@@ -1297,14 +1301,6 @@ img.pageicon {
 
 /* @group Links */
 
-#wptouch-links {
-	-webkit-border-radius: 8px;
-	border: 1px solid #adadad;
-	background-color: #fff;
-	margin-right: 10px;
-	margin-left: 10px;
-}
-
 #wptouch-links a {
 	color: #222;
 	display: block;
@@ -1312,10 +1308,26 @@ img.pageicon {
 	padding: 10px 10% 10px 10px;
 }
 
+#wptouch-links h2 {
+	color: #475d79;
+	text-shadow: #eee 1px 1px 0;
+	font-size: 15px;
+	font-weight: bold;
+	margin-bottom: 10px;
+	margin-left: 10px;
+	letter-spacing: 0;
+	border-style: none;
+	text-transform: capitalize;
+	margin-top: 20px;
+}
+
 #wptouch-links ul {
-	padding: 0;
-	margin: 0;
+	-webkit-border-radius: 8px;
+	border: 1px solid #adadad;
+	background-color: #fff;
 	list-style-type: none;
+	margin: 10px;
+	padding: 0;
 }
 
 #wptouch-links li {
@@ -1323,18 +1335,18 @@ img.pageicon {
 	list-style-type: none;
 	font-weight: bold;
 	font-size: 13px;
-	color: #222;
+	color: #333;
 	display: block;
-	margin: 0 -10px;
 	padding: 0;
+	margin: 0;
+	text-shadow: #fff 0 0 0;
 }
 
 #wptouch-links li:first-child {
-	margin-top: -10px;
+	border-top-style: none;
 }
 
 #wptouch-links li:last-child {
-	margin-bottom: -10px;
 	border-bottom-style: none;
 }
 

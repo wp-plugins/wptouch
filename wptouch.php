@@ -692,9 +692,8 @@ function bnc_wp_touch_get_pages() {
 			 $k == 'enable-cats-button'  || $k == 'enable-tags-button'  || $k == 'enable-login-button' || 
 			 $k == 'enable-gravatars' || $k == 'enable-ajax-comments' || $k == 'enable-main-home' || 
 			 $k == 'enable-main-rss' || $k == 'enable-main-email' || $k == 'enable-main-name' || 
-			 $k == 'enable-main-tags' || $k == 'enable-main-categories' || 
-			 $k == 'enable-prowl-comments-button' || $k == 'enable-prowl-users-button' || 
-			 $k == 'enable-prowl-message-button') {
+			 $k == 'enable-main-tags' || $k == 'enable-main-categories' || $k == 'enable-prowl-comments-button' || 
+			 $k == 'enable-prowl-users-button' || $k == 'enable-prowl-message-button') {
 			} else {
 				if (is_numeric($k)) {
 					$keys[] = $k;

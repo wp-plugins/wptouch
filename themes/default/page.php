@@ -68,11 +68,8 @@
 		</div>
 	</div>          
 
-	<h3 class="result-text">(<?php _e( "Alphabetical Order", "wptouch" ); ?>)</h3>
-		<div id="wptouch-links" class="post">
-		<ul>
-			<?php foreach (get_bookmarks('categorize=0&title_li=0') as $bm) { echo('<li>'); echo('<img src="http://bravenewcode.com/code/favicon.php?site=' . urlencode($bm->link_url) . '&amp;default=' . urlencode(bnc_get_local_icon_url() . '/icon-pool/Default.png') . '" />'); echo('<a href="' . $bm->link_url . '">' . $bm->link_name . '</a>'); echo('</li>'); } ?>
-		</ul>
+		<div id="wptouch-links">
+			<?php wp_list_bookmarks('title_li=&category_before=&category_after='); ?>
 		</div>
 <?php } ?><!-- end if links page-->    	
 	
