@@ -6,16 +6,12 @@
 	<?php } ?>
 <?php } ?>
 
+	<?php// if (wptouch_search_enabled()) { ?>			    
+    	<a id="searchopen" class="top" href="#" onclick="bnc_jquery_search_toggle(); return false;"><?php _e( 'Search', 'wptouch' ); ?></a>
+	<?php// } ?>
+
 	<?php if (wptouch_prowl_direct_message_enabled()) { ?>			    
     	<a id="prowlopen" class="top" href="#" onclick="bnc_jquery_prowl_open(); return false;"><?php _e( 'Message', 'wptouch' ); ?></a>
-	<?php } ?>
-
-	<?php if (bnc_is_cats_button_enabled()) { ?>			    
-    	<a id="catsopen" class="top" href="#" onclick="bnc_jquery_cats_open(); return false;"><?php _e( 'Categories', 'wptouch' ); ?></a>
-	<?php } ?>
-
-	<?php if (bnc_is_tags_button_enabled()) { ?>	
-    	<a id="tagsopen" class="top" href="#" onclick="bnc_jquery_tags_open(); return false;"><?php _e( 'Tags', 'wptouch' ); ?></a>
 	<?php } ?>
 
 	<?php if ( function_exists( 'wordtwit_get_recent_tweets' ) && wordtwit_is_valid() && bnc_can_show_tweets() ) { ?>		    

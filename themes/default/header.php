@@ -32,6 +32,36 @@ include( dirname(__FILE__) . '/../core/core-header.php' );
 			</form>
 		</div>
 	</div>
+
+ <!-- #start The Search Overlay -->
+	<div id="wptouch-search"> 
+ 		<div id="wptouch-search-inner">
+			<form method="get" id="searchform" action="<?php bloginfo('home'); ?>/">
+				<input type="text" value="Search..." onfocus="if (this.value == 'Search...') {this.value = ''}" name="s" id="s" /> 
+				<input name="submit" type="hidden" tabindex="5" value="Search"  />
+			</form>
+		</div>
+	</div>
+
+	<div id="wptouch-menu" class="dropper"> 		
+        <div id="wptouch-menu-inner">
+        <div id="menu-head">
+        	<ul>
+        		<li class="menu-head-active"><?php _e("Menu", "wptouch"); ?></li>
+        		<li><a href="#" onclick="bnc_jquery_tags_open(); return false;"><?php _e( 'Tags', 'wptouch' ); ?></a></li>
+        		<li><a href="#" onclick="bnc_jquery_cats_open(); return false;"><?php _e( 'Categories', 'wptouch' ); ?></a></li>
+        	</ul>
+        </div>
+			<ul>
+				<?php wptouch_core_header_home(); ?>            
+				<?php wptouch_core_header_pages(); ?>
+				<?php wptouch_core_header_rss(); ?>
+				<?php wptouch_core_header_email(); ?>           
+			</ul>
+        </div>
+	</div>
+
+
 	
 <div id="headerbar">
 	<div id="headerbar-title">
@@ -44,25 +74,7 @@ include( dirname(__FILE__) . '/../core/core-header.php' );
 	</div>
 </div>
 
-<!-- #start The Search / Menu Drop-Down -->
-	<div id="wptouch-menu" class="dropper"> 
- 		<div id="wptouch-search-inner">
-			<form method="get" id="searchform" action="<?php bloginfo('home'); ?>/">
-				<input type="text" value="Search..." onfocus="if (this.value == 'Search...') {this.value = ''}" name="s" id="s" /> 
-				<input name="submit" type="hidden" tabindex="5" value="Search"  />
-			</form>
-		</div>
-        <div id="wptouch-menu-inner">
-			<ul>
-				<?php wptouch_core_header_home(); ?>            
-				<?php wptouch_core_header_pages(); ?>
-				<?php wptouch_core_header_rss(); ?>
-				<?php wptouch_core_header_email(); ?>           
-			</ul>
-        </div>
-	</div>
-
-<div id="drop-fade" <?php if (bnc_is_login_button_enabled() || bnc_is_tags_button_enabled() || bnc_is_cats_button_enabled()) { echo 'class="sub-on"'; }?>>
+<div id="drop-fade">
 	<!-- Detect if we're Apple-based and if not, don't do the fancy select thing -->
 	<?php wptouch_core_subheader(); ?>
 </div>

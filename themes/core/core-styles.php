@@ -1,5 +1,5 @@
 <style type="text/css">
-#headerbar, #wptouch-login {
+#headerbar, #wptouch-login, #wptouch-search {
 	background: #<?php echo bnc_get_header_background(); ?> url(<?php echo compat_get_plugin_url( 'wptouch' ); ?>/themes/core/core-images/head-fade-bk.png);
 }
 #headerbar-title, #headerbar-title a {

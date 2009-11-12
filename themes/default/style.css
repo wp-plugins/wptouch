@@ -280,6 +280,11 @@ blockquote {
 	background: url(../core/core-images/menu-sprite.png) no-repeat 2px -74px;
 }
 
+#drop-fade #searchopen {
+	padding-left: 18px;
+	background: url(../core/core-images/menu-sprite.png) no-repeat 2px -92px;
+}
+
 form#select-cats, form#select-tags, form#select-acct {
 	overflow: hidden;
 	width: 0;
@@ -310,6 +315,59 @@ form#select-cats option {
 /* @end */
 
 /* @group DropDown Menu */
+
+/* @group Sub-Menu */
+
+#menu-head {
+	background-color: #444;
+	padding-top: 7px;
+	padding-bottom: 5px;
+	position: relative;
+	z-index: 1;
+	border-bottom: 1px solid #1b1b1b;
+}
+
+#menu-head ul {
+	padding: 0;
+	margin: 0 10px;
+}
+
+#menu-head li, #menu-head li:hover {
+	display: inline;
+	margin: 0;
+	padding: 3px 6px 8px;
+	background-image: none;
+	border-style: none;
+	font-size: 12px;
+	font-weight: bold;
+	color: #aaa;
+	background-color: transparent;
+}
+
+#menu-head li.menu-head-active {
+	background-color: #2c2c2c;
+	border: 1px solid #1b1b1b;
+	border-bottom-style: none;
+	-webkit-border-top-left-radius: 4px;
+	-webkit-border-top-right-radius: 4px;
+	text-shadow: #000000 0 -1px 1px;
+	padding-bottom: 9px;
+	color: #fff;
+}
+
+#menu-head li a, #menu-head li a:hover {
+	display: inline;
+	font-size: 12px;
+	margin: 0;
+	padding: 0;
+	background-image: none;
+	background-color: transparent;
+	color: #aaa;
+}
+
+
+
+/* @end */
 
 #wptouch-menu {
 	position: absolute;
@@ -636,16 +694,21 @@ form#select-cats option {
 
 /* @group Search */
 
+#wptouch-search {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	width: 100%;
+	display: none;
+}
+
 #wptouch-search-inner {
-	border-top: 1px solid #4d4d4d;
-	border-bottom: 1px solid #1d1d1d;
-	margin-top: -2px;
+	width: 100%;
+	height: 40px;
+	background-repeat: repeat-x;
 	text-align: center;
-	height: 38px;
-	padding-top: 1px;
-	margin-top: 0;
-	background-color: #3c3c3c;
-	padding-bottom: 1px;
+	padding-top: 5px;
 }
 
 input#s {
@@ -1348,17 +1411,6 @@ img.pageicon {
 
 #wptouch-links li:last-child {
 	border-bottom-style: none;
-}
-
-#wptouch-links img {
-	float: left;
-	width: 18px;
-	height: 18px;
-	margin-left: 10px;
-	position: relative;
-	top: 10px;
-	margin-right: 10px;
-	padding-bottom: 10px;
 }
 
 /* @end */
