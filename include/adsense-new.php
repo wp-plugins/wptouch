@@ -5,7 +5,7 @@ window.googleAfmcRequest = {
   client: 'ca-mb-<?php echo $wptouch_settings['adsense-id']; ?>',
   ad_type: 'text_image',
   output: 'html',
-<?php if ( isset( $wptouch_settings['adsense-channel'] ) ) { ?>
+<?php if ( !isset( $wptouch_settings['adsense-channel'] ) ) { ?>
   channel: '',
 <?php } else { ?>
   channel: '<?php echo $wptouch_settings['adsense-channel']; ?>',
