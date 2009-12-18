@@ -51,7 +51,7 @@ function wptouch_core_header_check_use() {
 		echo '<div class="content post">';
 		echo sprintf(__( "%sWarning%s", "wptouch" ), '<a href="#" class="h2">','</a>');
 		echo '<div class="mainentry">';
-		echo __( "Sorry, this theme is only meant for use with WordPress on Apple's iPhone and iPod Touch.", "wptouch" );
+		echo __( "Sorry, this theme is only meant for use with WordPress on certain smartphones.", "wptouch" );
 		echo '</div></div>';
 		echo '' .get_footer() . '';
 		echo '</body>';
@@ -67,14 +67,6 @@ function wptouch_agent($browser) {
 	$useragent = $_SERVER['HTTP_USER_AGENT'];
 		return strstr($useragent,$browser);
 	}
-
-//  function wptouch_core_subheader() {
-//  	if(wptouch_agent("iphone") || wptouch_agent("ipod") || wptouch_agent("aspen") != FALSE) {
-//  		include( dirname(__FILE__) . '/../core/core-else-menu.php' );
-//  	} else {
-//  		include( dirname(__FILE__) . '/../core/core-apple-menu.php' );
-//  	}
-//  }
 
 function wptouch_twitter_link() {
 	if(wptouch_agent("iphone") || wptouch_agent("ipod") || wptouch_agent("aspen") != FALSE) {
