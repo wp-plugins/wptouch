@@ -1076,6 +1076,18 @@ a.sh2 {
 
 /* @group Post Options Bar */
 
+.single-post-meta-bottom .post-page-nav {
+	font-size: 15px;
+	margin-bottom: 15px;
+}
+
+.single-post-meta-bottom .post-page-nav a {
+	padding: 3px 7px;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	-webkit-border-radius: 4px;
+}
+
 ul#post-options {
 	-webkit-border-bottom-left-radius: 7px;
 	-webkit-border-bottom-right-radius: 7px;
