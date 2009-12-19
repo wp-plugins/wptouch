@@ -18,6 +18,12 @@ The theme also includes the ability for your visitors to easily switch between t
 
 == Changelog ==
 
+= Version 1.9.5.1 =
+
+* Fixed php logic in adsense-new.php (thx JeanPaulH)
+* Added support for GigPress' Upcoming Shows to be a drop down
+* Changed relative comments logic from time() to date()
+
 = Version 1.9.5 =
 
 * Added Twitter updates menu item support for WordTwit's new features
@@ -34,6 +40,7 @@ The theme also includes the ability for your visitors to easily switch between t
 * Changed the way the header links are setup
 * Small refinements in the theme CSS all-around
 * Made progress towards reply and pagination in comments, not there yet
+
 
 = Versions 1.9.4.x =
 

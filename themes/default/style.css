@@ -275,12 +275,16 @@ blockquote {
 	background: url(../core/core-images/menu-sprite.png) no-repeat 2px -92px;
 }
 
+#drop-fade #gigpressopen {
+	padding-left: 18px;
+	background: url(../core/core-images/menu-sprite.png) no-repeat 2px -106px;
+}
+
 /* @end */
 
 /* @group DropDown Menu */
 
 .dropper {
-	top: 20px;
 	width: 100%;
 	position: relative;
 	z-index: 1;
@@ -369,6 +373,7 @@ blockquote {
 	border-top: 1px solid #575757;
 	padding-left: 10px;
 	height: 24px;
+	margin-bottom: -1px;
 }
 
 #tabnav a {
@@ -410,6 +415,7 @@ blockquote {
 	position: relative;
 	border-top: 1px solid #3e3e3e;
 	background-color: #222;
+	top: 20px;
 }
 
 #wptouch-wordtwit #twitter-style-bar {
@@ -492,6 +498,38 @@ blockquote {
 }
 
 
+
+/* @end */
+
+/* @group GigPress */
+
+#wptouch-gigpress {
+	color: #eee;
+	text-shadow: #000000 0 -1px 1px;
+	text-align: left;
+	font-size: 11px;
+	border-top: 1px solid #3e3e3e;
+	clear: both;
+	margin: 0;
+	padding: 0;
+}
+
+#wptouch-gigpress #gigpress-style-bar {
+	border-top: 1px solid #1e1e1e;
+	display: block;
+	width: 100%;
+}
+
+#wptouch-gigpress h4 {
+	font-size: 14px;
+	margin: 22px 0 15px;
+	padding: 0;
+}
+
+#wptouch-gigpress img {
+	float: left;
+	margin: 15px 10px;
+}
 
 /* @end */
 

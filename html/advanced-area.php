@@ -58,6 +58,14 @@
 			</li>
 
 			<li>
+				<input class="checkbox" type="checkbox" <?php if (!function_exists( 'gigpress_shows' )) : ?>disabled="true"<?php endif; ?> name="enable-gigpress-button" <?php if (isset($wptouch_settings['enable-gigpress-button']) && $wptouch_settings['enable-gigpress-button'] == 1 && function_exists( 'gigpress_shows' )) echo('checked'); ?> />
+				<label class="label" for="enable-show-tweets"> <?php _e( "Display Upcoming Dates link in the header (requires <a href='http://gigpress.com/' target='_blank'>GigPress 2.0.3</a> or higher)", "wptouch" ); ?> <a href="#ajax-tweet-info" class="fancylink">?</a></label>
+					<div id="ajax-tweet-info" style="display:none">
+						<h2><?php _e( "More Info", "wptouch" ); ?></h2>
+						<p><?php _e( "When this option is checked and the GigPress plugin is installed, a list of your Upcoming Shows will be viewable from a drop-down in the WPtouch header.", "wptouch" ); ?></p>
+					</div>
+			</li>	
+			<li>
 				<input class="checkbox" type="checkbox" <?php if (!function_exists( 'wordtwit_get_recent_tweets' )) : ?>disabled="true"<?php endif; ?> name="enable-show-tweets" <?php if (isset($wptouch_settings['enable-show-tweets']) && $wptouch_settings['enable-show-tweets'] == 1 && function_exists( 'wordtwit_get_recent_tweets' )) echo('checked'); ?> />
 				<label class="label" for="enable-show-tweets"> <?php _e( "Display Twitter link in the header (requires <a href='http://www.bravenewcode.com/wordtwit/' target='_blank'>WordTwit 2.2.1</a> or higher)", "wptouch" ); ?> <a href="#ajax-tweet-info" class="fancylink">?</a></label>
 					<div id="ajax-tweet-info" style="display:none">

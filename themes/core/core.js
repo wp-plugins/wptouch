@@ -58,6 +58,11 @@ function bnc_jquery_search_toggle() {
 	$wptouch('#wptouch-search').fadeToggle(400);
 }
 
+function bnc_jquery_gigpress_toggle() {
+	$wptouch('#wptouch-gigpress').fadeToggle(400);
+}
+
+
 function bnc_jquery_prowl_open() {
 	$wptouch('#prowl-message').fadeToggle(400);
 }

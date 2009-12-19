@@ -73,7 +73,7 @@ include( dirname(__FILE__) . '/../core/core-header.php' );
 				</ul>
 	
 				<ul id="head-tags">
-					<?php wp_tag_cloud('smallest=13&largest=13&unit=px&number=30&order=asc&format=list'); ?>
+					<li><?php wp_tag_cloud('smallest=13&largest=13&unit=px&number=30&order=asc&format=list'); ?></li>
 				</ul>
 
 		<ul id="head-account">
@@ -100,7 +100,7 @@ include( dirname(__FILE__) . '/../core/core-header.php' );
 			</div>
 		</div>
     </div>
-</div>
+
 	
 <div id="headerbar">
 	<div id="headerbar-title">
@@ -124,6 +124,10 @@ include( dirname(__FILE__) . '/../core/core-header.php' );
 
 	<?php if ( function_exists( 'wordtwit_get_recent_tweets' ) && wordtwit_is_valid() && bnc_can_show_tweets() ) { ?>		    
     	<a id="wordtwitopen" class="top" href="#" onclick="bnc_jquery_wordtwit_open(); return false;"><?php _e( 'Twitter', 'wptouch' ); ?></a>
+	<?php } ?>
+
+	<?php if ( function_exists( 'gigpress_shows' ) && bnc_is_gigpress_enabled()) { ?>			    
+    	<a id="gigpressopen" class="top" href="#" onclick="bnc_jquery_gigpress_toggle(); return false;"><?php _e( 'Tour Dates', 'wptouch' ); ?></a>
 	<?php } ?>
 
  <!-- #start the Prowl Message Area -->
@@ -173,9 +177,21 @@ include( dirname(__FILE__) . '/../core/core-header.php' );
 			</li>
 	  	 	<?php } ?>
 		</ul>
-	</div>
-<?php } ?>
 </div>
- 		
+<?php } ?>
+
+<?php if (function_exists ('gigpress_shows')) { ?>
+ <!-- #start the GigPress Area -->
+	 <div id="wptouch-gigpress" class="dropper" style="display:none">
+	 	 <div id="gigpress-style-bar"></div><!-- filler to get the styling just right -->
+		 <img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/themes/core/core-images/gigpress.png" alt="GigPress" />
+		 <h4><?php _e( 'Tour Dates', 'wptouch' ); ?></h4>		
+			<?php
+			    $options = array('scope' => 'upcoming', 'limit' => 10);
+			    echo gigpress_shows($options);
+			?>
+	 </div>
+ <?php } ?>
+</div>
 <!-- #start the wptouch plugin use check -->
 <?php wptouch_core_header_check_use(); ?>

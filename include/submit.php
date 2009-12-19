@@ -42,6 +42,12 @@
 			$a['enable-login-button'] = 0;
 		}
 
+		if ( isset( $_POST['enable-gigpress-button'] ) ) {
+			$a['enable-gigpress-button'] = 1;
+		} else {
+			$a['enable-gigpress-button'] = 0;
+		}
+
 		if ( isset( $_POST['enable-gravatars'] ) ) {
 			$a['enable-gravatars'] = 1;
 		} else {
