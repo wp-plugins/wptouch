@@ -3,7 +3,7 @@
 
 <div class="metabox-holder" id="available_icons">
 	<div class="postbox">
-		<h3><span class="icon-options"></span><?php _e( "Default &amp; Custom Icon Pool", "wptouch" ); ?></h3>
+		<h3><span class="icon-options">&nbsp;</span><?php _e( "Default &amp; Custom Icon Pool", "wptouch" ); ?></h3>
 
 			<div class="left-content">
 				<p><?php _e( "You can select which icons will be displayed beside the pages you enable in the next section.", "wptouch" ); ?></p>

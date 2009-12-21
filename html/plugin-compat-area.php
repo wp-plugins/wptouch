@@ -4,7 +4,7 @@
 
 <div class="metabox-holder">
 	<div class="postbox">
-		<h3><span class="plugin-options"></span><?php _e( "Plugin Support &amp; Compatibility", "wptouch" ); ?></h3>
+		<h3><span class="plugin-options">&nbsp;</span><?php _e( "Plugin Support &amp; Compatibility", "wptouch" ); ?></h3>
 
 			<div class="left-content">
 				<div class="wptouch-version-support">

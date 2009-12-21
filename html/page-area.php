@@ -2,7 +2,7 @@
 
 <div class="metabox-holder">
 	<div class="postbox">
-		<h3><span class="page-options"></span><?php _e( "Logo Icon // Menu Items &amp; Pages Icons", "wptouch" ); ?></h3>
+		<h3><span class="page-options">&nbsp;</span><?php _e( "Logo Icon // Menu Items &amp; Pages Icons", "wptouch" ); ?></h3>
 
 			<div class="left-content">
 				<h4><?php _e( "Logo / Home Screen Icon <br />&amp; Default Menu Items", "wptouch" ); ?></h4>

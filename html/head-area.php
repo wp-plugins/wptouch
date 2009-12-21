@@ -21,7 +21,7 @@
 		<div id="wptouch-news-support">
 
 			<div id="wptouch-news-wrap">
-			<h3><span class="rss-head"></span><?php _e( "WPtouch Wire", "wptouch" ); ?></h3>
+			<h3><span class="rss-head">&nbsp;</span><?php _e( "WPtouch Wire", "wptouch" ); ?></h3>
 				<div id="wptouch-news-content" style="display:none">
 					<?php require_once (ABSPATH . WPINC . '/rss.php');
 					$rss = @fetch_rss('http://www.bravenewcode.com/tag/wptouch/feed/');						
@@ -36,7 +36,7 @@
 			</div>
 
 			<div id="wptouch-support-wrap">			
-			<h3><span class="rss-head"></span><?php _e( "Twitter Topics", "wptouch" ); ?></h3>
+			<h3><span class="rss-head">&nbsp;</span><?php _e( "Twitter Topics", "wptouch" ); ?></h3>
 				<div id="wptouch-support-content" style="display:none">
 					<?php require_once (ABSPATH . WPINC . '/rss.php');
 					$rss = @fetch_rss('http://search.twitter.com/search.atom?q=wptouch');						

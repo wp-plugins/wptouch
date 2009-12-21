@@ -2,7 +2,7 @@
 
 <div class="metabox-holder">
 	<div class="postbox">
-		<h3><span class="global-settings"></span><?php _e( "General Settings", "wptouch" ); ?></h3>
+		<h3><span class="global-settings">&nbsp;</span><?php _e( "General Settings", "wptouch" ); ?></h3>
 
 			<div class="left-content">
 				<h4><?php _e( "Home Page Re-Direction", "wptouch" ); ?></h4>

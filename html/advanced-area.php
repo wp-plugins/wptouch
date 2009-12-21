@@ -2,7 +2,7 @@
 
 <div class="metabox-holder">
 	<div class="postbox">
-		<h3><span class="advanced-options"></span><?php _e( "Advanced Options", "wptouch" ); ?></h3>
+		<h3><span class="advanced-options">&nbsp;</span><?php _e( "Advanced Options", "wptouch" ); ?></h3>
 
 			<div class="left-content">
 				<p><?php _e( "Choose to enable/disable advanced features &amp; options available for WPtouch.", "wptouch"); ?></p>	
@@ -59,8 +59,8 @@
 
 			<li>
 				<input class="checkbox" type="checkbox" <?php if (!function_exists( 'gigpress_shows' )) : ?>disabled="true"<?php endif; ?> name="enable-gigpress-button" <?php if (isset($wptouch_settings['enable-gigpress-button']) && $wptouch_settings['enable-gigpress-button'] == 1 && function_exists( 'gigpress_shows' )) echo('checked'); ?> />
-				<label class="label" for="enable-show-tweets"> <?php _e( "Display Upcoming Dates link in the header (requires <a href='http://gigpress.com/' target='_blank'>GigPress 2.0.3</a> or higher)", "wptouch" ); ?> <a href="#ajax-tweet-info" class="fancylink">?</a></label>
-					<div id="ajax-tweet-info" style="display:none">
+				<label class="label" for="enable-show-tweets"> <?php _e( "Display Upcoming Dates link in the header (requires <a href='http://gigpress.com/' target='_blank'>GigPress 2.0.3</a> or higher)", "wptouch" ); ?> <a href="#gigpress-tweet-info" class="fancylink">?</a></label>
+					<div id="gigpress-tweet-info" style="display:none">
 						<h2><?php _e( "More Info", "wptouch" ); ?></h2>
 						<p><?php _e( "When this option is checked and the GigPress plugin is installed, a list of your Upcoming Shows will be viewable from a drop-down in the WPtouch header.", "wptouch" ); ?></p>
 					</div>
@@ -122,10 +122,11 @@
 						<p><?php _e( "Sometimes fixes difficult to fix incompatibilities and speeds up WPtouch.", "wptouch" ); ?></p>
 						<p><?php _e( "Some plugins load conflicting javascript, extra CSS style sheets, and other functional code into your theme to accomplish what they add to your site. As WPtouch works complete on its own without any other plugin installed, in some cases (where you have several plugins or find something doesn't work right with WPtouch) you may want to enable Exclusive Mode to ensure that WPtouch works properly, and loads quickly for mobile users.", "wptouch" ); ?></p>
 					</div>
-			</li>
+
 	<ul class="wptouch-make-li-italic">
 					<li><input type="text" name="custom-user-agents" value="<?php if ( isset( $wptouch_settings['custom-user-agents'] ) ) echo implode( ', ', $wptouch_settings['custom-user-agents'] ); ?>" /><?php _e( "Custom user-agents", "wptouch" ); ?></li>
 				</ul>
+							</li>
 
 			</ul>
 		</div><!-- right content -->
