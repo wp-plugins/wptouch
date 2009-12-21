@@ -18,11 +18,17 @@ The theme also includes the ability for your visitors to easily switch between t
 
 == Changelog ==
 
-= Version 1.9.5.1 =
+= Version 1.9.6 =
 
 * Fixed php logic in adsense-new.php (thx JeanPaulH)
-* Added support for GigPress' Upcoming Shows to be a drop down
-* Changed relative comments logic from time() to date()
+* Added support for GigPress' Upcoming Shows to be a drop down in the header menu
+* Changed relative comments logic, added function for GMT detection
+* Adding padding, size to multipage links
+* Removed WP version from footer (security vulnerability)
+* Changed admin RSS feed from Support Topics to Twitter Topics
+* Updated admin settings image
+* Fixed cutoff tweets from WordTwit in the drop-down
+* Verified WP 2.9 compatibility
 
 = Version 1.9.5 =
 

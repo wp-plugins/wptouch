@@ -136,12 +136,12 @@ function time_since($older_date, $newer_date = false)
 	{
 	// array of time period chunks
 	$chunks = array(
-	array(60 * 60 * 24 * 365 , 'year'),
-	array(60 * 60 * 24 * 30 , 'month'),
-	array(60 * 60 * 24 * 7, 'week'),
+//	array(60 * 60 * 24 * 365 , 'yr'),
+	array(60 * 60 * 24 * 30 , 'mo'),
+	array(60 * 60 * 24 * 7, 'wk'),
 	array(60 * 60 * 24 , 'day'),
-	array(60 * 60 , 'hour'),
-	array(60 , 'minute'),
+	array(60 * 60 , 'hr'),
+	array(60 , 'min'),
 	);
 	
 	// $newer_date will equal false if we want to know the time elapsed between a date and the current time

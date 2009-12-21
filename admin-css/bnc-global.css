@@ -1,4 +1,7 @@
-/* @override http://wptouch.com/wp-content/plugins/wptouch/admin-css/bnc-global.css */
+/* @override 
+	http://wptouch.com/wp-content/plugins/wptouch/admin-css/bnc-global.css
+	http://www.wptouch.com/wp-content/plugins/wptouch/admin-css/bnc-global.css
+*/
 
 /* Global styles applied to BraveNewCode plugins */
 
@@ -195,15 +198,25 @@
 	margin-bottom: 25px;
 }
 
+#bnc-global input#bnc-button {
+	color: #fff;
+}
+
 #bnc-global input#bnc-button, #bnc-global input#bnc-button-reset {
-	border: 2px solid #dcdcdc;
+	border: 2px solid #b2cfe4;
 	float: left;
 	width: 12%;
+	padding: 4px;
 }
 
 #bnc-global input#bnc-button-reset:hover {
 	border-color: red;
 	color: red;
+}
+
+#bnc-global input#bnc-button:hover {
+	border: 2px solid #305769;
+	color: #cdebfd;
 }
 
 /* @end */

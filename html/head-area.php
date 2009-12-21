@@ -36,10 +36,10 @@
 			</div>
 
 			<div id="wptouch-support-wrap">			
-			<h3><span class="rss-head"></span><?php _e( "Support Topics", "wptouch" ); ?></h3>
+			<h3><span class="rss-head"></span><?php _e( "Twitter Topics", "wptouch" ); ?></h3>
 				<div id="wptouch-support-content" style="display:none">
 					<?php require_once (ABSPATH . WPINC . '/rss.php');
-					$rss = @fetch_rss('http://support.bravenewcode.com/rss/forum/wptouch/topics');						
+					$rss = @fetch_rss('http://search.twitter.com/search.atom?q=wptouch');						
 					if ( isset($rss->items) && 0 != count($rss->items) ) { ?>
 					<ul>
 						<?php $rss->items = array_slice($rss->items, 0, 5); foreach ($rss->items as $item ) { ?>
