@@ -180,6 +180,10 @@
 			$a['post-cal-thumb'] = $_POST['post-cal-thumb'];
 		}
 
+		if ( isset($_POST['h2-font']) ) {
+			$a['h2-font'] = $_POST['h2-font'];
+		}
+
 		if ( isset($_POST['style-text-justify']) ) {
 			$a['style-text-justify'] = $_POST['style-text-justify'];
 		}

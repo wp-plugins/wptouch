@@ -38,10 +38,35 @@
 						</select>
 						<?php _e( "Background", "wptouch" ); ?>
 					</li> 
-				<li>#<input type="text" id="header-text-color" name="header-text-color" value="<?php echo $wptouch_settings['header-text-color']; ?>" /><?php _e( "Title text color", "wptouch" ); ?></li>
-				<li>#<input type="text" id="header-background-color" name="header-background-color" value="<?php echo $wptouch_settings['header-background-color']; ?>" /><?php _e( "Header background color", "wptouch" ); ?></li>
-				<li>#<input type="text" id="header-border-color" name="header-border-color" value="<?php echo $wptouch_settings['header-border-color']; ?>" /><?php _e( "Sub-header background color", "wptouch" ); ?></li>
-				<li>#<input type="text" id="link-color" name="link-color" value="<?php echo $wptouch_settings['link-color']; ?>" /><?php _e( "Site-wide links color", "wptouch" ); ?></li>
+					<li><select name="h2-font">
+							<option <?php if ($wptouch_settings['h2-font'] == "Helvetica Neue") echo " selected"; ?> value="Helvetica Neue">
+								<?php _e( "Helvetica Neue", "wptouch" ); ?>
+							</option>
+							<option <?php if ($wptouch_settings['h2-font'] == "Helvetica") echo " selected"; ?> value="Helvetica">
+								<?php _e( "Helvetica", "wptouch" ); ?>
+							</option>
+							<option <?php if ($wptouch_settings['h2-font'] == "thonburi-font") echo " selected"; ?> value="thonburi-font">
+								<?php _e( "Thonburi", "wptouch" ); ?>
+							</option>
+							<option <?php if ($wptouch_settings['h2-font'] == "Georgia") echo " selected"; ?> value="Georgia">
+								<?php _e( "Georgia", "wptouch" ); ?>
+							</option>
+							<option <?php if ($wptouch_settings['h2-font'] == "Geeza Pro") echo " selected"; ?> value="Geeza Pro">
+								<?php _e( "Geeza Pro", "wptouch" ); ?>
+							</option>
+							<option <?php if ($wptouch_settings['h2-font'] == "Verdana") echo " selected"; ?> value="Verdana">
+								<?php _e( "Verdana", "wptouch" ); ?>
+							</option>
+							<option <?php if ($wptouch_settings['h2-font'] == "Arial Rounded MT Bold") echo " selected"; ?> value="Arial Rounded MT Bold">
+								<?php _e( "Arial Rounded MT Bold", "wptouch" ); ?>
+							</option>
+							</select>
+						<?php _e( "Post Title H2 Font", "wptouch" ); ?>
+					</li> 
+					<li>#<input type="text" id="header-text-color" name="header-text-color" value="<?php echo $wptouch_settings['header-text-color']; ?>" /><?php _e( "Title text color", "wptouch" ); ?></li>
+					<li>#<input type="text" id="header-background-color" name="header-background-color" value="<?php echo $wptouch_settings['header-background-color']; ?>" /><?php _e( "Header background color", "wptouch" ); ?></li>
+					<li>#<input type="text" id="header-border-color" name="header-border-color" value="<?php echo $wptouch_settings['header-border-color']; ?>" /><?php _e( "Sub-header background color", "wptouch" ); ?></li>
+					<li>#<input type="text" id="link-color" name="link-color" value="<?php echo $wptouch_settings['link-color']; ?>" /><?php _e( "Site-wide links color", "wptouch" ); ?></li>
 			</ul> 
 		</div>
 		

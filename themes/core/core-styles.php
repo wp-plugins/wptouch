@@ -17,4 +17,8 @@ background: #<?php echo bnc_get_header_border_color(); ?>;
 a, h3#com-head {
 	color: #<?php echo bnc_get_link_color(); ?>;
 }
+
+a.h2{
+font-family: '<?php echo bnc_get_h2_font(); ?>';
+}
 </style>

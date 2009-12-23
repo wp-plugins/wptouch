@@ -88,7 +88,10 @@ $wptouch_defaults = array(
 	'header-border-color' => '333333',
 	'header-text-color' => 'eeeeee',
 	'link-color' => '006bb3',
+// New
 	'post-cal-thumb' =>'calendar-icons',
+	'h2-font' =>'Helvetica Neue',
+//
 	'style-text-justify' => 'full-justified',
 	'style-background' => 'classic-wptouch-bg',
 	'enable-regular-default' => false,
@@ -771,6 +774,11 @@ function bnc_get_header_color() {
 function bnc_get_link_color() {
 	$v = bnc_wp_touch_get_menu_pages();
 	return $v['link-color'];
+}
+
+function bnc_get_h2_font() {
+	$v = bnc_wp_touch_get_menu_pages();
+	return $v['h2-font'];
 }
 
 require_once( 'include/icons.php' );
