@@ -49,10 +49,32 @@
 
 					<a class="post-arrow" id="arrow-<?php the_ID(); ?>" href="javascript: return false;"></a>				
 				<?php } ?>
-			<div class="calendar">
-				<div class="cal-month month-<?php echo get_the_time('m') ?>"><?php echo get_the_time('M') ?></div>
-				<div class="cal-date"><?php echo get_the_time('j') ?></div>
-			</div>
+				
+				
+				<?php 
+				$version = bnc_get_wp_version();
+				if ($version >= 2.9 && $wptouch_settings['post-cal-thumb'] == 'post-thumbnails' ) { ?>
+				<div class="wptouch-post-thumb-wrap">
+				<img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/themes/core/core-images/top-left.png" alt="top-left" class="thumb-top-left" />
+				<img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/themes/core/core-images/top-right.png" alt="top-right" class="thumb-top-right" />
+				<div class="wptouch-post-thumb">
+				<?php if ( has_post_thumbnail() ) { ?>
+				<?php the_post_thumbnail(); ?>
+				<?php } else { ?>
+				<img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/themes/core/core-images/thumb-empty.jpg" alt="" />
+				<?php } ?>
+				</div>
+				<img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/themes/core/core-images/bottom-left.png" alt="bottom-left" class="thumb-bottom-left" />
+				<img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/themes/core/core-images/bottom-right.png" alt="bottom-right" class="thumb-bottom-right" />
+				</div>
+				<?php } else { ?>
+					<div class="calendar">
+						<div class="cal-month month-<?php echo get_the_time('m') ?>"><?php echo get_the_time('M') ?></div>
+						<div class="cal-date"><?php echo get_the_time('j') ?></div>
+					</div>				
+				<?php } ?>
+
+
 	<?php } ?>
  
 	<a class="h2" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>

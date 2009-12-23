@@ -73,7 +73,8 @@
 						<p><?php _e( "When this option is checked and the WordTwit plugin is installed, a list of your Tweets will be viewable from a drop-down in the WPtouch header.", "wptouch" ); ?></p>
 					</div><br /><br />
 			</li>	
-
+			
+			
 			<li>
 				<input class="checkbox" type="checkbox" name="enable-ajax-comments" <?php if (isset($wptouch_settings['enable-ajax-comments']) && $wptouch_settings['enable-ajax-comments'] == 1) echo('checked'); ?> />
 				<label class="label" for="enable-ajax-comments"> <?php _e( "Enable ajax for comments", "wptouch" ); ?> <a href="#ajax-com-info" class="fancylink">?</a></label>

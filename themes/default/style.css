@@ -516,6 +516,7 @@ blockquote {
 	clear: both;
 	margin: 0;
 	padding: 0;
+	width: 99%;
 }
 
 #wptouch-gigpress #gigpress-style-bar {
@@ -526,7 +527,7 @@ blockquote {
 
 #wptouch-gigpress h4 {
 	font-size: 14px;
-	margin: 22px 0 15px;
+	margin: 22px 0 20px;
 	padding: 0;
 }
 
@@ -2226,5 +2227,48 @@ a.dsq-brlink {
 	font: 14px Helvetica, Arial, sans-serif;
 	margin: 25px;
 }
+
+/* @end */
+
+/* @group Post Thumbnails (2.9 only) */
+
+.wptouch-post-thumb-wrap {
+	background: url(../core/core-images/top-left.png) no-repeat;
+	position: relative;
+	float: left;
+	margin-right: 10px;
+	overflow: hidden;
+}
+
+.wptouch-post-thumb img {
+	border: 1px solid #eee;
+
+}
+
+.wptouch-post-thumb-wrap img.thumb-top-left  {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.wptouch-post-thumb-wrap img.thumb-top-right  {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.wptouch-post-thumb-wrap img.thumb-bottom-left  {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+
+.wptouch-post-thumb-wrap img.thumb-bottom-right  {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+
+
 
 /* @end */

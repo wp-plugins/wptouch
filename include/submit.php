@@ -176,6 +176,10 @@
 			$a['adsense-channel'] = $_POST['adsense-channel'];
 		}		
 
+		if ( isset($_POST['post-cal-thumb']) ) {
+			$a['post-cal-thumb'] = $_POST['post-cal-thumb'];
+		}
+
 		if ( isset($_POST['style-text-justify']) ) {
 			$a['style-text-justify'] = $_POST['style-text-justify'];
 		}

@@ -60,6 +60,16 @@
 				<br />
 				
 				<ul>
+				<li><ul class="wptouch-make-li-italic">
+		
+							<li><select name="post-cal-thumb" <?php $version = bnc_get_wp_version(); if ($version <= 2.89) : ?>disabled="true"<?php endif; ?>>
+									<option <?php if ($wptouch_settings['post-cal-thumb'] == "calendar-icons") echo " selected"; ?> value="calendar-icons"><?php _e( "Calendar Icons", "wptouch" ); ?></option>
+									<option <?php if ($wptouch_settings['post-cal-thumb'] == "post-thumbnails") echo " selected"; ?> value="post-thumbnails"><?php _e( "Post Thumbnails", "wptouch" ); ?></option>
+								</select>
+								<?php _e( "Post Listings Display", "wptouch" ); ?> <small>(<?php _e( "Requires WordPress 2.9 or higher", "wptouch" ); ?>)</small>
+							</li>
+						</ul>	
+					</li>
 					<li>
 						<input type="checkbox" class="checkbox" name="enable-main-name" <?php if (isset($wptouch_settings['enable-main-name']) && $wptouch_settings['enable-main-name'] == 1) echo('checked'); ?> />
 						<label for="enable-authorname"> <?php _e( "Show Author's Name", "wptouch" ); ?></label>

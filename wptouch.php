@@ -4,7 +4,7 @@
    Plugin URI: http://bravenewcode.com/wptouch
    Description: A plugin which formats your site with a mobile theme for the Apple <a href="http://www.apple.com/iphone/">iPhone</a> / <a href="http://www.apple.com/ipodtouch/">iPod touch</a>, <a href="http://www.android.com/">Google Android</a> and other touch-based smartphones.
 	Author: Dale Mugford & Duane Storey (BraveNewCode)
-	Version: 1.9.6
+	Version: 1.9.7
 	Author URI: http://www.bravenewcode.com
    
 	# Thanks to ContentRobot and the iWPhone theme/plugin
@@ -15,11 +15,15 @@
 	# the Push notification additions.
 	# (http://codework.dk/referencer/wp-plugins/prowl-me/)
 	
-	#All Design & CSS Copyright (c) 2008-2009 Duane Storey & Dale Mugford of BraveNewCode Inc.
+	# All Admin and theme design / CSS is Copyright (c) 2007-2010
+	# Duane Storey & Dale Mugford of BraveNewCode Inc.
+	#
+	# 'WPtouch' is an unregistered trademark of BraveNewCode Inc., 
+	# and may not be used in conjuction with this software without permission.
 	
-	# This plugin is free software; you can redistribute the code aspects of it and/or
-	# modify the code under the terms of the GNU Lesser General Public
-	# License as published by the Free Software Foundation; either
+	# The code in this plugin is free software; you can redistribute the code aspects of
+	# the plugin and/or modify the code under the terms of the GNU Lesser General
+	# Public License as published by the Free Software Foundation; either
 	# version 2.1 of the License, or (at your option) any later version.
 	
 	# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
@@ -35,7 +39,7 @@
 
 
 global $bnc_wptouch_version;
-$bnc_wptouch_version = '1.9.6';
+$bnc_wptouch_version = '1.9.7';
 
 require_once( 'include/plugin.php' );
 require_once( 'include/compat.php' );
@@ -84,6 +88,7 @@ $wptouch_defaults = array(
 	'header-border-color' => '333333',
 	'header-text-color' => 'eeeeee',
 	'link-color' => '006bb3',
+	'post-cal-thumb' =>'calendar-icons',
 	'style-text-justify' => 'full-justified',
 	'style-background' => 'classic-wptouch-bg',
 	'enable-regular-default' => false,
