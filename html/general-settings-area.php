@@ -65,8 +65,15 @@
 							<li><select name="post-cal-thumb" <?php $version = bnc_get_wp_version(); if ($version <= 2.89) : ?>disabled="true"<?php endif; ?>>
 									<option <?php if ($wptouch_settings['post-cal-thumb'] == "calendar-icons") echo " selected"; ?> value="calendar-icons"><?php _e( "Calendar Icons", "wptouch" ); ?></option>
 									<option <?php if ($wptouch_settings['post-cal-thumb'] == "post-thumbnails") echo " selected"; ?> value="post-thumbnails"><?php _e( "Post Thumbnails", "wptouch" ); ?></option>
+									<option <?php if ($wptouch_settings['post-cal-thumb'] == "post-thumbnails-random") echo " selected"; ?> value="post-thumbnails-random"><?php _e( "Post Thumbnails (Random)", "wptouch" ); ?></option>
 								</select>
-								<?php _e( "Post Listings Display", "wptouch" ); ?> <small>(<?php _e( "Requires WordPress 2.9 or higher", "wptouch" ); ?>)</small>
+								<?php _e( "Post Listings Display", "wptouch" ); ?> <small>(<?php _e( "Requires WordPress 2.9 or higher", "wptouch" ); ?>)</small> <a href="#thumbs-info" class="fancylink">?</a></label>
+				<div id="thumbs-info" style="display:none">
+					<h2><?php _e( "More Info", "wptouch" ); ?></h2>
+					<p><?php _e( "This will change the display of blog and post listings between Calendar Icons view and Post Thumbnails view.", "wptouch" ); ?></p>
+					<p><?php _e( "The <em>Post Thumbnails w/ Random</em> option will fill missing post thumbnails with random abstract images.", "wptouch" ); ?></p>
+				</div>
+
 							</li>
 						</ul>	
 					</li>
