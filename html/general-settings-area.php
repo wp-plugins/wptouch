@@ -20,6 +20,7 @@
 
 				
 				<h4><?php _e( "Post Listings Options", "wptouch" ); ?></h4>
+				<p><?php _e( "Choose between Calendar Icons, Post Thumbnails or nothing for your post listings.", "wptouch" ); ?></p>
 				<p><?php _e( "Select which post-meta items are shown under titles on the main, search, &amp; archives pages.", "wptouch" ); ?></p>
 				<p><?php _e( "Also, choose if excerpts are shown/hidden (default is hidden).", "wptouch" ); ?></p>
 			</div>
@@ -66,6 +67,7 @@
 									<option <?php if ($wptouch_settings['post-cal-thumb'] == "calendar-icons") echo " selected"; ?> value="calendar-icons"><?php _e( "Calendar Icons", "wptouch" ); ?></option>
 									<option <?php if ($wptouch_settings['post-cal-thumb'] == "post-thumbnails") echo " selected"; ?> value="post-thumbnails"><?php _e( "Post Thumbnails", "wptouch" ); ?></option>
 									<option <?php if ($wptouch_settings['post-cal-thumb'] == "post-thumbnails-random") echo " selected"; ?> value="post-thumbnails-random"><?php _e( "Post Thumbnails (Random)", "wptouch" ); ?></option>
+									<option <?php if ($wptouch_settings['post-cal-thumb'] == "nothing-shown") echo " selected"; ?> value="nothing-shown"><?php _e( "No Icon or Thumbnail", "wptouch" ); ?></option>
 								</select>
 								<?php _e( "Post Listings Display", "wptouch" ); ?> <small>(<?php _e( "Requires WordPress 2.9 or higher", "wptouch" ); ?>)</small> <a href="#thumbs-info" class="fancylink">?</a></label>
 				<div id="thumbs-info" style="display:none">

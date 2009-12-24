@@ -864,6 +864,11 @@ a.h2 {
 	text-align: center;
 }
 
+#nothing-shown {
+	margin-left: -11px;
+	margin-top: -11px;
+}
+
 .archive-top {
 	margin: -11px -11px 7px;
 	-webkit-border-top-right-radius: 8px;
@@ -2229,41 +2234,54 @@ a.dsq-brlink {
 .wptouch-post-thumb-wrap {
 	background: url(../core/core-images/top-left.png) no-repeat;
 	position: relative;
-	float: left;
 	margin-right: 8px;
 	-webkit-box-reflect: below 1px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0.85, transparent), to(white));
 	display: block;
 	margin-bottom: 4px;
+	width: 46px;
+	height: 46px;
+	float: left;
 }
 
 .wptouch-post-thumb img {
-	border: 1px solid #e2e4e4;
 	width: 46px;
 	height: 46px;
 }
 
-.wptouch-post-thumb-wrap img.thumb-top-left {
+.wptouch-post-thumb-wrap .thumb-top-left {
 	position: absolute;
 	top: 0;
 	left: 0;
+	height: 9px;
+	width: 9px;
+	background: url(../core/core-images/thumb-corners.png) no-repeat 0 0;
 }
 
-.wptouch-post-thumb-wrap img.thumb-top-right {
+.wptouch-post-thumb-wrap .thumb-top-right {
 	position: absolute;
 	top: 0;
 	right: 0;
+	width: 9px;
+	height: 9px;
+	background: url(../core/core-images/thumb-corners.png) no-repeat right top;
 }
 
-.wptouch-post-thumb-wrap img.thumb-bottom-left {
+.wptouch-post-thumb-wrap .thumb-bottom-left {
 	position: absolute;
 	bottom: 0;
 	left: 0;
+	width: 9px;
+	height: 9px;
+	background: url(../core/core-images/thumb-corners.png) no-repeat 0 -9px;
 }
 
-.wptouch-post-thumb-wrap img.thumb-bottom-right {
+.wptouch-post-thumb-wrap .thumb-bottom-right {
 	position: absolute;
 	bottom: 0;
 	right: 0;
+	width: 9px;
+	height: 9px;
+	background: url(../core/core-images/thumb-corners.png) 9px -9px;
 }
 
 /* @end */

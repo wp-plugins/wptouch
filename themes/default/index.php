@@ -10,7 +10,7 @@
  
  		<?php if (!function_exists('dsq_comments_template') && !function_exists('id_comments_template')) { ?>
 				<?php if (wp_touch_get_comment_count() > 0 && !is_archive() && !is_search()) { ?>
-					<div class="comment-bubble<?php if (wp_touch_get_comment_count() > 99) echo('-big'); ?>">
+					<div <?php if ($wptouch_settings['post-cal-thumb'] == 'nothing-shown') { echo 'id="nothing-shown" ';} ?>class="comment-bubble<?php if (wp_touch_get_comment_count() > 99) echo('-big'); ?>">
 						<?php comments_number('0','1','%'); ?>
 					</div>
 				<?php } ?>
@@ -53,11 +53,9 @@
 				
 				<?php 
 					$version = bnc_get_wp_version();
-					if ($version >= 2.9 && $wptouch_settings['post-cal-thumb'] != 'calendar-icons') { ?>
+					if ($version >= 2.9 && $wptouch_settings['post-cal-thumb'] != 'calendar-icons' && $wptouch_settings['post-cal-thumb'] != 'nothing-shown') { ?>
 					<div class="wptouch-post-thumb-wrap">
-						<img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/themes/core/core-images/top-left.png" alt="top-left" class="thumb-top-left" />
-						<img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/themes/core/core-images/top-right.png" alt="top-right" class="thumb-top-right" />
-
+						<div class="thumb-top-left"></div><div class="thumb-top-right"></div>
 					<div class="wptouch-post-thumb">
 						<?php if (function_exists('the_post_thumbnail')) { ?>
 							
@@ -81,22 +79,26 @@
 							?>
 						<?php } } ?>
 					</div>
-					
-						<img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/themes/core/core-images/bottom-left.png" alt="bottom-left" class="thumb-bottom-left" />
-						<img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/themes/core/core-images/bottom-right.png" alt="bottom-right" class="thumb-bottom-right" />
+						<div class="thumb-bottom-left"></div><div class="thumb-bottom-right"></div>
 					</div>
-				<?php }  else { ?>
+				<?php }  elseif ($wptouch_settings['post-cal-thumb'] == 'calendar-icons') { ?>
 					<div class="calendar">
 						<div class="cal-month month-<?php echo get_the_time('m') ?>"><?php echo get_the_time('M') ?></div>
 						<div class="cal-date"><?php echo get_the_time('j') ?></div>
 					</div>				
+				<?php }  elseif ($wptouch_settings['post-cal-thumb'] == 'nothing-shown') { }  else { ?>
+					<div class="calendar">
+						<div class="cal-month month-<?php echo get_the_time('m') ?>"><?php echo get_the_time('M') ?></div>
+						<div class="cal-date"><?php echo get_the_time('j') ?></div>
+					</div>	
 				<?php } ?>
 
 	<?php } ?>
  
 	<a class="h2" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 		<div class="post-author">
-			<?php if (bnc_show_author()) { ?><span class="lead"><?php _e("Author", "wptouch"); ?>:</span> <?php the_author(); ?><br /><?php } ?>
+			<?php if ($wptouch_settings['post-cal-thumb'] == 'nothing-shown') { ?><span class="lead"><?php _e("Written on", "wptouch"); ?></span> <?php echo get_the_time('M') ?> <?php echo get_the_time('j') ?>, <?php echo get_the_time('Y') ?><?php if (!bnc_show_author()) { echo '<br />';} ?><?php } ?>
+			<?php if (bnc_show_author()) { ?><span class="lead"><?php _e("By", "wptouch"); ?></span> <?php the_author(); ?><br /><?php } ?>
 			<?php if (bnc_show_categories()) { echo('<span class="lead">' . __( 'Categories', 'wptouch' ) . ':</span> '); the_category(', '); echo('<br />'); } ?> 
 			<?php if (bnc_show_tags() && get_the_tags()) { the_tags('<span class="lead">' . __( 'Tags', 'wptouch' ) . ':</span> ', ', ', ''); } ?>
 		</div>	
