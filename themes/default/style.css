@@ -778,7 +778,7 @@ a.post-arrow {
 a.post-arrow-down {
 	-webkit-transform: scale(1.0) rotate(180deg);
 	-webkit-transition-duration: 0.6s;
-	background: #d9e3e1 url(../core/core-images/post-arrow.png) no-repeat center -14px;
+	background: #dfe3e3 url(../core/core-images/post-arrow.png) no-repeat center -14px;
 	border: 1px solid #b8b8b8;
 }
 
@@ -1027,12 +1027,11 @@ a.h2 {
 	font-size: 9px;
 	line-height: 11px;
 	position: relative;
-	float: left;
 	font-weight: bold;
 	letter-spacing: 0;
 	text-align: left;
 	width: 72%;
-	height: auto;
+	float: left;
 }
 
 .post-author span.lead {
@@ -2237,14 +2236,15 @@ a.dsq-brlink {
 	position: relative;
 	float: left;
 	margin-right: 8px;
-	-webkit-box-reflect:below 1px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0.87, transparent), to(white));
+	-webkit-box-reflect:below 1px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0.85, transparent), to(white));
 	display: block;
+	margin-bottom: 4px;
 }
 
 .wptouch-post-thumb img {
 	border: 1px solid #e2e4e4;
-	width: 48px;
-	height: 48px;
+	width: 46px;
+	height: 46px;
 
 }
 
