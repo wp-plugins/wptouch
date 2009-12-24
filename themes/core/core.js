@@ -19,20 +19,20 @@ $wptouch = jQuery.noConflict();
 function wptouch_switch_confirmation() {
 if (document.cookie && document.cookie.indexOf("wptouch_switch_cookie") > -1) {
 // just switch
-	$wptouch("#wptouch-switch-link a#switch-link").toggleClass("offimg");
+	$wptouch("a#switch-link").toggleClass("offimg");
 	setTimeout('switch_delayer()', 1250); 
 } else {
 // ask first
 	var answer = confirm("Switch to regular view? \n \n You can switch back to mobile view again in the footer.");
 	if (answer){
-	$wptouch("#wptouch-switch-link a#switch-link").toggleClass("offimg");
+	$wptouch("a#switch-link").toggleClass("offimg");
 	setTimeout('switch_delayer()', 1350); 
 		}
 	}
 }
 
-setTimeout(function() { $wptouch('#prowl-success').fadeOut(350); }, 5250);
-setTimeout(function() { $wptouch('#prowl-fail').fadeOut(350); }, 5250);
+setTimeout(function() { $wptouch('#prowl-success').fadeOut(400); }, 5250);
+setTimeout(function() { $wptouch('#prowl-fail').fadeOut(400); }, 5250);
 
 function wptouch_toggle_text() {
 	$wptouch("p").toggleClass("fontsize");
@@ -74,7 +74,7 @@ function bnc_jquery_wordtwit_open() {
 
 /////// -- Ajax comments -- ///////
 function bnc_showhide_coms_toggle() {
-	$wptouch('#commentlist').fadeToggle(350);
+	$wptouch('#commentlist').fadeToggle(400);
 	$wptouch("img#com-arrow").toggleClass("com-arrow-down");
 	$wptouch("h3#com-head").toggleClass("comhead-open");
 }
@@ -93,8 +93,8 @@ function commentAdded() {
     }
 
     $wptouch("#commentform").hide();
-    $wptouch("#the-new-comment").fadeIn(1500);
-    $wptouch("#refresher").fadeIn(1500);
+    $wptouch("#the-new-comment").fadeIn(400);
+    $wptouch("#refresher").fadeIn(400);
 }
 
 

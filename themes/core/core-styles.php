@@ -18,7 +18,7 @@ a, h3#com-head {
 	color: #<?php echo bnc_get_link_color(); ?>;
 }
 
-a.h2{
+a.h2, a.sh2, .page h2 {
 font-family: '<?php echo bnc_get_h2_font(); ?>';
 }
 </style>

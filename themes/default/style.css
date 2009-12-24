@@ -150,6 +150,7 @@ blockquote {
 .mainentry img, #singlentry img, .pageentry img, ol.commentlist li img {
 	max-width: 100%;
 	height: auto;
+		-webkit-box-reflect:below 3px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0.94, transparent), to(white));
 }
 
 .fontsize {
@@ -1065,10 +1066,9 @@ a.h2 {
 a.ajax {
 	color: #475d79;
 	text-shadow: #eee 1px 1px 0;
-	font-size: 15px;
-	font-weight: bold;
 	letter-spacing: 0;
 	height: 16px;
+	font: bold 14px Helvetica, Geneva, Arial, sans-serif;
 }
 
 /* @end */
@@ -1077,19 +1077,22 @@ a.ajax {
 
 a.sh2 {
 	letter-spacing: -1px;
-	text-align: left;
 	margin: 0;
 	padding: 0 0 2px;
-	font: normal bold 19px/20px Helvetica, sans-serif;
 	color: #222;
 	display: block;
+	line-height: 20px;
+	font-size: 19px;
+	font-weight: bold;
+	text-align: left;
 }
 
 #singlentry {
-	line-height: 145%;
-	color: #494949;
+	line-height: 150%;
+	color: #333;
 	display: block;
 	overflow: hidden;
+	font-size: 13px;
 }
 
 #singlentry li {
@@ -1934,45 +1937,52 @@ p.subscribe-to-comments input#subscribe {
 #footer {
 	text-align: center;
 	color: #475d79;
-	font-size: 11px;
+	font-size: 10px;
 	font-weight: bold;
 	text-shadow: #eee 1px 1px 0;
-	padding-bottom: 10px;
-	margin-top: 50px;
-	line-height: 5px;
+	margin-top: 60px;
+	line-height: 13px;
+	padding: 0 0 10px;
+}
+
+#footer p {
+	margin: 0;
+	padding: 0 25px 5px;
 }
 
 /* @group Switch Link */
+
+#wptouch-switch-link {
+	-webkit-border-radius: 8px;
+	border: 1px solid #adadad;
+	margin-right: 10px;
+	margin-left: 10px;
+	margin-bottom: 20px;
+	position: relative;
+	max-width: 300px;
+	padding: 13px 10px 12px 8px;
+	color: #222;
+	text-shadow: #fff 0 0 0;
+	font-size: 13px;
+	text-align: left;
+	background-color: #fff;
+}
 
 #wptouch-switch-link a {
 	position: relative;
 	display: block;
 	width: 77px;
-	background: url(../core/core-images/on.jpg) no-repeat left top;
+	background: url(../core/core-images/onoff.jpg) no-repeat left top;
 	height: 22px;
 	float: right;
-	bottom: 7px;
-	left: 1px;
-}
-
-#wptouch-switch-link {
-	-webkit-border-radius: 8px;
-	border: 1px solid #adadad;
-	background-color: #fff;
-	margin-right: 10px;
-	margin-left: 10px;
-	margin-bottom: 25px;
-	position: relative;
-	max-width: 300px;
-	padding: 15px 10px;
-	text-align: left;
-	color: #222;
-	text-shadow: #fff 0 0 0;
-	font-size: 14px;
+	left: 2px;
+	bottom: 5px;
 }
 
 .offimg {
-	background: url(../core/core-images/off.jpg) no-repeat left top !important;
+	width: 77px;
+	background: url(../core/core-images/onoff.jpg) no-repeat 0 -22px !important;
+	height: 22px;
 }
 
 /* @end */
