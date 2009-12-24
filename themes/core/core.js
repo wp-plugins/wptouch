@@ -4,7 +4,7 @@
  * Copyright (c) 2008-2009 Duane Storey & Dale Mugford (BraveNewCode Inc.)
  * Licensed under GPL.
  *
- * Last Updated: November 12th, 2009
+ * Last Updated: December 24th, 2009
  */
 
 /////// -- Get out of frames! -- ///////
