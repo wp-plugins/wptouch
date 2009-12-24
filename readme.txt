@@ -399,11 +399,12 @@ Not bloody likely! Unless of course you're getting slammed with all sorts of tra
 == Screenshots ==
 
 1. Posts on the front page
-2. Drop down menu navigation
-3. Push Messaging
-4. WordTwit plugin Twitter integration
-5. Single post page post meta, options bar, comments
-6. Ajax comment form
-7. Switch link in the footer
-8. Archives page appearance (auto-generated if you have a page called 'Archives')
-9. Sample regular page
+2. Post on the front page (w/ Post Thumbnails)
+3. Drop down menu navigation
+4. Push Messaging
+5. WordTwit plugin Twitter integration
+6. Single post page post meta, options bar, comments
+7. Ajax comment form
+8. Switch link in the footer
+9. Archives page appearance (auto-generated if you have a page called 'Archives')
+10. Sample regular page
