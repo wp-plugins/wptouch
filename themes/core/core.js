@@ -34,9 +34,9 @@ if (document.cookie && document.cookie.indexOf("wptouch_switch_cookie") > -1) {
 setTimeout(function() { $wptouch('#prowl-success').fadeOut(400); }, 5250);
 setTimeout(function() { $wptouch('#prowl-fail').fadeOut(400); }, 5250);
 
-function wptouch_toggle_text() {
-	$wptouch("p").toggleClass("fontsize");
-}
+//  function wptouch_toggle_text() {
+//	  $wptouch("p").toggleClass("fontsize");
+//  }
 
 
 /////// -- Menus -- ///////

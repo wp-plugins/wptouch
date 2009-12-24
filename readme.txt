@@ -18,6 +18,12 @@ The theme also includes the ability for your visitors to easily switch between t
 
 == Changelog ==
 
+= Version 1.9.7 =
+* Added Post Thumbnails View option (WordPress 2.9 only) for main post listings (can now choose between Calendar Icons and post thumbs)
+* Added style option to choose the font of H2 elements on post listings, single entries and pages
+* Various style & code improvements and fixes
+
+
 = Version 1.9.6 =
 
 * Fixed php logic in adsense-new.php (thx JeanPaulH)
@@ -29,6 +35,7 @@ The theme also includes the ability for your visitors to easily switch between t
 * Updated admin settings image
 * Fixed cutoff tweets from WordTwit in the drop-down
 * Verified WP 2.9 compatibility
+
 
 = Version 1.9.5 =
 
