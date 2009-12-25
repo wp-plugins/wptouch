@@ -57,7 +57,12 @@
 					<div class="wptouch-post-thumb-wrap">
 						<div class="thumb-top-left"></div><div class="thumb-top-right"></div>
 					<div class="wptouch-post-thumb">
-						<?php if (function_exists('the_post_thumbnail')) { ?>
+						<?php 
+						if (get_post_custom_values('Thumbnail') == true) { ?>
+						
+						<img src="<?php $custom_fields = get_post_custom($post_ID); $my_custom_field = $custom_fields['Thumbnail']; foreach ( $my_custom_field as $key => $value ) echo "$value"; ?>" alt="custom-thumbnail" />
+						 
+						<?php } elseif (function_exists('the_post_thumbnail')) { ?>
 							
 							<?php if (has_post_thumbnail()) { ?>
 								<?php the_post_thumbnail(); ?>

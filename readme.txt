@@ -20,6 +20,7 @@ The theme also includes the ability for your visitors to easily switch between t
 
 = Version 1.9.7.1 =
 * Fix for broken switch links (missing images) on some installations when in regular theme view
+* Added detect for custom field key 'Thumbnail' to work first before using WP 2.9 Thumbs, for those who've been using this method already
 
 = Version 1.9.7 =
 * Added Post Thumbnails View option (WordPress 2.9 only) for main post listings
