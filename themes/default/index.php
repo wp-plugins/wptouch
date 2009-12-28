@@ -58,11 +58,32 @@
 						<div class="thumb-top-left"></div><div class="thumb-top-right"></div>
 					<div class="wptouch-post-thumb">
 						<?php 
-						if (get_post_custom_values('Thumbnail') == true) { ?>
+						if (function_exists('p75GetThumbnail')) { 
+						if ( p75HasThumbnail($post->ID) ) { ?>
+						
+						<img src="<?php echo p75GetThumbnail($post->ID); ?>" alt="post thumbnail" />
+						
+						<?php } else { ?>
+						<?php
+								$total = '24'; $file_type = '.jpg'; 
+							
+								// Change to the location of the folder containing the images 
+								$image_folder = '' . compat_get_plugin_url( 'wptouch' ) . '/themes/core/core-images/thumbs/'; 
+								$start = '1'; $random = mt_rand($start, $total); $image_name = $random . $file_type; 
+							
+							if ($wptouch_settings['post-cal-thumb'] == 'post-thumbnails-random') {
+									echo "<img src=\"$image_folder/$image_name\" alt=\"$image_name\" />";
+									} else {
+									echo '<img src="' . compat_get_plugin_url( 'wptouch' ) . '/themes/core/core-images/thumbs/thumb-empty.jpg" alt="thumbnail" />';
+								}
+							?>						
+						<?php } ?>
+						
+						<?php } elseif (get_post_custom_values('Thumbnail') == true) { ?>
 						
 						<img src="<?php $custom_fields = get_post_custom($post_ID); $my_custom_field = $custom_fields['Thumbnail']; foreach ( $my_custom_field as $key => $value ) echo "$value"; ?>" alt="custom-thumbnail" />
 						 
-						<?php } elseif (function_exists('the_post_thumbnail')) { ?>
+						<?php } elseif (function_exists('the_post_thumbnail') && !function_exists('p75GetThumbnail')) { ?>
 							
 							<?php if (has_post_thumbnail()) { ?>
 								<?php the_post_thumbnail(); ?>
