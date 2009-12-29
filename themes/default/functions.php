@@ -1,6 +1,5 @@
 <?php 
 include( dirname(__FILE__) . '/../core/core-functions.php' ); 
-// End WPtouch Core Functions
 
 //---------------- Custom Drop-Down Tags Function ----------------// 
 //  function dropdown_tag_cloud( $args = '' ) {

@@ -18,6 +18,10 @@ The theme also includes the ability for your visitors to easily switch between t
 
 == Changelog ==
 
+= Version 1.9.7.4 =
+* Fixed an issue where thumbnails wouldn't show
+
+
 = Version 1.9.7.3 =
 * Added support for thumbnails using James Lao's 'Simple Post Thumbnails' plugin
 * Changed functions.php check from version (2.9) to whether function exists (WP Security Scan bypass)
