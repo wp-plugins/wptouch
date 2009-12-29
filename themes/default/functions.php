@@ -190,10 +190,4 @@ function time_since($older_date, $newer_date = false)
 
 remove_filter('get_the_excerpt', 'wp_trim_excerpt');
 add_filter('get_the_excerpt', 'wptouch_trim_excerpt');
-$version = bnc_get_wp_version();
-$devfile =  compat_get_plugin_dir( 'wptouch' ) . '/include/developer.mode';
-if ($version >= 2.9 && file_exists($devfile)) {
-add_theme_support( 'post-thumbnails', array( 'post' ) ); // Add it for posts
-set_post_thumbnail_size( 50, 50, true ); // 50 pixels wide by 50 pixels tall, hard crop mode
-}
 ?>
