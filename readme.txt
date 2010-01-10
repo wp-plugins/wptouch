@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=paypa
 Tags: wptouch, iphone, ipod, theme, apple, mac, bravenewcode, ajax, mobile, android, blackberry, smartphone
 Requires at least: 2.7
 Tested up to: 2.9.1
-Stable tag: 1.9.7.4
+Stable tag: 1.9.7.5
 
 WPtouch automatically transforms your WordPress blog into an iPhone application-style theme, complete with ajax loading articles and effects, when viewed from an iPhone, iPod touch, Android, Opera Mini, Palm Pre and BlackBerry Storm mobile devices.
 
@@ -17,6 +17,10 @@ The admin panel allows you to customize many aspects of its appearance, and deli
 The theme also includes the ability for your visitors to easily switch between the *WPtouch* view and your site's regular theme.
 
 == Changelog ==
+
+= Version 1.9.7.5 =
+
+* Updated readme to describe WordPress MU installation
 
 = Version 1.9.7.4 =
 * Fixed an issue where thumbnails wouldn't show
@@ -394,10 +398,12 @@ You can install *WPtouch* directly from the WordPress admin! Visit the *Plugins/
 Once installed and activated visit the WPtouch admin page (*Settings/WPtouch*) to customize your WPtouch appearance.
 
 = WordPress MU =
-If you'd like to use *WPtouch* with WordPress MU as a site-wide plugin, simple install the wptouch folder in the mu-plugins directory.  Once complete, either move wptouch.php back a directory (into the mu-plugins directory), or create a symbolic link to it.
 
+The best way to use WPtouch on WordPress MU is to do so via the "Activate WPtouch iPhone Theme Site Wide" link in the plugins area.
 
-Please visit http://www.bravenewcode.com/wptouch/ for comprehensive installation instructions.
+* Install WPtouch, either manually or via the "Add New" option in the plugins menu
+* Ensure that you have site wide plugins enabled in the Site Admin / Options menu
+* On the plugin configuration page activate WPtouch as a site wide plugin by clicking the "Activate WPtouch iPhone Theme Site Wide" link.  If WPtouch is already activated, deactivate it first.
 
 You can also checkout our Support Forums at http://support.bravenewcode.com to post questions and learn tips and tricks for *WPtouch* and our other plugins.
 
