@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=paypa
 Tags: wptouch, iphone, ipod, theme, apple, mac, bravenewcode, ajax, mobile, android, blackberry, smartphone
 Requires at least: 2.7
 Tested up to: 2.9.1
-Stable tag: 1.9.7.5
+Stable tag: 1.9.7.6
 
 WPtouch automatically transforms your WordPress blog into an iPhone application-style theme, complete with ajax loading articles and effects, when viewed from an iPhone, iPod touch, Android, Opera Mini, Palm Pre and BlackBerry Storm mobile devices.
 
@@ -18,30 +18,39 @@ The theme also includes the ability for your visitors to easily switch between t
 
 == Changelog ==
 
+= Version 1.9.7.6 =
+
+* Minor administration changes
+
+
 = Version 1.9.7.5 =
 
 * Updated readme to describe WordPress MU installation
 
+
 = Version 1.9.7.4 =
+
 * Fixed an issue where thumbnails wouldn't show
 
-
 = Version 1.9.7.3 =
+
 * Added support for thumbnails using James Lao's 'Simple Post Thumbnails' plugin
 * Changed functions.php check from version (2.9) to whether function exists (WP Security Scan bypass)
 
-
 = Version 1.9.7.2 =
+
 * Added missing code to the theme's functions file for Post thumbs
 * Resolves an issue where blank spaces would appear, not Post Thumbs
 
 
 = Version 1.9.7.1 =
+
 * Fix for broken switch links (missing images) on some installations when in regular theme view
 * Added detect for custom field key 'Thumbnail' to work first before using WP 2.9 Thumbs, for those who've been using this method already
 
 
 = Version 1.9.7 =
+
 * Added Post Thumbnails View option (WordPress 2.9 only) for main post listings
 * Added option to show neither post thumbnails nor calendar icons
 * Added style option to choose the font of H2 elements on post listings, single entries and pages
