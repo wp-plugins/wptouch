@@ -2235,7 +2235,6 @@ a.dsq-brlink {
 	background: url(../core/core-images/top-left.png) no-repeat;
 	position: relative;
 	margin-right: 8px;
-	-webkit-box-reflect: below 1px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0.85, transparent), to(white));
 	display: block;
 	margin-bottom: 4px;
 	width: 46px;

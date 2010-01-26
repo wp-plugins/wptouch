@@ -21,4 +21,7 @@ a, h3#com-head {
 a.h2, a.sh2, .page h2 {
 font-family: '<?php echo bnc_get_h2_font(); ?>';
 }
+
+<?php wptouch_thumb_reflections(); ?>
+
 </style>

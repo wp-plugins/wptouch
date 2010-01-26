@@ -77,16 +77,24 @@ function wptouch_twitter_link() {
 }
 
 function wptouch_tags_link() {
-	if(wptouch_agent("iphone") || wptouch_agent("ipod") || wptouch_agent("aspen") != FALSE) {
+	if (wptouch_agent("iphone") || wptouch_agent("ipod") || wptouch_agent("aspen") != FALSE) {
 	} else {
 		echo '<a href="#head-tags">' . __( "Tags", "wptouch" ) . '</a>';
 	}
 }
 
 function wptouch_cats_link() {
-	if(wptouch_agent("iphone") || wptouch_agent("ipod") || wptouch_agent("aspen") != FALSE) {
+	if (wptouch_agent("iphone") || wptouch_agent("ipod") || wptouch_agent("aspen") != FALSE) {
 	} else {
 		echo '<a href="#head-cats">' . __( "Categories", "wptouch" ) . '</a>';
+	}
+}
+
+function wptouch_thumb_reflections() {
+	if (wptouch_agent("iphone") || wptouch_agent("ipod") || wptouch_agent("aspen") != FALSE) {
+	} else {
+		echo ".wptouch-post-thumb-wrap{ \n";
+		echo "-webkit-box-reflect: below 1px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0.85, transparent), to(white));} \n";
 	}
 }
 

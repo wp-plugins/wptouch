@@ -18,6 +18,11 @@ The theme also includes the ability for your visitors to easily switch between t
 
 == Changelog ==
 
+= Version 1.9.7.7 =
+
+* Fixed broken post thumbs reflections on Android. Now reflections only show for iPhone/iPod
+
+
 = Version 1.9.7.6 =
 
 * Minor administration changes
