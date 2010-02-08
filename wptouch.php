@@ -4,7 +4,7 @@
    Plugin URI: http://bravenewcode.com/wptouch
    Description: A plugin which formats your site with a mobile theme for the Apple <a href="http://www.apple.com/iphone/">iPhone</a> / <a href="http://www.apple.com/ipodtouch/">iPod touch</a>, <a href="http://www.android.com/">Google Android</a> and other touch-based smartphones.
 	Author: Dale Mugford & Duane Storey (BraveNewCode)
-	Version: 1.9.7.7
+	Version: 1.9.8
 	Author URI: http://www.bravenewcode.com
    
 	# Thanks to ContentRobot and the iWPhone theme/plugin
@@ -18,7 +18,7 @@
 	# All Admin and theme design / CSS is Copyright (c) 2007-2010
 	# Duane Storey & Dale Mugford of BraveNewCode Inc.
 	#
-	# 'WPtouch' is an unregistered trademark of BraveNewCode Inc., 
+	# 'WPtouch' is a trademark of BraveNewCode Inc., 
 	# and may not be used in conjuction with this software without permission.
 	
 	# The code in this plugin is free software; you can redistribute the code aspects of
@@ -39,7 +39,7 @@
 
 
 global $bnc_wptouch_version;
-$bnc_wptouch_version = '1.9.7.7';
+$bnc_wptouch_version = '1.9.8';
 
 require_once( 'include/plugin.php' );
 require_once( 'include/compat.php' );
@@ -57,7 +57,6 @@ function wp_touch_get_comment_count() {
 		return 0;	
 	}
 }
-
 
 //The WPtouch Settings Defaults
 global $wptouch_defaults;
@@ -184,7 +183,7 @@ function wptouch_admin_files() {
 		echo "<link rel='stylesheet' type='text/css' href='" . compat_get_plugin_url( 'wptouch' ) . "/admin-css/wptouch-admin.css' />\n";
 		echo "<link rel='stylesheet' type='text/css' href='" . compat_get_plugin_url( 'wptouch' ) . "/admin-css/bnc-global.css' />\n";
 		echo "<link rel='stylesheet' type='text/css' href='" . compat_get_plugin_url( 'wptouch' ) . "/admin-css/bnc-compressed-global.css' />\n";
-		echo "<script type='text/javascript' src='" . compat_get_plugin_url( 'wptouch' ) . "/js/ajax_upload_3.6.js'></script>\n";
+		echo "<script type='text/javascript' src='" . compat_get_plugin_url( 'wptouch' ) . "/js/ajax_upload_3.9.js'></script>\n";
 		echo "<script type='text/javascript' src='" . compat_get_plugin_url( 'wptouch' ) . "/js/colorpicker_1.4.js'></script>\n";
 		echo "<script type='text/javascript' src='" . compat_get_plugin_url( 'wptouch' ) . "/js/fancybox_1.2.5.js'></script>\n";
 		echo "<script type='text/javascript' src='" . compat_get_plugin_url( 'wptouch' ) . "/js/admin_1.9.js'></script>\n";

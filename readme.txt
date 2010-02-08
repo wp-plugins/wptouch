@@ -18,6 +18,13 @@ The theme also includes the ability for your visitors to easily switch between t
 
 == Changelog ==
 
+= Version 1.9.8 =
+
+* Fixed an undefined function error
+* Stopped GigPress CSS from loading in the header when it's not enabled
+* Fixed error where Icon Upload would fail in admin
+* Updated Ajax Upload script to v3.9
+
 = Version 1.9.7.7 =
 
 * Fixed broken post thumbs reflections on Android. Now reflections only show for iPhone/iPod
