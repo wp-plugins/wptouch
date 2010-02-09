@@ -159,6 +159,7 @@ include( dirname(__FILE__) . '/../core/core-header.php' );
 <?php if ( function_exists( 'wordtwit_get_recent_tweets' ) && wordtwit_is_valid() && bnc_can_show_tweets() ) { ?>
  <!-- #start the WordTwit Twitter Integration -->
  	<?php $tweets = wordtwit_get_recent_tweets(); ?>
+
 	<div id="wptouch-wordtwit" class="dropper" style="display:none">
  	 <div id="twitter-style-bar"></div><!-- filler to get the styling just right -->
 			<a  id="follow-arrow" href="http://twitter.com/<?php echo wordtwit_get_username(); ?>" target="_blank"><img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/themes/core/core-images/twitter-arrow.jpg" alt="follow me" /></a>
@@ -170,12 +171,17 @@ include( dirname(__FILE__) . '/../core/core-header.php' );
 
 		<?php $now = time(); ?>
 		<ul id="tweets">
-			<?php foreach( $tweets as $tweet ) { ?>
-			<li>
-				<?php echo strip_tags( $tweet['content'], ''); ?>
-				<p class="time"><?php echo wordtwit_friendly_date( strtotime( $tweet['published'] ) ); ?></p>
-			</li>
-	  	 	<?php } ?>
+			<?php if ( $tweets ) { ?>
+				<?php foreach( $tweets as $tweet ) { ?>
+				<li>
+					<?php echo strip_tags( $tweet['content'], ''); ?>
+					<p class="time"><?php echo wordtwit_friendly_date( strtotime( $tweet['published'] ) ); ?></p>
+				</li>
+		  	 	<?php } ?>
+		  	 <?php } else { ?>
+		  	 	<li><?php _e( "No recent Tweets.", "wptouch" ); ?><br /><br /></li>
+
+		  	 <?php } ?>
 		</ul>
 </div>
 <?php } ?>
