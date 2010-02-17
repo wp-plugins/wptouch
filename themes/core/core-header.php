@@ -22,4 +22,3 @@
 		</script>
 <?php } ?>
 </head>
-<?php echo wptouch_agent(); ?>
