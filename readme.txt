@@ -18,6 +18,11 @@ The theme also includes the ability for your visitors to easily switch between t
 
 == Changelog ==
 
+= Version 1.9.8.2 =
+* Fixed broken thumbnail reflections on Android and other browsers. Now reflections only show for iPhone/iPod
+* Fixed issue where Tags & Categories links in the header may not show on some devices
+
+
 = Version 1.9.8.1 =
 
 * Added friendly display when there are no Twitter tweets available via WordTwit
@@ -32,7 +37,7 @@ The theme also includes the ability for your visitors to easily switch between t
 
 = Version 1.9.7.7 =
 
-* Fixed broken post thumbs reflections on Android. Now reflections only show for iPhone/iPod
+* Attempted fix for broken post thumbs reflections on Android. Now reflections only show for iPhone/iPod
 
 
 = Version 1.9.7.6 =

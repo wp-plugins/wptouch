@@ -1,10 +1,10 @@
 <?php
 /*
    Plugin Name: WPtouch iPhone Theme
-   Plugin URI: http://bravenewcode.com/wptouch
+   Plugin URI: http://bravenewcode.com/products/wptouch
    Description: A plugin which formats your site with a mobile theme for the Apple <a href="http://www.apple.com/iphone/">iPhone</a> / <a href="http://www.apple.com/ipodtouch/">iPod touch</a>, <a href="http://www.android.com/">Google Android</a> and other touch-based smartphones.
 	Author: Dale Mugford & Duane Storey (BraveNewCode)
-	Version: 1.9.8.1
+	Version: 1.9.8.2
 	Author URI: http://www.bravenewcode.com
    
 	# Thanks to ContentRobot and the iWPhone theme/plugin
@@ -19,7 +19,8 @@
 	# Duane Storey & Dale Mugford of BraveNewCode Inc.
 	#
 	# 'WPtouch' is a trademark of BraveNewCode Inc., 
-	# and may not be used in conjuction with this software without permission.
+	# and may not be used in conjuction with the redistribution, advertisment, 
+	# sale or other public use of this software without permission.
 	
 	# The code in this plugin is free software; you can redistribute the code aspects of
 	# the plugin and/or modify the code under the terms of the GNU Lesser General
@@ -39,7 +40,7 @@
 
 
 global $bnc_wptouch_version;
-$bnc_wptouch_version = '1.9.8.1';
+$bnc_wptouch_version = '1.9.8.2';
 
 require_once( 'include/plugin.php' );
 require_once( 'include/compat.php' );

@@ -14,7 +14,7 @@
 						echo '' . get_bloginfo('version') . '';
 						echo '</p><p class="wptv">';
 						echo __( '' . wptouch() . ' support: ', 'wptouch' );
-						if ($version > 2.91) {
+						if ($version > 2.92) {
 							echo sprintf(__( "%Unverified%s", "wptouch" ), '<span class="caution">','</span>');
 						} elseif ($version >= 2.7) {
 							echo sprintf(__( "%sFully Supported%s", "wptouch" ), '<span class="go">','</span>');
