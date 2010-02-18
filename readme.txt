@@ -18,6 +18,11 @@ The theme also includes the ability for your visitors to easily switch between t
 
 == Changelog ==
 
+= Version 1.9.8.3 =
+
+* Resolves an issue where save/reset settings would cause permissions error or fail
+* Resolves case where the upload path would not be found for custom-icons
+
 = Version 1.9.8.2 =
 
 * Fixed broken thumbnail reflections on Android and other browsers. Now reflections only show for iPhone/iPod

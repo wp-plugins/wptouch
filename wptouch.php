@@ -4,7 +4,7 @@
    Plugin URI: http://bravenewcode.com/products/wptouch
    Description: A plugin which formats your site with a mobile theme for the Apple <a href="http://www.apple.com/iphone/">iPhone</a> / <a href="http://www.apple.com/ipodtouch/">iPod touch</a>, <a href="http://www.android.com/">Google Android</a> and other touch-based smartphones.
 	Author: Dale Mugford & Duane Storey (BraveNewCode)
-	Version: 1.9.8.2
+	Version: 1.9.8.3
 	Author URI: http://www.bravenewcode.com
    
 	# Thanks to ContentRobot and the iWPhone theme/plugin
@@ -40,7 +40,7 @@
 
 
 global $bnc_wptouch_version;
-$bnc_wptouch_version = '1.9.8.2';
+$bnc_wptouch_version = '1.9.8.3';
 
 require_once( 'include/plugin.php' );
 require_once( 'include/compat.php' );
@@ -807,7 +807,7 @@ function bnc_wp_touch_page() {
 <?php $icons = bnc_get_icon_list(); ?>
 
 	<?php require_once( 'include/submit.php' ); ?>
-	<form method="post" action="<?php echo $_SERVER['REQUEST_URI']; ?>">
+	<form method="post" action="<?php echo admin_url( 'options-general.php?page=wptouch/wptouch.php' ); ?>">
 		<?php require_once( 'html/head-area.php' ); ?>
 		<?php require_once( 'html/general-settings-area.php' ); ?>
 		<?php require_once( 'html/advanced-area.php' ); ?>
@@ -820,7 +820,7 @@ function bnc_wp_touch_page() {
 		<input type="submit" name="submit" value="<?php _e('Save Options', 'wptouch' ); ?>" id="bnc-button" class="button-primary" />
 	</form>
 	
-	<form method="post" action="<?php echo $_SERVER['REQUEST_URI']; ?>">
+	<form method="post" action="<?php echo admin_url( 'options-general.php?page=wptouch/wptouch.php' ); ?>">
 		<input type="submit" onclick="return confirm('<?php _e('Restore default WPtouch settings?', 'wptouch' ); ?>');" name="reset" value="<?php _e('Restore Defaults', 'wptouch' ); ?>" id="bnc-button-reset" class="button-highlighted" />
 	</form>
 		

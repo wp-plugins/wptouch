@@ -1,9 +1,9 @@
 <?php
-	$max_size = 128*2048; // 256k	
+	$max_size = 128*4096; // 512k	
 	$directory_list = array();
 	
 	if ( current_user_can( 'upload_files' ) ) {
-		$upload_dir = compat_get_upload_dir() . '/wptouch/custom-icons';
+		$upload_dir = get_option( 'upload_path' ) . '/wptouch/custom-icons';
 		$dir_paths = explode( '/', $upload_dir );
 		$dir = '';
 		foreach ( $dir_paths as $path ) {
