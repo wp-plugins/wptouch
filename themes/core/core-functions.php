@@ -87,7 +87,6 @@ function wptouch_tags_link() {
 		echo '<a href="#head-tags">' . __( "Tags", "wptouch" ) . '</a>';
 	}
 
-
 function wptouch_cats_link() {
 		echo '<a href="#head-cats">' . __( "Categories", "wptouch" ) . '</a>';
 }
@@ -207,14 +206,3 @@ function comment_count( $count ) {
 
 remove_filter('the_excerpt', 'do_shortcode');   
 remove_filter('the_content', 'do_shortcode');
-
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// WPtouch WP Thumbnail Support
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-$version = get_bloginfo('version');
-if ($version >= 2.9) {
-add_theme_support( 'post-thumbnails', array( 'post' ) ); // Add it for posts
-set_post_thumbnail_size( 50, 50, true ); // 50 pixels wide by 50 pixels tall, hard crop mode
-}
-?>

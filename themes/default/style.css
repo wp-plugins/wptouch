@@ -1,7 +1,4 @@
-/* @override 
-	http://www.wptouch.com/wp-content/plugins/wptouch/themes/default/style.css
-	http://www.wptouch.com/wp-content/plugins/wptouch/themes/default/style-compressed.css
-*/
+/* @override http://www.bravenewcode.com/wordpress/wp-content/plugins/wptouch/themes/default/style.css */
 
 /*  
 Theme Name: WPtouch Mobile Plugin & Theme For WordPress
@@ -16,6 +13,12 @@ Author URI: http://www.bravenewcode.com/
 */
 
 /* @group Body and Theme-Wide Elements */
+
+.flash {
+	background: url(../core/core-images/flash.jpg) no-repeat center top;
+	width: 100%;
+	height: 175px;
+}
 
 body {
 	margin: 0;
@@ -155,6 +158,13 @@ blockquote {
 .fontsize {
 	font-size: 1.2em;
 	line-height: 140%;
+}
+
+.aligncenter {
+	text-align: center;
+	margin-left: auto;
+	display: block;
+	margin-right: auto;
 }
 
 /* @end */

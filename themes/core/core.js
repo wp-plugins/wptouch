@@ -1,10 +1,10 @@
 /*
  * WPtouch 1.9.x -The WPtouch Core JS File
  * This file holds all the default jQuery & Ajax functions for the theme
- * Copyright (c) 2008-2009 Duane Storey & Dale Mugford (BraveNewCode Inc.)
+ * Copyright (c) 2008-2010 Duane Storey & Dale Mugford (BraveNewCode Inc.)
  * Licensed under GPL.
  *
- * Last Updated: December 24th, 2009
+ * Last Updated: February 18th, 2010
  */
 
 /////// -- Get out of frames! -- ///////
@@ -14,7 +14,35 @@ if (top.location!= self.location) {top.location = self.location.href}
 /////// -- Let's play nice in jQuery -- ///////
 $wptouch = jQuery.noConflict();
 
+/*
+**  jquery.replaceClass.js -- jQuery "plugin", helps classname manip.
+**  Copyright (c) 2007 Francois Lafortune (quickredfox.at)
+**  Licensed under MIT 
+**
+*/
+jQuery.fn.replaceClass = function(toReplace,replaceWith){
+ return $wptouch(this).each(function(){
+   return $wptouch(this).removeClass(toReplace).addClass(replaceWith);
+ });
+}
 
+// Make images and captions centered if they're bigger than 150 pixels
+jQuery(document).ready( function() {
+	var imgWidth = $wptouch(".post img").width();
+	var captionWidth = $wptouch(".post .wp-caption").width();
+	if (imgWidth && captionWidth > 150) {
+		$wptouch('.pageentry img').removeClass('alignleft').addClass('aligncenter');
+		$wptouch('.pageentry img').removeClass('alignright').addClass('aligncenter');
+		$wptouch('.post img').removeClass('alignleft').addClass('aligncenter');
+		$wptouch('.post img').removeClass('alignright').addClass('aligncenter');
+		$wptouch('.post .wp-caption').removeClass('alignleft').addClass('aligncenter');
+		$wptouch('.post .wp-caption').removeClass('alignright').addClass('aligncenter');
+	}
+	
+//Remove Blip.tv vids
+$wptouch('.vvqbliptv').replaceWith('<div class="flash">&nbsp;</div>');
+
+} );
 /////// -- Switch Magic -- ///////
 function wptouch_switch_confirmation() {
 if (document.cookie && document.cookie.indexOf("wptouch_switch_cookie") > -1) {
