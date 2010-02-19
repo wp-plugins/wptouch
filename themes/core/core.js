@@ -38,15 +38,16 @@ jQuery(document).ready( function() {
 		$wptouch('.post .wp-caption').removeClass('alignleft').addClass('aligncenter');
 		$wptouch('.post .wp-caption').removeClass('alignright').addClass('aligncenter');
 	}
-//Lazy load post imgs
- $wptouch("img").lazyload({         
-     placeholder : "core-images/lazy-photo.jpg";
- });
 
 //Remove Blip.tv vids
 $wptouch('.vvqbliptv').replaceWith('<div class="flash">&nbsp;</div>');
 
 } ); //End onReady
+
+//Lazy load post imgs
+ $wptouch("img").lazyload({         
+     placeholder : "core-images/lazy-photo.jpg";
+ });
 
 /////// -- Switch Magic -- ///////
 function wptouch_switch_confirmation() {
