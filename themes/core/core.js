@@ -38,12 +38,11 @@ jQuery(document).ready( function() {
 		$wptouch('.post .wp-caption').removeClass('alignleft').addClass('aligncenter');
 		$wptouch('.post .wp-caption').removeClass('alignright').addClass('aligncenter');
 	}
-
 //Lazy load post imgs
- $wptouch(".post img").lazyload({         
+ $wptouch("img").lazyload({         
      placeholder : "core-images/lazy-photo.jpg";
  });
-	
+
 //Remove Blip.tv vids
 $wptouch('.vvqbliptv').replaceWith('<div class="flash">&nbsp;</div>');
 
