@@ -102,12 +102,12 @@
 		</p>
 
 		<p>
-			<input type="text" name="email" id="email" value="<?php echo $comment_author_email; ?>" size="22" tabindex="2" />
+			<input name="email" id="email" type="email" value="<?php echo $comment_author_email; ?>" size="22" tabindex="2" />
 			<label for="email"><?php _e( 'Mail (unpublished)', 'wptouch' ); ?> <?php if ($req) echo "*"; ?></label>
 		</p>
 	
 		<p>
-			<input type="text" name="url" id="url" value="<?php echo $comment_author_url; ?>" size="22" tabindex="3" />
+			<input name="url" id="url" type="url" value="<?php echo $comment_author_url; ?>" size="22" tabindex="3" />
 			<label for="url"><?php _e( 'Website', 'wptouch' ); ?></label>
 		</p>
 
