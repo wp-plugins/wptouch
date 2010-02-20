@@ -10,6 +10,36 @@
 /////// -- Let's setup a unique namspace in jQuery -- ///////
 $wptouch = jQuery.noConflict();
 
+// Make images and captions centered if they're bigger than 150 pixels
+jQuery(document).ready( function() {
+
+var tsize = $wptouch.cookies.get('textsize');
+	if (tsize == 12) {
+		$wptouch("#singlentry").css("font-size","12px");
+	}
+    if (tsize == 14) {
+		$wptouch("#singlentry").css("font-size","14px");
+	}
+	if (tsize == 16) {
+		$wptouch("#singlentry").css("font-size","16px");
+	}
+	
+	var imgWidth = $wptouch(".post img").width();
+	var captionWidth = $wptouch(".post .wp-caption").width();
+	if (imgWidth && captionWidth > 150) {
+		$wptouch('.pageentry img').removeClass('alignleft').addClass('aligncenter');
+		$wptouch('.pageentry img').removeClass('alignright').addClass('aligncenter');
+		$wptouch('.post img').removeClass('alignleft').addClass('aligncenter');
+		$wptouch('.post img').removeClass('alignright').addClass('aligncenter');
+		$wptouch('.post .wp-caption').removeClass('alignleft').addClass('aligncenter');
+		$wptouch('.post .wp-caption').removeClass('alignright').addClass('aligncenter');
+	}
+
+//Remove Blip.tv vids
+$wptouch('.vvqbliptv').replaceWith('<div class="flash">&nbsp;</div>');
+
+}); //End onReady
+
 /////// -- Get out of frames! -- ///////
 if (top.location!= self.location) {top.location = self.location.href}
 
@@ -25,23 +55,21 @@ jQuery.fn.fadeToggle = function(speed, easing, callback) {
 	return this.animate({opacity: 'toggle'}, speed, easing, callback); 
 };
 
-// Make images and captions centered if they're bigger than 150 pixels
-jQuery(document).ready( function() {
-	var imgWidth = $wptouch(".post img").width();
-	var captionWidth = $wptouch(".post .wp-caption").width();
-	if (imgWidth && captionWidth > 150) {
-		$wptouch('.pageentry img').removeClass('alignleft').addClass('aligncenter');
-		$wptouch('.pageentry img').removeClass('alignright').addClass('aligncenter');
-		$wptouch('.post img').removeClass('alignleft').addClass('aligncenter');
-		$wptouch('.post img').removeClass('alignright').addClass('aligncenter');
-		$wptouch('.post .wp-caption').removeClass('alignleft').addClass('aligncenter');
-		$wptouch('.post .wp-caption').removeClass('alignright').addClass('aligncenter');
-	}
+/////// --New Text-Size Settings -- ///////
+function wptouch_set_text_12() {
+	$wptouch.cookies.set('textsize', 12, {expiresAt: new Date( 2012, 1, 1 )});
+	$wptouch("#singlentry").css("font-size","12px");
+}
 
-//Remove Blip.tv vids
-$wptouch('.vvqbliptv').replaceWith('<div class="flash">&nbsp;</div>');
+function wptouch_set_text_14() {
+	$wptouch.cookies.set('textsize', 14, {expiresAt: new Date( 2012, 1, 1 )});
+	$wptouch("#singlentry").css("font-size","14px");
+}
 
-} ); //End onReady
+function wptouch_set_text_16() {
+	$wptouch.cookies.set('textsize', 16, {expiresAt: new Date( 2012, 1, 1 )});
+	$wptouch("#singlentry").css("font-size","16px");
+}
 
 /////// -- Switch Magic -- ///////
 function wptouch_switch_confirmation() {

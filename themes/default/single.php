@@ -20,9 +20,14 @@
 			<?php } ?>
 		<?php endif; ?>
 		</div>
-		<div class="clearer"></div>
 	</div>
-
+<ul id="text-options">
+<li>Text Size:</li>
+<li><a id="text-reg" href="#12" onclick="wptouch_set_text_12();">A</a></li>
+<li><a id="text-med" href="#14" onclick="wptouch_set_text_14();">A</a></li>
+<li><a id="text-lg" href="#16" onclick="wptouch_set_text_16();">A</a></li>
+</ul>
+		<div class="clearer"></div>
 			<?php wptouch_include_adsense(); ?>
 
          <div class="post" id="post-<?php the_ID(); ?>">

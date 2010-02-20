@@ -2,7 +2,7 @@
 Contributors: BraveNewCode, duanestorey, dalemugford
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=paypal%40bravenewcode%2ecom&item_name=WPtouch%20Beer%20Fund&no_shipping=0&no_note=1&tax=0&currency_code=CAD&lc=CA&bn=PP%2dDonationsBF&charset=UTF%2d8
 Tags: wptouch, iphone, ipod, theme, apple, mac, bravenewcode, ajax, mobile, android, blackberry, smartphone
-Requires at least: 2.7
+Requires at least: 2.7.1
 Tested up to: 2.9.2
 Stable tag: 1.8.9.3
 
@@ -20,7 +20,9 @@ The theme also includes the ability for your visitors to easily switch between t
 
 = Version 1.9.9 =
 
-* Added HTML5 types for comment url and email (supported phones now show unique keyboard layouts for these inputs)
+* Added HTML5 types for comment url and email (devices capable now show unique keyboard layouts for these inputs)
+* Revised post/page auto-detection features
+* Added client-side persistent Post options Text-Size changer to single-post page
 
 = Version 1.9.8.3 =
 

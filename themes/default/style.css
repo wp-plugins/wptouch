@@ -754,7 +754,6 @@ img.head-close {
 /* @group Index Page */
 
 .post {
-	-webkit-border-radius: 8px;
 	background-color: #fff;
 	padding: 10px;
 	margin-bottom: 12px;
@@ -762,6 +761,8 @@ img.head-close {
 	margin-right: 10px;
 	margin-left: 10px;
 	border: 1px solid #b1b1b1;
+	-webkit-border-radius: 8px;
+	z-index: 1;
 }
 
 .big {
@@ -2292,5 +2293,59 @@ a.dsq-brlink {
 	height: 9px;
 	background: url(../core/core-images/thumb-corners.png) 9px -9px;
 }
+
+/* @end */
+
+/* @group Text-Size */
+
+ul#text-options {
+	margin: 0;
+	background-color: #fff;
+	width: 135px;
+	position: relative;
+	float: right;
+	bottom: 19px;
+	border: 1px solid #b1b1b1;
+	-webkit-border-radius: 8px;
+	border-top-style: none;
+	right: 15px;
+	z-index: 0;
+	height: 24px;
+	padding: 8px 0 0;
+	text-align: center;
+}
+
+ul#text-options li {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	display: inline;
+	font-size: 11px;
+	color: #999;
+}
+
+ul#text-options li a {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	text-shadow: #fff 0 1px 1px;
+	padding: 5px;
+	margin-left: 1px;
+	font-weight: bold;
+	font-style: italic;
+	color: #333;
+}
+
+ul#text-options a#text-reg {
+	font-size: 12px;
+}
+
+ul#text-options a#text-med {
+	font-size: 14px;
+}
+
+ul#text-options a#text-lg {
+	font-size: 16px;
+}
+
+
 
 /* @end */
