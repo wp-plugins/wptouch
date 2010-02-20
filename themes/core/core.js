@@ -1,30 +1,29 @@
 /*
  * WPtouch 1.9.x -The WPtouch Core JS File
  * This file holds all the default jQuery & Ajax functions for the theme
- * Copyright (c) 2008-2010 Duane Storey & Dale Mugford (BraveNewCode Inc.)
+ * Copyright (c) 2008 - 2010 Duane Storey & Dale Mugford (BraveNewCode Inc.)
  * Licensed under GPL.
  *
- * Last Updated: February 18th, 2010
+ * Last Updated: February 20th, 2010
  */
+
+/////// -- Let's setup a unique namspace in jQuery -- ///////
+$wptouch = jQuery.noConflict();
 
 /////// -- Get out of frames! -- ///////
 if (top.location!= self.location) {top.location = self.location.href}
 
-
-/////// -- Let's play nice in jQuery -- ///////
-$wptouch = jQuery.noConflict();
-
-/*
-**  jquery.replaceClass.js -- jQuery "plugin", helps classname manip.
-**  Copyright (c) 2007 Francois Lafortune (quickredfox.at)
-**  Licensed under MIT 
-**
-*/
+/////// -- New function removeClass().addCLass() -- ///////
 jQuery.fn.replaceClass = function(toReplace,replaceWith){
  return $wptouch(this).each(function(){
    return $wptouch(this).removeClass(toReplace).addClass(replaceWith);
  });
 }
+
+/////// --New function fadeToggle() -- ///////
+jQuery.fn.fadeToggle = function(speed, easing, callback) { 
+	return this.animate({opacity: 'toggle'}, speed, easing, callback); 
+};
 
 // Make images and captions centered if they're bigger than 150 pixels
 jQuery(document).ready( function() {
@@ -60,46 +59,25 @@ if (document.cookie && document.cookie.indexOf("wptouch_switch_cookie") > -1) {
 	}
 }
 
+/////// -- Prowl Results -- ///////
 setTimeout(function() { $wptouch('#prowl-success').fadeOut(400); }, 5250);
 setTimeout(function() { $wptouch('#prowl-fail').fadeOut(400); }, 5250);
 
-//  function wptouch_toggle_text() {
-//	  $wptouch("p").toggleClass("fontsize");
-//  }
-
-
-/////// -- Menus -- ///////
-// Creating a new function, fadeToggle()
-$wptouch.fn.fadeToggle = function(speed, easing, callback) { 
-	return this.animate({opacity: 'toggle'}, speed, easing, callback); 
-};
- 
+/////// -- Menu Toggles, Effects -- ///////
 function bnc_jquery_menu_drop() {
 	$wptouch('#wptouch-menu').fadeToggle(400);
 	$wptouch("#headerbar-menu a").toggleClass("open");
 }
 
-function bnc_jquery_login_toggle() {
-	$wptouch('#wptouch-login').fadeToggle(400);
-}
+function bnc_jquery_login_toggle() { $wptouch('#wptouch-login').fadeToggle(400); }
 
-function bnc_jquery_search_toggle() {
-	$wptouch('#wptouch-search').fadeToggle(400);
-}
+function bnc_jquery_search_toggle() { $wptouch('#wptouch-search').fadeToggle(400); }
 
-function bnc_jquery_gigpress_toggle() {
-	$wptouch('#wptouch-gigpress').fadeToggle(400);
-}
+function bnc_jquery_gigpress_toggle() { $wptouch('#wptouch-gigpress').fadeToggle(400); }
 
+function bnc_jquery_prowl_open() { $wptouch('#prowl-message').fadeToggle(400); }
 
-function bnc_jquery_prowl_open() {
-	$wptouch('#prowl-message').fadeToggle(400);
-}
-
-function bnc_jquery_wordtwit_open() {
-	$wptouch('#wptouch-wordtwit').fadeToggle(400);
-}
-
+function bnc_jquery_wordtwit_open() { $wptouch('#wptouch-wordtwit').fadeToggle(400); }
 
 /////// -- Ajax comments -- ///////
 function bnc_showhide_coms_toggle() {
@@ -128,7 +106,6 @@ function commentAdded() {
 
 
 /////// --Single Post Page -- ///////
-
 function wptouch_toggle_twitter() {
 	$wptouch('#twitter-box').fadeToggle(400);
 }
@@ -138,7 +115,6 @@ function wptouch_toggle_bookmarks() {
 }
 
 /////// --jQuery Tabs-- ///////
-
 $wptouch(function () {
     var tabContainers = $wptouch('#menu-head > ul');
     
