@@ -4,7 +4,7 @@
  * Copyright (c) 2008 - 2010 Duane Storey & Dale Mugford (BraveNewCode Inc.)
  * Licensed under GPL.
  *
- * Last Updated: February 20th, 2010
+ * Last Updated: February 21st, 2010
  */
 
 /////// -- Let's setup a unique namspace in jQuery -- ///////
@@ -14,14 +14,14 @@ $wptouch = jQuery.noConflict();
 jQuery(document).ready( function() {
 
 var tsize = $wptouch.cookie('textsize');
-	if (tsize == 12) {
-		$wptouch("#singlentry").css("font-size","12px");
+	if (tsize == 13) {
+		$wptouch("#singlentry").css("font-size","13px");
 	}
     if (tsize == 14) {
 		$wptouch("#singlentry").css("font-size","14px");
 	}
-	if (tsize == 16) {
-		$wptouch("#singlentry").css("font-size","16px");
+	if (tsize == 15) {
+		$wptouch("#singlentry").css("font-size","15px");
 	}
 	
 	var imgWidth = $wptouch(".post img").width();
@@ -56,12 +56,12 @@ jQuery.fn.fadeToggle = function(speed, easing, callback) {
 };
 
 /////// --New Text-Size Settings -- ///////
-function wptouch_set_text_12() {
+function wptouch_set_text_13() {
 $wptouch(this).click(function() {	
 	var date = new Date();
 	date.setTime(date.getTime() + (365 * 24 * 60 * 60 * 1000));
-	$wptouch.cookie('textsize', '12', { path: '/', expires: date });
-	$wptouch("#singlentry").css("font-size","12px");
+	$wptouch.cookie('textsize', '13', { path: '/', expires: date });
+	$wptouch("#singlentry").css("font-size","13px");
 });
 }
 
@@ -74,12 +74,12 @@ $wptouch(this).click(function() {
 });
 }
 
-function wptouch_set_text_16() {
+function wptouch_set_text_15() {
 $wptouch(this).click(function() {	
 	var date = new Date();
 	date.setTime(date.getTime() + (365 * 24 * 60 * 60 * 1000));
-	$wptouch.cookie('textsize', '16', { path: '/', expires: date });
-	$wptouch("#singlentry").css("font-size","16px");
+	$wptouch.cookie('textsize', '15', { path: '/', expires: date });
+	$wptouch("#singlentry").css("font-size","15px");
 });
 }
 
