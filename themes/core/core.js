@@ -13,7 +13,7 @@ $wptouch = jQuery.noConflict();
 // Make images and captions centered if they're bigger than 150 pixels
 jQuery(document).ready( function() {
 
-var tsize = $wptouch.cookies.get('textsize');
+var tsize = $wptouch.cookie('textsize');
 	if (tsize == 12) {
 		$wptouch("#singlentry").css("font-size","12px");
 	}
@@ -57,18 +57,30 @@ jQuery.fn.fadeToggle = function(speed, easing, callback) {
 
 /////// --New Text-Size Settings -- ///////
 function wptouch_set_text_12() {
-	$wptouch.cookies.set('textsize', 12, {expiresAt: new Date( 2012, 1, 1 )});
-	$wptouch("#singlentry").css("font-size","12px");
+$wptouch(this).click(function() {	
+	var date = new Date();
+	date.setTime(date.getTime() + (365 * 24 * 60 * 60 * 1000));
+	$wptouch.cookie('textsize', '12', { path: '/', expires: date });
+//	$wptouch("#singlentry").css("font-size","12px");
+});
 }
 
 function wptouch_set_text_14() {
-	$wptouch.cookies.set('textsize', 14, {expiresAt: new Date( 2012, 1, 1 )});
+$wptouch(this).click(function() {	
+	var date = new Date();
+	date.setTime(date.getTime() + (365 * 24 * 60 * 60 * 1000));
+	$wptouch.cookie('textsize', '14', { path: '/', expires: date });
 	$wptouch("#singlentry").css("font-size","14px");
+});
 }
 
 function wptouch_set_text_16() {
-	$wptouch.cookies.set('textsize', 16, {expiresAt: new Date( 2012, 1, 1 )});
-//	$wptouch("#singlentry").css("font-size","16px");
+$wptouch(this).click(function() {	
+	var date = new Date();
+	date.setTime(date.getTime() + (365 * 24 * 60 * 60 * 1000));
+	$wptouch.cookie('textsize', '16', { path: '/', expires: date });
+	$wptouch("#singlentry").css("font-size","16px");
+});
 }
 
 /////// -- Switch Magic -- ///////
