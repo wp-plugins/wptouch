@@ -67,8 +67,8 @@ function wptouch_set_text_14() {
 }
 
 function wptouch_set_text_16() {
-//	$wptouch.cookies.set('textsize', 16, {expiresAt: new Date( 2012, 1, 1 )});
-	$wptouch("#singlentry").css("font-size","16px");
+	$wptouch.cookies.set('textsize', 16, {expiresAt: new Date( 2012, 1, 1 )});
+//	$wptouch("#singlentry").css("font-size","16px");
 }
 
 /////// -- Switch Magic -- ///////
