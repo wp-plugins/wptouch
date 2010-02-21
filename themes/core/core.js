@@ -61,7 +61,7 @@ $wptouch(this).click(function() {
 	var date = new Date();
 	date.setTime(date.getTime() + (365 * 24 * 60 * 60 * 1000));
 	$wptouch.cookie('textsize', '12', { path: '/', expires: date });
-//	$wptouch("#singlentry").css("font-size","12px");
+	$wptouch("#singlentry").css("font-size","12px");
 });
 }
 
