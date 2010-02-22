@@ -26,11 +26,10 @@
 						$wptouch("a#arrow-<?php the_ID(); ?>").click(function(event) {
 							$wptouch(this).toggleClass("post-arrow-down");
 							$wptouch('#entry-<?php the_ID(); ?>').fadeToggle(500);
-							event.preventDefault();
 						});	
 					 });					
 				</script>
-					<a class="post-arrow" id="arrow-<?php the_ID(); ?>" href="#"></a>
+					<a class="post-arrow" id="arrow-<?php the_ID(); ?>" href="javascript:void(0);"></a>
 				<?php } ?>
 			</div> 
 		 <div id="arc-top" class="archive-top-left month-<?php echo get_the_time('m') ?>">
@@ -44,12 +43,10 @@
 						$wptouch("a#arrow-<?php the_ID(); ?>").click(function(event) {
 							$wptouch(this).toggleClass("post-arrow-down");
 							$wptouch('#entry-<?php the_ID(); ?>').fadeToggle(500);
-							event.preventDefault();
 						});	
-					});					
+					 });					
 				</script>
-
-					<a class="post-arrow" id="arrow-<?php the_ID(); ?>" href="#"></a>				
+					<a class="post-arrow" id="arrow-<?php the_ID(); ?>" href="javascript:void(0);"></a>
 				<?php } ?>
 				
 				
@@ -143,7 +140,7 @@
 
 	<div id="call<?php echo md5($_SERVER['REQUEST_URI']); ?>" class="ajax-load-more">
 		<div id="spinner<?php echo md5($_SERVER['REQUEST_URI']); ?>" class="spin"	 style="display:none"></div>
-		<a class="ajax" href="#" onclick="$wptouch('#spinner<?php echo md5($_SERVER['REQUEST_URI']); ?>').fadeIn(200); $wptouch('#ajaxentries<?php echo md5($_SERVER['REQUEST_URI']); ?>').load('<?php echo get_next_posts_page_link(); ?>', {}, function(){ $wptouch('#call<?php echo md5($_SERVER['REQUEST_URI']); ?>').fadeOut();}); event.preventDefault();">
+		<a class="ajax" href="javascript:void(0);" onclick="$wptouch('#spinner<?php echo md5($_SERVER['REQUEST_URI']); ?>').fadeIn(200); $wptouch('#ajaxentries<?php echo md5($_SERVER['REQUEST_URI']); ?>').load('<?php echo get_next_posts_page_link(); ?>', {}, function(){ $wptouch('#call<?php echo md5($_SERVER['REQUEST_URI']); ?>').fadeOut();});">
 			<?php _e( "Load more entries...", "wptouch" ); ?>
 		</a>
 	</div>

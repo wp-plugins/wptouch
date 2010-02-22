@@ -64,7 +64,6 @@ jQuery.fn.replaceClass = function(toReplace,replaceWith){
 /////// --New function fadeToggle() -- ///////
 jQuery.fn.fadeToggle = function(speed, easing, callback) { 
 	return this.animate({opacity: 'toggle'}, speed, easing, callback); 
-	event.preventDefault();
 };
 
 /////// --New Text-Size Settings -- ///////
@@ -101,14 +100,12 @@ if (document.cookie && document.cookie.indexOf("wptouch_switch_cookie") > -1) {
 // just switch
 	$wptouch("a#switch-link").toggleClass("offimg");
 	setTimeout('switch_delayer()', 1250); 
-	event.preventDefault();
 } else {
 // ask first
 	var answer = confirm("Switch to regular view? \n \n You can switch back to mobile view again in the footer.");
 	if (answer){
 	$wptouch("a#switch-link").toggleClass("offimg");
 	setTimeout('switch_delayer()', 1350); 
-	event.preventDefault();
 		}
 	}
 }
@@ -121,60 +118,30 @@ setTimeout(function() { $wptouch('#prowl-fail').fadeOut(400); }, 5250);
 function bnc_jquery_menu_drop() {
 	$wptouch('#wptouch-menu').fadeToggle(400);
 	$wptouch("#headerbar-menu a").toggleClass("open");
-	event.preventDefault();
 }
 
-function bnc_jquery_login_toggle() { $wptouch('#wptouch-login').fadeToggle(400); 	event.preventDefault();}
+function bnc_jquery_login_toggle() { $wptouch('#wptouch-login').fadeToggle(400);}
 
-function bnc_jquery_search_toggle() { $wptouch('#wptouch-search').fadeToggle(400); event.preventDefault();}
+function bnc_jquery_search_toggle() { $wptouch('#wptouch-search').fadeToggle(400);}
 
-function bnc_jquery_gigpress_toggle() { $wptouch('#wptouch-gigpress').fadeToggle(400); event.preventDefault();}
+function bnc_jquery_gigpress_toggle() { $wptouch('#wptouch-gigpress').fadeToggle(400);}
 
-function bnc_jquery_prowl_open() { $wptouch('#prowl-message').fadeToggle(400); event.preventDefault();}
+function bnc_jquery_prowl_open() { $wptouch('#prowl-message').fadeToggle(400);}
 
-function bnc_jquery_wordtwit_open() { $wptouch('#wptouch-wordtwit').fadeToggle(400); event.preventDefault();}
-
-/////// -- Ajax comments -- ///////
-function bnc_showhide_coms_toggle() {
-	$wptouch('#commentlist').fadeToggle(400);
-	$wptouch("img#com-arrow").toggleClass("com-arrow-down");
-	$wptouch("h3#com-head").toggleClass("comhead-open");
-	event.preventDefault();
-}
-
-function commentAdded() {
-    if ($wptouch('#errors')) {
-        $wptouch('#errors').hide();
-	}
-        
-    if ($wptouch('#nocomment')) {
-        $wptouch('#nocomment').hide();
-    }
-    
-    if($wptouch('#hidelist')) {
-        $wptouch('#hidelist').hide();
-    }
-
-    $wptouch("#commentform").hide();
-    $wptouch("#the-new-comment").fadeIn(400);
-    $wptouch("#refresher").fadeIn(400);
-}
+function bnc_jquery_wordtwit_open() { $wptouch('#wptouch-wordtwit').fadeToggle(400);}
 
 
 /////// --Single Post Page -- ///////
 function wptouch_toggle_twitter() {
 	$wptouch('#twitter-box').fadeToggle(400);
-	event.preventDefault();
 }
 
 function wptouch_toggle_bookmarks() {
 	$wptouch('#bookmark-box').fadeToggle(400);
-	event.preventDefault();
 }
 
 /////// --jQuery Tabs-- ///////
 $wptouch(function () {
-	event.preventDefault();
     var tabContainers = $wptouch('#menu-head > ul');
     
     $wptouch('#tabnav a').click(function () {
@@ -187,14 +154,13 @@ $wptouch(function () {
     }).filter(':first').click();
 });
 
-function wptouch_ajax_comment() {
-	$wptouch('#loading').fadeIn(100);
-		var list = $wptouch('#commentlist');
-		var html = list.html();
-		var param = $wptouch('form').serialize();
-			$wptouch.ajax({url: './comments-ajax.php?' + param, success: function(data, status){ list.append(data); commentAdded(); }, type: 'get' });
-		event.preventDefault();
+/////// -- Ajax comments -- ///////
+function bnc_showhide_coms_toggle() {
+	$wptouch('#commentlist').fadeToggle(400);
+	$wptouch("img#com-arrow").toggleClass("com-arrow-down");
+	$wptouch("h3#com-head").toggleClass("comhead-open");
 }
+
 /////// -- Tweak jQuery Timer -- ///////
 $wptouch.timerId = setInterval(function(){
 	var timers = jQuery.timers;
