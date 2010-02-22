@@ -21,7 +21,7 @@
 		<?php endif; ?>
 		</div>
 	</div>
-<ul id="text-options">
+<ul id="text-options" style="display:none">
 <li>Text Size:</li>
 <li><a id="text-reg" href="javascript:void(0);" onclick="wptouch_set_text_13();">A</a></li>
 <li><a id="text-med" href="javascript:void(0);" onclick="wptouch_set_text_14();">A</a></li>

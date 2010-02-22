@@ -19,7 +19,7 @@ var button = jQuery('#upload_button'), interval;
 		jQuery('#upload_response').hide().html(response).fadeIn(); }
 		});
 
-	setTimeout(function() { jQuery('img.ajax-load').fadeOut(750); }, 2000);
+	setTimeout(function() { jQuery('img.ajax-load').fadeOut(1000); }, 2000);
 
 	setTimeout(function() { jQuery('#wptouchupdated').fadeIn(350); }, 750);
 	setTimeout(function() { jQuery('#wptouchupdated').fadeOut(350); }, 1750);
