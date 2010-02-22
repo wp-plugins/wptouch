@@ -4,39 +4,25 @@
  * Copyright (c) 2008-2010 Duane Storey & Dale Mugford (BraveNewCode Inc.)
  * Licensed under GPL.
  *
- * Last Updated: February 8th, 2010
+ * Last Updated: February 22nd, 2010
  */
 
-$j = jQuery.noConflict();
-jQuery(document).ready(function($j) {
+jQuery(document).ready(function(jQuery) {
 
-
-	
-var button = $j('#upload_button'), interval;
+var button = jQuery('#upload_button'), interval;
 	new AjaxUpload(button, {
 		action: '../?wptouch=upload',
 		autoSubmit: true,
 		name: 'submitted_file',
-		onSubmit: function(file, extension) { $j("#upload_progress").show(); },
-		onComplete: function(file, response) { $j("#upload_progress").hide();
-		$j('#upload_response').hide().html(response).fadeIn(); }
+		onSubmit: function(file, extension) { jQuery("#upload_progress").show(); },
+		onComplete: function(file, response) { jQuery("#upload_progress").hide();
+		jQuery('#upload_response').hide().html(response).fadeIn(); }
 		});
 
-	
-	setTimeout(function() { 	
-		jQuery.ajax({
-			url: "../?wptouch=plugins",
-			success: function(data) {$j("#wptouch-plugin-content").html(data).fadeIn(350);}
-		});
-	}, 1500);
+	setTimeout(function() { jQuery('img.ajax-load').fadeOut(750); }, 2000);
 
-	setTimeout(function() { $j('img.ajax-load').fadeOut(750); }, 2000);
-
-	setTimeout(function() { $j("#wptouch-news-content").fadeIn(350); }, 1050);
-	setTimeout(function() { $j("#wptouch-support-content").fadeIn(350); }, 1350);
-
-	setTimeout(function() { $j('#wptouchupdated').fadeIn(350); }, 750);
-	setTimeout(function() { $j('#wptouchupdated').fadeOut(350); }, 1750);
+	setTimeout(function() { jQuery('#wptouchupdated').fadeIn(350); }, 750);
+	setTimeout(function() { jQuery('#wptouchupdated').fadeOut(350); }, 1750);
 
 	jQuery('#header-text-color, #header-background-color, #header-border-color, #link-color').ColorPicker({
 		onSubmit: function(hsb, hex, rgb, el) {
@@ -48,7 +34,7 @@ var button = $j('#upload_button'), interval;
 			}
 		});
 
-	$j("a.fancylink").fancybox({
+	jQuery("a.fancylink").fancybox({
 		'padding':						10,
 		'zoomSpeedIn':				250, 
 		'zoomSpeedOut':			250,

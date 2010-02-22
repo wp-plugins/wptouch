@@ -67,7 +67,67 @@
 				?>
 				
 			<h4><?php _e( 'Known Plugin Support &amp; Conflicts', 'wptouch' ); ?></h4>
-				<div id="wptouch-plugin-content" style="display:none"></div>				
+				<div id="wptouch-plugin-content">
+					<!-- custom anti spam -->
+						<div class="all-good">
+							<a href="http://wordpress.org/extend/plugins/peters-custom-anti-spam-image/" target="_blank">Peter's Custom Anti-Spam</a> is fully supported.
+						</div>
+		
+					<!-- wp spam free -->
+						<div class="all-good">
+							<a href="http://www.hybrid6.com/webgeek/plugins/wp-spamfree" target="_blank">WP Spam Free</a> is fully supported.
+						</div>
+					
+					<!-- flickr rss -->	  
+						<div class="all-good">
+							<a href="http://eightface.com/wordpress/flickrrss/" target="_blank">FlickrRSS</a>: Your photos will automatically show on a page called 'Photos' if you have it. Fully supported.
+						</div>
+					
+					<!-- wp cache -->		  
+						<div class="sort-of">
+							<a href="http://mnm.uib.es/gallir/wp-cache-2/" target="_blank">WP Cache</a> is supported, but requires configuration. Follow <a href="http://support.bravenewcode.com/topic/knowledge-base-using-wptouch-with-wp-super-cache#post-611" target="_blank">this support forum thread for more information.
+						</div>
+								
+					<!-- wp super cache -->		  
+						<div class="sort-of">
+							<a href="http://mnm.uib.es/gallir/wp-cache-2/" target="_blank">WP Super Cache</a> is supported, but requires configuration. Follow <a href="http://support.bravenewcode.com/topic/knowledge-base-using-wptouch-with-wp-super-cache#post-611" target="_blank">this support forum thread for more information.
+						</div>
+		
+					<!-- wp css -->		  
+						<div class="sort-of">
+							<a href="http://wordpress.org/extend/plugins/wp-css/" target="_blank">WP CSS</a> is supported, but does	not compress WPtouch's CSS. WPtouch files are pre-optimized for mobile devices already.
+						</div>
+		
+					<!-- share this -->		  
+						<div class="sort-of">
+							<a href="http://wordpress.org/extend/plugins/share-this/" target="_blank">Share This</a> is supported, but requires the WPtouch setting <strong>'Enable Exclusive Mode'</strong> turned on for WPtouch to work properly. We'll try to flush out proper compatibility.</div>
+		
+					<!-- wordpress admin bar -->		  
+						<div class="sort-of">
+							<a href="http://www.viper007bond.com/wordpress-plugins/wordpress-admin-bar/" target="_blank">WordPress Admin Bar</a> requires additional configuration to work with WPtouch. Follow <a href="http://www.viper007bond.com/wordpress-plugins/wordpress-admin-bar/#comment-227660" target="_blank">this comment</a> on the official site.
+						</div>
+		
+					<!-- simple captcha -->		  
+						<div class="too-bad">
+							<a href="http://wordpress.org/extend/plugins/simple-captcha/" target="_blank">WP Simple Captcha</a> is not currently supported.
+						</div>
+		
+					<!-- next gen gallery -->		  
+						<div class="too-bad">
+							<a href="http://wordpress.org/extend/plugins/nextgen-gallery/" target="_blank">NextGEN Gallery</a> is not currently supported.
+						</div>
+		
+					<!-- ajaxed pages comments-->		  
+						<div class="too-bad">
+							<a href="http://wordpress.org/extend/plugins/yaapc/" target="_blank">Yet another ajax paged comments (YAAPC)</a> is not currently supported. WPtouch uses its own ajaxed comments, and will automatically support WP 2.7+ comments out-of-the-box soon.
+						</div>
+						
+						<!-- Lightview Plus -->
+						<div class="too-bad">
+							<a href="http://wordpress.org/extend/plugins/lightview-plus/" target="_blank">Lightview Plus</a> is not currently supported. Images may not open in a  viewer or separate page.
+						</div>
+				
+				</div>				
 		</div><!-- right content -->
 	<div class="bnc-clearer"></div>
 	</div><!-- postbox -->

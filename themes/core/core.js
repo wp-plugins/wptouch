@@ -4,7 +4,7 @@
  * Copyright (c) 2008 - 2010 Duane Storey & Dale Mugford (BraveNewCode Inc.)
  * Licensed under GPL.
  *
- * Last Updated: February 21st, 2010
+ * Last Updated: February 22nd, 2010
  */
 
 /////// -- Let's setup a unique namspace in jQuery -- ///////
@@ -101,12 +101,14 @@ if (document.cookie && document.cookie.indexOf("wptouch_switch_cookie") > -1) {
 // just switch
 	$wptouch("a#switch-link").toggleClass("offimg");
 	setTimeout('switch_delayer()', 1250); 
+	event.preventDefault();
 } else {
 // ask first
 	var answer = confirm("Switch to regular view? \n \n You can switch back to mobile view again in the footer.");
 	if (answer){
 	$wptouch("a#switch-link").toggleClass("offimg");
 	setTimeout('switch_delayer()', 1350); 
+	event.preventDefault();
 		}
 	}
 }

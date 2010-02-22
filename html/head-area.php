@@ -23,21 +23,23 @@
 
 			<div id="wptouch-news-wrap">
 			<h3><span class="rss-head">&nbsp;</span><?php _e( "WPtouch Wire", "wptouch" ); ?></h3>
-				<div id="wptouch-news-content" style="display:none">
-					<?php require_once (ABSPATH . WPINC . '/class-snoopy.php');
-					$snoop_dog = new Snoopy();
-					$snoop_dog->read_timeout = 3;
-					$result = $snoop_dog->fetch( 'http://www.bravenewcode.com/custom/wptouch-news.php?type=wptouch&version=' . $bnc_wptouch_version );
-					if ( $result ) {
-						echo $snoop_dog->results;
-					}
-					?>
+				<div id="wptouch-news-content">
+					<?php require_once (ABSPATH . WPINC . '/rss.php');
+					$rss = @fetch_rss('http://www.bravenewcode.com/tag/wptouch/rss');
+					//$rss = @fetch_rss('http://earthhourblog.posterous.com/rss.xml');						
+					if ( isset($rss->items) && 0 != count($rss->items) ) { ?>
+					<ul>
+						<?php $rss->items = array_slice($rss->items, 0, 5); foreach ($rss->items as $item ) { ?>
+						<li><a target="_blank" class="orange-link" href='<?php echo wp_filter_kses($item['link']); ?>'><?php echo wp_specialchars($item['title']); ?></a></li>
+						<?php } ?>
+					</ul>
+					<?php } ?>
 				</div>
 			</div>
 
 			<div id="wptouch-support-wrap">			
 			<h3><span class="rss-head">&nbsp;</span><?php _e( "Twitter Topics", "wptouch" ); ?></h3>
-				<div id="wptouch-support-content" style="display:none">
+				<div id="wptouch-support-content">
 					<?php require_once (ABSPATH . WPINC . '/rss.php');
 					$rss = @fetch_rss('http://search.twitter.com/search.atom?q=wptouch');						
 					if ( isset($rss->items) && 0 != count($rss->items) ) { ?>

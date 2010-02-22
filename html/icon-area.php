@@ -18,7 +18,7 @@
 				<div id="upload_button"></div>
 
 				<!-- <div id="extras_button">
-					<a href="#" onclick="alert('This does nothing yet');return false;"><img src="<?php echo compat_get_plugin_url( 'wptouch' ) . '/images/extras.png'; ?>" alt="extras" /></a>
+					<a href="#" onclick="alert('This does nothing yet'); event.preventDefault();"><img src="<?php echo compat_get_plugin_url( 'wptouch' ) . '/images/extras.png'; ?>" alt="extras" /></a>
 				</div> --> 
 
 			<div id="upload_response"></div>
