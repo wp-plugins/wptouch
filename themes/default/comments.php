@@ -72,22 +72,14 @@
 			</center>
 
 	<?php else : ?>
-  	
-	<?php $filename = ABSPATH . 'wp-load.php';
-	 if (bnc_is_ajax_coms_enabled() && file_exists($filename)) { ?>
 
 		<div id="refresher" style="display:none;">
 			<img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/images/good.png" alt="checkmark" />
 			<h3><?php _e( "Comment added.", "wptouch" ); ?></h3>
-			&raquo; <a href="javascript:this.location.reload();"><?php _e( "Refresh the page", "wptouch" ); ?></a> <?php _e( "to post a new comment.", "wptouch" ); ?>
+			&raquo; <a href="javascript:this.location.reload();"><?php _e( "Refresh the page", "wptouch" ); ?></a> <?php _e( "to post a new comment, or see your published comment.", "wptouch" ); ?>
 		</div>
-			<form id="commentform" action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" onsubmit="$wptouch('#loading').fadeIn(100);var list = $wptouch('#commentlist'); var html = list.html(); var param = $wptouch('form').serialize(); $wptouch.ajax({url: '<?php echo compat_get_plugin_url( 'wptouch' ); ?>/themes/default/comments-ajax.php?' + param, success: function(data, status){ list.append(data); commentAdded(); }, type: 'get' }); return false;">
-
-	<?php } else { ?>
 
 		<form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" id="commentform">
-
-	<?php } ?>
 
 	<?php if ($user_ID) : ?>
 

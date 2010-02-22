@@ -38,6 +38,17 @@ var tsize = $wptouch.cookie('textsize');
 //Remove Blip.tv vids
 $wptouch('.vvqbliptv').replaceWith('<div class="flash">&nbsp;</div>');
 
+// Ajaxify '#commentform'
+var formoptions = { 
+	beforeSubmit: function() {$wptouch("#loading").fadeIn(400);},
+	success:  function() {
+		$wptouch("#commentform").hide();
+		$wptouch("#loading").fadeOut(400);
+		$wptouch("#refresher").fadeIn(400);
+	} // end success
+} 	//end options
+$wptouch('#commentform').ajaxForm(formoptions);
+			 
 }); //End onReady
 
 /////// -- Get out of frames! -- ///////
@@ -53,6 +64,7 @@ jQuery.fn.replaceClass = function(toReplace,replaceWith){
 /////// --New function fadeToggle() -- ///////
 jQuery.fn.fadeToggle = function(speed, easing, callback) { 
 	return this.animate({opacity: 'toggle'}, speed, easing, callback); 
+	event.preventDefault();
 };
 
 /////// --New Text-Size Settings -- ///////
@@ -107,23 +119,25 @@ setTimeout(function() { $wptouch('#prowl-fail').fadeOut(400); }, 5250);
 function bnc_jquery_menu_drop() {
 	$wptouch('#wptouch-menu').fadeToggle(400);
 	$wptouch("#headerbar-menu a").toggleClass("open");
+	event.preventDefault();
 }
 
-function bnc_jquery_login_toggle() { $wptouch('#wptouch-login').fadeToggle(400); }
+function bnc_jquery_login_toggle() { $wptouch('#wptouch-login').fadeToggle(400); 	event.preventDefault();}
 
-function bnc_jquery_search_toggle() { $wptouch('#wptouch-search').fadeToggle(400); }
+function bnc_jquery_search_toggle() { $wptouch('#wptouch-search').fadeToggle(400); event.preventDefault();}
 
-function bnc_jquery_gigpress_toggle() { $wptouch('#wptouch-gigpress').fadeToggle(400); }
+function bnc_jquery_gigpress_toggle() { $wptouch('#wptouch-gigpress').fadeToggle(400); event.preventDefault();}
 
-function bnc_jquery_prowl_open() { $wptouch('#prowl-message').fadeToggle(400); }
+function bnc_jquery_prowl_open() { $wptouch('#prowl-message').fadeToggle(400); event.preventDefault();}
 
-function bnc_jquery_wordtwit_open() { $wptouch('#wptouch-wordtwit').fadeToggle(400); }
+function bnc_jquery_wordtwit_open() { $wptouch('#wptouch-wordtwit').fadeToggle(400); event.preventDefault();}
 
 /////// -- Ajax comments -- ///////
 function bnc_showhide_coms_toggle() {
 	$wptouch('#commentlist').fadeToggle(400);
 	$wptouch("img#com-arrow").toggleClass("com-arrow-down");
 	$wptouch("h3#com-head").toggleClass("comhead-open");
+	event.preventDefault();
 }
 
 function commentAdded() {
@@ -148,14 +162,17 @@ function commentAdded() {
 /////// --Single Post Page -- ///////
 function wptouch_toggle_twitter() {
 	$wptouch('#twitter-box').fadeToggle(400);
+	event.preventDefault();
 }
 
 function wptouch_toggle_bookmarks() {
 	$wptouch('#bookmark-box').fadeToggle(400);
+	event.preventDefault();
 }
 
 /////// --jQuery Tabs-- ///////
 $wptouch(function () {
+	event.preventDefault();
     var tabContainers = $wptouch('#menu-head > ul');
     
     $wptouch('#tabnav a').click(function () {
@@ -168,6 +185,14 @@ $wptouch(function () {
     }).filter(':first').click();
 });
 
+function wptouch_ajax_comment() {
+	$wptouch('#loading').fadeIn(100);
+		var list = $wptouch('#commentlist');
+		var html = list.html();
+		var param = $wptouch('form').serialize();
+			$wptouch.ajax({url: './comments-ajax.php?' + param, success: function(data, status){ list.append(data); commentAdded(); }, type: 'get' });
+		event.preventDefault();
+}
 /////// -- Tweak jQuery Timer -- ///////
 $wptouch.timerId = setInterval(function(){
 	var timers = jQuery.timers;

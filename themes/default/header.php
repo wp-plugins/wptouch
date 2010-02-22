@@ -29,7 +29,7 @@ include( dirname(__FILE__) . '/../core/core-header.php' );
 				<input type="hidden" name="rememberme" value="forever" />
 				<input type="hidden" id="logsub" name="submit" value="<?php _e('Login'); ?>" tabindex="9" />
 				<input type="hidden" name="redirect_to" value="<?php echo $_SERVER['REQUEST_URI']; ?>"/>
-			<a href="javascript: return false;" onclick="bnc_jquery_login_toggle();"><img class="head-close" src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/themes/core/core-images/head-close.png" alt="close" /></a>
+			<a href="/" onclick="bnc_jquery_login_toggle();"><img class="head-close" src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/themes/core/core-images/head-close.png" alt="close" /></a>
 			</form>
 		</div>
 	</div>
@@ -40,7 +40,7 @@ include( dirname(__FILE__) . '/../core/core-header.php' );
 			<form method="get" id="searchform" action="<?php bloginfo('home'); ?>/">
 				<input type="text" value="Search..." onfocus="if (this.value == 'Search...') {this.value = ''}" name="s" id="s" /> 
 				<input name="submit" type="hidden" tabindex="5" value="Search"  />
-			<a href="javascript: return false;" onclick="bnc_jquery_search_toggle();"><img class="head-close" src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/themes/core/core-images/head-close.png" alt="close" /></a>
+			<a href="/" onclick="bnc_jquery_search_toggle();"><img class="head-close" src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/themes/core/core-images/head-close.png" alt="close" /></a>
 			</form>
 		</div>
 	</div>
@@ -109,25 +109,25 @@ include( dirname(__FILE__) . '/../core/core-header.php' );
 		<a href="<?php bloginfo('home'); ?>"><?php wptouch_core_body_sitetitle(); ?></a>
 	</div>
 	<div id="headerbar-menu">
-		    <a href="#" onclick="bnc_jquery_menu_drop(); return false;"></a>
+		    <a href="/" onclick="bnc_jquery_menu_drop();"></a>
 	</div>
 </div>
 
 <div id="drop-fade">
 	<?php if (bnc_is_search_enabled()) { ?>			    
-    	<a id="searchopen" class="top" href="#" onclick="bnc_jquery_search_toggle(); return false;"><?php _e( 'Search', 'wptouch' ); ?></a>
+    	<a id="searchopen" class="top" href="/" onclick="bnc_jquery_search_toggle();"><?php _e( 'Search', 'wptouch' ); ?></a>
 	<?php } ?>
 
 	<?php if (bnc_is_prowl_direct_message_enabled()) { ?>			    
-    	<a id="prowlopen" class="top" href="#" onclick="bnc_jquery_prowl_open(); return false;"><?php _e( 'Message', 'wptouch' ); ?></a>
+    	<a id="prowlopen" class="top" href="/" onclick="bnc_jquery_prowl_open();"><?php _e( 'Message', 'wptouch' ); ?></a>
 	<?php } ?>
 
 	<?php if ( function_exists( 'wordtwit_get_recent_tweets' ) && wordtwit_is_valid() && bnc_can_show_tweets() ) { ?>		    
-    	<a id="wordtwitopen" class="top" href="#" onclick="bnc_jquery_wordtwit_open(); return false;"><?php _e( 'Twitter', 'wptouch' ); ?></a>
+    	<a id="wordtwitopen" class="top" href="/" onclick="bnc_jquery_wordtwit_open();"><?php _e( 'Twitter', 'wptouch' ); ?></a>
 	<?php } ?>
 
 	<?php if ( function_exists( 'gigpress_shows' ) && bnc_is_gigpress_enabled()) { ?>			    
-    	<a id="gigpressopen" class="top" href="#" onclick="bnc_jquery_gigpress_toggle(); return false;"><?php _e( 'Tour Dates', 'wptouch' ); ?></a>
+    	<a id="gigpressopen" class="top" href="'/" onclick="bnc_jquery_gigpress_toggle();"><?php _e( 'Tour Dates', 'wptouch' ); ?></a>
 	<?php } ?>
 
  <!-- #start the Prowl Message Area -->
