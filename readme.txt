@@ -18,7 +18,7 @@ The theme also includes the ability for your visitors to easily switch between t
 
 == Changelog ==
 
-= Version 1.9 =
+= Version 1.9.9 (unreleased) =
 
 * Added HTML5 types for comment url and email (devices capable now show unique keyboard layouts for these inputs)
 * Revised post/page auto-detection features
