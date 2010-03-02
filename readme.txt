@@ -26,10 +26,11 @@ The theme also includes the ability for your visitors to easily switch between t
 * Changed the way Ajax comments work - will now work for everyone
 * Changed code referencing javascript:return false; to javascript:void(0);
 * Added and refined jQuery code, effects
-* Changed admin panel to stop using Ajax that would sometimes fail to load things locally with wp-rss.php
-* removed comments-ajax.php (not needed anymore)
+* Changed admin panel to stop using Ajax that would sometimes fail to load
+* removed comments-ajax.php from theme (not needed anymore)
 * Added jcookies.js script
 * Removed obsolete code
+* Bug fixes
 
 = Version 1.9.8.3 =
 
