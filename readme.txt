@@ -18,7 +18,12 @@ The theme also includes the ability for your visitors to easily switch between t
 
 == Changelog ==
 
+= Version 1.9.9.2 =
+
+* Changed date/time parsing for WordTwit integration
+
 = Version 1.9.9.1 =
+
 * Bug fix for array warning issue on some installations
 
 = Version 1.9.9 =
