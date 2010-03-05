@@ -6,7 +6,7 @@
 
 			<div class="left-content">
 				<p><?php _e( "Choose to enable/disable advanced features &amp; options available for WPtouch.", "wptouch"); ?></p>	
-				<p><?php _e( "* WPtouch exclusive mode attempt to fixes issues where other plugins load scripts which erroneously interfere with WPtouch functions and javascript.", "wptouch" ); ?></p>
+				<p><?php _e( "* WPtouch Restricted Mode attempts to fix issues where other plugins load scripts which interfere with WPtouch CSS and JavaScript.", "wptouch" ); ?></p>
 			 	<br />
 			 		<h4><?php _e( "Custom User-Agents", "wptouch" ); ?></h4>
 			 		<p><?php _e( "Enter a comma-separated list of user-agents to enable WPtouch for a device that isn't currently officially supported.", "wptouch" ); ?></p>

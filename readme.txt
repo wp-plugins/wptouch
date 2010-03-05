@@ -19,7 +19,8 @@ The theme also includes the ability for your visitors to easily switch between t
 == Changelog ==
 
 = Version 1.9.9.2 =
-
+* Updated user agents for Opera Mini and Palm Pre ('mini' and 'pre')
+* Removed orphaned code relating to ajax comments option
 * Changed date/time parsing for WordTwit integration.  Updated WordTwit if you see incorrect date/times.
 
 = Version 1.9.9.1 =

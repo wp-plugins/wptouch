@@ -2,9 +2,9 @@
 /*
    Plugin Name: WPtouch iPhone Theme
    Plugin URI: http://bravenewcode.com/products/wptouch
-   Description: A plugin which formats your site with a mobile theme for the Apple <a href="http://www.apple.com/iphone/">iPhone</a> / <a href="http://www.apple.com/ipodtouch/">iPod touch</a>, <a href="http://www.android.com/">Google Android</a> and other touch-based smartphones.
+   Description: A plugin which formats your site with a mobile theme for the Apple <a href="http://www.apple.com/iphone/">iPhone</a> / <a href="http://www.apple.com/ipodtouch/">iPod touch</a>, <a href="http://www.android.com/">Google Android</a>, <a href="http://www.palm.com/us/products/phones/pre/">Palm Pre</a> and other touch-based smartphones.
 	Author: Dale Mugford & Duane Storey (BraveNewCode)
-	Version: 1.9.9.1
+	Version: 1.9.9.2
 	Author URI: http://www.bravenewcode.com
    
 	# Thanks to ContentRobot and the iWPhone theme/plugin
@@ -40,7 +40,7 @@
 
 
 global $bnc_wptouch_version;
-$bnc_wptouch_version = '1.9.9.1';
+$bnc_wptouch_version = '1.9.9.2';
 
 require_once( 'include/plugin.php' );
 require_once( 'include/compat.php' );
@@ -58,7 +58,6 @@ $wptouch_defaults = array(
 	'enable-tags-button' => true,
 	'enable-search-button' => true,
 	'enable-login-button' => false,
-	'enable-ajax-comments' => true,
 	'enable-gravatars' => true,
 	'enable-main-home' => true,
 	'enable-main-rss' => true,
@@ -210,8 +209,9 @@ function bnc_wptouch_get_user_agents() {
 		"cupcake", 			 // 1.5+ Android
 		"blackberry9500",	 // Storm
 		"blackberry9530",	 // Storm
-		"opera mini", 		 // Experimental
-		"webos",				 // Experimental
+		"mini", 		 			 // Opera Mini Experimental
+		"webos",				 // Palm Pre Experimental
+		"pre",				 	 // Palm Pre Experimental
 		"incognito", 			 // Other iPhone browser
 		"webmate" 			 // Other iPhone browser
 	);
@@ -378,9 +378,6 @@ class WPtouchPlugin {
 				case "upload":
 					include( 'ajax/file_upload.php' );	
 					break;
-				case "plugins":
-					include( 'ajax/load-plugins.php' );
-					break;
 			}
 			exit;
 		}	
@@ -466,8 +463,6 @@ class WPtouchPlugin {
 		$container = $_SERVER['HTTP_USER_AGENT'];
 		// The below prints out the user agent array. Uncomment to see it shown on the page.
 		// print_r($container); 
-		// Add whatever user agents you want here to the array if you want to make this show on another device.
-		// No guarantees it'll look pretty, though!
 		$useragents = bnc_wptouch_get_user_agents();
 
 		$devfile =  compat_get_plugin_dir( 'wptouch' ) . '/include/developer.mode';
@@ -663,11 +658,6 @@ function bnc_is_gravatars_enabled() {
 	return $ids['enable-gravatars'];
 }	
 
-function bnc_is_ajax_coms_enabled() {
-	$ids = bnc_wp_touch_get_menu_pages();
-	return $ids['enable-ajax-comments'];
-}	
-
 function bnc_show_author() {
 	$ids = bnc_wp_touch_get_menu_pages();
 	return $ids['enable-main-name'];
@@ -725,7 +715,7 @@ function bnc_wp_touch_get_pages() {
 	foreach ($ids as $k => $v) {
 		if ($k == 'main_title' || $k == 'enable-post-excerpts' || $k == 'enable-page-coms' || 
 			 $k == 'enable-cats-button'  || $k == 'enable-tags-button'  || $k == 'enable-search-button'  || 
-			 $k == 'enable-login-button' || $k == 'enable-gravatars' || $k == 'enable-ajax-comments' || 
+			 $k == 'enable-login-button' || $k == 'enable-gravatars' || 
 			 $k == 'enable-main-home' || $k == 'enable-main-rss' || $k == 'enable-main-email' || 
 			 $k == 'enable-main-name' || $k == 'enable-main-tags' || $k == 'enable-main-categories' || 
 			 $k == 'enable-prowl-comments-button' || $k == 'enable-prowl-users-button' || 
