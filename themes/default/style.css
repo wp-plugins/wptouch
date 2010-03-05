@@ -1,4 +1,4 @@
-/* @override http://www.bravenewcode.com/wordpress/wp-content/plugins/wptouch/themes/default/style.css */
+/* @override http://www.bravenewcode.com/wordpress/wp-content/plugins/wptouch/themes/default/style-compressed.css */
 
 /*  
 Theme Name: WPtouch Mobile Plugin & Theme For WordPress
@@ -1751,6 +1751,7 @@ h3#comments, h3#respond {
 	position: absolute;
 	right: 62px;
 	top: 8px;
+	padding-right: 15px;
 }
 
 p.logged {
@@ -1873,6 +1874,16 @@ p.subscribe-to-comments label {
 p.subscribe-to-comments input#subscribe {
 	padding-right: 3px;
 	vertical-align: top;
+}
+
+#errors {
+	background-color: #fed4d2;
+	border: 1px solid red;
+	padding: 8px;
+	text-align: center;
+	font-weight: bold;
+	text-shadow: #ffecec 0 1px 0;
+	-webkit-border-radius: 8px;
 }
 
 /*

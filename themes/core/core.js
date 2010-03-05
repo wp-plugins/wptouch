@@ -13,16 +13,16 @@ $wptouch = jQuery.noConflict();
 // Make images and captions centered if they're bigger than 150 pixels
 jQuery(document).ready( function() {
 
-var tsize = $wptouch.cookie('textsize');
-	if (tsize == 13) {
-		$wptouch("#singlentry").css("font-size","13px");
-	}
-    if (tsize == 14) {
-		$wptouch("#singlentry").css("font-size","14px");
-	}
-	if (tsize == 15) {
-		$wptouch("#singlentry").css("font-size","15px");
-	}
+//  var tsize = $wptouch.cookie('textsize');
+//  	if (tsize == 13) {
+//  		$wptouch("#singlentry").css("font-size","13px");
+//  	}
+//      if (tsize == 14) {
+//  		$wptouch("#singlentry").css("font-size","14px");
+//  	}
+//  	if (tsize == 15) {
+//  		$wptouch("#singlentry").css("font-size","15px");
+//  	}
 	
 	var imgWidth = $wptouch(".post img").width();
 	var captionWidth = $wptouch(".post .wp-caption").width();
@@ -45,11 +45,16 @@ var formoptions = {
 		$wptouch("#commentform").hide();
 		$wptouch("#loading").fadeOut(400);
 		$wptouch("#refresher").fadeIn(400);
-	} // end success
-} 	//end options
+		}, // end success 
+	error:  function() {
+		$wptouch('#errors').show();
+		$wptouch("#loading").fadeOut(400);
+		} //end error
+	} 	//end options
 $wptouch('#commentform').ajaxForm(formoptions);
 			 
 }); //End onReady
+
 
 /////// -- Get out of frames! -- ///////
 if (top.location!= self.location) {top.location = self.location.href}
@@ -67,32 +72,32 @@ jQuery.fn.fadeToggle = function(speed, easing, callback) {
 };
 
 /////// --New Text-Size Settings -- ///////
-function wptouch_set_text_13() {
-$wptouch(this).click(function() {	
-	var date = new Date();
-	date.setTime(date.getTime() + (365 * 24 * 60 * 60 * 1000));
-	$wptouch.cookie('textsize', '13', { path: '/', expires: date });
-	$wptouch("#singlentry").css("font-size","13px");
-});
-}
-
-function wptouch_set_text_14() {
-$wptouch(this).click(function() {	
-	var date = new Date();
-	date.setTime(date.getTime() + (365 * 24 * 60 * 60 * 1000));
-	$wptouch.cookie('textsize', '14', { path: '/', expires: date });
-	$wptouch("#singlentry").css("font-size","14px");
-});
-}
-
-function wptouch_set_text_15() {
-$wptouch(this).click(function() {	
-	var date = new Date();
-	date.setTime(date.getTime() + (365 * 24 * 60 * 60 * 1000));
-	$wptouch.cookie('textsize', '15', { path: '/', expires: date });
-	$wptouch("#singlentry").css("font-size","15px");
-});
-}
+//  function wptouch_set_text_13() {
+//  $wptouch(this).click(function() {	
+//  	var date = new Date();
+//  	date.setTime(date.getTime() + (365 * 24 * 60 * 60 * 1000));
+//  	$wptouch.cookie('textsize', '13', { path: '/', expires: date });
+//  	$wptouch("#singlentry").css("font-size","13px");
+//  });
+//  }
+//  
+//  function wptouch_set_text_14() {
+//  $wptouch(this).click(function() {	
+//  	var date = new Date();
+//  	date.setTime(date.getTime() + (365 * 24 * 60 * 60 * 1000));
+//  	$wptouch.cookie('textsize', '14', { path: '/', expires: date });
+//  	$wptouch("#singlentry").css("font-size","14px");
+//  });
+//  }
+//  
+//  function wptouch_set_text_15() {
+//  $wptouch(this).click(function() {	
+//  	var date = new Date();
+//  	date.setTime(date.getTime() + (365 * 24 * 60 * 60 * 1000));
+//  	$wptouch.cookie('textsize', '15', { path: '/', expires: date });
+//  	$wptouch("#singlentry").css("font-size","15px");
+//  });
+//  }
 
 /////// -- Switch Magic -- ///////
 function wptouch_switch_confirmation() {
@@ -121,13 +126,9 @@ function bnc_jquery_menu_drop() {
 }
 
 function bnc_jquery_login_toggle() { $wptouch('#wptouch-login').fadeToggle(400);}
-
 function bnc_jquery_search_toggle() { $wptouch('#wptouch-search').fadeToggle(400);}
-
 function bnc_jquery_gigpress_toggle() { $wptouch('#wptouch-gigpress').fadeToggle(400);}
-
 function bnc_jquery_prowl_open() { $wptouch('#prowl-message').fadeToggle(400);}
-
 function bnc_jquery_wordtwit_open() { $wptouch('#wptouch-wordtwit').fadeToggle(400);}
 
 

@@ -21,15 +21,14 @@ The theme also includes the ability for your visitors to easily switch between t
 = Version 1.9.9 (unreleased) =
 
 * Added HTML5 types for comment url and email (devices capable now show unique keyboard layouts for these inputs)
-* Revised post/page auto-detection features
-* Added client-side persistent (saved with cookies) Post options Text-Size changer to single-post page
+* Added and refined jQuery code, effects
+* Revised post/page image sizing auto-detection features
 * Changed the way Ajax comments work - will now work for everyone
 * Changed code referencing javascript:return false; to javascript:void(0);
-* Added and refined jQuery code, effects
 * Changed admin panel to stop using Ajax that would sometimes fail to load
-* removed comments-ajax.php from theme (not needed anymore)
-* Added jcookies.js script
-* Removed obsolete code
+* Removed comments-ajax.php from theme (not needed anymore)
+* Removed ajax comments option from the admin  (not needed anymore)
+* Removed obsolete code orphans from old code methods
 * Bug fixes
 
 = Version 1.9.8.3 =

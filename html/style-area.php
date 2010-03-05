@@ -5,7 +5,7 @@
 		<h3><span class="style-options">&nbsp;</span><?php _e( "Style &amp; Color Options", "wptouch" ); ?></h3>
 
 			<div class="left-content skins-left-content">
-				<p><?php _e( "Here you can customize some of the more prominent style features of WPtouch.", "wptouch" ); ?></p>
+				<p><?php _e( "Here you can customize some of the more visible features of WPtouch.", "wptouch" ); ?></p>
 			</div>
 		
 			<div class="right-content skins-fixed">
@@ -14,7 +14,7 @@
  <!-- Default skin -->
  
 		<div class="skins-desc" id="default-skin">
-			<p><?php _e( "The default WPtouch skin emulates a native iPhone application.", "wptouch" ); ?></p>
+			<p><?php _e( "The default WPtouch theme emulates a native iPhone application.", "wptouch" ); ?></p>
 			<ul class="wptouch-make-li-italic">
 					<li><select name="style-background">
 							<option <?php if ($wptouch_settings['style-background'] == "classic-wptouch-bg") echo " selected"; ?> value="classic-wptouch-bg">

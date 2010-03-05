@@ -75,7 +75,8 @@
 			</li>	
 			
 			
-			<li>
+<?php // remove it for now, not needed
+/*			<li>
 				<input class="checkbox" type="checkbox" name="enable-ajax-comments" <?php if (isset($wptouch_settings['enable-ajax-comments']) && $wptouch_settings['enable-ajax-comments'] == 1) echo('checked'); ?> />
 				<label class="label" for="enable-ajax-comments"> <?php _e( "Enable ajax for comments", "wptouch" ); ?> <a href="#ajax-com-info" class="fancylink">?</a></label>
 					<div id="ajax-com-info" style="display:none">
@@ -85,7 +86,7 @@
 						<p><?php _e( "Uncheck this option if you're having problems or would prefer to use the standard WordPress comment submission format.", "wptouch" ); ?></p>
 					</div>
 			</li>
-		
+*/ ?>
 
 			<li>
 				<input class="checkbox" type="checkbox" name="enable-gravatars" <?php if (isset($wptouch_settings['enable-gravatars']) && $wptouch_settings['enable-gravatars'] == 1) echo('checked'); ?> />
@@ -116,12 +117,12 @@
 
 			<li>
 				<input class="checkbox" type="checkbox" name="enable-exclusive" <?php if (isset($wptouch_settings['enable-exclusive']) && $wptouch_settings['enable-exclusive'] == 1) echo('checked'); ?> />
-				<label class="label" for="enable-exclusive"> <?php _e( "Enable WPtouch exclusive mode", "wptouch" ); ?> <a href="#exclusive-info" class="fancylink">?</a></label>
-					<div id="exclusive-info" style="display:none">
+				<label class="label" for="enable-exclusive"> <?php _e( "Enable WPtouch Restricted Mode", "wptouch" ); ?> <a href="#restricted-info" class="fancylink">?</a></label>
+					<div id="restricted-info" style="display:none">
 						<h2><?php _e( "More Info", "wptouch" ); ?></h2>
-						<p><?php _e( "Attempts to disallow other plugins from loading into WPtouch.", "wptouch" ); ?></p> 
-						<p><?php _e( "Sometimes fixes difficult to fix incompatibilities and speeds up WPtouch.", "wptouch" ); ?></p>
-						<p><?php _e( "Some plugins load conflicting javascript, extra CSS style sheets, and other functional code into your theme to accomplish what they add to your site. As WPtouch works complete on its own without any other plugin installed, in some cases (where you have several plugins or find something doesn't work right with WPtouch) you may want to enable Exclusive Mode to ensure that WPtouch works properly, and loads quickly for mobile users.", "wptouch" ); ?></p>
+						<p><?php _e( "Disallow other plugins from loading into scripts into WPtouch's header and footer.", "wptouch" ); ?></p> 
+						<p><?php _e( "Sometimes fixes incompatibilities and speeds up WPtouch.", "wptouch" ); ?></p>
+						<p><?php _e( "Some plugins load conflicting javascript, extra CSS style sheets, and other functional code into your theme to accomplish what they add to your site. As WPtouch works complete on its own without any other plugin installed, in some cases (where you have several plugins or find something doesn't work right with WPtouch) you may want to enable Restricted Mode to ensure that WPtouch works properly, and loads quickly for mobile users.", "wptouch" ); ?></p>
 					</div>
 
 	<ul class="wptouch-make-li-italic">

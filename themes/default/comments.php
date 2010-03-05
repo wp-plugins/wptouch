@@ -75,8 +75,9 @@
 
 		<div id="refresher" style="display:none;">
 			<img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/images/good.png" alt="checkmark" />
-			<h3><?php _e( "Comment added.", "wptouch" ); ?></h3>
-			&raquo; <a href="javascript:this.location.reload();"><?php _e( "Refresh the page", "wptouch" ); ?></a> <?php _e( "to post a new comment, or see your published comment.", "wptouch" ); ?>
+			<h3><?php _e( "Success! Comment added.", "wptouch" ); ?></h3>
+			&rsaquo; <a href="javascript:this.location.reload();"><?php _e( "Refresh the page to see your comment.", "wptouch" ); ?></a><br />
+				<?php _e( "(If your comment requires moderation it will be added soon.)", "wptouch" ); ?>
 		</div>
 
 		<form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" id="commentform">
@@ -104,6 +105,8 @@
 		</p>
 
 	<?php endif; ?>
+			<div id="errors" style="display:none"><?php _e( "There was an error posting your comment. Maybe it was too short?", "wptouch" ); ?></div>
+
 		<?php do_action('comment_form', $post->ID); ?>
 		<p><textarea name="comment" id="comment" tabindex="4"></textarea></p>
 		
@@ -114,9 +117,6 @@
 				<img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/themes/core/core-images/comment-ajax-loader.gif" alt="" /> <p><?php _e( 'Publishing...', 'wptouch' ); ?></p>
 			</div>
 		</p>
-		<div id="errors" style="display:none">
-			<?php _e( "There was an error. Please refresh the page and try again.", "wptouch" ); ?>
-		</div>				
 		</form>
 
 	<?php endif; // If registration required and not logged in ?>

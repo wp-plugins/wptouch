@@ -4,7 +4,7 @@
    Plugin URI: http://bravenewcode.com/products/wptouch
    Description: A plugin which formats your site with a mobile theme for the Apple <a href="http://www.apple.com/iphone/">iPhone</a> / <a href="http://www.apple.com/ipodtouch/">iPod touch</a>, <a href="http://www.android.com/">Google Android</a> and other touch-based smartphones.
 	Author: Dale Mugford & Duane Storey (BraveNewCode)
-	Version: 1.9.9 (beta)
+	Version: 1.9.9
 	Author URI: http://www.bravenewcode.com
    
 	# Thanks to ContentRobot and the iWPhone theme/plugin
@@ -40,24 +40,12 @@
 
 
 global $bnc_wptouch_version;
-$bnc_wptouch_version = '1.9.9 (beta)';
+$bnc_wptouch_version = '1.9.9';
 
 require_once( 'include/plugin.php' );
 require_once( 'include/compat.php' );
 
 define( 'WPTOUCH_PROWL_APPNAME', 'WPtouch');
-
-function wp_touch_get_comment_count() {
-	global $wpdb;
-	global $post;
-	
-	$result = $wpdb->get_row( $wpdb->prepare( "SELECT count(*) as c FROM {$wpdb->comments} WHERE comment_type = '' AND comment_approved = 1 AND comment_post_ID = %d", $post->ID ) );
-	if ( $result ) {
-		return $result->c;
-	} else {
-		return 0;	
-	}
-}
 
 //The WPtouch Settings Defaults
 global $wptouch_defaults;
@@ -164,10 +152,24 @@ function wptouch_content_filter( $content ) {
 
 	add_filter('init', 'wptouch_init');
 
-	function WPtouch($before = '', $after = '') {
-		global $bnc_wptouch_version;
-		echo $before . 'WPtouch ' . $bnc_wptouch_version . $after;
+// Version number for the admin header, footer
+function WPtouch($before = '', $after = '') {
+	global $bnc_wptouch_version;
+	echo $before . 'WPtouch ' . $bnc_wptouch_version . $after;
+}
+
+// Stop '0' Comment Counts
+function wp_touch_get_comment_count() {
+	global $wpdb;
+	global $post;
+	
+	$result = $wpdb->get_row( $wpdb->prepare( "SELECT count(*) as c FROM {$wpdb->comments} WHERE comment_type = '' AND comment_approved = 1 AND comment_post_ID = %d", $post->ID ) );
+	if ( $result ) {
+		return $result->c;
+	} else {
+		return 0;	
 	}
+}
 	
 // WPtouch WP Thumbnail Support
 	if ( function_exists( 'add_theme_support' ) ) { // Added in 2.9
@@ -176,11 +178,11 @@ function wptouch_content_filter( $content ) {
 	}
 
 
-//Add a link to settings on the plugin listings page
+//Add a link to 'Settings' on the plugin listings page
 function wptouch_settings_link( $links, $file ) {
  	if( $file == 'wptouch/wptouch.php' && function_exists( "admin_url" ) ) {
 		$settings_link = '<a href="' . admin_url( 'options-general.php?page=wptouch/wptouch.php' ) . '">' . __('Settings') . '</a>';
-		array_unshift( $links, $settings_link ); // before other links
+		array_unshift( $links, $settings_link ); // before the other links
 	}
 	return $links;
 }
