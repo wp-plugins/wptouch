@@ -371,6 +371,20 @@ class WPtouchPlugin {
 		$vars[] = "wptouch";
 		return $vars;
 	}
+	
+	function wptouch_parse_request( $wp ) {
+		if  (array_key_exists( "wptouch", $wp->query_vars ) ) {
+			switch ( $wp->query_vars["wptouch"] ) {
+				case "upload":
+					include( 'ajax/file_upload.php' );	
+					break;
+				case "plugins":
+					include( 'ajax/load-plugins.php' );
+					break;
+			}
+			exit;
+		}	
+	}
 
 	function bnc_head() {
 		if ( $this->applemobile && $this->desired_view == 'normal' ) {
