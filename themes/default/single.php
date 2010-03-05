@@ -21,12 +21,12 @@
 		<?php endif; ?>
 		</div>
 	</div>
-<ul id="text-options" style="display:none">
+<!-- <ul id="text-options" style="display:none">
 <li>Text Size:</li>
 <li><a id="text-reg" href="javascript:void(0);" onclick="wptouch_set_text_13();">A</a></li>
 <li><a id="text-med" href="javascript:void(0);" onclick="wptouch_set_text_14();">A</a></li>
 <li><a id="text-lg" href="javascript:void(0);" onclick="wptouch_set_text_15();">A</a></li>
-</ul>
+</ul> -->
 		<div class="clearer"></div>
 			<?php wptouch_include_adsense(); ?>
 
