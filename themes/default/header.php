@@ -175,7 +175,7 @@ include( dirname(__FILE__) . '/../core/core-header.php' );
 				<?php foreach( $tweets as $tweet ) { ?>
 				<li>
 					<?php echo strip_tags( $tweet['content'], ''); ?>
-					<p class="time"><?php echo wordtwit_friendly_date( strtotime( $tweet['published'] ) ); ?></p>
+					<p class="time"><?php echo wordtwit_friendly_date( $tweet['published'] ); ?></p>
 				</li>
 		  	 	<?php } ?>
 		  	 <?php } else { ?>
