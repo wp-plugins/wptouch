@@ -20,7 +20,7 @@ The theme also includes the ability for your visitors to easily switch between t
 
 = Version 1.9.9.2 =
 
-* Changed date/time parsing for WordTwit integration
+* Changed date/time parsing for WordTwit integration.  Updated WordTwit if you see incorrect date/times.
 
 = Version 1.9.9.1 =
 
