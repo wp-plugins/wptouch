@@ -315,6 +315,11 @@ blockquote {
 	padding: 0;
 }
 
+.dropper ul#head-tags li {
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+
 .dropper ul#head-pages li, .dropper ul#head-cats li, .dropper ul#head-tags li li, .dropper ul#head-account li, ul#tweets li {
 	border-bottom: 1px solid #1d1d1d;
 	margin: 0;
