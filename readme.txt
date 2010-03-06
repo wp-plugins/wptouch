@@ -23,6 +23,7 @@ The theme also includes the ability for your visitors to easily switch between t
 * Updated outdated links in the admin panel
 * Updated outdated text in the admin panel
 * Re-validated admin XHTML with W3C
+* Fixed User Agent strings which caused browsers to show WPtouch
 
 
 = Version 1.9.9.2 =
