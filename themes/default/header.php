@@ -73,7 +73,7 @@ include( dirname(__FILE__) . '/../core/core-header.php' );
 				</ul>
 	
 				<ul id="head-tags">
-					<li><?php wp_tag_cloud('smallest=13&largest=13&unit=px&number=30&order=asc&format=list'); ?></li>
+					<li><?php wp_tag_cloud('smallest=13&largest=13&unit=px&number=20&order=asc&format=list'); ?></li>
 				</ul>
 
 		<ul id="head-account">
