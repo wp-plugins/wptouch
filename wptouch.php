@@ -208,7 +208,7 @@ function bnc_wptouch_get_user_agents() {
 		"cupcake", 			 // 1.5+ Android
 		"blackberry9500",	 // Storm
 		"blackberry9530",	 // Storm
-		"Mini/N.M", 		 	 // Opera Mini Experimental
+		"opera mini", 		 // Opera Mini Experimental
 		"webos",				 // Palm Pre Experimental
 		"pre",				 	 // Palm Pre Experimental
 		"incognito", 			 // Other iPhone browser
