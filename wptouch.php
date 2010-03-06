@@ -210,7 +210,7 @@ function bnc_wptouch_get_user_agents() {
 		"blackberry9530",	 // Storm
 		"Mini/1.2", 		 // Opera Mini Experimental
 		"webos",				 // Palm Pre Experimental
-		"pre",				 	 // Palm Pre Experimental
+//		"pre",				 	 // Palm Pre Experimental
 		"incognito", 			 // Other iPhone browser
 		"webmate" 			 // Other iPhone browser
 	);
