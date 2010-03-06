@@ -203,7 +203,6 @@ function bnc_wptouch_get_user_agents() {
 	$useragents = array(		
 		"iphone",  				 // Apple iPhone
 		"ipod", 					 // Apple iPod touch
-		"aspen", 				 // iPhone simulator
 		"dream", 				 // Pre 1.5 Android
 		"android", 			 // 1.5+ Android
 		"cupcake", 			 // 1.5+ Android

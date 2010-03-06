@@ -1,4 +1,7 @@
-/* @override http://www.bravenewcode.com/wordpress/wp-content/plugins/wptouch/themes/default/style-compressed.css */
+/* @override 
+	http://www.bravenewcode.com/wordpress/wp-content/plugins/wptouch/themes/default/style-compressed.css
+	http://www.bravenewcode.com/wordpress/wp-content/plugins/wptouch/themes/default/style.css
+*/
 
 /*  
 Theme Name: WPtouch Mobile Plugin & Theme For WordPress
@@ -249,15 +252,15 @@ blockquote {
 }
 
 #drop-fade a.top {
-	font-size: 10px;
 	margin-right: 8px;
 	position: relative;
 	bottom: 3px;
-	color: #fff;
+	color: #eee;
 	text-shadow: #000000 0px -1px 1px;
 	display: block;
 	float: right;
 	padding: 6px 2px 2px 0;
+	font: bold 11px "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 #drop-fade #loginopen {
@@ -312,7 +315,7 @@ blockquote {
 	padding: 0;
 }
 
-.dropper li {
+.dropper ul#head-cats li, .dropper ul#head-tags li li {
 	border-bottom: 1px solid #1d1d1d;
 	margin: 0;
 	background: url(../core/core-images/arrow.png) no-repeat right center;
@@ -339,7 +342,7 @@ blockquote {
 	text-decoration: underline;
 }
 
-.dropper li:hover {
+.dropper ul#head-cats li:hover, .dropper ul#head-tags li li:hover {
 	background-color: #222;
 	border-top: 1px solid #222;
 	position: relative;
@@ -410,7 +413,7 @@ blockquote {
 }
 
 #tabnav a:hover, #tabnav a:active {
-	color: #fff;
+	color: #fff !important;
 }
 
 /* @end */

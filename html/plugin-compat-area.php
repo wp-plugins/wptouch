@@ -85,12 +85,12 @@
 					
 					<!-- wp cache -->		  
 						<div class="sort-of">
-							<a href="http://mnm.uib.es/gallir/wp-cache-2/" target="_blank">WP Cache</a> is supported, but requires configuration. Follow <a href="http://support.bravenewcode.com/topic/knowledge-base-using-wptouch-with-wp-super-cache#post-611" target="_blank">this support forum thread for more information.
+							<a href="http://mnm.uib.es/gallir/wp-cache-2/" target="_blank">WP Cache</a> is supported, but requires configuration. Follow <a href="http://www.bravenewcode.com/2009/12/video-tutorial-configuring-wptouch-with-wp-super-cache/" target="_blank">this video tutorial</a> for more information.
 						</div>
 								
 					<!-- wp super cache -->		  
 						<div class="sort-of">
-							<a href="http://mnm.uib.es/gallir/wp-cache-2/" target="_blank">WP Super Cache</a> is supported, but requires configuration. Follow <a href="http://support.bravenewcode.com/topic/knowledge-base-using-wptouch-with-wp-super-cache#post-611" target="_blank">this support forum thread for more information.
+							<a href="http://mnm.uib.es/gallir/wp-cache-2/" target="_blank">WP Super Cache</a> is supported, but requires configuration. Follow <a href="http://www.bravenewcode.com/2009/12/video-tutorial-configuring-wptouch-with-wp-super-cache/" target="_blank">this video tutorial</a> for more information.
 						</div>
 		
 					<!-- wp css -->		  

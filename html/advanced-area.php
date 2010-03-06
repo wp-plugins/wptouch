@@ -73,20 +73,6 @@
 						<p><?php _e( "When this option is checked and the WordTwit plugin is installed, a list of your Tweets will be viewable from a drop-down in the WPtouch header.", "wptouch" ); ?></p>
 					</div><br /><br />
 			</li>	
-			
-			
-<?php // remove it for now, not needed
-/*			<li>
-				<input class="checkbox" type="checkbox" name="enable-ajax-comments" <?php if (isset($wptouch_settings['enable-ajax-comments']) && $wptouch_settings['enable-ajax-comments'] == 1) echo('checked'); ?> />
-				<label class="label" for="enable-ajax-comments"> <?php _e( "Enable ajax for comments", "wptouch" ); ?> <a href="#ajax-com-info" class="fancylink">?</a></label>
-					<div id="ajax-com-info" style="display:none">
-						<h2><?php _e( "More Info", "wptouch" ); ?></h2>
-						<p><?php _e( "When this option is checked, comments are submitted and returned in real time using Ajax.", "wptouch" ); ?></p>
-						<p><?php _e( "However, some server environments and other WordPress plugins prevent WPtouch's Ajax comments from working.", "wptouch" ); ?></p>
-						<p><?php _e( "Uncheck this option if you're having problems or would prefer to use the standard WordPress comment submission format.", "wptouch" ); ?></p>
-					</div>
-			</li>
-*/ ?>
 
 			<li>
 				<input class="checkbox" type="checkbox" name="enable-gravatars" <?php if (isset($wptouch_settings['enable-gravatars']) && $wptouch_settings['enable-gravatars'] == 1) echo('checked'); ?> />
