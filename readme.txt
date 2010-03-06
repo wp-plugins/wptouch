@@ -18,6 +18,13 @@ The theme also includes the ability for your visitors to easily switch between t
 
 == Changelog ==
 
+= Version 1.9.9.3 =
+* Theme CSS fixes and revisions
+* Updated outdated links in the admin panel
+* Updated outdated text in the admin panel
+* Re-validated admin XHTML with W3C
+
+
 = Version 1.9.9.2 =
 * Updated user agents for Opera Mini and Palm Pre ('mini' and 'pre')
 * Removed orphaned code relating to ajax comments option
@@ -432,7 +439,7 @@ The theme also includes the ability for your visitors to easily switch between t
 = 2.6 and Older =
 Sorry, we do not officially support installations on WordPress 2.6 or older. You can use WPtouch 1.9.3.4 or older on these installations, however.
 
-= 2.7, 2.8+ =
+= 2.7, 2.8, 2.9+ =
 You can install *WPtouch* directly from the WordPress admin! Visit the *Plugins/Add New* page and search for 'WPtouch'. Click to install.
 
 Once installed and activated visit the WPtouch admin page (*Settings/WPtouch*) to customize your WPtouch appearance.
@@ -445,7 +452,7 @@ The best way to use WPtouch on WordPress MU is to do so via the "Activate WPtouc
 * Ensure that you have site wide plugins enabled in the Site Admin / Options menu
 * On the plugin configuration page activate WPtouch as a site wide plugin by clicking the "Activate WPtouch iPhone Theme Site Wide" link.  If WPtouch is already activated, deactivate it first.
 
-You can also checkout our Support Forums at http://support.bravenewcode.com to post questions and learn tips and tricks for *WPtouch* and our other plugins.
+You can also checkout our brand new Support Forums at http://www.bravenewcode.com/support/ to post questions and learn tips and tricks for *WPtouch* and our other plugins.
 
 
 == Frequently Asked Questions ==

@@ -315,7 +315,7 @@ blockquote {
 	padding: 0;
 }
 
-.dropper ul#head-cats li, .dropper ul#head-tags li li {
+.dropper ul#head-pages li, .dropper ul#head-cats li, .dropper ul#head-tags li li, .dropper ul#head-account li, ul#tweets li {
 	border-bottom: 1px solid #1d1d1d;
 	margin: 0;
 	background: url(../core/core-images/arrow.png) no-repeat right center;
@@ -325,7 +325,7 @@ blockquote {
 	text-align: left;
 }
 
-.dropper li.text {
+.dropper ul#head-account li.text {
 	color: #eee;
 	text-shadow: #111 0 -1px 1px;
 	text-align: center;
@@ -335,7 +335,7 @@ blockquote {
 	text-transform: none;
 }
 
-.dropper li.text a {
+.dropper ul#head-account li.text a {
 	display: inline;
 	margin: 0;
 	padding: 0;
@@ -427,6 +427,7 @@ blockquote {
 	border-top: 1px solid #3e3e3e;
 	background-color: #222;
 	top: 20px;
+	text-align: left;
 }
 
 #wptouch-wordtwit #twitter-style-bar {
@@ -488,29 +489,24 @@ blockquote {
 	padding: 3px 0 0;
 }
 
-#wptouch-wordtwit ul {
-	
-}
-
-#wptouch-wordtwit li {
+#wptouch-wordtwit ul#tweets li {
 	color: #ccc;
 	font-size: 12px;
 	text-shadow: #000000 0 -1px 0;
-	text-transform: none;
 	background-image: none;
 	background-color: #2c2c2c;
-	padding-top: 10px;
-	padding-left: 10px;
-	padding-right: 50px;
+	padding: 10px 50px 10px 10px;
 }
 
-#wptouch-wordtwit li:last-child {
-	padding-bottom: 20px;
+#wptouch-wordtwit ul#tweets li:last-child {
+	padding-bottom: 30px;
 }
 
 #wptouch-wordtwit li p.time {
 	color: #777;
 	font-size: 11px;
+	padding: 0;
+	margin: 0;
 }
 
 /* @end */
