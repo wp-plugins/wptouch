@@ -186,6 +186,10 @@
 			$a['style-background'] = $_POST['style-background'];
 		}
 
+		if ( isset($_POST['style-icon']) ) {
+			$a['style-icon'] = $_POST['style-icon'];
+		}
+		
 		if ( isset( $_POST['enable-exclusive'] ) ) {
 			$a['enable-exclusive'] = 1;	
 		} else {

@@ -81,6 +81,7 @@ $wptouch_defaults = array(
 //
 	'style-text-justify' => 'full-justified',
 	'style-background' => 'classic-wptouch-bg',
+	'style-icon' => 'glossy-icon',
 	'enable-regular-default' => false,
 	'excluded-cat-ids' => '',
 	'home-page' => 0,
@@ -782,6 +783,11 @@ function bnc_get_link_color() {
 function bnc_get_h2_font() {
 	$v = bnc_wp_touch_get_menu_pages();
 	return $v['h2-font'];
+}
+
+function bnc_get_icon_style() {
+	$v = bnc_wp_touch_get_menu_pages();
+	return $v['icon-style'];
 }
 
 require_once( 'include/icons.php' );

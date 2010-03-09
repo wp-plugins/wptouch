@@ -25,6 +25,24 @@
 			</li>
 		</ul>
 		<ul>
+<!-- 			<li>
+						<select name="style-icon">
+							<option <?php if ($wptouch_settings['style-icon'] == "glossy-icon") echo " selected"; ?> value="glossy-icon">
+								<?php _e( "Glossy Effect", "wptouch" ); ?>
+							</option>
+							<option <?php if ($wptouch_settings['style-icon'] == "flat-icon") echo " selected"; ?> value="flat-icon">
+								<?php _e( "Flat Icon", "wptouch" ); ?>
+							</option>
+						</select>
+							<?php _e( "Bookmark Icon Style", "wptouch" ); ?> <a href="#logo-info" class="fancylink">?</a></label>
+							<div id="logo-info" style="display:none">
+								<h2><?php _e( "More Info", "wptouch" ); ?></h2>
+								<p><?php _e( "The default (Glossy Icon) applies a glossy effect to the home-screen bookmark/logo icon.", "wptouch" ); ?></p>
+								<p><?php _e( "The flat icon option applies does not alter the home-screen bookmark/logo icon.", "wptouch" ); ?></p>
+							</div>
+					</li>
+-->
+		
 			<li><input type="checkbox" class="checkbox" name="enable-main-home" <?php if (isset($wptouch_settings['enable-main-home']) && $wptouch_settings['enable-main-home'] == 1) echo('checked'); ?> /><label for="enable-main-home"><?php _e( "Enable Home Menu Item", "wptouch" ); ?></label></li>
 			<li><input type="checkbox" class="checkbox" name="enable-main-rss" <?php if (isset($wptouch_settings['enable-main-rss']) && $wptouch_settings['enable-main-rss'] == 1) echo('checked'); ?> /><label for="enable-main-rss"><?php _e( "Enable RSS Menu Item", "wptouch" ); ?></label></li>
 			<li><input type="checkbox" class="checkbox" name="enable-main-email" <?php if (isset($wptouch_settings['enable-main-email']) && $wptouch_settings['enable-main-email'] == 1) echo('checked'); ?> /><label for="enable-main-email"><?php _e( "Enable Email Menu Item", "wptouch" ); ?> <small>(<?php _e( "Uses default WordPress admin e-mail", "wptouch" ); ?>)</small></label><br /><br /><br /></li>
