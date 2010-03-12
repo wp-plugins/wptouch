@@ -76,7 +76,24 @@ bloginfo('name'); ?>- <?php the_title();?>&body=<?php _e( "Check out this post:"
 <!-- Let's rock the comments -->
 
 	<?php comments_template(); ?>
-
+<script type="text/javascript">
+jQuery(document).ready( function() {
+// Ajaxify '#commentform'
+var formoptions = { 
+	beforeSubmit: function() {$wptouch("#loading").fadeIn(400);},
+	success:  function() {
+		$wptouch("#commentform").hide();
+		$wptouch("#loading").fadeOut(400);
+		$wptouch("#refresher").fadeIn(400);
+		}, // end success 
+	error:  function() {
+		$wptouch('#errors').show();
+		$wptouch("#loading").fadeOut(400);
+		} //end error
+	} 	//end options
+$wptouch('#commentform').ajaxForm(formoptions);
+}); //End onReady
+</script>
 	<?php endwhile; else : ?>
 
 <!-- Dynamic test for what page this is. A little redundant, but so what? -->
