@@ -18,6 +18,11 @@ The theme also includes the ability for your visitors to easily switch between t
 
 == Changelog ==
 
+= Version 1.9.9.5 =
+* Made changes to the way ajax uploads are handled
+* Updated and fixed JS error in ajax_upload.js file
+* Fixed more GigPress CSS issues
+
 = Version 1.9.9.4 =
 * Updated and edited admin verbiage
 * Added remove action for Google Libraries plugin (for compatibility)

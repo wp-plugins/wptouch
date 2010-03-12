@@ -1,10 +1,11 @@
 /*
- * Ajax upload
- * Project page - http://valums.com/ajax-upload/
- * Copyright (c) 2008-2009 Andris Valums, http://valums.com
- * Licensed under the MIT license (http://valums.com/mit-license/)
- * Version 3.9 was released on 01.01.2009
+ * AJAX Upload ( http://valums.com/ajax-upload/ ) 
+ * Copyright (c) Andris Valums
+ * Licensed under the MIT license ( http://valums.com/mit-license/ )
+ * Thanks to Gary Haran, David Mark, Corey Burns and others for contributions 
+ * Version100644
  */
+
 (function () {
     /* global window */
     /* jslint browser: true, devel: true, undef: true, nomen: true, bitwise: true, regexp: true, newcap: true, immed: true */
@@ -18,7 +19,7 @@
             console.log( Array.prototype.join.call(arguments, ' '));
         }
     } 
-
+ 
     /**
      * Attaches event to a dom element.
      * @param {Element} el
@@ -163,7 +164,7 @@
 	        height : from.offsetHeight + 'px'
 	    });        
     }
-
+ 
     /**
     * Creates and returns element from html chunk
     * Uses innerHTML to create an element
@@ -205,7 +206,7 @@
     function getExt(file){
         return (-1 !== file.indexOf('.')) ? file.replace(/.*[.]/, '') : '';
     }
-
+ 
     function hasClass(el, name){        
         var re = new RegExp('\\b' + name + '\\b');        
         return re.test(el.className);
@@ -223,7 +224,7 @@
     function removeNode(el){
         el.parentNode.removeChild(el);
     }
-
+ 
     /**
      * Easy styling and uploading
      * @constructor
@@ -364,7 +365,7 @@
                 'fontSize' : '480px',                
                 'cursor' : 'pointer'
             });            
-
+ 
             var div = document.createElement("div");                        
             addStyles(div, {
                 'display' : 'block',
@@ -409,7 +410,7 @@
                     self.submit();
                 }
             });            
-
+ 
             addEvent(input, 'mouseover', function(){
                 addClass(self._button, self._settings.hoverClass);
             });
@@ -421,7 +422,7 @@
                 // The problem is that the value of input doesn't change if it 
                 // has display none when user selects a file           
                 input.parentNode.style.visibility = 'hidden';
-
+ 
             });   
                         
 	        div.appendChild(input);
@@ -451,7 +452,7 @@
             // IE will later display 'access denied' error
             // if you use using self._input.click()
             // other browsers just ignore click()
-
+ 
             addEvent(self._button, 'mouseover', function(){
                 if (self._disabled){
                     return;
@@ -604,6 +605,7 @@
                         // nodeValue property to retrieve the unmangled content.
                         // Note that IE6 only understands text/html
                         if (doc.body.firstChild && doc.body.firstChild.nodeName.toUpperCase() == 'PRE') {
+                            doc.normalize();
                             response = doc.body.firstChild.firstChild.nodeValue;
                         }
                         
@@ -659,16 +661,16 @@
             form.appendChild(this._input);
                         
             form.submit();
-
+ 
             // request set, clean up                
             removeNode(form); form = null;                          
             removeNode(this._input); this._input = null;
             
             // Get response from iframe and fire onComplete event when ready
             this._getResponse(iframe, file);            
-
+ 
             // get ready for next request            
             this._createInput();
         }
     };
-})(jQuery); 
+})();

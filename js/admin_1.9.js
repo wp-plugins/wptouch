@@ -7,15 +7,6 @@
  * Last Updated: March 5th, 2010
  */
 jQuery(document).ready(function(jQuery) {
-var button = jQuery('#upload_button'), interval;
-	new AjaxUpload(button, {
-		action: '../?wptouch=upload',
-		autoSubmit: true,
-		name: 'submitted_file',
-		onSubmit: function(file, extension) { jQuery("#upload_progress").show(); },
-		onComplete: function(file, response) { jQuery("#upload_progress").hide();
-		jQuery('#upload_response').hide().html(response).fadeIn(); }
-	});
 
 	setTimeout(function() { jQuery('img.ajax-load').fadeOut(1000); }, 2000);
 	setTimeout(function() { jQuery('#wptouchupdated').fadeIn(350); }, 750);
@@ -29,4 +20,5 @@ var button = jQuery('#upload_button'), interval;
 	jQuery("a.fancylink").fancybox({
 		'padding':	10, 'zoomSpeedIn': 250, 'zoomSpeedOut': 250, 'zoomOpacity': true, 'overlayShow': false, 'frameHeight': 320, 'frameWidth': 450, 'hideOnContentClick': true
 	});
+		
 });

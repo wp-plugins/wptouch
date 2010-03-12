@@ -1,6 +1,21 @@
 <?php require_once( dirname(__FILE__) . '/../include/icons.php' ); ?>
 <?php global $wptouch_settings; ?>
-
+<script type="text/javascript">
+jQuery(document).ready(function(jQuery) {
+var button = jQuery('#upload-icon'), interval;
+	new AjaxUpload(button, {
+		action: '<?php bloginfo( 'wpurl' ); ?>/?wptouch=upload',
+		autoSubmit: true,
+		name: 'submitted_file',
+		onSubmit: function(file, extension) { jQuery("#upload_progress").show(); },
+		onComplete: function(file, response) { 
+		jQuery("#upload_progress").hide();
+		jQuery('#upload_response').hide().html(response).fadeIn(); 
+		jQuery('#icon-pool-area').load('<?php echo admin_url( 'options-general.php?page=wptouch/wptouch.php' ); ?> #wptouchicons');	
+		}
+	});
+});
+</script>
 <div class="metabox-holder" id="available_icons">
 	<div class="postbox">
 		<h3><span class="icon-options">&nbsp;</span><?php _e( "Default &amp; Custom Icon Pool", "wptouch" ); ?></h3>
@@ -15,10 +30,10 @@
 				<h4><?php _e( "Glossy vs. Flat Bookmark Icons", "wptouch" ); ?></h4>
 				<p><?php echo sprintf( __( "If you do not want your logo to have the glossy effect added to it, make sure you name it %sapple-touch-icon-precomposed.png%s", "wptouch"), "<strong>", "</strong>" ); ?></p>
 				<p><?php echo sprintf( __( "Need help? You can use %sthis easy online icon generator%s to make one.", "wptouch"), "<a href='http://www.flavorstudios.com/iphone-icon-generator' target='_blank'>", "</a>" ); ?></p>
-				<p><?php echo sprintf( __( "These files will be stored in the<br />%s%s/wptouch/custom-icons%s<br />folder we create.", "wptouch"), "<strong>", '' .get_option( 'upload_path' ). '', "</strong>" ); ?></p>
+				<p><?php echo sprintf( __( "These files will be stored in the<br />%s%s/uploads/wptouch/custom-icons%s<br />folder we create.", "wptouch"), "<strong>", '' . compat_get_wp_content_dir( 'wptouch' ). '', "</strong>" ); ?></p>
 				<p><?php echo sprintf( __( "If an upload fails (usually it's a permission problem) check your wp-content path settings in WordPress' Miscellaneous Settings, or create the folder yourself using FTP and try again.", "wptouch"), "<strong>", "</strong>" ); ?></p>
 						
-				<div id="upload_button"></div>
+				<input id="upload-icon" type="submit" class="button" name="upload-icon" value="<?php _e('Upload Icon', 'wptouch' ); ?>"></input>
 
 			<div id="upload_response"></div>
 				<div id="upload_progress" style="display:none">
@@ -26,9 +41,11 @@
 				</div>
 								
 			</div><!-- left-content -->
-		
-	<div class="right-content">	
+
+	<div class="right-content" id="icon-pool-area">	
+	<div id="wptouchicons">
 		<?php bnc_show_icons(); ?>
+	</div>
 	</div>
 	
 	<div class="bnc-clearer"></div>

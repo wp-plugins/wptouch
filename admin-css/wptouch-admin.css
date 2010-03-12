@@ -1,7 +1,4 @@
-/* @override 
-	http://wptouch.com/wp-content/plugins/wptouch/admin-css/wptouch-admin.css
-	http://www.wptouch.com/wp-content/plugins/wptouch/admin-css/wptouch-admin.css
-*/
+/* @override http://www.bravenewcode.com/wordpress/wp-content/plugins/wptouch/admin-css/wptouch-admin.css */
 
 /* WPtouch 1.9 Admin CSS */
 
@@ -262,13 +259,18 @@ em.supported {
 	height: 32px;
 }
 
-#bnc-global #upload_button {
-	background: url(../images/upload.png) 0 0;
-	width: 174px;
-	height: 45px;
-	cursor: pointer !important;
-	display: block;
-	margin-bottom: 10px;
+#bnc-global #upload-icon {
+	width: auto;
+	border-width: 1px;
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+	border-radius: 12px;
+	padding: 4px 12px;
+	height: 14px;
+}
+
+#bnc-global #upload-icon:active {
+	border: 1px solid #6d94b1;
 }
 
 #bnc-global #upload_progress {
