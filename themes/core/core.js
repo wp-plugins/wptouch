@@ -13,15 +13,16 @@ $wptouch = jQuery.noConflict();
 // Make images and captions centered if they're bigger than 150 pixels
 jQuery(document).ready( function() {
 	
-	var imgWidth = $wptouch(".post img").width();
-	var captionWidth = $wptouch(".post .wp-caption").width();
-	if (imgWidth && captionWidth > 125) {
-		$wptouch('.pageentry img').removeClass('alignleft').addClass('aligncenter');
-		$wptouch('.pageentry img').removeClass('alignright').addClass('aligncenter');
-		$wptouch('.post img').removeClass('alignleft').addClass('aligncenter');
-		$wptouch('.post img').removeClass('alignright').addClass('aligncenter');
-		$wptouch('.post .wp-caption').removeClass('alignleft').addClass('aligncenter');
-		$wptouch('.post .wp-caption').removeClass('alignright').addClass('aligncenter');
+	var imgWidth = $wptouch('.post img').width();
+	var pageImgWidth = $wptouch('.pageentry img').width();
+	var captionWidth = $wptouch('.post .wp-caption').width();
+	if (imgWidth && captionWidth && pageImgWidth > 125) {
+		$wptouch('.pageentry img').replaceClass('alignleft', 'aligncenter');
+		$wptouch('.pageentry img').replaceClass('alignleft', 'aligncenter');
+		$wptouch('.post img').replaceClass('alignleft', 'aligncenter');
+		$wptouch('.post img').replaceClass('alignright', 'aligncenter');
+		$wptouch('.post .wp-caption').replaceClass('alignleft', 'aligncenter');
+		$wptouch('.post .wp-caption').replaceClass('alignright', 'aligncenter');
 	}
 
 // Ajaxify '#commentform'
@@ -45,7 +46,7 @@ $wptouch('#commentform').ajaxForm(formoptions);
 /////// -- Get out of frames! -- ///////
 if (top.location!= self.location) {top.location = self.location.href}
 
-/////// -- New function removeClass().addCLass() -- ///////
+/////// -- New function removeClass().addClass() -- ///////
 jQuery.fn.replaceClass = function(toReplace,replaceWith){
  return $wptouch(this).each(function(){
    return $wptouch(this).removeClass(toReplace).addClass(replaceWith);

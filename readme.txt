@@ -22,6 +22,7 @@ The theme also includes the ability for your visitors to easily switch between t
 * Made changes to the way ajax uploads are handled
 * Updated and fixed JS error in ajax_upload.js file
 * Fixed more GigPress CSS issues
+* Updated replace class javascript for page & post images and caption areas
 
 = Version 1.9.9.4 =
 * Updated and edited admin verbiage
