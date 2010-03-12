@@ -36,7 +36,13 @@ jQuery(document).ready( function() {
 	}
 
 //Remove Blip.tv vids
-$wptouch('.vvqbliptv').replaceWith('<div class="flash">&nbsp;</div>');
+//$wptouch('.vvqbliptv').replaceWith('<div class="flash">&nbsp;</div>');
+
+/////// -- Filters -- ///////
+
+jQuery('#wptouch-gigpress .gigpress-country').remove();
+jQuery('#wptouch-gigpress .gigpress-links-cell').remove();
+
 
 // Ajaxify '#commentform'
 var formoptions = { 
@@ -161,6 +167,7 @@ function bnc_showhide_coms_toggle() {
 	$wptouch("img#com-arrow").toggleClass("com-arrow-down");
 	$wptouch("h3#com-head").toggleClass("comhead-open");
 }
+
 
 /////// -- Tweak jQuery Timer -- ///////
 $wptouch.timerId = setInterval(function(){

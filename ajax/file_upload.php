@@ -24,7 +24,7 @@
 					} else {
 						echo  __( '<p style="color:green">File has been saved!</p>');					
 						echo '<p><strong>';			
-						echo sprintf(__( "%sClick here to refresh the page%s and see your icon.", "wptouch" ), '<a style="text-decoration:underline" href="#" onclick="location.reload(true); return false;">','</a>');
+						echo sprintf(__( "%sClick here to refresh the page%s and see your icon.", "wptouch" ), '<a style="text-decoration:underline" href="javascript: return false;" onclick="location.reload(true);">','</a>');
 						echo '</p></strong>';					
 					}					
 				} else {

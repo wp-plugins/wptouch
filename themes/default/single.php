@@ -45,7 +45,7 @@
 		<li><a href="mailto:?subject=<?php
 bloginfo('name'); ?>- <?php the_title();?>&body=<?php _e( "Check out this post:", "wptouch" ); ?>%20<?php the_permalink() ?>" onclick="return confirm('<?php _e( "Mail a link to this post?", "wptouch" ); ?>');" id="omail"></a></li>
 		<?php wptouch_twitter_link(); // This detects if it's an Apple mobile device or not and serves up the right Twitter link ?>
-		<li><a href="/" onclick="wptouch_toggle_bookmarks(); return false;" id="obook"></a></li>
+		<li><a href="javascript:return false;" onclick="wptouch_toggle_bookmarks();" id="obook"></a></li>
 		<?php $nextPost = get_next_post(); if ($nextPost) { ?>
 			<li><a href="<?php $nextPost = get_next_post(false); $nextURL = get_permalink($nextPost->ID); echo $nextURL; ?>" id="onext"></a></li>
 		<?php } ?>
@@ -54,9 +54,9 @@ bloginfo('name'); ?>- <?php the_title();?>&body=<?php _e( "Check out this post:"
 
   	<div id="twitter-box" style="display:none">
 		<ul>
-			<li><a href="/" onclick="window.location='tweetie:'+window.location; javascript: return false;"><img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/themes/core/core-images/twitter/tweetie.png" alt="tweetie" /> <?php _e( "Post to Tweetie", "wptouch" ); ?></a></li>
-			<li><a href="/" onclick="window.location='twitterrific:///post?message='+escape(window.location); javascript: return false;"><img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/themes/core/core-images/twitter/twitteriffic.png" alt="twitteriffic" /> <?php _e( "Post to Twitteriffic", "wptouch" ); ?></a></li>
-			<li><a href="/" onclick="window.location='twit:'+window.location; javascript: return false;"><img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/themes/core/core-images/twitter/twittelator.png" alt="twittelator" /> <?php _e( "Post to Twittelator Pro", "wptouch" ); ?></a></li>
+			<li><a href="javascript:return false;" onclick="window.location='tweetie:'+window.location;"><img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/themes/core/core-images/twitter/tweetie.png" alt="tweetie" /> <?php _e( "Post to Tweetie", "wptouch" ); ?></a></li>
+			<li><a href="javascript:return false;" onclick="window.location='twitterrific:///post?message='+escape(window.location);"><img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/themes/core/core-images/twitter/twitteriffic.png" alt="twitteriffic" /> <?php _e( "Post to Twitteriffic", "wptouch" ); ?></a></li>
+			<li><a href="javascript:return false;" onclick="window.location='twit:'+window.location;"><img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/themes/core/core-images/twitter/twittelator.png" alt="twittelator" /> <?php _e( "Post to Twittelator Pro", "wptouch" ); ?></a></li>
 		</ul>
 	</div>
 

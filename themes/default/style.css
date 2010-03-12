@@ -520,7 +520,7 @@ blockquote {
 
 #wptouch-gigpress {
 	color: #eee;
-	text-shadow: #000000 0 -1px 1px;
+	text-shadow: #111 0 1px 1px;
 	text-align: left;
 	font-size: 11px;
 	border-top: 1px solid #3e3e3e;
@@ -528,6 +528,12 @@ blockquote {
 	margin: 0;
 	padding: 0;
 	width: 99%;
+}
+
+#wptouch-gigpress .gigpress-heading {
+	background: #222 url(../core/core-images/gigpress-stripes.png) repeat-x;
+	border-bottom: 1px solid #646464;
+	font: bold 12px "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 #wptouch-gigpress #gigpress-style-bar {
@@ -545,6 +551,47 @@ blockquote {
 #wptouch-gigpress img {
 	float: left;
 	margin: 15px 10px;
+}
+
+#wptouch-gigpress td {
+	background-color: #3c3c3c;
+	text-align: center;
+	line-height: 160%;
+	border-bottom: 1px solid #636363;
+}
+
+#wptouch-gigpress .gigpress-address {
+	text-align: center;
+}
+
+#wptouch-gigpress tr.gigpress-row td {
+	background-color: #222;
+	font-weight: bold;
+	color: #eee;
+}
+
+#wptouch-gigpress .gigpress-info {
+	background-color: #333;
+}
+
+#wptouch-gigpress .gigpress-venue {
+	width: 40%;
+}
+
+#wptouch-gigpress a.gigpress-tickets-link {
+	display: block;
+	text-align: center;
+	background: -webkit-gradient(linear, left top, left bottom, from(#666), to(#444));;
+	font-size: 11px;
+	vertical-align: middle;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin: 10px 10%;
+	border: 1px solid #222;
+	-webkit-border-radius: 24px;
+	-moz-border-radius: 24px;
+		-webkit-box-shadow: #333 0px 2px 4px;
+		
 }
 
 /* @end */
