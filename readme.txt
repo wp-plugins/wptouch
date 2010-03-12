@@ -21,6 +21,10 @@ The theme also includes the ability for your visitors to easily switch between t
 = Version 1.9.9.4 =
 * Updated and edited admin verbiage
 * Added remove action for Google Libraries plugin (for compatibility)
+* Added remove action for GigPress CSS
+* Fixed broken GigPress drop down, added new styling
+* Changed javascript handlers
+* Misc tweaks and fixes
 
 
 = Version 1.9.9.3 =
