@@ -166,7 +166,7 @@ function wptouch_core_footer_switch_link() {
 	$switch_url = $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"];
 
 echo '<script type="text/javascript">function switch_delayer() { window.location = "' . get_bloginfo('siteurl') . '/?theme_view=normal&wptouch_redirect=' . $switch_url . '"}</script>';
-echo '' . __( "Mobile Theme", "wptouch" ) . ' <a id="switch-link" onclick="wptouch_switch_confirmation();" href="javascript:void(0);"></a>';
+echo '' . __( "Mobile Theme", "wptouch" ) . ' <a id="switch-link" onclick="wptouch_switch_confirmation(); return false;" href="/"></a>';
 }
 
 

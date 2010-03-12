@@ -29,7 +29,7 @@
 						});	
 					 });					
 				</script>
-					<a class="post-arrow" id="arrow-<?php the_ID(); ?>" href="javascript:void(0);"></a>
+					<a class="post-arrow" id="arrow-<?php the_ID(); ?>" href="javascript: return false;"></a>
 				<?php } ?>
 			</div> 
 		 <div id="arc-top" class="archive-top-left month-<?php echo get_the_time('m') ?>">
@@ -46,7 +46,7 @@
 						});	
 					 });					
 				</script>
-					<a class="post-arrow" id="arrow-<?php the_ID(); ?>" href="javascript:void(0);"></a>
+					<a class="post-arrow" id="arrow-<?php the_ID(); ?>" href="javascript: return false;"></a>
 				<?php } ?>
 				
 				
@@ -78,7 +78,7 @@
 							?>						
 						<?php } ?>
 						
-						<?php } elseif (get_post_custom_values('Thumbnail') == true) { ?>
+						<?php } elseif (get_post_custom_values('Thumbnail') == true || get_post_custom_values('thumbnail') == true) { ?>
 						
 						<img src="<?php $custom_fields = get_post_custom($post_ID); $my_custom_field = $custom_fields['Thumbnail']; foreach ( $my_custom_field as $key => $value ) echo "$value"; ?>" alt="custom-thumbnail" />
 						 
@@ -140,7 +140,7 @@
 
 	<div id="call<?php echo md5($_SERVER['REQUEST_URI']); ?>" class="ajax-load-more">
 		<div id="spinner<?php echo md5($_SERVER['REQUEST_URI']); ?>" class="spin"	 style="display:none"></div>
-		<a class="ajax" href="javascript:void(0);" onclick="$wptouch('#spinner<?php echo md5($_SERVER['REQUEST_URI']); ?>').fadeIn(200); $wptouch('#ajaxentries<?php echo md5($_SERVER['REQUEST_URI']); ?>').load('<?php echo get_next_posts_page_link(); ?>', {}, function(){ $wptouch('#call<?php echo md5($_SERVER['REQUEST_URI']); ?>').fadeOut();});">
+		<a class="ajax" href="/" onclick="$wptouch('#spinner<?php echo md5($_SERVER['REQUEST_URI']); ?>').fadeIn(200); $wptouch('#ajaxentries<?php echo md5($_SERVER['REQUEST_URI']); ?>').load('<?php echo get_next_posts_page_link(); ?>', {}, function(){ $wptouch('#call<?php echo md5($_SERVER['REQUEST_URI']); ?>').fadeOut(); return false;});">
 			<?php _e( "Load more entries...", "wptouch" ); ?>
 		</a>
 	</div>

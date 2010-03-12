@@ -18,6 +18,11 @@ The theme also includes the ability for your visitors to easily switch between t
 
 == Changelog ==
 
+= Version 1.9.9.4 =
+* Updated and edited admin verbiage
+* Added remove action for Google Libraries plugin (for compatibility)
+
+
 = Version 1.9.9.3 =
 * Theme CSS fixes and revisions
 * Updated outdated links in the admin panel
@@ -42,7 +47,7 @@ The theme also includes the ability for your visitors to easily switch between t
 * Added and refined jQuery code, effects
 * Revised post/page image sizing auto-detection features
 * Changed the way Ajax comments work - will now work for everyone
-* Changed code referencing javascript:return false; to javascript:void(0);
+* Changed code for JS - return false;
 * Changed admin panel to stop using Ajax that would sometimes fail to load
 * Removed comments-ajax.php from theme (not needed anymore)
 * Removed ajax comments option from the admin  (not needed anymore)
