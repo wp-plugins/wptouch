@@ -527,13 +527,14 @@ blockquote {
 	clear: both;
 	margin: 0;
 	padding: 0;
-	width: 99%;
+	width: 100%;
 }
 
 #wptouch-gigpress .gigpress-heading {
-	background: #222 url(../core/core-images/gigpress-stripes.png) repeat-x;
+	background: url(../core/core-images/gigpress-stripes.png) repeat-x;
 	border-bottom: 1px solid #646464;
 	font: bold 12px "Helvetica Neue", Helvetica, Arial, sans-serif;
+	padding: 5px 0 5px 10px;
 }
 
 #wptouch-gigpress #gigpress-style-bar {
@@ -549,34 +550,55 @@ blockquote {
 }
 
 #wptouch-gigpress img {
-	float: left;
 	margin: 15px 10px;
+	float: left;
 }
 
 #wptouch-gigpress td {
-	background-color: #3c3c3c;
-	text-align: center;
+	text-align: left;
 	line-height: 160%;
-	border-bottom: 1px solid #636363;
+	border-bottom: 1px solid #494949;
 }
 
 #wptouch-gigpress a {
 	text-align: center;
 	display: inline;
+	margin: 0;
+	padding: 0;
 }
 
 #wptouch-gigpress tr.gigpress-row td {
-	background-color: #222;
 	font-weight: bold;
 	color: #eee;
+	width: 1%;
+	background-color: #2c2c2c;
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
 
-#wptouch-gigpress .gigpress-info {
-	background-color: #333;
+#wptouch-gigpress tr.gigpress-info {
+	display: none;
+	width: 100%;
+	position: relative;
+}
+
+#wptouch-gigpress td.description {
+	width: 100%;
+	padding: 10px;
+	text-align: center;
+}
+
+#wptouch-gigpress .gigpress-date {
+	width: 26%;
+}
+
+#wptouch-gigpress .gigpress-city {
+	width: 37%;
 }
 
 #wptouch-gigpress .gigpress-venue {
-	width: 40%;
+	width: 42%;
+	padding-right: 5px;
 }
 
 #wptouch-gigpress a.gigpress-tickets-link {
@@ -587,11 +609,19 @@ blockquote {
 	vertical-align: middle;
 	padding-top: 5px;
 	padding-bottom: 5px;
-	margin: 10px 10%;
+	margin: 10px 25%;
 	border: 1px solid #222;
 	-webkit-border-radius: 14px;
 		-webkit-box-shadow: #333 0px 2px 4px;
-		
+}
+
+#wptouch-gigpress .gigpress-country {
+	display: none;
+}
+
+#wptouch-gigpress td.gigpress-links-cell {
+	padding-left: 0;
+	display: none;
 }
 
 /* @end */

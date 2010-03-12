@@ -24,12 +24,6 @@ jQuery(document).ready( function() {
 		$wptouch('.post .wp-caption').removeClass('alignright').addClass('aligncenter');
 	}
 
-/////// -- Filters -- ///////
-
-jQuery('#wptouch-gigpress .gigpress-country').remove();
-jQuery('#wptouch-gigpress .gigpress-links-cell').remove();
-
-
 // Ajaxify '#commentform'
 var formoptions = { 
 	beforeSubmit: function() {$wptouch("#loading").fadeIn(400);},
