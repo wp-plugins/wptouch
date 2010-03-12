@@ -4,7 +4,7 @@
  * Copyright (c) 2008 - 2010 Duane Storey & Dale Mugford (BraveNewCode Inc.)
  * Licensed under GPL.
  *
- * Last Updated: February 22nd, 2010
+ * Last Updated: March 12th, 2010
  */
 
 /////// -- Let's setup a unique namspace in jQuery -- ///////
@@ -12,17 +12,6 @@ $wptouch = jQuery.noConflict();
 
 // Make images and captions centered if they're bigger than 150 pixels
 jQuery(document).ready( function() {
-
-//  var tsize = $wptouch.cookie('textsize');
-//  	if (tsize == 13) {
-//  		$wptouch("#singlentry").css("font-size","13px");
-//  	}
-//      if (tsize == 14) {
-//  		$wptouch("#singlentry").css("font-size","14px");
-//  	}
-//  	if (tsize == 15) {
-//  		$wptouch("#singlentry").css("font-size","15px");
-//  	}
 	
 	var imgWidth = $wptouch(".post img").width();
 	var captionWidth = $wptouch(".post .wp-caption").width();
@@ -34,9 +23,6 @@ jQuery(document).ready( function() {
 		$wptouch('.post .wp-caption').removeClass('alignleft').addClass('aligncenter');
 		$wptouch('.post .wp-caption').removeClass('alignright').addClass('aligncenter');
 	}
-
-//Remove Blip.tv vids
-//$wptouch('.vvqbliptv').replaceWith('<div class="flash">&nbsp;</div>');
 
 /////// -- Filters -- ///////
 
@@ -76,34 +62,6 @@ jQuery.fn.replaceClass = function(toReplace,replaceWith){
 jQuery.fn.fadeToggle = function(speed, easing, callback) { 
 	return this.animate({opacity: 'toggle'}, speed, easing, callback); 
 };
-
-/////// --New Text-Size Settings -- ///////
-//  function wptouch_set_text_13() {
-//  $wptouch(this).click(function() {	
-//  	var date = new Date();
-//  	date.setTime(date.getTime() + (365 * 24 * 60 * 60 * 1000));
-//  	$wptouch.cookie('textsize', '13', { path: '/', expires: date });
-//  	$wptouch("#singlentry").css("font-size","13px");
-//  });
-//  }
-//  
-//  function wptouch_set_text_14() {
-//  $wptouch(this).click(function() {	
-//  	var date = new Date();
-//  	date.setTime(date.getTime() + (365 * 24 * 60 * 60 * 1000));
-//  	$wptouch.cookie('textsize', '14', { path: '/', expires: date });
-//  	$wptouch("#singlentry").css("font-size","14px");
-//  });
-//  }
-//  
-//  function wptouch_set_text_15() {
-//  $wptouch(this).click(function() {	
-//  	var date = new Date();
-//  	date.setTime(date.getTime() + (365 * 24 * 60 * 60 * 1000));
-//  	$wptouch.cookie('textsize', '15', { path: '/', expires: date });
-//  	$wptouch("#singlentry").css("font-size","15px");
-//  });
-//  }
 
 /////// -- Switch Magic -- ///////
 function wptouch_switch_confirmation() {
