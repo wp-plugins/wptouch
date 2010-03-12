@@ -4,7 +4,7 @@
    Plugin URI: http://bravenewcode.com/products/wptouch
    Description: A plugin which formats your site with a mobile theme for the Apple <a href="http://www.apple.com/iphone/">iPhone</a> / <a href="http://www.apple.com/ipodtouch/">iPod touch</a>, <a href="http://www.android.com/">Google Android</a>, <a href="http://www.palm.com/us/products/phones/pre/">Palm Pre</a> and other touch-based smartphones.
 	Author: Dale Mugford & Duane Storey (BraveNewCode)
-	Version: 1.9.9.4
+	Version: 1.9.9.5
 	Author URI: http://www.bravenewcode.com
    
 	# Thanks to ContentRobot and the iWPhone theme/plugin
@@ -40,7 +40,7 @@
 
 
 global $bnc_wptouch_version;
-$bnc_wptouch_version = '1.9.9.4';
+$bnc_wptouch_version = '1.9.9.5';
 
 require_once( 'include/plugin.php' );
 require_once( 'include/compat.php' );
