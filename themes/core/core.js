@@ -10,48 +10,8 @@
 /////// -- Let's setup a unique namspace in jQuery -- ///////
 $wptouch = jQuery.noConflict();
 
-// Make images and captions centered if they're bigger than 150 pixels
-jQuery(document).ready( function() {
-	
-	var imgWidth = $wptouch('.post img').width();
-	var pageImgWidth = $wptouch('.pageentry img').width();
-	var captionWidth = $wptouch('.post .wp-caption').width();
-	if (imgWidth && captionWidth && pageImgWidth > 125) {
-		$wptouch('.pageentry img').replaceClass('alignleft', 'aligncenter');
-		$wptouch('.pageentry img').replaceClass('alignleft', 'aligncenter');
-		$wptouch('.post img').replaceClass('alignleft', 'aligncenter');
-		$wptouch('.post img').replaceClass('alignright', 'aligncenter');
-		$wptouch('.post .wp-caption').replaceClass('alignleft', 'aligncenter');
-		$wptouch('.post .wp-caption').replaceClass('alignright', 'aligncenter');
-	}
-
-// Ajaxify '#commentform'
-var formoptions = { 
-	beforeSubmit: function() {$wptouch("#loading").fadeIn(400);},
-	success:  function() {
-		$wptouch("#commentform").hide();
-		$wptouch("#loading").fadeOut(400);
-		$wptouch("#refresher").fadeIn(400);
-		}, // end success 
-	error:  function() {
-		$wptouch('#errors').show();
-		$wptouch("#loading").fadeOut(400);
-		} //end error
-	} 	//end options
-$wptouch('#commentform').ajaxForm(formoptions);
-			 
-}); //End onReady
-
-
 /////// -- Get out of frames! -- ///////
 if (top.location!= self.location) {top.location = self.location.href}
-
-/////// -- New function removeClass().addClass() -- ///////
-jQuery.fn.replaceClass = function(toReplace,replaceWith){
- return $wptouch(this).each(function(){
-   return $wptouch(this).removeClass(toReplace).addClass(replaceWith);
- });
-}
 
 /////// --New function fadeToggle() -- ///////
 jQuery.fn.fadeToggle = function(speed, easing, callback) { 
@@ -106,9 +66,8 @@ $wptouch(function () {
     
     $wptouch('#tabnav a').click(function () {
         tabContainers.hide().filter(this.hash).show();
-        
-        $wptouch('#tabnav a').removeClass('selected');
-        $wptouch(this).addClass('selected');
+    $wptouch('#tabnav a').removeClass('selected');
+    $wptouch(this).addClass('selected');
         
         return false;
     }).filter(':first').click();
