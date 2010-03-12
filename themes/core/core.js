@@ -15,7 +15,7 @@ jQuery(document).ready( function() {
 	
 	var imgWidth = $wptouch(".post img").width();
 	var captionWidth = $wptouch(".post .wp-caption").width();
-	if (imgWidth && captionWidth > 150) {
+	if (imgWidth && captionWidth > 125) {
 		$wptouch('.pageentry img').removeClass('alignleft').addClass('aligncenter');
 		$wptouch('.pageentry img').removeClass('alignright').addClass('aligncenter');
 		$wptouch('.post img').removeClass('alignleft').addClass('aligncenter');
