@@ -52,7 +52,7 @@
 						</div>
 					</li>			
 					<?php } else { ?>
-					<li><strong class="no-pages"><?php echo sprintf(__( "%sCURL is required%s on your werbserver to use the Push capabilities of WPtouch.", "wptouch" ), '<a href="http://en.wikipedia.org/wiki/CURL" target="_blank">','</a>'); ?></strong></li>
+					<li><strong class="no-pages"><?php echo sprintf(__( "%sCURL is required%s on your webserver to use Push capabilities in WPtouch.", "wptouch" ), '<a href="http://en.wikipedia.org/wiki/CURL" target="_blank">','</a>'); ?></strong></li>
 					<?php } ?>	
 				</ul>
 			</div><!-- right content -->

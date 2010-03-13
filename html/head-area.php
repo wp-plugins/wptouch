@@ -25,15 +25,19 @@
 			<div id="wptouch-news-wrap">
 			<h3><span class="rss-head">&nbsp;</span><?php _e( "WPtouch Wire", "wptouch" ); ?></h3>
 				<div id="wptouch-news-content">
-					<?php require_once (ABSPATH . WPINC . '/rss.php');
-					$rss = @fetch_rss('http://www.bravenewcode.com/tag/wptouch/rss');
-					//$rss = @fetch_rss('http://earthhourblog.posterous.com/rss.xml');						
-					if ( isset($rss->items) && 0 != count($rss->items) ) { ?>
+					<?php if ( function_exists( 'curl_init' ) ) { include_once (ABSPATH . WPINC . '/rss.php');
+								$feed = fetch_rss('http://www.bravenewcode.com/tag/wptouch/rss'); // specify feed url
+								$items = array_slice($feed->items, 0, 5); // specify first and last item
+					?>
 					<ul>
-						<?php $rss->items = array_slice($rss->items, 0, 5); foreach ($rss->items as $item ) { ?>
-						<li><a target="_blank" class="orange-link" href='<?php echo wp_filter_kses($item['link']); ?>'><?php echo wp_specialchars($item['title']); ?></a></li>
-						<?php } ?>
+						<?php if (!empty($items)) : ?>
+						<?php foreach ($items as $item) : ?>
+							<li><a target="_blank" class="orange-link" href='<?php echo $item['link']; ?>'><?php echo $item['title']; ?></a></li>
+						<?php endforeach; ?>
+						<?php endif; ?>
 					</ul>
+					<?php } else { ?>
+						<p><?php echo sprintf(__( "%sCURL is required%s on your webserver to load RSS feeds.", "wptouch" ), '<a href="http://en.wikipedia.org/wiki/CURL" target="_blank">','</a>'); ?></p>
 					<?php } ?>
 				</div>
 			</div>
@@ -41,13 +45,16 @@
 			<div id="wptouch-support-wrap">			
 			<h3><span class="rss-head">&nbsp;</span><?php _e( "Twitter Topics", "wptouch" ); ?></h3>
 				<div id="wptouch-support-content">
-					<?php require_once (ABSPATH . WPINC . '/rss.php');
-					$rss = @fetch_rss('http://search.twitter.com/search.atom?q=wptouch');						
-					if ( isset($rss->items) && 0 != count($rss->items) ) { ?>
+					<?php if ( function_exists( 'curl_init' ) ) { include_once (ABSPATH . WPINC . '/rss.php');
+								$feed = fetch_rss('http://search.twitter.com/search.atom?q=wptouch'); // specify feed url
+								$items = array_slice($feed->items, 0, 5); // specify first and last item
+					?>
 					<ul>
-						<?php $rss->items = array_slice($rss->items, 0, 5); foreach ($rss->items as $item ) { ?>
-						<li><a target="_blank" class="orange-link" href='<?php echo wp_filter_kses($item['link']); ?>'><?php echo wp_specialchars($item['title']); ?></a></li>
-						<?php } ?>
+						<?php if (!empty($items)) : ?>
+						<?php foreach ($items as $item) : ?>
+							<li><a target="_blank" class="orange-link" href='<?php echo $item['link']; ?>'><?php echo $item['title']; ?></a></li>
+						<?php endforeach; ?>
+						<?php endif; ?>
 					</ul>
 					<?php } ?>
 				</div>
