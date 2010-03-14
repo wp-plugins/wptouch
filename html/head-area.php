@@ -1,6 +1,8 @@
 <?php global $wptouch_settings; ?>
 <?php global $bnc_wptouch_version; ?>
 
+<?php include( ABSPATH . WPINC . '/rss.php' ); ?>
+
 <div class="metabox-holder" id="wptouch-head">
 	<div class="postbox">
 		<div id="wptouch-head-colour">
@@ -25,10 +27,8 @@
 			<div id="wptouch-news-wrap">
 			<h3><span class="rss-head">&nbsp;</span><?php _e( "WPtouch Wire", "wptouch" ); ?></h3>
 				<div id="wptouch-news-content">
-					<?php if ( function_exists( 'curl_init' ) ) { include_once (ABSPATH . WPINC . '/rss.php');
-								$feed = fetch_rss('http://www.bravenewcode.com/tag/wptouch/rss'); // specify feed url
-								$items = array_slice($feed->items, 0, 5); // specify first and last item
-					?>
+					<?php $feed = fetch_rss('http://www.bravenewcode.com/tag/wptouch/feed/rss/'); ?>
+					<?php $items = array_slice($feed->items, 0, 5); ?>
 					<ul>
 						<?php if (!empty($items)) : ?>
 						<?php foreach ($items as $item) : ?>
@@ -36,19 +36,14 @@
 						<?php endforeach; ?>
 						<?php endif; ?>
 					</ul>
-					<?php } else { ?>
-						<p><?php echo sprintf(__( "%sCURL is required%s on your webserver to load RSS feeds.", "wptouch" ), '<a href="http://en.wikipedia.org/wiki/CURL" target="_blank">','</a>'); ?></p>
-					<?php } ?>
 				</div>
 			</div>
 
 			<div id="wptouch-support-wrap">			
 			<h3><span class="rss-head">&nbsp;</span><?php _e( "Twitter Topics", "wptouch" ); ?></h3>
 				<div id="wptouch-support-content">
-					<?php if ( function_exists( 'curl_init' ) ) { include_once (ABSPATH . WPINC . '/rss.php');
-								$feed = fetch_rss('http://search.twitter.com/search.atom?q=wptouch'); // specify feed url
-								$items = array_slice($feed->items, 0, 5); // specify first and last item
-					?>
+					<?php $feed = fetch_rss('http://search.twitter.com/search.atom?q=wptouch'); ?>								
+					<?php $items = array_slice($feed->items, 0, 5); ?>
 					<ul>
 						<?php if (!empty($items)) : ?>
 						<?php foreach ($items as $item) : ?>
@@ -56,7 +51,6 @@
 						<?php endforeach; ?>
 						<?php endif; ?>
 					</ul>
-					<?php } ?>
 				</div>
 			</div>
 			
