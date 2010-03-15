@@ -92,7 +92,8 @@ $wptouch_defaults = array(
 	'adsense-channel' => '',
 	'custom-user-agents' => array(),
 	'enable-show-tweets' => false,
-	'enable-gigpress-button' => false
+	'enable-gigpress-button' => false,
+	'enable-flat-icon' => false
 );
 
 function wptouch_get_plugin_dir_name() {
@@ -647,6 +648,11 @@ function bnc_is_gigpress_enabled() {
 	return $ids['enable-gigpress-button'];
 }	
 
+function bnc_is_flat_icon_enabled() {
+	$ids = bnc_wp_touch_get_menu_pages();
+	return $ids['enable-flat-icon'];
+}	
+
 function bnc_is_login_button_enabled() {
 	$ids = bnc_wp_touch_get_menu_pages();
 	return $ids['enable-login-button'];
@@ -718,7 +724,7 @@ function bnc_wp_touch_get_pages() {
 			 $k == 'enable-main-home' || $k == 'enable-main-rss' || $k == 'enable-main-email' || 
 			 $k == 'enable-main-name' || $k == 'enable-main-tags' || $k == 'enable-main-categories' || 
 			 $k == 'enable-prowl-comments-button' || $k == 'enable-prowl-users-button' || 
-			 $k == 'enable-prowl-message-button' || $k == 'enable-gigpress-button') {
+			 $k == 'enable-prowl-message-button' || $k == 'enable-gigpress-button'  || $k == 'enable-flat-icon') {
 			} else {
 				if (is_numeric($k)) {
 					$keys[] = $k;

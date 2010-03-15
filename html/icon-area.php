@@ -26,9 +26,6 @@ var button = jQuery('#upload-icon'), interval;
 
 				<h4><?php _e( "Logo/Bookmark Icons", "wptouch" ); ?></h4>
 				<p><?php _e( "If you're adding a logo icon, the best dimensions for it are 57x57px (png) when used as a bookmark icon.", "wptouch" ); ?></p>
-
-				<h4><?php _e( "Glossy vs. Flat Bookmark Icons", "wptouch" ); ?></h4>
-				<p><?php echo sprintf( __( "If you do not want your logo to have the glossy effect added to it, make sure you name it %sapple-touch-icon-precomposed.png%s", "wptouch"), "<strong>", "</strong>" ); ?></p>
 				<p><?php echo sprintf( __( "Need help? You can use %sthis easy online icon generator%s to make one.", "wptouch"), "<a href='http://www.flavorstudios.com/iphone-icon-generator' target='_blank'>", "</a>" ); ?></p>
 				<p><?php echo sprintf( __( "These files will be stored in the<br />%s%s/uploads/wptouch/custom-icons%s<br />folder we create.", "wptouch"), "<strong>", '' . compat_get_wp_content_dir( 'wptouch' ). '', "</strong>" ); ?></p>
 				<p><?php echo sprintf( __( "If an upload fails (usually it's a permission problem) check your wp-content path settings in WordPress' Miscellaneous Settings, or create the folder yourself using FTP and try again.", "wptouch"), "<strong>", "</strong>" ); ?></p>

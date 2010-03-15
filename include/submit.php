@@ -48,6 +48,12 @@
 			$a['enable-gigpress-button'] = 0;
 		}
 
+		if ( isset( $_POST['enable-flat-icon'] ) ) {
+			$a['enable-flat-icon'] = 1;
+		} else {
+			$a['enable-flat-icon'] = 0;
+		}
+		
 		if ( isset( $_POST['enable-gravatars'] ) ) {
 			$a['enable-gravatars'] = 1;
 		} else {
