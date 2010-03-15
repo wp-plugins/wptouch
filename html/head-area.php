@@ -27,8 +27,7 @@
 			<div id="wptouch-news-wrap">
 			<h3><span class="rss-head">&nbsp;</span><?php _e( "WPtouch Wire", "wptouch" ); ?></h3>
 				<div id="wptouch-news-content">
-					<?php
-					$rss = @fetch_rss('http://www.bravenewcode.com/tag/wptouch/feed/');
+					<?php $rss = @fetch_rss('http://www.bravenewcode.com/tag/wptouch/feed/');
 					if ( isset($rss->items) && 0 != count($rss->items) ) { ?>
 					<ul>
 						<?php $rss->items = array_slice($rss->items, 0, 6); foreach ($rss->items as $item ) { ?>
@@ -43,9 +42,7 @@
 			<div id="wptouch-support-wrap">			
 			<h3><span class="rss-head">&nbsp;</span><?php _e( "Twitter Topics", "wptouch" ); ?></h3>
 				<div id="wptouch-support-content">
-					<?php $feed = fetch_rss('http://search.twitter.com/search.atom?q=wptouch'); ?>								
-					<?php
-					$rss = @fetch_rss('http://search.twitter.com/search.atom?q=wptouch');
+					<?php $rss = @fetch_rss('http://search.twitter.com/search.atom?q=wptouch');
 					if ( isset($rss->items) && 0 != count($rss->items) ) { ?>
 					<ul>
 						<?php $rss->items = array_slice($rss->items, 0, 6); foreach ($rss->items as $item ) { ?>
