@@ -520,13 +520,12 @@ blockquote {
 
 #wptouch-gigpress {
 	color: #eee;
-	text-shadow: #111 0 1px 1px;
+	text-shadow: #222 0 1px 1px;
 	text-align: left;
 	font-size: 11px;
 	border-top: 1px solid #3e3e3e;
 	clear: both;
 	margin: 0;
-	padding: 0;
 	width: 100%;
 }
 
@@ -535,6 +534,33 @@ blockquote {
 	border-bottom: 1px solid #646464;
 	font: bold 12px "Helvetica Neue", Helvetica, Arial, sans-serif;
 	padding: 5px 0 5px 10px;
+	border-top: 1px solid #646464;
+}
+
+#wptouch-gigpress .gigpress-header th {
+	padding-bottom: 15px;
+	padding-top: 10px;
+}
+
+#wptouch-gigpress .gigpress-table {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	left: 0;
+	clear: both;
+}
+
+#wptouch-gigpress .gigpress-info-item {
+	margin: 0;
+	padding: 0;
+	display: inline;
+}
+
+#wptouch-gigpress .gigpress-info a {
+	display: inline;
+	margin: 0;
+	padding: 0;
+	color: #8ba3b2;
 }
 
 #wptouch-gigpress #gigpress-style-bar {
@@ -549,7 +575,7 @@ blockquote {
 	padding: 0;
 }
 
-#wptouch-gigpress img {
+#wptouch-gigpress img#music-icon {
 	margin: 15px 10px;
 	float: left;
 }
@@ -575,7 +601,6 @@ blockquote {
 
 #wptouch-gigpress tr.gigpress-info {
 	background-color: #333;
-	display: table-row;
 	width: 100%;
 }
 
@@ -590,11 +615,16 @@ blockquote {
 }
 
 #wptouch-gigpress .gigpress-date {
-	width: 30%;
+	width: 25%;
 }
 
 #wptouch-gigpress .gigpress-city {
-	width: 40%;
+	width: 52%;
+}
+
+#wptouch-gigpress .gigpress-venue a {
+	margin: 0;
+	padding: 0;
 }
 
 #wptouch-gigpress a.gigpress-tickets-link {
@@ -609,13 +639,11 @@ blockquote {
 	border: 1px solid #222;
 	-webkit-border-radius: 14px;
 		-webkit-box-shadow: #333 0px 2px 4px;
+	text-transform: uppercase;
 }
 
-#wptouch-gigpress .gigpress-country {
+#wptouch-gigpress td.gigpress-links-cell, #wptouch-gigpress .gigpress-country {
 	display: none;
-}
-
-#wptouch-gigpress td.gigpress-links-cell {
 }
 
 /* @end */

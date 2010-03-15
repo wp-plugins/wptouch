@@ -190,7 +190,7 @@ include( dirname(__FILE__) . '/../core/core-header.php' );
  <!-- #start the GigPress Area -->
 	 <div id="wptouch-gigpress" class="dropper" style="display:none">
 	 	 <div id="gigpress-style-bar"></div><!-- filler to get the styling just right -->
-		 <img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/themes/core/core-images/gigpress.png" alt="GigPress" />
+		 <img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/themes/core/core-images/gigpress.png" id="music-icon" alt="GigPress" />
 		 <h4><?php _e( 'Upcoming Tour Dates', 'wptouch' ); ?></h4>		
 			<?php
 			    $options = array('scope' => 'upcoming', 'limit' => 10);

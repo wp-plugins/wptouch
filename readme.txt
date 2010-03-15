@@ -18,6 +18,9 @@ The theme also includes the ability for your visitors to easily switch between t
 
 == Changelog ==
 
+= Version 1.9.9.7 =
+* Fixed BraveNewCode RSS feed links (may have caused issues for some)
+
 = Version 1.9.9.6 =
 * Fix case where missing CURL would stop admin settings from loading
 * Minor Ajax upload fix
