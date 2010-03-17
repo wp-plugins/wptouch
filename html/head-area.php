@@ -1,8 +1,6 @@
 <?php global $wptouch_settings; ?>
 <?php global $bnc_wptouch_version; ?>
 
-<?php include( ABSPATH . WPINC . '/rss.php' ); ?>
-
 <div class="metabox-holder" id="wptouch-head">
 	<div class="postbox">
 		<div id="wptouch-head-colour">
@@ -27,30 +25,14 @@
 			<div id="wptouch-news-wrap">
 			<h3><span class="rss-head">&nbsp;</span><?php _e( "WPtouch Wire", "wptouch" ); ?></h3>
 				<div id="wptouch-news-content">
-					<?php $rss = @fetch_rss('http://www.bravenewcode.com/tag/wptouch/feed/');
-					if ( isset($rss->items) && 0 != count($rss->items) ) { ?>
-					<ul>
-						<?php $rss->items = array_slice($rss->items, 0, 6); foreach ($rss->items as $item ) { ?>
-						<li><a target="_blank" class="orange-link" href='<?php echo wp_filter_kses($item['link']); ?>'><?php echo wp_specialchars($item['title']); ?></a></li>
-						<?php } ?>
-					</ul>
-					<?php } ?>
-					</ul>
+					
 				</div>
 			</div>
 
 			<div id="wptouch-support-wrap">			
 			<h3><span class="rss-head">&nbsp;</span><?php _e( "Twitter Topics", "wptouch" ); ?></h3>
 				<div id="wptouch-support-content">
-					<?php $rss = @fetch_rss('http://search.twitter.com/search.atom?q=wptouch');
-					if ( isset($rss->items) && 0 != count($rss->items) ) { ?>
-					<ul>
-						<?php $rss->items = array_slice($rss->items, 0, 6); foreach ($rss->items as $item ) { ?>
-						<li><a target="_blank" class="orange-link" href='<?php echo wp_filter_kses($item['link']); ?>'><?php echo wp_specialchars($item['title']); ?></a></li>
-						<?php } ?>
-					</ul>
-					<?php } ?>
-					</ul>
+
 				</div>
 			</div>
 			

@@ -18,12 +18,18 @@ The theme also includes the ability for your visitors to easily switch between t
 
 == Changelog ==
 
+= Version 1.9.9.7.1 =
+
+* Changed admin panel RSS feeds to use AJAX
+* Became a contender for the world record for version number depth
+
 = Version 1.9.9.7 =
-* Fixed BraveNewCode RSS feed links (may have caused issues for some)
+
 * Fixed more GigPress CSS issues
 * Added option to choose flat bookmark icon
 
 = Version 1.9.9.6 =
+
 * Fix case where missing CURL would stop admin settings from loading
 * Minor Ajax upload fix
 * Minor spelling fixes

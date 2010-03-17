@@ -6,9 +6,19 @@
  *
  * Last Updated: March 5th, 2010
  */
+ 
+var wptouchSpinnerCount = 2;
+
+function wptouchSpinnerDone() {
+	wptouchSpinnerCount = wptouchSpinnerCount - 1;
+	if ( wptouchSpinnerCount == 0 ) {
+		jQuery('img.ajax-load').fadeOut( 1000 );
+	}	
+}
+
 jQuery(document).ready(function(jQuery) {
 
-	setTimeout(function() { jQuery('img.ajax-load').fadeOut(1000); }, 2000);
+	/* setTimeout(function() { jQuery('img.ajax-load').fadeOut(1000); }, 2000); */
 	setTimeout(function() { jQuery('#wptouchupdated').fadeIn(350); }, 750);
 	setTimeout(function() { jQuery('#wptouchupdated').fadeOut(350); }, 1750);
 
@@ -21,4 +31,14 @@ jQuery(document).ready(function(jQuery) {
 		'padding':	10, 'zoomSpeedIn': 250, 'zoomSpeedOut': 250, 'zoomOpacity': true, 'overlayShow': false, 'frameHeight': 320, 'frameWidth': 450, 'hideOnContentClick': true
 	});
 		
+		
+	jQuery.get( wptouchBlogUrl + '?wptouch-ajax=news', function( data ) {
+		jQuery( '#wptouch-news-content' ).hide().html( data ).fadeIn();
+		wptouchSpinnerDone();
+	});
+	
+	jQuery.get( wptouchBlogUrl + '?wptouch-ajax=tweets', function( data ) {
+		jQuery( '#wptouch-support-content' ).hide().html( data ).fadeIn();
+		wptouchSpinnerDone();
+	});	
 });
