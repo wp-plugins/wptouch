@@ -30,7 +30,7 @@
 			</div>
 
 			<div id="wptouch-support-wrap">			
-			<h3><span class="rss-head">&nbsp;</span><?php _e( "Twitter Topics", "wptouch" ); ?></h3>
+			<h3><span class="rss-head">&nbsp;</span><?php _e( "Latest Support Topics", "wptouch" ); ?></h3>
 				<div id="wptouch-support-content">
 
 				</div>

@@ -4,7 +4,7 @@
  * Copyright (c) 2008-2010 Duane Storey & Dale Mugford (BraveNewCode Inc.)
  * Licensed under GPL.
  *
- * Last Updated: March 5th, 2010
+ * Last Updated: March 17th, 2010
  */
  
 var wptouchSpinnerCount = 2;
@@ -37,7 +37,7 @@ jQuery(document).ready(function(jQuery) {
 		wptouchSpinnerDone();
 	});
 	
-	jQuery.get( wptouchBlogUrl + '?wptouch-ajax=tweets', function( data ) {
+	jQuery.get( wptouchBlogUrl + '?wptouch-ajax=support', function( data ) {
 		jQuery( '#wptouch-support-content' ).hide().html( data ).fadeIn();
 		wptouchSpinnerDone();
 	});	

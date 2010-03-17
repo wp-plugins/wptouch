@@ -18,10 +18,11 @@ The theme also includes the ability for your visitors to easily switch between t
 
 == Changelog ==
 
-= Version 1.9.9.7.1 =
+= Version 1.9.9.8 =
 
 * Changed admin panel RSS feeds to use AJAX
-* Became a contender for the world record for version number depth
+* Added function_exists and object checks to admin RSS
+* Changed Tweet RSS Feed to Support Forum Topics
 
 = Version 1.9.9.7 =
 
