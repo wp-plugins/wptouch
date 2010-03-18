@@ -35,7 +35,7 @@ jQuery(document).ready(function(jQuery) {
 	wptouchAjaxTimeout = 5000;
 	
 	// uncomment this to simulate a failure
-	// wptouchBlogUrl = 'http::/somefakeurl.com';
+	//  wptouchBlogUrl = 'http::/somefakeurlasdf.com';
 	jQuery.ajax( {
 		'url': wptouchBlogUrl + '?wptouch-ajax=news',
 		'success': function(data) { 
