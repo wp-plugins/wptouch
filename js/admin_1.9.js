@@ -31,14 +31,36 @@ jQuery(document).ready(function(jQuery) {
 		'padding':	10, 'zoomSpeedIn': 250, 'zoomSpeedOut': 250, 'zoomOpacity': true, 'overlayShow': false, 'frameHeight': 320, 'frameWidth': 450, 'hideOnContentClick': true
 	});
 		
-		
-	jQuery.get( wptouchBlogUrl + '?wptouch-ajax=news', function( data ) {
-		jQuery( '#wptouch-news-content' ).hide().html( data ).fadeIn();
-		wptouchSpinnerDone();
+	
+	wptouchAjaxTimeout = 5000;
+	
+	// uncomment this to simulate a failure
+	// wptouchBlogUrl = 'http::/somefakeurl.com';
+	jQuery.ajax( {
+		'url': wptouchBlogUrl + '?wptouch-ajax=news',
+		'success': function(data) { 
+			jQuery( '#wptouch-news-content' ).hide().html( data ).fadeIn(); 
+			wptouchSpinnerDone();
+		},
+		'timeout': wptouchAjaxTimeout,
+		'error': function() {
+			jQuery( '#wptouch-news-content' ).hide().html( '<ul><li class="ajax-error">Unable to load the news feed</li></ul>' ).fadeIn();
+			wptouchSpinnerDone();
+		},
+		'dataType': 'html'
 	});
 	
-	jQuery.get( wptouchBlogUrl + '?wptouch-ajax=support', function( data ) {
-		jQuery( '#wptouch-support-content' ).hide().html( data ).fadeIn();
-		wptouchSpinnerDone();
+	jQuery.ajax( {
+		'url': wptouchBlogUrl + '?wptouch-ajax=support',
+		'success': function(data) { 
+			jQuery( '#wptouch-support-content' ).hide().html( data ).fadeIn(); 
+			wptouchSpinnerDone();
+		},
+		'timeout': wptouchAjaxTimeout,
+		'error': function() {
+			jQuery( '#wptouch-support-content' ).hide().html( '<ul><li class="ajax-error">Unable to load the support feed</li></ul>' ).fadeIn();
+			wptouchSpinnerDone();
+		},
+		'dataType': 'html'
 	});	
 });

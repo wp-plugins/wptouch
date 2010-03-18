@@ -75,6 +75,10 @@
 	-moz-border-radius: 0px;
 }
 
+#wptouch-head li.ajax-error {
+	color: #555;
+}
+
 /* @group Latest News */
 
 #wptouch-news-wrap {
