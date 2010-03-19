@@ -23,6 +23,7 @@ The theme also includes the ability for your visitors to easily switch between t
 * Changed admin panel RSS feeds to use AJAX
 * Added function_exists and object checks to admin RSS
 * Changed Tweet RSS Feed to Support Forum Topics
+* Included 40% reduction in PNG sizes thanks to BNCID user 13xforever
 
 = Version 1.9.9.7 =
 
