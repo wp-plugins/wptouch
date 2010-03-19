@@ -4,7 +4,7 @@
  * Copyright (c) 2008 - 2010 Duane Storey & Dale Mugford (BraveNewCode Inc.)
  * Licensed under GPL.
  *
- * Last Updated: March 12th, 2010
+ * Last Updated: March 19th, 2010
  */
 
 /////// -- Let's setup a unique namspace in jQuery -- ///////
