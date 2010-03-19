@@ -347,7 +347,7 @@ blockquote {
 	text-decoration: underline;
 }
 
-.dropper ul#head-cats li:hover, .dropper ul#head-tags li li:hover {
+.dropper ul#head-cats li:hover, .dropper ul#head-tags li li:hover, .dropper ul#head-pages li:hover {
 	background-color: #222;
 	border-top: 1px solid #222;
 	position: relative;
