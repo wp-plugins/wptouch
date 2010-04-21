@@ -18,6 +18,17 @@ The theme also includes the ability for your visitors to easily switch between t
 
 == Changelog ==
 
+= Version 1.9.9.9 (Unreleased) =
+
+* Updated styling for post listings, titles now truncated
+* Updated list item styling in posts
+* Changed default Gravatar image
+* Minor tweaks to calendar icon appearance
+* Removed a reference to an image that was missing and unused
+* Added new notice area in admin
+* Tweaked and fixed a couple issues with icon uploads
+
+
 = Version 1.9.9.8 =
 
 * Fixes admin panel not working or broken for some users

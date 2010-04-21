@@ -46,11 +46,14 @@
 			echo '<div class="new-icon-block ' . $key . '">';
 			foreach ( $icons[ $key ] as $icon ) {
 				echo '<ul class="wptouch-iconblock">';
-				echo '<li><img src="' . $icon['url'] . '" title="' . $icon['name'] . '" /><br />' . $icon['friendly'];
 				if ( $key == 'custom' ) {
-					echo ' <a href="' . $_SERVER['REQUEST_URI'] . '&amp;delete_icon=' . urlencode($icon['url']) . '">(x)</a>';	
-				}
+					echo '<a title="Click to Delete" href="' . $_SERVER['REQUEST_URI'] . '&amp;delete_icon=' . urlencode($icon['url']) . '">';
+					}
+					echo '<li><img src="' . $icon['url'] . '" title="' . $icon['name'] . '" /><br /><span>' . $icon['friendly'] . '</span>';
 				echo '</li>';
+				if ( $key == 'custom' ) {
+					echo '</a>';	
+				}
 				echo '</ul>';
 			}	
 			echo '</div>';

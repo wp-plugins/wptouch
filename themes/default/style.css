@@ -54,6 +54,7 @@ li {
 	padding-bottom: 5px;
 	font-size: 12px;
 	margin-right: -15px;
+	padding-top: 0;
 }
 
 a {
@@ -138,7 +139,7 @@ blockquote {
 	font-weight: bold;
 	line-height: 14px;
 	background-color: #eee;
-	margin: 5px -10px;
+	margin: 15px -10px;
 	text-shadow: #fff -1px 1px 0;
 }
 
@@ -1328,10 +1329,6 @@ ul#post-options li a#obook {
 	padding: 2px 0 0;
 	line-height: 145%;
 	display: block;
-}
-
-.pageentry li {
-	list-style-type: none;
 }
 
 img.pageicon {

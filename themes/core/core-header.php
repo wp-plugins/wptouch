@@ -17,7 +17,7 @@
 	<?php wptouch_core_header_styles(); wptouch_core_header_enqueue(); ?>
 	<?php if (!is_single()) { ?>
 		<script type="text/javascript">
-		if window.navigator.standalone = 0 {
+		if window.navigator.standalone = false {
 			addEventListener("load", function() { 
 				setTimeout(hideURLbar, 0); }, false);
 				function hideURLbar(){

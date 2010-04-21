@@ -254,8 +254,23 @@ em.supported {
 	color: #000;
 }
 
+#bnc-global ul.wptouch-iconblock li span {
+	margin-top: 4px;
+	display: block;
+}
+
+#bnc-global .custom ul.wptouch-iconblock li span {
+		display: block;
+		width: 91%;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		overflow: hidden;
+	margin-left: 7%;
+}
+
 #bnc-global .custom ul.wptouch-iconblock li a {
 	color: red;
+	display: inline;
 }
 
 #bnc-global ul.wptouch-iconblock img {
@@ -294,6 +309,13 @@ em.supported {
 	display: block;
 	border-top: 1px solid #eee;
 	padding-top: 10px;
+}
+
+#bnc-global #available_icons .left-content p strong {
+	width: 100%;
+	overflow: auto;
+	display: block;
+	margin-top: 10px;
 }
 
 /* @end */
