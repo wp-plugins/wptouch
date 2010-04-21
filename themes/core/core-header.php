@@ -4,6 +4,9 @@
 	<meta name="generator" content="WordPress <?php bloginfo('version'); ?>" />
 	<meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
 	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=no;" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<link rel="apple-touch-startup-image" href="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/themes/core/startup.png">
+	<meta name="apple-mobile-web-app-capable" content="yes">
 	<title><?php wp_title('&laquo;', true, 'right'); ?> <?php $str = bnc_get_header_title(); echo stripslashes($str); ?></title>
 	<link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php bloginfo('rss2_url'); ?>" />
 	<link <?php if (bnc_is_flat_icon_enabled()) { echo 'rel="apple-touch-icon-precomposed"'; } else { echo 'rel="apple-touch-icon"';} ?> href="<?php echo bnc_get_title_image(); ?>" />
@@ -14,10 +17,12 @@
 	<?php wptouch_core_header_styles(); wptouch_core_header_enqueue(); ?>
 	<?php if (!is_single()) { ?>
 		<script type="text/javascript">
+		if window.navigator.standalone = 0 {
 			addEventListener("load", function() { 
 				setTimeout(hideURLbar, 0); }, false);
 				function hideURLbar(){
 				window.scrollTo(0,1);
+			}
 			}
 		</script>
 <?php } ?>

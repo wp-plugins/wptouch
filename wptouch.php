@@ -487,10 +487,9 @@ class WPtouchPlugin {
 		$container = $_SERVER['HTTP_USER_AGENT'];
 		// The below prints out the user agent array. Uncomment to see it shown on the page.
 		// print_r($container); 
-		$useragents = bnc_wptouch_get_user_agents();
-
-		$devfile =  compat_get_plugin_dir( 'wptouch' ) . '/include/developer.mode';
 		$this->applemobile = false;
+		$useragents = bnc_wptouch_get_user_agents();
+		$devfile =  compat_get_plugin_dir( 'wptouch' ) . '/include/developer.mode';
 		foreach ( $useragents as $useragent ) {
 			if ( eregi( $useragent, $container ) || file_exists($devfile) ) {
 				$this->applemobile = true;
