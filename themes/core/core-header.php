@@ -18,11 +18,11 @@
 	<?php if (!is_single()) { ?>
 		<script type="text/javascript">
 			function hideURLbar() { window.scrollTo(0,1);}
-			var mobileSafari != window.navigator.standalone;
-		if mobileSafari {
+		if (window.navigator.standalone) { //don't do this! 
+		} else {
 			addEventListener("load", function() { 
 				setTimeout(hideURLbar, 0); }, false);
-				}
+		}
 		</script>
 <?php } ?>
 </head>
