@@ -39,7 +39,7 @@
 */
 
 global $bnc_wptouch_version;
-$bnc_wptouch_version = '1.9.9.8';
+$bnc_wptouch_version = '1.9.9.9';
 
 require_once( 'include/plugin.php' );
 require_once( 'include/compat.php' );
