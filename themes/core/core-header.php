@@ -17,14 +17,12 @@
 	<?php wptouch_core_header_styles(); wptouch_core_header_enqueue(); ?>
 	<?php if (!is_single()) { ?>
 		<script type="text/javascript">
-		var standalone = window.navigator.standalone;
-		if standalone {
+			function hideURLbar() { window.scrollTo(0,1);}
+			var mobileSafari != window.navigator.standalone;
+		if mobileSafari {
 			addEventListener("load", function() { 
 				setTimeout(hideURLbar, 0); }, false);
-				function hideURLbar(){
-				window.scrollTo(0,1);
-			}
-			}
+				}
 		</script>
 <?php } ?>
 </head>
