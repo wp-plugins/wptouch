@@ -769,7 +769,6 @@ a.h2 {
 	display: block;
 	margin-top: 2px;
 	text-align: left;
-	width: 75%;
 	letter-spacing: -1px;
 	margin-bottom: 4px;
 	font-size: 14px;
@@ -777,6 +776,8 @@ a.h2 {
 	text-overflow: ellipsis;
 	white-space: nowrap;
 	overflow: hidden;
+	width: 72%;
+	line-height: 15px;
 }
 
 .mainentry {
