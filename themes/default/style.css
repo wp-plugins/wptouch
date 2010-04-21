@@ -820,7 +820,7 @@ a.h2 {
 	padding-left: 0;
 	font: bold 13px Helvetica, Arial-BoldMT, Geneva, sans-serif;
 	letter-spacing: -1px;
-	text-shadow: #871521 -1px -1px 1px;
+	text-shadow: #943141 -1px -1px 1px;
 	padding-right: 1px;
 	margin-left: 0;
 	z-index: 1;
@@ -841,7 +841,7 @@ a.h2 {
 	padding-left: 0;
 	font: bold 13px Helvetica, Arial-BoldMT, Geneva, sans-serif;
 	letter-spacing: -1px;
-	text-shadow: #871521 -1px -1px 1px;
+	text-shadow: #943141 -1px -1px 1px;
 	padding-right: 4px;
 	margin-left: 0;
 	z-index: 1;
@@ -940,12 +940,12 @@ a.h2 {
 }
 
 .cal-date {
-	color: #111;
+	color: #222;
 	background-color: #e9e9e9;
 	text-shadow: white -1px -1px 1px;
 	-webkit-border-bottom-left-radius: 1px;
 	-webkit-border-bottom-right-radius: 6px;
-	letter-spacing: -3px;
+	letter-spacing: -2px;
 	font: bold 21px Helvetica, "Arial Rounded MT Bold", Geneva, sans-serif;
 	padding: 1px 4px 2px 0;
 	text-align: center;
