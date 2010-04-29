@@ -287,7 +287,7 @@ blockquote {
 
 #drop-fade #searchopen {
 	padding-left: 18px;
-	background: url(../core/core-images/menu-sprite.png) no-repeat 2px -92px;
+	background: url(../core/core-images/menu-sprite.png) no-repeat 2px -91px;
 }
 
 #drop-fade #gigpressopen {
@@ -781,6 +781,23 @@ a.h2 {
 	white-space: nowrap;
 	overflow: hidden;
 	width: 72%;
+	line-height: 17px;
+}
+
+a.h2.archive-view {
+	color: #222;
+	text-decoration: none;
+	display: block;
+	margin-top: 2px;
+	text-align: left;
+	letter-spacing: -1px;
+	margin-bottom: 4px;
+	font-size: 15px;
+	font-weight: bold;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	width: 95%;
 	line-height: 17px;
 }
 
