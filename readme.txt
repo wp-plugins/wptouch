@@ -28,6 +28,11 @@ The theme also includes the ability for your visitors to easily switch between t
 * Added new notice area in admin
 * Changed Saved Settings/Reset Settings overlay
 * Tweaked and fixed a couple issues with icon uploads
+* Replaced references to depreciated PHP functions
+* Added new notice for 2.0
+* Added line in core-functions.php for full support of qTranslate
+* Fixed issue with wp-skyscraper plugin
+* Added automatic WP Super Cache detection and configuration for the upcoming version of WP Super Cache
 
 
 = Version 1.9.9.8 =

@@ -29,8 +29,8 @@
 			<li><input type="checkbox" class="checkbox" name="enable-flat-icon" <?php if (isset($wptouch_settings['enable-flat-icon']) && $wptouch_settings['enable-flat-icon'] == 1) echo('checked'); ?> /><label for="enable-flat-icon"><?php _e( "Enable Flat Bookmark Icon", "wptouch" ); ?> <a href="#logo-info" class="fancylink">?</a></label>
 			<div id="logo-info" style="display:none">
 				<h2><?php _e( "More Info", "wptouch" ); ?></h2>
-				<p><?php _e( "The default (Glossy Icon) applies a glossy effect to the home-screen bookmark/logo icon.", "wptouch" ); ?></p>
-				<p><?php _e( "The flat icon option applies does not alter the home-screen bookmark/logo icon.", "wptouch" ); ?></p>
+				<p><?php _e( "The default applies for iPhone/iPod touch applies a glossy effect to the home-screen bookmark/logo icon you select.", "wptouch" ); ?></p>
+				<p><?php _e( "When checked your icon will not have the glossy effect automatically applied to it.", "wptouch" ); ?></p>
 			</div>
 			</li>
 			<li><input type="checkbox" class="checkbox" name="enable-main-home" <?php if (isset($wptouch_settings['enable-main-home']) && $wptouch_settings['enable-main-home'] == 1) echo('checked'); ?> /><label for="enable-main-home"><?php _e( "Enable Home Menu Item", "wptouch" ); ?></label></li>

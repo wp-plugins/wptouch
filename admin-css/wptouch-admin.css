@@ -83,7 +83,7 @@
 
 #wptouch-news-wrap {
 	float: left;
-	width: 45%;
+	width: 53%;
 	margin: 0;
 	padding: 0;
 }
@@ -98,10 +98,11 @@
 #wptouch-support-wrap {
 	color: #777;
 	float: left;
-	width: 55%;
+	width: 47%;
 	padding: 0;
-	margin: 0;
-	
+	margin-top: 0;
+	margin-right: 0;
+	margin-bottom: 0;
 }
 
 #wptouch-support-wrap ul {

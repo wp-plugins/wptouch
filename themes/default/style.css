@@ -76,13 +76,11 @@ code {
 }
 
 blockquote {
-	-webkit-border-radius: 10px;
-	border: 1px solid #ccc;
-	font-size: 12px;
-	background: #eee url(../core/core-images/quotes.png) no-repeat 100% -5px;
 	text-align: left;
-	margin: 5px 3px 5px 1px;
-	padding: 2px 10px 0 15px;
+	padding: 1px 10px 1px 15px;
+	font-size: 90%;
+	border-left: 2px solid #ccc;
+	margin: 5px 15px;
 }
 
 .clearer {
@@ -320,8 +318,9 @@ blockquote {
 }
 
 .dropper ul#head-tags li {
-	margin-bottom: 0;
-	padding-bottom: 0;
+	width: 100%;
+	margin: 0;
+	padding: 0;
 }
 
 .dropper ul#head-pages li, .dropper ul#head-cats li, .dropper ul#head-tags li li, .dropper ul#head-account li, ul#tweets li {
@@ -1970,6 +1969,16 @@ p.subscribe-to-comments input#subscribe {
 /* @end */
 
 /* @group Compatibility CSS */
+
+/* @group WP Skypscraper */
+
+.wp_skyscraper_c2 {
+	display: none;
+}
+
+
+
+/* @end */
 
 /* @group AddThis / Tweet This */
 

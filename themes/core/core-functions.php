@@ -32,7 +32,7 @@ function wptouch_core_header_pages() {
 		} else {
 		$image = compat_get_upload_url() . '/wptouch/custom-icons/' . $p['icon'];
 	}
-		echo('<li><a href="' . get_permalink($p['ID']) . '"><img src="' . $image . '" alt="icon" />' . $p['post_title'] . '</a></li>'); 
+		echo('<li><a href="' . get_permalink($p['ID']) . '"><img src="' . $image . '" alt="icon" />' . __($p['post_title']) . '</a></li>');
 	}
   }
  
