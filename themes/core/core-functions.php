@@ -11,7 +11,7 @@ function wptouch_core_header_enqueue() {
 		wp_head(); 
 
 		} elseif (bnc_wptouch_is_exclusive()) { 
-		echo "<script src='" . compat_get_plugin_url( 'wptouch' ) . "/themes/core/jquery-1.3.2.minx2.js' type='text/javascript' charset='utf-8'></script>\n";
+		echo "<script src='" . get_bloginfo('wpurl') . "/wp-includes/js/jquery/jquery.js' type='text/javascript' charset='utf-8'></script>\n";
 	   echo "<script src='" . get_bloginfo('wpurl') . "/wp-includes/js/jquery/jquery.form.js' type='text/javascript' charset='utf-8'></script>\n";
 		echo "<script src='" . compat_get_plugin_url( 'wptouch' ) . "/themes/core/core.js' type='text/javascript' charset='utf-8'></script>\n"; 
 		 }

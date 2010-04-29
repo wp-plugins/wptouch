@@ -18,7 +18,7 @@ The theme also includes the ability for your visitors to easily switch between t
 
 == Changelog ==
 
-= Version 1.9.10 (Unreleased) =
+= Version 1.9.10 =
 
 * Updated styling for post listings, titles now truncated
 * Updated list item styling in posts
@@ -32,8 +32,8 @@ The theme also includes the ability for your visitors to easily switch between t
 * Added new notice for 2.0
 * Added line in core-functions.php for full support of qTranslate
 * Fixed issue with wp-skyscraper plugin
+* Added cache manifest file for speedier browsing on supported servers and devices
 * Added automatic WP Super Cache detection and configuration for the upcoming version of WP Super Cache
-* Added cache manifest file and reduced jQuery 1.3.2 files for speedier browsing
 
 
 = Version 1.9.9.8 =
