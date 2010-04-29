@@ -20,8 +20,9 @@ The theme also includes the ability for your visitors to easily switch between t
 
 = Version 1.9.10 =
 
-* Updated styling for post listings, titles now truncated
+* Updated styling for post listings, titles now use ellipses
 * Updated list item styling in posts
+* Updated blockquote styling in posts
 * Changed default Gravatar image
 * Minor tweaks to calendar icon appearance
 * Removed a reference to an image that was missing and unused
@@ -29,7 +30,7 @@ The theme also includes the ability for your visitors to easily switch between t
 * Changed Saved Settings/Reset Settings overlay
 * Tweaked and fixed a couple issues with icon uploads
 * Replaced references to depreciated PHP functions
-* Added new notice for 2.0
+* Added new notice for 2.0 in admin
 * Added line in core-functions.php for full support of qTranslate
 * Fixed issue with wp-skyscraper plugin
 * Added cache manifest file for speedier browsing on supported servers and devices
