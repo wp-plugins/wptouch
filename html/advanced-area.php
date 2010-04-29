@@ -112,7 +112,12 @@
 					</div>
 
 	<ul class="wptouch-make-li-italic">
-					<li><input type="text" name="custom-user-agents" value="<?php if ( isset( $wptouch_settings['custom-user-agents'] ) ) echo implode( ', ', $wptouch_settings['custom-user-agents'] ); ?>" /><?php _e( "Custom user-agents", "wptouch" ); ?></li>
+					<li>
+						<input type="text" name="custom-user-agents" value="<?php if ( isset( $wptouch_settings['custom-user-agents'] ) ) echo implode( ', ', $wptouch_settings['custom-user-agents'] ); ?>" /><?php _e( "Custom user-agents", "wptouch" ); ?>
+						<?php if ( function_exists( 'wpsc_update_htaccess' ) ) { ?>
+							<br /><br /><?php _e( "After changing the user-agents, please visit the WP Super Cache admin page and update your rewrite rules.", "wptouch" ); ?>
+						<?php } ?>
+					</li>
 				</ul>
 							</li>
 

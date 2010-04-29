@@ -7,7 +7,7 @@
  * Last Updated: April 29th, 2010
  */
  
-var wptouchSpinnerCount = 2;
+var wptouchSpinnerCount = 1;
 
 function wptouchSpinnerDone() {
 	wptouchSpinnerCount = wptouchSpinnerCount - 1;
