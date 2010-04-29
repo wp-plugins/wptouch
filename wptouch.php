@@ -828,7 +828,7 @@ function bnc_wp_touch_page() {
 		echo __( "Settings saved", "wptouch");
 		echo('</span></p></div>');
 		} 
-	elseif (!isset($_POST['reset'])) {
+	elseif (isset($_POST['reset'])) {
 		echo('<div class="wrap"><div id="bnc-global"><div id="wptouchupdated" style="display:none"><p class="reset"><span>');
 		echo __( "Defaults restored", "wptouch");
 		echo('</span></p></div>');

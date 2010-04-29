@@ -470,13 +470,13 @@ textarea#wptouch-stats {
 	text-align: center;
 	text-shadow: #fff 0 1px 1px;
 	font: bold 14px "Myriad Pro", "Trebuchet MS", "Lucida Sans Unicode", sans-serif;
-	background: #e0e2e2 url(../images/thumbs_up.png) no-repeat 12px 5px;
+	background: #e0e2e2 url(../images/settings_small.png) no-repeat 12px 7px;
 	margin-left: auto;
 	margin-right: auto;
 	padding: 4px;
 	margin-top: 0;
 	height: 28px;
-	width: 140px;
+	width: 135px;
 	border: 1px solid #b2cde0;
 	border-top-style: none;
 }
@@ -492,7 +492,7 @@ textarea#wptouch-stats {
 	text-align: center;
 	text-shadow: #fff 0 1px 1px;
 	font: bold 14px "Myriad Pro", "Trebuchet MS", "Lucida Sans Unicode", sans-serif;
-	background: #e0e2e2 url(../images/wand.png) no-repeat 12px 5px;
+	background: #e0e2e2 url(../images/wand_small.png) no-repeat 12px 7px;
 	margin-left: auto;
 	margin-right: auto;
 	padding: 4px;
@@ -505,8 +505,8 @@ textarea#wptouch-stats {
 
 #bnc-global #wptouchupdated p span {
 	display: block;
-	margin-top: 9px;
-	margin-left: 38px;
+	margin-top: 6px;
+	margin-left: 33px;
 }
 
 /* @end */
