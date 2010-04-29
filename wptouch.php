@@ -266,7 +266,7 @@ function bnc_wptouch_is_prowl_key_valid() {
 	if ( isset( $settings['prowl-api'] ) ) {
 		$api_key = $settings['prowl-api'];
 			
-		$prowl = new Prowl( $api_key, $settings['header-title'] );	
+		$prowl = new Prowl( $api_key, WPTOUCH_PROWL_APPNAME );	
 		$verify = $prowl->verify();
 		return ( $verify === true );
 	}
@@ -492,7 +492,7 @@ class WPtouchPlugin {
 		$useragents = bnc_wptouch_get_user_agents();
 		$devfile =  compat_get_plugin_dir( 'wptouch' ) . '/include/developer.mode';
 		foreach ( $useragents as $useragent ) {
-			if ( eregi( $useragent, $container ) || file_exists($devfile) ) {
+			if ( preg_match( "#$useragent#i", $container ) || file_exists( $devfile ) ) {
 				$this->applemobile = true;
 			} 	
 		}
