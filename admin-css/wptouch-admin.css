@@ -5,7 +5,7 @@
 /* @group head-area.php */
 
 #wptouch-head .postbox {
-	background: #fff url(../images/wptouch-icon.jpg) no-repeat 101% 100%;
+	background: #fff url(../images/wptouch-icon.jpg) no-repeat 100% 76px;
 	overflow: hidden;
 	position: relative;
 }
@@ -65,7 +65,7 @@
 	-moz-border-radius: 5px;
 	margin-top: 30px;
 	width: 100%;
-	height: 170px;
+	height: 140px;
 	text-transform: capitalize;
 }
 
@@ -92,6 +92,7 @@
 	padding-left: 10px;
 	display: block;
 	width: 100%;
+	height: 15px;
 }
 
 #wptouch-support-wrap {
@@ -122,6 +123,7 @@
 	width: 100%;
 	position: relative;
 	padding-right: 12px;
+	height: 15px;
 }
 
 #wptouch-news-support li {
@@ -136,6 +138,13 @@
 
 #wptouch-news-support li:last-child {
 	border-bottom-style: none;
+}
+
+#wptouch-news-support p#find-out-more {
+	font-weight: bold;
+	position: absolute;
+	right: 303px;
+	top: 160px;
 }
 
 /* @end */

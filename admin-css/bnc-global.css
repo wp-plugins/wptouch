@@ -182,6 +182,10 @@
 	background: url(../images/h3_icons/rss.png) 0 1px;
 }
 
+#bnc-global h3 span.news-head {
+	background: url(../images/h3_icons/megaphone.png) 0 1px;
+}
+
 /* @end */
 
 /* @group Save/Restore Button Area */

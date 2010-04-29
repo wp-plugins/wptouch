@@ -214,9 +214,9 @@ function wptouch_ajax_handler() {
 			case 'news':
 				include( WP_PLUGIN_DIR . '/wptouch/ajax/news.php' );	
 				break;
-			case 'support':
-				include( WP_PLUGIN_DIR . '/wptouch/ajax/support.php' );
-				break;
+//			case 'support':
+//				include( WP_PLUGIN_DIR . '/wptouch/ajax/support.php' );
+//				break;
 			default:
 				break;
 		}	

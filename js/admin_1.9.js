@@ -50,17 +50,17 @@ jQuery(document).ready(function(jQuery) {
 		'dataType': 'html'
 	});
 	
-	jQuery.ajax( {
-		'url': wptouchBlogUrl + '?wptouch-ajax=support',
-		'success': function(data) { 
-			jQuery( '#wptouch-support-content' ).hide().html( data ).fadeIn(); 
-			wptouchSpinnerDone();
-		},
-		'timeout': wptouchAjaxTimeout,
-		'error': function() {
-			jQuery( '#wptouch-support-content' ).hide().html( '<ul><li class="ajax-error">Unable to load the support feed</li></ul>' ).fadeIn();
-			wptouchSpinnerDone();
-		},
-		'dataType': 'html'
-	});	
+//  	jQuery.ajax( {
+//  		'url': wptouchBlogUrl + '?wptouch-ajax=support',
+//  		'success': function(data) { 
+//  			jQuery( '#wptouch-support-content' ).hide().html( data ).fadeIn(); 
+//  			wptouchSpinnerDone();
+//  		},
+//  		'timeout': wptouchAjaxTimeout,
+//  		'error': function() {
+//  			jQuery( '#wptouch-support-content' ).hide().html( '<ul><li class="ajax-error">Unable to load the support feed</li></ul>' ).fadeIn();
+//  			wptouchSpinnerDone();
+//  		},
+//  		'dataType': 'html'
+//  	});	
 });

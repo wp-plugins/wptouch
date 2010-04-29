@@ -30,9 +30,9 @@
 			</div>
 
 			<div id="wptouch-support-wrap">			
-			<h3><span class="rss-head">&nbsp;</span><?php _e( "Latest Support Topics", "wptouch" ); ?></h3>
+			<h3></h3>
 				<div id="wptouch-support-content">
-
+				<p id="find-out-more"><a href="http://www.wptouch.com" target="_blank"><?php _e( "Find Out More &rsaquo;", "wptouch" ); ?></a></p>
 				</div>
 			</div>
 			
