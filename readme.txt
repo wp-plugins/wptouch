@@ -33,6 +33,7 @@ The theme also includes the ability for your visitors to easily switch between t
 * Added line in core-functions.php for full support of qTranslate
 * Fixed issue with wp-skyscraper plugin
 * Added automatic WP Super Cache detection and configuration for the upcoming version of WP Super Cache
+* Added cache manifest file and reduced jQuery 1.3.2 files for speedier browsing
 
 
 = Version 1.9.9.8 =
