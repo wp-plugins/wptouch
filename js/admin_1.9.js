@@ -4,7 +4,7 @@
  * Copyright (c) 2008-2010 Duane Storey & Dale Mugford (BraveNewCode Inc.)
  * Licensed under GPL.
  *
- * Last Updated: March 17th, 2010
+ * Last Updated: April 29th, 2010
  */
  
 var wptouchSpinnerCount = 2;
@@ -19,8 +19,8 @@ function wptouchSpinnerDone() {
 jQuery(document).ready(function(jQuery) {
 
 	/* setTimeout(function() { jQuery('img.ajax-load').fadeOut(1000); }, 2000); */
-	setTimeout(function() { jQuery('#wptouchupdated').fadeIn(350); }, 750);
-	setTimeout(function() { jQuery('#wptouchupdated').fadeOut(350); }, 1750);
+	setTimeout(function() { jQuery('#wptouchupdated').fadeIn(250); }, 750);
+	setTimeout(function() { jQuery( '#wptouchupdated' ).hide("slide", { direction: "up" }, 450);}, 2500);
 
 	jQuery('#header-text-color, #header-background-color, #header-border-color, #link-color').ColorPicker({
 		onSubmit: function(hsb, hex, rgb, el) { jQuery(el).val(hex); jQuery(el).ColorPickerHide(); },

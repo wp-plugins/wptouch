@@ -455,49 +455,58 @@ textarea#wptouch-stats {
 	margin-left: auto;
 	margin-right: auto;
 	opacity: 0.9;
-	height: auto;
+	height: 45px;
 	width: 100%;
 }
 
 #bnc-global #wptouchupdated p.saved {
-	color: #daeffe;
-	-webkit-border-radius: 22px;
-	-moz-border-radius: 22px;
+	-webkit-border-bottom-right-radius: 12px;
+	-webkit-border-bottom-left-radius: 12px;
+	-moz-border-radius-bottomright: 12px;
+	-moz-border-radius-bottomleft: 12px;
+	border-bottom-right-radius: 12px;
+	border-bottom-left-radius: 12px;
+	color: green;
 	text-align: center;
-	text-shadow: #000 -1px -1px 1px;
-	letter-spacing: -1px;
-	font: bold 22px "Myriad Pro", "Trebuchet MS", "Lucida Sans Unicode", sans-serif;
-	height: 155px;
-	background: #222 url(../images/saved.png) no-repeat center 10px;
-	width: 170px;
-	margin-top: 15%;
+	text-shadow: #fff 0 1px 1px;
+	font: bold 14px "Myriad Pro", "Trebuchet MS", "Lucida Sans Unicode", sans-serif;
+	background: #e0e2e2 url(../images/thumbs_up.png) no-repeat 12px 5px;
 	margin-left: auto;
 	margin-right: auto;
-	padding: 12px;
-	-webkit-box-shadow: #000 0px 0px 32px;
+	padding: 4px;
+	margin-top: 0;
+	height: 28px;
+	width: 140px;
+	border: 1px solid #b2cde0;
+	border-top-style: none;
 }
 
 #bnc-global #wptouchupdated p.reset {
-	color: #dcdcdc;
-	-webkit-border-radius: 22px;
-	-moz-border-radius: 22px;
+	-webkit-border-bottom-right-radius: 12px;
+	-webkit-border-bottom-left-radius: 12px;
+	-moz-border-radius-bottomright: 12px;
+	-moz-border-radius-bottomleft: 12px;
+	border-bottom-right-radius: 12px;
+	border-bottom-left-radius: 12px;
+	color: green;
 	text-align: center;
-	text-shadow: #000 -1px -1px 1px;
-	letter-spacing: -1px;
-	font: bold 22px "Myriad Pro", "Trebuchet MS", "Lucida Sans Unicode", sans-serif;
-	height: 155px;
-	background: #222 url(../images/reset.png) no-repeat center 10px;
-	width: 170px;
-	margin-top: 15%;
+	text-shadow: #fff 0 1px 1px;
+	font: bold 14px "Myriad Pro", "Trebuchet MS", "Lucida Sans Unicode", sans-serif;
+	background: #e0e2e2 url(../images/wand.png) no-repeat 12px 5px;
 	margin-left: auto;
 	margin-right: auto;
-	padding: 12px;
-	-webkit-box-shadow: #000 0px 0px 32px;
+	padding: 4px;
+	margin-top: 0;
+	height: 28px;
+	width: 160px;
+	border: 1px solid #b2cde0;
+	border-top-style: none;
 }
 
 #bnc-global #wptouchupdated p span {
 	display: block;
-	margin-top: 110px;
+	margin-top: 9px;
+	margin-left: 38px;
 }
 
 /* @end */

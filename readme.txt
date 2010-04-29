@@ -18,7 +18,7 @@ The theme also includes the ability for your visitors to easily switch between t
 
 == Changelog ==
 
-= Version 1.9.9.9 (Unreleased) =
+= Version 1.9.10 (Unreleased) =
 
 * Updated styling for post listings, titles now truncated
 * Updated list item styling in posts
@@ -26,6 +26,7 @@ The theme also includes the ability for your visitors to easily switch between t
 * Minor tweaks to calendar icon appearance
 * Removed a reference to an image that was missing and unused
 * Added new notice area in admin
+* Changed Saved Settings/Reset Settings overlay
 * Tweaked and fixed a couple issues with icon uploads
 
 
