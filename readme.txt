@@ -24,7 +24,8 @@ The theme also includes the ability for your visitors to easily switch between t
 * Added option for truncated post titles on main, search and archive views
 * Fixed an issue with multi-page post links line heightappearance
 * Fixed an issue where WPtouch would force all post thumbnails to be 50x50px (now respects user settings)
-* Fixed an issue where categories with 0 posts might be shown in the header 
+* Fixed an issue where categories with 0 posts might be shown in the header
+* Now filtering Sociable from WPtouch
 
 = Version 1.9.10 =
 
