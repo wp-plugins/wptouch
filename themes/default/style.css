@@ -29,6 +29,8 @@ body {
 	font: 12px Helvetica;
 	-webkit-text-size-adjust: none;
 	min-height: 460px;
+	background-repeat: repeat;
+	background-position: 0 0;
 }
 
 ul {
@@ -1891,27 +1893,27 @@ p.subscribe-to-comments input#subscribe {
 /* @group Background Options */
 
 .classic-wptouch-bg {
-	background: url(../core/core-images/pinstripes-classic.gif) repeat;
+	background-image: url(../core/core-images/pinstripes-classic.gif);
 }
 
 .argyle-wptouch-bg {
-	background: url(../core/core-images/argyle-tie.gif) repeat;
+	background-image: url(../core/core-images/argyle-tie.gif);
 }
 
 .horizontal-wptouch-bg {
-	background: url(../core/core-images/pinstripes-horizontal.gif) repeat;
+	background-image: url(../core/core-images/pinstripes-horizontal.gif);
 }
 
 .diagonal-wptouch-bg {
-	background: url(../core/core-images/pinstripes-diagonal.gif) repeat;
+	background-image: url(../core/core-images/pinstripes-diagonal.gif);
 }
 
 .skated-wptouch-bg {
-	background: url(../core/core-images/skated-concrete.gif) repeat;
+	background-image: url(../core/core-images/skated-concrete.gif);
 }
 
 .grid-wptouch-bg {
-	background: url(../core/core-images/grid.gif) repeat;
+	background-image: url(../core/core-images/grid.gif);
 }
 
 /* @end */
