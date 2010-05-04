@@ -99,7 +99,7 @@ function bnc_get_ordered_cat_list() {
 	global $table_prefix;
 	global $wpdb;
 
-	$sql = "select * from " . $table_prefix . "term_taxonomy inner join " . $table_prefix . "terms on " . $table_prefix . "term_taxonomy.term_id = " . $table_prefix . "terms.term_id where taxonomy = 'category' order by count desc";	
+	$sql = "select * from " . $table_prefix . "term_taxonomy inner join " . $table_prefix . "terms on " . $table_prefix . "term_taxonomy.term_id = " . $table_prefix . "terms.term_id where taxonomy = 'category' and count > 0 order by count desc";	
 	$results = $wpdb->get_results( $sql );
 	foreach ($results as $result) {
 		echo "<li><a href=\"" . get_category_link( $result->term_id ) . "\">" . $result->name . " (" . $result->count . ")</a></li>";
