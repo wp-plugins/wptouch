@@ -776,28 +776,8 @@ a.h2 {
 	margin-bottom: 4px;
 	font-size: 15px;
 	font-weight: bold;
-	text-overflow: ellipsis;
-	white-space: nowrap;
-	overflow: hidden;
-	width: 72%;
 	line-height: 17px;
-}
-
-a.h2.archive-view {
-	color: #222;
-	text-decoration: none;
-	display: block;
-	margin-top: 2px;
-	text-align: left;
-	letter-spacing: -1px;
-	margin-bottom: 4px;
-	font-size: 15px;
-	font-weight: bold;
-	text-overflow: ellipsis;
-	white-space: nowrap;
-	overflow: hidden;
-	width: 95%;
-	line-height: 17px;
+	margin-right: 10px;
 }
 
 .mainentry {
@@ -1124,15 +1104,24 @@ a.sh2 {
 /* @group Post Options Bar */
 
 .single-post-meta-bottom .post-page-nav {
-	font-size: 15px;
-	margin-bottom: 15px;
+	font-size: 14px;
+	line-height: 25px;
+	text-indent: -99px;
+	margin-left: 100px;
+	text-align: left;
+	padding: 0;
+	margin-bottom: 10px;
+	letter-spacing: 0;
 }
 
 .single-post-meta-bottom .post-page-nav a {
-	padding: 3px 7px;
+	padding: 2px 5px 2px 8px;
 	background-color: #fff;
 	border: 1px solid #ccc;
 	-webkit-border-radius: 4px;
+	width: 16px;
+	margin-right: 1px;
+	letter-spacing: 2px;
 }
 
 ul#post-options {

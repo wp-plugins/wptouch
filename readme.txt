@@ -18,6 +18,13 @@ The theme also includes the ability for your visitors to easily switch between t
 
 == Changelog ==
 
+= Version 1.9.11 (unreleased) =
+
+* Fixed an issue with multi-page posts
+* Added automatic focus to Search for usability
+* Added option for truncated post titles on main, search and archive views
+
+
 = Version 1.9.10 =
 
 * Updated styling for post listings, titles now use ellipses

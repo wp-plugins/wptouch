@@ -64,6 +64,7 @@ $wptouch_defaults = array(
 	'enable-main-tags' => true,
 	'enable-main-categories' => true,
 	'enable-main-email' => true,
+	'enable-truncated-titles' => true,
 // Prowl
 	'prowl-api' => '',
 	'enable-prowl-comments-button' => false,
@@ -739,6 +740,11 @@ function bnc_is_email_enabled() {
 	return $ids['enable-main-email'];
 }
 
+function bnc_is_truncated_enabled() {
+	$ids = bnc_wp_touch_get_menu_pages();
+	return $ids['enable-truncated-titles'];	
+}
+
 // Prowl Functions
 function bnc_is_prowl_direct_message_enabled() {
 	$settings = bnc_wptouch_get_settings();
@@ -768,8 +774,8 @@ function bnc_wp_touch_get_pages() {
 			 $k == 'enable-cats-button'  || $k == 'enable-tags-button'  || $k == 'enable-search-button'  || 
 			 $k == 'enable-login-button' || $k == 'enable-gravatars' || 
 			 $k == 'enable-main-home' || $k == 'enable-main-rss' || $k == 'enable-main-email' || 
-			 $k == 'enable-main-name' || $k == 'enable-main-tags' || $k == 'enable-main-categories' || 
-			 $k == 'enable-prowl-comments-button' || $k == 'enable-prowl-users-button' || 
+			 $k == 'enable-truncated-titles' || $k == 'enable-main-name' || $k == 'enable-main-tags' || 
+			 $k == 'enable-main-categories' || $k == 'enable-prowl-comments-button' || $k == 'enable-prowl-users-button' || 
 			 $k == 'enable-prowl-message-button' || $k == 'enable-gigpress-button'  || $k == 'enable-flat-icon') {
 			} else {
 				if (is_numeric($k)) {

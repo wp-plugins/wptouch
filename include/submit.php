@@ -78,6 +78,12 @@
 			$a['enable-main-email'] = 0;
 		}
 		
+		if ( isset( $_POST['enable-truncated-titles'] ) ) {
+			$a['enable-truncated-titles'] = 1;
+		} else {
+			$a['enable-truncated-titles'] = 0;
+		}
+		
 		if ( isset( $_POST['enable-main-name'] ) ) {
 			$a['enable-main-name'] = 1;
 		} else {

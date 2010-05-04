@@ -80,6 +80,10 @@
 						</ul>	
 					</li>
 					<li>
+						<input type="checkbox" class="checkbox" name="enable-truncated-titles" <?php if (isset($wptouch_settings['enable-truncated-titles']) && $wptouch_settings['enable-truncated-titles'] == 1) echo('checked'); ?> />
+						<label for="enable-truncated-titles"><?php _e( "Enable Truncated Titles", "wptouch" ); ?> <small>(<?php _e( "Will use ellipses when titles are too long instead of wrapping them", "wptouch" ); ?>)</small></label>
+					</li>					
+					<li>
 						<input type="checkbox" class="checkbox" name="enable-main-name" <?php if (isset($wptouch_settings['enable-main-name']) && $wptouch_settings['enable-main-name'] == 1) echo('checked'); ?> />
 						<label for="enable-authorname"> <?php _e( "Show Author's Name", "wptouch" ); ?></label>
 					</li>			

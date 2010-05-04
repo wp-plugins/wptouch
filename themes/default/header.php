@@ -39,8 +39,8 @@ include( dirname(__FILE__) . '/../core/core-header.php' );
  		<div id="wptouch-search-inner">
 			<form method="get" id="searchform" action="<?php bloginfo('home'); ?>/">
 				<input type="text" value="Search..." onfocus="if (this.value == 'Search...') {this.value = ''}" name="s" id="s" /> 
-				<input name="submit" type="hidden" tabindex="5" value="Search"  />
-			<a href="javascript:return false;" onclick="bnc_jquery_search_toggle();"><img class="head-close" src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/themes/core/core-images/head-close.png" alt="close" /></a>
+				<input name="submit" type="hidden" tabindex="1" value="Search"  />
+			<a href="javascript:return false;" onclick="bnc_jquery_search_toggle(); $wptouch('input#s').blur();"><img class="head-close" src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/themes/core/core-images/head-close.png" alt="close" /></a>
 			</form>
 		</div>
 	</div>
@@ -115,7 +115,7 @@ include( dirname(__FILE__) . '/../core/core-header.php' );
 
 <div id="drop-fade">
 	<?php if (bnc_is_search_enabled()) { ?>			    
-    	<a id="searchopen" class="top" href="javascript:return false;" onclick="bnc_jquery_search_toggle();"><?php _e( 'Search', 'wptouch' ); ?></a>
+    	<a id="searchopen" class="top" href="javascript:return false;" onclick="bnc_jquery_search_toggle(); $wptouch('input#s').focus();"><?php _e( 'Search', 'wptouch' ); ?></a>
 	<?php } ?>
 
 	<?php if (bnc_is_prowl_direct_message_enabled()) { ?>			    
