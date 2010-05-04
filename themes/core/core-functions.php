@@ -200,11 +200,18 @@ function comment_count( $count ) {
      echo '<a href="' . admin_url("comment.php?action=cdc&c=$id") . '">' . __('del') . '</a>';  
      echo '<a href="' . admin_url("comment.php?action=cdc&dt=spam&c=$id") . '">' . __('spam') . '</a>';  
    }  
- }  
+ }
+ 
+
+function wptouch_thumbnail_size( $size ) {
+	$size = 'thumbnail';
+	return $size;
+}
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // WPtouch Filters
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+add_filter( 'post_thumbnail_size', 'wptouch_thumbnail_size' );
 remove_action('wp_head', 'gigpress_head');
 remove_filter('the_excerpt', 'do_shortcode');   
 remove_filter('the_content', 'do_shortcode');

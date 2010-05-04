@@ -20,10 +20,11 @@ The theme also includes the ability for your visitors to easily switch between t
 
 = Version 1.9.11 (unreleased) =
 
-* Fixed an issue with multi-page posts
-* Added automatic focus to Search for usability
+* Added automatic focus to header Search for usability
 * Added option for truncated post titles on main, search and archive views
-
+* Fixed an issue with multi-page post links line heightappearance
+* Fixed an issue where WPtouch would force all post thumbnails to be 50x50px (now respects user settings)
+* Fixed an issue where categories with 0 posts might be shown in the header 
 
 = Version 1.9.10 =
 
