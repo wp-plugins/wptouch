@@ -65,20 +65,16 @@ $wptouch_defaults = array(
 	'enable-main-categories' => true,
 	'enable-main-email' => true,
 	'enable-truncated-titles' => true,
-// Prowl
 	'prowl-api' => '',
 	'enable-prowl-comments-button' => false,
 	'enable-prowl-users-button' => false,
 	'enable-prowl-message-button' => false,
-//
 	'header-background-color' => '000000',
 	'header-border-color' => '333333',
 	'header-text-color' => 'eeeeee',
 	'link-color' => '006bb3',
-// New
 	'post-cal-thumb' =>'calendar-icons',
 	'h2-font' =>'Helvetica Neue',
-//
 	'style-text-justify' => 'full-justified',
 	'style-background' => 'classic-wptouch-bg',
 	'style-icon' => 'glossy-icon',
