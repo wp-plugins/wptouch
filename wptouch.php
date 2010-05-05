@@ -305,11 +305,15 @@ class WPtouchPlugin {
 		$this->prowl_output = false;
 		$this->prowl_success = false;
 
+		// Don't change the template directory when in the admin panel
 		add_action( 'plugins_loaded', array(&$this, 'detectAppleMobile') );
-		add_filter( 'stylesheet', array(&$this, 'get_stylesheet') );
-		add_filter( 'theme_root', array(&$this, 'theme_root') );
-		add_filter( 'theme_root_uri', array(&$this, 'theme_root_uri') );
-		add_filter( 'template', array(&$this, 'get_template') );
+		if ( strpos( $_SERVER['REQUEST_URI'], '/wp-admin' ) === false ) {
+			add_filter( 'stylesheet', array(&$this, 'get_stylesheet') );
+			add_filter( 'theme_root', array(&$this, 'theme_root') );
+			add_filter( 'theme_root_uri', array(&$this, 'theme_root_uri') );
+			add_filter( 'template', array(&$this, 'get_template') );	
+		}			
+		
 		add_filter( 'init', array(&$this, 'bnc_filter_iphone') );
 		add_filter( 'wp', array(&$this, 'bnc_do_redirect') );
 		add_filter( 'wp_head', array(&$this, 'bnc_head') );
@@ -469,7 +473,7 @@ class WPtouchPlugin {
 	   }
 	}
 
-	function bnc_filter_iphone() {				
+	function bnc_filter_iphone() {	
 		$key = 'wptouch_switch_cookie';
 		
 	   if (isset($_GET['theme_view'])) {
