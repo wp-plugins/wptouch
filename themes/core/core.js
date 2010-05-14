@@ -29,8 +29,8 @@ $wptouch.timerId = setInterval(function(){
 		}
 	}
 	if (!timers.length) {
-		clearInterval(jQuery.timerId);
-		jQuery.timerId = null;
+		clearInterval($wptouch.timerId);
+		$wptouch.timerId = null;
 	}
 }, 83);
 
