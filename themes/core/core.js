@@ -95,20 +95,4 @@ $wptouch.timerId = setInterval(function(){
 	}
 }, 83);
 
-/////// -- Fix YouTube On Top Issue -- ///////
-
-function wptouch_opaqalize() {
-// embed
-$wptouch('embed').each(function() {
-	if (!$wptouch(this).attr('wmode')) {
-		$wptouch(this).attr({'wmode':'opaque'});
-	}
-});
-// object
-$wptouch('object').each(function() {
-	var e = document.createElement('param');
-	e.setAttribute('name','wmode');
-	e.setAttribute('value','opaque');
-	$wptouch(this).append(e);
-});
 // End WPtouch jS
