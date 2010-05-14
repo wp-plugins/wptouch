@@ -14,8 +14,8 @@ $wptouch = jQuery.noConflict();
 if (top.location!= self.location) {top.location = self.location.href}
 
 /////// --New function fadeToggle() -- ///////
-jQuery.fn.fadeToggle = function(speed, easing, callback) { 
-	return this.animate({opacity: 'toggle', height: 'toggle'}, speed, easing, callback); 
+$wptouch.fn.fadeToggle = function(speed, easing, callback) { 
+	return this.animate({opacity: 'toggle'}, speed, easing, callback); 
 };
 
 /////// -- Switch Magic -- ///////

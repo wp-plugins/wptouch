@@ -20,7 +20,6 @@ The theme also includes the ability for your visitors to easily switch between t
 
 = Version 1.9.12 =
 * Fixes login to admin through mobile device bug
-* Added height transition to toggle effect in menu, post droppers, comment dropper
 * Fixes issue where mobile may be shown to desktop users (non-cache related)
 * Fixes issue where YouTube videos are on top of menus, other content
 * Removed unused files
