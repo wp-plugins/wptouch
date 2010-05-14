@@ -4,7 +4,7 @@
  * Copyright (c) 2008 - 2010 Duane Storey & Dale Mugford (BraveNewCode Inc.)
  * Licensed under GPL.
  *
- * Last Updated: May 4th, 2010
+ * Last Updated: May 14th, 2010
  */
 
 /////// -- Let's setup a unique namspace in jQuery -- ///////
@@ -17,6 +17,26 @@ if (top.location!= self.location) {top.location = self.location.href}
 jQuery.fn.fadeToggle = function(speed, easing, callback) { 
 	return this.animate({opacity: 'toggle'}, speed, easing, callback); 
 };
+
+function doWPtouchReady() {	 
+
+/////// -- Tweak jQuery Timer -- ///////
+$wptouch.timerId = setInterval(function(){
+	var timers = jQuery.timers;
+	for (var i = 0; i < timers.length; i++) {
+		if (!timers[i]()) {
+			timers.splice(i--, 1);
+		}
+	}
+	if (!timers.length) {
+		clearInterval(jQuery.timerId);
+		jQuery.timerId = null;
+	}
+}, 83);
+
+	wptouch_opaqalize();
+
+} // end onReady
 
 /////// -- Switch Magic -- ///////
 function wptouch_switch_confirmation() {
@@ -33,6 +53,24 @@ if (document.cookie && document.cookie.indexOf("wptouch_switch_cookie") > -1) {
 		}
 	}
 }
+
+/////// -- Fix YouTube On Top Issue -- ///////
+
+function wptouch_opaqalize() {
+// embed
+$wptouch('embed').each(function() {
+	if (!$wptouch(this).attr('wmode')) {
+		$wptouch(this).attr({'wmode':'opaque'});
+	}
+});
+// object
+$wptouch('object').each(function() {
+	var e = document.createElement('param');
+	e.setAttribute('name','wmode');
+	e.setAttribute('value','opaque');
+	$wptouch(this).append(e);
+});
+
 
 /////// -- Prowl Results -- ///////
 setTimeout(function() { $wptouch('#prowl-success').fadeOut(400); }, 5250);
@@ -80,19 +118,6 @@ function bnc_showhide_coms_toggle() {
 	$wptouch("h3#com-head").toggleClass("comhead-open");
 }
 
-
-/////// -- Tweak jQuery Timer -- ///////
-$wptouch.timerId = setInterval(function(){
-	var timers = jQuery.timers;
-	for (var i = 0; i < timers.length; i++) {
-		if (!timers[i]()) {
-			timers.splice(i--, 1);
-		}
-	}
-	if (!timers.length) {
-		clearInterval(jQuery.timerId);
-		jQuery.timerId = null;
-	}
-}, 83);
+jQuery( document ).ready( function() { doWPtouchReady(); } );
 
 // End WPtouch jS

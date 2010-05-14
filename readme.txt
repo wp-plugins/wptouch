@@ -18,6 +18,12 @@ The theme also includes the ability for your visitors to easily switch between t
 
 == Changelog ==
 
+= Version 1.9.12 =
+* Fixes login to admin through mobile device bug
+* Fixes issue where mobile may be shown to desktop users (non-cache related)
+* Fixes issue where YouTube videos are on top of menus, other content
+* Removed unused files
+
 = Version 1.9.11 =
 
 * Added automatic input focus to header Search for usability
