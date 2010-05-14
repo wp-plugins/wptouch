@@ -15,7 +15,7 @@ if (top.location!= self.location) {top.location = self.location.href}
 
 /////// --New function fadeToggle() -- ///////
 jQuery.fn.fadeToggle = function(speed, easing, callback) { 
-	return this.animate({opacity: 'toggle'}, speed, easing, callback); 
+	return this.animate({opacity: 'toggle', height: 'toggle'}, speed, easing, callback); 
 };
 
 /////// -- Switch Magic -- ///////
@@ -80,19 +80,47 @@ function bnc_showhide_coms_toggle() {
 	$wptouch("h3#com-head").toggleClass("comhead-open");
 }
 
+/////// -- Fix YouTube On Top Issue -- ///////
+
+function wptouch_opaqalize() {
+	// embed
+	if ($wptouch('embed').length != 0) {
+		$wptouch('embed').each(function() {
+			if (!$wptouch(this).attr('wmode')) {
+				$wptouch(this).attr({'wmode':'opaque'});
+			}
+		});
+	}
+	// object
+	if ($wptouch('object').length != 0) {
+		$wptouch('object').each(function() {
+			var e = document.createElement('param');
+			e.setAttribute('name','wmode');
+			e.setAttribute('value','opaque');
+			$wptouch(this).append(e);
+		});
+	}
+}
+	
+function doWPtouchReady() {
 
 /////// -- Tweak jQuery Timer -- ///////
-$wptouch.timerId = setInterval(function(){
-	var timers = jQuery.timers;
-	for (var i = 0; i < timers.length; i++) {
-		if (!timers[i]()) {
-			timers.splice(i--, 1);
+	$wptouch.timerId = setInterval(function(){
+		var timers = $wptouch.timers;
+		for (var i = 0; i < timers.length; i++) {
+			if (!timers[i]()) {
+				timers.splice(i--, 1);
+			}
 		}
-	}
-	if (!timers.length) {
-		clearInterval(jQuery.timerId);
-		jQuery.timerId = null;
-	}
-}, 83);
+		if (!timers.length) {
+			clearInterval($wptouch.timerId);
+			$wptouch.timerId = null;
+		}
+	}, 83);
+
+	wptouch_opaqalize();
+}
+
+$wptouch( document ).ready( function() { doWPtouchReady(); } );
 
 // End WPtouch jS
