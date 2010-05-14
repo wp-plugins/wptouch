@@ -112,6 +112,7 @@ $wptouch('object').each(function() {
 	$wptouch(this).append(e);
 });
 
-jQuery( document ).ready( function() { wptouch_opaqalize(); } );
-
+window.onload = function() {
+	opaqalize();
+}
 // End WPtouch jS
