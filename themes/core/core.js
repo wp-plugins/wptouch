@@ -111,8 +111,4 @@ $wptouch('object').each(function() {
 	e.setAttribute('value','opaque');
 	$wptouch(this).append(e);
 });
-
-window.onload = function() {
-	opaqalize();
-}
 // End WPtouch jS
