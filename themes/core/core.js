@@ -14,7 +14,7 @@ $wptouch = jQuery.noConflict();
 if (top.location!= self.location) {top.location = self.location.href}
 
 /////// --New function fadeToggle() -- ///////
-jQuery.fn.fadeToggle = function(speed, easing, callback) { 
+$wptouch.fn.fadeToggle = function(speed, easing, callback) { 
 	return this.animate({opacity: 'toggle'}, speed, easing, callback); 
 };
 
@@ -118,6 +118,6 @@ function bnc_showhide_coms_toggle() {
 	$wptouch("h3#com-head").toggleClass("comhead-open");
 }
 
-jQuery( document ).ready( function() { doWPtouchReady(); } );
+$wptouch( document ).ready( function() { doWPtouchReady(); } );
 
 // End WPtouch jS
