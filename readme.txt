@@ -8,9 +8,13 @@ Stable tag: 1.9.12
 
 WPtouch automatically transforms your WordPress blog into an iPhone application-style theme, complete with ajax loading articles and effects, when viewed from an iPhone, iPod touch, Android, Opera Mini, Palm Pre and BlackBerry Storm mobile devices.
 
+Coming soon: WPtouch 2.0! Totally re-written top to bottom, with a slew of new features, include support for themes! That's right, choose from a variety of quality themes (included), or create your own custom theme using the Skeleton template.
+
+For more information or to sign-up to be notified when 2.0 is available, visit http://www.wptouch.com
+
 == Description ==
 
-With a single click, *WPtouch* transforms your WordPress blog into an iPhone application-style theme, complete with ajax loading articles and effects, when viewed from an iPhone, iPod touch, Android or BlackBerry touch mobile device.
+WPtouch automatically transforms your WordPress blog into an iPhone application-style theme, complete with ajax loading articles and effects, when viewed from an iPhone, iPod touch, Android, Opera Mini, Palm Pre and BlackBerry Storm mobile devices.
 
 The admin panel allows you to customize many aspects of its appearance, and deliver a fast, user-friendly and stylish version of your site to iPhone, iPod touch, Android, Palm Pre and BlackBerry Storm visitors, without modifying *a single bit of code* (or affecting) your regular desktop theme.
 
@@ -37,7 +41,7 @@ The theme also includes the ability for your visitors to easily switch between t
 
 * Updated styling for post listings, titles now use ellipses
 * Updated list item styling in posts
-* Updated blockquote styling in posts
+* Updated block quote styling in posts
 * Changed default Gravatar image
 * Minor tweaks to calendar icon appearance
 * Removed a reference to an image that was missing and unused
@@ -77,7 +81,7 @@ The theme also includes the ability for your visitors to easily switch between t
 * Updated and fixed JS error in ajax_upload.js file
 * Fixed more GigPress CSS issues
 * Removed replace class javascript for page & post images and caption areas (still needs work)
-* Only loading the ajax commens js on the single post pages now
+* Only loading the ajax_comments.js on the single post pages now
 
 = Version 1.9.9.4 =
 * Updated and edited admin verbiage
@@ -513,7 +517,7 @@ Sorry, we do not officially support installations on WordPress 2.6 or older. You
 = 2.7, 2.8, 2.9+ =
 You can install *WPtouch* directly from the WordPress admin! Visit the *Plugins/Add New* page and search for 'WPtouch'. Click to install.
 
-Once installed and activated visit the WPtouch admin page (*Settings/WPtouch*) to customize your WPtouch appearance.
+Once installed and activated visit the WPtouch admin page (*Settings/WPtouch*) to customize your WPtouch installation's appearance.
 
 = WordPress MU =
 
