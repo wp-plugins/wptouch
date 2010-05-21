@@ -383,6 +383,10 @@ blockquote {
 	display: none;
 }
 
+#wptouch-menu-inner {
+	position: relative;
+}
+
 #wptouch-menu-inner img {
 	float: left;
 	position: relative;

@@ -79,17 +79,6 @@ function bnc_showhide_coms_toggle() {
 	$wptouch("img#com-arrow").toggleClass("com-arrow-down");
 	$wptouch("h3#com-head").toggleClass("comhead-open");
 }
-
-/////// -- Fix YouTube On Top Issue -- ///////
-
-function wptouch_opaqalize() {
-	// embed
-		$wptouch('embed').each(function() {
-			if (!$wptouch(this).attr('wmode')) {
-				$wptouch(this).attr({'wmode':'transparent'});
-			}
-		});
-}
 	
 function doWPtouchReady() {
 
@@ -107,7 +96,6 @@ function doWPtouchReady() {
 		}
 	}, 83);
 
-	wptouch_opaqalize();
 }
 
 $wptouch( document ).ready( function() { doWPtouchReady(); } );
