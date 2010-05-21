@@ -189,6 +189,20 @@ function comment_count( $count ) {
 	return $comment_count;
 }
 
+// Stop '0' comment counts in comment bubbles
+function wptouch_get_comment_count() {
+	global $wpdb;
+	global $post;
+	
+	$sql = $wpdb->prepare( "SELECT count(*) AS c FROM {$wpdb->comments} WHERE comment_type = '' AND comment_approved = 1 AND comment_post_ID = %d", $post->ID );
+	$result = $wpdb->get_row( $sql );
+	if ( $result ) {
+		return $result->c;
+	} else {
+		return 0;	
+	}
+}
+
 // Add 'Delete | Spam' links in comments for logged in admins
  function wptouch_moderate_comment_link($id) {  
 	  if (current_user_can('edit_post')) {  

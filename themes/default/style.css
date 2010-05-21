@@ -747,6 +747,7 @@ img.head-close {
 	margin-left: 10px;
 	border: 1px solid #b1b1b1;
 	-webkit-border-radius: 8px;
+	position: relative;
 }
 
 .big {
