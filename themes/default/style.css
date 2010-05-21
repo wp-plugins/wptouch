@@ -1988,6 +1988,31 @@ p.subscribe-to-comments input#subscribe {
 
 /* @group Compatibility CSS */
 
+/* @group Gravity Forms */
+
+#singlentry .gform_wrapper input {
+	width: 90%;
+	padding: 5px;
+	border: 1px solid #777;
+	font-size: 13px;
+}
+
+#singlentry .gform_wrapper select {
+	width: 94%;
+}
+
+#singlentry .gform_wrapper input.button {
+	width: auto;
+	font-size: 11px;
+	padding: 2px;
+	text-shadow: #fff 0 1px 1px;
+	font-weight: bold;
+}
+
+
+
+/* @end */
+
 /* @group WP Skypscraper */
 
 .wp_skyscraper_c2 {
