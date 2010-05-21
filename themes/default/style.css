@@ -2044,6 +2044,7 @@ a.tt {
 .post object, .post embed {
 	width: 100% !important;
 	height: auto;
+		z-index:0 !important;
 }
 
 /* @end */
