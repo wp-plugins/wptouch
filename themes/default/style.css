@@ -1,7 +1,4 @@
-/* @override 
-	http://www.bravenewcode.com/wordpress/wp-content/plugins/wptouch/themes/default/style-compressed.css
-	http://www.bravenewcode.com/wordpress/wp-content/plugins/wptouch/themes/default/style.css
-*/
+/* @override http://www.bravenewcode.com/wordpress/wp-content/plugins/wptouch/themes/default/style.css */
 
 /*  
 Theme Name: WPtouch Mobile Plugin & Theme For WordPress
@@ -318,7 +315,7 @@ blockquote {
 	padding: 0;
 }
 
-.dropper ul#head-tags li {
+.dropper ul#head-tags li, .dropper ul#head-cats li {
 	width: 100%;
 	margin: 0;
 	padding: 0;
@@ -332,10 +329,6 @@ blockquote {
 	padding: 0;
 	text-align: left;
 	margin: 0;
-}
-
-.dropper ul#head-pages li:last-child {
-	padding-bottom: 2px;
 }
 
 .dropper ul#head-account li.text {
@@ -369,8 +362,18 @@ blockquote {
 	color: #d2d2d2;
 	margin: 0;
 	width: auto;
-	padding: 11px 35px 11px 15px;
+	padding: 13px 35px 13px 15px;
 	text-align: left;
+}
+
+.dropper ul#head-tags a {
+	padding-top: 12px;
+	padding-bottom: 13px;
+}
+
+.dropper ul#head-cats a {
+	padding-top: 13px;
+	padding-bottom: 13px;
 }
 
 /* @group Tab Menus */
@@ -390,7 +393,7 @@ blockquote {
 #wptouch-menu-inner img {
 	float: left;
 	position: relative;
-	bottom: 5px;
+	bottom: 7px;
 	width: 28px;
 	padding-right: 10px;
 	right: 0;
@@ -1715,6 +1718,11 @@ h3#comments, h3#respond {
 	font-size: 17px;
 	padding-left: 10px;
 	padding-top: 20px;
+}
+
+h3.coms-closed {
+	text-align: center;
+	margin-top: 25px;
 }
 
 .preview {

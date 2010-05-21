@@ -57,7 +57,7 @@
 		  <!-- If comments are closed. -->
 		  <li style="display:none"></li>
 		  </ol>
-		  <h3 class="result-text"><?php _e( 'Comments are closed.', 'wptouch' ); ?></h3>
+		  <h3 class="result-text coms-closed"><?php _e( 'Comments are closed.', 'wptouch' ); ?></h3>
   
   	<?php endif; ?><!--end comment status-->
 	<?php endif; ?>
