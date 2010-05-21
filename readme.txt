@@ -22,6 +22,11 @@ The theme also includes the ability for your visitors to easily switch between t
 
 == Changelog ==
 
+= Version 1.9.13 =
+* Removed application Twitter links on single post page, replaced with post to m.twitter.com
+* Added filter for whydowork plugin ads (to prefer native Adsense in WPtouch)
+* Attempted new fix for YouTube overtop menu bug, it's a mobile browser issue (can't fix)
+
 = Version 1.9.12 =
 * Fixes login to admin through mobile device bug
 * Fixes issue where mobile theme may be shown to desktop users (non-cache related)

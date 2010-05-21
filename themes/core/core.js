@@ -62,13 +62,11 @@ function wptouch_toggle_bookmarks() {
 
 /////// --jQuery Tabs-- ///////
 $wptouch(function () {
-    var tabContainers = $wptouch('#menu-head > ul');
-    
+    var tabContainers = $wptouch('#menu-head > ul');   
     $wptouch('#tabnav a').click(function () {
         tabContainers.hide().filter(this.hash).show();
     $wptouch('#tabnav a').removeClass('selected');
     $wptouch(this).addClass('selected');
-        
         return false;
     }).filter(':first').click();
 });
