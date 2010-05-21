@@ -84,20 +84,11 @@ function bnc_showhide_coms_toggle() {
 
 function wptouch_opaqalize() {
 	// embed
-	if ($wptouch('embed').length != 0) {
+	if ($wptouch('embed').length) {
 		$wptouch('embed').each(function() {
 			if (!$wptouch(this).attr('wmode')) {
 				$wptouch(this).attr({'wmode':'opaque'});
 			}
-		});
-	}
-	// object
-	if ($wptouch('object').length != 0) {
-		$wptouch('object').each(function() {
-			var e = document.createElement('param');
-			e.setAttribute('name','wmode');
-			e.setAttribute('value','opaque');
-			$wptouch(this).append(e);
 		});
 	}
 }

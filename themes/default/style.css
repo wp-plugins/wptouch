@@ -736,12 +736,10 @@ img.head-close {
 	background-color: #fff;
 	padding: 10px;
 	margin-bottom: 12px;
-	position: relative;
 	margin-right: 10px;
 	margin-left: 10px;
 	border: 1px solid #b1b1b1;
 	-webkit-border-radius: 8px;
-	z-index: 1;
 }
 
 .big {
@@ -814,8 +812,8 @@ a.h2 {
 
 .comment-bubble {
 	background: url(../core/core-images/sprite.png) no-repeat -2px -90px;
-	width: 24px;
-	height: 20px;
+	width: 25px;
+	height: 21px;
 	padding-top: 4px;
 	position: absolute;
 	color: #fff;
@@ -823,11 +821,11 @@ a.h2 {
 	font: bold 13px Helvetica, Arial-BoldMT, Geneva, sans-serif;
 	letter-spacing: -1px;
 	text-shadow: #943141 -1px -1px 1px;
-	padding-right: 1px;
+	padding-right: 4px;
 	margin-left: 0;
 	z-index: 1;
 	text-align: center;
-	left: 1px;
+	left: 2px;
 	top: 0;
 }
 
@@ -2046,8 +2044,6 @@ a.tt {
 .post object, .post embed {
 	width: 100% !important;
 	height: auto;
-	position: relative;
-	z-index: 0;
 }
 
 /* @end */
@@ -2109,24 +2105,6 @@ a.dsq-brlink {
 	display: block;
 	margin-top: 15px;
 	font-family: "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-}
-
-/* @end */
-
-/* @end */
-
-/* @group WPtouch Adsense area */
-
-#adsense-area {
-	height: 50px;
-	overflow: none;
-	margin-bottom: 12px;
-	background: transparent;
-}
-
-#adsense-area iframe {
-	height: 50px!important;
-	overflow: none;
 }
 
 /* @end */
@@ -2200,6 +2178,24 @@ a.dsq-brlink {
 
 #idc-container-parent label.idc-nofloat {
 	display: none;
+}
+
+/* @end */
+
+/* @end */
+
+/* @group WPtouch Adsense area */
+
+#adsense-area {
+	height: 50px;
+	overflow: none;
+	margin-bottom: 12px;
+	background: transparent;
+}
+
+#adsense-area iframe {
+	height: 50px!important;
+	overflow: none;
 }
 
 /* @end */
@@ -2289,59 +2285,5 @@ a.dsq-brlink {
 	height: 9px;
 	background: url(../core/core-images/thumb-corners.png) 9px -9px;
 }
-
-/* @end */
-
-/* @group Text-Size */
-
-ul#text-options {
-	margin: 0;
-	background-color: #fff;
-	width: 135px;
-	position: relative;
-	float: right;
-	bottom: 19px;
-	border: 1px solid #b1b1b1;
-	-webkit-border-radius: 8px;
-	border-top-style: none;
-	right: 15px;
-	z-index: 0;
-	height: 24px;
-	padding: 8px 0 0;
-	text-align: center;
-}
-
-ul#text-options li {
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-	display: inline;
-	font-size: 11px;
-	color: #999;
-}
-
-ul#text-options li a {
-	font-family: Georgia, "Times New Roman", Times, serif;
-	text-shadow: #fff 0 1px 1px;
-	padding: 5px;
-	margin-left: 1px;
-	font-weight: bold;
-	font-style: italic;
-	color: #333;
-}
-
-ul#text-options a#text-reg {
-	font-size: 12px;
-}
-
-ul#text-options a#text-med {
-	font-size: 14px;
-}
-
-ul#text-options a#text-lg {
-	font-size: 16px;
-}
-
-
 
 /* @end */
