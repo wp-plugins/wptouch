@@ -84,13 +84,11 @@ function bnc_showhide_coms_toggle() {
 
 function wptouch_opaqalize() {
 	// embed
-	if ($wptouch('embed').length) {
 		$wptouch('embed').each(function() {
 			if (!$wptouch(this).attr('wmode')) {
 				$wptouch(this).attr({'wmode':'transparent'});
 			}
 		});
-	}
 }
 	
 function doWPtouchReady() {
