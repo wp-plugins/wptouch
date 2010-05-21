@@ -376,9 +376,9 @@ blockquote {
 /* @group Tab Menus */
 
 #wptouch-menu {
-	position: fixed;
+	position: absolute;
 	z-index: 2;
-	top: 44px;
+	top: 45px;
 	-webkit-box-shadow: #333 -6px 6px 6px;
 	display: none;
 }
@@ -2045,6 +2045,7 @@ a.tt {
 	width: 100% !important;
 	height: auto;
 		z-index:0 !important;
+	position: relative;
 }
 
 /* @end */

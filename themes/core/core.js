@@ -87,7 +87,7 @@ function wptouch_opaqalize() {
 	if ($wptouch('embed').length) {
 		$wptouch('embed').each(function() {
 			if (!$wptouch(this).attr('wmode')) {
-				$wptouch(this).attr({'wmode':'opaque'});
+				$wptouch(this).attr({'wmode':'transparent'});
 			}
 		});
 	}
