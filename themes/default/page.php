@@ -78,6 +78,24 @@
 <!--If comments are enabled for pages in the WPtouch admin, and 'Allow Comments' is checked on a page-->
 	<?php if (bnc_is_page_coms_enabled() && 'open' == $post->comment_status) : ?>
 		<?php comments_template(); ?>
+		<script type="text/javascript">
+		jQuery(document).ready( function() {
+		// Ajaxify '#commentform'
+		var formoptions = { 
+			beforeSubmit: function() {$wptouch("#loading").fadeIn(400);},
+			success:  function() {
+				$wptouch("#commentform").hide();
+				$wptouch("#loading").fadeOut(400);
+				$wptouch("#refresher").fadeIn(400);
+				}, // end success 
+			error:  function() {
+				$wptouch('#errors').show();
+				$wptouch("#loading").fadeOut(400);
+				} //end error
+			} 	//end options
+		$wptouch('#commentform').ajaxForm(formoptions);
+		}); //End onReady
+		</script>
   	<?php endif; ?>
 <!--end comment status-->
     <?php endwhile; ?>	

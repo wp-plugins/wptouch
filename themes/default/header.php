@@ -20,6 +20,7 @@ include( dirname(__FILE__) . '/../core/core-header.php' );
 <div id="prowl-fail"><p><?php _e("Your Push Notification cannot be delivered at this time.", "wptouch"); ?></p></div>
 <?php } } ?>
 
+<?php if (bnc_is_login_button_enabled()) { ?>
 <!--#start The Login Overlay -->
 	<div id="wptouch-login">
 		<div id="wptouch-login-inner">
@@ -33,7 +34,7 @@ include( dirname(__FILE__) . '/../core/core-header.php' );
 			</form>
 		</div>
 	</div>
-
+<?php } ?>
  <!-- #start The Search Overlay -->
 	<div id="wptouch-search"> 
  		<div id="wptouch-search-inner">
@@ -76,6 +77,7 @@ include( dirname(__FILE__) . '/../core/core-header.php' );
 					<li><?php wp_tag_cloud('smallest=13&largest=13&unit=px&number=20&order=asc&format=list'); ?></li>
 				</ul>
 
+	<?php if (bnc_is_login_button_enabled()) { ?>
 		<ul id="head-account">
 				<?php if (!is_user_logged_in()) { ?>
 				    <li class="text">
@@ -97,6 +99,7 @@ include( dirname(__FILE__) . '/../core/core-header.php' );
 					<?php } ?>
 				<?php } ?>
 			</ul>
+		<?php } ?>
 			</div>
 		</div>
     </div>

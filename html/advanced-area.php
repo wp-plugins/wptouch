@@ -54,6 +54,7 @@
 					<p><?php _e( "This will add a 'Login' tab in the WPtouch sub header beside the Tags and Categories tabs if they are also enabled.", "wptouch" ); ?></p>
 					<p><?php _e( "It will display a username/password drop-down, allowing users to login plus be automatically re-directed back to the page they logged in from without seeing the WP admin.", "wptouch" ); ?></p>
 					<p><?php _e( "Once logged in, a new 'My Account' button will appear. The 'My Account' button shows useful links depending on the type of account (subscriber, admin, etc.).", "wptouch" ); ?></p>
+					<p><?php _e( "NOTE: The Account tab/links will always appear if you have enabled registration on your site or require users to login for comments.", "wptouch" ); ?></p>
 				</div>
 			</li>
 

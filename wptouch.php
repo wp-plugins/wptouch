@@ -701,7 +701,11 @@ function bnc_is_flat_icon_enabled() {
 
 function bnc_is_login_button_enabled() {
 	$ids = bnc_wp_touch_get_menu_pages();
-	return $ids['enable-login-button'];
+	if (get_option( 'comment_registration' ) || get_option( 'users_can_register' ) ||  $ids['enable-login-button'] ) {
+		return true;
+	} else {
+		return false;
+	}
 }		
 	
 function bnc_is_gravatars_enabled() {

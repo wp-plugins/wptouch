@@ -22,6 +22,10 @@ The theme also includes the ability for your visitors to easily switch between t
 
 == Changelog ==
 
+= Version 1.9.14 (unreleased) =
+* Fixed issue with Account tab logic
+* Fixed issue with Comments on pages
+
 = Version 1.9.13 =
 * Removed application Twitter links on single post page, replaced with post to m.twitter.com
 * Added filter for whydowork plugin ads (to prefer native Adsense in WPtouch)
