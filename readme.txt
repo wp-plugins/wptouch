@@ -8,7 +8,7 @@ Stable tag: 1.9.13
 
 WPtouch automatically transforms your WordPress blog into an iPhone application-style theme, complete with ajax loading articles and effects, when viewed from an iPhone, iPod touch, Android, Opera Mini, Palm Pre and BlackBerry Storm mobile devices.
 
-= Coming Soon: WPtouch 2.0 Pro! =
+*Coming Soon:* WPtouch 2.0 Pro!
 Totally re-written top to bottom, with a slew of new features, include support for themes! 
 
 For more information or to sign-up to be notified when WPtouch 2.0 Pro is available, visit http://www.wptouch.com
@@ -22,7 +22,7 @@ The admin panel allows you to customize many aspects of its appearance, and deli
 
 The theme also includes the ability for your visitors to easily switch between the *WPtouch* view and your site's regular theme.
 
-= Coming Soon: WPtouch 2.0 Pro! =
+*Coming Soon:* WPtouch 2.0 Pro!
 Totally re-written top to bottom, with a slew of new features, include support for themes! 
 
 For more information or to sign-up to be notified when WPtouch 2.0 Pro is available, visit http://www.wptouch.com
