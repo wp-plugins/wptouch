@@ -4,7 +4,7 @@
    Plugin URI: http://bravenewcode.com/products/wptouch
    Description: A plugin which formats your site with a mobile theme for the Apple <a href="http://www.apple.com/iphone/">iPhone</a> / <a href="http://www.apple.com/ipodtouch/">iPod touch</a>, <a href="http://www.android.com/">Google Android</a>, <a href="http://www.palm.com/us/products/phones/pre/">Palm Pre</a> and other touch-based smartphones.
 	Author: Dale Mugford & Duane Storey (BraveNewCode)
-	Version: 1.9.13
+	Version: 1.9.14
 	Author URI: http://www.bravenewcode.com
    
 	# Thanks to ContentRobot and the iWPhone theme/plugin
@@ -39,7 +39,7 @@
 */
 
 global $bnc_wptouch_version;
-$bnc_wptouch_version = '1.9.13';
+$bnc_wptouch_version = '1.9.14';
 
 require_once( 'include/plugin.php' );
 require_once( 'include/compat.php' );
@@ -80,6 +80,7 @@ $wptouch_defaults = array(
 	'style-icon' => 'glossy-icon',
 	'enable-regular-default' => false,
 	'excluded-cat-ids' => '',
+	'custom-footer-msg' => 'All content Copyright &copy; '. get_bloginfo('name') .'',
 	'home-page' => 0,
 	'enable-exclusive' => false,
 	'sort-order' => 'name',
@@ -664,10 +665,15 @@ function wptouch_excluded_cats() {
 	return stripslashes($settings['excluded-cat-ids']);
 }
 
+function wptouch_custom_footer_msg() {
+	$settings = bnc_wptouch_get_settings();
+	return stripslashes($settings['custom-footer-msg']);
+}
+
 function bnc_excerpt_enabled() {
 	$ids = bnc_wp_touch_get_menu_pages();
 	return $ids['enable-post-excerpts'];
-}	
+}
 
 function bnc_is_page_coms_enabled() {
 	$ids = bnc_wp_touch_get_menu_pages();
@@ -775,7 +781,7 @@ function bnc_wp_touch_get_pages() {
 	foreach ($ids as $k => $v) {
 		if ($k == 'main_title' || $k == 'enable-post-excerpts' || $k == 'enable-page-coms' || 
 			 $k == 'enable-cats-button'  || $k == 'enable-tags-button'  || $k == 'enable-search-button'  || 
-			 $k == 'enable-login-button' || $k == 'enable-gravatars' || 
+			 $k == 'enable-login-button' || $k == 'enable-gravatars' || $k == 'custom-footer-msg' ||
 			 $k == 'enable-main-home' || $k == 'enable-main-rss' || $k == 'enable-main-email' || 
 			 $k == 'enable-truncated-titles' || $k == 'enable-main-name' || $k == 'enable-main-tags' || 
 			 $k == 'enable-main-categories' || $k == 'enable-prowl-comments-button' || $k == 'enable-prowl-users-button' || 

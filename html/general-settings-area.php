@@ -20,9 +20,12 @@
 
 				
 				<h4><?php _e( "Post Listings Options", "wptouch" ); ?></h4>
-				<p><?php _e( "Choose between Calendar Icons, Post Thumbnails (WP 2.9) or nothing for your post listings.", "wptouch" ); ?></p>
-				<p><?php _e( "Select which post-meta items are shown under titles on the main, search, &amp; archives pages.", "wptouch" ); ?></p>
+				<p><?php _e( "Choose between calendar Icons, post thumbnails (WP 2.9) or none for your post listings.", "wptouch" ); ?></p>
+				<p><?php _e( "Select which meta items are shown below titles on main, search, &amp; archives pages.", "wptouch" ); ?></p>
 				<p><?php _e( "Also, choose if excerpts are shown/hidden (default is hidden).", "wptouch" ); ?></p>
+
+				<h4><?php _e( "Footer Message", "wptouch" ); ?></h4>
+				<p><?php _e( "Customize the default footer message shown in WPtouch here.", "wptouch" ); ?></p>
 			</div>
 
 			<div class="right-content">
@@ -99,7 +102,10 @@
 						<input type="checkbox" class="checkbox" name="enable-post-excerpts" <?php if (isset($wptouch_settings['enable-post-excerpts']) && $wptouch_settings['enable-post-excerpts'] == 1) echo('checked'); ?> />
 						<label for="enable-excerpts"><?php _e( "Hide Excerpts", "wptouch" ); ?></label>
 					</li>
-				</ul>	
+				</ul>
+				<ul class="wptouch-make-li-italic">
+					<li><input type="text" class="no-right-margin" name="custom-footer-msg" value="<?php $str = $wptouch_settings['custom-footer-msg']; echo stripslashes($str); ?>" /><?php _e( "Footer message", "wptouch" ); ?></li>
+				</ul>
 			</div>
 			
 	<div class="bnc-clearer"></div>

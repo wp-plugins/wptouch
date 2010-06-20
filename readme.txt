@@ -22,16 +22,21 @@ The admin panel allows you to customize many aspects of its appearance, and deli
 
 The theme also includes the ability for your visitors to easily switch between the *WPtouch* view and your site's regular theme.
 
-*Coming Soon:* WPtouch 2.0 Pro!
-Totally re-written top to bottom, with a slew of new features, include support for themes! 
+*Now Available:* WPtouch 2.0 Pro!
+Totally re-written top to bottom, with a slew of new features, include support for themes!
 
-For more information or to sign-up to be notified when WPtouch 2.0 Pro is available, visit http://www.wptouch.com
+For more information visit http://www.wptouch.com
 
 == Changelog ==
 
 = Version 1.9.14 (unreleased) =
-* Fixed issue with Account tab logic
-* Fixed issue with Comments on pages
+* Fixed issue with account tab logic
+* Fixed issue with account tab login
+* Fixed issue with comments on pages only showing 1 comment or not allowing replies
+* Fixed issue with comments on private posts/pages
+* Fixed compatibility with Banner Cycler plugin
+* Added ability to customize the footer copyright message
+* Added credit to Marcelo Marfil for his icons
 
 = Version 1.9.13 =
 * Removed application Twitter links on single post page, replaced with post to m.twitter.com

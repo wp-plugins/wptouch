@@ -24,7 +24,10 @@
 								<div class="comtop<?php if ($comment->comment_approved == '0') : echo ' preview'; endif; ?>">		
 									<?php if (bnc_is_gravatars_enabled()) { echo get_avatar( $comment, $size = '32', $default = '' . compat_get_plugin_url( 'wptouch' ) . '/themes/core/core-images/blank_gravatar.jpg' ); } ?>
 									<div class="com-author"><?php comment_author_link(); ?></div> 	<?php if ($comment->comment_approved == '0') : echo '<span>(moderation preview)</span>'; endif; ?>
-										<div class="comdater"><span><?php wptouch_moderate_comment_link(get_comment_ID()); ?></span>
+										<div class="comdater">
+											<?php if (is_single()) { ?>
+												<span><?php wptouch_moderate_comment_link(get_comment_ID()); ?></span>
+											<?php } ?>
 											<?php if (function_exists('time_since')) { 
 												echo time_since(abs(strtotime($comment->comment_date_gmt . " GMT")), time()) . " ago"; } else { the_time('F jS, Y'); 
 											} ?>	

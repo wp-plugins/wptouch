@@ -25,10 +25,10 @@ include( dirname(__FILE__) . '/../core/core-header.php' );
 	<div id="wptouch-login">
 		<div id="wptouch-login-inner">
 			<form name="loginform" id="loginform" action="<?php bloginfo('wpurl'); ?>/wp-login.php" method="post">
-				<label><input type="text" name="log" id="log" onfocus="if (this.value == 'username') {this.value = ''}" value="username" /></label>
-				<label><input type="password" name="pwd"  onfocus="if (this.value == 'password') {this.value = ''}" id="pwd" value="password" /></label>
+				<label><input type="text" name="log" id="log" onfocus="if (this.value == 'username') {this.value = ''}" tabindex="1" value="username" /></label>
+				<label><input type="password" name="pwd"  onfocus="if (this.value == 'password') {this.value = ''}" tabindex="2" id="pwd" value="password" /></label>
 				<input type="hidden" name="rememberme" value="forever" />
-				<input type="hidden" id="logsub" name="submit" value="<?php _e('Login'); ?>" tabindex="9" />
+				<input type="hidden" id="logsub" name="submit" value="<?php _e('Login'); ?>" tabindex="3" />
 				<input type="hidden" name="redirect_to" value="<?php echo $_SERVER['REQUEST_URI']; ?>"/>
 			<a href="javascript:return false;" onclick="bnc_jquery_login_toggle();"><img class="head-close" src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/themes/core/core-images/head-close.png" alt="close" /></a>
 			</form>
@@ -55,7 +55,7 @@ include( dirname(__FILE__) . '/../core/core-header.php' );
 	    	    	<?php if (bnc_is_cats_button_enabled()) { wptouch_cats_link(); } ?>
 	    	    	<?php if (bnc_is_login_button_enabled()) { ?>
 						<?php if (!is_user_logged_in()) { ?>
-						    <a href="javascript:return false;" onclick="bnc_jquery_login_toggle();"><?php _e( 'Login', 'wptouch' ); ?></a>
+						    <a href="#head-account" onclick="bnc_jquery_login_toggle();"><?php _e( 'Login', 'wptouch' ); ?></a>
 						<?php } else { ?>
 							 <a href="#head-account"><?php _e( 'My Account', 'wptouch' ); ?></a>
 						<?php } ?>
@@ -69,16 +69,20 @@ include( dirname(__FILE__) . '/../core/core-header.php' );
 					<?php wptouch_core_header_email(); ?>           
 				</ul>
 	
-				<ul id="head-cats">
-	  	 			<?php bnc_get_ordered_cat_list(); ?>
-				</ul>
+	    	    <?php if (bnc_is_cats_button_enabled()) { ?>
+					<ul id="head-cats">
+		  	 			<?php bnc_get_ordered_cat_list(); ?>
+					</ul>
+				<?php } ?>
 	
-				<ul id="head-tags">
-					<li><?php wp_tag_cloud('smallest=13&largest=13&unit=px&number=20&order=asc&format=list'); ?></li>
-				</ul>
+	    	    <?php if (bnc_is_tags_button_enabled()) { ?>
+					<ul id="head-tags">
+						<li><?php wp_tag_cloud('smallest=13&largest=13&unit=px&number=20&order=asc&format=list'); ?></li>
+					</ul>
+				<?php } ?>
 
 	<?php if (bnc_is_login_button_enabled()) { ?>
-		<ul id="head-account">
+			<ul id="head-account">
 				<?php if (!is_user_logged_in()) { ?>
 				    <li class="text">
 				    	<?php _e( "Enter your username and password<br />in the boxes above.", "wptouch" ); ?>

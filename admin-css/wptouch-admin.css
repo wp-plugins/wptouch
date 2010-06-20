@@ -1,5 +1,12 @@
 /* @override http://www.bravenewcode.com/wordpress/wp-content/plugins/wptouch/admin-css/wptouch-admin.css */
 
+#wptouch-news-support p#find-out-more {
+	font-weight: bold;
+	position: absolute;
+	right: 310px;
+	top: 150px;
+}
+
 /* WPtouch 1.9 Admin CSS */
 
 /* @group head-area.php */
@@ -139,13 +146,6 @@
 
 #wptouch-news-support li:last-child {
 	border-bottom-style: none;
-}
-
-#wptouch-news-support p#find-out-more {
-	font-weight: bold;
-	position: absolute;
-	right: 303px;
-	top: 160px;
 }
 
 /* @end */

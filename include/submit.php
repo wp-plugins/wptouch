@@ -174,6 +174,10 @@
 			$a['excluded-cat-ids'] = $_POST['excluded-cat-ids'];
 		}
 
+		if ( isset($_POST['custom-footer-msg']) ) {
+			$a['custom-footer-msg'] = $_POST['custom-footer-msg'];
+		}
+		
 		if ( isset($_POST['adsense-id']) ) {
 			$a['adsense-id'] = trim( $_POST['adsense-id'] );
 		}
