@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=paypa
 Tags: wptouch, iphone, ipod, theme, apple, mac, bravenewcode, ajax, mobile, android, blackberry, smartphone
 Requires at least: 2.7.1
 Tested up to: 3.0
-Stable tag: 1.9.13
+Stable tag: 1.9.14
 
 WPtouch automatically transforms your WordPress blog into an iPhone application-style theme, complete with ajax loading articles and effects, when viewed from an iPhone, iPod touch, Android, Opera Mini, Palm Pre and BlackBerry Storm mobile devices.
 
@@ -32,7 +32,7 @@ For more information visit http://www.wptouch.com
 = Version 1.9.14 =
 * Added ability to customize the footer copyright message
 * Added credit to Marcelo Marfil for his icons
-* Added official WordPress 3.0 compatibilty
+* Added official WordPress 3.0 compatibility
 * Fixed issue with account tab logic
 * Fixed issue with account tab login
 * Fixed issue with comments on pages only showing 1 comment or not allowing replies
