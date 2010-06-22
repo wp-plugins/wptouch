@@ -104,7 +104,7 @@
 					</li>
 				</ul>
 				<ul class="wptouch-make-li-italic">
-					<li><input type="text" class="no-right-margin" name="custom-footer-msg" value="<?php $str = $wptouch_settings['custom-footer-msg']; echo stripslashes($str); ?>" /><?php _e( "Footer message", "wptouch" ); ?></li>
+					<li><input type="text" class="no-right-margin footer-msg" name="custom-footer-msg" value="<?php $str = $wptouch_settings['custom-footer-msg']; echo stripslashes($str); ?>" /><?php _e( "Footer message", "wptouch" ); ?></li>
 				</ul>
 			</div>
 			

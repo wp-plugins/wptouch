@@ -14,10 +14,10 @@
 						echo '' . get_bloginfo('version') . '';
 						echo '</p><p class="wptv">';
 						echo __( '' . wptouch() . ' support: ', 'wptouch' );
-						if ($version > 2.92) {
+						if ($version > 3.0) {
 							echo sprintf(__( "%Unverified%s", "wptouch" ), '<span class="caution">','</span>');
 						} elseif ($version >= 2.7) {
-							echo sprintf(__( "%sFully Supported%s", "wptouch" ), '<span class="go">','</span>');
+							echo sprintf(__( "%sSupported%s", "wptouch" ), '<span class="go">','</span>');
 						} else {
 							echo sprintf(__( "%Unsupported. Upgrade Required.%s", "wptouch" ), '<span class="red">','</span>');
 						} 
@@ -91,6 +91,11 @@
 					<!-- wp super cache -->		  
 						<div class="sort-of">
 							<a href="http://mnm.uib.es/gallir/wp-cache-2/" target="_blank">WP Super Cache</a> is supported, but requires configuration. Follow <a href="http://www.bravenewcode.com/2009/12/video-tutorial-configuring-wptouch-with-wp-super-cache/" target="_blank">this video tutorial</a> for more information.
+						</div>
+						
+					<!-- w3 cache -->		  
+						<div class="sort-of">
+							<a href="http://mnm.uib.es/gallir/wp-cache-2/" target="_blank">W3 Cache</a> is supported, but requires configuration. Follow <a href="http://nimopress.com/pressed/blog-building-how-to-configure-w3-total-cache-to-work-with-wptouch-for-wordpress/" target="_blank">this tutorial</a> for more information.
 						</div>
 		
 					<!-- wp css -->		  

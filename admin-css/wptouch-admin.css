@@ -1,11 +1,4 @@
-/* @override http://www.bravenewcode.com/wordpress/wp-content/plugins/wptouch/admin-css/wptouch-admin.css */
-
-#wptouch-news-support p#find-out-more {
-	font-weight: bold;
-	position: absolute;
-	right: 310px;
-	top: 150px;
-}
+/* @override http://beta.bravenewcode.com/wordpress/wp-content/plugins/wptouch/admin-css/wptouch-admin.css */
 
 /* WPtouch 1.9 Admin CSS */
 
@@ -18,7 +11,7 @@
 }
 
 #wptouch-head #wptouch-head-colour {
-	background-color: #b7c9d6;
+	background-color: #b7c8d3;
 	padding: 10px;
 	margin: -10px -10px -20px;
 	-webkit-border-top-right-radius: 5px;
@@ -148,15 +141,26 @@
 	border-bottom-style: none;
 }
 
+#wptouch-news-support p#find-out-more {
+	font-weight: bold;
+	position: absolute;
+	right: 310px;
+	top: 150px;
+}
+
 /* @end */
 
 /* @end */
 
 /* @group general-settings.php */
 
-input.no-right-margin {
+#bnc-global input.no-right-margin {
 	position: relative;
 	right: 5px;
+}
+
+#bnc-global input.no-right-margin.footer-msg {
+	width: 45%;
 }
 
 #bnc-global strong.no-pages {
