@@ -3,11 +3,7 @@
 <head profile="http://gmpg.org/xfn/11">
 	<meta name="generator" content="WordPress <?php bloginfo('version'); ?>" />
 	<meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
-	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=no;" />
-<!-- Web-app mode is not fully supported, yet : )
-	<meta name="apple-mobile-web-app-status-bar-style" content="black">
-	<meta name="apple-mobile-web-app-capable" content="yes">
--->	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 	<title><?php wp_title('&laquo;', true, 'right'); ?> <?php $str = bnc_get_header_title(); echo stripslashes($str); ?></title>
 	<link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php bloginfo('rss2_url'); ?>" />
 	<link <?php if (bnc_is_flat_icon_enabled()) { echo 'rel="apple-touch-icon-precomposed"'; } else { echo 'rel="apple-touch-icon"';} ?> href="<?php echo bnc_get_title_image(); ?>" />
@@ -18,11 +14,12 @@
 	<?php wptouch_core_header_styles(); wptouch_core_header_enqueue(); ?>
 	<?php if (!is_single()) { ?>
 		<script type="text/javascript">
-		if (window.navigator.standalone) { //don't do anything! 
-		} else {
-			function hideURLbar() { window.scrollTo(0,1);}
+			function hideURLbar() { 
+				window.scrollTo(0,1);
+			}
 			addEventListener("load", function() { 
-				setTimeout(hideURLbar, 0); }, false);}
+				setTimeout(hideURLbar, 0); 
+			}, false);
 		</script>
 <?php } ?>
 </head>

@@ -29,6 +29,10 @@ For more information visit http://www.wptouch.com
 
 == Changelog ==
 
+= Version 1.9.15 =
+* Fixed viewport meta tag issue, fixes browser crashes on some devices
+* Fixed viewport switch issue, where regular theme was zoomed too far out/in on switch
+
 = Version 1.9.14 =
 * Added ability to customize the footer copyright message
 * Added credit to Marcelo Marfil for his icons
