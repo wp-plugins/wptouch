@@ -173,10 +173,6 @@
 		if ( isset($_POST['excluded-cat-ids']) ) {
 			$a['excluded-cat-ids'] = $_POST['excluded-cat-ids'];
 		}
-
-		if ( isset($_POST['custom-footer-msg']) ) {
-			$a['custom-footer-msg'] = $_POST['custom-footer-msg'];
-		}
 		
 		if ( isset($_POST['adsense-id']) ) {
 			$a['adsense-id'] = trim( $_POST['adsense-id'] );
@@ -224,10 +220,16 @@
 			}
 		}
 
-		$a['header-title'] = $_POST['header-title'];
-		if (!isset($a['header-title']) || (isset($a['header-title']) && strlen($a['header-title']) == 0)) {
+	$a['header-title'] = $_POST['header-title'];
+	if (!isset($a['header-title']) || (isset($a['header-title']) && strlen($a['header-title']) == 0)) {
 		$a['header-title'] = get_bloginfo('title');
 	}
+
+	$a['custom-footer-msg'] = $_POST['custom-footer-msg'];
+	if (!isset($a['custom-footer-msg']) || (isset($a['custom-footer-msg']) && strlen($a['custom-footer-msg']) == 0)) {
+		$a['custom-footer-msg'] = 'All content Copyright &copy; '. get_bloginfo('name') . '';
+	}
+
 
 	$a['header-background-color'] = $_POST['header-background-color'];
 	$a['header-border-color'] = $_POST['header-border-color'];

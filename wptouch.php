@@ -80,7 +80,7 @@ $wptouch_defaults = array(
 	'style-icon' => 'glossy-icon',
 	'enable-regular-default' => false,
 	'excluded-cat-ids' => '',
-	'custom-footer-msg' => 'All content Copyright &copy; '. get_bloginfo('name') .'',
+	'custom-footer-msg' => 'All content Copyright &copy; '. get_bloginfo('name') . '',
 	'home-page' => 0,
 	'enable-exclusive' => false,
 	'sort-order' => 'name',
@@ -780,7 +780,7 @@ function bnc_wp_touch_get_pages() {
 	foreach ($ids as $k => $v) {
 		if ($k == 'main_title' || $k == 'enable-post-excerpts' || $k == 'enable-page-coms' || 
 			 $k == 'enable-cats-button'  || $k == 'enable-tags-button'  || $k == 'enable-search-button'  || 
-			 $k == 'enable-login-button' || $k == 'enable-gravatars' || $k == 'custom-footer-msg' ||
+			 $k == 'enable-login-button' || $k == 'enable-gravatars' ||
 			 $k == 'enable-main-home' || $k == 'enable-main-rss' || $k == 'enable-main-email' || 
 			 $k == 'enable-truncated-titles' || $k == 'enable-main-name' || $k == 'enable-main-tags' || 
 			 $k == 'enable-main-categories' || $k == 'enable-prowl-comments-button' || $k == 'enable-prowl-users-button' || 
