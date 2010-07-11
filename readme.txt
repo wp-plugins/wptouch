@@ -29,6 +29,10 @@ For more information visit http://www.wptouch.com
 
 == Changelog ==
 
+= Version 1.9.16 =
+* Updated Branding
+* Changed formatting
+
 = Version 1.9.15 =
 * Fixed bug where footer message input would not clear in admin
 * Fixed viewport meta tag issue, fixes browser crashes on some devices
