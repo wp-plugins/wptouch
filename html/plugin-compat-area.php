@@ -36,7 +36,8 @@
 				<?php
 					//WordPress Links Page Support
 				$links_page_check = new WP_Query('pagename=links');
-				if ($links_page_check->post->ID) {
+				
+				if ( $links_page_check->post->ID ) {
 				echo '<div class="all-good">' . __( "All of your WP links will automatically show on your page called 'Links'.", "wptouch" ) . '</div>';
 				} else {
 				echo '<div class="too-bad">' . __( "If you create a page called 'Links', all your WP links would display in <em>WPtouch</em> style.", "wptouch" ) . '</div>'; } ?>

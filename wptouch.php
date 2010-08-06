@@ -593,7 +593,7 @@ function wptouch_switch() {
 }
   
 function bnc_options_menu() {
-	add_options_page( __( 'WPtouch iPhone Theme', 'wptouch' ), 'WPtouch', 9, __FILE__, bnc_wp_touch_page );
+	add_options_page( __( 'WPtouch iPhone Theme', 'wptouch' ), 'WPtouch', 9, __FILE__, 'bnc_wp_touch_page' );
 }
 
 function bnc_wptouch_get_settings() {
