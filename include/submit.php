@@ -227,7 +227,7 @@
 
 	$a['custom-footer-msg'] = $_POST['custom-footer-msg'];
 	if (!isset($a['custom-footer-msg']) || (isset($a['custom-footer-msg']) && strlen($a['custom-footer-msg']) == 0)) {
-		$a['custom-footer-msg'] = 'All content Copyright &copy; '. get_bloginfo('name') . '';
+		$a['custom-footer-msg'] = 'All content Copyright '. get_bloginfo('name') . '';
 	}
 
 
