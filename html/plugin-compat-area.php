@@ -14,19 +14,17 @@
 						echo '' . get_bloginfo('version') . '';
 						echo '</p><p class="wptv">';
 						echo __( '' . wptouch() . ' support: ', 'wptouch' );
-						if ($version > 3.0) {
-							echo sprintf(__( "%Unverified%s", "wptouch" ), '<span class="caution">','</span>');
-						} elseif ($version >= 2.7) {
+						if ($version > 3.1) {
+							echo sprintf(__( "%sUnverified%s", "wptouch" ), '<span class="caution">','</span>');
+						} elseif ($version >= 2.8) {
 							echo sprintf(__( "%sSupported%s", "wptouch" ), '<span class="go">','</span>');
 						} else {
-							echo sprintf(__( "%Unsupported. Upgrade Required.%s", "wptouch" ), '<span class="red">','</span>');
+							echo sprintf(__( "%sUnsupported. Upgrade Required.%s", "wptouch" ), '<span class="red">','</span>');
 						} 
 						echo '</p>';
 					?>	
 				</div>
 				<p><?php _e( "Here you'll find information on additional WPtouch features and their requirements, including those activated with companion plugins.", "wptouch" ); ?></p>
-				<p><?php _e( "For further documentation visit" ); ?> <?php echo sprintf(__( "%sBraveNewCode.%s", "wptouch" ), '<a href="http://www.bravenewcode.com/wptouch/">','</a>'); ?></p>
-				<p><?php echo sprintf( __( "To report an incompatible plugin, let us know in our %sSupport Forums%s.", "wptouch"), '<a href="http://support.bravenewcode.com/">', '</a>' ); ?></p>
 		</div>
 		
 		<div class="right-content">

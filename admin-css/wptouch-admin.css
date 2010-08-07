@@ -5,9 +5,10 @@
 /* @group head-area.php */
 
 #wptouch-head .postbox {
-	background: #fff url(../images/wptouch-icon.jpg) no-repeat 100% 76px;
+	background: #fff url(../images/wptouch-icon.jpg) no-repeat 100% 74px;
 	overflow: hidden;
 	position: relative;
+	min-height: 216px;
 }
 
 #wptouch-head #wptouch-head-colour {
@@ -144,8 +145,8 @@
 #wptouch-news-support p#find-out-more {
 	font-weight: bold;
 	position: absolute;
-	right: 310px;
-	top: 150px;
+	right: 385px;
+	top: 176px;
 }
 
 /* @end */

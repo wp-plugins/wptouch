@@ -1030,6 +1030,17 @@ a.h2 {
 	font-style: normal;
 }
 
+.post .sticky-icon {
+	width: 16px;
+	height: 16px;
+	display: block;
+	background: url(../core/core-images/sticky.png) no-repeat 0 0;
+	position: absolute;
+	left: 43px;
+	z-index: 1;
+	top: 5px;
+}
+
 /* @end */
 
 /* @group Ajax */

@@ -1,24 +1,20 @@
 /*
  * WPtouch 1.9.x -The WPtouch Core JS File
- * This file holds all the default jQuery & Ajax functions for the theme
- * Copyright (c) 2008 - 2010 Duane Storey & Dale Mugford (BraveNewCode Inc.)
  * Licensed under GPL.
- *
- * Last Updated: May 4th, 2010
  */
 
-/////// -- Let's setup a unique namspace in jQuery -- ///////
+/////-- Let's setup a unique namspace in jQuery -- /////
 $wptouch = jQuery.noConflict();
 
-/////// -- Get out of frames! -- ///////
+/////--Get out of frames! -- /////
 if (top.location!= self.location) {top.location = self.location.href}
 
-/////// --New function fadeToggle() -- ///////
+/////// --New function fadeToggle() -- /////
 $wptouch.fn.fadeToggle = function(speed, easing, callback) { 
 	return this.animate({opacity: 'toggle'}, speed, easing, callback); 
 };
 
-/////// -- Switch Magic -- ///////
+/////--Switch Magic -- /////
 function wptouch_switch_confirmation() {
 if (document.cookie && document.cookie.indexOf("wptouch_switch_cookie") > -1) {
 // just switch
@@ -26,7 +22,7 @@ if (document.cookie && document.cookie.indexOf("wptouch_switch_cookie") > -1) {
 	setTimeout('switch_delayer()', 1250); 
 } else {
 // ask first
-	var answer = confirm("Switch to regular view? \n \n You can switch back to mobile view again in the footer.");
+	var answer = confirm("Switch to regular view? \n \n You can switch back again in the footer.");
 	if (answer){
 	$wptouch("a#switch-link").toggleClass("offimg");
 	setTimeout('switch_delayer()', 1350); 
@@ -34,11 +30,14 @@ if (document.cookie && document.cookie.indexOf("wptouch_switch_cookie") > -1) {
 	}
 }
 
-/////// -- Prowl Results -- ///////
-setTimeout(function() { $wptouch('#prowl-success').fadeOut(400); }, 5250);
-setTimeout(function() { $wptouch('#prowl-fail').fadeOut(400); }, 5250);
-
-/////// -- Menu Toggles, Effects -- ///////
+/////--Prowl Results -- /////
+if ( $wptouch('#prowl-success').length ) {
+	setTimeout(function() { $wptouch('#prowl-success').fadeOut(400); }, 5250);
+}
+if ( $wptouch('#prowl-fail').length ) {
+	setTimeout(function() { $wptouch('#prowl-fail').fadeOut(400); }, 5250);
+}
+/////--Menu Toggles, Effects -- /////
 function bnc_jquery_menu_drop() {
 	$wptouch('#wptouch-menu').fadeToggle(400);
 	$wptouch("#headerbar-menu a").toggleClass("open");
@@ -50,8 +49,7 @@ function bnc_jquery_gigpress_toggle() { $wptouch('#wptouch-gigpress').fadeToggle
 function bnc_jquery_prowl_open() { $wptouch('#prowl-message').fadeToggle(400);}
 function bnc_jquery_wordtwit_open() { $wptouch('#wptouch-wordtwit').fadeToggle(400);}
 
-
-/////// --Single Post Page -- ///////
+/////// --Single Post Page -- /////
 function wptouch_toggle_twitter() {
 	$wptouch('#twitter-box').fadeToggle(400);
 }
@@ -71,7 +69,7 @@ $wptouch(function () {
     }).filter(':first').click();
 });
 
-/////// -- Ajax comments -- ///////
+/////--Ajax comments -- /////
 function bnc_showhide_coms_toggle() {
 	$wptouch('#commentlist').fadeToggle(400);
 	$wptouch("img#com-arrow").toggleClass("com-arrow-down");
@@ -80,7 +78,7 @@ function bnc_showhide_coms_toggle() {
 	
 function doWPtouchReady() {
 
-/////// -- Tweak jQuery Timer -- ///////
+/////--Tweak jQuery Timer -- /////
 	$wptouch.timerId = setInterval(function(){
 		var timers = $wptouch.timers;
 		for (var i = 0; i < timers.length; i++) {
@@ -91,11 +89,8 @@ function doWPtouchReady() {
 		if (!timers.length) {
 			clearInterval($wptouch.timerId);
 			$wptouch.timerId = null;
-		}
+		} 
 	}, 83);
-
 }
-
 $wptouch( document ).ready( function() { doWPtouchReady(); } );
-
 // End WPtouch jS

@@ -2,9 +2,9 @@
 /*
    Plugin Name: WPtouch iPhone Theme
    Plugin URI: http://bravenewcode.com/products/wptouch
-   Description: A plugin which formats your site with a mobile theme for the Apple <a href="http://www.apple.com/iphone/">iPhone</a> / <a href="http://www.apple.com/ipodtouch/">iPod touch</a>, <a href="http://www.android.com/">Google Android</a>, <a href="http://www.palm.com/us/products/phones/pre/">Palm Pre</a> and other touch-based smartphones.
+   Description: A plugin which formats your site with a mobile theme for the Apple <a href="http://www.apple.com/iphone/">iPhone</a> / <a href="http://www.apple.com/ipodtouch/">iPod touch</a>, <a href="http://www.android.com/">Google Android</a>, <a href="http://www.blackberry.com/">Blackberry Storm and Torch</a>, <a href="http://www.palm.com/us/products/phones/pre/">Palm Pre</a> and other touch-based smartphones.
 	Author: Dale Mugford & Duane Storey (BraveNewCode)
-	Version: 1.9.16
+	Version: 1.9.17
 	Author URI: http://www.bravenewcode.com
    
 	# Thanks to ContentRobot and the iWPhone theme/plugin
@@ -39,7 +39,7 @@
 */
 
 global $bnc_wptouch_version;
-$bnc_wptouch_version = '1.9.16';
+$bnc_wptouch_version = '1.9.17';
 
 require_once( 'include/plugin.php' );
 require_once( 'include/compat.php' );
@@ -80,7 +80,7 @@ $wptouch_defaults = array(
 	'style-icon' => 'glossy-icon',
 	'enable-regular-default' => false,
 	'excluded-cat-ids' => '',
-	'custom-footer-msg' => 'All content Copyright &copy; '. get_bloginfo('name') . '',
+	'custom-footer-msg' => 'All content Copyright '. get_bloginfo('name') . '',
 	'home-page' => 0,
 	'enable-exclusive' => false,
 	'sort-order' => 'name',
@@ -137,9 +137,6 @@ function wptouch_init() {
 		header( 'Location: ' . get_bloginfo('wpurl') . '/wp-admin/options-general.php?page=wptouch/wptouch.php#available_icons' );
 		die;
 	}
-	
-	// 	
-
 }
 
 function wptouch_include_adsense() {
@@ -197,7 +194,6 @@ function wp_touch_get_comment_count() {
 		add_theme_support( 'post-thumbnails'); // Add it for posts
 }
 
-
 //Add a link to 'Settings' on the plugin listings page
 function wptouch_settings_link( $links, $file ) {
  	if( $file == 'wptouch/wptouch.php' && function_exists( "admin_url" ) ) {
@@ -210,17 +206,16 @@ function wptouch_settings_link( $links, $file ) {
 // WP Admin stylesheets & javascript
 function wptouch_admin_files() {		
 	if ( isset( $_GET['page'] ) && $_GET['page'] == 'wptouch/wptouch.php' ) {
-		echo "<link rel='stylesheet' type='text/css' href='" . compat_get_plugin_url( 'wptouch' ) . "/admin-css/wptouch-admin.css' />\n";
-		echo "<link rel='stylesheet' type='text/css' href='" . compat_get_plugin_url( 'wptouch' ) . "/admin-css/bnc-global.css' />\n";
-		echo "<link rel='stylesheet' type='text/css' href='" . compat_get_plugin_url( 'wptouch' ) . "/admin-css/bnc-compressed-global.css' />\n";
-		echo "<script type='text/javascript' src='" . compat_get_plugin_url( 'wptouch' ) . "/js/ajax_upload.js'></script>\n";
-		echo "<script type='text/javascript' src='" . compat_get_plugin_url( 'wptouch' ) . "/js/colorpicker_1.4.js'></script>\n";
-		echo "<script type='text/javascript' src='" . compat_get_plugin_url( 'wptouch' ) . "/js/fancybox_1.2.5.js'></script>\n";
-		echo "<script type='text/javascript' src='" . compat_get_plugin_url( 'wptouch' ) . "/js/jquery-ui.js'></script>\n";
-		echo "<script type='text/javascript' src='" . compat_get_plugin_url( 'wptouch' ) . "/js/admin_1.9.js'></script>\n";
+		echo "<link rel='stylesheet' type='text/css' href='" . compat_get_plugin_url( 'wptouch' ) . "/admin-css/wptouch-admin.css?ver=1917' />\n";
+		echo "<link rel='stylesheet' type='text/css' href='" . compat_get_plugin_url( 'wptouch' ) . "/admin-css/bnc-global.css?ver=1917' />\n";
+		echo "<link rel='stylesheet' type='text/css' href='" . compat_get_plugin_url( 'wptouch' ) . "/admin-css/bnc-compressed-global.css?ver=1917' />\n";
+		echo "<script type='text/javascript' src='" . compat_get_plugin_url( 'wptouch' ) . "/js/ajax_upload.js?ver=1917'></script>\n";
+		echo "<script type='text/javascript' src='" . compat_get_plugin_url( 'wptouch' ) . "/js/colorpicker_1.4.js?ver=1917'></script>\n";
+		echo "<script type='text/javascript' src='" . compat_get_plugin_url( 'wptouch' ) . "/js/fancybox_1.2.5.js?ver=1917'></script>\n";
+		echo "<script type='text/javascript' src='" . compat_get_plugin_url( 'wptouch' ) . "/js/jquery-ui.js?ver=1917'></script>\n";
+		echo "<script type='text/javascript' src='" . compat_get_plugin_url( 'wptouch' ) . "/js/admin_1.9.js?ver=1917'></script>\n";
 		echo "<script type='text/javascript' src='" . get_bloginfo( "home" ) . "/?wptouch-ajax=js'></script>";
 	}
-
 }
 
 function wptouch_ajax_handler() {	
@@ -234,9 +229,6 @@ function wptouch_ajax_handler() {
 			case 'news':
 				include( WP_PLUGIN_DIR . '/wptouch/ajax/news.php' );	
 				break;
-//			case 'support':
-//				include( WP_PLUGIN_DIR . '/wptouch/ajax/support.php' );
-//				break;
 			default:
 				break;
 		}	
@@ -253,8 +245,11 @@ function bnc_wptouch_get_user_agents() {
 		"Android", 			 // 1.5+ Android
 		"dream", 				 // Pre 1.5 Android
 		"CUPCAKE", 			 // 1.5+ Android
-		"BlackBerry9500",	 // Storm
-		"BlackBerry9530",	 // Storm
+		"blackberry9500",	 // Storm
+		"blackberry9530",	 // Storm
+		"blackberry9520",	 // Storm	v2
+		"blackberry9550",	 // Storm v2
+		"blackberry9800",	 // Torch
 		"webOS",				 // Palm Pre Experimental
 		"incognito", 			 // Other iPhone browser
 		"webmate" 			 // Other iPhone browser
@@ -343,7 +338,7 @@ class WPtouchPlugin {
 			$prowl = new Prowl( $api_key, $settings['header-title'] );
 				
 			$this->prowl_output = true;
-			$result = $prowl->add( 	1, $title, $this->wptouch_cleanup_growl( stripslashes( $message ) ) );	
+			$result = $prowl->add( 1, $title, $this->wptouch_cleanup_growl( stripslashes( $message ) ) );	
 			
 			if ( $result ) {
 				$this->prowl_success = true;
@@ -388,7 +383,6 @@ class WPtouchPlugin {
 		 }
 
 	}
-	
 
 	function wptouch_handle_new_user( $user_id ) {
 		$settings = bnc_wptouch_get_settings();
@@ -624,7 +618,7 @@ function bnc_wp_touch_get_menu_pages() {
 	if (!$v) {
 		$v = array();
 	}
-	
+
 	if (!is_array($v)) {
 		$v = unserialize($v);
 	}
@@ -889,12 +883,11 @@ function bnc_wp_touch_page() {
 		<input type="submit" name="submit" value="<?php _e('Save Options', 'wptouch' ); ?>" id="bnc-button" class="button-primary" />
 	</form>
 	
-	<!-- <form method="post" action="<?php echo admin_url( 'options-general.php?page=wptouch/wptouch.php' ); ?>"> -->
 	<form method="post" action="">
 		<input type="submit" onclick="return confirm('<?php _e('Restore default WPtouch settings?', 'wptouch' ); ?>');" name="reset" value="<?php _e('Restore Defaults', 'wptouch' ); ?>" id="bnc-button-reset" class="button-highlighted" />
 	</form>
 		
-		<?php echo('' . WPtouch('<div class="bnc-plugin-version"> This is ','</div>') . ''); ?>
+	<?php echo('' . WPtouch('<div class="bnc-plugin-version"> This is ','</div>') . ''); ?>
 
 	<div class="bnc-clearer"></div>
 </div>

@@ -20,9 +20,9 @@
 					@move_uploaded_file( $f['tmp_name'], $upload_dir . "/" . $f['name'] );
 					
 					if ( !file_exists( $upload_dir . "/" . $f['name'] ) ) {
-						echo __('<p style="color:red; padding-top:10px">There seems to have been an error.<p>Please try your upload again.</p>');
+						echo __('<p style="color:red; padding-top:10px">There seems to have been an error.<p>Please try your upload again.</p>', 'wptouch' );
 					} else {
-						echo  __( '<p style="color:green; padding-top:10px">File has been saved and added to the pool.</p>');							
+						echo  __( '<p style="color:green; padding-top:10px">File has been saved and added to the pool.</p>', 'wptouch' );							
 					}					
 				} else {
 					echo __( '<p style="color:orange; padding-top:10px">Sorry, only PNG, GIF and JPG images are supported.</p>', 'wptouch' );

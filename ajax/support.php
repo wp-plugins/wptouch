@@ -13,7 +13,7 @@
 		}
 	
 	    if ( $max_items == 0 ) {
-	    	echo '<li class="ajax-error">No feed items found to display.</li>';
+	    	echo __( '<li class="ajax-error">No feed items found to display.</li>', 'wptouch' );
 		} else {
 	    	// Loop through each feed item and display each item as a hyperlink.
 			foreach ( $rss_items as $item ) { ?>
@@ -25,6 +25,6 @@
 	    	} 
 		}
     } else { 
-    	echo '<li class="ajax-error">No feed items found to display.</li>';
+    	echo __( '<li class="ajax-error">No feed items found to display.</li>', 'wptouch' );
     } ?>
 </ul>

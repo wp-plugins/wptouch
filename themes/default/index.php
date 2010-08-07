@@ -8,6 +8,8 @@
   <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
  <div class="post" id="post-<?php the_ID(); ?>">
  
+			<?php if ( is_home() && is_sticky( $post_ID ) ) echo '<div class="sticky-icon"></div>'; ?>
+
  		<?php if (!function_exists('dsq_comments_template') && !function_exists('id_comments_template')) { ?>
 				<?php if (wptouch_get_comment_count() && !is_archive() && !is_search()) { ?>
 					<div <?php if ($wptouch_settings['post-cal-thumb'] == 'nothing-shown') { echo 'id="nothing-shown" ';} ?>class="comment-bubble<?php if ( wptouch_get_comment_count() > 99 ) echo '-big'; ?>">

@@ -4,15 +4,14 @@
 	<div class="postbox">
 		<h3><span class="advanced-options">&nbsp;</span><?php _e( "Advanced Options", "wptouch" ); ?></h3>
 
-			<div class="left-content">
-				<p><?php _e( "Choose to enable/disable advanced features &amp; options available for WPtouch.", "wptouch"); ?></p>	
-				<p><?php _e( "* WPtouch Restricted Mode attempts to fix issues where other plugins load scripts which interfere with WPtouch CSS and JavaScript.", "wptouch" ); ?></p>
-			 	<br />
-			 		<h4><?php _e( "Custom User-Agents", "wptouch" ); ?></h4>
-			 		<p><?php _e( "Enter a comma-separated list of user-agents to enable WPtouch for a device that isn't currently officially supported.", "wptouch" ); ?></p>
-			 		<p><?php echo sprintf( __( "The currently enabled user-agents are: <em class='supported'>%s</em>", "wptouch" ), implode( ", ", bnc_wptouch_get_user_agents() ) ); ?></p>
-
-			</div><!-- left-content -->
+		<div class="left-content">
+			<p><?php _e( "Choose to enable/disable advanced features &amp; options available for WPtouch.", "wptouch"); ?></p>	
+			<p><?php _e( "* WPtouch Restricted Mode attempts to fix issues where other plugins load scripts which interfere with WPtouch CSS and JavaScript.", "wptouch" ); ?></p>
+		 	<br />
+		 	<h4><?php _e( "Custom User-Agents", "wptouch" ); ?></h4>
+		 	<p><?php _e( "Enter a comma-separated list of user-agents to enable WPtouch for a device that isn't currently officially supported.", "wptouch" ); ?></p>
+		 	<p><?php echo sprintf( __( "The currently enabled user-agents are: <em class='supported'>%s</em>", "wptouch" ), implode( ", ", bnc_wptouch_get_user_agents() ) ); ?></p>
+		</div><!-- left-content -->
 	
 	<div class="right-content">
 		<ul>
@@ -25,7 +24,6 @@
 					<p><?php _e( "It will display a list of your popular categories.", "wptouch" ); ?></p>
 				</div>
 			</li>
-			
 			<li>
 				<input class="checkbox" type="checkbox" name="enable-tags-button" <?php if ( isset( $wptouch_settings['enable-tags-button']) && $wptouch_settings['enable-tags-button'] == 1) echo('checked'); ?> />
 				<label class="label" for="enable-tags-button"><?php _e( "Enable Tags tab in the header", "wptouch" ); ?> <a href="#tags-info" class="fancylink">?</a></label>
@@ -35,7 +33,6 @@
 					<p><?php _e( "It will display a list of your popular tags.", "wptouch" ); ?></p>
 				</div>
 			</li>
-			
 			<li>
 				<input class="checkbox" type="checkbox" name="enable-search-button" <?php if (isset($wptouch_settings['enable-search-button']) && $wptouch_settings['enable-search-button'] == 1) echo('checked'); ?> />
 				<label class="label" for="enable-search-button"><?php _e( "Enable Search link in the header", "wptouch" ); ?> <a href="#search-info" class="fancylink">?</a></label>
@@ -45,7 +42,6 @@
 					<p><?php _e( "It will display an overlay on the title area allowing users to search your website.", "wptouch" ); ?></p>
 				</div>
 			</li>
-			
 			<li>
 				<input class="checkbox" type="checkbox" name="enable-login-button" <?php if (isset($wptouch_settings['enable-login-button']) && $wptouch_settings['enable-login-button'] == 1) echo('checked'); ?> />
 				<label class="label" for="enable-login-button"><?php _e( "Enable Login/My Account tab in the header", "wptouch" ); ?> <a href="#login-info" class="fancylink">?</a></label>
@@ -57,7 +53,6 @@
 					<p><?php _e( "NOTE: The Account tab/links will always appear if you have enabled registration on your site or require users to login for comments.", "wptouch" ); ?></p>
 				</div>
 			</li>
-
 			<li>
 				<input class="checkbox" type="checkbox" <?php if (!function_exists( 'gigpress_shows' )) : ?>disabled="true"<?php endif; ?> name="enable-gigpress-button" <?php if (isset($wptouch_settings['enable-gigpress-button']) && $wptouch_settings['enable-gigpress-button'] == 1 && function_exists( 'gigpress_shows' )) echo('checked'); ?> />
 				<label class="label" for="enable-show-tweets"> <?php _e( "Display Upcoming Dates link in the header (requires <a href='http://gigpress.com/' target='_blank'>GigPress 2.0.3</a> or higher)", "wptouch" ); ?> <a href="#gigpress-tweet-info" class="fancylink">?</a></label>
@@ -74,7 +69,6 @@
 						<p><?php _e( "When this option is checked and the WordTwit plugin is installed, a list of your Tweets will be viewable from a drop-down in the WPtouch header.", "wptouch" ); ?></p>
 					</div><br /><br />
 			</li>	
-
 			<li>
 				<input class="checkbox" type="checkbox" name="enable-gravatars" <?php if (isset($wptouch_settings['enable-gravatars']) && $wptouch_settings['enable-gravatars'] == 1) echo('checked'); ?> />
 				<label class="label" for="enable-gravatars"> <?php _e( "Enable gravatars in comments", "wptouch" ); ?></label>
@@ -91,7 +85,6 @@
 				</div>
 			</li>
 			<?php } ?>
-
 			<li><br />
 				<input class="checkbox" type="checkbox" name="enable-regular-default" <?php if (isset($wptouch_settings['enable-regular-default']) && $wptouch_settings['enable-regular-default'] == 1) echo('checked'); ?> />
 				<label class="label" for="enable-regular-default"><?php echo sprintf(__( "1%sst%s visit mobile users will see desktop theme", "wptouch" ), '<sup>','</sup>'); ?> <a href="#reg-info" class="fancylink">?</a></label>
@@ -100,8 +93,7 @@
 					<p><?php _e( "When this option is checked, users will see your regular site theme first, and have the option in your footer to switch to the WPtouch mobile view.", "wptouch" ); ?></p>
 					<p><?php _e( "They'll be able to change back and forth either way. Make sure you have the wp_footer(); function call in your regular theme's footer.php file for the switch link to work properly.", "wptouch" ); ?></p>
 				</div>
-			</li>	
-
+			</li>
 			<li>
 				<input class="checkbox" type="checkbox" name="enable-exclusive" <?php if (isset($wptouch_settings['enable-exclusive']) && $wptouch_settings['enable-exclusive'] == 1) echo('checked'); ?> />
 				<label class="label" for="enable-exclusive"> <?php _e( "Enable WPtouch Restricted Mode", "wptouch" ); ?> <a href="#restricted-info" class="fancylink">?</a></label>
@@ -120,8 +112,7 @@
 						<?php } ?>
 					</li>
 				</ul>
-							</li>
-
+				</li>
 			</ul>
 		</div><!-- right content -->
 	<div class="bnc-clearer"></div>

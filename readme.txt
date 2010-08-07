@@ -2,8 +2,8 @@
 Contributors: BraveNewCode, duanestorey, dalemugford
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=paypal%40bravenewcode%2ecom&item_name=WPtouch%20Beer%20Fund&no_shipping=0&no_note=1&tax=0&currency_code=CAD&lc=CA&bn=PP%2dDonationsBF&charset=UTF%2d8
 Tags: wptouch, iphone, ipod, theme, apple, mac, bravenewcode, ajax, mobile, android, blackberry, smartphone
-Requires at least: 2.7.1
-Tested up to: 3.0
+Requires at least: 2.8
+Tested up to: 3.0.1
 Stable tag: 1.9.16
 
 WPtouch automatically transforms your WordPress blog into an iPhone application-style theme, complete with ajax loading articles and effects, when viewed from an iPhone, iPod touch, Android, Opera Mini, Palm Pre and BlackBerry Storm mobile devices.
@@ -11,7 +11,7 @@ WPtouch automatically transforms your WordPress blog into an iPhone application-
 *Now Available:* WPtouch 2.0 Pro!
 Totally re-written top to bottom, with a slew of new features, including support for themes!
 
-For more information visit http://www.wptouch.com
+For more information visit http://bravenewcode.com/wptouch-pro
 
 
 == Description ==
@@ -25,9 +25,17 @@ The theme also includes the ability for your visitors to easily switch between t
 *Now Available:* WPtouch 2.0 Pro!
 Totally re-written top to bottom, with a slew of new features, including support for themes!
 
-For more information visit http://www.wptouch.com
+For more information visit http://bravenewcode.com/wptouch-pro
 
 == Changelog ==
+
+= Version 1.9.17 =
+* Changed the_title() to the_title_attribute() for e-mailing posts
+* Added Blackberry Storm V2 user agents
+* Added Blackberry Torch user agent
+* Added Sticky post icon in post listings
+* Minor text, bug fixes
+* More image optimizations and file size reductions
 
 = Version 1.9.16 =
 * Updated Branding
