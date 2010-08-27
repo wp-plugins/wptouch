@@ -1,20 +1,20 @@
 /*
  * WPtouch 1.9.x -The WPtouch Core JS File
- * Licensed under GPL.
+ * Licensed under GPL v2.
  */
 
 /////-- Let's setup a unique namspace in jQuery -- /////
 $wptouch = jQuery.noConflict();
 
-/////--Get out of frames! -- /////
+/////-- Get out of frames! -- /////
 if (top.location!= self.location) {top.location = self.location.href}
 
-/////// --New function fadeToggle() -- /////
+/////// -- New function fadeToggle() -- /////
 $wptouch.fn.fadeToggle = function(speed, easing, callback) { 
 	return this.animate({opacity: 'toggle'}, speed, easing, callback); 
 };
 
-/////--Switch Magic -- /////
+/////-- Switch Magic -- /////
 function wptouch_switch_confirmation() {
 if (document.cookie && document.cookie.indexOf("wptouch_switch_cookie") > -1) {
 // just switch
@@ -30,14 +30,14 @@ if (document.cookie && document.cookie.indexOf("wptouch_switch_cookie") > -1) {
 	}
 }
 
-/////--Prowl Results -- /////
+/////-- Prowl Results -- /////
 if ( $wptouch('#prowl-success').length ) {
 	setTimeout(function() { $wptouch('#prowl-success').fadeOut(400); }, 5250);
 }
 if ( $wptouch('#prowl-fail').length ) {
 	setTimeout(function() { $wptouch('#prowl-fail').fadeOut(400); }, 5250);
 }
-/////--Menu Toggles, Effects -- /////
+/////-- Menu Toggles, Effects -- /////
 function bnc_jquery_menu_drop() {
 	$wptouch('#wptouch-menu').fadeToggle(400);
 	$wptouch("#headerbar-menu a").toggleClass("open");
@@ -49,7 +49,7 @@ function bnc_jquery_gigpress_toggle() { $wptouch('#wptouch-gigpress').fadeToggle
 function bnc_jquery_prowl_open() { $wptouch('#prowl-message').fadeToggle(400);}
 function bnc_jquery_wordtwit_open() { $wptouch('#wptouch-wordtwit').fadeToggle(400);}
 
-/////// --Single Post Page -- /////
+/////// -- Single Post Page -- /////
 function wptouch_toggle_twitter() {
 	$wptouch('#twitter-box').fadeToggle(400);
 }
@@ -58,7 +58,7 @@ function wptouch_toggle_bookmarks() {
 	$wptouch('#bookmark-box').fadeToggle(400);
 }
 
-/////// --jQuery Tabs-- ///////
+/////// -- jQuery Tabs -- ///////
 $wptouch(function () {
     var tabContainers = $wptouch('#menu-head > ul');   
     $wptouch('#tabnav a').click(function () {
@@ -69,7 +69,7 @@ $wptouch(function () {
     }).filter(':first').click();
 });
 
-/////--Ajax comments -- /////
+/////-- Ajax comments -- /////
 function bnc_showhide_coms_toggle() {
 	$wptouch('#commentlist').fadeToggle(400);
 	$wptouch("img#com-arrow").toggleClass("com-arrow-down");
@@ -78,7 +78,7 @@ function bnc_showhide_coms_toggle() {
 	
 function doWPtouchReady() {
 
-/////--Tweak jQuery Timer -- /////
+/////-- Tweak jQuery Timer -- /////
 	$wptouch.timerId = setInterval(function(){
 		var timers = $wptouch.timers;
 		for (var i = 0; i < timers.length; i++) {
@@ -91,6 +91,15 @@ function doWPtouchReady() {
 			$wptouch.timerId = null;
 		} 
 	}, 83);
-}
+
+/////-- Try to make imgs and captions nicer in posts -- /////
+	if ( $wptouch( '.singlentry' ).length ) {
+		$wptouch( '.singlentry img, .singlentry .wp-caption' ).each( function() {
+			if ( $wptouch( this ).width() <= 250 ) {
+				$wptouch( this ).addClass( 'aligncenter' );
+			}
+		});
+	}
+} // End document ready
+
 $wptouch( document ).ready( function() { doWPtouchReady(); } );
-// End WPtouch jS

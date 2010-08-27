@@ -28,6 +28,13 @@ For more information visit http://bravenewcode.com/wptouch-pro
 
 == Changelog ==
 
+= Version 1.9.18 =
+* Added Samsung s8000, Bada device user agents (Dolphin Browser)
+* Filtering Facebook Like plugin
+* Filtering Sharebar plugin
+* Fix for new Vimeo html5 embed code
+* Fix for sticky post icon when calendar icons and thumbnails are off
+
 = Version 1.9.17 =
 * Changed the_title() to the_title_attribute() for e-mailing posts
 * Added Blackberry Storm V2 user agents

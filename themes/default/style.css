@@ -1,3 +1,5 @@
+/* @override http://beta.bravenewcode.com/wordpress/wp-content/plugins/wptouch/themes/default/style.css */
+
 /*  
 Theme Name: WPtouch Mobile Plugin & Theme For WordPress
 Theme URI: http://www.bravenewcode.com/wptouch/
@@ -59,11 +61,6 @@ a {
 
 input {
 	max-width: 96%;
-}
-
-iframe {
-	max-width: 100% !important;
-	height: auto !important;
 }
 
 code {
@@ -854,7 +851,7 @@ a.h2 {
 	text-align: center;
 }
 
-#nothing-shown {
+.nothing-shown {
 	margin-left: -11px;
 	margin-top: -11px;
 }
@@ -1039,6 +1036,19 @@ a.h2 {
 	left: 43px;
 	z-index: 1;
 	top: 5px;
+}
+
+.post .sticky-icon-none {
+	width: 16px;
+	height: 16px;
+	display: block;
+	background: url(../core/core-images/sticky.png) no-repeat 0 0;
+	position: absolute;
+	left: 43px;
+	z-index: 1;
+	top: 5px;
+	margin-top: -12px;
+	margin-left: -22px;
 }
 
 /* @end */
@@ -2098,11 +2108,11 @@ a.tt {
 
 /* @group YouTube Plugin */
 
-.post object, .post embed {
+.post object, .post embed, .post video, .post iframe {
 	width: 100% !important;
 	height: auto;
-		z-index:0 !important;
-	position: relative;
+	max-height: 280px;
+	margin-bottom: 10px;
 }
 
 /* @end */

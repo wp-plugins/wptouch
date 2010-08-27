@@ -230,4 +230,11 @@ remove_filter('the_content', 'sociable_display_hook');
 remove_filter('the_excerpt', 'sociable_display_hook');
 remove_filter('the_content', 'whydowork_adsense_filter', 100);
 remove_filter('the_excerpt', 'whydowork_adsense_filter', 100);
+
+// Facebook Like button
+remove_filter('the_content', 'Add_Like_Button');
+
+//Sharebar Plugin
+remove_filter('the_content', 'sharebar_auto');
+remove_action('wp_head', 'sharebar_header');
 ?>
