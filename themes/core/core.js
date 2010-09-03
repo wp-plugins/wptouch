@@ -1,6 +1,5 @@
 /*
  * WPtouch 1.9.x -The WPtouch Core JS File
- * Licensed under GPL v2.
  */
 
 /////-- Let's setup a unique namspace in jQuery -- /////

@@ -13,7 +13,7 @@
 <!-- You can start editing below here... but make a backup first!  -->
 
 <div id="comment_wrapper">
-<?php comments_number( __('', 'wptouch'), __('<h3 onclick="bnc_showhide_coms_toggle();" id="com-head"><img id="com-arrow" src="' . compat_get_plugin_url( 'wptouch' ) . '/themes/core/core-images/com_arrow.png" alt="arrow" />1 Comment</h3>', 'wptouch'), __('<h3 onclick="bnc_showhide_coms_toggle();" id="com-head"><img id="com-arrow" src="' . compat_get_plugin_url( 'wptouch' ) . '/themes/core/core-images/com_arrow.png" alt="arrow" />% Comments</h3>', 'wptouch') ); ?>
+<?php comments_number( '', __('<h3 onclick="bnc_showhide_coms_toggle();" id="com-head"><img id="com-arrow" src="' . compat_get_plugin_url( 'wptouch' ) . '/themes/core/core-images/com_arrow.png" alt="arrow" />1 Comment</h3>', 'wptouch'), __('<h3 onclick="bnc_showhide_coms_toggle();" id="com-head"><img id="com-arrow" src="' . compat_get_plugin_url( 'wptouch' ) . '/themes/core/core-images/com_arrow.png" alt="arrow" />% Comments</h3>', 'wptouch') ); ?>
 
 	<ol class="commentlist" id="commentlist">
 		<?php if ($comments) : ?>

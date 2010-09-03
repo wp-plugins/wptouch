@@ -1,56 +1,59 @@
 === Plugin Name ===
-Contributors: BraveNewCode, duanestorey, dalemugford
-Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=paypal%40bravenewcode%2ecom&item_name=WPtouch%20Beer%20Fund&no_shipping=0&no_note=1&tax=0&currency_code=CAD&lc=CA&bn=PP%2dDonationsBF&charset=UTF%2d8
-Tags: wptouch, iphone, ipod, theme, apple, mac, bravenewcode, ajax, mobile, android, blackberry, smartphone
-Requires at least: 2.8
-Tested up to: 3.0.1
-Stable tag: 1.9.18
+
+Contributors:		BraveNewCode, duanestorey, dalemugford
+Plugin Name:		WPtouch
+Plugin URI:			http://www.bravenewcode.com/wptouch
+Tags:					wptouch, iphone, ipod, theme, apple, mac, bravenewcode, ajax, mobile, android, blackberry, smartphone, phone, touch
+Author URI:			http://www.bravenewcode.com/
+Author:					BraveNewCode Inc.
+Donate link:			https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=paypal%40bravenewcode%2ecom&item_name=WPtouch%20Beer%20Fund&no_shipping=0&no_note=1&tax=0&currency_code=CAD&lc=CA&bn=PP%2dDonationsBF&charset=UTF%2d8
+Requires at least:	2.8
+Tested up to:		3.0.1
+Stable tag:			1.9.18
+Version:				1.9.18
 
 WPtouch automatically transforms your WordPress blog into an iPhone application-style theme, complete with ajax loading articles and effects, when viewed from an iPhone, iPod touch, Android, Opera Mini, Palm Pre and BlackBerry Storm mobile devices.
 
-*Now Available:* =WPtouch 2.0 Pro!=
-Totally re-written top to bottom, with a slew of new features, including support for themes!
+*Now Available: WPtouch 2.0 Pro!*
+Totally re-written top to bottom, with a slew of new features like more style, color and branding customizations, themes, 10 languages, more advertising options, Web-App mode, and more!
 
-For more information visit http://bravenewcode.com/wptouch-pro
+For more information visit http://www.bravenewcode.com/wptouch-pro
 
 == Description ==
 
-WPtouch automatically transforms your WordPress blog into an iPhone application-style theme, complete with ajax loading articles and effects, when viewed from an iPhone, iPod touch, Android, Opera Mini, Palm Pre and BlackBerry Storm mobile devices.
+WPtouch automatically transforms your WordPress blog into an iPhone application-style theme, complete with ajax loading articles and effects, when viewed from an iPhone, iPod touch, Android, Opera Mini, Palm Pre, Samsung touch and BlackBerry Storm/Torch mobile devices.
 
-The admin panel allows you to customize many aspects of its appearance, and deliver a fast, user-friendly and stylish version of your site to iPhone, iPod touch, Android, Palm Pre and BlackBerry Storm visitors, without modifying *a single bit of code* (or affecting) your regular desktop theme.
+The admin panel allows you to customize many aspects of its appearance, and deliver a fast, user-friendly and stylish version of your site to iPhone, iPod touch, Android, Palm Pre, Samsung touch and BlackBerry Storm/Torch visitors, without modifying *a single bit of code* (or affecting) your regular desktop theme.
 
-The theme also includes the ability for your visitors to easily switch between the *WPtouch* view and your site's regular theme.
+The theme also includes the ability for visitors to switch between *WPtouch* view and your site's regular theme.
 
-*Now Available:* =WPtouch 2.0 Pro!=
-Totally re-written top to bottom, with a slew of new features, including support for themes!
+*Now Available: WPtouch 2.0 Pro!*
+Totally re-written top to bottom, with a slew of new features like more style, color and branding customizations, themes, 10 languages, more advertising options, Web-App mode, and more!
 
-For more information visit http://bravenewcode.com/wptouch-pro
+For more information visit http://www.bravenewcode.com/wptouch-pro
 
 == Changelog ==
 
-= Version 1.9.18 =
+= Version 1.9.19 =
+* Added: Compat for Share and Follow plugin
+* Added: Missing localization code, .po
+* Fixed: Cleaned up unused code, empty strings
+* Changed: Optimized some assets
+
+= Versions 1.9.15 - 1.9.18 =
 * Added Samsung s8000, Bada device user agents (Dolphin Browser)
+* Added Blackberry Storm V2 user agents
+* Added Blackberry Torch user agent
+* Added Sticky post icon in post listings
 * Filtering Facebook Like plugin
 * Filtering Sharebar plugin
 * Fix for new Vimeo html5 embed code
 * Fix for sticky post icon when calendar icons and thumbnails are off
-
-= Version 1.9.17 =
-* Changed the_title() to the_title_attribute() for e-mailing posts
-* Added Blackberry Storm V2 user agents
-* Added Blackberry Torch user agent
-* Added Sticky post icon in post listings
-* Minor text, bug fixes
-* More image optimizations and file size reductions
-
-= Version 1.9.16 =
-* Updated Branding
-* Changed formatting
-
-= Version 1.9.15 =
 * Fixed bug where footer message input would not clear in admin
 * Fixed viewport meta tag issue, fixes browser crashes on some devices
 * Fixed viewport switch issue, where regular theme was zoomed too far out/in on switch
+* Changed the_title() to the_title_attribute() for e-mailing posts
+* More image optimizations and file size reductions
 
 = Version 1.9.14 =
 * Added ability to customize the footer copyright message

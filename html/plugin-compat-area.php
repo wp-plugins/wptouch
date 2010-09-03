@@ -10,10 +10,10 @@
 				<div class="wptouch-version-support">
 					<?php
 						echo '<p class="wpv">';
-						echo __( 'WordPress version: ', 'wptouch' );
+						e_( 'WordPress version: ', 'wptouch' );
 						echo '' . get_bloginfo('version') . '';
 						echo '</p><p class="wptv">';
-						echo __( '' . wptouch() . ' support: ', 'wptouch' );
+						e_( '' . wptouch() . ' support: ', 'wptouch' );
 						if ($version > 3.1) {
 							echo sprintf(__( "%sUnverified%s", "wptouch" ), '<span class="caution">','</span>');
 						} elseif ($version >= 2.8) {

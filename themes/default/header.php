@@ -28,7 +28,7 @@ include( dirname(__FILE__) . '/../core/core-header.php' );
 				<label><input type="text" name="log" id="log" onfocus="if (this.value == 'username') {this.value = ''}" tabindex="1" value="username" /></label>
 				<label><input type="password" name="pwd"  onfocus="if (this.value == 'password') {this.value = ''}" tabindex="2" id="pwd" value="password" /></label>
 				<input type="hidden" name="rememberme" value="forever" />
-				<input type="hidden" id="logsub" name="submit" value="<?php _e('Login'); ?>" tabindex="3" />
+				<input type="hidden" id="logsub" name="submit" value="<?php _e("Login", "wptouch"); ?>" tabindex="3" />
 				<input type="hidden" name="redirect_to" value="<?php echo $_SERVER['REQUEST_URI']; ?>"/>
 			<a href="javascript:return false;" onclick="bnc_jquery_login_toggle();"><img class="head-close" src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/themes/core/core-images/head-close.png" alt="close" /></a>
 			</form>
@@ -39,8 +39,8 @@ include( dirname(__FILE__) . '/../core/core-header.php' );
 	<div id="wptouch-search"> 
  		<div id="wptouch-search-inner">
 			<form method="get" id="searchform" action="<?php bloginfo('home'); ?>/">
-				<input type="text" value="Search..." onfocus="if (this.value == 'Search...') {this.value = ''}" name="s" id="s" /> 
-				<input name="submit" type="hidden" tabindex="1" value="Search"  />
+				<input type="text" value="Search..." onfocus="if (this.value == '<?php _e("Search", "wptouch"); ?>') {this.value = ''}" name="s" id="s" /> 
+				<input name="submit" type="hidden" tabindex="1" value="<?php _e("Search...", "wptouch"); ?>"  />
 			<a href="javascript:return false;" onclick="bnc_jquery_search_toggle(); $wptouch('input#s').blur();"><img class="head-close" src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/themes/core/core-images/head-close.png" alt="close" /></a>
 			</form>
 		</div>
@@ -55,9 +55,9 @@ include( dirname(__FILE__) . '/../core/core-header.php' );
 	    	    	<?php if (bnc_is_cats_button_enabled()) { wptouch_cats_link(); } ?>
 	    	    	<?php if (bnc_is_login_button_enabled()) { ?>
 						<?php if (!is_user_logged_in()) { ?>
-						    <a href="#head-account" onclick="bnc_jquery_login_toggle();"><?php _e( 'Login', 'wptouch' ); ?></a>
+						    <a href="#head-account" onclick="bnc_jquery_login_toggle();"><?php _e( "Login", "wptouch" ); ?></a>
 						<?php } else { ?>
-							 <a href="#head-account"><?php _e( 'My Account', 'wptouch' ); ?></a>
+							 <a href="#head-account"><?php _e( "My Account", "wptouch" ); ?></a>
 						<?php } ?>
 					<?php } ?>
 	        	</div>
@@ -86,8 +86,11 @@ include( dirname(__FILE__) . '/../core/core-header.php' );
 				<?php if (!is_user_logged_in()) { ?>
 				    <li class="text">
 				    	<?php _e( "Enter your username and password<br />in the boxes above.", "wptouch" ); ?>
-						<?php if (!get_option('comment_registration')) : ?>
-							<?php echo sprintf(__( "<br /><br />Not registered yet?<br />You can %ssign-up here%s.", "wptouch" ), '<a href="' . get_bloginfo('wpurl') . '/wp-register.php" target="_blank">','</a>'); ?>
+						<?php if ( !get_option('comment_registration') ) : ?>
+							<br /><br />
+							<?php e_( "Not registered yet?", "wptouch"); ?>
+							<br />
+							<?php echo sprintf(__( "You can %ssign-up here%s.", "wptouch" ), '<a href="' . get_bloginfo('wpurl') . '/wp-register.php" target="_blank">','</a>'); ?>
 						<?php endif; ?>
 				    </li>
 				<?php } else { ?>
@@ -173,7 +176,7 @@ include( dirname(__FILE__) . '/../core/core-header.php' );
 		<div id="wordtwit-avatar">
 			<img src="<?php echo wordtwit_get_profile_url(); ?>" alt="Twitter Avatar" />
 				<p class="twitter_username"><?php echo wordtwit_get_username(); ?></p>
-				<p><a href="http://twitter.com/<?php echo wordtwit_get_username(); ?>" target="_blank">Follow me on Twitter</a></p>
+				<p><a href="http://twitter.com/<?php echo wordtwit_get_username(); ?>" target="_blank"><?php _e( 'Follow me on Twitter', 'wptouch' ); ?></a></p>
 		</div>
 
 		<?php $now = time(); ?>

@@ -1,48 +1,52 @@
 <?php
 /*
-   Plugin Name: WPtouch iPhone Theme
+   Plugin Name: WPtouch
    Plugin URI: http://bravenewcode.com/products/wptouch
-   Description: A plugin which formats your site with a mobile theme for the Apple <a href="http://www.apple.com/iphone/">iPhone</a> / <a href="http://www.apple.com/ipodtouch/">iPod touch</a>, <a href="http://www.android.com/">Google Android</a>, <a href="http://www.blackberry.com/">Blackberry Storm and Torch</a>, <a href="http://www.palm.com/us/products/phones/pre/">Palm Pre</a> and other touch-based smartphones.
-	Author: Dale Mugford & Duane Storey (BraveNewCode)
-	Version: 1.9.18
+   Description: A plugin which formats your site with a mobile theme for visitors on Apple <a href="http://www.apple.com/iphone/">iPhone</a> / <a href="http://www.apple.com/ipodtouch/">iPod touch</a>, <a href="http://www.android.com/">Google Android</a>, <a href="http://www.blackberry.com/">Blackberry Storm and Torch</a>, <a href="http://www.palm.com/us/products/phones/pre/">Palm Pre</a> and other touch-based smartphones.
+	Author: Dale Mugford & Duane Storey (BraveNewCode Inc.)
+	Version: 1.9.19
 	Author URI: http://www.bravenewcode.com
-   
+	Text Domain: wptouch
+  	Domain Path: /lang
+ 
 	# Thanks to ContentRobot and the iWPhone theme/plugin
 	# which the detection feature of the plugin was based on.
 	# (http://iwphone.contentrobot.com/)
-	
+
 	# Also thanks to Henrik Urlund, who's "Prowl Me" plugin inspired
 	# the Push notification additions.
 	# (http://codework.dk/referencer/wp-plugins/prowl-me/)
-	
-	# All Admin and theme design / CSS is Copyright (c) 2007-2010
-	# Duane Storey & Dale Mugford of BraveNewCode Inc.
-	#
-	# 'WPtouch' is a trademark of BraveNewCode Inc., 
-	# and may not be used in conjuction with the redistribution, advertisment, 
-	# sale or other public use of this software without permission.
-	
-	# The code in this plugin is free software; you can redistribute the code aspects of
-	# the plugin and/or modify the code under the terms of the GNU Lesser General
-	# Public License as published by the Free Software Foundation; either
-	# version 2.1 of the License, or (at your option) any later version.
-	
-	# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
-	# EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-	# MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
-	# NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
-	# LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
-	# OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
-	# WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. 
-	#
-	# See the GNU lesser General Public License for more details.
+
+	# All Admin and theme design is Copyright (c) 2008 - 2010
+	# BraveNewCode Inc.
+
+	# 'WPtouch' is an unregistered trademark of BraveNewCode Inc., 
+	# and may not be used in conjuction with any redistribution 
+	# of this software without express prior permission from BraveNewCode Inc.	
+
+	# This program is free software; you can redistribute it and/or
+	# modify it under the terms of the GNU General Public License
+	# as published by the Free Software Foundation; either version 2
+	# of the License, or (at your option) any later version.
+
+	# This program is distributed in the hope that it will be useful,
+	# but WITHOUT ANY WARRANTY; without even the implied warranty of
+	# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	# GNU General Public License for more details.
+
+	# You should have received a copy of the GNU General Public License
+	# along with this program; if not, write to the Free Software
+	# Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 */
 
+load_plugin_textdomain( 'wptouch', false, dirname( plugin_basename( __FILE__ ) ) );
+
 global $bnc_wptouch_version;
-$bnc_wptouch_version = '1.9.18';
+$bnc_wptouch_version = '1.9.19';
 
 require_once( 'include/plugin.php' );
 require_once( 'include/compat.php' );
+
 
 define( 'WPTOUCH_PROWL_APPNAME', 'WPtouch');
 

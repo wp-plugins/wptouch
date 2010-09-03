@@ -4,12 +4,8 @@
 Theme Name: WPtouch Mobile Plugin & Theme For WordPress
 Theme URI: http://www.bravenewcode.com/wptouch/
 Description: A slick theme for your blog or website that is shown only when visitors are using an iPhone, iPod touch, or Android Mobile Device
-Author: Dale Mugford and Duane Storey
+Author: BraveNewCode Inc.
 Author URI: http://www.bravenewcode.com/
-	
-	The CSS, XHTML and design is released under GPL:
-	http://www.opensource.org/licenses/gpl-license.php
-
 */
 
 /* @group Body and Theme-Wide Elements */
@@ -2302,7 +2298,7 @@ a.dsq-brlink {
 
 /* @end */
 
-/* @group Post Thumbnails (2.9 only) */
+/* @group Post Thumbnails (2.9+ only) */
 
 .wptouch-post-thumb-wrap {
 	position: relative;

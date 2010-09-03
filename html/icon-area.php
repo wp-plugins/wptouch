@@ -23,7 +23,7 @@ var button = jQuery('#upload-icon'), interval;
 			<div class="left-content">
 				<h4><?php _e( "Adding Icons", "wptouch" ); ?></h4>
 				<p><?php _e( "To add icons to the pool, simply upload a .png, .jpeg or .gif image from your computer.", "wptouch" ); ?></p>
-				<p><?php _e( "", "wptouch" ); ?></p>
+				<p></p>
 				<p><?php echo sprintf( __( "Default icons generously provided by %sMarcelo Marfil%s.", "wptouch"), "<a href='http://marfil.me/' target='_blank'>", "</a>" ); ?></p>
 
 				<h4><?php _e( "Logo/Bookmark Icons", "wptouch" ); ?></h4>
