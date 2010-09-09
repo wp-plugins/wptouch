@@ -36,7 +36,7 @@ For more information visit http://www.bravenewcode.com/wptouch-pro
 
 = Version 1.9.19 =
 * Added: Compat for Share and Follow plugin
-* Added: Missing localization code, .po
+* Added: Missing localization code, .pot
 * Fixed: Cleaned up unused code, empty strings
 * Changed: Optimized some assets
 
