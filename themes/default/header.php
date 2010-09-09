@@ -88,7 +88,7 @@ include( dirname(__FILE__) . '/../core/core-header.php' );
 				    	<?php _e( "Enter your username and password<br />in the boxes above.", "wptouch" ); ?>
 						<?php if ( !get_option('comment_registration') ) : ?>
 							<br /><br />
-							<?php e_( "Not registered yet?", "wptouch"); ?>
+							<?php _e( "Not registered yet?", "wptouch"); ?>
 							<br />
 							<?php echo sprintf(__( "You can %ssign-up here%s.", "wptouch" ), '<a href="' . get_bloginfo('wpurl') . '/wp-register.php" target="_blank">','</a>'); ?>
 						<?php endif; ?>
