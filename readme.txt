@@ -1,18 +1,20 @@
 === Plugin Name ===
 
-Contributors:		BraveNewCode, duanestorey, dalemugford
-Plugin Name:		WPtouch
-Plugin URI:			http://www.bravenewcode.com/wptouch
-Tags:					wptouch, iphone, ipod, theme, apple, mac, bravenewcode, ajax, mobile, android, blackberry, smartphone, phone, touch
-Author URI:			http://www.bravenewcode.com/
-Author:					BraveNewCode Inc.
-Donate link:			https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=paypal%40bravenewcode%2ecom&item_name=WPtouch%20Beer%20Fund&no_shipping=0&no_note=1&tax=0&currency_code=CAD&lc=CA&bn=PP%2dDonationsBF&charset=UTF%2d8
-Requires at least:	2.8
-Tested up to:		3.0.1
-Stable tag:			1.9.18
-Version:				1.9.18
+Contributors: BraveNewCode, duanestorey, dalemugford
+Plugin Name: WPtouch
+Plugin URI: http://www.bravenewcode.com/wptouch
+Tags: wptouch, iphone, ipod, theme, apple, mac, bravenewcode, ajax, mobile, android, blackberry, smartphone, phone, touch
+Author URI: http://www.bravenewcode.com/
+Author: BraveNewCode Inc.
+Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=paypal%40bravenewcode%2ecom&item_name=WPtouch%20Beer%20Fund&no_shipping=0&no_note=1&tax=0&currency_code=CAD&lc=CA&bn=PP%2dDonationsBF&charset=UTF%2d8
+Requires at least: 2.8
+Tested up to: 3.0.1
+Stable tag: 1.9.18
+Version: 1.9.18
 
 WPtouch automatically transforms your WordPress blog into an iPhone application-style theme, complete with ajax loading articles and effects, when viewed from an iPhone, iPod touch, Android, Opera Mini, Palm Pre and BlackBerry Storm mobile devices.
+
+Now includes .pot file for translations (submit yours to translation@wptouch.com)
 
 *Now Available: WPtouch 2.0 Pro!*
 Totally re-written top to bottom, with a slew of new features like more style, color and branding customizations, themes, 10 languages, more advertising options, Web-App mode, and more!
@@ -36,7 +38,7 @@ For more information visit http://www.bravenewcode.com/wptouch-pro
 
 = Version 1.9.19 =
 * Added: Compat for Share and Follow plugin
-* Added: Missing localization code, .pot
+* Added: Missing localization code, .pot file for translations (submit yours to translation@wptouch.com)
 * Fixed: Cleaned up unused code, empty strings
 * Changed: Optimized some assets
 
