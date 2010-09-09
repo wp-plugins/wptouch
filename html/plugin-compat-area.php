@@ -1,5 +1,5 @@
 <?php require_once( compat_get_plugin_dir( 'wptouch' ) . '/include/plugin.php' ); ?>
-<?php global $wptouch_settings; ?>
+<?php global $wptouch_settings; global $bnc_wptouch_version; ?>
 <?php $version = bnc_get_wp_version(); ?>
 
 <div class="metabox-holder">
@@ -13,7 +13,7 @@
 						_e( 'WordPress version: ', 'wptouch' );
 						echo '' . get_bloginfo('version') . '';
 						echo '</p><p class="wptv">';
-						_e( '' . wptouch() . ' support: ', 'wptouch' );
+						echo sprintf( __( 'WPtouch %s support: ', 'wptouch' ), $bnc_wptouch_version );
 						if ($version > 3.1) {
 							echo sprintf(__( "%sUnverified%s", "wptouch" ), '<span class="caution">','</span>');
 						} elseif ($version >= 2.8) {
