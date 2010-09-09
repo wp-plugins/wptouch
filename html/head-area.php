@@ -10,7 +10,7 @@
 			</div>
 				<div id="wptouch-head-links">
 					<ul>
-						<li><?php echo sprintf(__( "%sGet WPtouch Pro%s", "wptouch" ), '<a href="http://www.bravenewcode.com/products/wptouch-pro/?utm_source=wptouch&utm_medium=web&utm_campaign=top-1917" target="_blank">','</a>'); ?> | </li>
+						<li><?php echo sprintf(__( "%sGet WPtouch Pro%s", "wptouch" ), '<a href="http://www.bravenewcode.com/products/wptouch-pro/?utm_source=wptouch&utm_medium=web&utm_campaign=top-1919" target="_blank">','</a>'); ?> | </li>
 						<li><?php echo sprintf(__( "%sBNC on Twitter%s", "wordtwit" ), '<a href="http://www.twitter.com/bravenewcode" target="_blank">','</a>'); ?> | </li>
 						<li><?php echo sprintf(__( "%sBraveNewCode.com%s", "wptouch" ), '<a href="http://www.bravenewcode.com" target="_blank">','</a>'); ?></li>
 					</ul>
@@ -30,7 +30,7 @@
 			<div id="wptouch-support-wrap">			
 			<h3>&nbsp;</h3>
 				<div id="wptouch-support-content">
-				<p id="find-out-more"><a href="http://www.bravenewcode.com/products/wptouch-pro/?utm_source=wptouch&utm_medium=web&utm_campaign=find-out-more-1917" target="_blank"><?php _e( "Find Out More &rsaquo;", "wptouch" ); ?></a></p>
+				<p id="find-out-more"><a href="http://www.bravenewcode.com/products/wptouch-pro/?utm_source=wptouch&utm_medium=web&utm_campaign=find-out-more-1919" target="_blank"><?php _e( "Find Out More &rsaquo;", "wptouch" ); ?></a></p>
 				</div>
 			</div>
 			
