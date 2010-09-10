@@ -10,7 +10,7 @@ Requires at least: 2.8
 Tested up to: 3.0.1
 Stable tag: 1.9.19
 
-=WPtouch: A simple, powerful and elegant mobile theme for your website.=
+WPtouch: A simple, powerful and elegant mobile theme for your website.
 
 WPtouch automatically transforms your WordPress blog into an iPhone application-style theme, complete with ajax loading articles and effects, when viewed from an iPhone, iPod touch, Android, Opera Mini, Palm Pre and BlackBerry Storm mobile devices.
 
