@@ -9,9 +9,8 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=paypa
 Requires at least: 2.8
 Tested up to: 3.0.1
 Stable tag: 1.9.19
-Version: 1.9.19
 
-WPtouch: A simple, powerful and elegant mobile theme for your website.
+=WPtouch: A simple, powerful and elegant mobile theme for your website.=
 
 WPtouch automatically transforms your WordPress blog into an iPhone application-style theme, complete with ajax loading articles and effects, when viewed from an iPhone, iPod touch, Android, Opera Mini, Palm Pre and BlackBerry Storm mobile devices.
 
@@ -34,6 +33,8 @@ The theme also includes the ability for visitors to switch between *WPtouch* vie
 Totally re-written top to bottom, with a slew of new features like more style, color and branding customizations, themes, 10 languages, more advertising options, Web-App mode, and more!
 
 For more information visit http://www.bravenewcode.com/wptouch-pro
+
+'WPtouch' and 'WPtouch Pro' are trademarks of BraveNewCode Inc.
 
 == Changelog ==
 
@@ -567,17 +568,17 @@ For more information visit http://www.bravenewcode.com/wptouch-pro
 
 == Installation ==
 
-= 2.6 and Older =
-Sorry, we do not officially support installations on WordPress 2.6 or older. You can use WPtouch 1.9.3.4 or older on these installations, however.
+= 2.7 and Older =
+Sorry, we do not officially support installations on WordPress 2.7 or older. You can use WPtouch versions 1.9.3.4 or previous on these installations, however.
 
-= 2.7, 2.8, 2.9+ =
+= 2.8, 2.9+ =
 You can install *WPtouch* directly from the WordPress admin! Visit the *Plugins/Add New* page and search for 'WPtouch'. Click to install.
 
 Once installed and activated visit the WPtouch admin page (*Settings/WPtouch*) to customize your WPtouch installation's appearance.
 
-= WordPress MU =
+= WordPress MU/Multisite =
 
-The best way to use WPtouch on WordPress MU is to do so via the "Activate WPtouch iPhone Theme Site Wide" link in the plugins area.
+The best way to use WPtouch on WordPress Multisite Installations is to do so via the "Activate WPtouch Site Wide" link in the plugins area.
 
 * Install WPtouch, either manually or via the "Add New" option in the plugins menu
 * Ensure that you have site wide plugins enabled in the Site Admin / Options menu
