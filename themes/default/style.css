@@ -1597,10 +1597,12 @@ ol.commentlist li:last-child {
 	-webkit-border-bottom-right-radius: 8px;
 }
 
-ol.commentlist li .avatar {
+ol.commentlist li img {
 	float: left;
 	border-right: 1px solid #f9f9f9;
 	margin-right: 5px;
+	width: 32px;
+	height: 32px;
 }
 
 ol.commentlist li ul {
@@ -2001,254 +2003,6 @@ p.subscribe-to-comments input#subscribe {
 
 /* @end */
 
-/* @group Compatibility CSS */
-
-/* @group Banner Cycler */
-
-#cycler, #cyclerNav {
-	display: none;
-}
-
-
-
-/* @end */
-
-/* @group Gravity Forms */
-
-#singlentry .gform_wrapper input {
-	width: 90%;
-	padding: 5px;
-	border: 1px solid #777;
-	font-size: 13px;
-}
-
-#singlentry .gform_wrapper select {
-	width: 94%;
-}
-
-#singlentry .gform_wrapper input.button {
-	width: auto;
-	font-size: 12px;
-	padding: 2px;
-	text-shadow: #fff 0 1px 1px;
-	font-weight: bold;
-}
-
-
-
-/* @end */
-
-/* @group WP Skypscraper */
-
-.wp_skyscraper_c2 {
-	display: none;
-}
-
-
-
-/* @end */
-
-/* @group AddThis / Tweet This */
-
-.addthis_container {
-	display: none !important;
-}
-
-a.tt {
-	display: none !important;
-}
-
-/* @end */
-
-/* @group Intense Debate */
-
-/* @end */
-
-/* @group Peter's Anti Spam Support */
-
-#secureimgdiv img#cas_image {
-	-webkit-border-radius: 2px	!important;
-	border: 1px solid #adadad	!important;
-	width: auto							!important;
-	height: 21px							!important;
-	float: left								!important;
-}
-
-#secureimgdiv p label {
-	color: #475d79;
-	text-shadow: #eee 1px 1px 0;
-	font-size: 14px;
-	font-weight: bold;
-}
-
-#secureimgdiv p small {
-	display: block;
-	margin-top: 5px;
-	font-size: 11px;
-	text-align: justify;
-}
-
-#secureimgdiv p input#securitycode {
-	-webkit-border-radius: 8px;
-	border: 1px solid #adadad;
-	padding: 3px;
-	margin: 0 0 0 0;
-	font-size: 13px;
-	color: #444;
-	width: 101px;
-	-webkit-border-top-left-radius: 1px;
-	-webkit-border-bottom-left-radius: 1px;
-}
-
-/* @end */
-
-/* @group YouTube Plugin */
-
-.post object, .post embed, .post video, .post iframe {
-	width: 100% !important;
-	height: auto;
-	max-height: 280px;
-	margin-bottom: 10px;
-}
-
-/* @end */
-
-/* @group Ribbon Manager Plugin Override */
-
-a#ribbon {
-	display: none !important;
-}
-
-/* @end */
-
-/* @group Disqus */
-
-#disqus_thread .dsq-auth-header {
-	margin-top: -35px;
-}
-
-h3#dsq-add-new-comment {
-	color: #475d79;
-	text-shadow: #eee 2px 1px 1px;
-	letter-spacing: -1px;
-	font-size: 16px;
-	position: relative;
-	bottom: 10px;
-}
-
-.dsq-by img {
-	display: none;
-}
-
-.dsq-authenticated-pic img.dsq-post-avatar {
-	width: 24px;
-	height: 24px;
-}
-
-#disqus_thread {
-	-webkit-border-radius: 8px;
-	border: 1px solid #adadad;
-	background-color: #fff;
-	padding: 10px;
-	margin-left: 10px;
-	margin-right: 10px;
-	margin-top: 50px;
-}
-
-#disqus_thread .dsq-authenticated ul li {
-	font-weight: bold;
-	position: relative;
-	left: 5px;
-}
-
-#disqus_thread a#dsq-options-toggle {
-	float: right;
-}
-
-a.dsq-brlink {
-	text-align: center;
-	display: block;
-	margin-top: 15px;
-	font-family: "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-}
-
-/* @end */
-
-/* @group Intense Debate */
-
-#idc-container-parent {
-	background-color: white;
-	margin-left: 10px;
-	margin-right: 10px;
-	-webkit-border-radius: 8px;
-	border: 1px solid #adadad;
-	overflow: hidden;
-	font: 12px Helvetica !important;
-	position: relative  !important;
-}
-
-#idc-container-parent .idc-c-t {
-	padding: 9px;
-}
-
-#idc-container-parent .idc-c-b {
-	padding-left: 5px;
-}
-
-#idc-container-parent ul#IDCPostNav li {
-	font-size: 11px !important;
-}
-
-#idc-container-parent .idc-new {
-	padding-left: 10px !important;
-	padding-right: 10px !important;
-}
-
-#idc-container-parent .idc-head h3, #idc-container-parent .idc-new h3 {
-	color: #475d79;
-	text-shadow: #eee 2px 1px 1px;
-	letter-spacing: -1px;
-	font-size: 16px;
-	position: relative;
-	bottom: 10px;
-	padding-left: 10px;
-}
-
-#idc-container-parent .idc-right {
-	margin-top: -10px;
-	padding-right: 10px;
-}
-
-#idc-container-parent textarea {
-	width: 91% !important;
-}
-
-#idc-container-parent .idc-column {
-	display: block;
-	clear: both;
-	width: 94% !important;
-}
-
-#idc-container-parent form input {
-	max-width: 100px;
-}
-
-#idc-container-parent form div {
-	margin-bottom: 10px;
-}
-
-#idc-container-parent #IDNewThreadSubmitLI.idc-right {
-	position: absolute;
-}
-
-#idc-container-parent label.idc-nofloat {
-	display: none;
-}
-
-/* @end */
-
-/* @end */
-
 /* @group WPtouch Adsense area */
 
 #adsense-area {
@@ -2350,5 +2104,226 @@ a.dsq-brlink {
 	height: 9px;
 	background: url(../core/core-images/thumb-corners.png) 9px -9px;
 }
+
+/* @end */
+
+/* @group Compatibility */
+
+/* @group Dynamic Contact Form */
+
+#dwp-contact-button, .dwpcontact-page {
+	display: none !important;
+}
+
+/* @end */
+
+/* @group Banner Cycler */
+
+#cycler, #cyclerNav {
+	display: none;
+}
+
+
+
+/* @end */
+
+/* @group Gravity Forms */
+
+.gform_wrapper li, .gform_wrapper form li{ list-style-type:none!important;
+	padding-left: 30px;
+}
+
+.gform_wrapper .gform_footer {
+	margin-top: 0;
+	margin-left: 20px;
+}
+
+
+
+/* @end */
+
+/* @group WP Skypscraper */
+
+.wp_skyscraper_c2 {
+	display: none;
+}
+
+/* @end */
+
+/* @group AddThis / Tweet This */
+
+.addthis_container {
+	display: none !important;
+}
+
+a.tt {
+	display: none !important;
+}
+
+/* @end */
+
+/* @group Peter's Anti Spam Support */
+
+#secureimgdiv img#cas_image {
+	-webkit-border-radius: 2px	!important;
+	border: 1px solid #adadad	!important;
+	width: auto							!important;
+	height: 21px							!important;
+	float: left								!important;
+}
+
+#secureimgdiv p label {
+	color: #475d79;
+	text-shadow: #eee 1px 1px 0;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+#secureimgdiv p small {
+	display: block;
+	margin-top: 5px;
+	font-size: 11px;
+	text-align: justify;
+}
+
+#secureimgdiv p input#securitycode {
+	-webkit-border-radius: 8px;
+	border: 1px solid #adadad;
+	padding: 3px;
+	margin: 0 0 0 0;
+	font-size: 13px;
+	color: #444;
+	width: 101px;
+	-webkit-border-top-left-radius: 1px;
+	-webkit-border-bottom-left-radius: 1px;
+}
+
+/* @end */
+
+/* @group Ribbon Manager Plugin Override */
+
+a#ribbon {
+	display: none !important;
+}
+
+/* @end */
+
+/* @group Subscribe To Comments */
+
+p.subscribe-to-comments {
+	padding: 8px;
+	-webkit-border-radius: 8px;
+	background-color: #fff;
+	border: 1px solid #adadad;
+}
+
+p.subscribe-to-comments label {
+	text-shadow: #fff 0 1px 0 !important;
+	color: #333 !important;
+}
+
+p.subscribe-to-comments input#subscribe {
+	padding-right: 3px;
+	vertical-align: top;
+	width: auto;
+	height: auto;
+}
+
+.commentlist p.subscribe-to-comments {
+}
+
+/* @end */
+
+/* @group Digg Box */
+
+span.db-body {
+	display: none;
+}
+
+
+
+/* @end */
+
+/* @group WP Thread Comment */
+
+p.thdrpy, p.thdmang {
+	display: inline;
+	margin-right: 10px;
+}
+
+
+
+/* @end */
+
+/* @group WP Greet Box */
+
+#greet_block {
+	display: none;
+}
+
+
+
+/* @end */
+
+/* @group Comment Reply Notification */
+
+#commentform input#comment_mail_notify {
+	margin-right: 5px;
+	margin-top: 15px;
+	margin-bottom: 5px;
+}
+
+
+
+/* @end */
+
+/* @group Share and Follow */
+
+.footer #follow.right {
+display:  none !important;}
+
+.content ul.socialwrap {
+	display: none;
+}
+
+
+
+/* @end */
+
+/* @group Disqus */
+
+#disqus_thread {
+	-webkit-border-radius: 8px;
+	border: 1px solid #adadad;
+	background-color: #fff;
+	padding: 10px;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-top: 50px;
+}
+
+/* @end */
+
+/* @group WP Tweet Button */
+
+#content .tw_button {
+	display: none !important;
+}
+
+
+
+/* @end */
+
+/* @group Follow Me */
+
+a#FollowMeTabLeftSm {
+	display: none !important;
+}
+
+
+
+/* @end */
+
+
 
 /* @end */
