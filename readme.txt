@@ -8,7 +8,7 @@ Tags: wptouch, iphone, ipod, theme, apple, mac, bravenewcode, ajax, mobile, andr
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=paypal%40bravenewcode%2ecom&item_name=WPtouch%20Beer%20Fund&no_shipping=0&no_note=1&tax=0&currency_code=CAD&lc=CA&bn=PP%2dDonationsBF&charset=UTF%2d8
 Requires at least: 2.8
 Tested up to: 3.0.1
-Stable tag: 1.9.19
+Stable tag: 1.9.19.1
 
 WPtouch: A simple, powerful and elegant mobile theme for your website.
 
@@ -42,8 +42,10 @@ For more information visit http://www.bravenewcode.com/wptouch-pro
 * Fixed: Localization changes and updates, including missing translatable text
 * Added: French localization
 * Added: Ability to change languages
-* Removed: Code which could cause a redeclare error is Super Cache is installed
+* Added: Filter for Follow Me plugin
+* Removed: Code which could cause a redeclare error if Super Cache is installed
 * Changed: Enqueue for admin js files
+
 
 = Version 1.9.19 =
 * Added: Compat for Share and Follow plugin
