@@ -49,11 +49,11 @@ function time_since($older_date, $newer_date = false)
 	// array of time period chunks
 	$chunks = array(
 //	array(60 * 60 * 24 * 365 , 'yr'),
-	array(60 * 60 * 24 * 30 , 'mo'),
-	array(60 * 60 * 24 * 7, 'wk'),
-	array(60 * 60 * 24 , 'day'),
-	array(60 * 60 , 'hr'),
-	array(60 , 'min'),
+	array(60 * 60 * 24 * 30, __('mo', 'wptouch') ),
+	array(60 * 60 * 24 * 7, __('wk', 'wptouch') ),
+	array(60 * 60 * 24, __('day', 'wptouch') ),
+	array(60 * 60, __('hr', 'wptouch') ),
+	array(60 , __('min', 'wptouch'), )
 	);
 	
 	$newer_date = ($newer_date == false) ? (time()+(60*60*get_settings("gmt_offset"))) : $newer_date;

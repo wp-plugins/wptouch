@@ -24,7 +24,7 @@
 						echo '</p>';
 					?>	
 				</div>
-				<p><?php _e( "Here you'll find information on additional WPtouch features and their requirements, including those activated with companion plugins.", "wptouch" ); ?></p>
+				<p><?php _e( "Here you'll find information on additional WPtouch features and requirements, including those activated with companion plugins.", "wptouch" ); ?></p>
 		</div>
 		
 		<div class="right-content">
@@ -69,66 +69,67 @@
 				<div id="wptouch-plugin-content">
 					<!-- custom anti spam -->
 						<div class="all-good">
-							<a href="http://wordpress.org/extend/plugins/peters-custom-anti-spam-image/" target="_blank">Peter's Custom Anti-Spam</a> is fully supported.
+							<?php echo sprintf(__('%sPeter\'s Custom Anti-Spam%s is fully supported.', 'wptouch'), '<a href="http://wordpress.org/extend/plugins/peters-custom-anti-spam-image/" target="_blank">','</a>'); ?>
 						</div>
 		
 					<!-- wp spam free -->
 						<div class="all-good">
-							<a href="http://www.hybrid6.com/webgeek/plugins/wp-spamfree" target="_blank">WP Spam Free</a> is fully supported.
+							<?php echo sprintf(__('%sWP Spam Free%s is fully supported.', 'wptouch'), '<a href="http://www.hybrid6.com/webgeek/plugins/wp-spamfree" target="_blank">','</a>'); ?>
 						</div>
 					
 					<!-- flickr rss -->	  
 						<div class="all-good">
-							<a href="http://eightface.com/wordpress/flickrrss/" target="_blank">FlickrRSS</a>: Your photos will automatically show on a page called 'Photos' if you have it. Fully supported.
+							<?php echo sprintf(__('%sFlickrRSS%s: Your photos will automatically show on a page with the slug "photos" if you have it. Fully supported.', 'wptouch'), '<a href="http://eightface.com/wordpress/flickrrss/" target="_blank">','</a>'); ?>
 						</div>
 					
 					<!-- wp cache -->		  
 						<div class="sort-of">
-							<a href="http://mnm.uib.es/gallir/wp-cache-2/" target="_blank">WP Cache</a> is supported, but requires configuration. Follow <a href="http://www.bravenewcode.com/2009/12/video-tutorial-configuring-wptouch-with-wp-super-cache/" target="_blank">this video tutorial</a> for more information.
+							<?php echo sprintf(__('WP Cache is supported, but requires configuration. %sFollow this video tutorial%s for more information.', 'wptouch'), '<a href="http://www.bravenewcode.com/2009/12/video-tutorial-configuring-wptouch-with-wp-super-cache/" target="_blank">','</a>'); ?>
 						</div>
 								
 					<!-- wp super cache -->		  
 						<div class="sort-of">
-							<a href="http://mnm.uib.es/gallir/wp-cache-2/" target="_blank">WP Super Cache</a> is supported, but requires configuration. Follow <a href="http://www.bravenewcode.com/2009/12/video-tutorial-configuring-wptouch-with-wp-super-cache/" target="_blank">this video tutorial</a> for more information.
+							<?php echo sprintf(__('WP Super Cache is supported, but requires configuration. %sFollow this video tutorial%s for more information.', 'wptouch'), '<a href="http://www.bravenewcode.com/2009/12/video-tutorial-configuring-wptouch-with-wp-super-cache/" target="_blank">','</a>'); ?>
 						</div>
 						
 					<!-- w3 cache -->		  
 						<div class="sort-of">
-							<a href="http://mnm.uib.es/gallir/wp-cache-2/" target="_blank">W3 Cache</a> is supported, but requires configuration. Follow <a href="http://nimopress.com/pressed/blog-building-how-to-configure-w3-total-cache-to-work-with-wptouch-for-wordpress/" target="_blank">this tutorial</a> for more information.
+							<?php echo sprintf(__('W3 Total Cache is supported, but requires configuration. %sFollow this video tutorial%s for more information.', 'wptouch'), '<a href="http://nimopress.com/pressed/blog-building-how-to-configure-w3-total-cache-to-work-with-wptouch-for-wordpress/" target="_blank">','</a>'); ?>
 						</div>
 		
 					<!-- wp css -->		  
 						<div class="sort-of">
-							<a href="http://wordpress.org/extend/plugins/wp-css/" target="_blank">WP CSS</a> is supported, but does	not compress WPtouch's CSS. WPtouch files are pre-optimized for mobile devices already.
+						<?php echo sprintf(__('%sWP CSS%s is supported, but does	not compress WPtouch\'s CSS. WPtouch files are pre-optimized for mobile devices already.', 'wptouch'), '<a href="http://wordpress.org/extend/plugins/wp-css/" target="_blank">','</a>'); ?>
 						</div>
 		
 					<!-- share this -->		  
 						<div class="sort-of">
-							<a href="http://wordpress.org/extend/plugins/share-this/" target="_blank">Share This</a> is supported, but requires the WPtouch setting <strong>'Enable Exclusive Mode'</strong> turned on for WPtouch to work properly. We'll try to flush out proper compatibility.</div>
+							<?php echo sprintf(__('%sShare This%s is supported, but requires the WPtouch setting "Enable Restrictive Mode" turned on to work properly.', 'wptouch'), '<a href="http://wordpress.org/extend/plugins/share-this/" target="_blank">','</a>'); ?>
+						</div>
 		
 					<!-- wordpress admin bar -->		  
 						<div class="sort-of">
-							<a href="http://www.viper007bond.com/wordpress-plugins/wordpress-admin-bar/" target="_blank">WordPress Admin Bar</a> requires additional configuration to work with WPtouch. Follow <a href="http://www.viper007bond.com/wordpress-plugins/wordpress-admin-bar/#comment-227660" target="_blank">this comment</a> on the official site.
+						<?php echo sprintf(__('WordPress Admin Bar requires additional configuration to work with WPtouch. %sFollow this comment%s on the developer\'s official site.', 'wptouch'), '<a href="http://www.viper007bond.com/wordpress-plugins/wordpress-admin-bar/#comment-227660" target="_blank">','</a>'); ?>
 						</div>
 		
 					<!-- simple captcha -->		  
 						<div class="too-bad">
-							<a href="http://wordpress.org/extend/plugins/simple-captcha/" target="_blank">WP Simple Captcha</a> is not currently supported.
+							<?php echo sprintf(__('%sWP Simple Captcha%s is not currently supported.', 'wptouch'), '<a href="http://wordpress.org/extend/plugins/simple-captcha/" target="_blank">','</a>'); ?>
 						</div>
 		
 					<!-- next gen gallery -->		  
 						<div class="too-bad">
-							<a href="http://wordpress.org/extend/plugins/nextgen-gallery/" target="_blank">NextGEN Gallery</a> is not currently supported.
+							<?php echo sprintf(__('%sNextGEN Gallery%s is not currently supported.', 'wptouch'), '<a href="http://wordpress.org/extend/plugins/nextgen-gallery/" target="_blank">','</a>'); ?>
 						</div>
 		
 					<!-- ajaxed pages comments-->		  
 						<div class="too-bad">
-							<a href="http://wordpress.org/extend/plugins/yaapc/" target="_blank">Yet another ajax paged comments (YAAPC)</a> is not currently supported. WPtouch uses its own ajaxed comments, and will automatically support WP 2.7+ comments out-of-the-box soon.
+							<?php echo sprintf(__('%sYet another ajax paged comments%s (YAAPC) is not currently supported. WPtouch uses its own ajaxed comments. WPtouch Pro supports WP 2.7+ comments out-of-the-box.', 'wptouch'), '<a href="http://wordpress.org/extend/plugins/yaapc/" target="_blank">','</a>'); ?>
 						</div>
 						
 						<!-- Lightview Plus -->
 						<div class="too-bad">
-							<a href="http://wordpress.org/extend/plugins/lightview-plus/" target="_blank">Lightview Plus</a> is not currently supported. Images may not open in a  viewer or separate page.
+							<?php echo sprintf(__('%sLightview Plus%s is not currently supported. Images may not open in a  viewer or separate page.', 'wptouch'), '<a href="http://wordpress.org/extend/plugins/lightview-plus/" target="_blank">','</a>'); ?>
 						</div>
 				
 				</div>				

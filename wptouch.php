@@ -97,27 +97,6 @@ $wptouch_defaults = array(
 	'enable-flat-icon' => false
 );
 
-//  function wptouch_supercache_strings( $user_agents ) {
-//  	$wptouch_user_agents = bnc_wptouch_get_user_agents();
-//  	
-//  	foreach( $wptouch_user_agents as $check_user_agent ) {
-//  		if ( !in_array( $check_user_agent, $user_agents ) ) {
-//  			$user_agents[] = $check_user_agent;	
-//  		}
-//  	}
-//  	
-//  	return $user_agents;
-//  }
-//  
-//  function wptouch_plugins_loaded() {
-//  	// Check for WP Super Cache and (hopefully) add support for it
-//  	if ( function_exists( 'wpsc_update_htaccess' ) ) {
-//  		add_filter( 'cached_mobile_browsers', 'wptouch_supercache_strings' );
-//  	}
-//  }
-//  
-//  add_action( 'plugins_loaded', 'wptouch_plugins_loaded' );
-
 function wptouch_get_plugin_dir_name() {
 	global $wptouch_plugin_dir_name;
 	return $wptouch_plugin_dir_name;

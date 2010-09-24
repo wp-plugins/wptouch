@@ -9,11 +9,17 @@
 		return;
 	}
 ?>
-
 <!-- You can start editing below here... but make a backup first!  -->
 
 <div id="comment_wrapper">
-<?php comments_number( '', __('<h3 onclick="bnc_showhide_coms_toggle();" id="com-head"><img id="com-arrow" src="' . compat_get_plugin_url( 'wptouch' ) . '/themes/core/core-images/com_arrow.png" alt="arrow" />1 Comment</h3>', 'wptouch'), __('<h3 onclick="bnc_showhide_coms_toggle();" id="com-head"><img id="com-arrow" src="' . compat_get_plugin_url( 'wptouch' ) . '/themes/core/core-images/com_arrow.png" alt="arrow" />% Comments</h3>', 'wptouch') ); ?>
+<?php 
+	echo '<h3 onclick="bnc_showhide_coms_toggle();" id="com-head"><img id="com-arrow" src="' . compat_get_plugin_url( 'wptouch' ) . '/themes/core/core-images/com_arrow.png" alt="arrow" />';
+	$comment_string1 = __( 'No Responses Yet', 'wptouch' );
+	$comment_string2 = __( '1 Response', 'wptouch' );
+	$comment_string3 = __( '% Responses', 'wptouch' );
+	comments_number( $comment_string1, $comment_string2, $comment_string3 );
+	echo '</h3>';
+?>
 
 	<ol class="commentlist" id="commentlist">
 		<?php if ($comments) : ?>
@@ -29,7 +35,7 @@
 												<span><?php wptouch_moderate_comment_link(get_comment_ID()); ?></span>
 											<?php } ?>
 											<?php if (function_exists('time_since')) { 
-												echo time_since(abs(strtotime($comment->comment_date_gmt . " GMT")), time()) . " ago"; } else { the_time('F jS, Y'); 
+												echo time_since(abs(strtotime($comment->comment_date_gmt . " GMT")), time()) . " " . __( 'ago', 'wptouch' ); } else { the_time('F jS, Y'); 
 											} ?>	
 										</div>									
 
@@ -114,7 +120,7 @@
 		<p><textarea name="comment" id="comment" tabindex="4"></textarea></p>
 		
 		<p>
-			<input name="submit" type="submit" id="submit" tabindex="5" value="Publish" />
+			<input name="submit" type="submit" id="submit" tabindex="5" value="<?php _e('Publish', 'wptouch'); ?>	" />
 			<input type="hidden" name="comment_post_ID" value="<?php echo $id; ?>" />		
 			<div id="loading" style="display:none">
 				<img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/themes/core/core-images/comment-ajax-loader.gif" alt="" /> <p><?php _e( 'Publishing...', 'wptouch' ); ?></p>
