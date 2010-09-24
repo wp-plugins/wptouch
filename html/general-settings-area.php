@@ -7,7 +7,7 @@
 			<div class="left-content">
 				<h4><?php _e( "Regionalization Settings", "wptouch" ); ?></h4>
 				<p><?php _e( "Select the language you would like WPtouch to appear in.  Custom language .mo files should be placed in wp-content/wptouch/lang.", "wptouch" ); ?></p>
-				<br /><br />
+				<br />
 				<h4><?php _e( "Home Page Re-Direction", "wptouch" ); ?></h4>
 				<p><?php echo sprintf( __( "WPtouch by default follows your %sWordPress &raquo; Reading Options%s. You can also set a different one for WPtouch.", "wptouch"), '<a href="options-reading.php">', '</a>' ); ?></p>
 
@@ -37,6 +37,7 @@
 						<select name="wptouch-language">
 							<option value="auto"<?php if ( $wptouch_settings['wptouch-language'] == "auto" ) echo " selected"; ?>><?php _e( "Automatically detected", "wptouch" ); ?></option>
 							<option value="fr_FR"<?php if ( $wptouch_settings['wptouch-language'] == "fr_FR" ) echo " selected"; ?>>Français</option>
+							<option value="es_ES"<?php if ( $wptouch_settings['wptouch-language'] == "es_ES" ) echo " selected"; ?>>Español</option>
 							
 							<?php $custom_lang_files = bnc_get_wptouch_custom_lang_files(); ?>
 							<?php if ( count( $custom_lang_files ) ) { ?>

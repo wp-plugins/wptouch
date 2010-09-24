@@ -39,7 +39,7 @@ include( dirname(__FILE__) . '/../core/core-header.php' );
 	<div id="wptouch-search"> 
  		<div id="wptouch-search-inner">
 			<form method="get" id="searchform" action="<?php bloginfo('home'); ?>/">
-				<input type="text" value="Search..." onfocus="if (this.value == '<?php _e("Search", "wptouch"); ?>') {this.value = ''}" name="s" id="s" /> 
+				<input type="text" value="<?php echo __( "Search...", "wptouch" ); ?>" onfocus="if (this.value == '<?php _e("Search", "wptouch"); ?>') {this.value = ''}" name="s" id="s" /> 
 				<input name="submit" type="hidden" tabindex="1" value="<?php _e("Search...", "wptouch"); ?>"  />
 			<a href="javascript:return false;" onclick="bnc_jquery_search_toggle(); $wptouch('input#s').blur();"><img class="head-close" src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/themes/core/core-images/head-close.png" alt="close" /></a>
 			</form>
