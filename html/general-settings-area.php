@@ -5,14 +5,14 @@
 		<h3><span class="global-settings">&nbsp;</span><?php _e( "General Settings", "wptouch" ); ?></h3>
 
 			<div class="left-content">
+				<h4><?php _e( "Regionalization Settings", "wptouch" ); ?></h4>
+				<p><?php _e( "Select the language you would like WPtouch to appear in.  Custom language .mo files should be placed in wp-content/wptouch/lang.", "wptouch" ); ?></p>
+				<br /><br />
 				<h4><?php _e( "Home Page Re-Direction", "wptouch" ); ?></h4>
 				<p><?php echo sprintf( __( "WPtouch by default follows your %sWordPress &raquo; Reading Options%s. You can also set a different one for WPtouch.", "wptouch"), '<a href="options-reading.php">', '</a>' ); ?></p>
 
 				<h4><?php _e( "Site Title", "wptouch" ); ?></h4>
 				<p><?php _e( "You can shorten your site title here so it won't be truncated by WPtouch.", "wptouch" ); ?></p>
-
-				<h4><?php _e( "Regionalization Settings", "wptouch" ); ?></h4>
-				<p><?php _e( "Select the language you would like WPtouch to appear in.  Custom language .mo files should be placed in wp-content/wptouch/lang.", "wptouch" ); ?></p>
 
 				<h4><?php _e( "Excluded Categories", "wptouch" ); ?></h4>
 				<p><?php _e( "Choose categories you want excluded from the main post listings in WPtouch.", "wptouch" ); ?></p>
@@ -31,22 +31,7 @@
 			</div>
 
 			<div class="right-content">
-				<p><label for="home-page"><strong><?php _e( "WPtouch Home Page", "wptouch" ); ?></strong></label></p>
-				<?php $pages = bnc_get_pages_for_icons(); ?>
-				<?php if ( count( $pages ) ) { ?>
-					<?php wp_dropdown_pages( 'show_option_none=WordPress Settings&name=home-page&selected=' . bnc_get_selected_home_page()); ?>
-				<?php } else {?>
-					<strong class="no-pages"><?php _e( "You have no pages yet. Create some first!", "wptouch" ); ?></strong>
-				<?php } ?>
-
-				<br /><br /><br />
-
-				<ul class="wptouch-make-li-italic">
-					<li><input type="text" class="no-right-margin" name="header-title" value="<?php $str = $wptouch_settings['header-title']; echo stripslashes($str); ?>" /><?php _e( "Site title text", "wptouch" ); ?></li>
-				</ul>
-
-				<br /><br />
-				
+				<p><label for="home-page"><strong><?php _e( "WPtouch Language", "wptouch" ); ?></strong></label></p>
 				<ul class="wptouch-make-li-italic">
 					<li>
 						<select name="wptouch-language">
@@ -62,7 +47,23 @@
 						</select>
 					</li>
 				</ul>
+				<br /><br />
+
+				<p><label for="home-page"><strong><?php _e( "WPtouch Home Page", "wptouch" ); ?></strong></label></p>
+				<?php $pages = bnc_get_pages_for_icons(); ?>
+				<?php if ( count( $pages ) ) { ?>
+					<?php wp_dropdown_pages( 'show_option_none=WordPress Settings&name=home-page&selected=' . bnc_get_selected_home_page()); ?>
+				<?php } else {?>
+					<strong class="no-pages"><?php _e( "You have no pages yet. Create some first!", "wptouch" ); ?></strong>
+				<?php } ?>
+
 				<br /><br /><br />
+
+				<ul class="wptouch-make-li-italic">
+					<li><input type="text" class="no-right-margin" name="header-title" value="<?php $str = $wptouch_settings['header-title']; echo stripslashes($str); ?>" /><?php _e( "Site title text", "wptouch" ); ?></li>
+				</ul>
+
+				<br /><br />
 
 				<ul class="wptouch-make-li-italic">			
 				<li><input name="excluded-cat-ids" class="no-right-margin" type="text" value="<?php $str = $wptouch_settings['excluded-cat-ids']; echo stripslashes($str); ?>" /><?php _e( "Comma list of Category IDs, eg: 1,2,3", "wptouch" ); ?></li>
