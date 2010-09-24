@@ -94,7 +94,8 @@ $wptouch_defaults = array(
 	'custom-user-agents' => array(),
 	'enable-show-tweets' => false,
 	'enable-gigpress-button' => false,
-	'enable-flat-icon' => false
+	'enable-flat-icon' => false,
+	'wptouch-language' => 'auto'
 );
 
 function wptouch_get_plugin_dir_name() {
@@ -114,12 +115,39 @@ function wptouch_delete_icon( $icon ) {
 	unlink( $loc );
 }
 
+add_action( 'wptouch_load_locale', 'load_wptouch_languages' );
+
+function load_wptouch_languages() {	
+	$settings = bnc_wptouch_get_settings();
+	
+	$wptouch_dir = compat_get_plugin_dir( 'wptouch' );
+	if ( $wptouch_dir ) {
+		if ( isset( $settings['wptouch-language'] ) ) {
+			if ( $settings['wptouch-language'] == 'auto' ) {
+				// check the locale	
+				$locale = get_locale();
+				
+				if ( file_exists( $wptouch_dir . '/lang/' . $locale . '.mo' ) ) {
+					load_textdomain( 'wptouch', $wptouch_dir . '/lang/' . $locale . '.mo' );
+				}
+			} else {
+				if ( file_exists( $wptouch_dir . '/lang/' . $settings['wptouch-language'] . '.mo' ) ) {
+					load_textdomain( 'wptouch', $wptouch_dir . '/lang/' . $settings['wptouch-language'] . '.mo' );
+				} else if ( file_exists( WP_CONTENT_DIR . '/wptouch/lang/' . $settings['wptouch-language'] . '.mo' ) ) {
+					load_textdomain( 'wptouch', WP_CONTENT_DIR . '/wptouch/lang/' . $settings['wptouch-language'] . '.mo' );
+				}	
+			}	
+		}	
+	}	
+}
+
 function wptouch_init() {	
 	if ( isset( $_GET['delete_icon'] ) ) {
 		wptouch_delete_icon( $_GET['delete_icon'] );
 		header( 'Location: ' . get_bloginfo('wpurl') . '/wp-admin/options-general.php?page=wptouch/wptouch.php#available_icons' );
 		die;
 	}
+
 }
 
 function wptouch_include_adsense() {
@@ -833,6 +861,29 @@ function bnc_get_h2_font() {
 function bnc_get_icon_style() {
 	$v = bnc_wp_touch_get_menu_pages();
 	return $v['icon-style'];
+}
+
+function bnc_get_wptouch_custom_lang_files() {
+	$lang_files = array();
+	
+	$lang_dir = WP_CONTENT_DIR . '/wptouch/lang';
+	if ( file_exists( $lang_dir ) ) {
+		$d = opendir( $lang_dir );
+		if ( $d ) {
+			while ( $f = readdir( $d ) ) {
+				if ( strpos( $f, ".mo" ) !== false ) {
+					$file_info = new stdClass;
+					$file_info->name = $f;
+					$file_info->path = $lang_dir . '/' . $f;
+					$file_info->prefix = str_replace( ".mo", "", $f );
+					
+					$lang_files[] = $file_info;	
+				}
+			}
+		}
+	}	
+	
+	return $lang_files;
 }
 
 require_once( 'include/icons.php' );

@@ -39,9 +39,10 @@ For more information visit http://www.bravenewcode.com/wptouch-pro
 == Changelog ==
 
 = Version 1.9.19.1 =
-* Localization fixes and updates, including missing translatable text
-* Removed code which could cause a redeclare error is Super Cache is installed
-
+* Fixed: Localization changes and updates, including missing translatable text
+* Added: French localization
+* Added: Ability to change languages
+* Removed: Code which could cause a redeclare error is Super Cache is installed
 
 = Version 1.9.19 =
 * Added: Compat for Share and Follow plugin

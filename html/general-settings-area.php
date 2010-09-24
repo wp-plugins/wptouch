@@ -11,6 +11,8 @@
 				<h4><?php _e( "Site Title", "wptouch" ); ?></h4>
 				<p><?php _e( "You can shorten your site title here so it won't be truncated by WPtouch.", "wptouch" ); ?></p>
 
+				<h4><?php _e( "Regionalization Settings", "wptouch" ); ?></h4>
+				<p><?php _e( "Select the language you would like WPtouch to appear in.  Custom language .mo files should be placed in wp-content/wptouch/lang.", "wptouch" ); ?></p>
 
 				<h4><?php _e( "Excluded Categories", "wptouch" ); ?></h4>
 				<p><?php _e( "Choose categories you want excluded from the main post listings in WPtouch.", "wptouch" ); ?></p>
@@ -43,7 +45,24 @@
 					<li><input type="text" class="no-right-margin" name="header-title" value="<?php $str = $wptouch_settings['header-title']; echo stripslashes($str); ?>" /><?php _e( "Site title text", "wptouch" ); ?></li>
 				</ul>
 
-				<br />
+				<br /><br />
+				
+				<ul class="wptouch-make-li-italic">
+					<li>
+						<select name="wptouch-language">
+							<option value="auto"<?php if ( $wptouch_settings['wptouch-language'] == "auto" ) echo " selected"; ?>><?php _e( "Automatically detected", "wptouch" ); ?></option>
+							<option value="fr_FR"<?php if ( $wptouch_settings['wptouch-language'] == "fr_FR" ) echo " selected"; ?>>Français</option>
+							
+							<?php $custom_lang_files = bnc_get_wptouch_custom_lang_files(); ?>
+							<?php if ( count( $custom_lang_files ) ) { ?>
+								<?php foreach( $custom_lang_files as $lang_file ) { ?>
+									<option value="<?php echo $lang_file->prefix; ?>"<?php if ( $wptouch_settings['wptouch-language'] == $lang_file->prefix ) echo " selected"; ?>><?php echo $lang_file->name; ?></option>
+								<?php } ?>	
+							<?php } ?>
+						</select>
+					</li>
+				</ul>
+				<br /><br /><br />
 
 				<ul class="wptouch-make-li-italic">			
 				<li><input name="excluded-cat-ids" class="no-right-margin" type="text" value="<?php $str = $wptouch_settings['excluded-cat-ids']; echo stripslashes($str); ?>" /><?php _e( "Comma list of Category IDs, eg: 1,2,3", "wptouch" ); ?></li>
