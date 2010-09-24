@@ -43,6 +43,7 @@ For more information visit http://www.bravenewcode.com/wptouch-pro
 * Added: French localization
 * Added: Ability to change languages
 * Removed: Code which could cause a redeclare error is Super Cache is installed
+* Changed: Enqueue for admin js files
 
 = Version 1.9.19 =
 * Added: Compat for Share and Follow plugin

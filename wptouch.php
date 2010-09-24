@@ -217,18 +217,23 @@ function wptouch_settings_link( $links, $file ) {
 	return $links;
 }
  
-// WP Admin stylesheets & javascript
+// WPtouch Admin JavaScript
+function wptouch_admin_enqueue_files() {		
+	if ( isset( $_GET['page'] ) && $_GET['page'] == 'wptouch/wptouch.php' ) {
+		wp_enqueue_script( 'ajax-upload', compat_get_plugin_url( 'wptouch' ) . '/js/ajax_upload.js', array( 'jquery' ), $bnc_wptouch_version );
+		wp_enqueue_script( 'jquery-colorpicker', compat_get_plugin_url( 'wptouch' ) . '/js/colorpicker_1.4.js', array( 'ajax-upload' ), $bnc_wptouch_version );
+		wp_enqueue_script( 'jquery-fancybox', compat_get_plugin_url( 'wptouch' ) . '/js/fancybox_1.2.5.js', array( 'jquery-colorpicker' ), $bnc_wptouch_version );
+		wp_enqueue_script( 'wptouch-js', compat_get_plugin_url( 'wptouch' ) . '/js/admin_1.9.js', array( 'jquery-fancybox' ), $bnc_wptouch_version );
+	}
+}
+
+// WPtouch Admin StyleSheets
 function wptouch_admin_files() {		
 	if ( isset( $_GET['page'] ) && $_GET['page'] == 'wptouch/wptouch.php' ) {
+		echo "<script type='text/javascript' src='" . get_bloginfo( "home" ) . "/?wptouch-ajax=js'></script>\n";
 		echo "<link rel='stylesheet' type='text/css' href='" . compat_get_plugin_url( 'wptouch' ) . "/admin-css/wptouch-admin.css?ver=1917' />\n";
 		echo "<link rel='stylesheet' type='text/css' href='" . compat_get_plugin_url( 'wptouch' ) . "/admin-css/bnc-global.css?ver=1917' />\n";
 		echo "<link rel='stylesheet' type='text/css' href='" . compat_get_plugin_url( 'wptouch' ) . "/admin-css/bnc-compressed-global.css?ver=1917' />\n";
-		echo "<script type='text/javascript' src='" . compat_get_plugin_url( 'wptouch' ) . "/js/ajax_upload.js?ver=1917'></script>\n";
-		echo "<script type='text/javascript' src='" . compat_get_plugin_url( 'wptouch' ) . "/js/colorpicker_1.4.js?ver=1917'></script>\n";
-		echo "<script type='text/javascript' src='" . compat_get_plugin_url( 'wptouch' ) . "/js/fancybox_1.2.5.js?ver=1917'></script>\n";
-		echo "<script type='text/javascript' src='" . compat_get_plugin_url( 'wptouch' ) . "/js/jquery-ui.js?ver=1917'></script>\n";
-		echo "<script type='text/javascript' src='" . compat_get_plugin_url( 'wptouch' ) . "/js/admin_1.9.js?ver=1917'></script>\n";
-		echo "<script type='text/javascript' src='" . get_bloginfo( "home" ) . "/?wptouch-ajax=js'></script>";
 	}
 }
 
@@ -933,7 +938,8 @@ function bnc_wp_touch_page() {
 <?php 
 echo('</div>'); } 
 add_action('wp_footer', 'wptouch_switch');
-add_action('admin_head', 'wptouch_admin_files');
+add_action( 'admin_init', 'wptouch_admin_enqueue_files' );	
+add_action( 'admin_head', 'wptouch_admin_files' );	
 add_action('admin_menu', 'bnc_options_menu'); 
 add_filter( 'plugin_action_links', 'wptouch_settings_link', 9, 2 );
 ?>
