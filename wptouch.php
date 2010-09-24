@@ -147,7 +147,10 @@ function wptouch_init() {
 		header( 'Location: ' . get_bloginfo('wpurl') . '/wp-admin/options-general.php?page=wptouch/wptouch.php#available_icons' );
 		die;
 	}
-
+	
+	if ( !is_admin() ) {
+		do_action( 'wptouch_load_locale' );	
+	}
 }
 
 function wptouch_include_adsense() {
