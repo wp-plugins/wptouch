@@ -99,6 +99,12 @@ function doWPtouchReady() {
 			}
 		});
 	}
+	
+/////-- Filter FollowMe Plugin -- /////
+	if ( $wptouch( '#FollowMeTabLeftSm' ).length ) {
+		$wptouch( '#FollowMeTabLeftSm' ).remove();
+	}
+	
 } // End document ready
 
 $wptouch( document ).ready( function() { doWPtouchReady(); } );
