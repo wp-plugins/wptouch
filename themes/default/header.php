@@ -2,7 +2,7 @@
 include( dirname(__FILE__) . '/../core/core-header.php' ); 
 // End WPtouch Core Header
 ?>
-<body class="<?php wptouch_core_body_background(); ?>">
+<body class="<?php wptouch_core_body_background(); ?> <?php wptouch_idevice_classes(); ?>">
 <!-- New noscript check, we need js on now folks -->
 <noscript>
 <div id="noscript-wrap">

@@ -14,7 +14,7 @@ function wptouchSpinnerDone() {
 jQuery(document).ready(function(jQuery) {
 
 	setTimeout(function() { jQuery('#wptouchupdated').fadeIn(250); }, 750);
-	setTimeout(function() { jQuery( '#wptouchupdated' ).hide("slide", { direction: "up" }, 450);}, 2750);
+	setTimeout(function() { jQuery( '#wptouchupdated' ).fadeOut(200); }, 2750);
 
 	jQuery('#header-text-color, #header-background-color, #header-border-color, #link-color').ColorPicker({
 		onSubmit: function(hsb, hex, rgb, el) { jQuery(el).val(hex); jQuery(el).ColorPickerHide(); },
