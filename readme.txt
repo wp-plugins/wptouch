@@ -4,11 +4,11 @@ Plugin Name: WPtouch
 Plugin URI: http://www.wptouch.com
 Author: BraveNewCode
 Author URI: http://www.bravenewcode.com/
-Tags: wptouch, iphone, ipod, theme, apple, mac, bravenewcode, ajax, mobile, android, blackberry, smartphone
+Tags: wptouch, iphone, ipod, theme, apple, mac, bravenewcode, ajax, mobile, android, blackberry, smartphone, 
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=paypal%40bravenewcode%2ecom&item_name=WPtouch%20Beer%20Fund&no_shipping=0&no_note=1&tax=0&currency_code=CAD&lc=CA&bn=PP%2dDonationsBF&charset=UTF%2d8
-Requires at least: 2.8
+Requires at least: 2.8.6
 Tested up to: 3.0.1
-Stable tag: 1.9.19.1
+Stable tag: 1.9.19.2
 
 WPtouch: A simple, powerful and elegant mobile theme for your website.
 
@@ -16,8 +16,10 @@ WPtouch automatically transforms your WordPress blog into an iPhone application-
 
 *Now includes .pot file for translations (submit yours to translation@wptouch.com)*
 
-*Now Available: WPtouch 2.0 Pro!*
+*Now Available: WPtouch Pro!*
 Totally re-written top to bottom, with a slew of new features like more style, color and branding customizations, themes, 10 languages, more advertising options, Web-App mode, and more!
+
+iPad support coming in 2.1.
 
 For more information visit http://www.bravenewcode.com/wptouch-pro
 
@@ -29,8 +31,10 @@ The admin panel allows you to customize many aspects of its appearance, and deli
 
 The theme also includes the ability for visitors to switch between *WPtouch* view and your site's regular theme.
 
-*Now Available: WPtouch 2.0 Pro!*
+*Now Available: WPtouch Pro!*
 Totally re-written top to bottom, with a slew of new features like more style, color and branding customizations, themes, 10 languages, more advertising options, Web-App mode, and more!
+
+iPad support coming in 2.1.
 
 For more information visit http://www.bravenewcode.com/wptouch-pro
 
@@ -41,7 +45,7 @@ For more information visit http://www.bravenewcode.com/wptouch-pro
 = Version 1.9.19.2 =
 * Fixed: Changed references of 'siteurl' and 'home' to url (siteurl & home are depreciated in bloginfo())
 * Fixed: Other minor code warnings
-* Changed: Enhanced comment-bubbles on posts
+* Changed: Enhanced comment-bubbles on posts for iPhone/iPod using CSS.
 * Other improved styling
 
 = Version 1.9.19.1 =
