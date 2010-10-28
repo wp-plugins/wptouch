@@ -19,7 +19,7 @@ function wptouch_core_header_enqueue() {
   
 function wptouch_core_header_home() {
 	if (bnc_is_home_enabled()) {
-		echo sprintf(__( "%sHome%s", "wptouch" ), '<li><a href="' . get_bloginfo('home') . '"><img src="' . bnc_get_title_image() . '" alt=""/>','</a></li>');
+		echo sprintf(__( "%sHome%s", "wptouch" ), '<li><a href="' . get_bloginfo( 'url' ) . '"><img src="' . bnc_get_title_image() . '" alt=""/>','</a></li>');
 	}
 }
   
@@ -159,7 +159,7 @@ function wptouch_core_else_text() {
 function wptouch_core_footer_switch_link() {	
 	$switch_url = $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"];
 
-echo '<script type="text/javascript">function switch_delayer() { window.location = "' . get_bloginfo('siteurl') . '/?theme_view=normal&wptouch_redirect=' . $switch_url . '"}</script>';
+echo '<script type="text/javascript">function switch_delayer() { window.location = "' . get_bloginfo('url') . '/?theme_view=normal&wptouch_redirect=' . $switch_url . '"}</script>';
 echo '' . __( "Mobile Theme", "wptouch" ) . ' <a id="switch-link" onclick="wptouch_switch_confirmation();" href="javascript:return false;"></a>';
 }
 

@@ -89,7 +89,7 @@
 				<?php _e( "(If your comment requires moderation it will be added soon.)", "wptouch" ); ?>
 		</div>
 
-		<form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" id="commentform">
+		<form action="<?php echo get_option('url'); ?>/wp-comments-post.php" method="post" id="commentform">
 
 	<?php if ($user_ID) : ?>
 

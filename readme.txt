@@ -38,6 +38,12 @@ For more information visit http://www.bravenewcode.com/wptouch-pro
 
 == Changelog ==
 
+= Version 1.9.19.2 =
+* Fixed: Changed references of 'siteurl' and 'home' to url (siteurl & home are depreciated in bloginfo())
+* Fixed: Other minor code warnings
+* Changed: Enhanced comment-bubbles on posts
+* Other improved styling
+
 = Version 1.9.19.1 =
 * Fixed: Localization changes and updates, including missing translatable text
 * Added: French localization
@@ -45,7 +51,6 @@ For more information visit http://www.bravenewcode.com/wptouch-pro
 * Added: Filter for Follow Me plugin
 * Removed: Code which could cause a redeclare error if Super Cache is installed
 * Changed: Enqueue for admin js files
-
 
 = Version 1.9.19 =
 * Added: Compat for Share and Follow plugin

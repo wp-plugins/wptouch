@@ -24,46 +24,10 @@
 						echo '</p>';
 					?>	
 				</div>
-				<p><?php _e( "Here you'll find information on additional WPtouch features and requirements, including those activated with companion plugins.", "wptouch" ); ?></p>
+				<p><?php _e( "Here you'll find information on plugin compatibility.", "wptouch" ); ?></p>
 		</div>
 		
 		<div class="right-content">
-			
-			<h4><?php _e( "WordPress Pages &amp; Feature Support", "wptouch" ); ?></h4>
-			
-				<?php
-					//WordPress Links Page Support
-				$links_page_check = new WP_Query('pagename=links');
-				
-				if ( $links_page_check->post->ID ) {
-				echo '<div class="all-good">' . __( "All of your WP links will automatically show on your page called 'Links'.", "wptouch" ) . '</div>';
-				} else {
-				echo '<div class="too-bad">' . __( "If you create a page called 'Links', all your WP links would display in <em>WPtouch</em> style.", "wptouch" ) . '</div>'; } ?>
-				
-				<?php
-				//WordPress Photos Page with and without FlickRSS Support	 
-				$photos_page_check = new WP_Query('pagename=photos');
-				if ($photos_page_check->post->ID && function_exists('get_flickrRSS')) {
-				echo '<div class="all-good">' . __( 'All your <a href="http://eightface.com/wordpress/flickrrss/" target="_blank">FlickrRSS</a> images will automatically show on your page called \'Photos\'.', 'wptouch' ) . '</div>';
-				} elseif ($photos_page_check->post->ID && !function_exists('get_flickrRSS')) {
-				echo '<div class="sort-of">' . __( 'You have a page called \'Photos\', but don\'t have <a href="http://eightface.com/wordpress/flickrrss/" target="_blank">FlickrRSS</a> installed.', 'wptouch' ) . '</div>';
-				} elseif (!$photos_page_check->post->ID && function_exists('get_flickrRSS')) {
-				echo '<div class="sort-of">' . __( 'If you create a page called \'Photos\', all your <a href="http://eightface.com/wordpress/flickrrss/" target="_blank">FlickrRSS</a> photos would display in <em>WPtouch</em> style.', 'wptouch' ) . '</div>';
-				} else {
-				
-				echo '<div class="too-bad">' . __( 'If you create a page called \'Photos\', and install the <a href="http://eightface.com/wordpress/flickrrss/" target="_blank">FlickrRSS</a> plugin, your photos would display in <em>WPtouch</em> style.', 'wptouch' ) . '</div>';
-				}
-				?>
-				
-				<?php
-				//WordPress Archives Page Support with checks for Tags Support or Not
-				$archives_page_check = new WP_Query('pagename=archives');
-				if ($archives_page_check->post->ID) {
-				echo '<div class="all-good">' . __( 'Your tags and your monthly listings will automatically show on your page called \'Archives\'.', 'wptouch' ) . '</div>';
-				} else {		   
-				echo '<div class="too-bad">' . __( 'If you had a page called \'Archives\', your tags and monthly listings would display in <em>WPtouch</em> style.', 'wptouch' ) . '</div>';
-				}
-				?>
 				
 			<h4><?php _e( 'Known Plugin Support &amp; Conflicts', 'wptouch' ); ?></h4>
 				<div id="wptouch-plugin-content">

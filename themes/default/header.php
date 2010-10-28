@@ -38,7 +38,7 @@ include( dirname(__FILE__) . '/../core/core-header.php' );
  <!-- #start The Search Overlay -->
 	<div id="wptouch-search"> 
  		<div id="wptouch-search-inner">
-			<form method="get" id="searchform" action="<?php bloginfo('home'); ?>/">
+			<form method="get" id="searchform" action="<?php bloginfo('url'); ?>/">
 				<input type="text" value="<?php echo __( "Search...", "wptouch" ); ?>" onfocus="if (this.value == '<?php _e("Search", "wptouch"); ?>') {this.value = ''}" name="s" id="s" /> 
 				<input name="submit" type="hidden" tabindex="1" value="<?php _e("Search...", "wptouch"); ?>"  />
 			<a href="javascript:return false;" onclick="bnc_jquery_search_toggle(); $wptouch('input#s').blur();"><img class="head-close" src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/themes/core/core-images/head-close.png" alt="close" /></a>
@@ -116,7 +116,7 @@ include( dirname(__FILE__) . '/../core/core-header.php' );
 	<div id="headerbar-title">
 		<!-- This fetches the admin selection logo icon for the header, which is also the bookmark icon -->
 		<img id="logo-icon" src="<?php echo bnc_get_title_image(); ?>" alt="<?php $str = bnc_get_header_title(); echo stripslashes($str); ?>" />
-		<a href="<?php bloginfo('home'); ?>"><?php wptouch_core_body_sitetitle(); ?></a>
+		<a href="<?php bloginfo('url'); ?>"><?php wptouch_core_body_sitetitle(); ?></a>
 	</div>
 	<div id="headerbar-menu">
 		    <a href="javascript:return false;" onclick="bnc_jquery_menu_drop();"></a>

@@ -7,7 +7,7 @@
 	Author URI: http://www.bravenewcode.com
 	Text Domain: wptouch
 	Domain Path: /lang
-	Version: 1.9.19.1
+	Version: 1.9.19.2
  
 	# Thanks to ContentRobot and the iWPhone theme/plugin
 	# which the detection feature of the plugin was based on.
@@ -42,7 +42,7 @@
 load_plugin_textdomain( 'wptouch', false, dirname( plugin_basename( __FILE__ ) ) );
 
 global $bnc_wptouch_version;
-$bnc_wptouch_version = '1.9.19.1';
+$bnc_wptouch_version = '1.9.19.2';
 
 require_once( 'include/plugin.php' );
 require_once( 'include/compat.php' );
@@ -220,20 +220,20 @@ function wptouch_settings_link( $links, $file ) {
 // WPtouch Admin JavaScript
 function wptouch_admin_enqueue_files() {		
 	if ( isset( $_GET['page'] ) && $_GET['page'] == 'wptouch/wptouch.php' ) {
-		wp_enqueue_script( 'ajax-upload', compat_get_plugin_url( 'wptouch' ) . '/js/ajax_upload.js', array( 'jquery' ), $bnc_wptouch_version );
-		wp_enqueue_script( 'jquery-colorpicker', compat_get_plugin_url( 'wptouch' ) . '/js/colorpicker_1.4.js', array( 'ajax-upload' ), $bnc_wptouch_version );
-		wp_enqueue_script( 'jquery-fancybox', compat_get_plugin_url( 'wptouch' ) . '/js/fancybox_1.2.5.js', array( 'jquery-colorpicker' ), $bnc_wptouch_version );
-		wp_enqueue_script( 'wptouch-js', compat_get_plugin_url( 'wptouch' ) . '/js/admin_1.9.js', array( 'jquery-fancybox' ), $bnc_wptouch_version );
+		wp_enqueue_script( 'ajax-upload', compat_get_plugin_url( 'wptouch' ) . '/js/ajax_upload.js', array( 'jquery' ) );
+		wp_enqueue_script( 'jquery-colorpicker', compat_get_plugin_url( 'wptouch' ) . '/js/colorpicker_1.4.js', array( 'ajax-upload' ) );
+		wp_enqueue_script( 'jquery-fancybox', compat_get_plugin_url( 'wptouch' ) . '/js/fancybox_1.2.5.js', array( 'jquery-colorpicker' ) );
+		wp_enqueue_script( 'wptouch-js', compat_get_plugin_url( 'wptouch' ) . '/js/admin_1.9.js', array( 'jquery-fancybox' ) );
 	}
 }
 
 // WPtouch Admin StyleSheets
 function wptouch_admin_files() {		
 	if ( isset( $_GET['page'] ) && $_GET['page'] == 'wptouch/wptouch.php' ) {
-		echo "<script type='text/javascript' src='" . get_bloginfo( "home" ) . "/?wptouch-ajax=js'></script>\n";
-		echo "<link rel='stylesheet' type='text/css' href='" . compat_get_plugin_url( 'wptouch' ) . "/admin-css/wptouch-admin.css?ver=1917' />\n";
-		echo "<link rel='stylesheet' type='text/css' href='" . compat_get_plugin_url( 'wptouch' ) . "/admin-css/bnc-global.css?ver=1917' />\n";
-		echo "<link rel='stylesheet' type='text/css' href='" . compat_get_plugin_url( 'wptouch' ) . "/admin-css/bnc-compressed-global.css?ver=1917' />\n";
+		echo "<script type='text/javascript' src='" . get_bloginfo( "url" ) . "/?wptouch-ajax=js'></script>\n";
+		echo "<link rel='stylesheet' type='text/css' href='" . compat_get_plugin_url( 'wptouch' ) . "/admin-css/wptouch-admin.css' />\n";
+		echo "<link rel='stylesheet' type='text/css' href='" . compat_get_plugin_url( 'wptouch' ) . "/admin-css/bnc-global.css' />\n";
+		echo "<link rel='stylesheet' type='text/css' href='" . compat_get_plugin_url( 'wptouch' ) . "/admin-css/bnc-compressed-global.css' />\n";
 	}
 }
 
@@ -242,7 +242,7 @@ function wptouch_ajax_handler() {
 		switch( $_GET['wptouch-ajax'] ) {
 			case 'js':
 				header( 'Content-type: text/javascript' );
-				$url = rtrim( get_bloginfo('home'), '/' ) . '/';
+				$url = rtrim( get_bloginfo('url'), '/' ) . '/';
 				echo "var wptouchBlogUrl = '" . $url . "';";
 				break;		
 			case 'news':
@@ -498,7 +498,7 @@ class WPtouchPlugin {
 				setcookie($key, 'normal', 0);
 			}
 			
-			$redirect_location = get_bloginfo( 'siteurl' );
+			$redirect_location = get_bloginfo( 'url' );
 // fix by cybrstudd
 			if ( isset( $_GET['wptouch_redirect'] ) ) {
 				$protocol = ($_SERVER['HTTPS'] == 'on') ? 'https://' : 'http://';
@@ -602,7 +602,7 @@ function wptouch_switch() {
 	if ( bnc_is_iphone() && $wptouch_plugin->desired_view == 'normal' ) {
 		echo '<div id="wptouch-switch-link">';
 		_e( "Mobile Theme", "wptouch" ); 
-		echo "<a onclick=\"document.getElementById('switch-on').style.display='block';document.getElementById('switch-off').style.display='none';\" href=\"" . get_bloginfo('siteurl') . "/?theme_view=mobile&wptouch_redirect=" . $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"] . "\"><img id=\"switch-on\" src=\"" . compat_get_plugin_url( 'wptouch' ) . "/themes/core/core-images/on.jpg\" alt=\"on switch image\" class=\"wptouch-switch-image\" style=\"display:none\" /><img id=\"switch-off\" src=\"" . compat_get_plugin_url( 'wptouch' ) .  "/themes/core/core-images/off.jpg\" alt=\"off switch image\" class=\"wptouch-switch-image\" /></a>";
+		echo "<a onclick=\"document.getElementById('switch-on').style.display='block';document.getElementById('switch-off').style.display='none';\" href=\"" . get_bloginfo('url') . "/?theme_view=mobile&wptouch_redirect=" . $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"] . "\"><img id=\"switch-on\" src=\"" . compat_get_plugin_url( 'wptouch' ) . "/themes/core/core-images/on.jpg\" alt=\"on switch image\" class=\"wptouch-switch-image\" style=\"display:none\" /><img id=\"switch-off\" src=\"" . compat_get_plugin_url( 'wptouch' ) .  "/themes/core/core-images/off.jpg\" alt=\"off switch image\" class=\"wptouch-switch-image\" /></a>";
  		echo '</div>';
 	}
 }
