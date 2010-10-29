@@ -8,7 +8,7 @@ Tags: wptouch, iphone, ipod, theme, apple, mac, bravenewcode, ajax, mobile, andr
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=paypal%40bravenewcode%2ecom&item_name=WPtouch%20Beer%20Fund&no_shipping=0&no_note=1&tax=0&currency_code=CAD&lc=CA&bn=PP%2dDonationsBF&charset=UTF%2d8
 Requires at least: 2.8.6
 Tested up to: 3.0.1
-Stable tag: 1.9.19.3
+Stable tag: 1.9.19.4
 
 WPtouch: A simple, powerful and elegant mobile theme for your website.
 
@@ -41,6 +41,9 @@ For more information visit http://www.bravenewcode.com/wptouch-pro
 'WPtouch' and 'WPtouch Pro' are trademarks of BraveNewCode Inc.
 
 == Changelog ==
+
+= Version 1.9.19.4 =
+* More fixed for siteurl, url, home etc. for depreciation. Bare with us folks!
 
 = Version 1.9.19.3 =
 * Fixed: Bug with YouTube & Vimeo videos
