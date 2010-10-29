@@ -42,6 +42,10 @@ For more information visit http://www.bravenewcode.com/wptouch-pro
 
 == Changelog ==
 
+= Version 1.9.19.3 =
+* Fixed: Bug with YouTube & Vimeo videos
+* Fixed: Bug with posting comments on some installations
+
 = Version 1.9.19.2 =
 * Fixed: Changed references of 'siteurl' and 'home' to url (siteurl & home are depreciated in bloginfo())
 * Fixed: Other minor code warnings

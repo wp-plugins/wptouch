@@ -76,7 +76,7 @@
 		<?php if (get_option('comment_registration') && !$user_ID) : ?>
 			<center>
 			<h1>
-				<?php sprintf( __( 'You must %slogin</a> or %sregister</a> to comment', 'wptouch' ), '<a href="' . get_option('wpurl') . '/wp-login.php">', '<a href="' . get_option('wpurl') . '"/wp-register.php">') ; ?>
+				<?php sprintf( __( 'You must %slogin</a> or %sregister</a> to comment', 'wptouch' ), '<a href="' . bloginfo('wpurl') . '/wp-login.php">', '<a href="' . bloginfo('wpurl') . '"/wp-register.php">') ; ?>
 			</h1>
 			</center>
 
@@ -89,7 +89,7 @@
 				<?php _e( "(If your comment requires moderation it will be added soon.)", "wptouch" ); ?>
 		</div>
 
-		<form action="<?php echo get_option('url'); ?>/wp-comments-post.php" method="post" id="commentform">
+		<form action="<?php bloginfo('wpurl'); ?>/wp-comments-post.php" method="post" id="commentform">
 
 	<?php if ($user_ID) : ?>
 

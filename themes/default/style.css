@@ -13,12 +13,6 @@ Author URI: http://www.bravenewcode.com/
 
 /* @group Body and Theme-Wide Elements */
 
-.flash {
-	background: url(../core/core-images/flash.jpg) no-repeat center top;
-	width: 100%;
-	height: 175px;
-}
-
 body {
 	margin: 0;
 	padding: 0;
@@ -162,6 +156,13 @@ blockquote {
 	margin-left: auto;
 	display: block;
 	margin-right: auto;
+}
+
+.post object, .post embed, .post video, .post iframe {
+	width: 100% !important;
+	height: auto;
+	max-height: 280px;
+	margin-bottom: 10px;
 }
 
 /* @end */
