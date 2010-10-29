@@ -242,7 +242,7 @@ function wptouch_ajax_handler() {
 		switch( $_GET['wptouch-ajax'] ) {
 			case 'js':
 				header( 'Content-type: text/javascript' );
-				$url = rtrim( get_bloginfo('url'), '/' ) . '/';
+				$url = rtrim( get_bloginfo('wpurl'), '/' ) . '/';
 				echo "var wptouchBlogUrl = '" . $url . "';";
 				break;		
 			case 'news':
