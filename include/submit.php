@@ -2,6 +2,16 @@
 
 if ( isset( $_POST['submit'] ) ) {
 	// let's rock and roll
+	$nonce = $_POST['wptouch-nonce'];
+	if ( !wp_verify_nonce( $nonce, 'wptouch-nonce' ) ) {
+		_e( "Nonce Failure", "wptouch" );
+		die;
+	}
+
+	if ( !current_user_can( 'manage_options' ) ) {
+		_e( "Security failure.  Please log in again.", "wptouch" ); 
+		die;
+	}
 	
 	unset( $_POST['submit'] );
 	$a = array();

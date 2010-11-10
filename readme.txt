@@ -42,6 +42,9 @@ For more information visit http://www.bravenewcode.com/wptouch-pro
 
 == Changelog ==
 
+= Version 1.9.19.5 =
+* Added: security nonce and additional security check
+
 = Version 1.9.19.4 =
 * More fixed for siteurl, url, home etc. for depreciation. Bare with us folks!
 

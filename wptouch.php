@@ -924,6 +924,7 @@ function bnc_wp_touch_page() {
 		<?php require_once( 'html/page-area.php' ); ?>
 		<?php require_once( 'html/ads-stats-area.php' ); ?>
 		<?php require_once( 'html/plugin-compat-area.php' ); ?>		
+		<input type="hidden" name="wptouch-nonce" value="<?php echo wp_create_nonce( 'wptouch-nonce' ); ?>" />
 		<input type="submit" name="submit" value="<?php _e('Save Options', 'wptouch' ); ?>" id="bnc-button" class="button-primary" />
 	</form>
 	
