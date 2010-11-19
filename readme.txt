@@ -46,14 +46,14 @@ For more information visit http://www.bravenewcode.com/wptouch-pro
 * Added: security nonce and additional security check, thanks to Julio from http://Boiteaweb.fr for some testing
 
 = Version 1.9.19.4 =
-* More fixed for siteurl, url, home etc. for depreciation. Bare with us folks!
+* More fixes for siteurl, url, home etc. for depreciation
 
 = Version 1.9.19.3 =
 * Fixed: Bug with YouTube & Vimeo videos
 * Fixed: Bug with posting comments on some installations
 
 = Version 1.9.19.2 =
-* Fixed: Changed references of 'siteurl' and 'home' to url (siteurl & home are depreciated in bloginfo())
+* Fixed: Changed references of 'siteurl' and 'home' to url, siteurl & home are depreciated in bloginfo()
 * Fixed: Other minor code warnings
 * Changed: Enhanced comment-bubbles on posts for iPhone/iPod using CSS.
 * Other improved styling
