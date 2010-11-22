@@ -1,7 +1,4 @@
-/* @override 
-	http://beta.bravenewcode.com/wordpress/wp-content/plugins/wptouch/themes/default/style.css
-	http://www.bravenewcode.com/wordpress/wp-content/plugins/wptouch/themes/default/style.css
-*/
+/* @override http://www.bravenewcode.com/wordpress/wp-content/plugins/wptouch/themes/default/style.css */
 
 /*  
 Theme Name: WPtouch Mobile Plugin & Theme For WordPress
@@ -242,7 +239,7 @@ blockquote {
 	-webkit-box-shadow: #000 -3px 2px 3px;
 	text-align: right;
 	border-top: 1px solid #3e3e3e;
-	height: auto;
+	height: 19px;
 	overflow: hidden;
 }
 
@@ -692,6 +689,10 @@ blockquote {
 	margin-left: 5px;
 }
 
+#wptouch-login input#logsub {
+	display: none;
+}
+
 #wptouch-search {
 	position: absolute;
 	top: 0;
@@ -719,6 +720,10 @@ input#s {
 	margin-top: 6px;
 	border: 1px solid #1b1b1b;
 	font-weight: bold;
+}
+
+input#search-submit {
+	display: none;
 }
 
 img.head-close {
@@ -1033,13 +1038,15 @@ a.h2 {
 .post-author {
 	color: #555;
 	font-size: 9px;
-	line-height: 11px;
+	line-height: 13px;
 	position: relative;
 	font-weight: bold;
 	letter-spacing: 0;
 	text-align: left;
 	width: 72%;
 	float: left;
+	padding-top: 2px;
+	padding-bottom: 1px;
 }
 
 .post-author span.lead {

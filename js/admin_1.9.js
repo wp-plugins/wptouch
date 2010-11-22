@@ -42,4 +42,16 @@ jQuery(document).ready(function(jQuery) {
 		},
 		'dataType': 'html'
 	});
+	
+jQuery(function(){
+	var tabindex = 1;
+	jQuery('input,select').each(function() {
+		if (this.type != "hidden") {
+			var $input = jQuery(this);
+			$input.attr("tabindex", tabindex);
+			tabindex++;
+		}
+	});
+});
+
 });

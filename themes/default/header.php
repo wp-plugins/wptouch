@@ -25,10 +25,10 @@ include( dirname(__FILE__) . '/../core/core-header.php' );
 	<div id="wptouch-login">
 		<div id="wptouch-login-inner">
 			<form name="loginform" id="loginform" action="<?php bloginfo('wpurl'); ?>/wp-login.php" method="post">
-				<label><input type="text" name="log" id="log" onfocus="if (this.value == 'username') {this.value = ''}" tabindex="1" value="username" /></label>
-				<label><input type="password" name="pwd"  onfocus="if (this.value == 'password') {this.value = ''}" tabindex="2" id="pwd" value="password" /></label>
+				<label><input type="text" name="log" id="log" placeholder="<?php _e("Username", "wptouch"); ?>" tabindex="1" value="" /></label>
+				<label><input type="password" name="pwd" placeholder="<?php _e("Password", "wptouch"); ?>" tabindex="2" id="pwd" value="" /></label>
 				<input type="hidden" name="rememberme" value="forever" />
-				<input type="hidden" id="logsub" name="submit" value="<?php _e("Login", "wptouch"); ?>" tabindex="3" />
+				<input type="submit" id="logsub" name="submit" value="<?php _e("Login", "wptouch"); ?>" tabindex="3" />
 				<input type="hidden" name="redirect_to" value="<?php echo $_SERVER['REQUEST_URI']; ?>"/>
 			<a href="javascript:return false;" onclick="bnc_jquery_login_toggle();"><img class="head-close" src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/themes/core/core-images/head-close.png" alt="close" /></a>
 			</form>
@@ -39,8 +39,8 @@ include( dirname(__FILE__) . '/../core/core-header.php' );
 	<div id="wptouch-search"> 
  		<div id="wptouch-search-inner">
 			<form method="get" id="searchform" action="<?php bloginfo('url'); ?>/">
-				<input type="text" value="<?php echo __( "Search...", "wptouch" ); ?>" onfocus="if (this.value == '<?php _e("Search", "wptouch"); ?>') {this.value = ''}" name="s" id="s" /> 
-				<input name="submit" type="hidden" tabindex="1" value="<?php _e("Search...", "wptouch"); ?>"  />
+				<input type="text" placeholder="<?php echo __( "Search...", "wptouch" ); ?>" name="s" id="s" /> 
+				<input name="submit" type="submit" tabindex="1" id="search-submit" value="<?php _e("Search...", "wptouch"); ?>"  />
 			<a href="javascript:return false;" onclick="bnc_jquery_search_toggle(); $wptouch('input#s').blur();"><img class="head-close" src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/themes/core/core-images/head-close.png" alt="close" /></a>
 			</form>
 		</div>

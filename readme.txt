@@ -44,6 +44,10 @@ For more information visit http://www.bravenewcode.com/wptouch-pro
 
 = Version 1.9.19.5 =
 * Added: security nonce and additional security check, thanks to Julio from http://Boiteaweb.fr for some testing
+* Changed: Improved header forms
+* Changed: Fixed return on input in admin not saving
+* Changed: Other admin improvements
+* Changed: Minor styling improvements in theme
 
 = Version 1.9.19.4 =
 * More fixes for siteurl, url, home etc. for depreciation

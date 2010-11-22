@@ -7,7 +7,7 @@
 	</center>
 	
 	<p><?php $str = wptouch_custom_footer_msg(); echo stripslashes($str); ?></p>
-	<p><?php _e( 'Powered by', 'wptouch' ); ?> <a href="http://www.wordpress.org/"><?php _e( 'WordPress', 'wptouch' ); ?></a> <?php _e( '+', 'wptouch' ); ?> <a href="http://www.wptouch.com"><?php WPtouch(); ?></a></p>
+	<p><?php _e( 'Powered by', 'wptouch' ); ?> <a href="http://www.wordpress.org/"><?php _e( 'WordPress', 'wptouch' ); ?></a> <?php _e( '+', 'wptouch' ); ?> <a href="http://www.bravenewcode.com/products/wptouch-pro"><?php WPtouch(); ?></a></p>
 	<?php if ( !bnc_wptouch_is_exclusive() ) { wp_footer(); } ?>
 </div>
 

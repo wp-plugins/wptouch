@@ -47,7 +47,6 @@ $bnc_wptouch_version = '1.9.19.5';
 require_once( 'include/plugin.php' );
 require_once( 'include/compat.php' );
 
-
 define( 'WPTOUCH_PROWL_APPNAME', 'WPtouch');
 
 //The WPtouch Settings Defaults
