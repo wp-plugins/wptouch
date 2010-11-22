@@ -1,14 +1,14 @@
 === Plugin Name ===
 Contributors: BraveNewCode, duanestorey, dalemugford
 Plugin Name: WPtouch
-Plugin URI: http://www.wptouch.com
+Plugin URI: http://www.bravenewcode.com/wptouch
 Author: BraveNewCode
 Author URI: http://www.bravenewcode.com/
 Tags: wptouch, iphone, ipod, theme, apple, mac, bravenewcode, ajax, mobile, android, blackberry, smartphone, 
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=paypal%40bravenewcode%2ecom&item_name=WPtouch%20Beer%20Fund&no_shipping=0&no_note=1&tax=0&currency_code=CAD&lc=CA&bn=PP%2dDonationsBF&charset=UTF%2d8
 Requires at least: 2.8.6
 Tested up to: 3.0.1
-Stable tag: 1.9.19.4
+Stable tag: 1.9.19.5
 
 WPtouch: A simple, powerful and elegant mobile theme for your website.
 
@@ -43,11 +43,11 @@ For more information visit http://www.bravenewcode.com/wptouch-pro
 == Changelog ==
 
 = Version 1.9.19.5 =
-* Added: security nonce and additional security check, thanks to Julio from http://Boiteaweb.fr for some testing
-* Changed: Improved header forms
+* Added: IMPORTANT: Security nonce and additional security check (thanks to Julio from http://Boiteaweb.fr for testing)
+* Changed: Improved header forms in theme
+* Changed: Minor styling improvements in theme
 * Changed: Fixed return on input in admin not saving
 * Changed: Other admin improvements
-* Changed: Minor styling improvements in theme
 
 = Version 1.9.19.4 =
 * More fixes for siteurl, url, home etc. for depreciation
