@@ -437,11 +437,14 @@ blockquote {
 /* @group WordTwit Menu */
 
 #wptouch-wordtwit {
-	position: relative;
+	position: absolute;
 	border-top: 1px solid #3e3e3e;
 	background-color: #222;
 	top: 20px;
 	text-align: left;
+	z-index: 2;
+	left: 0;
+	right: 0;
 }
 
 #wptouch-wordtwit #twitter-style-bar {
@@ -755,6 +758,7 @@ img.head-close {
 	border: 1px solid #b1b1b1;
 	-webkit-border-radius: 8px;
 	position: relative;
+	z-index: 0;
 }
 
 .big {

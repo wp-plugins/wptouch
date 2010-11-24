@@ -43,9 +43,12 @@ For more information visit http://www.bravenewcode.com/wptouch-pro
 == Changelog ==
 
 = Version 1.9.19.6 =
+
+* Added: Option to disable comments on posts completely in WPtouch
 * Fixed: Issues with WordTwit and GigPress drop-downs
 * FIxed: An issue with French text appearing in non-french installs
 * Fixed: An issue with whitespace in admin files
+* Fixed: Auto-capitalization of drop-menu items (should help localization efforts)
 * Updated: Screenshots
 
 = Version 1.9.19.5 =
@@ -642,12 +645,10 @@ Not bloody likely! Unless of course you're getting slammed with all sorts of tra
 == Screenshots ==
 
 1. Posts on the front page
-2. Post on the front page (w/ Post Thumbnails)
+2. Post on the front page ( bottom )
 3. Drop down menu navigation
-4. Push Messaging
-5. WordTwit plugin Twitter integration
-6. Single post page post meta, options bar, comments
-7. Ajax comment form
-8. Switch link in the footer
-9. Archives page appearance (auto-generated if you have a page called 'Archives')
-10. Sample regular page
+4. WordTwit plugin Twitter integration
+5. Push Messaging
+6. Search
+7. Single post page post meta, options bar, comments
+8. Sample regular page

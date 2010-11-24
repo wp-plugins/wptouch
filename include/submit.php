@@ -159,6 +159,12 @@ if ( isset( $_POST['submit'] ) ) {
 		$a['enable-regular-default'] = 0;
 	}
 	
+	if ( isset($_POST['enable-show-comments']) ) {
+		$a['enable-show-comments'] = 1;
+	} else {
+		$a['enable-show-comments'] = 0;
+	}		
+	
 	if ( isset($_POST['enable-show-tweets']) ) {
 		$a['enable-show-tweets'] = 1;
 	} else {

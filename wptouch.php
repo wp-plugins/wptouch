@@ -91,6 +91,7 @@ $wptouch_defaults = array(
 	'statistics' => '',
 	'adsense-channel' => '',
 	'custom-user-agents' => array(),
+	'enable-show-comments' => true,
 	'enable-show-tweets' => false,
 	'enable-gigpress-button' => false,
 	'enable-flat-icon' => false,
@@ -631,6 +632,11 @@ function bnc_wptouch_is_exclusive() {
 function bnc_can_show_tweets() {
 	$settings = bnc_wptouch_get_settings();
 	return $settings['enable-show-tweets'];
+}
+
+function bnc_can_show_comments() {
+	$settings = bnc_wptouch_get_settings();
+	return $settings['enable-show-comments'];
 }
 
 function bnc_wp_touch_get_menu_pages() {

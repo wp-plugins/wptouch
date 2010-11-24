@@ -12,7 +12,7 @@
 			<?php if ( is_home() && is_sticky( $post_ID ) && $wptouch_settings['post-cal-thumb'] != 'nothing-shown' ) echo '<div class="sticky-icon"></div>'; ?>
 
  		<?php if (!function_exists('dsq_comments_template') && !function_exists('id_comments_template')) { ?>
-				<?php if (wptouch_get_comment_count() && !is_archive() && !is_search()) { ?>
+				<?php if (wptouch_get_comment_count() && !is_archive() && !is_search() && bnc_can_show_comments() ) { ?>
 					<div class="<?php if ($wptouch_settings['post-cal-thumb'] == 'nothing-shown') { echo 'nothing-shown ';} ?>comment-bubble<?php if ( wptouch_get_comment_count() > 99 ) echo '-big'; ?>">
 						<?php comments_number('0','1','%'); ?>
 					</div>

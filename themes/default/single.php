@@ -8,7 +8,7 @@
 			        <div class="single-post-meta-top"><?php echo get_the_time('M jS, Y @ h:i a') ?> &rsaquo; <?php the_author() ?><br />
 
 		<!-- Let's check for DISQUS... we need to skip to a different div if it's installed and active -->		
-		<?php if ('open' == $post->comment_status) : ?>
+		<?php if ( 'open' == $post->comment_status && bnc_can_show_comments() ) : ?>
 			<?php if (function_exists('dsq_comments_template')) { ?>
 		 		<a href="#dsq-add-new-comment">&darr; <?php _e( "Skip to comments", "wptouch" ); ?></a>
 			<?php } elseif (function_exists('id_comments_template')) { ?>
@@ -66,7 +66,7 @@ bloginfo('name'); ?>- <?php the_title_attribute();?>&body=<?php _e( "Check out t
 	</div>
 
 <!-- Let's rock the comments -->
-
+<?php if ( bnc_can_show_comments() ) : ?>
 	<?php comments_template(); ?>
 <script type="text/javascript">
 jQuery(document).ready( function() {
@@ -86,6 +86,7 @@ var formoptions = {
 $wptouch('#commentform').ajaxForm(formoptions);
 }); //End onReady
 </script>
+<?php endif; ?>
 	<?php endwhile; else : ?>
 
 <!-- Dynamic test for what page this is. A little redundant, but so what? -->

@@ -70,14 +70,17 @@
 					</div><br /><br />
 			</li>	
 			<li>
-				<input class="checkbox" type="checkbox" name="enable-gravatars" <?php if (isset($wptouch_settings['enable-gravatars']) && $wptouch_settings['enable-gravatars'] == 1) echo('checked'); ?> />
-				<label class="label" for="enable-gravatars"> <?php _e( "Enable gravatars in comments", "wptouch" ); ?></label>
-			</li>
-			
+			<input class="checkbox" type="checkbox" name="enable-show-comments" <?php if (isset($wptouch_settings['enable-show-comments']) && $wptouch_settings['enable-show-comments'] == 1) echo('checked'); ?> />
+			<label class="label" for="enable-show-comments"> <?php _e( "Enable comments on posts", "wptouch" ); ?> <a href="#page-coms-info" class="fancylink">?</a></label>
+				<div id="page-coms-info" style="display:none">
+					<h2><?php _e( "More Info", "wptouch" ); ?></h2>
+					<p><?php _e( "If unchecked, this will hide all commenting features on posts and blog listings.", "wptouch" ); ?></p>
+				</div>
+			</li>			
 			<?php //If we actually have pages, show this option 
 			if ( count( $pages ) ) { ?>
 			<li>
-			<input class="checkbox" type="checkbox" name="enable-page-coms" <?php if (isset($wptouch_settings['enable-page-coms']) && $wptouch_settings['enable-page-coms'] == 1) echo('checked'); ?> />
+			<input class="checkbox" type="checkbox" name="enable-page-coms" <?php if ( isset($wptouch_settings['enable-page-coms']) && $wptouch_settings['enable-page-coms'] == 1 ) echo('checked'); ?> />
 			<label class="label" for="enable-page-coms"> <?php _e( "Enable comments on pages", "wptouch" ); ?> <a href="#page-coms-info" class="fancylink">?</a></label>
 				<div id="page-coms-info" style="display:none">
 					<h2><?php _e( "More Info", "wptouch" ); ?></h2>
@@ -85,7 +88,12 @@
 				</div>
 			</li>
 			<?php } ?>
-			<li><br />
+			<li>
+				<input class="checkbox" type="checkbox" <?php if ( isset($wptouch_settings['enable-show-comments']) && $wptouch_settings['enable-show-comments'] == 0 ) echo ('disabled="true"');?> name="enable-gravatars" <?php if (isset($wptouch_settings['enable-gravatars']) && $wptouch_settings['enable-gravatars'] == 1) echo('checked'); ?> />
+				<label class="label" for="enable-gravatars"> <?php _e( "Enable gravatars in comments", "wptouch" ); ?></label>
+			</li>
+			<li>			
+			<br />
 				<input class="checkbox" type="checkbox" name="enable-regular-default" <?php if (isset($wptouch_settings['enable-regular-default']) && $wptouch_settings['enable-regular-default'] == 1) echo('checked'); ?> />
 				<label class="label" for="enable-regular-default"><?php echo sprintf(__( "1%sst%s visit mobile users will see desktop theme", "wptouch" ), '<sup>','</sup>'); ?> <a href="#reg-info" class="fancylink">?</a></label>
 				<div id="reg-info" style="display:none">
