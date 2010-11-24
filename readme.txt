@@ -19,7 +19,7 @@ WPtouch automatically transforms your WordPress blog into an iPhone application-
 *Now Available: WPtouch Pro!*
 Totally re-written top to bottom, with a slew of new features like more style, color and branding customizations, themes, 10 languages, more advertising options, Web-App mode, and more!
 
-iPad support coming in 2.1.
+iPad support coming in WPtouch Pro 2.1.
 
 For more information visit http://www.bravenewcode.com/wptouch-pro
 
@@ -34,7 +34,7 @@ The theme also includes the ability for visitors to switch between *WPtouch* vie
 *Now Available: WPtouch Pro!*
 Totally re-written top to bottom, with a slew of new features like more style, color and branding customizations, themes, 10 languages, more advertising options, Web-App mode, and more!
 
-iPad support coming in 2.1.
+iPad support coming in WPtouch Pro 2.1.
 
 For more information visit http://www.bravenewcode.com/wptouch-pro
 
@@ -42,7 +42,7 @@ For more information visit http://www.bravenewcode.com/wptouch-pro
 
 == Changelog ==
 
-= Version 1.9.19.6 =
+= Version 1.9.20 =
 
 * Added: Option to disable comments on posts completely in WPtouch
 * Fixed: Issues with WordTwit and GigPress drop-downs
