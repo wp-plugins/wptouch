@@ -42,6 +42,12 @@ For more information visit http://www.bravenewcode.com/wptouch-pro
 
 == Changelog ==
 
+= Version 1.9.19.6 =
+* Fixed: Issues with WordTwit and GigPress drop-downs
+* FIxed: An issue with French text appearing in non-french installs
+* Fixed: An issue with whitespace in admin files
+* Updated: Screenshots
+
 = Version 1.9.19.5 =
 * Added: IMPORTANT: Security nonce and additional security check (thanks to Julio from http://Boiteaweb.fr for testing)
 * Changed: Improved header forms in theme

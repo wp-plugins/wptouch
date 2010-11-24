@@ -239,8 +239,9 @@ blockquote {
 	-webkit-box-shadow: #000 -3px 2px 3px;
 	text-align: right;
 	border-top: 1px solid #3e3e3e;
-	height: 19px;
-	overflow: hidden;
+	height: 20px;
+	top: 0;
+	z-index: 1;
 }
 
 #drop-fade a.top {
@@ -251,23 +252,17 @@ blockquote {
 	text-shadow: #000000 0px -1px 1px;
 	display: block;
 	float: right;
-	padding: 6px 2px 2px 0;
 	font: bold 11px "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-
-#drop-fade #loginopen {
-	background: url(../core/core-images/menu-sprite.png) no-repeat 0 -31px;
-	padding-left: 16px;
-}
-
-#drop-fade #accountopen {
-	padding-left: 18px;
-	background: url(../core/core-images/menu-sprite.png) no-repeat 0 -14px;
+	height: 18px;
+	padding: 6px 2px 2px 0;
 }
 
 #drop-fade #prowlopen {
 	padding-left: 18px;
-	background: url(../core/core-images/menu-sprite.png) no-repeat 2px -57px;
+	background: url(../core/core-images/menu-sprite.png) no-repeat 2px -60px;
+	padding-top: 3px;
+	padding-bottom: 1px;
+	margin-top: 3px;
 }
 
 #drop-fade #wordtwitopen {
@@ -277,12 +272,20 @@ blockquote {
 
 #drop-fade #searchopen {
 	padding-left: 18px;
-	background: url(../core/core-images/menu-sprite.png) no-repeat 2px -91px;
+	background: url(../core/core-images/menu-sprite.png) no-repeat 2px -94px;
+	height: 15px;
+	overflow: hidden;
+	padding-bottom: 0;
+	padding-top: 3px;
+	margin-top: 3px;
 }
 
 #drop-fade #gigpressopen {
 	padding-left: 18px;
-	background: url(../core/core-images/menu-sprite.png) no-repeat 2px -106px;
+	background: url(../core/core-images/menu-sprite.png) no-repeat 2px -109px;
+	padding-top: 3px;
+	padding-bottom: 1px;
+	margin-top: 3px;
 }
 
 /* @end */
@@ -316,7 +319,6 @@ blockquote {
 .dropper ul#head-pages li, .dropper ul#head-cats li, .dropper ul#head-tags li li, .dropper ul#head-account li, ul#tweets li {
 	border-bottom: 1px solid #1d1d1d;
 	background: url(../core/core-images/arrow.png) no-repeat right center;
-	text-transform: capitalize;
 	border-top: 1px solid #363636;
 	padding: 0;
 	text-align: left;
@@ -533,6 +535,11 @@ blockquote {
 	text-align: left;
 	font-size: 11px;
 	border-top: 1px solid #3e3e3e;
+	background-color: #222;
+	position: absolute;
+	top: 20px;
+	right: 0;
+	left: 0;
 }
 
 #prowl-message #push-style-bar {
