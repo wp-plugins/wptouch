@@ -25,9 +25,9 @@
 				<?php if (bnc_excerpt_enabled()) { ?>
 				<script type="text/javascript">
 					$wptouch(document).ready(function(){
-						$wptouch("a#arrow-<?php the_ID(); ?>").click(function(event) {
+						$wptouch("a#arrow-<?php the_ID(); ?>").bind( touchStartOrClick, function(e) {
 							$wptouch(this).toggleClass("post-arrow-down");
-							$wptouch('#entry-<?php the_ID(); ?>').fadeToggle(500);
+							$wptouch('#entry-<?php the_ID(); ?>').wptouchFadeToggle(500);
 						});	
 					 });					
 				</script>
@@ -42,9 +42,9 @@
 				<?php if (bnc_excerpt_enabled()) { ?>
 				<script type="text/javascript">
 					$wptouch(document).ready(function(){
-						$wptouch("a#arrow-<?php the_ID(); ?>").click(function(event) {
+						$wptouch("a#arrow-<?php the_ID(); ?>").bind( touchStartOrClick, function(e) {
 							$wptouch(this).toggleClass("post-arrow-down");
-							$wptouch('#entry-<?php the_ID(); ?>').fadeToggle(500);
+							$wptouch('#entry-<?php the_ID(); ?>').wptouchFadeToggle(500);
 						});	
 					 });					
 				</script>

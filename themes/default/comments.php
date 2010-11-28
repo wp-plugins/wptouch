@@ -12,6 +12,7 @@
 <!-- You can start editing below here... but make a backup first!  -->
 
 <div id="comment_wrapper">
+<?php if ($comments) : ?>
 <?php 
 	echo '<h3 onclick="bnc_showhide_coms_toggle();" id="com-head"><img id="com-arrow" src="' . compat_get_plugin_url( 'wptouch' ) . '/themes/core/core-images/com_arrow.png" alt="arrow" />';
 	$comment_string1 = __( 'No Responses Yet', 'wptouch' );
@@ -20,6 +21,7 @@
 	comments_number( $comment_string1, $comment_string2, $comment_string3 );
 	echo '</h3>';
 ?>
+<?php endif; ?>
 
 	<ol class="commentlist" id="commentlist">
 		<?php if ($comments) : ?>

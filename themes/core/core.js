@@ -2,15 +2,13 @@
  * WPtouch 1.9.x -The WPtouch Core JS File
  */
 
-/////-- Let's setup a unique namspace in jQuery -- /////
+/////-- Let's setup our namspace in jQuery -- /////
 $wptouch = jQuery.noConflict();
 
 if ( (navigator.platform == 'iPhone' || navigator.platform == 'iPod') && typeof orientation != 'undefined' ) { 
 	var touchStartOrClick = 'touchstart'; 
-	var touchEndOrClick = 'touchend'; 
 } else {
 	var touchStartOrClick = 'click'; 
-	var touchEndOrClick = 'click'; 
 };
 
 /////-- Get out of frames! -- /////
@@ -29,7 +27,7 @@ if (document.cookie && document.cookie.indexOf("wptouch_switch_cookie") > -1) {
 	setTimeout('switch_delayer()', 1250); 
 } else {
 // ask first
-	var answer = confirm("Switch to regular view? \n \n You can switch back again in the footer.");
+	var answer = confirm("Switch to regular theme?");
 	if (answer){
 	$wptouch("a#switch-link").toggleClass("offimg");
 	setTimeout('switch_delayer()', 1250); 
@@ -39,19 +37,10 @@ if (document.cookie && document.cookie.indexOf("wptouch_switch_cookie") > -1) {
 
 /////-- Prowl Results -- /////
 if ( $wptouch('#prowl-success').length ) {
-	setTimeout(function() { $wptouch('#prowl-success').fadeOut(380); }, 5250);
+	setTimeout(function() { $wptouch('#prowl-success').fadeOut(350); }, 5250);
 }
 if ( $wptouch('#prowl-fail').length ) {
-	setTimeout(function() { $wptouch('#prowl-fail').fadeOut(380); }, 5250);
-}
-
-/////// -- Single Post Page -- /////
-function wptouch_toggle_twitter() {
-	$wptouch('#twitter-box').wptouchFadeToggle(380);
-}
-
-function wptouch_toggle_bookmarks() {
-	$wptouch('#bookmark-box').wptouchFadeToggle(380);
+	setTimeout(function() { $wptouch('#prowl-fail').fadeOut(350); }, 5250);
 }
 
 /////// -- jQuery Tabs -- ///////
@@ -67,7 +56,7 @@ $wptouch(function() {
 
 /////-- Ajax comments -- /////
 function bnc_showhide_coms_toggle() {
-	$wptouch('#commentlist').wptouchFadeToggle(380);
+	$wptouch('#commentlist').wptouchFadeToggle(350);
 	$wptouch("img#com-arrow").toggleClass("com-arrow-down");
 	$wptouch("h3#com-head").toggleClass("comhead-open");
 }
@@ -90,39 +79,46 @@ function doWPtouchReady() {
 	
 /////-- Menu Toggle -- /////
 	$wptouch('#headerbar-menu a').bind( touchStartOrClick, function( e ){
-		$wptouch('#wptouch-menu').wptouchFadeToggle(380);
+		$wptouch('#wptouch-menu').wptouchFadeToggle(350);
 		$wptouch("#headerbar-menu a").toggleClass("open");
-		return false;
 	});
 
 /////-- Search Toggle -- /////
-	$wptouch('a#searchopen').bind( touchStartOrClick, function( e ){	
-		$wptouch('#wptouch-login').wptouchFadeToggle(380);
+	$wptouch('a#searchopen, #wptouch-search-inner a').bind( touchStartOrClick, function( e ){	
+		$wptouch('#wptouch-search').wptouchFadeToggle(350);
 	});
 	
 /////-- Prowl Toggle -- /////
 	$wptouch('a#prowlopen').bind( touchStartOrClick, function( e ){	
-		$wptouch('#prowl-message').wptouchFadeToggle(380);
+		$wptouch('#prowl-message').wptouchFadeToggle(350);
 	});
 	
 /////-- WordTwit Toggle -- /////
 	$wptouch('a#wordtwitopen').bind( touchStartOrClick, function( e ){	
-		$wptouch('#wptouch-wordtwit').wptouchFadeToggle(380);
+		$wptouch('#wptouch-wordtwit').wptouchFadeToggle(350);
 	});
 
 /////-- Gigpress Toggle -- /////
 	$wptouch('a#gigpressopen').bind( touchStartOrClick, function( e ){	
-		$wptouch('#wptouch-gigpress').wptouchFadeToggle(380);
+		$wptouch('#wptouch-gigpress').wptouchFadeToggle(350);
 	});
 
+/////-- Login Toggle -- /////
+	$wptouch('a#loginopen, #wptouch-login-inner a').bind( touchStartOrClick, function( e ){	
+		$wptouch('#wptouch-login').wptouchFadeToggle(350);
+	});
+	
+/////// -- Single Post Page Bookmark Toggle -- /////
+$wptouch( 'a#obook' ).bind( touchStartOrClick, function() {
+	$wptouch('#bookmark-box').wptouchFadeToggle(350);
+});
+
 /////-- Try to make imgs and captions nicer in posts -- /////
-	if ( $wptouch( '.singlentry' ).length ) {
 		$wptouch( '.singlentry img, .singlentry .wp-caption' ).each( function() {
 			if ( $wptouch( this ).width() <= 250 ) {
 				$wptouch( this ).addClass( 'aligncenter' );
 			}
 		});
-	}
 	
 /////-- Filter FollowMe Plugin -- /////
 	if ( $wptouch( '#FollowMeTabLeftSm' ).length ) {

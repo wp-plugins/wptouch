@@ -42,6 +42,12 @@ For more information visit http://www.bravenewcode.com/wptouch-pro
 
 == Changelog ==
 
+= Version 1.9.21 =
+* Added: touchstart JS for supported devices (speeds up interface responsiveness)
+* Changed: More style adjustments in a few places, better Android compatibility
+* Fixed: An issue which could output site urls on single posts
+* Using CSS-generated comment bubbles for supported devices for crispness and clarity
+
 = Version 1.9.20 =
 * Added: Option to disable comments on posts completely in WPtouch
 * Fixed: Issues with WordTwit and GigPress drop-downs
