@@ -119,13 +119,13 @@ include( dirname(__FILE__) . '/../core/core-header.php' );
 		<a href="<?php bloginfo('url'); ?>"><?php wptouch_core_body_sitetitle(); ?></a>
 	</div>
 	<div id="headerbar-menu">
-		    <a href="javascript:return false;" onclick="bnc_jquery_menu_drop();"></a>
+		    <a href="/"></a>
 	</div>
 </div>
 
 <div id="drop-fade">
 	<?php if (bnc_is_search_enabled()) { ?>			    
-    	<a id="searchopen" class="top" href="javascript:return false;" onclick="bnc_jquery_search_toggle(); $wptouch('input#s').focus();"><?php _e( 'Search', 'wptouch' ); ?></a>
+    	<a id="searchopen" class="top" href="/"><?php _e( 'Search', 'wptouch' ); ?></a>
 	<?php } ?>
 
 	<?php if (bnc_is_prowl_direct_message_enabled()) { ?>			    

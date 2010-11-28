@@ -76,7 +76,7 @@
 		<?php if (get_option('comment_registration') && !$user_ID) : ?>
 			<center>
 			<h1>
-				<?php sprintf( __( 'You must %slogin</a> or %sregister</a> to comment', 'wptouch' ), '<a href="' . bloginfo('wpurl') . '/wp-login.php">', '<a href="' . bloginfo('wpurl') . '"/wp-register.php">') ; ?>
+				<?php sprintf( __( 'You must %slogin</a> or %sregister</a> to comment', 'wptouch' ), '<a href="' . get_bloginfo('wpurl') . '/wp-login.php">', '<a href="' . get_bloginfo('wpurl') . '"/wp-register.php">') ; ?>
 			</h1>
 			</center>
 

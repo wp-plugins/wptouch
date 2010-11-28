@@ -5,11 +5,19 @@
 /////-- Let's setup a unique namspace in jQuery -- /////
 $wptouch = jQuery.noConflict();
 
+if ( (navigator.platform == 'iPhone' || navigator.platform == 'iPod') && typeof orientation != 'undefined' ) { 
+	var touchStartOrClick = 'touchstart'; 
+	var touchEndOrClick = 'touchend'; 
+} else {
+	var touchStartOrClick = 'click'; 
+	var touchEndOrClick = 'click'; 
+};
+
 /////-- Get out of frames! -- /////
 if (top.location!= self.location) {top.location = self.location.href}
 
 /////// -- New function fadeToggle() -- /////
-$wptouch.fn.fadeToggle = function(speed, easing, callback) { 
+$wptouch.fn.wptouchFadeToggle = function(speed, easing, callback) { 
 	return this.animate({opacity: 'toggle'}, speed, easing, callback); 
 };
 
@@ -37,41 +45,29 @@ if ( $wptouch('#prowl-fail').length ) {
 	setTimeout(function() { $wptouch('#prowl-fail').fadeOut(380); }, 5250);
 }
 
-/////-- Menu Toggles, Effects -- /////
-function bnc_jquery_menu_drop() {
-	$wptouch('#wptouch-menu').fadeToggle(380);
-	$wptouch("#headerbar-menu a").toggleClass("open");
-}
-
-function bnc_jquery_login_toggle() { $wptouch('#wptouch-login').fadeToggle(380);}
-function bnc_jquery_search_toggle() { $wptouch('#wptouch-search').fadeToggle(380);}
-function bnc_jquery_gigpress_toggle() { $wptouch('#wptouch-gigpress').fadeToggle(380);}
-function bnc_jquery_prowl_open() { $wptouch('#prowl-message').fadeToggle(380);}
-function bnc_jquery_wordtwit_open() { $wptouch('#wptouch-wordtwit').fadeToggle(380);}
-
 /////// -- Single Post Page -- /////
 function wptouch_toggle_twitter() {
-	$wptouch('#twitter-box').fadeToggle(380);
+	$wptouch('#twitter-box').wptouchFadeToggle(380);
 }
 
 function wptouch_toggle_bookmarks() {
-	$wptouch('#bookmark-box').fadeToggle(380);
+	$wptouch('#bookmark-box').wptouchFadeToggle(380);
 }
 
 /////// -- jQuery Tabs -- ///////
-$wptouch(function () {
+$wptouch(function() {
     var tabContainers = $wptouch('#menu-head > ul');   
-    $wptouch('#tabnav a').click(function () {
+    $wptouch('#tabnav a').bind(touchStartOrClick, function () {
         tabContainers.hide().filter(this.hash).show();
     $wptouch('#tabnav a').removeClass('selected');
     $wptouch(this).addClass('selected');
         return false;
-    }).filter(':first').click();
+    }).filter(':first').trigger(touchStartOrClick);
 });
 
 /////-- Ajax comments -- /////
 function bnc_showhide_coms_toggle() {
-	$wptouch('#commentlist').fadeToggle(380);
+	$wptouch('#commentlist').wptouchFadeToggle(380);
 	$wptouch("img#com-arrow").toggleClass("com-arrow-down");
 	$wptouch("h3#com-head").toggleClass("comhead-open");
 }
@@ -91,6 +87,33 @@ function doWPtouchReady() {
 			$wptouch.timerId = null;
 		} 
 	}, 83);
+	
+/////-- Menu Toggle -- /////
+	$wptouch('#headerbar-menu a').bind( touchStartOrClick, function( e ){
+		$wptouch('#wptouch-menu').wptouchFadeToggle(380);
+		$wptouch("#headerbar-menu a").toggleClass("open");
+		return false;
+	});
+
+/////-- Search Toggle -- /////
+	$wptouch('a#searchopen').bind( touchStartOrClick, function( e ){	
+		$wptouch('#wptouch-login').wptouchFadeToggle(380);
+	});
+	
+/////-- Prowl Toggle -- /////
+	$wptouch('a#prowlopen').bind( touchStartOrClick, function( e ){	
+		$wptouch('#prowl-message').wptouchFadeToggle(380);
+	});
+	
+/////-- WordTwit Toggle -- /////
+	$wptouch('a#wordtwitopen').bind( touchStartOrClick, function( e ){	
+		$wptouch('#wptouch-wordtwit').wptouchFadeToggle(380);
+	});
+
+/////-- Gigpress Toggle -- /////
+	$wptouch('a#gigpressopen').bind( touchStartOrClick, function( e ){	
+		$wptouch('#wptouch-gigpress').wptouchFadeToggle(380);
+	});
 
 /////-- Try to make imgs and captions nicer in posts -- /////
 	if ( $wptouch( '.singlentry' ).length ) {
