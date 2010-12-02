@@ -28,9 +28,9 @@ if (document.cookie && document.cookie.indexOf("wptouch_switch_cookie") > -1) {
 } else {
 // ask first
 	var answer = confirm("Switch to regular theme?");
-	if (answer){
-	$wptouch("a#switch-link").toggleClass("offimg");
-	setTimeout('switch_delayer()', 1250); 
+		if (answer){
+			$wptouch("a#switch-link").toggleClass("offimg");
+			setTimeout('switch_delayer()', 1250); 
 		}
 	}
 }

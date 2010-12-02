@@ -47,6 +47,8 @@ For more information visit http://www.bravenewcode.com/wptouch-pro
 * Changed: More style adjustments in a few places, better Android compatibility
 * Fixed: An issue which could output site urls on single posts
 * Using CSS-generated comment bubbles for supported devices for crispness and clarity
+* Fixed: Incorrect detection of BlackBerry Torch
+* Fixed: An issue that prevent login from the header
 
 = Version 1.9.20 =
 * Added: Option to disable comments on posts completely in WPtouch

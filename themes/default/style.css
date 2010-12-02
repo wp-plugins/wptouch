@@ -700,7 +700,14 @@ blockquote {
 }
 
 #wptouch-login input#logsub {
-	display: none;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+	float: left;
+	overflow: hidden;
+	display: inline;
+	margin: 0 0 0 -22px;
+	padding: 0;
 }
 
 #wptouch-search {
@@ -895,12 +902,11 @@ a.h2 {
 .archive-top {
 	margin: -11px -11px 7px;
 	-webkit-border-top-right-radius: 8px;
-	padding: 0;
 }
 
 .archive-top-right .post-arrow, .archive-top-right .post-arrow-down {
 	margin-right: 5px;
-	margin-top: 3px;
+	margin-top: 28px;
 }
 
 .archive-top-left.month-01, #arc-top.month-02, #arc-top.month-03, #arc-top.month-04, #arc-top.month-05, #arc-top.month-06, #arc-top.month-07, #arc-top.month-08, #arc-top.month-09, #arc-top.month-10, #arc-top.month-11, #arc-top.month-12 {
@@ -1376,7 +1382,7 @@ ul#post-options li a#obook {
 /* @group Pages */
 
 .page h2 {
-	font-size: 20px;
+	font-size: 22px;
 	letter-spacing: -1px;
 	text-align: left;
 	line-height: 22px;

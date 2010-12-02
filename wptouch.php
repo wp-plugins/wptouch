@@ -268,7 +268,7 @@ function bnc_wptouch_get_user_agents() {
 		"blackberry9530",	 // Storm
 		"blackberry9520",	 // Storm	v2
 		"blackberry9550",	 // Storm v2
-		"blackberry9800",	 // Torch
+		"blackberry 9800",	 // Torch
 		"webOS",				 // Palm Pre Experimental
 		"incognito", 			 // Other iPhone browser
 		"webmate", 			 // Other iPhone browser
