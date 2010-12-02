@@ -270,4 +270,3 @@ do_action( 'wptouch_load_locale' );
 
 global $wptouch_settings;
 $wptouch_settings = bnc_wptouch_get_settings();
-?>

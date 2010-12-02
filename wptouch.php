@@ -948,4 +948,3 @@ add_action( 'admin_init', 'wptouch_admin_enqueue_files' );
 add_action( 'admin_head', 'wptouch_admin_files' );	
 add_action('admin_menu', 'bnc_options_menu'); 
 add_filter( 'plugin_action_links', 'wptouch_settings_link', 9, 2 );
-?>

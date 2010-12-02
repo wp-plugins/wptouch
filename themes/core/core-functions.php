@@ -246,4 +246,3 @@ remove_filter('the_content', 'Add_Like_Button');
 //Sharebar Plugin
 remove_filter('the_content', 'sharebar_auto');
 remove_action('wp_head', 'sharebar_header');
-?>
