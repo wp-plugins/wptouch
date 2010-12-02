@@ -8,7 +8,7 @@ Tags: wptouch, iphone, ipod, theme, apple, mac, bravenewcode, ajax, mobile, andr
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=paypal%40bravenewcode%2ecom&item_name=WPtouch%20Beer%20Fund&no_shipping=0&no_note=1&tax=0&currency_code=CAD&lc=CA&bn=PP%2dDonationsBF&charset=UTF%2d8
 Requires at least: 2.8.6
 Tested up to: 3.0.1
-Stable tag: 1.9.20
+Stable tag: 1.9.21
 
 WPtouch: A simple, powerful and elegant mobile theme for your website.
 
@@ -43,12 +43,12 @@ For more information visit http://www.bravenewcode.com/wptouch-pro
 == Changelog ==
 
 = Version 1.9.21 =
-* Added: touchstart JS for supported devices (speeds up interface responsiveness)
+* Added: touchstart JavaScript for supported devices (speeds up interface responsiveness)
 * Changed: More style adjustments in a few places, better Android compatibility
 * Fixed: An issue which could output site urls on single posts
 * Using CSS-generated comment bubbles for supported devices for crispness and clarity
 * Fixed: Incorrect detection of BlackBerry Torch
-* Fixed: An issue that prevent login from the header
+* Fixed: An issue that prevented login from the header
 
 = Version 1.9.20 =
 * Added: Option to disable comments on posts completely in WPtouch
