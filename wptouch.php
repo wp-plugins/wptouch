@@ -490,12 +490,14 @@ class WPtouchPlugin {
 
 	function bnc_filter_iphone() {	
 		$key = 'wptouch_switch_cookie';
+		$time = time()+60*60*24*365;
+		$url_path = str_replace( array( 'http://' . $_SERVER['SERVER_NAME'] . '','https://' . $_SERVER['SERVER_NAME'] . '' ), '', get_bloginfo( 'url' ) . '/' );
 		
 	   if (isset($_GET['theme_view'])) {
 	  		if ($_GET['theme_view'] == 'mobile') {
-				setcookie($key, 'mobile', 0); 
+				setcookie($key, 'mobile', $time, $url_path); 
 			} elseif ($_GET['theme_view'] == 'normal') {
-				setcookie($key, 'normal', 0);
+				setcookie($key, 'normal', $time, $url_path);
 			}
 			
 			$redirect_location = get_bloginfo( 'url' );

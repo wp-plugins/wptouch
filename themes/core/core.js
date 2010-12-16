@@ -77,7 +77,7 @@ function doWPtouchReady() {
 		} 
 	}, 83);
 	
-$wptouch( 'a#switch-link' ).bind( touchEndOrClick, function(){
+$wptouch( 'a#switch-link' ).bind( touchStartOrClick, function(){
 	wptouch_switch_confirmation();
 	return false;
 });
