@@ -77,6 +77,11 @@ function doWPtouchReady() {
 		} 
 	}, 83);
 	
+$wptouch( 'a#switch-link' ).bind( touchEndOrClick, function(){
+	wptouch_switch_confirmation();
+	return false;
+});
+	
 /////-- Menu Toggle -- /////
 	$wptouch('#headerbar-menu a').bind( touchStartOrClick, function( e ){
 		$wptouch('#wptouch-menu').wptouchFadeToggle(350);

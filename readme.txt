@@ -42,6 +42,10 @@ For more information visit http://www.bravenewcode.com/wptouch-pro
 
 == Changelog ==
 
+= Version 1.9.21.1 =
+* Fixed: Bug with re-direct link
+* Fixed: Bug with login on iOS 4.2 devices
+
 = Version 1.9.21 =
 * Added: touchstart JavaScript for supported devices (speeds up interface responsiveness)
 * Changed: More style adjustments in a few places, better Android compatibility
