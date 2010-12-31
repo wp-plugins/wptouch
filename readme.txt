@@ -42,6 +42,11 @@ For more information visit http://www.bravenewcode.com/wptouch-pro
 
 == Changelog ==
 
+= Version 1.9.21.2 =
+* Experimental LiveFyre commenting support
+* Added additional CSS to remove unneeded plugin boxes on single posts
+* More tweaks for failing switch link in some scenarios
+
 = Version 1.9.21.1 =
 * Fixed: Bug with footer switch link (ampersand issue)
 * Fixed: Bug with footer switch link (cookie issue)

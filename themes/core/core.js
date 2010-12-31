@@ -21,16 +21,18 @@ $wptouch.fn.wptouchFadeToggle = function(speed, easing, callback) {
 
 /////-- Switch Magic -- /////
 function wptouch_switch_confirmation() {
+var switchURL = "http://" + document.domain + "/?theme_view=normal&wptouch_redirect=" + location.href;
+//alert(switchURL);
 if (document.cookie && document.cookie.indexOf("wptouch_switch_cookie") > -1) {
 // just switch
 	$wptouch("a#switch-link").toggleClass("offimg");
-	setTimeout('switch_delayer()', 1250); 
+	setTimeout( window.location = switchURL, 1250); 
 } else {
 // ask first
 	var answer = confirm("Switch to regular theme?");
 		if (answer){
 			$wptouch("a#switch-link").toggleClass("offimg");
-			setTimeout('switch_delayer()', 1250); 
+			setTimeout( window.location = switchURL, 1250); 
 		}
 	}
 }

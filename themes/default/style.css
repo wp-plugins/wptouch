@@ -2154,6 +2154,20 @@ p.subscribe-to-comments input#subscribe {
 
 /* @group Compatibility */
 
+#livefyre {
+	margin-left: 9px;
+	margin-right: 9px;
+	width: 100%;
+	background-color: #fff;
+	border: 1px solid #CCC;
+	-webkit-border-radius: 8px;
+	padding: 10px;
+}
+
+#wwsgd-optin, #outbrain_container_0_stripBox, #outbrain_container_0_stars, .linkedin_share_container, .dd_post_share, .tweetmeme_button, #dd_ajax_float  {
+	display: none;
+}
+
 /* @group Dynamic Contact Form */
 
 #dwp-contact-button, .dwpcontact-page {
