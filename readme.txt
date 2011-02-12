@@ -6,7 +6,7 @@ Author: BraveNewCode
 Author URI: http://www.bravenewcode.com/
 Tags: wptouch, iphone, ipod, theme, apple, mac, bravenewcode, ajax, mobile, android, blackberry, smartphone, 
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=paypal%40bravenewcode%2ecom&item_name=WPtouch%20Beer%20Fund&no_shipping=0&no_note=1&tax=0&currency_code=CAD&lc=CA&bn=PP%2dDonationsBF&charset=UTF%2d8
-Requires at least: 2.8.6
+Requires at least: 2.9
 Tested up to: 3.0.5
 Stable tag: 1.9.21.1
 
@@ -25,9 +25,9 @@ For more information visit http://www.bravenewcode.com/wptouch-pro
 
 == Description ==
 
-WPtouch automatically transforms your WordPress blog into an iPhone application-style theme, complete with ajax loading articles and effects, when viewed from an iPhone, iPod touch, Android, Opera Mini, Palm Pre, Samsung touch and BlackBerry Storm/Torch mobile devices.
+WPtouch automatically transforms your WordPress blog into an iPhone application-style theme, complete with ajax loading articles and effects, when viewed from iPhone, iPod touch, Android, Palm Pre, Samsung touch and BlackBerry Storm/Torch mobile devices.
 
-The admin panel allows you to customize many aspects of its appearance, and deliver a fast, user-friendly and stylish version of your site to iPhone, iPod touch, Android, Palm Pre, Samsung touch and BlackBerry Storm/Torch visitors, without modifying *a single bit of code* (or affecting) your regular desktop theme.
+The admin panel allows you to customize many aspects of its appearance, and deliver a fast, user-friendly and stylish version of your site to touch mobile visitors, without modifying *a single bit of code* (or affecting) your regular desktop theme.
 
 The theme also includes the ability for visitors to switch between *WPtouch* view and your site's regular theme.
 
@@ -633,10 +633,10 @@ For more information visit http://www.bravenewcode.com/wptouch-pro
 
 == Installation ==
 
-= 2.7 and Older =
-Sorry, we do not officially support installations on WordPress 2.7 or older. You can use WPtouch versions 1.9.3.4 or previous on these installations, however.
+= 2.8 and Older =
+Sorry, we do not officially support installations on WordPress 2.8 or older. You can use WPtouch versions 1.9.3.4 or previous on these installations, however.
 
-= 2.8, 2.9+ =
+= 2.9, 3.0+ =
 You can install *WPtouch* directly from the WordPress admin! Visit the *Plugins/Add New* page and search for 'WPtouch'. Click to install.
 
 Once installed and activated visit the WPtouch admin page (*Settings/WPtouch*) to customize your WPtouch installation's appearance.
