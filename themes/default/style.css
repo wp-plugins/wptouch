@@ -1212,8 +1212,8 @@ ul#post-options li {
 
 ul#post-options li a {
 	display: inline-block;
-	width: 38px;
-	padding: 20px 6px 16px;
+	width: 36px;
+	padding: 20px 5px 16px;
 	margin: 2px 0 0;
 }
 
@@ -1237,6 +1237,10 @@ ul#post-options li a#omail {
 
 ul#post-options li a#otweet {
 	background: url(../core/core-images/post-options.png) no-repeat center -82px;
+}
+
+ul#post-options li a#facebook {
+	background: url(../core/core-images/post-options.png) no-repeat center -293px;
 }
 
 ul#post-options li a#obook {

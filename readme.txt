@@ -50,6 +50,8 @@ For more information visit http://www.bravenewcode.com/wptouch-pro
 * More tweaks for failing switch link in some scenarios
 * Changed: More robust category exclusion
 * Fix for images and emoticons in comments
+* Fix for share on Twitter Link
+* Added share on Facebook Link
 * Updates for admin panel
 
 = Version 1.9.21.1 =
