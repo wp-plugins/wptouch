@@ -135,4 +135,4 @@
   </div><!--textinputwrap div-->
 </div><!-- comment_wrapper -->
 
-<?php endif; // if you delete this the sky will fall on your head ?>
+<?php endif; // if you delete this the sky will fall on your head

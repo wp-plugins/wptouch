@@ -1,3 +1,5 @@
+/* @override http://beta.bravenewcode.com/wordpress/wp-content/plugins/wptouch/admin-css/wptouch-admin.css */
+
 /* WPtouch 1.9 Admin CSS */
 
 /* @group head-area.php */
@@ -10,7 +12,7 @@
 }
 
 #wptouch-head #wptouch-head-colour {
-	background-color: #b7c8d3;
+	background-color: #bcced9;
 	padding: 10px;
 	margin: -10px -10px -20px;
 	-webkit-border-top-right-radius: 5px;
@@ -129,11 +131,12 @@
 #wptouch-news-support li {
 	border-bottom: 1px solid #e6e6e6;
 	margin: 0;
-	padding: 3px 0;
-	list-style-type: circle;
+	padding: 3px 0 3px 12px;
+	list-style-type: disc;
 	list-style-position: inside;
 	color: #c1cfd1;
 	width: 80%;
+	text-indent: -12px;
 }
 
 #wptouch-news-support li:last-child {

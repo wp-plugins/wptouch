@@ -100,4 +100,5 @@ $wptouch('#commentform').ajaxForm(formoptions);
 	
 	<!-- Do the footer things -->
 	
-<?php global $is_ajax; if (!$is_ajax) get_footer(); ?>
+<?php global $is_ajax; if (!$is_ajax) 
+get_footer();

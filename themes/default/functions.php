@@ -11,7 +11,7 @@ function exclude_category($query) {
 }
 	$cats = implode( ",",  $new_cats );
 	
-	if ( $query->is_home ) {
+if ( $query->is_home || $query->is_search || $query->is_archive || $query->is_feed ) {
 	$query->set('cat', $cats);
 	}
 return $query;

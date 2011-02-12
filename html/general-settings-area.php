@@ -38,6 +38,9 @@
 							<option value="auto"<?php if ( $wptouch_settings['wptouch-language'] == "auto" ) echo " selected"; ?>><?php _e( "Automatically detected", "wptouch" ); ?></option>
 							<option value="fr_FR"<?php if ( $wptouch_settings['wptouch-language'] == "fr_FR" ) echo " selected"; ?>>Français</option>
 							<option value="es_ES"<?php if ( $wptouch_settings['wptouch-language'] == "es_ES" ) echo " selected"; ?>>Español</option>
+							<option value="eu_EU"<?php if ( $wptouch_settings['wptouch-language'] == "eu_EU" ) echo " selected"; ?>>Basque</option>
+							<!-- <option value="de_DE"<?php if ( $wptouch_settings['wptouch-language'] == "de_DE" ) echo " selected"; ?>>Deutsch</option> -->
+							<option value="ja_JP"<?php if ( $wptouch_settings['wptouch-language'] == "ja_JP" ) echo " selected"; ?>>Japanese</option>
 							
 							<?php $custom_lang_files = bnc_get_wptouch_custom_lang_files(); ?>
 							<?php if ( count( $custom_lang_files ) ) { ?>

@@ -1642,7 +1642,7 @@ ol.commentlist li:last-child {
 	-webkit-border-bottom-right-radius: 8px;
 }
 
-ol.commentlist li img {
+ol.commentlist li img.avatar {
 	float: left;
 	border-right: 1px solid #f9f9f9;
 	margin-right: 5px;

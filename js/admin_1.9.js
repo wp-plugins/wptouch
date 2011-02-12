@@ -11,7 +11,7 @@ function wptouchSpinnerDone() {
 	}	
 }
 
-jQuery(document).ready(function(jQuery) {
+jQuery( document ).ready( function() {
 
 	setTimeout(function() { jQuery('#wptouchupdated').fadeIn(250); }, 750);
 	setTimeout(function() { jQuery( '#wptouchupdated' ).fadeOut(200); }, 2750);

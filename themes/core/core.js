@@ -21,9 +21,10 @@ $wptouch.fn.wptouchFadeToggle = function(speed, easing, callback) {
 
 /////-- Switch Magic -- /////
 function wptouch_switch_confirmation() {
-var switchURL = "http://" + document.domain + "/?theme_view=normal&wptouch_redirect=" + location.href;
+var switchURL = location.protocol + '//' + document.domain + "/?theme_view=normal&wptouch_redirect=" + location.host + location.pathname;
 //alert(switchURL);
-if (document.cookie && document.cookie.indexOf("wptouch_switch_cookie") > -1) {
+
+if ( document.cookie && document.cookie.indexOf( "wptouch_switch_cookie" ) > -1 ) {
 // just switch
 	$wptouch("a#switch-link").toggleClass("offimg");
 	setTimeout( window.location = switchURL, 1250); 

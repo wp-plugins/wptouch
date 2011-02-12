@@ -7,7 +7,7 @@ Author URI: http://www.bravenewcode.com/
 Tags: wptouch, iphone, ipod, theme, apple, mac, bravenewcode, ajax, mobile, android, blackberry, smartphone, 
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=paypal%40bravenewcode%2ecom&item_name=WPtouch%20Beer%20Fund&no_shipping=0&no_note=1&tax=0&currency_code=CAD&lc=CA&bn=PP%2dDonationsBF&charset=UTF%2d8
 Requires at least: 2.8.6
-Tested up to: 3.0.1
+Tested up to: 3.0.5
 Stable tag: 1.9.21.1
 
 WPtouch: A simple, powerful and elegant mobile theme for your website.
@@ -42,10 +42,15 @@ For more information visit http://www.bravenewcode.com/wptouch-pro
 
 == Changelog ==
 
-= Version 1.9.21.2 =
+= Version 1.9.22 =
+* Added Basque translation courtesy of Ander Erguin
+* Added Japanese translation courtesy of Kenji Yamaguchi
 * Experimental LiveFyre commenting support
-* Added additional CSS to remove unneeded plugin boxes on single posts
+* Added additional CSS to remove unneeded 3rd party plugin boxes on single posts
 * More tweaks for failing switch link in some scenarios
+* Changed: More robust category exclusion
+* Fix for images and emoticons in comments
+* Updates for admin panel
 
 = Version 1.9.21.1 =
 * Fixed: Bug with footer switch link (ampersand issue)

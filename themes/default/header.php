@@ -209,5 +209,5 @@ include( dirname(__FILE__) . '/../core/core-header.php' );
 	 </div>
  <?php } ?>
 </div>
-<!-- #start the wptouch plugin use check -->
-<?php wptouch_core_header_check_use(); ?>
+<?php 
+wptouch_core_header_check_use();
