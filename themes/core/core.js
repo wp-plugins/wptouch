@@ -20,20 +20,19 @@ $wptouch.fn.wptouchFadeToggle = function(speed, easing, callback) {
 };
 
 /////-- Switch Magic -- /////
-function wptouch_switch_confirmation() {
-var switchURL = location.protocol + '//' + document.domain + "/?theme_view=normal&wptouch_redirect=" + location.host + location.pathname;
-//alert(switchURL);
-
-if ( document.cookie && document.cookie.indexOf( "wptouch_switch_cookie" ) > -1 ) {
-// just switch
-	$wptouch("a#switch-link").toggleClass("offimg");
-	setTimeout( window.location = switchURL, 1250); 
-} else {
-// ask first
-	var answer = confirm("Switch to regular theme?");
-		if (answer){
+function wptouch_switch_confirmation( e ) {
+	if ( document.cookie && document.cookie.indexOf("wptouch_switch_toggle" ) > -1) {
+	// just switch
+		$wptouch("a#switch-link").toggleClass("offimg");
+		setTimeout('switch_delayer()', 1250); 
+	} else {
+	// ask first
+	    if ( confirm( "Switch to regular view? \n \n You can switch back again in the footer." ) ) {
 			$wptouch("a#switch-link").toggleClass("offimg");
-			setTimeout( window.location = switchURL, 1250); 
+			setTimeout('switch_delayer()', 1350); 
+		} else {
+	        e.preventDefault();
+	        e.stopImmediatePropagation();
 		}
 	}
 }
@@ -79,11 +78,6 @@ function doWPtouchReady() {
 			$wptouch.timerId = null;
 		} 
 	}, 83);
-	
-$wptouch( 'a#switch-link' ).bind( touchStartOrClick, function(){
-	wptouch_switch_confirmation();
-	return false;
-});
 	
 /////-- Menu Toggle -- /////
 	$wptouch('#headerbar-menu a').bind( touchStartOrClick, function( e ){

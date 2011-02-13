@@ -489,23 +489,20 @@ class WPtouchPlugin {
 	}
 
 	function bnc_filter_iphone() {	
-		$key = 'wptouch_switch_cookie';
+		$key = 'wptouch_switch_toggle';
 		$time = time()+60*60*24*365;
-//		$url_path = str_replace( array( 'http://' . $_SERVER['SERVER_NAME'] . '','https://' . $_SERVER['SERVER_NAME'] . '' ), '', get_bloginfo( 'url' ) . '/' );
 		$url_path = '/';
 
-	   if (isset($_GET['theme_view'])) {
-	  		if ($_GET['theme_view'] == 'mobile') {
+	   if (isset($_GET['wptouch_view'])) {
+	  		if ($_GET['wptouch_view'] == 'mobile') {
 				setcookie($key, 'mobile', $time, $url_path); 
-			} elseif ($_GET['theme_view'] == 'normal') {
+			} elseif ($_GET['wptouch_view'] == 'normal') {
 				setcookie($key, 'normal', $time, $url_path);
 			}
 			
-			$redirect_location = get_bloginfo( 'url' );
-// fix by cybrstudd
 			if ( isset( $_GET['wptouch_redirect'] ) ) {
 				$protocol = ($_SERVER['HTTPS'] == 'on') ? 'https://' : 'http://';
-				$redirect_location = $protocol . $_GET['wptouch_redirect'];
+				$redirect_location = $protocol . $_SERVER['HTTP_HOST'] . $_GET['wptouch_redirect'];
 			}
 			
 			header( 'Location: ' . $redirect_location );
@@ -605,7 +602,7 @@ function wptouch_switch() {
 	if ( bnc_is_iphone() && $wptouch_plugin->desired_view == 'normal' ) {
 		echo '<div id="wptouch-switch-link">';
 		_e( "Mobile Theme", "wptouch" ); 
-		echo "<a onclick=\"document.getElementById('switch-on').style.display='block';document.getElementById('switch-off').style.display='none';\" href=\"" . get_bloginfo('url') . "/?theme_view=mobile&wptouch_redirect=" . $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"] . "\"><img id=\"switch-on\" src=\"" . compat_get_plugin_url( 'wptouch' ) . "/themes/core/core-images/on.jpg\" alt=\"on switch image\" class=\"wptouch-switch-image\" style=\"display:none\" /><img id=\"switch-off\" src=\"" . compat_get_plugin_url( 'wptouch' ) .  "/themes/core/core-images/off.jpg\" alt=\"off switch image\" class=\"wptouch-switch-image\" /></a>";
+		echo "<a onclick=\"document.getElementById('switch-on').style.display='block';document.getElementById('switch-off').style.display='none';\" href=\"" . get_bloginfo('url') . "/?wptouch_view=mobile&wptouch_redirect=" . $_SERVER['REQUEST_URI'] . "\"><img id=\"switch-on\" src=\"" . compat_get_plugin_url( 'wptouch' ) . "/themes/core/core-images/on.jpg\" alt=\"on switch image\" class=\"wptouch-switch-image\" style=\"display:none\" /><img id=\"switch-off\" src=\"" . compat_get_plugin_url( 'wptouch' ) .  "/themes/core/core-images/off.jpg\" alt=\"off switch image\" class=\"wptouch-switch-image\" /></a>";
  		echo '</div>';
 	}
 }
