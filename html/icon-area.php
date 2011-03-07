@@ -12,6 +12,9 @@ var button = jQuery('#upload-icon'), interval;
 		jQuery("#upload_progress").hide();
 		jQuery('#upload_response').hide().html(response).fadeIn(); 
 		jQuery('#icon-pool-area').load('<?php echo admin_url( 'options-general.php?page=wptouch/wptouch.php' ); ?> #wptouchicons');	
+		},
+		data: {
+			_ajax_nonce: '<?php echo wp_create_nonce('wptouch-upload'); ?>'
 		}
 	});
 });

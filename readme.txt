@@ -42,7 +42,12 @@ For more information visit http://www.bravenewcode.com/wptouch-pro
 
 == Changelog ==
 
+= Version 1.9.22.2 =
+
+* Fixed security issue with AJAX upload
+
 = Version 1.9.22.1 =
+
 * Fixed additional switch link issue found after 1.9.22 (now handles www.domain.com and domain.com, along with http:// and https://)
 
 = Version 1.9.22 =

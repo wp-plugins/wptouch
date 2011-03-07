@@ -3,6 +3,7 @@
 	$directory_list = array();
 	
 	if ( current_user_can( 'upload_files' ) ) {
+		check_ajax_referer( 'wptouch-upload' );
 		$upload_dir = compat_get_upload_dir() . "/wptouch/custom-icons" . ltrim( $dir[1], '/' );
 		$dir_paths = explode( '/', $upload_dir );
 		$dir = '';
