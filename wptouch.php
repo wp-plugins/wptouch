@@ -325,7 +325,7 @@ class WPtouchPlugin {
 
 		// Don't change the template directory when in the admin panel
 		add_action( 'plugins_loaded', array(&$this, 'detectAppleMobile') );
-		if ( strpos( $_SERVER['REQUEST_URI'], '/wp-admin' ) === false ) {
+		if ( !is_admin() ) {
 			add_filter( 'stylesheet', array(&$this, 'get_stylesheet') );
 			add_filter( 'theme_root', array(&$this, 'theme_root') );
 			add_filter( 'theme_root_uri', array(&$this, 'theme_root_uri') );

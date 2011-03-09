@@ -48,6 +48,8 @@ For more information visit http://www.bravenewcode.com/wptouch-pro
 * Fixed issue with excluded categories
 * Added: Ability to exclude tags by ID from blog (experimental)
 * Added: Now filter the excluded categories and tags from the header listings
+* Changed: Now removing the admin bar when logged in and looking at WPtouch (will still show for regular theme)
+* Translators: please re-submit translations with updated strings (excluded tags area)
 
 = Version 1.9.22.1 =
 
