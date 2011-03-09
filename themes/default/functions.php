@@ -2,7 +2,7 @@
 include( dirname(__FILE__) . '/../core/core-functions.php' );
 
 //---------------- Custom Exclude Cats Function ----------------//
-function exclude_category($query) {
+function wptouch_exclude_category($query) {
 	$cats = wptouch_excluded_cats();
 	$icats = explode( ",", $cats );
 	$new_cats = array();
@@ -11,13 +11,66 @@ function exclude_category($query) {
 }
 	$cats = implode( ",",  $new_cats );
 	
-if ( $query->is_home || $query->is_search || $query->is_archive || $query->is_feed ) {
+if ( $query->is_home || $query->is_front_page || $query->is_search || $query->is_archive || $query->is_feed ) {
 	$query->set('cat', $cats);
 	}
 return $query;
 }
 
-add_filter('pre_get_posts', 'exclude_category');
+function wptouch_excluded_cat_IDs() {
+	$cats = wptouch_excluded_cats();
+	$icats = explode( ",", $cats );
+	$new_cats = array();
+	foreach( $icats as $icat ) {
+		$new_cats[] = "-" . $icat;
+	}
+	$cats = implode( ",",  $new_cats );
+	return $cats;
+}
+
+
+function wptouch_excluded_cat_list() {
+	$cats = wptouch_excluded_cats();
+	$icats = explode( ",", $cats );
+	$new_cats = array();
+	foreach( $icats as $icat ) {
+		$new_cats[] = $icat;
+	}
+	$cats = implode( ",",  $new_cats );
+	return $cats;
+}
+
+add_filter('pre_get_posts', 'wptouch_exclude_category');
+
+//---------------- Custom Exclude Tags Function ----------------//
+function wptouch_exclude_tags($query) {
+	$tags = wptouch_excluded_tags();
+	$itags = explode( ",", $tags );
+	$new_tags = array();
+	foreach( $itags as $tag ) {
+		$new_tags[] = $tag;
+}
+	$tags = implode( ",",  $new_tags );
+
+if ( $query->is_home || $query->is_front_page || $query->is_search || $query->is_archive || $query->is_feed ) {
+	$query->set('tag__not_in', $tags);
+	}
+return $query;
+}
+
+function wptouch_excluded_tag_IDs() {
+	$tags = wptouch_excluded_tags();
+	$itags = explode( ",", $tags );
+	$new_tags = array();
+	foreach( $itags as $tag ) {
+		$new_tags[] = $tag;
+	}
+	
+	$tags = implode( ",",  $new_tags );
+	return $tags;
+}
+
+add_filter('pre_get_posts', 'wptouch_exclude_tags');
 
 
 //---------------- Custom Excerpts Function ----------------//

@@ -189,7 +189,11 @@ if ( isset( $_POST['submit'] ) ) {
 	if ( isset($_POST['excluded-cat-ids']) ) {
 		$a['excluded-cat-ids'] = $_POST['excluded-cat-ids'];
 	}
-	
+
+	if ( isset($_POST['excluded-tag-ids']) ) {
+		$a['excluded-tag-ids'] = $_POST['excluded-tag-ids'];
+	}
+		
 	if ( isset($_POST['adsense-id']) ) {
 		$a['adsense-id'] = trim( $_POST['adsense-id'] );
 	}

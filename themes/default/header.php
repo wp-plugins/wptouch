@@ -77,7 +77,7 @@ include( dirname(__FILE__) . '/../core/core-header.php' );
 	
 	    	    <?php if (bnc_is_tags_button_enabled()) { ?>
 					<ul id="head-tags">
-						<li><?php wp_tag_cloud('smallest=13&largest=13&unit=px&number=20&order=asc&format=list'); ?></li>
+						<li><?php wp_tag_cloud('smallest=13&largest=13&unit=px&number=20&order=asc&format=list&exclude=' . wptouch_excluded_tag_IDs() .''); ?></li>
 					</ul>
 				<?php } ?>
 

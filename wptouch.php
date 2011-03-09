@@ -7,7 +7,7 @@
 	Author URI: http://www.bravenewcode.com
 	Text Domain: wptouch
 	Domain Path: /lang
-	Version: 1.9.22.1
+	Version: 1.9.23
  
 	# Thanks to ContentRobot and the iWPhone theme/plugin
 	# which the detection feature of the plugin was based on.
@@ -42,7 +42,7 @@
 load_plugin_textdomain( 'wptouch', false, dirname( plugin_basename( __FILE__ ) ) );
 
 global $bnc_wptouch_version;
-$bnc_wptouch_version = '1.9.22.1';
+$bnc_wptouch_version = '1.9.23';
 
 require_once( 'include/plugin.php' );
 require_once( 'include/compat.php' );
@@ -83,6 +83,7 @@ $wptouch_defaults = array(
 	'style-icon' => 'glossy-icon',
 	'enable-regular-default' => false,
 	'excluded-cat-ids' => '',
+	'excluded-tag-ids' => '',
 	'custom-footer-msg' => 'All content Copyright '. get_bloginfo('name') . '',
 	'home-page' => 0,
 	'enable-exclusive' => false,
@@ -682,6 +683,11 @@ function bnc_get_title_image() {
 function wptouch_excluded_cats() {
 	$settings = bnc_wptouch_get_settings();
 	return stripslashes($settings['excluded-cat-ids']);
+}
+
+function wptouch_excluded_tags() {
+	$settings = bnc_wptouch_get_settings();
+	return stripslashes($settings['excluded-tag-ids']);
 }
 
 function wptouch_custom_footer_msg() {
