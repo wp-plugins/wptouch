@@ -7,7 +7,7 @@
 	Author URI: http://www.bravenewcode.com
 	Text Domain: wptouch
 	Domain Path: /lang
-	Version: 1.9.23
+	Version: 1.9.23.1
  
 	# Thanks to ContentRobot and the iWPhone theme/plugin
 	# which the detection feature of the plugin was based on.
@@ -42,7 +42,7 @@
 load_plugin_textdomain( 'wptouch', false, dirname( plugin_basename( __FILE__ ) ) );
 
 global $bnc_wptouch_version;
-$bnc_wptouch_version = '1.9.23';
+$bnc_wptouch_version = '1.9.23.1';
 
 require_once( 'include/plugin.php' );
 require_once( 'include/compat.php' );
@@ -213,7 +213,7 @@ function wp_touch_get_comment_count() {
 function wptouch_settings_link( $links, $file ) {
  	if( $file == 'wptouch/wptouch.php' && function_exists( "admin_url" ) ) {
 		$settings_link = '<a href="' . admin_url( 'options-general.php?page=wptouch/wptouch.php' ) . '">' . __('Settings') . '</a>';
-		array_unshift( $links, $settings_link ); // before the other links
+		array_push( $links, $settings_link ); // after other links
 	}
 	return $links;
 }

@@ -99,8 +99,11 @@ function bnc_get_ordered_cat_list() {
 
 	global $table_prefix;
 	global $wpdb;
-	$excluded_cats = wptouch_excluded_cat_list();
-
+	if ( wptouch_excluded_cat_list() ) {
+		$excluded_cats = wptouch_excluded_cat_list();
+	} else {
+		$excluded_cats = '0';	
+	}
 	$sql = "SELECT * FROM " . $table_prefix . "term_taxonomy INNER JOIN " . $table_prefix . "terms ON " . $table_prefix . "term_taxonomy.term_id = " . $table_prefix . "terms.term_id WHERE taxonomy = 'category' AND $wpdb->term_taxonomy.term_id NOT IN ($excluded_cats) AND count > 0 ORDER BY count DESC";	
 	$results = $wpdb->get_results( $sql );
 	foreach ($results as $result) {
@@ -108,7 +111,6 @@ function bnc_get_ordered_cat_list() {
 	}
 
 }
-
   
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // WPtouch Core Body Functions
