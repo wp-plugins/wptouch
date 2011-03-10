@@ -42,6 +42,10 @@ For more information visit http://www.bravenewcode.com/wptouch-pro
 
 == Changelog ==
 
+= Version 1.9.24 =
+
+* Updated: wptouch.pot language file
+
 = Version 1.9.23 =
 
 * Fixed: IMPORTANT security issue with AJAX icon upload

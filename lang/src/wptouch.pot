@@ -1,46 +1,46 @@
-# Translation of the WordPress plugin WPtouch 1.9.19 by Dale Mugford & Duane Storey (BraveNewCode Inc.).
-# Copyright (C) 2010 Dale Mugford & Duane Storey (BraveNewCode Inc.)
+# Translation of the WordPress plugin WPtouch 1.9.23.1 by Dale Mugford & Duane Storey (BraveNewCode Inc.).
+# Copyright (C) 2011 Dale Mugford & Duane Storey (BraveNewCode Inc.)
 # This file is distributed under the same license as the WPtouch package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2010.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2011.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: WPtouch 1.9.19\n"
+"Project-Id-Version: WPtouch 1.9.23.1\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/wptouch\n"
-"POT-Creation-Date: 2010-09-09 09:31-0700\n"
-"PO-Revision-Date: 2010-MO-DA HO:MI+ZONE\n"
+"POT-Creation-Date: 2011-03-10 17:51-0500\n"
+"PO-Revision-Date: 2011-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ajax/file_upload.php:23
+#: ajax/file_upload.php:24
 msgid ""
 "<p style=\"color:red; padding-top:10px\">There seems to have been an error."
 "<p>Please try your upload again.</p>"
 msgstr ""
 
-#: ajax/file_upload.php:25
+#: ajax/file_upload.php:26
 msgid ""
 "<p style=\"color:green; padding-top:10px\">File has been saved and added to "
 "the pool.</p>"
 msgstr ""
 
-#: ajax/file_upload.php:28
+#: ajax/file_upload.php:29
 msgid ""
 "<p style=\"color:orange; padding-top:10px\">Sorry, only PNG, GIF and JPG "
 "images are supported.</p>"
 msgstr ""
 
-#: ajax/file_upload.php:30
+#: ajax/file_upload.php:31
 msgid ""
 "<p style=\"color:orange; padding-top:10px\">Image too large. try something "
 "like 59x60.</p>"
 msgstr ""
 
-#: ajax/file_upload.php:32
+#: ajax/file_upload.php:33
 msgid ""
 "<p style=\"color:orange; padding-top:10px\">Insufficient privileges.</"
 "p><p>You need to either be an admin or have more control over your server.</"
@@ -96,10 +96,10 @@ msgstr ""
 #: html/ads-stats-area.php:16 html/advanced-area.php:22
 #: html/advanced-area.php:31 html/advanced-area.php:40
 #: html/advanced-area.php:49 html/advanced-area.php:60
-#: html/advanced-area.php:68 html/advanced-area.php:83
-#: html/advanced-area.php:92 html/advanced-area.php:101
-#: html/general-settings-area.php:75 html/page-area.php:31
-#: html/push-area.php:17 html/push-area.php:49
+#: html/advanced-area.php:68 html/advanced-area.php:76
+#: html/advanced-area.php:86 html/advanced-area.php:100
+#: html/advanced-area.php:109 html/general-settings-area.php:100
+#: html/page-area.php:31 html/push-area.php:17 html/push-area.php:49
 msgid "More Info"
 msgstr ""
 
@@ -247,52 +247,62 @@ msgid ""
 msgstr ""
 
 #: html/advanced-area.php:74
-msgid "Enable gravatars in comments"
+msgid "Enable comments on posts"
 msgstr ""
 
-#: html/advanced-area.php:81
-msgid "Enable comments on pages"
+#: html/advanced-area.php:77
+msgid ""
+"If unchecked, this will hide all commenting features on posts and blog "
+"listings."
 msgstr ""
 
 #: html/advanced-area.php:84
+msgid "Enable comments on pages"
+msgstr ""
+
+#: html/advanced-area.php:87
 msgid ""
 "This will add the comment form to all pages with 'Allow Comments' checked in "
 "your WordPress admin."
 msgstr ""
 
-#: html/advanced-area.php:90
+#: html/advanced-area.php:93
+msgid "Enable gravatars in comments"
+msgstr ""
+
+#: html/advanced-area.php:98
 #, php-format
 msgid "1%sst%s visit mobile users will see desktop theme"
 msgstr ""
 
-#: html/advanced-area.php:93
+#: html/advanced-area.php:101
 msgid ""
 "When this option is checked, users will see your regular site theme first, "
 "and have the option in your footer to switch to the WPtouch mobile view."
 msgstr ""
 
-#: html/advanced-area.php:94
+#: html/advanced-area.php:102
 msgid ""
 "They'll be able to change back and forth either way. Make sure you have the "
 "wp_footer(); function call in your regular theme's footer.php file for the "
 "switch link to work properly."
 msgstr ""
 
-#: html/advanced-area.php:99
+#: html/advanced-area.php:107
 msgid "Enable WPtouch Restricted Mode"
 msgstr ""
 
-#: html/advanced-area.php:102
+#: html/advanced-area.php:110
 msgid ""
 "Disallow other plugins from loading into scripts into WPtouch's header and "
 "footer."
 msgstr ""
 
-#: html/advanced-area.php:103
+#: html/advanced-area.php:111
 msgid "Sometimes fixes incompatibilities and speeds up WPtouch."
 msgstr ""
 
-#: html/advanced-area.php:104
+#: html/advanced-area.php:112
 msgid ""
 "Some plugins load conflicting javascript, extra CSS style sheets, and other "
 "functional code into your theme to accomplish what they add to your site. As "
@@ -302,11 +312,11 @@ msgid ""
 "WPtouch works properly, and loads quickly for mobile users."
 msgstr ""
 
-#: html/advanced-area.php:109
+#: html/advanced-area.php:117
 msgid "Custom user-agents"
 msgstr ""
 
-#: html/advanced-area.php:111
+#: html/advanced-area.php:119
 msgid ""
 "After changing the user-agents, please visit the WP Super Cache admin page "
 "and update your rewrite rules."
@@ -317,159 +327,181 @@ msgid "General Settings"
 msgstr ""
 
 #: html/general-settings-area.php:8
-msgid "Home Page Re-Direction"
+msgid "Regionalization Settings"
 msgstr ""
 
 #: html/general-settings-area.php:9
+msgid ""
+"Select the language you would like WPtouch to appear in.  Custom language ."
+"mo files should be placed in wp-content/wptouch/lang."
+msgstr ""
+
+#: html/general-settings-area.php:11
+msgid "Home Page Re-Direction"
+msgstr ""
+
+#: html/general-settings-area.php:12
 #, php-format
 msgid ""
 "WPtouch by default follows your %sWordPress &raquo; Reading Options%s. You "
 "can also set a different one for WPtouch."
 msgstr ""
 
-#: html/general-settings-area.php:11
+#: html/general-settings-area.php:14
 msgid "Site Title"
 msgstr ""
 
-#: html/general-settings-area.php:12
+#: html/general-settings-area.php:15
 msgid ""
 "You can shorten your site title here so it won't be truncated by WPtouch."
 msgstr ""
 
-#: html/general-settings-area.php:15
+#: html/general-settings-area.php:17
 msgid "Excluded Categories"
 msgstr ""
 
-#: html/general-settings-area.php:16
+#: html/general-settings-area.php:18
 msgid ""
 "Choose categories you want excluded from the main post listings in WPtouch."
 msgstr ""
 
-#: html/general-settings-area.php:18
+#: html/general-settings-area.php:20
 msgid "Text Justification Options"
 msgstr ""
 
-#: html/general-settings-area.php:19
+#: html/general-settings-area.php:21
 msgid "Set the alignment for text."
 msgstr ""
 
-#: html/general-settings-area.php:22
+#: html/general-settings-area.php:24
 msgid "Post Listings Options"
 msgstr ""
 
-#: html/general-settings-area.php:23
+#: html/general-settings-area.php:25
 msgid ""
 "Choose between calendar Icons, post thumbnails (WP 2.9) or none for your "
 "post listings."
 msgstr ""
 
-#: html/general-settings-area.php:24
+#: html/general-settings-area.php:26
 msgid ""
 "Select which meta items are shown below titles on main, search, &amp; "
 "archives pages."
 msgstr ""
 
-#: html/general-settings-area.php:25
+#: html/general-settings-area.php:27
 msgid "Also, choose if excerpts are shown/hidden (default is hidden)."
 msgstr ""
 
-#: html/general-settings-area.php:27
+#: html/general-settings-area.php:29
 msgid "Footer Message"
 msgstr ""
 
-#: html/general-settings-area.php:28
+#: html/general-settings-area.php:30
 msgid "Customize the default footer message shown in WPtouch here."
 msgstr ""
 
-#: html/general-settings-area.php:32
+#: html/general-settings-area.php:34
+msgid "WPtouch Language"
+msgstr ""
+
+#: html/general-settings-area.php:38
+msgid "Automatically detected"
+msgstr ""
+
+#: html/general-settings-area.php:56
 msgid "WPtouch Home Page"
 msgstr ""
 
-#: html/general-settings-area.php:37 html/page-area.php:63
+#: html/general-settings-area.php:61 html/page-area.php:63
 msgid "You have no pages yet. Create some first!"
 msgstr ""
 
-#: html/general-settings-area.php:43
+#: html/general-settings-area.php:67
 msgid "Site title text"
 msgstr ""
 
-#: html/general-settings-area.php:49
+#: html/general-settings-area.php:73
 msgid "Comma list of Category IDs, eg: 1,2,3"
 msgstr ""
 
-#: html/general-settings-area.php:57
+#: html/general-settings-area.php:74
+msgid "Comma list of Tag IDs, eg: 1,2,3"
+msgstr ""
+
+#: html/general-settings-area.php:82
 msgid "Left"
 msgstr ""
 
-#: html/general-settings-area.php:58
+#: html/general-settings-area.php:83
 msgid "Full"
 msgstr ""
 
-#: html/general-settings-area.php:60
+#: html/general-settings-area.php:85
 msgid "Font justification"
 msgstr ""
 
-#: html/general-settings-area.php:68
+#: html/general-settings-area.php:93
 msgid "Calendar Icons"
 msgstr ""
 
-#: html/general-settings-area.php:69
+#: html/general-settings-area.php:94
 msgid "Post Thumbnails / Featured Images"
 msgstr ""
 
-#: html/general-settings-area.php:70
+#: html/general-settings-area.php:95
 msgid "Post Thumbnails / Featured Images (Random)"
 msgstr ""
 
-#: html/general-settings-area.php:71
+#: html/general-settings-area.php:96
 msgid "No Icon or Thumbnail"
 msgstr ""
 
-#: html/general-settings-area.php:73
+#: html/general-settings-area.php:98
 msgid "Post Listings Display"
 msgstr ""
 
-#: html/general-settings-area.php:73
+#: html/general-settings-area.php:98
 msgid "Thumbnails Requires WordPress 2.9+"
 msgstr ""
 
-#: html/general-settings-area.php:76
+#: html/general-settings-area.php:101
 msgid ""
 "This will change the display of blog and post listings between Calendar "
 "Icons view and Post Thumbnails view."
 msgstr ""
 
-#: html/general-settings-area.php:77
+#: html/general-settings-area.php:102
 msgid ""
 "The <em>Post Thumbnails w/ Random</em> option will fill missing post "
 "thumbnails with random abstract images. (WP 2.9+)"
 msgstr ""
 
-#: html/general-settings-area.php:84
+#: html/general-settings-area.php:109
 msgid "Enable Truncated Titles"
 msgstr ""
 
-#: html/general-settings-area.php:84
+#: html/general-settings-area.php:109
 msgid "Will use ellipses when titles are too long instead of wrapping them"
 msgstr ""
 
-#: html/general-settings-area.php:88
+#: html/general-settings-area.php:113
 msgid "Show Author's Name"
 msgstr ""
 
-#: html/general-settings-area.php:92
+#: html/general-settings-area.php:117
 msgid "Show Categories"
 msgstr ""
 
-#: html/general-settings-area.php:96
+#: html/general-settings-area.php:121
 msgid "Show Tags"
 msgstr ""
 
-#: html/general-settings-area.php:100
+#: html/general-settings-area.php:125
 msgid "Hide Excerpts"
 msgstr ""
 
-#: html/general-settings-area.php:104
+#: html/general-settings-area.php:129
 msgid "Footer message"
 msgstr ""
 
@@ -480,12 +512,12 @@ msgstr ""
 
 #: html/head-area.php:14
 #, php-format
-msgid "%sBNC on Twitter%s"
+msgid "%sJoin our FREE WPtouch Pro Affiliate Program%s"
 msgstr ""
 
 #: html/head-area.php:15
 #, php-format
-msgid "%sBraveNewCode.com%s"
+msgid "%sFollow Us on Twitter%s"
 msgstr ""
 
 #: html/head-area.php:24
@@ -493,62 +525,61 @@ msgid "WPtouch Wire"
 msgstr ""
 
 #: html/head-area.php:33
-msgid "Find Out More &rsaquo;"
-msgstr ""
-
-#: html/icon-area.php:21
-msgid "Default &amp; Custom Icon Pool"
+msgid "Find Out More &rsaquo;&rsaquo;"
 msgstr ""
 
 #: html/icon-area.php:24
+msgid "Default &amp; Custom Icon Pool"
+msgstr ""
+
+#: html/icon-area.php:27
 msgid "Adding Icons"
 msgstr ""
 
-#: html/icon-area.php:25
+#: html/icon-area.php:28
 msgid ""
 "To add icons to the pool, simply upload a .png, .jpeg or .gif image from "
 "your computer."
 msgstr ""
 
-#: html/icon-area.php:27
+#: html/icon-area.php:30
 #, php-format
 msgid "Default icons generously provided by %sMarcelo Marfil%s."
 msgstr ""
 
-#: html/icon-area.php:29
+#: html/icon-area.php:32
 msgid "Logo/Bookmark Icons"
 msgstr ""
 
-#: html/icon-area.php:30
+#: html/icon-area.php:33
 msgid ""
 "If you're adding a logo icon, the best dimensions for it are 59x60px (png) "
 "when used as a bookmark icon."
 msgstr ""
 
-#: html/icon-area.php:31
+#: html/icon-area.php:34
 #, php-format
 msgid "Need help? You can use %sthis easy online icon generator%s to make one."
 msgstr ""
 
-#: html/icon-area.php:32
-#, php-format
+#: html/icon-area.php:35
 msgid ""
-"These files will be stored in this folder we create: %s/uploads/wptouch/"
-"custom-icons"
+"These files will be stored in this folder we create: .../wp-content/uploads/"
+"wptouch/custom-icons"
 msgstr ""
 
-#: html/icon-area.php:33
+#: html/icon-area.php:36
 msgid ""
 "If an upload fails (usually it's a permission problem) check your wp-content "
 "path settings in WordPress' Miscellaneous Settings, or create the folder "
 "yourself using FTP and try again."
 msgstr ""
 
-#: html/icon-area.php:35
+#: html/icon-area.php:38
 msgid "Upload Icon"
 msgstr ""
 
-#: html/icon-area.php:39
+#: html/icon-area.php:42
 msgid "Uploading..."
 msgstr ""
 
@@ -674,67 +705,95 @@ msgid "%sUnsupported. Upgrade Required.%s"
 msgstr ""
 
 #: html/plugin-compat-area.php:27
-msgid ""
-"Here you'll find information on additional WPtouch features and their "
-"requirements, including those activated with companion plugins."
+msgid "Here you'll find information on plugin compatibility."
 msgstr ""
 
 #: html/plugin-compat-area.php:32
-msgid "WordPress Pages &amp; Feature Support"
+msgid "Known Plugin Support &amp; Conflicts"
 msgstr ""
 
-#: html/plugin-compat-area.php:39
-msgid ""
-"All of your WP links will automatically show on your page called 'Links'."
+#: html/plugin-compat-area.php:36
+#, php-format
+msgid "%sPeter's Custom Anti-Spam%s is fully supported."
 msgstr ""
 
 #: html/plugin-compat-area.php:41
-msgid ""
-"If you create a page called 'Links', all your WP links would display in "
-"<em>WPtouch</em> style."
+#, php-format
+msgid "%sWP Spam Free%s is fully supported."
 msgstr ""
 
-#: html/plugin-compat-area.php:47
+#: html/plugin-compat-area.php:46
+#, php-format
 msgid ""
-"All your <a href=\"http://eightface.com/wordpress/flickrrss/\" target="
-"\"_blank\">FlickrRSS</a> images will automatically show on your page called "
-"'Photos'."
-msgstr ""
-
-#: html/plugin-compat-area.php:49
-msgid ""
-"You have a page called 'Photos', but don't have <a href=\"http://eightface."
-"com/wordpress/flickrrss/\" target=\"_blank\">FlickrRSS</a> installed."
+"%sFlickrRSS%s: Your photos will automatically show on a page with the slug "
+"\"photos\" if you have it. Fully supported."
 msgstr ""
 
 #: html/plugin-compat-area.php:51
+#, php-format
 msgid ""
-"If you create a page called 'Photos', all your <a href=\"http://eightface."
-"com/wordpress/flickrrss/\" target=\"_blank\">FlickrRSS</a> photos would "
-"display in <em>WPtouch</em> style."
+"WP Cache is supported, but requires configuration. %sFollow this video "
+"tutorial%s for more information."
 msgstr ""
 
-#: html/plugin-compat-area.php:54
+#: html/plugin-compat-area.php:56
+#, php-format
 msgid ""
-"If you create a page called 'Photos', and install the <a href=\"http://"
-"eightface.com/wordpress/flickrrss/\" target=\"_blank\">FlickrRSS</a> plugin, "
-"your photos would display in <em>WPtouch</em> style."
+"WP Super Cache is supported, but requires configuration. %sFollow this video "
+"tutorial%s for more information."
 msgstr ""
 
-#: html/plugin-compat-area.php:62
+#: html/plugin-compat-area.php:61
+#, php-format
 msgid ""
-"Your tags and your monthly listings will automatically show on your page "
-"called 'Archives'."
+"W3 Total Cache is supported, but requires configuration. %sFollow this video "
+"tutorial%s for more information."
 msgstr ""
 
-#: html/plugin-compat-area.php:64
+#: html/plugin-compat-area.php:66
+#, php-format
 msgid ""
-"If you had a page called 'Archives', your tags and monthly listings would "
-"display in <em>WPtouch</em> style."
+"%sWP CSS%s is supported, but does\tnot compress WPtouch's CSS. WPtouch files "
+"are pre-optimized for mobile devices already."
 msgstr ""
 
-#: html/plugin-compat-area.php:68
-msgid "Known Plugin Support &amp; Conflicts"
+#: html/plugin-compat-area.php:71
+#, php-format
+msgid ""
+"%sShare This%s is supported, but requires the WPtouch setting \"Enable "
+"Restrictive Mode\" turned on to work properly."
+msgstr ""
+
+#: html/plugin-compat-area.php:76
+#, php-format
+msgid ""
+"WordPress Admin Bar requires additional configuration to work with WPtouch. %"
+"sFollow this comment%s on the developer's official site."
+msgstr ""
+
+#: html/plugin-compat-area.php:81
+#, php-format
+msgid "%sWP Simple Captcha%s is not currently supported."
+msgstr ""
+
+#: html/plugin-compat-area.php:86
+#, php-format
+msgid "%sNextGEN Gallery%s is not currently supported."
+msgstr ""
+
+#: html/plugin-compat-area.php:91
+#, php-format
+msgid ""
+"%sYet another ajax paged comments%s (YAAPC) is not currently supported. "
+"WPtouch uses its own ajaxed comments. WPtouch Pro supports WP 2.7+ comments "
+"out-of-the-box."
+msgstr ""
+
+#: html/plugin-compat-area.php:96
+#, php-format
+msgid ""
+"%sLightview Plus%s is not currently supported. Images may not open in a  "
+"viewer or separate page."
 msgstr ""
 
 #: html/push-area.php:4
@@ -918,6 +977,14 @@ msgstr ""
 msgid "Site-wide links color"
 msgstr ""
 
+#: include/submit.php:7
+msgid "Nonce Failure"
+msgstr ""
+
+#: include/submit.php:12
+msgid "Security failure.  Please log in again."
+msgstr ""
+
 #: themes/core/core-functions.php:22
 #, php-format
 msgid "%sHome%s"
@@ -943,79 +1010,77 @@ msgid "%sWarning%s"
 msgstr ""
 
 #: themes/core/core-functions.php:56
-msgid ""
-"Sorry, this theme is only meant for use with WordPress on certain "
-"smartphones."
+msgid "Sorry, this theme is only meant for use on touch smartphones."
 msgstr ""
 
-#: themes/core/core-functions.php:85 themes/default/index.php:130
+#: themes/core/core-functions.php:89 themes/default/index.php:130
 #: themes/default/single.php:38
 msgid "Tags"
 msgstr ""
 
-#: themes/core/core-functions.php:89 themes/default/index.php:129
+#: themes/core/core-functions.php:93 themes/default/index.php:129
 #: themes/default/single.php:37
 msgid "Categories"
 msgstr ""
 
-#: themes/core/core-functions.php:124
+#: themes/core/core-functions.php:132
 #, php-format
 msgid "Search results &rsaquo; %s"
 msgstr ""
 
-#: themes/core/core-functions.php:126
+#: themes/core/core-functions.php:134
 #, php-format
 msgid "Categories &rsaquo; %s"
 msgstr ""
 
-#: themes/core/core-functions.php:128
+#: themes/core/core-functions.php:136
 #, php-format
 msgid "Tags &rsaquo; %s"
 msgstr ""
 
-#: themes/core/core-functions.php:130 themes/core/core-functions.php:132
-#: themes/core/core-functions.php:134
+#: themes/core/core-functions.php:138 themes/core/core-functions.php:140
+#: themes/core/core-functions.php:142
 #, php-format
 msgid "Archives &rsaquo; %s"
 msgstr ""
 
-#: themes/core/core-functions.php:146
+#: themes/core/core-functions.php:154
 msgid "No more entries to display."
 msgstr ""
 
-#: themes/core/core-functions.php:148
+#: themes/core/core-functions.php:156
 msgid "No more search results to display."
 msgstr ""
 
-#: themes/core/core-functions.php:150
+#: themes/core/core-functions.php:158
 msgid "No search results results found."
 msgstr ""
 
-#: themes/core/core-functions.php:150
+#: themes/core/core-functions.php:158
 msgid "Try another query."
 msgstr ""
 
-#: themes/core/core-functions.php:153
+#: themes/core/core-functions.php:161
 msgid "404 Not Found"
 msgstr ""
 
-#: themes/core/core-functions.php:154
+#: themes/core/core-functions.php:162
 msgid "The page or post you were looking for is missing or has been removed."
 msgstr ""
 
-#: themes/core/core-functions.php:163 wptouch.php:589
+#: themes/core/core-functions.php:169 wptouch.php:605
 msgid "Mobile Theme"
 msgstr ""
 
-#: themes/core/core-functions.php:209
+#: themes/core/core-functions.php:215
 msgid "edit"
 msgstr ""
 
-#: themes/core/core-functions.php:210
+#: themes/core/core-functions.php:216
 msgid "del"
 msgstr ""
 
-#: themes/core/core-functions.php:211
+#: themes/core/core-functions.php:217
 msgid "spam"
 msgstr ""
 
@@ -1023,67 +1088,72 @@ msgstr ""
 msgid "This post is password protected. Enter the password to view comments."
 msgstr ""
 
-#: themes/default/comments.php:16
-msgid ""
-"<h3 onclick=\"bnc_showhide_coms_toggle();\" id=\"com-head\"><img id=\"com-"
-"arrow\" src=\""
+#: themes/default/comments.php:18
+msgid "No Responses Yet"
 msgstr ""
 
-#: themes/default/comments.php:16
-msgid "/themes/core/core-images/com_arrow.png\" alt=\"arrow\" />1 Comment</h3>"
+#: themes/default/comments.php:19
+msgid "1 Response"
 msgstr ""
 
-#: themes/default/comments.php:16
-msgid ""
-"/themes/core/core-images/com_arrow.png\" alt=\"arrow\" />% Comments</h3>"
+#: themes/default/comments.php:20
+msgid "% Responses"
 msgstr ""
 
-#: themes/default/comments.php:63
+#: themes/default/comments.php:40
+msgid "ago"
+msgstr ""
+
+#: themes/default/comments.php:71
 msgid "Comments are closed."
 msgstr ""
 
-#: themes/default/comments.php:73
+#: themes/default/comments.php:81
 #, php-format
 msgid "You must %slogin</a> or %sregister</a> to comment"
 msgstr ""
 
-#: themes/default/comments.php:81
+#: themes/default/comments.php:89
 msgid "Success! Comment added."
 msgstr ""
 
-#: themes/default/comments.php:82
+#: themes/default/comments.php:90
 msgid "Refresh the page to see your comment."
 msgstr ""
 
-#: themes/default/comments.php:83
+#: themes/default/comments.php:91
 msgid "(If your comment requires moderation it will be added soon.)"
 msgstr ""
 
-#: themes/default/comments.php:90
+#: themes/default/comments.php:98
 msgid "Logged in as"
 msgstr ""
 
-#: themes/default/comments.php:94
+#: themes/default/comments.php:102
 msgid "Leave A Comment"
 msgstr ""
 
-#: themes/default/comments.php:97 themes/default/header.php:153
+#: themes/default/comments.php:105 themes/default/header.php:153
 msgid "Name"
 msgstr ""
 
-#: themes/default/comments.php:102
+#: themes/default/comments.php:110
 msgid "Mail (unpublished)"
 msgstr ""
 
-#: themes/default/comments.php:107
+#: themes/default/comments.php:115
 msgid "Website"
 msgstr ""
 
-#: themes/default/comments.php:111
+#: themes/default/comments.php:119
 msgid "There was an error posting your comment. Maybe it was too short?"
 msgstr ""
 
-#: themes/default/comments.php:120
+#: themes/default/comments.php:125
+msgid "Publish"
+msgstr ""
+
+#: themes/default/comments.php:128
 msgid "Publishing..."
 msgstr ""
 
@@ -1097,6 +1167,26 @@ msgstr ""
 
 #: themes/default/footer.php:10
 msgid "+"
+msgstr ""
+
+#: themes/default/functions.php:105
+msgid "mo"
+msgstr ""
+
+#: themes/default/functions.php:106
+msgid "wk"
+msgstr ""
+
+#: themes/default/functions.php:107
+msgid "day"
+msgstr ""
+
+#: themes/default/functions.php:108
+msgid "hr"
+msgstr ""
+
+#: themes/default/functions.php:109
+msgid "min"
 msgstr ""
 
 #: themes/default/header.php:10
@@ -1127,15 +1217,19 @@ msgstr ""
 msgid "Your Push Notification cannot be delivered at this time."
 msgstr ""
 
+#: themes/default/header.php:28
+msgid "Username"
+msgstr ""
+
+#: themes/default/header.php:29
+msgid "Password"
+msgstr ""
+
 #: themes/default/header.php:31 themes/default/header.php:58
 msgid "Login"
 msgstr ""
 
-#: themes/default/header.php:42 themes/default/header.php:128
-msgid "Search"
-msgstr ""
-
-#: themes/default/header.php:43
+#: themes/default/header.php:42 themes/default/header.php:43
 msgid "Search..."
 msgstr ""
 
@@ -1149,6 +1243,10 @@ msgstr ""
 
 #: themes/default/header.php:88
 msgid "Enter your username and password<br />in the boxes above."
+msgstr ""
+
+#: themes/default/header.php:91
+msgid "Not registered yet?"
 msgstr ""
 
 #: themes/default/header.php:93
@@ -1170,6 +1268,10 @@ msgstr ""
 
 #: themes/default/header.php:105
 msgid "Logout"
+msgstr ""
+
+#: themes/default/header.php:128
+msgid "Search"
 msgstr ""
 
 #: themes/default/header.php:132
@@ -1214,6 +1316,10 @@ msgstr ""
 
 #: themes/default/index.php:127
 msgid "Written on"
+msgstr ""
+
+#: themes/default/index.php:127
+msgid "at"
 msgstr ""
 
 #: themes/default/index.php:128
@@ -1273,83 +1379,83 @@ msgstr ""
 msgid "Mail a link to this post?"
 msgstr ""
 
-#: themes/default/single.php:58
+#: themes/default/single.php:59
 msgid "Del.icio.us"
 msgstr ""
 
-#: themes/default/single.php:60
+#: themes/default/single.php:61
 msgid "Digg"
 msgstr ""
 
-#: themes/default/single.php:61
+#: themes/default/single.php:62
 msgid "Technorati"
 msgstr ""
 
-#: themes/default/single.php:62
+#: themes/default/single.php:63
 msgid "Magnolia"
 msgstr ""
 
-#: themes/default/single.php:63
+#: themes/default/single.php:64
 msgid "Newsvine"
 msgstr ""
 
-#: themes/default/single.php:64
+#: themes/default/single.php:65
 msgid "Reddit"
 msgstr ""
 
-#: wptouch.php:204
+#: wptouch.php:215
 msgid "Settings"
 msgstr ""
 
-#: wptouch.php:376
+#: wptouch.php:392
 msgid "New Ping/Trackback"
 msgstr ""
 
-#: wptouch.php:382
+#: wptouch.php:398
 msgid "New Comment"
 msgstr ""
 
-#: wptouch.php:410
+#: wptouch.php:426
 msgid "User Registration"
 msgstr ""
 
-#: wptouch.php:454
+#: wptouch.php:470
 msgid "Direct Message"
 msgstr ""
 
-#: wptouch.php:596
+#: wptouch.php:612
 msgid "WPtouch iPhone Theme"
 msgstr ""
 
-#: wptouch.php:864
+#: wptouch.php:913
 msgid "Settings saved"
 msgstr ""
 
-#: wptouch.php:869
+#: wptouch.php:918
 msgid "Defaults restored"
 msgstr ""
 
-#: wptouch.php:889
+#: wptouch.php:939
 msgid "Save Options"
 msgstr ""
 
-#: wptouch.php:893
+#: wptouch.php:943
 msgid "Restore default WPtouch settings?"
 msgstr ""
 
-#: wptouch.php:893
+#: wptouch.php:943
 msgid "Restore Defaults"
 msgstr ""
 
-#. Plugin Name of a plugin/theme
+#. Plugin Name of the plugin/theme
 msgid "WPtouch"
 msgstr ""
 
-#. Plugin URI of a plugin/theme
-msgid "http://bravenewcode.com/products/wptouch"
+#. Plugin URI of the plugin/theme
+msgid "http://www.bravenewcode.com/wptouch"
 msgstr ""
 
-#. Description of a plugin/theme
+#. Description of the plugin/theme
 msgid ""
 "A plugin which formats your site with a mobile theme for visitors on Apple "
 "<a href=\"http://www.apple.com/iphone/\">iPhone</a> / <a href=\"http://www."
@@ -1359,10 +1465,10 @@ msgid ""
 "\">Palm Pre</a> and other touch-based smartphones."
 msgstr ""
 
-#. Author of a plugin/theme
+#. Author of the plugin/theme
 msgid "Dale Mugford & Duane Storey (BraveNewCode Inc.)"
 msgstr ""
 
-#. Author URI of a plugin/theme
+#. Author URI of the plugin/theme
 msgid "http://www.bravenewcode.com"
 msgstr ""
