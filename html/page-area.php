@@ -54,7 +54,7 @@
 						<label class="wptouch-page-label" for="enable_<?php echo $page->ID; ?>"><?php echo $page->post_title; ?></label>
 					</span>
 					<select class="page-select" name="icon_<?php echo $page->ID; ?>">
-						<?php bnc_get_icon_drop_down_list( $wptouch_settings[ $page->ID ]); ?>
+						<?php bnc_get_icon_drop_down_list( ( isset( $wptouch_settings[ $page->ID ] ) ? $wptouch_settings[ $page->ID ] : false ) ); ?>
 					</select>
 					
 				</li>

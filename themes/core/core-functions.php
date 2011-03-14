@@ -92,26 +92,52 @@ function wptouch_tags_link() {
 function wptouch_cats_link() {
 		echo '<a href="#head-cats">' . __( "Categories", "wptouch" ) . '</a>';
 }
-
+  
 function bnc_get_ordered_cat_list() {
-
-	// We created our own function for this as wp_list_categories doesn't make the count linkable
-
-	global $table_prefix;
 	global $wpdb;
-	if ( wptouch_excluded_cat_list() ) {
+
+	if (  wptouch_excluded_cat_list() ) {
 		$excluded_cats = wptouch_excluded_cat_list();
 	} else {
-		$excluded_cats = '0';	
-	}
-	$sql = "SELECT * FROM " . $table_prefix . "term_taxonomy INNER JOIN " . $table_prefix . "terms ON " . $table_prefix . "term_taxonomy.term_id = " . $table_prefix . "terms.term_id WHERE taxonomy = 'category' AND $wpdb->term_taxonomy.term_id NOT IN ($excluded_cats) AND count > 0 ORDER BY count DESC";	
-	$results = $wpdb->get_results( $sql );
-	foreach ($results as $result) {
-		echo "<li><a href=\"" . get_category_link( $result->term_id ) . "\">" . $result->name . " (" . $result->count . ")</a></li>";
+		$excluded_cats = 0;	
 	}
 
+	echo '<ul>';
+	$sql = $wpdb->get_results("SELECT * FROM {$wpdb->prefix}term_taxonomy INNER JOIN {$wpdb->prefix}terms ON {$wpdb->prefix}term_taxonomy.term_id = {$wpdb->prefix}terms.term_id WHERE taxonomy = 'category' AND {$wpdb->prefix}term_taxonomy.term_id NOT IN ($excluded_cats) AND count > 0 ORDER BY count DESC");
+
+	if ( $sql ) {
+		foreach ( $sql as $result ) {
+			if ( $result ) {
+				echo "<li><a href=\"" . get_category_link( $result->term_id ) . "\">" . $result->name . " <span>(" . $result->count . ")</span></a></li>";			
+			}
+		}
+	}
+	echo '</ul>';
 }
-  
+
+function wptouch_ordered_tag_list() {
+	global $wpdb;
+
+	if (  wptouch_excluded_tag_IDs() ) {
+		$excluded_tags =  wptouch_excluded_tag_IDs();
+	} else {
+		$excluded_tags = 0;	
+	}
+
+	echo '<ul>';
+		
+	$sql = $wpdb->get_results("SELECT * FROM {$wpdb->prefix}term_taxonomy INNER JOIN {$wpdb->prefix}terms ON {$wpdb->prefix}term_taxonomy.term_id = {$wpdb->prefix}terms.term_id WHERE taxonomy = 'post_tag' AND {$wpdb->prefix}term_taxonomy.term_id NOT IN ($excluded_tags) AND count > 0 ORDER BY count DESC");	
+
+	if ( $sql ) {
+		foreach ( $sql as $result ) {
+			if ( $result ) {
+				echo "<li><a href=\"" . get_tag_link( $result->term_id ) . "\">" . $result->name . " <span>(" . $result->count . ")</span></a></li>";			
+			}
+		}
+	}
+	echo '</ul>';
+}
+
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // WPtouch Core Body Functions
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////  

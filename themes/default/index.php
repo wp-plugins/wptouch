@@ -8,8 +8,8 @@
   <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
  <div class="post" id="post-<?php the_ID(); ?>">
  
-			<?php if ( is_home() && is_sticky( $post_ID ) && $wptouch_settings['post-cal-thumb'] == 'nothing-shown' ) echo '<div class="sticky-icon-none"></div>'; ?>
-			<?php if ( is_home() && is_sticky( $post_ID ) && $wptouch_settings['post-cal-thumb'] != 'nothing-shown' ) echo '<div class="sticky-icon"></div>'; ?>
+			<?php if ( is_home() && is_sticky() && $wptouch_settings['post-cal-thumb'] == 'nothing-shown' ) echo '<div class="sticky-icon-none"></div>'; ?>
+			<?php if ( is_home() && is_sticky() && $wptouch_settings['post-cal-thumb'] != 'nothing-shown' ) echo '<div class="sticky-icon"></div>'; ?>
 
  		<?php if (!function_exists('dsq_comments_template') && !function_exists('id_comments_template')) { ?>
 				<?php if (wptouch_get_comment_count() && !is_archive() && !is_search() && bnc_can_show_comments() ) { ?>
@@ -130,7 +130,7 @@
 			<?php if (bnc_show_tags() && get_the_tags()) { the_tags('<span class="lead">' . __( 'Tags', 'wptouch' ) . ':</span> ', ', ', ''); } ?>
 		</div>	
 			<div class="clearer"></div>	
-            <div id="entry-<?php the_ID(); ?>" <?php  if (bnc_excerpt_enabled()) { ?>style="display:none"<?php } ?> class="mainentry <?php echo $wptouch_settings['style-text-size']; ?> <?php echo $wptouch_settings['style-text-justify']; ?>">
+            <div id="entry-<?php the_ID(); ?>" <?php  if (bnc_excerpt_enabled()) { ?>style="display:none"<?php } ?> class="mainentry <?php echo $wptouch_settings['style-text-justify']; ?>">
  				<?php the_excerpt(); ?>
  		    <a class="read-more" href="<?php the_permalink() ?>"><?php _e( "Read This Post", "wptouch" ); ?></a>
 	        </div>  

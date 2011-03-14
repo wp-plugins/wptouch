@@ -43,10 +43,10 @@ For more information visit http://www.bravenewcode.com/wptouch-pro
 == Changelog ==
 
 = Version 1.9.24 =
-* Fixed: An SQL query conditional issue
 * FIxed: Re-wrote category and tag exclusion code
+* Fixed: repaired code causing php warning items found in debug
 * Updated: wptouch.pot language file
-
+* Updated: French translation
 
 = Version 1.9.23 =
 
