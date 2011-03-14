@@ -827,6 +827,7 @@ function bnc_wp_touch_get_pages() {
 	}
 
 	if ( $results ) {
+		$inc = 0;
 		foreach ( $results as $row ) {
 			$row['icon'] = $ids[$row['ID']];
 			$a[$row['ID']] = $row;
