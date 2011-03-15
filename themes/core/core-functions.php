@@ -96,8 +96,8 @@ function wptouch_cats_link() {
 function bnc_get_ordered_cat_list() {
 	global $wpdb;
 
-	if (  wptouch_excluded_cat_list() ) {
-		$excluded_cats = wptouch_excluded_cat_list();
+	if (  wptouch_excluded_cats() ) {
+		$excluded_cats = wptouch_excluded_cats();
 	} else {
 		$excluded_cats = 0;	
 	}
@@ -118,15 +118,15 @@ function bnc_get_ordered_cat_list() {
 function wptouch_ordered_tag_list() {
 	global $wpdb;
 
-	if (  wptouch_excluded_tag_IDs() ) {
-		$excluded_tags =  wptouch_excluded_tag_IDs();
+	if (  wptouch_excluded_tags() ) {
+		$excluded_tags =  wptouch_excluded_tags();
 	} else {
 		$excluded_tags = 0;	
 	}
 
 	echo '<ul>';
 		
-	$sql = $wpdb->get_results("SELECT * FROM {$wpdb->prefix}term_taxonomy INNER JOIN {$wpdb->prefix}terms ON {$wpdb->prefix}term_taxonomy.term_id = {$wpdb->prefix}terms.term_id WHERE taxonomy = 'post_tag' AND {$wpdb->prefix}term_taxonomy.term_id NOT IN ($excluded_tags) AND count > 0 ORDER BY count DESC");	
+	$sql = $wpdb->get_results("SELECT * FROM {$wpdb->prefix}term_taxonomy INNER JOIN {$wpdb->prefix}terms ON {$wpdb->prefix}term_taxonomy.term_id = {$wpdb->prefix}terms.term_id WHERE taxonomy = 'post_tag' AND {$wpdb->prefix}term_taxonomy.term_id NOT IN ($excluded_tags) AND count > 5 ORDER BY count DESC");	
 
 	if ( $sql ) {
 		foreach ( $sql as $result ) {

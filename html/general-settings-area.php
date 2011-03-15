@@ -6,25 +6,35 @@
 
 			<div class="left-content">
 				<h4><?php _e( "Regionalization Settings", "wptouch" ); ?></h4>
-				<p><?php _e( "Select the language you would like WPtouch to appear in.  Custom language .mo files should be placed in wp-content/wptouch/lang.", "wptouch" ); ?></p>
-				<br />
+				<p><?php _e( "Select the language for WPtouch.  Custom .mo files should be placed in wp-content/wptouch/lang.", "wptouch" ); ?></p>
+				<br /><br />
+
 				<h4><?php _e( "Home Page Re-Direction", "wptouch" ); ?></h4>
-				<p><?php echo sprintf( __( "WPtouch by default follows your %sWordPress &raquo; Reading Options%s. You can also set a different one for WPtouch.", "wptouch"), '<a href="options-reading.php">', '</a>' ); ?></p>
+				<p><?php echo sprintf( __( "WPtouch by default follows your %sWordPress &raquo; Reading Options%s.", "wptouch"), '<a href="options-reading.php">', '</a>' ); ?></p>
 
 				<h4><?php _e( "Site Title", "wptouch" ); ?></h4>
-				<p><?php _e( "You can shorten your site title here so it won't be truncated by WPtouch.", "wptouch" ); ?></p>
+				<p><?php _e( "You can change your site title (if needed) in WPtouch.", "wptouch" ); ?></p>
+
+				<br /><br />
 
 				<h4><?php _e( "Excluded Categories", "wptouch" ); ?></h4>
-				<p><?php _e( "Choose categories you want excluded from the main post listings in WPtouch.", "wptouch" ); ?></p>
+				<p><?php _e( "Categories by ID you want excluded everywhere in WPtouch.", "wptouch" ); ?></p>
+
+				<h4><?php _e( "Excluded Tags", "wptouch" ); ?></h4>
+				<p><?php _e( "Tags by ID you want excluded everywhere in WPtouch.", "wptouch" ); ?></p>
+
+				<br /><br />
 
 				<h4><?php _e( "Text Justification Options", "wptouch" ); ?></h4>
 				<p><?php _e( "Set the alignment for text.", "wptouch" ); ?></p>
 
+				<br /><br />
 				
 				<h4><?php _e( "Post Listings Options", "wptouch" ); ?></h4>
 				<p><?php _e( "Choose between calendar Icons, post thumbnails (WP 2.9) or none for your post listings.", "wptouch" ); ?></p>
 				<p><?php _e( "Select which meta items are shown below titles on main, search, &amp; archives pages.", "wptouch" ); ?></p>
-				<p><?php _e( "Also, choose if excerpts are shown/hidden (default is hidden).", "wptouch" ); ?></p>
+
+				<br /><br />
 
 				<h4><?php _e( "Footer Message", "wptouch" ); ?></h4>
 				<p><?php _e( "Customize the default footer message shown in WPtouch here.", "wptouch" ); ?></p>
@@ -72,9 +82,10 @@
 				<ul class="wptouch-make-li-italic">			
 				<li><input name="excluded-cat-ids" class="no-right-margin" type="text" value="<?php $str = $wptouch_settings['excluded-cat-ids']; echo stripslashes($str); ?>" /><?php _e( "Comma list of Category IDs, eg: 1,2,3", "wptouch" ); ?></li>
 				<li><input name="excluded-tag-ids" class="no-right-margin" type="text" value="<?php $str = $wptouch_settings['excluded-tag-ids']; echo stripslashes($str); ?>" /><?php _e( "Comma list of Tag IDs, eg: 1,2,3", "wptouch" ); ?></li>
+				<!-- <li><input name="minimum-ids" class="no-right-margin" type="text" value="<?php $str = $wptouch_settings['minimum-ids']; echo stripslashes($str); ?>" /><?php _e( "Minimum number of posts in tags/categories to be shown in drop-down menu", "wptouch" ); ?></li> -->
 				</ul>
 
-				<br />
+				<br /><br />
 
 				<ul class="wptouch-make-li-italic">
 
@@ -125,6 +136,7 @@
 						<label for="enable-excerpts"><?php _e( "Hide Excerpts", "wptouch" ); ?></label>
 					</li>
 				</ul>
+				<br /><br />
 				<ul class="wptouch-make-li-italic">
 					<li><input type="text" class="no-right-margin footer-msg" name="custom-footer-msg" value="<?php $str = $wptouch_settings['custom-footer-msg']; echo stripslashes($str); ?>" /><?php _e( "Footer message", "wptouch" ); ?></li>
 				</ul>

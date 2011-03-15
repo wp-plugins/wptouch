@@ -42,6 +42,10 @@ For more information visit http://www.bravenewcode.com/wptouch-pro
 
 == Changelog ==
 
+= Version 1.9.25 =
+* Fixed: For good! Category exclusion problem is a 3.1 bug (http://core.trac.wordpress.org/ticket/16622), workaround implemented
+* Changed: Cleaned up both category and tag exclusion logic as a result, everything should be working fine
+
 = Version 1.9.24 =
 * FIxed: Re-wrote category and tag exclusion code
 * Fixed: repaired code causing php warning items found in debug

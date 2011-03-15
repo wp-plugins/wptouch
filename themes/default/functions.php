@@ -11,36 +11,13 @@ function wptouch_exclude_category( $query ) {
 		$new_cats = array();
 		
 		foreach( $cats as $cat ) {
-			$new_cats[] = trim( '-' . $cat );
+			$new_cats[] = trim( $cat );
 		}
 	
-		$excluded = implode( ',',  $new_cats );
-		$query->set( 'cat', $excluded );
+		$query->set( 'category__not_in', $new_cats );
 	}
 	
 	return $query;
-}
-
-function wptouch_excluded_cat_IDs() {
-	$cats = wptouch_excluded_cats();
-	$icats = explode( ",", $cats );
-	$new_cats = array();
-	foreach( $icats as $icat ) {
-		$new_cats[] = trim( '-' . $icat );
-	}
-	$cats = implode( ",",  $new_cats );
-	return $cats;
-}
-
-function wptouch_excluded_cat_list() {
-	$cats = wptouch_excluded_cats();
-	$icats = explode( ",", $cats );
-	$new_cats = array();
-	foreach( $icats as $icat ) {
-		$new_cats[] = trim( $icat );
-	}
-	$cats = implode( ",",  $new_cats );
-	return $cats;
 }
 
 add_filter('pre_get_posts', 'wptouch_exclude_category');
@@ -55,30 +32,16 @@ function wptouch_exclude_tags( $query ) {
 		$new_tags = array();
 		
 		foreach( $tags as $tag ) {
-			$new_tags[] = trim ( $tag );
+			$new_tags[] = trim( $tag );
 		}
 	
-		$excluded = implode( ',',  $new_tags );
 		$query->set( 'tag__not_in', $new_tags );
 	}
 	
 	return $query;
 }
 
-function wptouch_excluded_tag_IDs() {
-	$tags = wptouch_excluded_tags();
-	$itags = explode( ",", $tags );
-	$new_tags = array();
-	foreach( $itags as $tag ) {
-		$new_tags[] = trim( $tag );
-	}
-	
-	$tags = implode( ",",  $new_tags );
-	return $tags;
-}
-
 add_filter('pre_get_posts', 'wptouch_exclude_tags');
-
 
 //---------------- Custom Excerpts Function ----------------//
 function wptouch_trim_excerpt($text) {
