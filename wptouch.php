@@ -258,6 +258,15 @@ function wptouch_ajax_handler() {
 
 add_action( 'init', 'wptouch_ajax_handler' );
 
+function bnc_wptouch_get_exclude_user_agents() {
+	$user_agents = array(
+        'SCH-I800',
+        'Xoom'	
+	);
+	
+	return apply_filters( 'wptouch_exclude_user_agents', $user_agents );
+}
+
 function bnc_wptouch_get_user_agents() {
 	$useragents = array(		
 		"iPhone",  				 // Apple iPhone
@@ -528,11 +537,23 @@ class WPtouchPlugin {
 		// print_r($container); 
 		$this->applemobile = false;
 		$useragents = bnc_wptouch_get_user_agents();
+		$exclude_agents = bnc_wptouch_get_exclude_user_agents();
 		$devfile =  compat_get_plugin_dir( 'wptouch' ) . '/include/developer.mode';
 		foreach ( $useragents as $useragent ) {
 			if ( preg_match( "#$useragent#i", $container ) || file_exists( $devfile ) ) {
 				$this->applemobile = true;
+				break;
 			} 	
+			
+		}
+		
+		if ( $this->applemobile && !file_exists( $dev_file ) ) {
+			foreach( $exclude_agents as $agent ) {
+				if ( preg_match( "#$agent#i", $container ) ) {	
+					$this->applemobile = false;
+					break;
+				}
+			}
 		}
 	}
 

@@ -43,6 +43,7 @@ For more information visit http://www.bravenewcode.com/wptouch-pro
 == Changelog ==
 
 = Version 1.9.25 =
+* Added: User-agent exclusion for Xoom and SCH-I800 tablet devices
 * Fixed: For good! Category exclusion problem is a 3.1 bug (http://core.trac.wordpress.org/ticket/16622), workaround implemented
 * Changed: Cleaned up both category and tag exclusion logic as a result, everything should be working fine
 
