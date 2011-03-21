@@ -42,6 +42,11 @@ For more information visit http://www.bravenewcode.com/wptouch-pro
 
 == Changelog ==
 
+= Version 1.9.26 =
+* Updated: Japanese translation (thanks to Yamaguchi Kenji)
+* Changed: Minimum # of tags or categories to be shown to 1
+* Added: 	'Googlebot-Mobile' for mobile indexing
+
 = Version 1.9.25 =
 * Added: Exclusion of Motorola Xoom and Galaxy Tab tablet devices
 * Fixed: For good! Category exclusion problem is a 3.1 bug (http://core.trac.wordpress.org/ticket/16622), workaround implemented

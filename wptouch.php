@@ -7,7 +7,7 @@
 	Author URI: http://www.bravenewcode.com
 	Text Domain: wptouch
 	Domain Path: /lang
-	Version: 1.9.25
+	Version: 1.9.26
  
 	# Thanks to ContentRobot and the iWPhone theme/plugin
 	# which the detection feature of the plugin was based on.
@@ -42,7 +42,7 @@
 load_plugin_textdomain( 'wptouch', false, dirname( plugin_basename( __FILE__ ) ) );
 
 global $bnc_wptouch_version;
-$bnc_wptouch_version = '1.9.25';
+$bnc_wptouch_version = '1.9.26';
 
 require_once( 'include/plugin.php' );
 require_once( 'include/compat.php' );
@@ -269,21 +269,23 @@ function bnc_wptouch_get_exclude_user_agents() {
 
 function bnc_wptouch_get_user_agents() {
 	$useragents = array(		
-		"iPhone",  				 // Apple iPhone
-		"iPod", 					 // Apple iPod touch
-		"Android", 			 // 1.5+ Android
-		"dream", 				 // Pre 1.5 Android
-		"CUPCAKE", 			 // 1.5+ Android
-		"blackberry9500",	 // Storm
-		"blackberry9530",	 // Storm
-		"blackberry9520",	 // Storm	v2
-		"blackberry9550",	 // Storm v2
+		"iPhone",  				 	// Apple iPhone
+		"iPod", 						 // Apple iPod touch
+		"Android", 			 	// 1.5+ Android
+		"dream", 				 	// Pre 1.5 Android
+		"CUPCAKE", 			 	// 1.5+ Android
+		"blackberry9500",	 	// Storm
+		"blackberry9530",	 	// Storm
+		"blackberry9520",	 	// Storm	v2
+		"blackberry9550",	 	// Storm v2
 		"blackberry 9800",	 // Torch
-		"webOS",				 // Palm Pre Experimental
-		"incognito", 			 // Other iPhone browser
-		"webmate", 			 // Other iPhone browser
-		"s8000", 			 	 // Samsung Dolphin browser
-		"bada" 			 		 // Samsung Dolphin browser
+		"webOS",					 // Palm Pre Experimental
+		"incognito", 				 // Other iPhone browser
+		"webmate", 				 // Other iPhone browser
+		"s8000", 				 	 // Samsung Dolphin browser
+		"bada",				 		 // Samsung Dolphin browser
+		"Googlebot-Mobile"	// the Google mobile crawler
+
 	);
 	
 	$settings = bnc_wptouch_get_settings();
