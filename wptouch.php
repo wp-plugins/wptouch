@@ -284,7 +284,7 @@ function bnc_wptouch_get_user_agents() {
 		"webmate", 				 // Other iPhone browser
 		"s8000", 				 	 // Samsung Dolphin browser
 		"bada",				 		 // Samsung Dolphin browser
-		"Googlebot-Mobile"	// the Google mobile crawler
+		"Googlebot-Mobile"	 // the Google mobile crawler
 
 	);
 	
