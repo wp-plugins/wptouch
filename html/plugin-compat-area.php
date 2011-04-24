@@ -16,8 +16,10 @@
 						echo sprintf( __( 'WPtouch %s support: ', 'wptouch' ), $bnc_wptouch_version );
 						if ($version > 3.1) {
 							echo sprintf(__( "%sUnverified%s", "wptouch" ), '<span class="caution">','</span>');
+						} elseif ($version >= 2.9) {
+							echo sprintf(__( "%sSupported.%s", "wptouch" ), '<span class="go">','</span>');
 						} elseif ($version >= 2.8) {
-							echo sprintf(__( "%sSupported%s", "wptouch" ), '<span class="go">','</span>');
+							echo sprintf(__( "%sSupported, upgrade recommended.%s", "wptouch" ), '<span class="go">','</span>');
 						} else {
 							echo sprintf(__( "%sUnsupported. Upgrade Required.%s", "wptouch" ), '<span class="red">','</span>');
 						} 

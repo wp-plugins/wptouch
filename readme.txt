@@ -1,13 +1,13 @@
 === Plugin Name ===
 Contributors: BraveNewCode, duanestorey, dalemugford
 Plugin Name: WPtouch
-Plugin URI: http://www.bravenewcode.com/wptouch
-Author: BraveNewCode
+Plugin URI: http://wordpress.org/extend/plugins/wptouch/
+Author: BraveNewCode Inc.
 Author URI: http://www.bravenewcode.com/
 Tags: wptouch, iphone, ipod, theme, apple, mac, bravenewcode, ajax, mobile, android, blackberry, smartphone, 
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=paypal%40bravenewcode%2ecom&item_name=WPtouch%20Beer%20Fund&no_shipping=0&no_note=1&tax=0&currency_code=CAD&lc=CA&bn=PP%2dDonationsBF&charset=UTF%2d8
-Requires at least: 2.9
-Tested up to: 3.1
+Requires at least: 2.8
+Tested up to: 3.1.1
 Stable tag: 1.9.25
 
 WPtouch: A simple, powerful and elegant mobile theme for your website.
@@ -43,16 +43,18 @@ For more information visit http://www.bravenewcode.com/wptouch-pro
 == Changelog ==
 
 = Version 1.9.26 =
-* Updated: Japanese translation (thanks to Yamaguchi Kenji)
-* Changed: Minimum # of tags or categories to be shown to 1
-* Added: 	'Googlebot-Mobile' for mobile indexing
+
+* Added: 'Googlebot-Mobile' for mobile indexing
+* Changed: Updated Japanese translation (thanks to Yamaguchi Kenji)
+* Changed: Optimized categories/tags listings queries
 
 = Version 1.9.25 =
+
 * Added: Exclusion of Motorola Xoom and Galaxy Tab tablet devices
-* Fixed: For good! Category exclusion problem is a 3.1 bug (http://core.trac.wordpress.org/ticket/16622), workaround implemented
 * Changed: Cleaned up both category and tag exclusion logic, removed unneeded functions
 
 = Version 1.9.24 =
+
 * FIxed: Re-wrote category and tag exclusion code
 * Fixed: repaired code causing php warning items found in debug
 * Updated: wptouch.pot language file
@@ -72,6 +74,7 @@ For more information visit http://www.bravenewcode.com/wptouch-pro
 * Fixed additional switch link issue found after 1.9.22 (now handles www.domain.com and domain.com, along with http:// and https://)
 
 = Version 1.9.22 =
+
 * Added Basque translation courtesy of Ander Erguin
 * Added Japanese translation courtesy of Kenji Yamaguchi
 * Experimental LiveFyre commenting support
@@ -84,11 +87,13 @@ For more information visit http://www.bravenewcode.com/wptouch-pro
 * Updates for admin panel
 
 = Version 1.9.21.1 =
+
 * Fixed: Bug with footer switch link (ampersand issue)
 * Fixed: Bug with footer switch link (cookie issue)
 * Fixed: Bug with login on some devices
 
 = Version 1.9.21 =
+
 * Added: touchstart JavaScript for supported devices (speeds up interface responsiveness)
 * Changed: More style adjustments in a few places, better Android compatibility
 * Fixed: An issue which could output site urls on single posts
@@ -97,6 +102,7 @@ For more information visit http://www.bravenewcode.com/wptouch-pro
 * Fixed: An issue that prevented login from the header
 
 = Version 1.9.20 =
+
 * Added: Option to disable comments on posts completely in WPtouch
 * Fixed: Issues with WordTwit and GigPress drop-downs
 * FIxed: An issue with French text appearing in non-french installs
@@ -105,6 +111,7 @@ For more information visit http://www.bravenewcode.com/wptouch-pro
 * Updated: Screenshots
 
 = Version 1.9.19.5 =
+
 * Added: IMPORTANT: Security nonce and additional security check (thanks to Julio from http://Boiteaweb.fr for testing)
 * Changed: Improved header forms in theme
 * Changed: Minor styling improvements in theme
@@ -112,19 +119,23 @@ For more information visit http://www.bravenewcode.com/wptouch-pro
 * Changed: Other admin improvements
 
 = Version 1.9.19.4 =
+
 * More fixes for siteurl, url, home etc. for depreciation
 
 = Version 1.9.19.3 =
+
 * Fixed: Bug with YouTube & Vimeo videos
 * Fixed: Bug with posting comments on some installations
 
 = Version 1.9.19.2 =
+
 * Fixed: Changed references of 'siteurl' and 'home' to url, siteurl & home are depreciated in bloginfo()
 * Fixed: Other minor code warnings
 * Changed: Enhanced comment-bubbles on posts for iPhone/iPod using CSS.
 * Other improved styling
 
 = Version 1.9.19.1 =
+
 * Fixed: Localization changes and updates, including missing translatable text
 * Added: French localization
 * Added: Ability to change languages
@@ -133,12 +144,14 @@ For more information visit http://www.bravenewcode.com/wptouch-pro
 * Changed: Enqueue for admin js files
 
 = Version 1.9.19 =
+
 * Added: Compat for Share and Follow plugin
 * Added: Missing localization code, .pot file for translations (submit yours to translation@wptouch.com)
 * Fixed: Cleaned up unused code, empty strings
 * Changed: Optimized some assets
 
 = Versions 1.9.15 - 1.9.18 =
+
 * Added Samsung s8000, Bada device user agents (Dolphin Browser)
 * Added Blackberry Storm V2 user agents
 * Added Blackberry Torch user agent
@@ -154,6 +167,7 @@ For more information visit http://www.bravenewcode.com/wptouch-pro
 * More image optimizations and file size reductions
 
 = Version 1.9.14 =
+
 * Added ability to customize the footer copyright message
 * Added credit to Marcelo Marfil for his icons
 * Added official WordPress 3.0 compatibility
@@ -168,12 +182,14 @@ For more information visit http://www.bravenewcode.com/wptouch-pro
 * Updated copy, minor edits in a few places
 
 = Version 1.9.13 =
+
 * Removed application Twitter links on single post page, replaced with post to m.twitter.com
 * Added filter for whydowork plugin ads (to prefer native Adsense in WPtouch)
 * Attempted new fix for YouTube overtop menu bug, it's a mobile browser issue (can't fix)
 * Minor styling fixes and adjustments
 
 = Version 1.9.12 =
+
 * Fixes login to admin through mobile device bug
 * Fixes issue where mobile theme may be shown to desktop users (non-cache related)
 * Fixes issue where YouTube videos are on top of menus, other content
@@ -206,7 +222,6 @@ For more information visit http://www.bravenewcode.com/wptouch-pro
 * Added cache manifest file for speedier browsing on supported servers and devices
 * Added automatic WP Super Cache detection and configuration for the upcoming version of WP Super Cache
 
-
 = Version 1.9.9.8 =
 
 * Fixes admin panel not working or broken for some users
@@ -228,6 +243,7 @@ For more information visit http://www.bravenewcode.com/wptouch-pro
 * Minor spelling fixes
 
 = Version 1.9.9.5 =
+
 * Made changes to the way ajax uploads are handled
 * Updated and fixed JS error in ajax_upload.js file
 * Fixed more GigPress CSS issues
@@ -235,6 +251,7 @@ For more information visit http://www.bravenewcode.com/wptouch-pro
 * Only loading the ajax_comments.js on the single post pages now
 
 = Version 1.9.9.4 =
+
 * Updated and edited admin verbiage
 * Added remove action for Google Libraries plugin (for compatibility)
 * Added remove action for GigPress CSS
@@ -242,8 +259,8 @@ For more information visit http://www.bravenewcode.com/wptouch-pro
 * Changed javascript handlers
 * Misc tweaks and fixes
 
-
 = Version 1.9.9.3 =
+
 * Theme CSS fixes and revisions
 * Updated outdated links in the admin panel
 * Updated outdated text in the admin panel
@@ -252,6 +269,7 @@ For more information visit http://www.bravenewcode.com/wptouch-pro
 
 
 = Version 1.9.9.2 =
+
 * Updated user agents for Opera Mini and Palm Pre ('mini' and 'pre')
 * Removed orphaned code relating to ajax comments option
 * Changed date/time parsing for WordTwit integration
@@ -303,7 +321,6 @@ For more information visit http://www.bravenewcode.com/wptouch-pro
 
 * Attempted fix for broken post thumbs reflections on Android. Now reflections only show for iPhone/iPod
 
-
 = Version 1.9.7.6 =
 
 * Minor administration changes
@@ -320,7 +337,6 @@ For more information visit http://www.bravenewcode.com/wptouch-pro
 * Added style option to choose the font of H2 elements on post listings, single entries and pages
 * Various style & code improvements and fixes
 
-
 = Version 1.9.6 =
 
 * Fixed php logic in adsense-new.php (thx JeanPaulH)
@@ -332,7 +348,6 @@ For more information visit http://www.bravenewcode.com/wptouch-pro
 * Updated admin settings image
 * Fixed cutoff tweets from WordTwit in the drop-down
 * Verified WP 2.9 compatibility
-
 
 = Version 1.9.5 =
 
@@ -370,7 +385,6 @@ For more information visit http://www.bravenewcode.com/wptouch-pro
 * Compressed style.css in theme for faster load times
 * Removed unused files
 
-
 = Versions 1.9.3.x =
 
 * Fixed issues with adsense ads
@@ -394,7 +408,6 @@ For more information visit http://www.bravenewcode.com/wptouch-pro
 * Possible fix for time since on comments not working in some situations
 * Added option to disable Ajax comments for those who can't get them working
 
-
 = Versions 1.9.2.x =
 
 * Fixed issue where mobile switch to regular theme was always zoomed in and required refresh
@@ -406,7 +419,6 @@ For more information visit http://www.bravenewcode.com/wptouch-pro
 * Now WPtouch will not hide mobileSafari addressbar on single post pages on slower connections
 * Fixed bug where WPtouch admin would report that CURL wasn't installed even if it was
 
-
 = Version 1.9.1 =
 
 * Fixed bug for admin panel Ajax not working in some situations
@@ -415,7 +427,6 @@ For more information visit http://www.bravenewcode.com/wptouch-pro
 * Push Notification options now announces if Curl is not available, instead of not appearing at all
 * Removed text-size adjust option, now replaced with user-adjustable font sizes
 * Minor code corrections
-
 
 = Version 1.9 =
 
@@ -702,6 +713,6 @@ Not bloody likely! Unless of course you're getting slammed with all sorts of tra
 3. Drop down menu navigation
 4. WordTwit plugin Twitter integration
 5. Push Messaging
-6. Search
+6. Account log in
 7. Single post page post meta, options bar, comments
 8. Sample regular page

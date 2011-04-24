@@ -71,13 +71,13 @@ include( dirname(__FILE__) . '/../core/core-header.php' );
 	
 	    	    <?php if (bnc_is_cats_button_enabled()) { ?>
 					<ul id="head-cats">
-		  	 			<?php bnc_get_ordered_cat_list(); ?>
+		  	 			<?php bnc_get_ordered_cat_list( 35 ); ?>
 					</ul>
 				<?php } ?>
 	
 	    	    <?php if (bnc_is_tags_button_enabled()) { ?>
 					<ul id="head-tags">
-						<li><?php wptouch_ordered_tag_list(); ?></li>
+						<li><?php wptouch_ordered_tag_list( 35 ); ?></li>
 					</ul>
 				<?php } ?>
 
