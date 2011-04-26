@@ -513,7 +513,7 @@ class WPtouchPlugin {
 			
 			if ( isset( $_GET['wptouch_redirect'] ) ) {
 				$protocol = ($_SERVER['HTTPS'] == 'on') ? 'https://' : 'http://';
-				$redirect_location = $protocol . $_SERVER['HTTP_HOST'] . $_GET['wptouch_redirect'];
+				$redirect_location = $protocol . $_SERVER['SERVER_NAME'] . $_GET['wptouch_redirect'];
 			}
 			
 			header( 'Location: ' . $redirect_location );
