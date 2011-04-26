@@ -1,7 +1,7 @@
 <?php
 /*
    Plugin Name: WPtouch
-   Plugin URI: http://www.bravenewcode.com/wptouch
+   Plugin URI: http://wordpress.org/extend/plugins/wptouch/
 	Description: A plugin which formats your site with a mobile theme for visitors on Apple <a href="http://www.apple.com/iphone/">iPhone</a> / <a href="http://www.apple.com/ipodtouch/">iPod touch</a>, <a href="http://www.android.com/">Google Android</a>, <a href="http://www.blackberry.com/">Blackberry Storm and Torch</a>, <a href="http://www.palm.com/us/products/phones/pre/">Palm Pre</a> and other touch-based smartphones.
 	Author: Dale Mugford & Duane Storey (BraveNewCode Inc.)
 	Author URI: http://www.bravenewcode.com
@@ -17,8 +17,7 @@
 	# the Push notification additions.
 	# (http://codework.dk/referencer/wp-plugins/prowl-me/)
 
-	# All Admin and theme design is Copyright (c) 2008 - 2010
-	# BraveNewCode Inc.
+	# Copyright (c) 2008 - 2011 BraveNewCode Inc.
 
 	# 'WPtouch' is an unregistered trademark of BraveNewCode Inc., 
 	# and may not be used in conjuction with any redistribution 
@@ -502,7 +501,7 @@ class WPtouchPlugin {
 
 	function bnc_filter_iphone() {	
 		$key = 'wptouch_switch_toggle';
-		$time = time()+60*60*24*365;
+		$time = time()+60*60*24*365; // one year
 		$url_path = '/';
 
 	   if (isset($_GET['wptouch_view'])) {
@@ -525,7 +524,7 @@ class WPtouchPlugin {
 		if (isset($_COOKIE[$key])) {
 			$this->desired_view = $_COOKIE[$key];
 		} else {
-			if ( $settings['enable-regular-default'] ) {
+			if ( $settings['enable-regular-default'] || defined( 'XMLRPC_REQUEST' ) || defined( 'APP_REQUEST' ) ) {
 				$this->desired_view = 'normal';
 			} else {
 		  		$this->desired_view = 'mobile';

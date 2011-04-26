@@ -15,7 +15,7 @@
 			 		<div id="css-info" style="display:none">
 					<h2><?php _e( "More Info", "wptouch" ); ?></h2>
 					<p><?php _e( "You may enter a custom css file link easily. Simply add the full link to the css file like this:", "wptouch" ); ?></p>
-					<p><?php _e( "<code>&lt;link rel=&quot;stylesheet&quot; src=&quot;http://path-to-my-css-file&quot; type=&quot;text/css&quot; media=&quot;screen&quot; /&gt;</code>", "wptouch" ); ?></p>
+					<p><?php _e( "<code>&lt;style type=&quot;text/css&quot;&gt;#mydiv { color: red; }&lt;/style&gt;</code>", "wptouch" ); ?></p>
 				</div>
 
 			</div><!-- left content -->

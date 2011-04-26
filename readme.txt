@@ -45,8 +45,12 @@ For more information visit http://www.bravenewcode.com/wptouch-pro
 = Version 1.9.26 =
 
 * Added: 'Googlebot-Mobile' for mobile indexing
+* Added: lang attribute to head tag
 * Changed: Updated Japanese translation (thanks to Yamaguchi Kenji)
 * Changed: Optimized categories/tags listings queries
+* Added Dougal's fix for XMLRPC / App requests via WordPress for iOS
+* Fix for switch link edge case issue
+
 
 = Version 1.9.25 =
 
