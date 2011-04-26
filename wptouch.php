@@ -269,21 +269,21 @@ function bnc_wptouch_get_exclude_user_agents() {
 function bnc_wptouch_get_user_agents() {
 	$useragents = array(		
 		"iPhone",  				 	// Apple iPhone
-		"iPod", 						 // Apple iPod touch
+		"iPod", 						// Apple iPod touch
+		"incognito", 				// Other iPhone browser
+		"webmate", 				// Other iPhone browser
 		"Android", 			 	// 1.5+ Android
 		"dream", 				 	// Pre 1.5 Android
 		"CUPCAKE", 			 	// 1.5+ Android
 		"blackberry9500",	 	// Storm
 		"blackberry9530",	 	// Storm
-		"blackberry9520",	 	// Storm	v2
+		"blackberry9520",	 	// Storm v2
 		"blackberry9550",	 	// Storm v2
-		"blackberry 9800",	 // Torch
-		"webOS",					 // Palm Pre Experimental
-		"incognito", 				 // Other iPhone browser
-		"webmate", 				 // Other iPhone browser
-		"s8000", 				 	 // Samsung Dolphin browser
-		"bada",				 		 // Samsung Dolphin browser
-		"Googlebot-Mobile"	 // the Google mobile crawler
+		"blackberry 9800",	// Torch
+		"webOS",					// Palm Pre Experimental
+		"s8000", 				 	// Samsung Dolphin browser
+		"bada",				 		// Samsung Dolphin browser
+		"Googlebot-Mobile"	// the Google mobile crawler
 
 	);
 	
@@ -540,6 +540,7 @@ class WPtouchPlugin {
 		$useragents = bnc_wptouch_get_user_agents();
 		$exclude_agents = bnc_wptouch_get_exclude_user_agents();
 		$devfile =  compat_get_plugin_dir( 'wptouch' ) . '/include/developer.mode';
+
 		foreach ( $useragents as $useragent ) {
 			if ( preg_match( "#$useragent#i", $container ) || file_exists( $devfile ) ) {
 				$this->applemobile = true;
@@ -547,8 +548,8 @@ class WPtouchPlugin {
 			} 	
 			
 		}
-		
-		if ( $this->applemobile && !file_exists( $dev_file ) ) {
+
+		if ( $this->applemobile && !file_exists( $devfile ) ) {
 			foreach( $exclude_agents as $agent ) {
 				if ( preg_match( "#$agent#i", $container ) ) {	
 					$this->applemobile = false;
