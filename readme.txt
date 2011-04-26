@@ -8,13 +8,13 @@ Tags: wptouch, iphone, ipod, theme, apple, mac, bravenewcode, ajax, mobile, andr
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=paypal%40bravenewcode%2ecom&item_name=WPtouch%20Beer%20Fund&no_shipping=0&no_note=1&tax=0&currency_code=CAD&lc=CA&bn=PP%2dDonationsBF&charset=UTF%2d8
 Requires at least: 2.9
 Tested up to: 3.1.1
-Stable tag: 1.9.25
+Stable tag: 1.9.26
 
 WPtouch: A simple, powerful and elegant mobile theme for your website.
 
 WPtouch automatically transforms your WordPress blog into an iPhone application-style theme, complete with ajax loading articles and effects, when viewed from an iPhone, iPod touch, Android, Opera Mini, Palm Pre and BlackBerry Storm mobile devices.
 
-*Now includes .pot file for translations (submit yours to translation@wptouch.com)*
+*Now includes .pot file for translations (submit yours @ http://www.bravenwcode.com/contact)*
 
 *Now Available: WPtouch Pro!*
 Totally re-written top to bottom, with a slew of new features like more style, color and branding customizations, themes, 10 languages, more advertising options, Web-App mode, and more!
