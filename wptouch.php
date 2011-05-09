@@ -1,47 +1,34 @@
 <?php
 /*
-   Plugin Name: WPtouch
-   Plugin URI: http://wordpress.org/extend/plugins/wptouch/
-	Description: A plugin which formats your site with a mobile theme for visitors on Apple <a href="http://www.apple.com/iphone/">iPhone</a> / <a href="http://www.apple.com/ipodtouch/">iPod touch</a>, <a href="http://www.android.com/">Google Android</a>, <a href="http://www.blackberry.com/">Blackberry Storm and Torch</a>, <a href="http://www.palm.com/us/products/phones/pre/">Palm Pre</a> and other touch-based smartphones.
-	Author: Dale Mugford & Duane Storey (BraveNewCode Inc.)
-	Author URI: http://www.bravenewcode.com
-	Text Domain: wptouch
-	Domain Path: /lang
-	Version: 1.9.26
- 
-	# Thanks to ContentRobot and the iWPhone theme/plugin
-	# which the detection feature of the plugin was based on.
-	# (http://iwphone.contentrobot.com/)
+Plugin Name: WPtouch
+Plugin URI: http://wordpress.org/extend/plugins/wptouch/
+Version: 1.9.27
+Description: A plugin which formats your site with a mobile theme for visitors on Apple <a href="http://www.apple.com/iphone/">iPhone</a> / <a href="http://www.apple.com/ipodtouch/">iPod touch</a>, <a href="http://www.android.com/">Google Android</a>, <a href="http://www.blackberry.com/">Blackberry Storm and Torch</a>, <a href="http://www.palm.com/us/products/phones/pre/">Palm Pre</a> and other touch-based smartphones.
+Author: BraveNewCode Inc.
+Author URI: http://www.bravenewcode.com
+Text Domain: wptouch
+Domain Path: /lang
+License: GNU General Public License 2.0 (GPL) http://www.gnu.org/licenses/gpl.html
 
-	# Also thanks to Henrik Urlund, who's "Prowl Me" plugin inspired
-	# the Push notification additions.
-	# (http://codework.dk/referencer/wp-plugins/prowl-me/)
+# Thanks to ContentRobot and the iWPhone theme/plugin
+# which the detection feature of the plugin was based on.
+# (http://iwphone.contentrobot.com/)
 
-	# Copyright (c) 2008 - 2011 BraveNewCode Inc.
+# Also thanks to Henrik Urlund, who's "Prowl Me" plugin inspired
+# the Push notification additions.
+# (http://codework.dk/referencer/wp-plugins/prowl-me/)
 
-	# 'WPtouch' is an unregistered trademark of BraveNewCode Inc., 
-	# and may not be used in conjuction with any redistribution 
-	# of this software without express prior permission from BraveNewCode Inc.	
+# Copyright (c) 2008 - 2011 BraveNewCode Inc.
 
-	# This program is free software; you can redistribute it and/or
-	# modify it under the terms of the GNU General Public License
-	# as published by the Free Software Foundation; either version 2
-	# of the License, or (at your option) any later version.
-
-	# This program is distributed in the hope that it will be useful,
-	# but WITHOUT ANY WARRANTY; without even the implied warranty of
-	# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-	# GNU General Public License for more details.
-
-	# You should have received a copy of the GNU General Public License
-	# along with this program; if not, write to the Free Software
-	# Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+# 'WPtouch' is an unregistered trademark of BraveNewCode Inc., 
+# and may not be used in conjuction with any redistribution 
+# of this software without express prior permission from BraveNewCode Inc.	
 */
 
 load_plugin_textdomain( 'wptouch', false, dirname( plugin_basename( __FILE__ ) ) );
 
 global $bnc_wptouch_version;
-$bnc_wptouch_version = '1.9.26';
+$bnc_wptouch_version = '1.9.27';
 
 require_once( 'include/plugin.php' );
 require_once( 'include/compat.php' );

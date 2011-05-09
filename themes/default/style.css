@@ -155,7 +155,7 @@ blockquote {
 	margin-right: auto;
 }
 
-.post object, .post embed, .post video, .post iframe {
+.post object, .post embed, .post video {
 	width: 100% !important;
 	height: auto;
 	max-height: 280px;
