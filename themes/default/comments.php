@@ -36,8 +36,8 @@
 											<?php if (is_single()) { ?>
 												<span><?php wptouch_moderate_comment_link(get_comment_ID()); ?></span>
 											<?php } ?>
-											<?php if (function_exists('time_since')) { 
-												echo time_since(abs(strtotime($comment->comment_date_gmt . " GMT")), time()) . " " . __( 'ago', 'wptouch' ); } else { the_time('F jS, Y'); 
+											<?php if (function_exists('wptouch_time_since')) { 
+												echo wptouch_time_since(abs(strtotime($comment->comment_date_gmt . " GMT")), time()) . " " . __( 'ago', 'wptouch' ); } else { the_time('F jS, Y'); 
 											} ?>	
 										</div>									
 

@@ -67,7 +67,7 @@ function wptouch_trim_excerpt($text) {
 
 //---------------- Custom Time Since Function ----------------//
 
-function time_since($older_date, $newer_date = false)
+function wptouch_time_since($older_date, $newer_date = false)
 	{
 	// array of time period chunks
 	$chunks = array(
