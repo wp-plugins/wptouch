@@ -82,7 +82,6 @@
 				<ul class="wptouch-make-li-italic">			
 				<li><input name="excluded-cat-ids" class="no-right-margin" type="text" value="<?php $str = $wptouch_settings['excluded-cat-ids']; echo stripslashes($str); ?>" /><?php _e( "Comma list of Category IDs, eg: 1,2,3", "wptouch" ); ?></li>
 				<li><input name="excluded-tag-ids" class="no-right-margin" type="text" value="<?php $str = $wptouch_settings['excluded-tag-ids']; echo stripslashes($str); ?>" /><?php _e( "Comma list of Tag IDs, eg: 1,2,3", "wptouch" ); ?></li>
-				<!-- <li><input name="minimum-ids" class="no-right-margin" type="text" value="<?php $str = $wptouch_settings['minimum-ids']; echo stripslashes($str); ?>" /><?php _e( "Minimum number of posts in tags/categories to be shown in drop-down menu", "wptouch" ); ?></li> -->
 				</ul>
 
 				<br /><br />

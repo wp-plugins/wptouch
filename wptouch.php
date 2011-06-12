@@ -192,7 +192,7 @@ function wp_touch_get_comment_count() {
 	
 // WPtouch WP Thumbnail Support
 	if ( function_exists( 'add_theme_support' ) ) { // Added in 2.9
-		add_theme_support( 'post-thumbnails'); // Add it for posts
+		add_theme_support( 'post-thumbnails' ); // Add it for posts
 }
 
 //Add a link to 'Settings' on the plugin listings page
@@ -619,7 +619,7 @@ function wptouch_switch() {
 }
   
 function bnc_options_menu() {
-	add_options_page( __( 'WPtouch iPhone Theme', 'wptouch' ), 'WPtouch', 9, __FILE__, 'bnc_wp_touch_page' );
+	add_options_page( __( 'WPtouch Options', 'wptouch' ), 'WPtouch', 'manage_options', __FILE__, 'bnc_wp_touch_page' );
 }
 
 function bnc_wptouch_get_settings() {
