@@ -45,7 +45,7 @@ For more information visit http://www.bravenewcode.com/wptouch-pro
 = Version 1.9.27 =
 * Fixed: time_since() function naming conflict
 * Fixed: Fixed bug with reset settings
-* Fixed: 
+* Fixed: Depreciated user level reference removed
 
 = Version 1.9.26 =
 
