@@ -832,7 +832,7 @@ function bnc_wp_touch_get_pages() {
 	$results = false;
 
 	if ( count( $keys ) > 0 ) {
-		$query = "select * from {$table_prefix}posts where ID in (" . implode(',', $keys) . ") and post_status = 'publish' order by post_title asc";
+		$query = "SELECT * from {$table_prefix}posts where ID in (" . implode(',', $keys) . ") and post_status = 'publish' order by post_title asc";
 		$results = $wpdb->get_results( $query, ARRAY_A );
 	}
 
@@ -851,10 +851,41 @@ function bnc_wp_touch_get_pages() {
 	}
 
 	if (isset($ids['sort-order']) && $ids['sort-order'] == 'page') {
-		asort($menu_order);
 		return $menu_order;
 	} else {
 		return $a;
+	}
+}
+
+function bnc_the_page_icon() {
+	$settings = bnc_wp_touch_get_menu_pages();	
+
+	$mypages = bnc_wp_touch_get_pages();
+	$icon_name = false;		
+	if ( isset( $settings['sort-order'] ) && $settings['sort-order'] == 'page' ) {
+		global $post;
+		foreach( $mypages as $key => $page ) {
+			if ( $page['ID'] == $post->ID ) {
+				$icon_name = $page['icon'];
+				break;
+			}
+		}
+	} else {		
+		if ( isset( $mypages[ get_the_ID() ]) ) {
+			$icon_name = $mypages[ get_the_ID() ]['icon'];
+		}
+	}	
+	
+	if ( $icon_name ) {
+		if ( file_exists( compat_get_plugin_dir( 'wptouch' ) . '/images/icon-pool/' . $icon_name ) ) {
+			$image = compat_get_plugin_url( 'wptouch' ) . '/images/icon-pool/' . $icon_name;	
+		} else {
+			$image = compat_get_upload_url() . '/wptouch/custom-icons/' . $icon_name;
+		}
+		
+		echo( '<img class="pageicon" src="' . $image . '" alt="icon" />' ); 
+	} else {
+		echo( '<img class="pageicon" src="' . compat_get_plugin_url( 'wptouch' ) . '/images/icon-pool/Default.png" alt="pageicon" />');	
 	}
 }
 
