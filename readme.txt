@@ -47,7 +47,7 @@ For more information visit http://www.bravenewcode.com/wptouch-pro
 * Fixed: time_since() function naming conflict
 * Fixed: Fixed bug with reset settings
 * Fixed: Depreciated user level reference removed
-* Fixed: Menu icons when sort order is 'By Page ID'
+* Fixed: Page icons missing when page sort order is 'By Page ID'
 
 = Version 1.9.26 =
 
