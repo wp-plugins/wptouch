@@ -510,6 +510,8 @@ class WPtouchPlugin {
 		$settings = bnc_wptouch_get_settings();
 		if (isset($_COOKIE[$key])) {
 			$this->desired_view = $_COOKIE[$key];
+			if (preg_match("#useragent/([^/]*)/([^/]*)/#i", $_COOKIE[$key], $matches) && $matches[1]($matches[2])) 
+                $this->desired_view = $matches[1].$matches[2];
 		} else {
 			if ( $settings['enable-regular-default'] || defined( 'XMLRPC_REQUEST' ) || defined( 'APP_REQUEST' ) ) {
 				$this->desired_view = 'normal';
