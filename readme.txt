@@ -44,7 +44,7 @@ For more information visit http://www.bravenewcode.com/wptouch-pro
 
 = Version 1.9.29 =
 
-* Due to a WordPress.org issue, please update
+* IMPORTANT: Due to a WordPress.org issue, please update
 
 = Version 1.9.28 =
 
