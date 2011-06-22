@@ -499,8 +499,16 @@ class WPtouchPlugin {
 			}
 			
 			if ( isset( $_GET['wptouch_redirect'] ) ) {
-				$protocol = ($_SERVER['HTTPS'] == 'on') ? 'https://' : 'http://';
-				$redirect_location = $protocol . $_SERVER['SERVER_NAME'] . $_GET['wptouch_redirect'];
+				if ( isset( $_GET['wptouch_redirect_nonce'] ) ) {
+					$nonce = $_GET['wptouch_redirect_nonce'];
+					if ( !wp_verify_nonce( $nonce, 'wptouch_redirect' ) ) {
+						_e( 'Nonce failure', 'wptouch' );
+						die;
+					}
+
+					$protocol = ( $_SERVER['HTTPS'] == 'on') ? 'https://' : 'http://';
+					$redirect_location = $protocol . $_SERVER['SERVER_NAME'] . $_GET['wptouch_redirect'];
+				} 
 			}
 			
 			header( 'Location: ' . $redirect_location );
@@ -613,7 +621,7 @@ function wptouch_switch() {
 	if ( bnc_is_iphone() && $wptouch_plugin->desired_view == 'normal' ) {
 		echo '<div id="wptouch-switch-link">';
 		_e( "Mobile Theme", "wptouch" ); 
-		echo "<a onclick=\"document.getElementById('switch-on').style.display='block';document.getElementById('switch-off').style.display='none';\" href=\"" . get_bloginfo('url') . "/?wptouch_view=mobile&wptouch_redirect=" . $_SERVER['REQUEST_URI'] . "\"><img id=\"switch-on\" src=\"" . compat_get_plugin_url( 'wptouch' ) . "/themes/core/core-images/on.jpg\" alt=\"on switch image\" class=\"wptouch-switch-image\" style=\"display:none\" /><img id=\"switch-off\" src=\"" . compat_get_plugin_url( 'wptouch' ) .  "/themes/core/core-images/off.jpg\" alt=\"off switch image\" class=\"wptouch-switch-image\" /></a>";
+		echo "<a onclick=\"document.getElementById('switch-on').style.display='block';document.getElementById('switch-off').style.display='none';\" href=\"" . get_bloginfo('url') . "/?wptouch_view=mobile&wptouch_redirect_nonce=" . wp_create_nonce( 'wptouch_redirect' ) . "&wptouch_redirect=" . $_SERVER['REQUEST_URI'] . "\"><img id=\"switch-on\" src=\"" . compat_get_plugin_url( 'wptouch' ) . "/themes/core/core-images/on.jpg\" alt=\"on switch image\" class=\"wptouch-switch-image\" style=\"display:none\" /><img id=\"switch-off\" src=\"" . compat_get_plugin_url( 'wptouch' ) .  "/themes/core/core-images/off.jpg\" alt=\"off switch image\" class=\"wptouch-switch-image\" /></a>";
  		echo '</div>';
 	}
 }
