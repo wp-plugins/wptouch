@@ -1,5 +1,5 @@
 === Plugin Name ===
-Contributors: BraveNewCode, duanestorey, dalemugford
+Contributors: BraveNewCode
 Plugin Name: WPtouch
 Plugin URI: http://wordpress.org/extend/plugins/wptouch/
 Author: BraveNewCode Inc.
@@ -41,6 +41,10 @@ For more information visit http://www.bravenewcode.com/wptouch-pro
 'WPtouch' and 'WPtouch Pro' are trademarks of BraveNewCode Inc.
 
 == Changelog ==
+
+= Version 1.9.30 =
+
+* Fixed: Added nonces to redirect code
 
 = Version 1.9.29 =
 
