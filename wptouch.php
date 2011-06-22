@@ -491,11 +491,11 @@ class WPtouchPlugin {
 		$time = time()+60*60*24*365; // one year
 		$url_path = '/';
 
-	   if (isset($_GET['wptouch_view'])) {
-	  		if ($_GET['wptouch_view'] == 'mobile') {
-				setcookie($key, 'mobile', $time, $url_path); 
-			} elseif ($_GET['wptouch_view'] == 'normal') {
-				setcookie($key, 'normal', $time, $url_path);
+	   if ( isset( $_GET[ 'wptouch_view'] ) ) {
+	  		if ( $_GET[ 'wptouch_view' ] == 'mobile' ) {
+				setcookie( $key, 'mobile', $time, $url_path ); 
+			} elseif ( $_GET[ 'wptouch_view' ] == 'normal') {
+				setcookie( $key, 'normal', $time, $url_path );
 			}
 			
 			if ( isset( $_GET['wptouch_redirect'] ) ) {
@@ -508,11 +508,11 @@ class WPtouchPlugin {
 
 					$protocol = ( $_SERVER['HTTPS'] == 'on') ? 'https://' : 'http://';
 					$redirect_location = $protocol . $_SERVER['SERVER_NAME'] . $_GET['wptouch_redirect'];
+			
+					header( 'Location: ' . $redirect_location );
+					die;
 				} 
 			}
-			
-			header( 'Location: ' . $redirect_location );
-			die;
 		}
 
 		$settings = bnc_wptouch_get_settings();
