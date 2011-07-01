@@ -4,7 +4,6 @@
 
 /////-- Let's setup our namspace in jQuery -- /////
 var $wpt = jQuery.noConflict();
-var $wptouch = $wpt;
 
 if ( (navigator.platform == 'iPhone' || navigator.platform == 'iPod') && typeof orientation != 'undefined' ) { 
 	var touchStartOrClick = 'touchstart'; 

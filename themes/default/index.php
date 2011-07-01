@@ -24,10 +24,10 @@
 			<div class="archive-top-right">
 				<?php if (bnc_excerpt_enabled()) { ?>
 				<script type="text/javascript">
-					$wptouch(document).ready(function(){
-						$wptouch("a#arrow-<?php the_ID(); ?>").bind( touchStartOrClick, function(e) {
-							$wptouch(this).toggleClass("post-arrow-down");
-							$wptouch('#entry-<?php the_ID(); ?>').wptouchFadeToggle(500);
+					$wpt(document).ready(function(){
+						$wpt("a#arrow-<?php the_ID(); ?>").bind( touchStartOrClick, function(e) {
+							$wpt(this).toggleClass("post-arrow-down");
+							$wpt('#entry-<?php the_ID(); ?>').wptouchFadeToggle(500);
 						});	
 					 });					
 				</script>
@@ -41,10 +41,10 @@
  	<?php } else { ?>	
 				<?php if (bnc_excerpt_enabled()) { ?>
 				<script type="text/javascript">
-					$wptouch(document).ready(function(){
-						$wptouch("a#arrow-<?php the_ID(); ?>").bind( touchStartOrClick, function(e) {
-							$wptouch(this).toggleClass("post-arrow-down");
-							$wptouch('#entry-<?php the_ID(); ?>').wptouchFadeToggle(500);
+					$wpt(document).ready(function(){
+						$wpt("a#arrow-<?php the_ID(); ?>").bind( touchStartOrClick, function(e) {
+							$wpt(this).toggleClass("post-arrow-down");
+							$wpt('#entry-<?php the_ID(); ?>').wptouchFadeToggle(500);
 						});	
 					 });					
 				</script>
@@ -142,7 +142,7 @@
 
 	<div id="call<?php echo md5($_SERVER['REQUEST_URI']); ?>" class="ajax-load-more">
 		<div id="spinner<?php echo md5($_SERVER['REQUEST_URI']); ?>" class="spin"	 style="display:none"></div>
-		<a class="ajax" href="javascript:return false;" onclick="$wptouch('#spinner<?php echo md5($_SERVER['REQUEST_URI']); ?>').fadeIn(200); $wptouch('#ajaxentries<?php echo md5($_SERVER['REQUEST_URI']); ?>').load('<?php echo get_next_posts_page_link(); ?>', {}, function(){ $wptouch('#call<?php echo md5($_SERVER['REQUEST_URI']); ?>').fadeOut();});">
+		<a class="ajax" href="javascript:return false;" onclick="$wpt('#spinner<?php echo md5($_SERVER['REQUEST_URI']); ?>').fadeIn(200); $wpt('#ajaxentries<?php echo md5($_SERVER['REQUEST_URI']); ?>').load('<?php echo get_next_posts_page_link(); ?>', {}, function(){ $wpt('#call<?php echo md5($_SERVER['REQUEST_URI']); ?>').fadeOut();});">
 			<?php _e( "Load more entries...", "wptouch" ); ?>
 		</a>
 	</div>
