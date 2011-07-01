@@ -28,6 +28,12 @@ if ( isset( $_POST['submit'] ) ) {
 		$a['enable-page-coms'] = 0;
 	}
 
+	if ( isset( $_POST['enable-zoom'] ) ) {
+		$a['enable-zoom'] = 1;
+	} else {
+		$a['enable-zoom'] = 0;
+	}
+
 	if ( isset( $_POST['enable-cats-button'] ) ) {
 		$a['enable-cats-button'] = 1;
 	} else {

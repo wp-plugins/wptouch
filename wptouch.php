@@ -42,6 +42,7 @@ $wptouch_defaults = array(
 	'main_title' => 'Default.png',
 	'enable-post-excerpts' => true,
 	'enable-page-coms' => false,
+	'enable-zoom' => false,
 	'enable-cats-button' => true,
 	'enable-tags-button' => true,
 	'enable-search-button' => true,
@@ -722,6 +723,11 @@ function bnc_is_page_coms_enabled() {
 	$ids = bnc_wp_touch_get_menu_pages();
 	return $ids['enable-page-coms'];
 }		
+
+function bnc_is_zoom_enabled() {
+	$ids = bnc_wp_touch_get_menu_pages();
+	return $ids['enable-zoom'];
+}	
 
 function bnc_is_cats_button_enabled() {
 	$ids = bnc_wp_touch_get_menu_pages();
