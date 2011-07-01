@@ -73,18 +73,18 @@ bloginfo('name'); ?>- <?php the_title_attribute();?>&body=<?php _e( "Check out t
 jQuery(document).ready( function() {
 // Ajaxify '#commentform'
 var formoptions = { 
-	beforeSubmit: function() {$wptouch("#loading").fadeIn(400);},
+	beforeSubmit: function() {$wpt("#loading").fadeIn(400);},
 	success:  function() {
-		$wptouch("#commentform").hide();
-		$wptouch("#loading").fadeOut(400);
-		$wptouch("#refresher").fadeIn(400);
+		$wpt("#commentform").hide();
+		$wpt("#loading").fadeOut(400);
+		$wpt("#refresher").fadeIn(400);
 		}, // end success 
 	error:  function() {
-		$wptouch('#errors').show();
-		$wptouch("#loading").fadeOut(400);
+		$wpt('#errors').show();
+		$wpt("#loading").fadeOut(400);
 		} //end error
 	} 	//end options
-$wptouch('#commentform').ajaxForm(formoptions);
+$wpt('#commentform').ajaxForm(formoptions);
 }); //End onReady
 </script>
 <?php endif; ?>
