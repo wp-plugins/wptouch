@@ -43,6 +43,7 @@ For more information visit http://www.bravenewcode.com/wptouch-pro
 == Changelog ==
 
 = Version 1.9.31 =
+
 * Fixed: Issues with $wpt variable in js
 * Added: Option to allow zooming
 
