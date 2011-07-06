@@ -170,8 +170,6 @@ function wptouch_content_filter( $content ) {
 	}
 }
 
-	add_filter('init', 'wptouch_init');
-
 // Version number for the admin header, footer
 function WPtouch($before = '', $after = '') {
 	global $bnc_wptouch_version;
@@ -996,17 +994,19 @@ function bnc_wp_touch_page() {
 	</form>
 	
 	<form method="post" action="">
-		<input type="submit" onclick="return confirm('<?php _e('Restore default WPtouch settings?', 'wptouch' ); ?>');" name="reset" value="<?php _e('Restore Defaults', 'wptouch' ); ?>" id="bnc-button-reset" class="button-highlighted" />
+		<input type="submit" onclick="return confirm('<?php _e( 'Restore default WPtouch settings?', 'wptouch' ); ?>');" name="reset" value="<?php _e('Restore Defaults', 'wptouch' ); ?>" id="bnc-button-reset" class="button-highlighted" />
 	</form>
 		
-	<?php echo('' . WPtouch('<div class="bnc-plugin-version"> This is ','</div>') . ''); ?>
+	<?php // echo( '' . WPtouch( '<div class="bnc-plugin-version"> This is ','</div>' ) . '' ); ?>
 
 	<div class="bnc-clearer"></div>
 </div>
 <?php 
-echo('</div>'); } 
-add_action('wp_footer', 'wptouch_switch');
-add_action( 'admin_init', 'wptouch_admin_enqueue_files' );	
-add_action( 'admin_head', 'wptouch_admin_files' );	
-add_action('admin_menu', 'bnc_options_menu'); 
+echo('</div>'); }
+
+add_filter( 'init', 'wptouch_init' );
+add_action( 'wp_footer', 'wptouch_switch' );
+add_action( 'admin_init', 'wptouch_admin_enqueue_files' );
+add_action( 'admin_head', 'wptouch_admin_files' );
+add_action( 'admin_menu', 'bnc_options_menu' );
 add_filter( 'plugin_action_links', 'wptouch_settings_link', 9, 2 );

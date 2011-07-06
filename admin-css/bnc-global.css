@@ -1,3 +1,5 @@
+/* @override http://beta.bravenewcode.com/wordpress/wp-content/plugins/wptouch/admin-css/bnc-global.css */
+
 /* Global styles applied to BraveNewCode plugins */
 
 /* @group Global Plugin Styles */
@@ -9,10 +11,10 @@
 }
 
 #bnc-global .postbox {
-	padding: 10px;
 	position: relative;
 	overflow: hidden;
-	-webkit-box-shadow: #ccc 0px 1px 6px;
+	background-color: #fff;
+	padding: 10px;
 }
 
 #bnc-global .postbox h3 {
@@ -22,7 +24,6 @@
 
 #bnc-global a {
 	text-decoration: none;
-	font-size: 11px;
 }
 
 #bnc-global a.orange-link {
@@ -41,7 +42,6 @@
 
 #bnc-global, #bnc-global .postbox, #bnc-global .postbox ul, #bnc-global .postbox p, #bnc-global p {
 	margin-top: 10px;
-	font-size: 11px;
 }
 
 #bnc-global .left-content {
@@ -57,8 +57,6 @@
 	padding: 0 0 4px;
 	letter-spacing: 0;
 	color: #d54e21;
-	font-size: 11px;
-	line-height: 13px;
 }
 
 #bnc-global .left-content p {
@@ -87,9 +85,8 @@
 	float: left;
 	margin-left: 3%;
 	border-left: 1px solid #e6e6e6;
-	padding-bottom: 45px;
 	padding-left: 10px;
-	margin-bottom: -30px;
+	padding-bottom: 50px;
 }
 
 #bnc-global .bnc-clearer {
@@ -100,7 +97,6 @@
 	vertical-align: baseline;
 	width: 176px;
 	margin-right: 5px;
-	border: 1px solid #6caccd;
 }
 
 #bnc-global input.checkbox {
@@ -111,14 +107,11 @@
 }
 
 #bnc-global input {
-	border: 2px solid #a4c6d3;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
 	margin-right: 7px;
 	width: 177px;
 	color: #555;
-	font-size: 11px;
-	background-color: #ebf1ff;
 	margin-left: 5px;
 }
 
@@ -188,18 +181,6 @@
 /* @end */
 
 /* @group Save/Restore Button Area */
-
-#bnc-global .bnc-plugin-version {
-	float: right;
-	font: 18px Georgia, "Times New Roman", Times, serif;
-	color: #70777a;
-	text-shadow: #fff -1px -1px 0;
-	letter-spacing: -1px;
-	margin-top: 2px;
-	position: relative;
-	left: 10px;
-	margin-bottom: 25px;
-}
 
 #bnc-global input#bnc-button {
 	color: #fff;

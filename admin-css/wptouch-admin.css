@@ -9,28 +9,23 @@
 	overflow: hidden;
 	position: relative;
 	min-height: 216px;
+	height: 218px;
 }
 
 #wptouch-head #wptouch-head-colour {
-	background-color: #bcced9;
+	background-color: #d7ebf7;
 	padding: 10px;
 	margin: -10px -10px -20px;
-	-webkit-border-top-right-radius: 5px;
-	-webkit-border-top-left-radius: 5px;
-	-moz-border-radius-topright: 5px;
-	-moz-border-radius-topleft: 5px;
-	border: 1px solid #e5f0f2;
-	border-bottom: 1px solid #a2bdbf;
 }
 
 #wptouch-head-title {
-	font: bold 22px Georgia, "Times New Roman", Times, serif;
 	color: #333c42;
-	text-shadow: #deeefa 0 1px 0;
+	text-shadow: #f6f8fd 0 1px 0;
 	letter-spacing: -1px;
 	margin: 0;
 	padding: 0;
 	float: left;
+	font-size: 22px;
 }
 
 #wptouch-head .postbox img.ajax-load {
@@ -45,9 +40,12 @@
 }
 
 #wptouch-head-links a {
-	color: #333c42;
-	font-weight: bold;
-	text-shadow: #cddce8 0 1px 0;
+	color: #62727c;
+	font-weight: normal;
+	text-shadow: rgba(255,255,255,.5) 0 1px 0;
+	font-style: normal;
+	padding-right: 5px;
+	padding-left: 5px;
 }
 
 #wptouch-head-links a:hover {
@@ -131,7 +129,7 @@
 #wptouch-news-support li {
 	border-bottom: 1px solid #e6e6e6;
 	margin: 0;
-	padding: 3px 0 3px 12px;
+	padding: 5px 0 5px 12px;
 	list-style-type: disc;
 	list-style-position: inside;
 	color: #c1cfd1;

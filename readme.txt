@@ -42,6 +42,7 @@ For more information visit http://www.bravenewcode.com/wptouch-pro
 
 * Fixed: Issues with $wpt variable in js
 * Added: Option to allow zooming
+* Added: WordPress 3.2 compatibility changes
 
 = Version 1.9.30 =
 
