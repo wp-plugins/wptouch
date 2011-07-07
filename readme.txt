@@ -2,9 +2,9 @@
 Contributors: BraveNewCode
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=paypal%40bravenewcode%2ecom&item_name=WPtouch%20Beer%20Fund&no_shipping=0&no_note=1&tax=0&currency_code=CAD&lc=CA&bn=PP%2dDonationsBF&charset=UTF%2d8
 Tags: wptouch, iphone, ipod, theme, apple, mac, bravenewcode, ajax, mobile, android, blackberry, smartphone, 
-Requires at least: 2.9
+Requires at least: 3.0
 Tested up to: 3.2
-Stable tag: 1.9.30
+Stable tag: 1.9.31
 
 WPtouch: A simple, powerful and elegant mobile theme for your website.
 
@@ -40,9 +40,11 @@ For more information visit http://www.bravenewcode.com/wptouch-pro
 
 = Version 1.9.31 =
 
+* Added: Option to allow zooming on content
+* Updated: WordPress 3.2 compatibility changes
+* Updated: Re-compressed PNGs for performance and speed
+* Updated: Minimum WordPress version is now 3.0
 * Fixed: Issues with $wpt variable in js
-* Added: Option to allow zooming
-* Added: WordPress 3.2 compatibility changes
 
 = Version 1.9.30 =
 
