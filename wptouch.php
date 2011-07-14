@@ -2,7 +2,7 @@
 /*
 Plugin Name: WPtouch
 Plugin URI: http://wordpress.org/extend/plugins/wptouch/
-Version: 1.9.31
+Version: 1.9.32
 Description: A plugin which formats your site with a mobile theme for visitors on Apple <a href="http://www.apple.com/iphone/">iPhone</a> / <a href="http://www.apple.com/ipodtouch/">iPod touch</a>, <a href="http://www.android.com/">Google Android</a>, <a href="http://www.blackberry.com/">Blackberry Storm and Torch</a>, <a href="http://www.palm.com/us/products/phones/pre/">Palm Pre</a> and other touch-based smartphones.
 Author: BraveNewCode Inc.
 Author URI: http://www.bravenewcode.com
@@ -28,7 +28,7 @@ License: GNU General Public License 2.0 (GPL) http://www.gnu.org/licenses/gpl.ht
 load_plugin_textdomain( 'wptouch', false, dirname( plugin_basename( __FILE__ ) ) );
 
 global $bnc_wptouch_version;
-$bnc_wptouch_version = '1.9.31';
+$bnc_wptouch_version = '1.9.32';
 
 require_once( 'include/plugin.php' );
 require_once( 'include/compat.php' );
@@ -92,8 +92,8 @@ function wptouch_get_plugin_dir_name() {
 }
 
 function wptouch_delete_icon( $icon ) {
-	if ( !current_user_can( 'upload_files' ) ) {
-		// don't allow users to delete who don't have access to upload (security feature)
+	if ( !current_user_can( 'manage_options' ) ) {
+		// don't allow users non administrators to delete files (security check)
 		return;	
 	}
 			
@@ -131,9 +131,14 @@ function load_wptouch_languages() {
 
 function wptouch_init() {	
 	if ( isset( $_GET['delete_icon'] ) ) {
-		wptouch_delete_icon( $_GET['delete_icon'] );
-		header( 'Location: ' . get_bloginfo('wpurl') . '/wp-admin/options-general.php?page=wptouch/wptouch.php#available_icons' );
-		die;
+		$nonce = $_GET['nonce'];
+		if ( !wp_verify_nonce( $nonce, 'wptouch_delete_nonce' )  ) {
+			die( 'Security Failure' );
+		} else {
+			wptouch_delete_icon( $_GET['delete_icon'] );
+			header( 'Location: ' . get_bloginfo('wpurl') . '/wp-admin/options-general.php?page=wptouch/wptouch.php#available_icons' );
+			die;
+		}
 	}
 	
 	if ( !is_admin() ) {

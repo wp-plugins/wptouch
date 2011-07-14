@@ -47,9 +47,9 @@
 			foreach ( $icons[ $key ] as $icon ) {
 				echo '<ul class="wptouch-iconblock">';
 				if ( $key == 'custom' ) {
-					echo '<a title="Click to Delete" href="' . $_SERVER['REQUEST_URI'] . '&amp;delete_icon=' . urlencode($icon['wpurl']) . '">';
-					}
-					echo '<li><img src="' . $icon['wpurl'] . '" title="' . $icon['name'] . '" /><br /><span>' . $icon['friendly'] . '</span>';
+					echo '<a title="Click to Delete" href="' . $_SERVER['REQUEST_URI'] . '&amp;delete_icon=' . urlencode($icon['wpurl']) . '&amp;nonce=' . wp_create_nonce( 'wptouch_delete_nonce' ) . '">';
+				}
+				echo '<li><img src="' . $icon['wpurl'] . '" title="' . $icon['name'] . '" /><br /><span>' . $icon['friendly'] . '</span>';
 				echo '</li>';
 				if ( $key == 'custom' ) {
 					echo '</a>';	
