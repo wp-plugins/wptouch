@@ -100,7 +100,10 @@ function wptouch_delete_icon( $icon ) {
 	$dir = explode( 'wptouch', $icon );
 	$loc = compat_get_upload_dir() . "/wptouch/" . ltrim( $dir[1], '/' );
 
-	unlink( $loc );
+	$real_location = realpath( $loc );
+	if ( strpos( $real_location, WP_CONTENT_DIR ) !== false ) {
+		unlink( $loc );
+	}
 }
 
 add_action( 'wptouch_load_locale', 'load_wptouch_languages' );
