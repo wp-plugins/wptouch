@@ -83,7 +83,8 @@ $wptouch_defaults = array(
 	'enable-show-tweets' => false,
 	'enable-gigpress-button' => false,
 	'enable-flat-icon' => false,
-	'wptouch-language' => 'auto'
+	'wptouch-language' => 'auto',
+	'initial-version' => $bnc_wptouch_version
 );
 
 function wptouch_get_plugin_dir_name() {
@@ -197,7 +198,7 @@ function wp_touch_get_comment_count() {
 	}
 }
 	
-// WPtouch WP Thumbnail Support
+	// WPtouch WP Thumbnail Support
 	if ( function_exists( 'add_theme_support' ) ) { // Added in 2.9
 		add_theme_support( 'post-thumbnails' ); // Add it for posts
 }
@@ -351,6 +352,16 @@ class WPtouchPlugin {
 		$msg = str_replace("\r\n","\n", $msg);
 		$msg = str_replace("\r","\n", $msg);
 		return $msg;	
+	}
+	
+	function wptouch_output_supports_in_footer( $content ) {
+		$mobile_string = sprintf( __( 'Mobile site by %s', 'wptouch' ), '<a href="http://www.bravenewcode.com/wptouch" title="Mobile iPhone and iPad Plugin for WordPress">WPtouch</a>' );
+		$content = str_replace( 'WordPress</a>', 'WordPress</a><br />' . $mobile_string, $content );
+		return $content;
+	}
+	
+	function wptouch_show_supports_in_footer() {
+		ob_start( array( &$this, 'wptouch_output_supports_in_footer' ) );	
 	}
 	
 	function wptouch_send_prowl_message( $title, $message ) {
