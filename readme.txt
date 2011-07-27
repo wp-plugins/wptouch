@@ -38,6 +38,10 @@ For more information visit http://www.bravenewcode.com/wptouch-pro
 
 == Changelog ==
 
+= Version 1.9.33 =
+
+* Added: Ability to add WPtouch info in Twenty Eleven theme
+
 = Version 1.9.32 =
 
 * Updated: Added nonces and extra security check for icon deletion (thanks Julio POTIER from BLOG.boiteaweb.fr)
