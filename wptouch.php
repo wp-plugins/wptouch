@@ -555,7 +555,7 @@ class WPtouchPlugin {
 	}
 
 	function handle_footer_done( $content ) {
-		return str_replace( "WordPress</a>", "WordPress</a> <a href='http://www.wordpress.org/extend/plugins/wptouch'>and WPtouch</a>", $content );
+		return str_replace( "WordPress</a>", "WordPress</a> <a href='http://www.wordpress.org/extend/plugins/wptouch'>" . sprintf( __( 'and %s', 'wptouch' ), "WPtouch" ) . "</a>", $content );
 	}	
 	
 	function detectAppleMobile($query = '') {
