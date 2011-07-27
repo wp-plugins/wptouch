@@ -510,7 +510,7 @@ class WPtouchPlugin {
 		$time = time()+60*60*24*365; // one year
 		$url_path = '/';
 
-	   if ( isset( $_GET[ 'wptouch_view'] ) ) {
+	   	if ( isset( $_GET[ 'wptouch_view'] ) ) {
 	  		if ( $_GET[ 'wptouch_view' ] == 'mobile' ) {
 				setcookie( $key, 'mobile', $time, $url_path ); 
 			} elseif ( $_GET[ 'wptouch_view' ] == 'normal') {
@@ -543,8 +543,20 @@ class WPtouchPlugin {
 			} else {
 		  		$this->desired_view = 'mobile';
 			}
+		}
+
+		if ( isset( $settings['enable-twenty-eleven-footer'] ) && $settings['enable-twenty-eleven-footer'] && function_exists( 'twentyeleven_setup' ) ) {
+			add_action( 'twentyeleven_credits', array( &$this, 'handle_footer' ) );
 		}		
 	}
+
+	function handle_footer() {
+		ob_start( array( &$this, 'handle_footer_done') );
+	}
+
+	function handle_footer_done( $content ) {
+		return str_replace( "WordPress</a>", "WordPress</a> <a href='http://www.wordpress.org/extend/plugins/wptouch'>and WPtouch</a>", $content );
+	}	
 	
 	function detectAppleMobile($query = '') {
 		$container = $_SERVER['HTTP_USER_AGENT'];
