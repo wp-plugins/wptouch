@@ -85,7 +85,7 @@ $wptouch_defaults = array(
 	'enable-gigpress-button' => false,
 	'enable-flat-icon' => false,
 	'wptouch-language' => 'auto',
-	'initial-version' => $bnc_wptouch_version
+	'enable-twenty-eleven-footer' => 1
 );
 
 function wptouch_get_plugin_dir_name() {
