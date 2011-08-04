@@ -545,8 +545,12 @@ class WPtouchPlugin {
 			}
 		}
 
-		if ( isset( $settings['enable-twenty-eleven-footer'] ) && $settings['enable-twenty-eleven-footer'] && function_exists( 'twentyeleven_setup' ) ) {
-			add_action( 'twentyeleven_credits', array( &$this, 'handle_footer' ) );
+		if ( isset( $settings['enable-twenty-eleven-footer'] ) && $settings['enable-twenty-eleven-footer'] ) {
+			if ( function_exists( 'twentyeleven_setup' ) ) {
+				add_action( 'twentyeleven_credits', array( &$this, 'handle_footer' ) );
+			} else if ( function_exists( 'twentyten_setup' ) ) {
+				add_action( 'twentyten_credits', array( &$this, 'handle_footer' ) );
+			}
 		}		
 	}
 
@@ -555,7 +559,11 @@ class WPtouchPlugin {
 	}
 
 	function handle_footer_done( $content ) {
-		return str_replace( "WordPress</a>", "WordPress</a> <a href='http://www.wordpress.org/extend/plugins/wptouch'>" . sprintf( __( 'and %s', 'wptouch' ), "WPtouch" ) . "</a>", $content );
+		if ( function_exists( 'twentyeleven_setup' ) ) { 
+			return str_replace( "WordPress</a>", "WordPress</a> <a href='http://www.wordpress.org/extend/plugins/wptouch'>" . sprintf( __( 'and %s', 'wptouch' ), "WPtouch" ) . "</a>", $content );
+		} else if ( function_exists( 'twentyten_setup' ) ) {
+			return str_replace( "WordPress.				</a>", "WordPress</a> <a style='background-image: none;' href='http://www.wordpress.org/extend/plugins/wptouch'>" . sprintf( __( 'and %s', 'wptouch' ), "WPtouch" ) . "</a>", $content );		
+		}
 	}	
 	
 	function detectAppleMobile($query = '') {
