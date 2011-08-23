@@ -21,6 +21,12 @@ if ( isset( $_POST['submit'] ) ) {
 	} else {
 		$a['enable-post-excerpts'] = 0;
 	}
+	
+	if ( isset( $_POST['enable-twenty-eleven-footer'] ) ) {
+		$a['enable-twenty-eleven-footer'] = 1;
+	} else {
+		$a['enable-twenty-eleven-footer'] = 0;
+	}
 
 	if ( isset( $_POST['enable-page-coms'] ) ) {
 		$a['enable-page-coms'] = 1;

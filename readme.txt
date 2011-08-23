@@ -38,6 +38,10 @@ For more information visit http://www.bravenewcode.com/wptouch-pro
 
 == Changelog ==
 
+= Version 1.9.34 =
+
+* Changed: Default settings
+
 = Version 1.9.33 =
 
 * Added: Ability to add WPtouch info in Twenty Ten & Eleven themes
