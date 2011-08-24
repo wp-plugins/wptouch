@@ -24,3 +24,4 @@
 		</script>
 <?php } ?>
 </head>
+<?php flush(); ?>
