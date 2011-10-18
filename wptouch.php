@@ -340,6 +340,7 @@ class WPtouchPlugin {
 		
 		add_filter( 'init', array(&$this, 'bnc_filter_iphone') );
 		add_filter( 'wp', array(&$this, 'bnc_do_redirect') );
+		add_filter( 'wp', array( &$this, 'bnc_check_switch_redirect') );
 		add_filter( 'wp_head', array(&$this, 'bnc_head') );
 		add_filter( 'query_vars', array( &$this, 'wptouch_query_vars' ) );
 		add_filter( 'parse_request', array( &$this, 'wptouch_parse_request' ) );
@@ -504,6 +505,24 @@ class WPtouchPlugin {
 	   	     }
 	   }
 	}
+	
+	function bnc_check_switch_redirect() {
+		if ( isset( $_GET[ 'wptouch_view'] ) && isset( $_GET['wptouch_redirect'] ) ) {
+			if ( isset( $_GET['wptouch_redirect_nonce'] ) ) {
+				$nonce = $_GET['wptouch_redirect_nonce'];
+				if ( !wp_verify_nonce( $nonce, 'wptouch_redirect' ) ) {
+					_e( 'Nonce failure', 'wptouch' );
+					die;
+				}
+
+				$protocol = ( $_SERVER['HTTPS'] == 'on' ) ? 'https://' : 'http://';
+				$redirect_location = $protocol . $_SERVER['SERVER_NAME'] . $_GET['wptouch_redirect'];
+		
+				header( 'Location: ' . $redirect_location );
+				die;
+			} 
+		}		
+	}
 
 	function bnc_filter_iphone() {	
 		$key = 'wptouch_switch_toggle';
@@ -515,22 +534,6 @@ class WPtouchPlugin {
 				setcookie( $key, 'mobile', $time, $url_path ); 
 			} elseif ( $_GET[ 'wptouch_view' ] == 'normal') {
 				setcookie( $key, 'normal', $time, $url_path );
-			}
-			
-			if ( isset( $_GET['wptouch_redirect'] ) ) {
-				if ( isset( $_GET['wptouch_redirect_nonce'] ) ) {
-					$nonce = $_GET['wptouch_redirect_nonce'];
-					if ( !wp_verify_nonce( $nonce, 'wptouch_redirect' ) ) {
-						_e( 'Nonce failure', 'wptouch' );
-						die;
-					}
-
-					$protocol = ( $_SERVER['HTTPS'] == 'on') ? 'https://' : 'http://';
-					$redirect_location = $protocol . $_SERVER['SERVER_NAME'] . $_GET['wptouch_redirect'];
-			
-					header( 'Location: ' . $redirect_location );
-					die;
-				} 
 			}
 		}
 
