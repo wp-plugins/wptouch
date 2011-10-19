@@ -1187,13 +1187,13 @@ ul#post-options li a {
 ul#post-options li a#oprev {
 	background: url(../core/core-images/post-options.png) no-repeat 5px -210px;
 	border-right: 1px solid #cfcfcf;
-	width: 38px;
+	width: 34px;
 }
 
 ul#post-options li a#onext {
 	background: url(../core/core-images/post-options.png) no-repeat -7px -244px;
 	border-left: 1px solid #cfcfcf;
-	width: 38px;
+	width: 34px;
 }
 
 ul#post-options li a#omail {
