@@ -7,7 +7,7 @@ function wptouch_core_header_enqueue() {
 	$version = get_bloginfo('version'); 
 		if (!bnc_wptouch_is_exclusive()) { 
 	    wp_enqueue_script('jquery-form');
-		wp_enqueue_script('wptouch-core', '' . compat_get_plugin_url( 'wptouch' ) . '/themes/core/core.js', array('jquery'), '1.9.22.1' );		
+		wp_enqueue_script('wptouch-core', '' . compat_get_plugin_url( 'wptouch' ) . '/themes/core/core.js', array('jquery'), '1.9.x' );		
 		wp_head(); 
 
 		} elseif ( bnc_wptouch_is_exclusive() ) { 
