@@ -857,7 +857,14 @@ a.h2 {
 	font: bold 12px "Helvetica Neue", Helvetica, Geneva, Arial, sans-serif;
 	z-index: 1;
 	width: auto;
-	left: 0;
+}
+
+.comment-bubble {
+	left: 40px;
+}
+
+.comment-bubble-big {
+	left: 36px;
 }
 
 .nothing-shown {
@@ -1546,7 +1553,6 @@ ol#commentlist {
 	display: none;
 	margin: 0 10px 0;
 	position: relative;
-	z-index: 1;
 	padding-right: 0;
 	padding-bottom: 0;
 	padding-left: 0;
@@ -1577,7 +1583,6 @@ h3#com-head {
 	border: 1px solid #b1b1b1;
 	background: #fff;
 	position: relative;
-	z-index: 1;
 	padding-top: 10px;
 	padding-bottom: 10px;
 	padding-left: 10px;
@@ -1819,6 +1824,7 @@ textarea#comment {
 	height: 110px;
 	width: 98%;
 	padding: 3px;
+		box-shadow: rgba(255,255,255,.8) 0px 1px 0px;
 }
 
 #loading {
@@ -2126,6 +2132,38 @@ p.subscribe-to-comments input#subscribe {
 
 /* @end */
 
+/* @group iOS 5 */
+
+.ios5 #headerbar {
+	position: fixed;
+	top: 0;
+	z-index: 1;
+}
+
+.ios5 #drop-fade {
+	position: fixed;
+	top: 46px;
+}
+
+.ios5 #wptouch-menu {
+	position: fixed;
+}
+
+.ios5 .content {
+	padding-top: 56px;
+}
+
+.ios5 .content.single {
+	padding-top: 66px;
+}
+
+.ios5 #wptouch-search  {
+	z-index: 2;
+	position: fixed;
+}
+
+/* @end */
+
 /* @group Compatibility */
 
 #livefyre {
@@ -2156,19 +2194,28 @@ p.subscribe-to-comments input#subscribe {
 	display: none;
 }
 
-
-
 /* @end */
 
 /* @group Gravity Forms */
 
-.gform_wrapper li, .gform_wrapper form li{ list-style-type:none!important;
+.gform_wrapper li, .gform_wrapper form li {
+	list-style-type: none!important;
 	padding-left: 30px;
 }
 
 .gform_wrapper .gform_footer {
 	margin-top: 0;
 	margin-left: 20px;
+}
+
+body.wptouch-pro .post .gform_wrapper .gform_body ul.gform_fields {
+	text-indent: 0!important;
+	margin: 0;
+	padding: 0
+}
+
+body.wptouch-pro .post .gform_wrapper .gform_body ul.gform_fields li {
+	padding-left: 0!important
 }
 
 
@@ -2263,6 +2310,7 @@ p.subscribe-to-comments input#subscribe {
 }
 
 .commentlist p.subscribe-to-comments {
+	
 }
 
 /* @end */
@@ -2273,8 +2321,6 @@ span.db-body {
 	display: none;
 }
 
-
-
 /* @end */
 
 /* @group WP Thread Comment */
@@ -2284,8 +2330,6 @@ p.thdrpy, p.thdmang {
 	margin-right: 10px;
 }
 
-
-
 /* @end */
 
 /* @group WP Greet Box */
@@ -2293,8 +2337,6 @@ p.thdrpy, p.thdmang {
 #greet_block {
 	display: none;
 }
-
-
 
 /* @end */
 
@@ -2306,20 +2348,17 @@ p.thdrpy, p.thdmang {
 	margin-bottom: 5px;
 }
 
-
-
 /* @end */
 
 /* @group Share and Follow */
 
 .footer #follow.right {
-display:  none !important;}
+	display: none !important;
+}
 
 .content ul.socialwrap {
 	display: none;
 }
-
-
 
 /* @end */
 
@@ -2343,14 +2382,91 @@ display:  none !important;}
 	display: none !important;
 }
 
-
-
 /* @end */
 
 /* @group Follow Me */
 
-a#FollowMeTabLeftSm {
+#followMeTabLeftSm, #followMeTabLeftSm img {
 	display: none !important;
+	height: 0 !important;
+	width: 0 !important;
+	visibility: hidden !important;
+	position: -1000em !important;
+}
+
+/* @end */
+
+/* @group Comment Quicktags */
+
+#commentform #ed_toolbar {
+	margin-left: 9px;
+}
+
+#commentform #ed_toolbar .ed_button {
+	width: auto !important;
+	margin-bottom: 10px;
+	margin-top: 5px;
+	margin-right: 3px;
+	-webkit-border-radius: 4px !important;
+	padding: 2px 6px !important;
+	font-size: 11px;
+	font-weight: bold;
+}
+
+/* @end */
+
+/* @group Zenbox */
+
+#zenbox_tab {display: none !important;}
+
+
+
+/* @end */
+
+/* @group AttentionGrabber */
+
+#attentionGrabber, #attentionGrabberWrap #openAttentionGrabber {
+	display: none !important;
+}
+
+
+
+/* @end */
+
+/* @group smartPop-Up Box */
+
+#smartPopupfade, #pietimerholder {
+	display: none !important;
+}
+
+
+
+/* @end */
+
+/* @group Mega Dropdown */
+
+.megadropdown-wrapper {
+	display: none !important;
+}
+
+
+
+/* @end */
+
+/* @group Easy Button */
+
+.buttonfixed {
+	display: none !important;
+}
+
+
+
+/* @end */
+
+/* @group AS Sharebar */
+
+#as-share-window {
+	display:none !important;
 }
 
 

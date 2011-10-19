@@ -236,8 +236,8 @@ function wptouch_get_comment_count() {
 }
 
 // Add 'Delete | Spam' links in comments for logged in admins
- function wptouch_moderate_comment_link($id) {  
-	  if (current_user_can('edit_post')) {  
+ function wptouch_moderate_comment_link( $id ) {  
+	  if ( current_user_can( 'edit_post' ) ) {  
      echo '<a href="' . admin_url("comment.php?action=editcomment&c=$id") . '">' . __('edit') . '</a>';  
      echo '<a href="' . admin_url("comment.php?action=cdc&c=$id") . '">' . __('del') . '</a>';  
      echo '<a href="' . admin_url("comment.php?action=cdc&dt=spam&c=$id") . '">' . __('spam') . '</a>';  
@@ -253,10 +253,16 @@ function wptouch_thumbnail_size( $size ) {
 function wptouch_idevice_classes() {
 	$iPhone = strstr( $_SERVER['HTTP_USER_AGENT'], 'iPhone' );
 	$iPod = strstr( $_SERVER['HTTP_USER_AGENT'], 'iPod' );
-//	$iPod = strstr( $_SERVER['HTTP_USER_AGENT'], 'Safari' );
+	$iOS5 = strstr( $_SERVER['HTTP_USER_AGENT'], 'OS 5_0' );
+
 	if ( $iPhone || $iPod ) {
 		echo 'idevice';
 	}
+	
+	if ( $iOS5 && wptouch_use_fixed_header() ) { 
+		echo ' ios5';
+	}
+	
 }
 
 // Remove the admin bar when logged in and looking at WPtouch

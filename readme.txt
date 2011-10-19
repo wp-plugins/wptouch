@@ -41,6 +41,8 @@ For more information visit http://www.bravenewcode.com/wptouch-pro
 = Version 1.9.35 =
 
 * Added: fitVids() for much better video handling
+* Added: Option to use fixed header for iOS 5 devices
+* Changed: Minor CSS fixes and improvements
 * Fixed: Nonce/re-direct behaviour for switch link
 
 = Version 1.9.34 =
