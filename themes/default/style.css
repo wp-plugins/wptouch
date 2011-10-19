@@ -158,13 +158,6 @@ blockquote {
 	margin-right: auto;
 }
 
-.post object, .post embed, .post video {
-	width: 100% !important;
-	height: auto;
-	max-height: 280px;
-	margin-bottom: 10px;
-}
-
 /* @end */
 
 /* @group Header */
