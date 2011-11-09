@@ -86,7 +86,8 @@ $wptouch_defaults = array(
 	'enable-flat-icon' => false,
 	'wptouch-language' => 'auto',
 	'enable-twenty-eleven-footer' => 0,
-	'enable-fixed-header' => false
+	'enable-fixed-header' => false,
+	'ad_service' => 'none'
 );
 
 function wptouch_get_plugin_dir_name() {

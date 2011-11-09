@@ -1,7 +1,7 @@
 <?php global $wptouch_settings; ?>
 
 <div class="metabox-holder">
-	<div class="postbox new-styles">
+	<div class="postbox new-styles" id="advertising-options">
 		<h3><span class="adsense-options">&nbsp;</span><?php _e( "Advertising, Stats &amp; Custom Code", "wptouch" ); ?></h3>
 		<div id="advertising-service">
 			<div class="left-content">
@@ -12,7 +12,7 @@
 			<div class="right-content">
 				<ul class="wptouch-make-li-italic">
 					<li>
-						<select name="sort-order">
+						<select name="ad_service" id="ad_service">
 							<option value="none"<?php if ( $wptouch_settings['ad_service'] == 'none') echo " selected"; ?>><?php _e( "None", "wptouch" ); ?></option>
 							<option value="appstores"<?php if ( $wptouch_settings['ad_service'] == 'appstores') echo " selected"; ?>><?php _e( "AppStores", "wptouch" ); ?></option>								
 							<option value="adsense"<?php if ( $wptouch_settings['ad_service'] == 'adsense') echo " selected"; ?>><?php _e( "Google Adsense", "wptouch" ); ?></option>
@@ -25,9 +25,21 @@
 			<div class="bnc-clearer"></div>
 		</div>
 		
+		<div id="appstores">
+			<div class="left-content">
+				<h4><?php _e( "AppStores", "wptouch" ); ?></h4>
+			</div>
+			
+			<div class="right-content">
+				<ul class="wptouch-make-li-italic">
+				</ul>
+			</div>			
+			<div class="bnc-clearer"></div>
+		</div>			
+		
 		<div id="google-adsense">
 			<div class="left-content">
-				<h4><?php _e( "Adsense", "wptouch" ); ?></h4>
+				<h4><?php _e( "Google Adsense", "wptouch" ); ?></h4>
 				<p><?php _e( "Enter your Google AdSense ID if you'd like to support mobile advertising in WPtouch posts.", "wptouch" ); ?></p>
 				<p><?php _e( "Make sure to include the 'pub-' part of your ID string.", "wptouch" ); ?></p>
 			</div>
