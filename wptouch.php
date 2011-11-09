@@ -28,7 +28,7 @@ License: GNU General Public License 2.0 (GPL) http://www.gnu.org/licenses/gpl.ht
 load_plugin_textdomain( 'wptouch', false, dirname( plugin_basename( __FILE__ ) ) );
 
 global $bnc_wptouch_version;
-$bnc_wptouch_version = '1.9.35';
+$bnc_wptouch_version = '1.9.40';
 
 require_once( 'include/plugin.php' );
 require_once( 'include/compat.php' );
