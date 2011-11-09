@@ -2,9 +2,12 @@
 
 <div class="metabox-holder">
 	<div class="postbox">
-		<h3><span class="adsense-options">&nbsp;</span><?php _e( "Adsense, Stats &amp; Custom Code", "wptouch" ); ?></h3>
+		<h3><span class="adsense-options">&nbsp;</span><?php _e( "Advertising, Stats &amp; Custom Code", "wptouch" ); ?></h3>
 
 			<div class="left-content">
+				<h4><?php _e( "Advertising Service", "wptouch" ); ?></h4>
+					<p><?php _e( "Choose which advertising service you would like to use within WPtouch", "wptouch" ); ?></p>
+				<br />
 				<h4><?php _e( "Adsense", "wptouch" ); ?></h4>
 					<p><?php _e( "Enter your Google AdSense ID if you'd like to support mobile advertising in WPtouch posts.", "wptouch" ); ?></p>
 					<p><?php _e( "Make sure to include the 'pub-' part of your ID string.", "wptouch" ); ?></p>
@@ -21,6 +24,17 @@
 			</div><!-- left content -->
 
 			<div class="right-content">
+				<ul class="wptouch-make-li-italic">
+					<li>
+						<select name="sort-order">
+							<option value="none"<?php if ( $wptouch_settings['ad_service'] == 'none') echo " selected"; ?>><?php _e( "None", "wptouch" ); ?></option>
+							<option value="appstores"<?php if ( $wptouch_settings['ad_service'] == 'appstores') echo " selected"; ?>><?php _e( "AppStores", "wptouch" ); ?></option>								
+							<option value="adsense"<?php if ( $wptouch_settings['ad_service'] == 'adsense') echo " selected"; ?>><?php _e( "Google Adsense", "wptouch" ); ?></option>
+			
+						</select>
+						<?php _e( "Advertising Service", "wptouch" ); ?>
+					</li>
+				</ul>
 				<ul class="wptouch-make-li-italic">
 					<li><input name="adsense-id" type="text" value="<?php echo $wptouch_settings['adsense-id']; ?>" /><?php _e( "Google AdSense ID", "wptouch" ); ?></li>
 					<li><input name="adsense-channel" type="text" value="<?php echo $wptouch_settings['adsense-channel']; ?>" /><?php _e( "Google AdSense Channel", "wptouch" ); ?></li>

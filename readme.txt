@@ -38,6 +38,11 @@ For more information visit http://www.bravenewcode.com/wptouch-pro
 
 == Changelog ==
 
+= Version 1.9.40 =
+
+* Added: Advertising integration with AppStores
+* Changed: Layout of advertising section
+
 = Version 1.9.35 =
 
 * Added: fitVids() for much better video handling
