@@ -380,7 +380,6 @@ textarea#wptouch-stats {
 	-moz-border-radius: 5px;
 	width: 95%;
 	margin-left: 5px;
-	margin-top: 45px;
 	height: 100px;
 	margin-bottom: 15px;
 	color: #444;
@@ -529,5 +528,15 @@ textarea#wptouch-stats {
 	margin-top: 6px;
 	margin-left: 33px;
 }
+
+/* @end */
+
+/* @group New Styling */
+
+#bnc-global .new-styles .right-content {
+	padding-bottom: 35px;
+	margin-top: 20px;
+}
+
 
 /* @end */

@@ -1,7 +1,7 @@
 <?php global $wptouch_settings; ?>
 
 <div class="metabox-holder">
-	<div class="postbox">
+	<div class="postbox new-styles">
 		<h3><span class="adsense-options">&nbsp;</span><?php _e( "Advertising, Stats &amp; Custom Code", "wptouch" ); ?></h3>
 		<div id="advertising-service">
 			<div class="left-content">
