@@ -87,7 +87,7 @@ $wptouch_defaults = array(
 	'wptouch-language' => 'auto',
 	'enable-twenty-eleven-footer' => 0,
 	'enable-fixed-header' => false,
-	'ad_service' => 'none'
+	'ad_service' => 'adsense'
 );
 
 function wptouch_get_plugin_dir_name() {
@@ -153,14 +153,27 @@ function wptouch_init() {
 	}
 }
 
-function wptouch_include_adsense() {
+function wptouch_include_ads() {
 	global $wptouch_plugin;
 	$settings = bnc_wptouch_get_settings();
-	if ( bnc_is_iphone() && $wptouch_plugin->desired_view == 'mobile' && isset( $settings['adsense-id'] ) && strlen( $settings['adsense-id'] ) && is_single() ) {
-		global $wptouch_settings;
-		$wptouch_settings = $settings;
-		
-		include( 'include/adsense-new.php' );
+	
+	// Check to make sure it's on a mobile site
+	if ( bnc_is_iphone() && $wptouch_plugin->desired_view == 'mobile' ) {
+		// Check which type of advertising the user has selected
+		switch ( $settings['ad_service'] ) {
+			case 'adsense':
+				if ( isset( $settings['adsense-id'] ) && strlen( $settings['adsense-id'] ) && is_single() ) {
+					global $wptouch_settings;
+					$wptouch_settings = $settings;
+					
+					include( 'include/adsense-new.php' );
+				}				
+				break;
+			case 'appstores':
+				break;
+			default:
+				break;
+		}
 	}
 }
 
