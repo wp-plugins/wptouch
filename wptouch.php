@@ -2,7 +2,7 @@
 /*
 Plugin Name: WPtouch
 Plugin URI: http://wordpress.org/extend/plugins/wptouch/
-Version: 1.9.35
+Version: 1.9.40
 Description: A plugin which formats your site with a mobile theme for visitors on Apple <a href="http://www.apple.com/iphone/">iPhone</a> / <a href="http://www.apple.com/ipodtouch/">iPod touch</a>, <a href="http://www.android.com/">Google Android</a>, <a href="http://www.blackberry.com/">Blackberry Storm and Torch</a>, <a href="http://www.palm.com/us/products/phones/pre/">Palm Pre</a> and other touch-based smartphones.
 Author: BraveNewCode Inc.
 Author URI: http://www.bravenewcode.com
@@ -173,6 +173,16 @@ function wptouch_include_ads() {
 				break;
 			default:
 				break;
+		}
+	}
+}
+
+function wptouch_header_advertising() {
+	$settings = bnc_wptouch_get_settings();
+
+	if ( bnc_is_iphone() && $wptouch_plugin->desired_view == 'mobile' ) {
+		if ( is_single() && !is_page() && ( $settings['ad_service'] == 'appstores' ) ) {
+			echo '<script src="http://wptouch.appstores.com/widgets/161/wIframe/MzhfYmlzdHJv/mobile/stars?widget_attrs[style]=single_app" type="text/javascript" charset="utf-8"></script>';
 		}
 	}
 }
@@ -361,6 +371,7 @@ class WPtouchPlugin {
 		add_filter( 'parse_request', array( &$this, 'wptouch_parse_request' ) );
 		add_action( 'comment_post', array( &$this, 'wptouch_handle_new_comment' ) );
 		add_action( 'user_register', array( &$this, 'wptouch_handle_new_user' ) );
+		add_action( 'wptouch_core_header_enqueue', 'wptouch_header_advertising' );
 		
 		$this->detectAppleMobile();
 	}
