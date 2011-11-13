@@ -15,9 +15,7 @@
 	<?php if (bnc_is_gigpress_enabled() && function_exists( 'gigpress_shows' )) { ?>
 		<link rel="stylesheet" href="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/themes/core/core-css/gigpress.css" type="text/css" media="screen" />
 	<?php } ?>
-	<?php wptouch_core_header_styles(); ?>
-	<?php wptouch_core_header_enqueue(); ?>
-	<?php wptouch_header_advertising(); ?>
+	<?php wptouch_core_header_styles(); wptouch_core_header_enqueue(); ?>
 	<?php if (!is_single()) { ?>
 		<script type="text/javascript">
 			// Hides the addressbar on non-post pages
