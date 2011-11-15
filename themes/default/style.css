@@ -2473,6 +2473,16 @@ p.thdrpy, p.thdmang {
 
 /* @end */
 
+/* @group Social Share */
+
+.leftcontainerBox {
+	display: none !important;
+}
+
+
+
+/* @end */
+
 
 
 /* @end */

@@ -42,6 +42,7 @@ For more information visit http://www.bravenewcode.com/wptouch-pro
 
 * Added: Advertising integration with AppStores
 * Changed: Layout of advertising section
+* Added: Social Share plugin hiding
 
 = Version 1.9.35 =
 
