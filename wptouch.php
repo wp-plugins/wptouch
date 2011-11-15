@@ -608,8 +608,7 @@ class WPtouchPlugin {
 			if ( preg_match( "#$useragent#i", $container ) || file_exists( $devfile ) ) {
 				$this->applemobile = true;
 				break;
-			} 	
-			
+			}
 		}
 
 		if ( $this->applemobile && !file_exists( $devfile ) ) {
