@@ -25,10 +25,10 @@
 			</li>
 			<li>
 				<input class="checkbox" type="checkbox" name="enable-fixed-header" <?php if ( isset( $wptouch_settings['enable-fixed-header']) && $wptouch_settings['enable-fixed-header'] == 1) echo('checked'); ?> />
-				<label class="label" for="enable-zoom"><?php _e( "Enable fixed header for iOS 5 devices", "wptouch" ); ?> <a href="#zoom-info" class="fancylink">?</a></label>
+				<label class="label" for="enable-zoom"><?php _e( "Enable fixed header for iOS 5 devices", "wptouch" ); ?> <a href="#fixed-info" class="fancylink">?</a></label>
 				<div id="fixed-info" style="display:none">
 					<h2><?php _e( "More Info", "wptouch" ); ?></h2>
-					<p><?php _e( "This will emulate native applications on iOS devices, and the header menu will stay fixed at all times.", "wptouch" ); ?></p>
+					<p><?php _e( "This will emulate native applications on iOS devices where the header menu bar will stay fixed at all times when scroling.", "wptouch" ); ?></p>
 				</div>
 			</li>
 			<li>
