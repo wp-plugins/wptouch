@@ -44,6 +44,7 @@ For more information visit http://www.bravenewcode.com/wptouch-pro
 * Added: Social Share plugin hiding
 * Changed: Layout of advertising section
 * Fixed: issue with ordered lists
+* Fixed: issue with Login/My Account tab always showing in some situations
 
 = Version 1.9.35 =
 

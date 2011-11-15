@@ -371,6 +371,15 @@ em.supported {
 	margin-left: -1px;
 }
 
+#bnc-global .wptouch-pages ul.pages {
+	max-height: 500px;
+	overflow: scroll;
+	margin-top: 50px;
+	border: 2px solid #eee;
+	width: 100%;
+	padding: 10px;
+}
+
 /* @end */
 
 /* @group ads-stats-area.php */

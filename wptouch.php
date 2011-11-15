@@ -828,7 +828,7 @@ function bnc_is_flat_icon_enabled() {
 
 function bnc_is_login_button_enabled() {
 	$ids = bnc_wp_touch_get_menu_pages();
-	if (get_option( 'comment_registration' ) || get_option( 'users_can_register' ) ||  $ids['enable-login-button'] ) {
+	if ( ( get_option( 'comment_registration' ) || get_option( 'users_can_register' ) ) && $ids['enable-login-button'] ) {
 		return true;
 	} else {
 		return false;
@@ -1059,10 +1059,10 @@ function bnc_wp_touch_page() {
 		<?php require_once( 'html/advanced-area.php' ); ?>
 		<?php require_once( 'html/push-area.php' ); ?>
 		<?php require_once( 'html/style-area.php' ); ?>
+		<?php require_once( 'html/ads-stats-area.php' ); ?>
 		<?php require_once( 'html/icon-area.php' ); ?>
 		<?php require_once( 'html/page-area.php' ); ?>
-		<?php require_once( 'html/ads-stats-area.php' ); ?>
-		<?php require_once( 'html/plugin-compat-area.php' ); ?>		
+		<?php // require_once( 'html/plugin-compat-area.php' ); ?>		
 		<input type="hidden" name="wptouch-nonce" value="<?php echo wp_create_nonce( 'wptouch-nonce' ); ?>" />
 		<input type="submit" name="submit" value="<?php _e('Save Options', 'wptouch' ); ?>" id="bnc-button" class="button-primary" />
 	</form>

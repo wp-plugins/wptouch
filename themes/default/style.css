@@ -1,8 +1,3 @@
-/* @override 
-	http://beta.bravenewcode.com/wordpress/wp-content/plugins/wptouch/themes/default/style.css
-	http://www.bravenewcode.com/wordpress/wp-content/plugins/wptouch/themes/default/style.css
-*/
-
 /*  
 Theme Name: WPtouch Mobile Plugin & Theme For WordPress
 Theme URI: http://www.bravenewcode.com/wptouch/
@@ -867,8 +862,8 @@ a.h2 {
 }
 
 .nothing-shown {
-	margin-left: -11px;
-	margin-top: -11px;
+	left: -5px;
+	top: -10px;
 }
 
 .archive-top {
