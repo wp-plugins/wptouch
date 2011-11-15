@@ -32,7 +32,7 @@
 			
 			<div class="right-content">
 				<ul class="wptouch-make-li-italic">
-					<li><input name="appstores-id" type="text" value="<?php echo $wptouch_settings['appstores-id']; ?>" /><?php _e( "AppStore ID", "wptouch" ); ?> - <a href="#"><?php _e( "Get one now.", "wptouch" ); ?></a></li>				
+					<li><input name="appstores-id" type="text" value="<?php echo $wptouch_settings['appstores-id']; ?>" /><?php _e( "AppStore ID", "wptouch" ); ?> - <a href="#"><?php _e( "Get one now", "wptouch" ); ?> &rarr;</a></li>				
 				</ul>
 			</div>			
 			<div class="bnc-clearer"></div>

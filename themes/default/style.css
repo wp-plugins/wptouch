@@ -2126,38 +2126,6 @@ p.subscribe-to-comments input#subscribe {
 
 /* @end */
 
-/* @group iOS 5 */
-
-.ios5 #headerbar {
-	position: fixed;
-	top: 0;
-	z-index: 1;
-}
-
-.ios5 #drop-fade {
-	position: fixed;
-	top: 46px;
-}
-
-.ios5 #wptouch-menu {
-	position: fixed;
-}
-
-.ios5 .content {
-	padding-top: 56px;
-}
-
-.ios5 .content.single {
-	padding-top: 66px;
-}
-
-.ios5 #wptouch-search  {
-	z-index: 2;
-	position: fixed;
-}
-
-/* @end */
-
 /* @group Compatibility */
 
 #livefyre {
@@ -2480,3 +2448,43 @@ p.thdrpy, p.thdmang {
 
 
 /* @end */
+
+/* Not in use */
+
+
+
+/* @group iOS 5 */
+
+/*
+
+.ios5 #headerbar {
+	position: fixed;
+	top: 0;
+	z-index: 1;
+}
+
+.ios5 #drop-fade {
+	position: fixed;
+	top: 46px;
+}
+
+.ios5 #wptouch-menu {
+	position: fixed;
+}
+
+.ios5 .content {
+	padding-top: 56px;
+}
+
+.ios5 .content.single {
+	padding-top: 66px;
+}
+
+.ios5 #wptouch-search  {
+	z-index: 2;
+	position: fixed;
+}
+*/
+
+/* @end */
+
