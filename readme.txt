@@ -40,12 +40,13 @@ For more information visit http://www.bravenewcode.com/wptouch-pro
 
 = Version 1.9.40 =
 
+* Added: More CSS prefixes for Mozilla/Opera browsers
 * Added: Advertising integration with AppStores
 * Added: Social Share plugin hiding
 * Changed: Layout of advertising section
 * Changed: Removed fixed header option for iOS5— it's half-baked and not fully working correctly yet
-* Fixed: issue with ordered lists
-* Fixed: issue with Login/My Account tab always showing in some situations
+* Fixed: Issue with ordered lists
+* Fixed: Issue with Login/My Account tab always showing in some situations
 
 = Version 1.9.35 =
 
