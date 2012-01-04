@@ -38,6 +38,10 @@ For more information visit http://www.bravenewcode.com/wptouch-pro
 
 == Changelog ==
 
+= Version 1.9.38 = 
+
+* Added: Advertising integration with AppStores
+
 = Version 1.9.37 =
 
 * Added: More CSS prefixes for Mozilla/Opera browsers
