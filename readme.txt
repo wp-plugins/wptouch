@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=paypa
 Tags: wptouch, iphone, ipod, theme, apple, mac, bravenewcode, ajax, mobile, android, blackberry, smartphone, 
 Requires at least: 3.0
 Tested up to: 3.3.1
-Stable tag: 1.9.36
+Stable tag: 1.9.37
 
 WPtouch: A simple, powerful and elegant mobile theme for your website.
 
@@ -38,7 +38,7 @@ For more information visit http://www.bravenewcode.com/wptouch-pro
 
 == Changelog ==
 
-= Version 1.9.36 =
+= Version 1.9.37 =
 
 * Added: More CSS prefixes for Mozilla/Opera browsers
 * Added: Social Share plugin hiding
