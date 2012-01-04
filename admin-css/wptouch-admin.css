@@ -1,5 +1,10 @@
 /* WPtouch 1.9 Admin CSS */
 
+.left-content p {
+	color: #777;
+	line-height: 1.4em;
+}
+
 /* @group head-area.php */
 
 #wptouch-head .postbox {
@@ -12,7 +17,7 @@
 
 #wptouch-head #wptouch-head-colour {
 	background-color: #d7ebf7;
-	padding: 10px;
+	padding: 10px 10px 0;
 	margin: -10px -10px -20px;
 }
 
@@ -127,11 +132,11 @@
 #wptouch-news-support li {
 	border-bottom: 1px solid #e6e6e6;
 	margin: 0;
-	padding: 5px 0 5px 12px;
+	padding: 8px 0 8px 12px;
 	list-style-type: disc;
 	list-style-position: inside;
 	color: #c1cfd1;
-	width: 80%;
+	width: 78%;
 	text-indent: -12px;
 }
 
@@ -236,7 +241,7 @@ em.supported {
 	height: auto;
 }
 
-#bnc-global ul.wptouch-iconblock li {
+#bnc-global .right-content ul.wptouch-iconblock li {
 	width: 80px;
 	color: #666;
 	font-size: 9px;
@@ -540,6 +545,11 @@ textarea#wptouch-stats {
 #bnc-global .new-styles .right-content {
 	padding-bottom: 25px;
 	margin-top: 20px;
+}
+
+#bnc-global .right-content ul li {
+	padding-bottom: 3px;
+	padding-top: 3px;
 }
 
 
