@@ -8,17 +8,6 @@ Stable tag: 1.9.37
 
 WPtouch: A simple, powerful and elegant mobile theme for your website.
 
-WPtouch automatically transforms your WordPress website into an application-like theme, complete with ajax loading articles and effects when viewed from the most popular mobile web browsing devices like the iPhone, iPod touch, Android mobile devices, Palm Pre/Pixi and BlackBerry OS6 mobile devices.
-
-*Now includes .pot file for translations (submit yours @ http://www.bravenwcode.com/contact)*
-
-*Now Available: WPtouch Pro!*
-Totally re-written top to bottom, with a slew of new features like more style, color and branding customizations, themes, 10 languages, more advertising options, Web-App mode, and more!
-
-Awesome iPad theme support is now available in WPtouch Pro, now at version 2.5!
-
-For more information visit http://www.bravenewcode.com/wptouch-pro
-
 == Description ==
 
 WPtouch automatically transforms your WordPress website into an application-like theme, complete with ajax loading articles and effects when viewed from the most popular mobile web browsing devices like the iPhone, iPod touch, Android mobile devices, Palm Pre/Pixi and BlackBerry OS6 mobile devices.
@@ -26,6 +15,8 @@ WPtouch automatically transforms your WordPress website into an application-like
 The admin panel allows you to customize many aspects of its appearance, and deliver a fast, user-friendly and stylish version of your site to touch mobile visitors, without modifying *a single bit of code* (or affecting) your regular desktop theme.
 
 The theme also includes the ability for visitors to switch between *WPtouch* view and your site's regular theme.
+
+*Now includes .pot file for translations (submit yours @ http://www.bravenwcode.com/contact)*
 
 *Now Available: WPtouch Pro!*
 Totally re-written top to bottom, with a slew of new features like more style, color and branding customizations, themes, 10 languages, more advertising options, Web-Application mode, and more!
