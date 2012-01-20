@@ -31,7 +31,7 @@ For more information visit http://www.bravenewcode.com/wptouch-pro
 
 = Version 1.9.38 = 
 
-* Added: Advertising integration with AppStores
+* Added: Advertising integration with Appstores
 * Changed: Updated video code for better handling of videos
 
 = Version 1.9.37 =
