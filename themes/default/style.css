@@ -150,6 +150,10 @@ blockquote {
 	margin-right: auto;
 }
 
+.wptouch-videos {
+	-webkit-transform: translate3d(0,0,0);
+}
+
 /* @end */
 /* @group Header */
 #headerbar *,#wptouch-menu * {
