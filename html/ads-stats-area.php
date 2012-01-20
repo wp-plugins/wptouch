@@ -14,7 +14,7 @@
 					<li>
 						<select name="ad_service" id="ad_service">
 							<option value="none"<?php if ( $wptouch_settings['ad_service'] == 'none') echo " selected"; ?>><?php _e( "None", "wptouch" ); ?></option>
-							<!-- <option value="appstores"<?php if ( $wptouch_settings['ad_service'] == 'appstores') echo " selected"; ?>><?php _e( "AppStores", "wptouch" ); ?></option>	 -->					
+							<option value="appstores"<?php if ( $wptouch_settings['ad_service'] == 'appstores') echo " selected"; ?>><?php _e( "AppStores", "wptouch" ); ?></option>			
 							<option value="adsense"<?php if ( $wptouch_settings['ad_service'] == 'adsense') echo " selected"; ?>><?php _e( "Google Adsense", "wptouch" ); ?></option>
 		
 						</select>
@@ -28,11 +28,12 @@
 		<div id="appstores">
 			<div class="left-content">
 				<h4><?php _e( "AppStores", "wptouch" ); ?></h4>
+				<p><?php _e( "Enter your AppStores ID if you'd like use it to add support for mobile advertising in WPtouch posts.", "wptouch" ); ?></p>
 			</div>
 			
 			<div class="right-content">
 				<ul class="wptouch-make-li-italic">
-					<li><input name="appstores-id" type="text" value="<?php echo $wptouch_settings['appstores-id']; ?>" /><?php _e( "AppStore ID", "wptouch" ); ?> - <a href="#"><?php _e( "Get one now", "wptouch" ); ?> &rarr;</a></li>				
+					<li><input name="appstores-id" type="text" value="<?php echo $wptouch_settings['appstores-id']; ?>" /><?php _e( "AppStores ID", "wptouch" ); ?> - <a href="#"><?php _e( "Get one now", "wptouch" ); ?> &rarr;</a></li>				
 				</ul>
 			</div>			
 			<div class="bnc-clearer"></div>
@@ -41,7 +42,7 @@
 		<div id="google-adsense">
 			<div class="left-content">
 				<h4><?php _e( "Google Adsense", "wptouch" ); ?></h4>
-				<p><?php _e( "Enter your Google AdSense ID if you'd like to support mobile advertising in WPtouch posts.", "wptouch" ); ?></p>
+				<p><?php _e( "Enter your Google AdSense ID if you'd like use it to add support for mobile advertising in WPtouch posts.", "wptouch" ); ?></p>
 				<p><?php _e( "Make sure to include the 'pub-' part of your ID string.", "wptouch" ); ?></p>
 			</div>
 			
