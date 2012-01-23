@@ -197,10 +197,10 @@ function wptouch_header_advertising() {
 					$can_show_ad = ( is_single() && !is_page() );
 					break;
 				case 'single_blog':
-					$can_show_ads = ( is_single() && !is_page() ) || ( is_search() || is_home() || is_archive() || is_author() || is_category() );
+					$can_show_ad = ( is_single() && !is_page() ) || ( is_search() || is_home() || is_archive() || is_author() || is_category() );
 					break;
 				case 'single_page_blog':
-					$can_show_ads = ( is_single() || is_page() || is_search() || is_home() || is_archive() || is_author() || is_category() );
+					$can_show_ad = ( is_single() || is_page() || is_search() || is_home() || is_archive() || is_author() || is_category() );
 					break;
 				default:
 					break;
