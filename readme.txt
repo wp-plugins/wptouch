@@ -29,6 +29,10 @@ For more information visit http://www.bravenewcode.com/wptouch-pro
 
 == Changelog ==
 
+= Version 1.9.40 =
+
+* Removed: AppStores support - plesae visit the AppStores website for the Javascript code if you'd like to continue using it
+
 = Version 1.9.39 = 
 
 * Fixed: Admin styling issues on some WordPress versions
