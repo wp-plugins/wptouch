@@ -87,9 +87,7 @@ $wptouch_defaults = array(
 	'wptouch-language' => 'auto',
 	'enable-twenty-eleven-footer' => 0,
 	'enable-fixed-header' => false,
-	'ad_service' => 'adsense',
-	'appstores_pub_id' => '',
-	'appstores_ad_pages' => 'single_page_blog'
+	'ad_service' => 'adsense'
 );
 
 function wptouch_get_plugin_dir_name() {
@@ -182,36 +180,6 @@ function wptouch_include_ads() {
 function wptouch_header_advertising() {
 	global $wptouch_plugin;
 	$settings = bnc_wptouch_get_settings();
-
-	// Only show for appstores ads
-	if ( $settings['ad_service'] == 'appstores' ) {
-		// Only show on mobile devices
-		if ( bnc_is_iphone() && $wptouch_plugin->desired_view == 'mobile' && $settings['appstores_pub_id'] ) {
-			$can_show_ad = false;
-			
-			switch( $settings['appstores_ad_pages'] ) {
-				case 'blog':
-					$can_show_ad = is_search() || is_home() || is_archive() || is_author() || is_category();
-					break;
-				case 'single':
-					$can_show_ad = ( is_single() && !is_page() );
-					break;
-				case 'single_blog':
-					$can_show_ad = ( is_single() && !is_page() ) || ( is_search() || is_home() || is_archive() || is_author() || is_category() );
-					break;
-				case 'single_page_blog':
-					$can_show_ad = ( is_single() || is_page() || is_search() || is_home() || is_archive() || is_author() || is_category() );
-					break;
-				default:
-					break;
-			}
-			
-			// Show the ad
-			if ( $can_show_ad ) {
-				echo '<script src="http://' . $settings['appstores_pub_id'] . '.publishers.appstores.com/campaigns/widget_slot/widget_attrs[source]=js_campaign_widget" type="text/javascript" charset="utf-8"></script>';
-			}
-		}
-	}
 }
 
 function wptouch_content_filter( $content ) {
