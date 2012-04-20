@@ -16,7 +16,7 @@ The admin panel allows you to customize many aspects of its appearance, and deli
 
 The theme also includes the ability for visitors to switch between *WPtouch* view and your site's regular theme.
 
-*Now includes .pot file for translations (submit yours @ http://www.bravenwcode.com/contact)*
+*Now includes .pot file for translations (submit yours @ http://www.bravenewcode.com/contact)*
 
 *Now Available: WPtouch Pro!*
 Totally re-written top to bottom, with a slew of new features like more style, color and branding customizations, themes, 10 languages, more advertising options, Web-Application mode, and more!
@@ -32,6 +32,7 @@ For more information visit http://www.bravenewcode.com/wptouch-pro
 = Version 1.9.40 =
 
 * Removed: AppStores support - plesae visit the AppStores website for the Javascript code if you'd like to continue using it
+* Changed: Updated fitvids() video script
 
 = Version 1.9.39 = 
 
