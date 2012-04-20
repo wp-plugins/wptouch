@@ -101,27 +101,19 @@ function doWPtouchReady() {
 	}
 	
 	/* add dynamic automatic video resizing via fitVids */
-	$wpt( '.post' ).fitVids();
-
-	var videoSelectors = [
-		"iframe[src^='http://player.vimeo.com']",
-		"iframe[src^='http://www.youtube.com']",
-		"iframe[src^='http://www.kickstarter.com']",
-		"object",
-		"embed",
-		"video"
-	];
+	var allVideos = touchJS( '.post' ).find(videoSelectors.join(','));
 	
-	var allVideos = $wpt( '.post' ).find(videoSelectors.join(','));
-	
-	$wpt( allVideos ).each( function(){ 
-		$wpt( this ).addClass( 'wptouch-videos' ).parentsUntil( '.post', 'div:not(.fluid-width-video-wrapper)' ).removeAttr( 'width' ).removeAttr( 'height' ).removeAttr( 'style' );
+	touchJS( allVideos ).each( function(){ 
+		touchJS( this ).unwrap().addClass( 'wptouch-videos' ).parentsUntil( '.content', 'div:not(.fluid-width-video-wrapper), span' ).removeAttr( 'width' ).removeAttr( 'height' ).removeAttr( 'style' );
 	});
-}
+
+	touchJS( '.post' ).fitVids();
+
 
 $wpt( document ).ready( function() { doWPtouchReady(); } );
 
 /*global jQuery */
+
 /*! 
 * FitVids 1.0
 *
@@ -172,7 +164,7 @@ $wpt( document ).ready( function() { doWPtouchReady(); } );
         "iframe[src^='http://player.vimeo']", 
         "iframe[src^='http://www.youtube']", 
         "iframe[src^='http://www.kickstarter']",
-        "iframe[src^='http://maps.google']",
+//     "iframe[src^='http://maps.google']",
         "object", 
         "embed",
         "video"
