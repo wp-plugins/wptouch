@@ -31,7 +31,7 @@ For more information visit http://www.bravenewcode.com/wptouch-pro
 
 = Version 1.9.40 =
 
-* Removed: AppStores support - plesae visit the AppStores website for the Javascript code if you'd like to continue using it
+* Removed: AppStores support - please visit the AppStores website for the Javascript code to use if you'd like to continue using it
 * Changed: Updated fitvids() video script
 
 = Version 1.9.39 = 
