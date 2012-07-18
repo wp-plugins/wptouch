@@ -119,9 +119,23 @@ function doWPtouchReady() {
 
 	$wpt( '.post' ).fitVids();
 
+	wpt_resize();
+
 }
 
 $wpt( document ).ready( function() { doWPtouchReady(); } );
+
+function wpt_resize() {
+	$wpt( '.post' ).each( function(){ 
+		var calendarDiv = $wpt( this ).find( '.calendar' );
+		var contentHeight = $wpt( this ).height();
+		var calendarHeight = $wpt( calendarDiv ).height();
+		if ( contentHeight > calendarHeight ) {
+			$wpt( calendarDiv ).css( 'height', contentHeight + 20 );
+		}
+	});
+}
+
 
 /*global jQuery */
 /*! 

@@ -27,7 +27,7 @@ var button = jQuery('#upload-icon'), interval;
 				<h4><?php _e( "Adding Icons", "wptouch" ); ?></h4>
 				<p><?php _e( "To add icons to the pool, simply upload a .png, .jpeg or .gif image from your computer.", "wptouch" ); ?></p>
 				<p></p>
-				<p><?php echo sprintf( __( "Default icons generously provided by %sMarcelo Marfil%s.", "wptouch"), "<a href='http://marfil.me/' target='_blank'>", "</a>" ); ?></p>
+				<p><?php echo sprintf( __( "Default icons generously provided by %sMarcelo Marfil%s.", "wptouch"), "<a href='http://www.mmarfil.com/' target='_blank'>", "</a>" ); ?></p>
 
 				<h4><?php _e( "Logo/Bookmark Icons", "wptouch" ); ?></h4>
 				<p><?php _e( "If you're adding a logo icon, the best dimensions for it are 59x60px (png) when used as a bookmark icon.", "wptouch" ); ?></p>

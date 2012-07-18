@@ -25,9 +25,9 @@
 				<?php if (bnc_excerpt_enabled()) { ?>
 				<script type="text/javascript">
 					$wpt(document).ready(function(){
-						$wpt("a#arrow-<?php the_ID(); ?>").bind( touchStartOrClick, function(e) {
-							$wpt(this).toggleClass("post-arrow-down");
-							$wpt('#entry-<?php the_ID(); ?>').wptouchFadeToggle(500);
+						$wpt("a#arrow-<?php the_ID(); ?>").bind( touchStartOrClick, function( e ) {
+							$wpt(this).toggleClass( 'post-arrow-down' );
+							$wpt( '#entry-<?php the_ID(); ?>' ).wptouchFadeToggle( 500 );
 						});	
 					 });					
 				</script>
@@ -54,7 +54,7 @@
 				
 				<?php 
 					$version = bnc_get_wp_version();
-					if ($version >= 2.9 && $wptouch_settings['post-cal-thumb'] != 'calendar-icons' && $wptouch_settings['post-cal-thumb'] != 'nothing-shown') { ?>
+					if ( $version >= 2.9 && $wptouch_settings['post-cal-thumb'] != 'calendar-icons' && $wptouch_settings['post-cal-thumb'] != 'nothing-shown' ) { ?>
 					<div class="wptouch-post-thumb-wrap">
 						<div class="thumb-top-left"></div><div class="thumb-top-right"></div>
 					<div class="wptouch-post-thumb">
@@ -109,16 +109,14 @@
 						<div class="thumb-bottom-left"></div><div class="thumb-bottom-right"></div>
 					</div>
 				<?php }  elseif ($wptouch_settings['post-cal-thumb'] == 'calendar-icons') { ?>
-					<div class="calendar">
-						<div class="cal-month month-<?php echo get_the_time('m') ?>"><?php echo get_the_time('M') ?></div>
-						<div class="cal-date"><?php echo get_the_time('j') ?></div>
+					<div class="calendar month-<?php echo get_the_time('m') ?>">
+						<div class="calendar-inner"><?php echo get_the_time('M') ?> <?php echo get_the_time('j') ?></div>
 					</div>				
-				<?php }  elseif ($wptouch_settings['post-cal-thumb'] == 'nothing-shown') { }  else { ?>
-					<div class="calendar">
-						<div class="cal-month month-<?php echo get_the_time('m') ?>"><?php echo get_the_time('M') ?></div>
-						<div class="cal-date"><?php echo get_the_time('j') ?></div>
-					</div>	
-				<?php } ?>
+				<?php }  elseif ($wptouch_settings['post-cal-thumb'] == 'nothing-shown') { 
+				
+				// nothing shown
+				
+				 } ?>
 
 	<?php } ?>
  
@@ -142,7 +140,7 @@
 
 	<div id="call<?php echo md5($_SERVER['REQUEST_URI']); ?>" class="ajax-load-more">
 		<div id="spinner<?php echo md5($_SERVER['REQUEST_URI']); ?>" class="spin"	 style="display:none"></div>
-		<a class="ajax" href="javascript:return false;" onclick="$wpt('#spinner<?php echo md5($_SERVER['REQUEST_URI']); ?>').fadeIn(200); $wpt('#ajaxentries<?php echo md5($_SERVER['REQUEST_URI']); ?>').load('<?php echo get_next_posts_page_link(); ?>', {}, function(){ $wpt('#call<?php echo md5($_SERVER['REQUEST_URI']); ?>').fadeOut();});">
+		<a class="ajax" href="javascript:return false;" onclick="$wpt('#spinner<?php echo md5($_SERVER['REQUEST_URI']); ?>').fadeIn(200); $wpt('#ajaxentries<?php echo md5($_SERVER['REQUEST_URI']); ?>').load('<?php echo get_next_posts_page_link(); ?>', {}, function(){ wpt_resize(); $wpt('#call<?php echo md5($_SERVER['REQUEST_URI']); ?>').fadeOut();});">
 			<?php _e( "Load more entries...", "wptouch" ); ?>
 		</a>
 	</div>
