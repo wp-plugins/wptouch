@@ -17,6 +17,30 @@
 			<p><?php _e( "The default WPtouch theme emulates a native iPhone application.", "wptouch" ); ?></p>
 			<ul class="wptouch-make-li-italic">
 					<li><select name="style-background">
+							<option <?php if ($wptouch_settings['style-background'] == "crossed-stripes-wptouch-bg") echo " selected"; ?> value="crossed-stripes-wptouch-bg">
+								<?php _e( "Crossed Stripes (New)", "wptouch" ); ?>
+							</option>
+							<option <?php if ($wptouch_settings['style-background'] == "fiber-wptouch-bg") echo " selected"; ?> value="fiber-wptouch-bg">
+								<?php _e( "Fiber (New)", "wptouch" ); ?>
+							</option>
+							<option <?php if ($wptouch_settings['style-background'] == "light-noise-diagonal-wptouch-bg") echo " selected"; ?> value="light-noise-diagonal-wptouch-bg">
+								<?php _e( "Light Noise Diagonal (New)", "wptouch" ); ?>
+							</option>
+							<option <?php if ($wptouch_settings['style-background'] == "low-contrast-linen-wptouch-bg") echo " selected"; ?> value="low-contrast-linen-wptouch-bg">
+								<?php _e( "Low Contrast Linen (New)", "wptouch" ); ?>
+							</option>
+							<option <?php if ($wptouch_settings['style-background'] == "random-grey-wptouch-bg") echo " selected"; ?> value="random-grey-wptouch-bg">
+								<?php _e( "Random Grey (New)", "wptouch" ); ?>
+							</option>
+							<option <?php if ($wptouch_settings['style-background'] == "stitched-wool-wptouch-bg") echo " selected"; ?> value="stitched-wool-wptouch-bg">
+								<?php _e( "Stitched Wool (New)", "wptouch" ); ?>
+							</option>
+							<option <?php if ($wptouch_settings['style-background'] == "white-carbon-wptouch-bg") echo " selected"; ?> value="white-carbon-wptouch-bg">
+								<?php _e( "White Carbon (New)", "wptouch" ); ?>
+							</option>
+							<option <?php if ($wptouch_settings['style-background'] == "white-carbon-fiber-wptouch-bg") echo " selected"; ?> value="white-carbon-fiber-wptouch-bg">
+								<?php _e( "White Carbon Fiber (New)", "wptouch" ); ?>
+							</option>
 							<option <?php if ($wptouch_settings['style-background'] == "classic-wptouch-bg") echo " selected"; ?> value="classic-wptouch-bg">
 								<?php _e( "Classic", "wptouch" ); ?>
 							</option>

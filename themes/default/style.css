@@ -2078,27 +2078,59 @@ p.subscribe-to-comments input#subscribe {
 /* @group Background Options */
 
 .classic-wptouch-bg {
-	background-image: url(../core/core-images/pinstripes-classic.gif);
+	background-image: url(../core/core-images/backgrounds/pinstripes-classic.gif);
 }
 
 .argyle-wptouch-bg {
-	background-image: url(../core/core-images/argyle-tie.gif);
+	background-image: url(../core/core-images/backgrounds/argyle-tie.gif);
 }
 
 .horizontal-wptouch-bg {
-	background-image: url(../core/core-images/pinstripes-horizontal.gif);
+	background-image: url(../core/core-images/backgrounds/pinstripes-horizontal.gif);
 }
 
 .diagonal-wptouch-bg {
-	background-image: url(../core/core-images/pinstripes-diagonal.gif);
+	background-image: url(../core/core-images/backgrounds/pinstripes-diagonal.gif);
 }
 
 .skated-wptouch-bg {
-	background-image: url(../core/core-images/skated-concrete.gif);
+	background-image: url(../core/core-images/backgrounds/skated-concrete.gif);
 }
 
 .grid-wptouch-bg {
-	background-image: url(../core/core-images/grid.gif);
+	background-image: url(../core/core-images/backgrounds/grid.gif);
+}
+
+.low-contrast-linen-wptouch-bg {
+	background-image: url(../core/core-images/backgrounds/low_contrast_linen.png);
+}
+
+.crossed-stripes-wptouch-bg {
+	background-image: url(../core/core-images/backgrounds/crossed_stripes.png);
+}
+
+.fiber-wptouch-bg {
+	background-image: url(../core/core-images/backgrounds/fiber.png);
+}
+
+.light-noise-diagonal-wptouch-bg {
+	background-image: url(../core/core-images/backgrounds/light_noise_diagonal.png);
+}
+
+.random-grey-wptouch-bg {
+	background-image: url(../core/core-images/backgrounds/random_grey.png);
+}
+
+.stitched-wool-wptouch-bg {
+	background-image: url(../core/core-images/backgrounds/stitched_wool.png);
+}
+
+.white-carbon-wptouch-bg {
+	background-image: url(../core/core-images/backgrounds/white_carbon.png);
+}
+
+.white-carbon-fiber-wptouch-bg {
+	background-image: url(../core/core-images/backgrounds/white_carbon_fiber.png);
 }
 
 /* @end */
