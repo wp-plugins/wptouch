@@ -119,9 +119,9 @@ function doWPtouchReady() {
 
 	$wpt( '.post' ).fitVids();
 	
-	$wpt( '.post-arrow' ).bind( touchStartOrClick, function( e ){
+	$wpt( '.post-arrow' ).live( touchStartOrClick, function( e ){
 		$wpt( this ).toggleClass( 'post-arrow-down' );
-		$wpt( '.mainentry', this ).show();
+		$wpt( this ).parents( '.post' ).find( '.mainentry' ).wptouchFadeToggle(500);
 	});
 
 }
