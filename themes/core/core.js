@@ -111,30 +111,22 @@ function doWPtouchReady() {
 		"video"
 	];
 	
-	var allVideos = $wpt( '.post' ).find(videoSelectors.join(','));
+	var allVideos = $wpt( '.post' ).find( videoSelectors.join(',') );
 	
 	$wpt( allVideos ).each( function(){ 
 		$wpt( this ).unwrap().addClass( 'wptouch-videos' ).parentsUntil( '.content', 'div:not(.fluid-width-video-wrapper), span' ).removeAttr( 'width' ).removeAttr( 'height' ).removeAttr( 'style' );
 	});
 
 	$wpt( '.post' ).fitVids();
-
-	wpt_resize();
+	
+	$wpt( '.post-arrow' ).bind( touchStartOrClick, function( e ){
+		$wpt( this ).toggleClass( 'post-arrow-down' );
+		$wpt( '.mainentry', this ).show();
+	});
 
 }
 
 $wpt( document ).ready( function() { doWPtouchReady(); } );
-
-function wpt_resize() {
-	$wpt( '.post' ).each( function(){ 
-		var calendarDiv = $wpt( this ).find( '.calendar' );
-		var contentHeight = $wpt( this ).height();
-		var calendarHeight = $wpt( calendarDiv ).height();
-		if ( contentHeight > calendarHeight ) {
-			$wpt( calendarDiv ).css( 'height', contentHeight + 20 );
-		}
-	});
-}
 
 
 /*global jQuery */
