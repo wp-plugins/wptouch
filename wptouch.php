@@ -2,7 +2,7 @@
 /*
 Plugin Name: WPtouch
 Plugin URI: http://wordpress.org/extend/plugins/wptouch/
-Version: 1.9.41
+Version: 1.9.42
 Description: A plugin which formats your site with a mobile theme for visitors on Apple <a href="http://www.apple.com/iphone/">iPhone</a> / <a href="http://www.apple.com/ipodtouch/">iPod touch</a>, <a href="http://www.android.com/">Google Android</a>, <a href="http://www.blackberry.com/">Blackberry Storm and Torch</a>, <a href="http://www.palm.com/us/products/phones/pre/">Palm Pre</a> and other touch-based smartphones.
 Author: BraveNewCode Inc.
 Author URI: http://www.bravenewcode.com
@@ -28,7 +28,7 @@ License: GNU General Public License 2.0 (GPL) http://www.gnu.org/licenses/gpl.ht
 load_plugin_textdomain( 'wptouch', false, dirname( plugin_basename( __FILE__ ) ) );
 
 global $bnc_wptouch_version;
-$bnc_wptouch_version = '1.9.41';
+$bnc_wptouch_version = '1.9.42';
 
 require_once( 'include/plugin.php' );
 require_once( 'include/compat.php' );
@@ -681,11 +681,16 @@ function bnc_is_iphone() {
 function wptouch_switch() {
 	global $wptouch_plugin;
 	if ( bnc_is_iphone() && $wptouch_plugin->desired_view == 'normal' ) {
-		echo '<div id="wptouch-switch-link">';
-		_e( "Mobile Theme", "wptouch" ); 
-		echo "<a onclick=\"document.getElementById('switch-on').style.display='block';document.getElementById('switch-off').style.display='none';\" href=\"" . get_bloginfo('url') . "/?wptouch_view=mobile&wptouch_redirect_nonce=" . wp_create_nonce( 'wptouch_redirect' ) . "&wptouch_redirect=" . urlencode( $_SERVER['REQUEST_URI'] ) . "\"><img id=\"switch-on\" src=\"" . compat_get_plugin_url( 'wptouch' ) . "/themes/core/core-images/on.jpg\" alt=\"on switch image\" class=\"wptouch-switch-image\" style=\"display:none\" /><img id=\"switch-off\" src=\"" . compat_get_plugin_url( 'wptouch' ) .  "/themes/core/core-images/off.jpg\" alt=\"off switch image\" class=\"wptouch-switch-image\" /></a>";
- 		echo '</div>';
+		echo '<div id="switch">';
+		_e( "Mobile Theme", "wptouch" );
+		echo '<div>';
+		echo "<a id='switch-link' onclick=\"var addActive = document.getElementById('switch-on'); addActive.className = addActive.className + ' active';var removeActive = document.getElementById('switch-off'); removeActive.className = ' ';\" href=\"" . get_bloginfo('url') . "/?wptouch_view=mobile&wptouch_redirect_nonce=" . wp_create_nonce( 'wptouch_redirect' ) . "&wptouch_redirect=" . urlencode( $_SERVER['REQUEST_URI'] ) . "\">";
+		echo '<span id="switch-on">ON</span>';
+		echo '<span id="switch-off" class="active">OFF</span>';
+		echo '</a>';
+ 		echo '</div></div>';
 	}
+	
 }
   
 function bnc_options_menu() {

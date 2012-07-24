@@ -2211,7 +2211,6 @@ p.subscribe-to-comments input#subscribe {
 	background: -o-linear-gradient(top, #fff, #d3d3d3, #eee .5, #e9e9e9 .51);
 	background: -ms-linear-gradient(top, #fff, #d3d3d3, #eee .5, #e9e9e9 .51);
 	background: linear-gradient(top, #fff, #d3d3d3, #eee .5, #e9e9e9 .51);
-	color: #333;
 	text-shadow: #fff 0 1px 0;
 }
 
@@ -2254,6 +2253,7 @@ p.subscribe-to-comments input#subscribe {
 	-moz-box-shadow: inset rgba(0,0,0,.4) 0px 0px 7px;
 	box-shadow: inset rgba(0,0,0,.4) 0px 0px 7px;
 	border-style: none;
+	color: #666;
 }
 
 /* @end */
