@@ -50,7 +50,7 @@ include( dirname(__FILE__) . '/../core/core-header.php' );
         <div id="wptouch-menu-inner">
 	        <div id="menu-head">
 	        	<div id="tabnav">
-					<a href="#head-pages"><?php _e("Menu", "wptouch"); ?></a>
+					<a href="#head-pages"><?php _e("Pages", "wptouch"); ?></a>
 		        	<?php if (bnc_is_tags_button_enabled()) { wptouch_tags_link(); } ?>
 	    	    	<?php if (bnc_is_cats_button_enabled()) { wptouch_cats_link(); } ?>
 	    	    	<?php if (bnc_is_login_button_enabled()) { ?>
@@ -115,11 +115,11 @@ include( dirname(__FILE__) . '/../core/core-header.php' );
 <div id="headerbar">
 	<div id="headerbar-title">
 		<!-- This fetches the admin selection logo icon for the header, which is also the bookmark icon -->
-		<img id="logo-icon" src="<?php echo bnc_get_title_image(); ?>" alt="<?php $str = bnc_get_header_title(); echo stripslashes($str); ?>" />
+		<a href="<?php bloginfo('url'); ?>"><img id="logo-icon" src="<?php echo bnc_get_title_image(); ?>" alt="<?php $str = bnc_get_header_title(); echo stripslashes($str); ?>" /></a>
 		<a href="<?php bloginfo('url'); ?>"><?php wptouch_core_body_sitetitle(); ?></a>
 	</div>
 	<div id="headerbar-menu">
-		    <a href="javascript:return false;"></a>
+		    <a href="javascript:return false;"><?php _e( 'Menu', 'wptouch' ); ?></a>
 	</div>
 </div>
 

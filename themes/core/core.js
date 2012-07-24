@@ -68,6 +68,7 @@ function doWPtouchReady() {
 
 	$wpt( 'a#searchopen, #wptouch-search-inner a' ).bind( touchStartOrClick, function( e ){	
 		$wpt( '#wptouch-search' ).wptouchFadeToggle( 350 );
+		$wpt( '#s' ).focus();		
 	});
 	
 	$wpt( 'a#prowlopen' ).bind( touchStartOrClick, function( e ){	
