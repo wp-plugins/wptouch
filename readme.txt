@@ -37,6 +37,7 @@ For more information visit http://www.bravenewcode.com/wptouch-pro
 * Updated: Enhanced usability of search
 * Updated: Genersal styling updates
 * Updated: Changed mobile switch link to CSS only
+* Updated: Prefixes for Opera, Mozilla browsers
 
 = Version 1.9.41 =
 

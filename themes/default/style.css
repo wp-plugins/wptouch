@@ -888,7 +888,7 @@ a.h2 {
 	background: -webkit-gradient(linear, left top, left bottom, from(#de939e), to(#a40717), color-stop(0.5, #be4958));
 	background: -webkit-linear-gradient(top, #de939e, #a40717, #be4958 0.5);
 	background: -moz-linear-gradient(top, #de939e, #a40717, #be4958 0.5);
-	background: -o-linear-gradient(top, #de939e, #a40717, #be4958 0.5);
+	background: -o-linear-gradient(top, #de939e 0%, #be4958 50%, #a40717 100%);
 	background: -ms-linear-gradient(top, #de939e, #a40717, #be4958 0.5);
 	background: linear-gradient(top, #de939e, #a40717, #be4958 0.5);
 	-webkit-background-clip: padding-box;
