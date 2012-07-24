@@ -1,11 +1,9 @@
-/* @override http://www.bravenewcode.com/wordpress/wp-content/plugins/wptouch/themes/default/style.css */
-
 /*
-Theme Name:  WPtouch Mobile Plugin & Theme For WordPress
-Theme URI:  http://www.bravenewcode.com/wptouch/
-Description:  A slick theme for your blog or website that is shown only when visitors are using an iPhone, iPod touch, or Android Mobile Device
-Author:  BraveNewCode Inc.
-Author URI:  http://www.bravenewcode.com/
+Theme Name:   WPtouch Mobile Plugin & Theme For WordPress
+Theme URI:   http://www.bravenewcode.com/wptouch/
+Description:   A slick theme for your blog or website that is shown only when visitors are using an iPhone, iPod touch, or Android Mobile Device
+Author:   BraveNewCode Inc.
+Author URI:   http://www.bravenewcode.com/
  */
 
 /* @group Body and Theme-Wide Elements */
@@ -155,12 +153,16 @@ blockquote {
 }
 
 iframe[src^='http://maps.google'] {
-		width: 100%;
-		max-width: 100%;
+	width: 100%;
+	max-width: 100%;
 }
 
 .wptouch-videos {
 	-webkit-transform: translate3d(0,0,0);
+	-moz-transform: translate3d(0,0,0);
+	-o-transform: translate3d(0,0,0);
+	-ms-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
 }
 
 /* @end */
@@ -237,17 +239,16 @@ iframe[src^='http://maps.google'] {
 	top: 10px;
 	background-color: rgba(0,0,0,.3);
 	border: 1px solid rgba(0,0,0,.8);
-	-webkit-border-radius: 4px;
-	-moz-border-radius: 4px;
 	border-radius: 4px;
+	-webkit-box-shadow: rgba(255,255,255,.2) 0px 1px 0px, inset rgba(255,255,255,.2) 0px 1px 0px;
 	box-shadow: rgba(255,255,255,.2) 0px 1px 0px, inset rgba(255,255,255,.2) 0px 1px 0px;
 	font-weight: bold;
 }
 
 #headerbar-menu .open {
 	background-color: rgba(0,0,0,.3);
+	-webkit-box-shadow: rgba(255,255,255,.2) 0px 1px 0px, inset rgba(0,0,0,.5) 0px 1px 6px;
 	box-shadow: rgba(255,255,255,.2) 0px 1px 0px, inset rgba(0,0,0,.5) 0px 1px 6px;
-
 }
 
 /* @group Sub-Menu */
@@ -257,7 +258,6 @@ iframe[src^='http://maps.google'] {
 	display: block;
 	position: relative;
 	-webkit-box-shadow: #000 -3px 2px 3px;
-	-moz-box-shadow: #000 -3px 2px 3px;
 	box-shadow: #000 -3px 2px 3px;
 	text-align: right;
 	border-top: 1px solid #3e3e3e;
@@ -399,7 +399,6 @@ iframe[src^='http://maps.google'] {
 	z-index: 2;
 	top: 45px;
 	-webkit-box-shadow: #333 -6px 6px 6px;
-	-moz-box-shadow: #333 -6px 6px 6px;
 	box-shadow: #333 -6px 6px 6px;
 	display: none;
 }
@@ -445,8 +444,7 @@ iframe[src^='http://maps.google'] {
 	margin-right: -1px;
 	color: #fff !important;
 	-webkit-box-shadow: rgba(0,0,0,.5) 0px -1px 1px;
-	-moz-box-shadow: #222 0px -2px 3px;
-	box-shadow: rgba(0,0,0,.8) 0px -1px 1px;
+	box-shadow: rgba(0,0,0,.5) 0px -1px 1px;
 	text-shadow: #000000 0 -1px 1px;
 	border: 1px solid #2c2c2c;
 }
@@ -480,8 +478,6 @@ iframe[src^='http://maps.google'] {
 #wordtwit-avatar {
 	text-align: left;
 	padding-bottom: 10px;
-	-webkit-border-radius: 8px;
-	-moz-border-radius: 8px;
 	border-radius: 8px;
 	padding-left: 5px;
 	padding-top: 5px;
@@ -496,8 +492,6 @@ iframe[src^='http://maps.google'] {
 	border: 1px solid #222;
 	float: left;
 	margin-right: 15px;
-	-webkit-border-radius: 2px;
-	-moz-border-radius: 2px;
 	border-radius: 2px;
 	width: 32px;
 	height: 32px;
@@ -598,8 +592,6 @@ iframe[src^='http://maps.google'] {
 
 #prowl-message input {
 	width: 60%;
-	-webkit-border-radius: 10px;
-	-moz-border-radius: 10px;
 	border-radius: 10px;
 	padding: 3px;
 	color: #222;
@@ -620,8 +612,6 @@ iframe[src^='http://maps.google'] {
 
 #prowl-message textarea {
 	width: 98%;
-	-webkit-border-radius: 10px;
-	-moz-border-radius: 10px;
 	border-radius: 10px;
 	padding: 3px;
 	color: #222;
@@ -661,11 +651,8 @@ iframe[src^='http://maps.google'] {
 	width: 90%;
 	margin-left: 5%;
 	margin-top: 25px;
-	-webkit-border-radius: 15px;
-	-moz-border-radius: 15px;
 	border-radius: 15px;
 	-webkit-box-shadow: #444 0px 0px 15px;
-	-moz-box-shadow: #444 0px 0px 15px;
 	box-shadow: #444 0px 0px 15px;
 }
 
@@ -691,11 +678,8 @@ iframe[src^='http://maps.google'] {
 	width: 90%;
 	margin-left: 5%;
 	margin-top: 25px;
-	-webkit-border-radius: 15px;
-	-moz-border-radius: 15px;
 	border-radius: 15px;
 	-webkit-box-shadow: #444 0px 0px 15px;
-	-moz-box-shadow: #444 0px 0px 15px;
 	box-shadow: #444 0px 0px 15px;
 }
 
@@ -725,8 +709,6 @@ iframe[src^='http://maps.google'] {
 
 #wptouch-login input#log {
 	width: 120px;
-	-webkit-border-radius: 10px;
-	-moz-border-radius: 10px;
 	border-radius: 10px;
 	padding: 3px;
 	font-size: 13px;
@@ -737,8 +719,6 @@ iframe[src^='http://maps.google'] {
 
 #wptouch-login input#pwd {
 	width: 120px;
-	-webkit-border-radius: 10px;
-	-moz-border-radius: 10px;
 	border-radius: 10px;
 	padding: 3px;
 	font-size: 13px;
@@ -777,8 +757,6 @@ iframe[src^='http://maps.google'] {
 }
 
 input#s {
-	-webkit-border-radius: 10px;
-	-moz-border-radius: 10px;
 	border-radius: 10px;
 	padding: 4px;
 	width: 80%;
@@ -814,13 +792,10 @@ img.head-close {
 	margin-right: 10px;
 	margin-left: 10px;
 	border: 1px solid #b1b1b1;
-	-webkit-border-radius: 8px;
-	-moz-border-radius: 8px;
 	border-radius: 8px;
 	position: relative;
 	z-index: 0;
 	-webkit-box-shadow: rgba(255,255,255,.8) 0px 1px 0px;
-	-moz-box-shadow: rgba(255,255,255,.8) 0px 1px 0px;
 	box-shadow: rgba(255,255,255,.8) 0px 1px 0px;
 }
 
@@ -836,8 +811,6 @@ a.post-arrow {
 	padding: 0;
 	background: #f4f4f4 url(../core/core-images/post-arrow.png) no-repeat center 8px;
 	border: 1px solid #ddd;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
 	border-radius: 5px;
 	-webkit-transform: scale(1.0) rotate(0deg);
 	-moz-transform: scale(1.0) rotate(0deg);
@@ -923,8 +896,6 @@ a.h2 {
 	background-clip: padding-box;
 	height: 16px;
 	display: block;
-	-webkit-border-radius: 32px;
-	-moz-border-radius: 32px;
 	border-radius: 32px;
 	padding: 0 5px;
 	color: #fff;
@@ -933,7 +904,6 @@ a.h2 {
 	border-style: solid;
 	border-width: 2px;
 	-webkit-box-shadow: rgba(0,0,0, .6) 0px 2px 3px;
-	-moz-box-shadow: rgba(0,0,0, .6) 0px 2px 3px;
 	box-shadow: rgba(0,0,0, .6) 0px 2px 3px;
 	position: absolute;
 	top: 3px;
@@ -977,8 +947,6 @@ a.h2 {
 }
 
 .main-navigation {
-	-webkit-border-radius: 8px;
-	-moz-border-radius: 8px;
 	border-radius: 8px;
 	background-color: #fff;
 	margin-bottom: 12px;
@@ -1020,26 +988,25 @@ a.h2 {
 	margin-right: 10px;
 	margin-top: 0;
 	border: 1px solid #c9c9c9;
-		-webkit-border-top-left-radius: 7px;
-		-webkit-border-bottom-right-radius: 7px;
-		-moz-border-radius-topleft: 7px;
-		-moz-border-radius-bottomright: 7px;
-		border-top-left-radius: 7px;
-		border-bottom-right-radius: 7px;	
-		-webkit-background-clip: padding-box;
+	-webkit-border-top-left-radius: 7px;
+	-webkit-border-bottom-right-radius: 7px;
+	border-radius-topleft: 7px;
+	border-radius-bottomright: 7px;
+	border-top-left-radius: 7px;
+	border-bottom-right-radius: 7px;
+	-webkit-background-clip: padding-box;
 	-moz-background-clip: padding-box;
 	background-clip: padding-box;
 	top: 3px;
 	float: left;
 	-webkit-box-shadow: #c6c6c6 1px 1px 3px;
-	-moz-box-shadow: #c6c6c6 1px 1px 3px;
 	box-shadow: #c6c6c6 1px 1px 3px;
 }
 
 .cal-month {
-		-webkit-border-top-left-radius: 6px;
-		-moz-border-radius-topleft: 6px;
-		border-top-left-radius: 6px;
+	-webkit-border-top-left-radius: 6px;
+	border-radius-topleft: 6px;
+	border-top-left-radius: 6px;
 	font-size: 10px;
 	font-weight: bold;
 	color: #fff;
@@ -1052,9 +1019,9 @@ a.h2 {
 	color: #222;
 	background-color: #e9e9e9;
 	text-shadow: white -1px -1px 1px;
-		-webkit-border-bottom-right-radius: 6px;
-		-moz-border-radius-bottomright: 6px;
-		border-bottom-right-radius: 6px;	
+	-webkit-border-bottom-right-radius: 6px;
+	border-radius-bottomright: 6px;
+	border-bottom-right-radius: 6px;
 	letter-spacing: -2px;
 	font: bold 21px Helvetica, "Arial Rounded MT Bold", Geneva, sans-serif;
 	padding: 1px 4px 2px 0;
@@ -1254,8 +1221,6 @@ a.sh2 {
 	padding: 2px 5px 2px 8px;
 	background-color: #fff;
 	border: 1px solid #ccc;
-	-webkit-border-radius: 4px;
-	-moz-border-radius: 4px;
 	border-radius: 4px;
 	width: 16px;
 	margin-right: 1px;
@@ -1364,8 +1329,6 @@ ul#post-options li a#obook {
 /* @group Twitter / Bookmarking */
 
 #twitter-box {
-	-webkit-border-radius: 8px;
-	-moz-border-radius: 8px;
 	border-radius: 8px;
 	border: 1px solid #adadad;
 	margin: 10px;
@@ -1407,8 +1370,6 @@ ul#post-options li a#obook {
 }
 
 #bookmark-box {
-	-webkit-border-radius: 8px;
-	-moz-border-radius: 8px;
 	border-radius: 8px;
 	border: 1px solid #adadad;
 	margin: 10px;
@@ -1503,8 +1464,6 @@ img.pageicon {
 /* @group Archives */
 
 #wptouch-tagcloud {
-	-webkit-border-radius: 8px;
-	-moz-border-radius: 8px;
 	border-radius: 8px;
 	border: 1px solid #adadad;
 	background-color: #fff;
@@ -1517,8 +1476,6 @@ img.pageicon {
 }
 
 #wptouch-archives {
-	-webkit-border-radius: 8px;
-	-moz-border-radius: 8px;
 	border-radius: 8px;
 	border: 1px solid #adadad;
 	background-color: #fff;
@@ -1588,8 +1545,6 @@ img.pageicon {
 }
 
 #wptouch-links ul {
-	-webkit-border-radius: 8px;
-	-moz-border-radius: 8px;
 	border-radius: 8px;
 	border: 1px solid #adadad;
 	background-color: #fff;
@@ -1640,8 +1595,6 @@ img.pageicon {
 /* @group 404 */
 
 #fourohfour {
-	-webkit-border-radius: 8px;
-	-moz-border-radius: 8px;
 	border-radius: 8px;
 	border: 1px solid #adadad;
 	background-color: #fff;
@@ -1678,15 +1631,12 @@ ol.commentlist li {
 	position: relative;
 	line-height: 17px;
 	-webkit-box-shadow: rgba(255,255,255,.8) 0px 1px 0px;
-	-moz-box-shadow: rgba(255,255,255,.8) 0px 1px 0px;
 	box-shadow: rgba(255,255,255,.8) 0px 1px 0px;
 }
 
 h3#com-head {
 	font-weight: bold;
 	font-size: 13px;
-	-webkit-border-radius: 8px;
-	-moz-border-radius: 8px;
 	border-radius: 8px;
 	text-shadow: #fff 0 1px 0;
 	margin-left: 10px;
@@ -1768,8 +1718,6 @@ ol.commentlist .parent {
 ol.commentlist .parent ul.children li {
 	border: 1px solid #ddd;
 	background-color: #e9f8fd;
-	-webkit-border-radius: 8px;
-	-moz-border-radius: 8px;
 	border-radius: 8px;
 }
 
@@ -1778,8 +1726,6 @@ ol.commentlist ul.children .parent ul.children li.alt {
 	background-color: #fff;
 	padding: 10px;
 	margin: 10px 0 0;
-	-webkit-border-radius: 8px;
-	-moz-border-radius: 8px;
 	border-radius: 8px;
 }
 
@@ -1788,8 +1734,6 @@ ol.commentlist ul.children .parent ul.children li.even {
 	background-color: #f9fbf6;
 	padding: 10px;
 	margin: 10px 0 0;
-	-webkit-border-radius: 8px;
-	-moz-border-radius: 8px;
 	border-radius: 8px;
 }
 
@@ -1802,8 +1746,6 @@ ol.commentlist .reply a,.comdater {
 	background-color: #e5e5e5;
 	padding: 1px 5px;
 	border: 1px solid #fff;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
 	border-radius: 3px;
 	text-shadow: #fff 0 1px 0px;
 }
@@ -1930,8 +1872,6 @@ form#commentform {
 }
 
 form#commentform input {
-	-webkit-border-radius: 8px;
-	-moz-border-radius: 8px;
 	border-radius: 8px;
 	border: 1px solid #adadad;
 	padding: 3px;
@@ -1954,8 +1894,6 @@ form#commentform input#submit {
 }
 
 textarea#comment {
-	-webkit-border-radius: 8px;
-	-moz-border-radius: 8px;
 	border-radius: 8px;
 	border: 1px solid #adadad;
 	font-size: 13px;
@@ -1964,15 +1902,12 @@ textarea#comment {
 	width: 98%;
 	padding: 3px;
 	-webkit-box-shadow: rgba(255,255,255,.8) 0px 1px 0px;
-	-moz-box-shadow: rgba(255,255,255,.8) 0px 1px 0px;
 	box-shadow: rgba(255,255,255,.8) 0px 1px 0px;
 }
 
 #loading {
 	position: relative;
 	background-color: #dedede;
-	-webkit-border-radius: 8px;
-	-moz-border-radius: 8px;
 	border-radius: 8px;
 	border: 1px solid #9fa5ac;
 	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=85)";
@@ -2007,8 +1942,6 @@ form#commentform label {
 }
 
 #refresher {
-	-webkit-border-radius: 8px;
-	-moz-border-radius: 8px;
 	border-radius: 8px;
 	padding: 10px 10px 10px 18px;
 	border: 1px solid #b1b1b1;
@@ -2036,8 +1969,6 @@ form#commentform label {
 
 p.subscribe-to-comments {
 	padding: 8px;
-	-webkit-border-radius: 8px;
-	-moz-border-radius: 8px;
 	border-radius: 8px;
 	background-color: #eee;
 	border: 1px solid #adadad;
@@ -2060,8 +1991,6 @@ p.subscribe-to-comments input#subscribe {
 	text-align: center;
 	font-weight: bold;
 	text-shadow: #ffecec 0 1px 0;
-	-webkit-border-radius: 8px;
-	-moz-border-radius: 8px;
 	border-radius: 8px;
 }
 
@@ -2170,6 +2099,7 @@ p.subscribe-to-comments input#subscribe {
 }
 
 /* @group Toggle Button */
+
 #switch {
 	text-align: left;
 	font-weight: bold;
@@ -2180,9 +2110,8 @@ p.subscribe-to-comments input#subscribe {
 	padding: 12px 8px;
 	position: relative;
 	height: 17px;
-	-webkit-border-radius: 8px;
-	-moz-border-radius: 8px;
 	border-radius: 8px;
+	-webkit-box-shadow: rgba(255,255,255,.8) 0px 1px 0px;
 	box-shadow: rgba(255,255,255,.8) 0px 1px 0px;
 	color: #333;
 	text-shadow: none;
@@ -2190,11 +2119,7 @@ p.subscribe-to-comments input#subscribe {
 
 #switch div {
 	border: 1px solid #b1b1b1;
-
-	-webkit-border-radius: 24px;
-	-moz-border-radius: 24px;
 	border-radius: 24px;
-
 	-webkit-background-clip: padding-box;
 	-moz-background-clip: padding-box;
 	background-clip: padding-box;
@@ -2204,7 +2129,6 @@ p.subscribe-to-comments input#subscribe {
 	right: 8px;
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 	-webkit-touch-callout: none;
-
 	background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#d3d3d3), color-stop(.5, #eee), color-stop(.51, #e9e9e9));
 	background: -webkit-linear-gradient(top, #fff, #d3d3d3, #eee .5, #e9e9e9 .51);
 	background: -moz-linear-gradient(top, #fff, #d3d3d3, #eee .5, #e9e9e9 .51);
@@ -2220,7 +2144,6 @@ p.subscribe-to-comments input#subscribe {
 	display: block;
 	border-top-left-radius: 10px;
 	border-bottom-left-radius: 10px;
-
 	-webkit-background-clip: padding-box;
 	-moz-background-clip: padding-box;
 	background-clip: padding-box;
@@ -2230,7 +2153,6 @@ p.subscribe-to-comments input#subscribe {
 #switch .off {
 	border-top-right-radius: 10px;
 	border-bottom-right-radius: 10px;
-
 	-webkit-background-clip: padding-box;
 	-moz-background-clip: padding-box;
 	background-clip: padding-box;
@@ -2248,9 +2170,7 @@ p.subscribe-to-comments input#subscribe {
 	background: -ms-linear-gradient(,, #fff, #d3d3d3, #eee .5, #e9e9e9 .51);
 	background: linear-gradient(,, #fff, #d3d3d3, #eee .5, #e9e9e9 .51);
 	text-shadow: #FFF 0 1px 0;
-
 	-webkit-box-shadow: inset rgba(0,0,0,.4) 0px 0px 7px;
-	-moz-box-shadow: inset rgba(0,0,0,.4) 0px 0px 7px;
 	box-shadow: inset rgba(0,0,0,.4) 0px 0px 7px;
 	border-style: none;
 	color: #666;
@@ -2296,11 +2216,8 @@ p.subscribe-to-comments input#subscribe {
 	display: block;
 	height: 54%;
 	text-shadow: #000000 -1px -1px 0;
-	-webkit-border-radius: 15px;
-	-moz-border-radius: 15px;
 	border-radius: 15px;
 	-webkit-box-shadow: #444 0px 0px 15px;
-	-moz-box-shadow: #444 0px 0px 15px;
 	box-shadow: #444 0px 0px 15px;
 	width: auto;
 	padding-right: 25px;
@@ -2378,8 +2295,6 @@ p.subscribe-to-comments input#subscribe {
 	width: 100%;
 	background-color: #fff;
 	border: 1px solid #CCC;
-	-webkit-border-radius: 8px;
-	-moz-border-radius: 8px;
 	border-radius: 8px;
 	padding: 10px;
 }
@@ -2451,8 +2366,6 @@ a.tt {
 /* @group Peter's Anti Spam Support */
 
 #secureimgdiv img#cas_image {
-	-webkit-border-radius: 2px !important;
-	-moz-border-radius: 2px !important;
 	border-radius: 2px !important;
 	border: 1px solid #adadad !important;
 	width: auto !important;
@@ -2475,8 +2388,6 @@ a.tt {
 }
 
 #secureimgdiv p input#securitycode {
-	-webkit-border-radius: 8px;
-	-moz-border-radius: 8px;
 	border-radius: 8px;
 	border: 1px solid #adadad;
 	padding: 3px;
@@ -2502,8 +2413,6 @@ a#ribbon {
 
 p.subscribe-to-comments {
 	padding: 8px;
-	-webkit-border-radius: 8px;
-	-moz-border-radius: 8px;
 	border-radius: 8px;
 	background-color: #fff;
 	border: 1px solid #adadad;
@@ -2573,8 +2482,6 @@ p.thdrpy,p.thdmang {
 /* @group Disqus */
 
 #disqus_thread {
-	-webkit-border-radius: 8px;
-	-moz-border-radius: 8px;
 	border-radius: 8px;
 	border: 1px solid #adadad;
 	background-color: #fff;
@@ -2617,8 +2524,6 @@ p.thdrpy,p.thdmang {
 	margin-bottom: 10px;
 	margin-top: 5px;
 	margin-right: 3px;
-	-webkit-border-radius: 4px !important;
-	-moz-border-radius: 4px !important;
 	border-radius: 4px !important;
 	padding: 2px 6px !important;
 	font-size: 11px;
