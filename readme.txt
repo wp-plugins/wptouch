@@ -31,13 +31,13 @@ For more information visit http://www.bravenewcode.com/wptouch-pro
 
 = Version 1.9.42 =
 
-* Added: Variety of new background options
+* Added: 8 new background options, updated default background
 * Updated: Twitter and Facebook share logos
 * Updated: Changed drop menu arrow to text button
 * Updated: Enhanced usability of search
-* Updated: Genersal styling updates
 * Updated: Changed mobile switch link to CSS only
 * Updated: Prefixes for Opera, Mozilla browsers
+* Updated: General styling updates
 
 = Version 1.9.41 =
 
