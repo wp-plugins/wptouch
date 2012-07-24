@@ -20,15 +20,21 @@ $wpt.fn.wptouchFadeToggle = function( speed, easing, callback ) {
 };
 
 function wptouch_switch_confirmation( e ) {
+	var linkColor = $wpt( '.post-author' ).css( 'color' );
 	if ( document.cookie && document.cookie.indexOf( 'wptouch_switch_toggle' ) > -1 ) {
 	// just switch
-		$wpt( 'a#switch-link' ).toggleClass( 'offimg' );
-		setTimeout('switch_delayer()', 1250 ); 
+		$wpt( '#switch span' ).removeClass( 'active' );
+		$wpt( '.off' ).addClass( 'active' ).css( 'color', '' );
+		$wpt( '.on' ).css( 'color', linkColor );
+		setTimeout('switch_delayer()', 500 ); 
 	} else {
 	// ask first
 	    if ( confirm( "Switch to regular view? \n \n You can switch back again in the footer." ) ) {
-			$wpt( 'a#switch-link' ).toggleClass( 'offimg' );
-			setTimeout( 'switch_delayer()', 1350 ); 
+		$wpt( '#switch span' ).removeClass( 'active' );
+		$wpt( '.off' ).addClass( 'active' ).css( 'color', '' );
+		$wpt( '.on' ).css( 'color', linkColor );
+			setTimeout( 'switch_delayer()', 500 );
+			
 		} else {
 	        e.preventDefault();
 	        e.stopImmediatePropagation();
@@ -125,6 +131,15 @@ function doWPtouchReady() {
 		$wpt( this ).parents( '.post' ).find( '.mainentry' ).wptouchFadeToggle(500);
 	});
 
+	$wpt( 'span.off' ).bind( 'click', function(){
+		wptouch_switch_confirmation();
+	});
+	
+	var linkColor = $wpt( '.post-author' ).css( 'color' );
+
+	$wpt( '.off' ).css( 'color', linkColor );
+
+	
 }
 
 $wpt( document ).ready( function() { doWPtouchReady(); } );

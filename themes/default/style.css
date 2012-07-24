@@ -2169,44 +2169,91 @@ p.subscribe-to-comments input#subscribe {
 	padding: 0 25px 5px;
 }
 
-/* @group Switch Link */
-
-#wptouch-switch-link {
+/* @group Toggle Button */
+#switch {
+	text-align: left;
+	font-weight: bold;
+	font-size: 14px;
+	margin: 60px 9px 25px;
+	background-color: #fff;
+	border: 1px solid #b1b1b1;
+	padding: 12px 8px;
+	position: relative;
+	height: 17px;
 	-webkit-border-radius: 8px;
 	-moz-border-radius: 8px;
 	border-radius: 8px;
-	border: 1px solid #adadad;
-	margin-right: 10px;
-	margin-left: 10px;
-	margin-bottom: 20px;
-	position: relative;
-	max-width: 300px;
-	padding: 13px 10px 12px 8px;
-	color: #222;
-	text-shadow: #fff 0 0 0;
-	font-size: 13px;
-	text-align: left;
-	background-color: #fff;
-	-webkit-box-shadow: rgba(255,255,255,.8) 0px 1px 0px;
-	-moz-box-shadow: rgba(255,255,255,.8) 0px 1px 0px;
 	box-shadow: rgba(255,255,255,.8) 0px 1px 0px;
+	color: #333;
+	text-shadow: none;
 }
 
-#wptouch-switch-link a {
-	position: relative;
+#switch div {
+	border: 1px solid #b1b1b1;
+
+	-webkit-border-radius: 24px;
+	-moz-border-radius: 24px;
+	border-radius: 24px;
+
+	-webkit-background-clip: padding-box;
+	-moz-background-clip: padding-box;
+	background-clip: padding-box;
+	font-size: 13px;
+	position: absolute;
+	top: 8px;
+	right: 8px;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	-webkit-touch-callout: none;
+
+	background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#d3d3d3), color-stop(.5, #eee), color-stop(.51, #e9e9e9));
+	background: -webkit-linear-gradient(top, #fff, #d3d3d3, #eee .5, #e9e9e9 .51);
+	background: -moz-linear-gradient(top, #fff, #d3d3d3, #eee .5, #e9e9e9 .51);
+	background: -o-linear-gradient(top, #fff, #d3d3d3, #eee .5, #e9e9e9 .51);
+	background: -ms-linear-gradient(top, #fff, #d3d3d3, #eee .5, #e9e9e9 .51);
+	background: linear-gradient(top, #fff, #d3d3d3, #eee .5, #e9e9e9 .51);
+	color: #333;
+	text-shadow: #fff 0 1px 0;
+}
+
+#switch .on {
+	padding: 5px 12px 6px;
+	float: left;
 	display: block;
-	width: 77px;
-	background: url(../core/core-images/onoff.jpg) no-repeat left top;
-	height: 22px;
-	float: right;
-	left: 2px;
-	bottom: 5px;
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+
+	-webkit-background-clip: padding-box;
+	-moz-background-clip: padding-box;
+	background-clip: padding-box;
+	border-right: 1px solid #b1b1b1;
 }
 
-.offimg {
-	width: 77px;
-	background: url(../core/core-images/onoff.jpg) no-repeat 0 -22px !important;
-	height: 22px;
+#switch .off {
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+
+	-webkit-background-clip: padding-box;
+	-moz-background-clip: padding-box;
+	background-clip: padding-box;
+	padding: 5px 8px 6px;
+	display: block;
+	float: right;
+	border-left: 1px solid #b1b1b1;
+}
+
+#switch .active {
+	background: -webkit-gradient(linear, left bottom, left top, from(#fff), to(#d3d3d3), color-stop(.5, #eee), color-stop(.51, #e9e9e9));
+	background: -webkit-linear-gradient(,, #fff, #d3d3d3, #eee .5, #e9e9e9 .51);
+	background: -moz-linear-gradient(,, #fff, #d3d3d3, #eee .5, #e9e9e9 .51);
+	background: -o-linear-gradient(,, #fff, #d3d3d3, #eee .5, #e9e9e9 .51);
+	background: -ms-linear-gradient(,, #fff, #d3d3d3, #eee .5, #e9e9e9 .51);
+	background: linear-gradient(,, #fff, #d3d3d3, #eee .5, #e9e9e9 .51);
+	text-shadow: #FFF 0 1px 0;
+
+	-webkit-box-shadow: inset rgba(0,0,0,.4) 0px 0px 7px;
+	-moz-box-shadow: inset rgba(0,0,0,.4) 0px 0px 7px;
+	box-shadow: inset rgba(0,0,0,.4) 0px 0px 7px;
+	border-style: none;
 }
 
 /* @end */

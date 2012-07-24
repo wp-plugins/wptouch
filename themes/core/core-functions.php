@@ -186,9 +186,13 @@ function wptouch_core_else_text() {
 	}
 }
 
-function wptouch_core_footer_switch_link() {	
+function wptouch_core_footer_switch_link() {
 	echo '<script type="text/javascript">function switch_delayer() { window.location = "' . get_bloginfo( 'url' ) . '/?wptouch_view=normal&wptouch_redirect_nonce=' . wp_create_nonce( 'wptouch_redirect' ) . '&wptouch_redirect=' . urlencode( $_SERVER['REQUEST_URI'] ) .'"}</script>';
-	echo '' . __( "Mobile Theme", "wptouch" ) . ' <a id="switch-link" onclick="wptouch_switch_confirmation();" href="javascript:return false;"></a>';
+	echo '<a id="switch-link" href="javascript:return false;">';
+	echo '<span class="on active">ON</span>';
+	echo '<span class="off">OFF</span>';
+	echo '</a>';
+
 }
 
 // WPtouch Standard Functions

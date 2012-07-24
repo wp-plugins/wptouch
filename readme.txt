@@ -29,6 +29,15 @@ For more information visit http://www.bravenewcode.com/wptouch-pro
 
 == Changelog ==
 
+= Version 1.9.42 =
+
+* Added: Variety of new background options
+* Updated: Twitter and Facebook share logos
+* Updated: Changed drop menu arrow to text button
+* Updated: Enhanced usability of search
+* Updated: Genersal styling updates
+* Updated: Changed mobile switch link to CSS only
+
 = Version 1.9.41 =
 
 * Added: Italian language translation (thanks Roberto Gallerani)

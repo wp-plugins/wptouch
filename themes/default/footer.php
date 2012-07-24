@@ -1,8 +1,11 @@
 <div id="footer">
 
 	<center>
-		<div id="wptouch-switch-link">
+		<div id="switch">
+			<?php _e( 'Mobile Theme', 'wptouch' ); ?>
+			<div>
 			<?php wptouch_core_footer_switch_link(); ?>
+			</div>
 		</div>
 	</center>
 	
