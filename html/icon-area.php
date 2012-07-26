@@ -4,7 +4,7 @@
 jQuery(document).ready(function(jQuery) {
 var button = jQuery('#upload-icon'), interval;
 	new AjaxUpload(button, {
-		action: '<?php bloginfo( 'wpurl' ); ?>/?wptouch=upload',
+		action: '<?php site_url(); ?>/?wptouch=upload',
 		autoSubmit: true,
 		name: 'submitted_file',
 		onSubmit: function(file, extension) { jQuery("#upload_progress").show(); },

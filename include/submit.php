@@ -272,7 +272,7 @@ if ( isset( $_POST['submit'] ) ) {
 	
 	$a['header-title'] = $_POST['header-title'];
 	if (!isset($a['header-title']) || (isset($a['header-title']) && strlen($a['header-title']) == 0)) {
-		$a['header-title'] = get_bloginfo('title');
+		$a['header-title'] = get_bloginfo('name');
 	}
 	
 	$a['custom-footer-msg'] = $_POST['custom-footer-msg'];

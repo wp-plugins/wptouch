@@ -143,7 +143,7 @@ function wptouch_init() {
 			die( 'Security Failure' );
 		} else {
 			wptouch_delete_icon( $_GET['delete_icon'] );
-			header( 'Location: ' . get_bloginfo('wpurl') . '/wp-admin/options-general.php?page=wptouch/wptouch.php#available_icons' );
+			header( 'Location: ' . site_url() . '/wp-admin/options-general.php?page=wptouch/wptouch.php#available_icons' );
 			die;
 		}
 	}
@@ -246,7 +246,7 @@ function wptouch_admin_enqueue_files() {
 // WPtouch Admin StyleSheets
 function wptouch_admin_files() {		
 	if ( isset( $_GET['page'] ) && $_GET['page'] == 'wptouch/wptouch.php' ) {
-		echo "<script type='text/javascript' src='" . get_bloginfo( "url" ) . "/?wptouch-ajax=js'></script>\n";
+		echo "<script type='text/javascript' src='" . home_url() . "/?wptouch-ajax=js'></script>\n";
 		echo "<link rel='stylesheet' type='text/css' href='" . compat_get_plugin_url( 'wptouch' ) . "/admin-css/wptouch-admin.css' />\n";
 		echo "<link rel='stylesheet' type='text/css' href='" . compat_get_plugin_url( 'wptouch' ) . "/admin-css/bnc-global.css' />\n";
 		echo "<link rel='stylesheet' type='text/css' href='" . compat_get_plugin_url( 'wptouch' ) . "/admin-css/bnc-compressed-global.css' />\n";
@@ -258,7 +258,7 @@ function wptouch_ajax_handler() {
 		switch( $_GET['wptouch-ajax'] ) {
 			case 'js':
 				header( 'Content-type: text/javascript' );
-				$url = rtrim( get_bloginfo('wpurl'), '/' ) . '/';
+				$url = rtrim( site_url(), '/' ) . '/';
 				echo "var wptouchBlogUrl = '" . $url . "';";
 				break;		
 			case 'news':
@@ -684,7 +684,7 @@ function wptouch_switch() {
 		echo '<div id="switch">';
 		_e( "Mobile Theme", "wptouch" );
 		echo '<div>';
-		echo "<a id='switch-link' onclick=\"var addActive = document.getElementById('switch-on'); addActive.className = addActive.className + ' active';var removeActive = document.getElementById('switch-off'); removeActive.className = ' ';\" href=\"" . get_bloginfo('url') . "/?wptouch_view=mobile&wptouch_redirect_nonce=" . wp_create_nonce( 'wptouch_redirect' ) . "&wptouch_redirect=" . urlencode( $_SERVER['REQUEST_URI'] ) . "\">";
+		echo "<a id='switch-link' onclick=\"var addActive = document.getElementById('switch-on'); addActive.className = addActive.className + ' active';var removeActive = document.getElementById('switch-off'); removeActive.className = ' ';\" href=\"" . home_url() . "/?wptouch_view=mobile&wptouch_redirect_nonce=" . wp_create_nonce( 'wptouch_redirect' ) . "&wptouch_redirect=" . urlencode( $_SERVER['REQUEST_URI'] ) . "\">";
 		echo '<span id="switch-on">ON</span>';
 		echo '<span id="switch-off" class="active">OFF</span>';
 		echo '</a>';

@@ -10,8 +10,8 @@ function wptouch_core_header_enqueue() {
 		wp_head(); 
 
 	} elseif ( bnc_wptouch_is_exclusive() ) { 
-		echo "<script src='" . get_bloginfo('wpurl') . "/wp-includes/js/jquery/jquery.js?wptouch' type='text/javascript' charset='utf-8'></script>\n";
-		echo "<script src='" . get_bloginfo('wpurl') . "/wp-includes/js/jquery/jquery.form.js?wptouch' type='text/javascript' charset='utf-8'></script>\n";
+		echo "<script src='" . site_url() . "/wp-includes/js/jquery/jquery.js?wptouch' type='text/javascript' charset='utf-8'></script>\n";
+		echo "<script src='" . site_url() . "/wp-includes/js/jquery/jquery.form.js?wptouch' type='text/javascript' charset='utf-8'></script>\n";
 		echo "<script src='" . compat_get_plugin_url( 'wptouch' ) . "/themes/core/core.js?wptouch' type='text/javascript' charset='utf-8'></script>\n"; 
 	}
 	
@@ -20,7 +20,7 @@ function wptouch_core_header_enqueue() {
   
 function wptouch_core_header_home() {
 	if (bnc_is_home_enabled()) {
-		echo sprintf(__( "%sHome%s", "wptouch" ), '<li><a href="' . get_bloginfo( 'url' ) . '"><img src="' . bnc_get_title_image() . '" alt=""/>','</a></li>');
+		echo sprintf(__( "%sHome%s", "wptouch" ), '<li><a href="' . home_url() . '"><img src="' . bnc_get_title_image() . '" alt=""/>','</a></li>');
 	}
 }
   
@@ -187,7 +187,7 @@ function wptouch_core_else_text() {
 }
 
 function wptouch_core_footer_switch_link() {
-	echo '<script type="text/javascript">function switch_delayer() { window.location = "' . get_bloginfo( 'url' ) . '/?wptouch_view=normal&wptouch_redirect_nonce=' . wp_create_nonce( 'wptouch_redirect' ) . '&wptouch_redirect=' . urlencode( $_SERVER['REQUEST_URI'] ) .'"}</script>';
+	echo '<script type="text/javascript">function switch_delayer() { window.location = "' . home_url() . '/?wptouch_view=normal&wptouch_redirect_nonce=' . wp_create_nonce( 'wptouch_redirect' ) . '&wptouch_redirect=' . urlencode( $_SERVER['REQUEST_URI'] ) .'"}</script>';
 	echo '<a id="switch-link" href="javascript:return false;">';
 	echo '<span class="on active">ON</span>';
 	echo '<span class="off">OFF</span>';

@@ -13,7 +13,7 @@ if ( !function_exists( 'compat_get_wp_content_dir' ) ) {
 		if ( defined( 'WP_CONTENT_DIR' ) ) {
 			return WP_CONTENT_DIR;
 		} else {
-			return bloginfo( 'wpurl' ) . '/wp-content';	
+			return site_url() . '/wp-content';	
 		}
 	}
 }
