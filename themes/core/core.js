@@ -69,7 +69,7 @@ function doWPtouchReady() {
 		$wpt( '#headerbar-menu a' ).toggleClass( 'open' );
 	});
 
-	$wpt( 'a#searchopen, #wptouch-search-inner a' ).bind( touchStartOrClick, function( e ){	
+	$wpt( 'a#searchopen, #wptouch-search-inner a' ).click( function(){	
 		$wpt( '#wptouch-search' ).wptouchFadeToggle( 350 );
 		$wpt( '#s' ).focus();		
 	});
