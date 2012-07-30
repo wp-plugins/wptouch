@@ -2,7 +2,7 @@
 /*
 Plugin Name: WPtouch
 Plugin URI: http://wordpress.org/extend/plugins/wptouch/
-Version: 1.9.42
+Version: 1.9.5
 Description: A plugin which formats your site with a mobile theme for visitors on Apple <a href="http://www.apple.com/iphone/">iPhone</a> / <a href="http://www.apple.com/ipodtouch/">iPod touch</a>, <a href="http://www.android.com/">Google Android</a>, <a href="http://www.blackberry.com/">Blackberry Storm and Torch</a>, <a href="http://www.palm.com/us/products/phones/pre/">Palm Pre</a> and other touch-based smartphones.
 Author: BraveNewCode Inc.
 Author URI: http://www.bravenewcode.com
@@ -28,7 +28,7 @@ License: GNU General Public License 2.0 (GPL) http://www.gnu.org/licenses/gpl.ht
 load_plugin_textdomain( 'wptouch', false, dirname( plugin_basename( __FILE__ ) ) );
 
 global $bnc_wptouch_version;
-$bnc_wptouch_version = '1.9.42';
+$bnc_wptouch_version = '1.9.5';
 
 require_once( 'include/plugin.php' );
 require_once( 'include/compat.php' );
@@ -514,7 +514,7 @@ class WPtouchPlugin {
 			$this->wptouch_send_prowl_message( $title, $prowl_message );
 		}		   
 	   
-	   if ( $this->applemobile && $this->desired_view == 'mobile' ) {
+	   if ( ( $this->applemobile && $this->desired_view == 'mobile' ) && !isset( $_GET['wptouch_redirect'] ) ) {
 			$version = (float)get_bloginfo('version');
 			$is_front = 0;
 			$is_front = (is_front_page() && (bnc_get_selected_home_page() > 0));
@@ -528,7 +528,7 @@ class WPtouchPlugin {
 	}
 	
 	function bnc_check_switch_redirect() {
-		if ( isset( $_GET[ 'wptouch_view'] ) && isset( $_GET['wptouch_redirect'] ) ) {
+		if ( isset( $_GET['wptouch_redirect'] ) ) {
 			if ( isset( $_GET['wptouch_redirect_nonce'] ) ) {
 				$nonce = $_GET['wptouch_redirect_nonce'];
 				if ( !wp_verify_nonce( $nonce, 'wptouch_redirect' ) ) {
@@ -536,10 +536,9 @@ class WPtouchPlugin {
 					die;
 				}
 
-				$protocol = ( $_SERVER['HTTPS'] == 'on' ) ? 'https://' : 'http://';
-				$redirect_location = $protocol . $_SERVER['SERVER_NAME'] . $_GET['wptouch_redirect'];
+				$redirect_location = $_GET['wptouch_redirect'];
 		
-				header( 'Location: ' . $redirect_location );
+				header( 'Location: ' . home_url( '/' . $redirect_location ) );
 				die;
 			} 
 		}		

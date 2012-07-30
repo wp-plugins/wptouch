@@ -14,9 +14,9 @@
 						echo '' . get_bloginfo('version') . '';
 						echo '</p><p class="wptv">';
 						echo sprintf( __( 'WPtouch %s support: ', 'wptouch' ), $bnc_wptouch_version );
-						if ($version > 3.4) {
+						if ($version > 3.4.2) {
 							echo sprintf(__( "%sUnverified%s", "wptouch" ), '<span class="caution">','</span>');
-						} else if ($version >= 2.9) {
+						} else if ($version >= 3.1) {
 							echo sprintf(__( "%sSupported.%s", "wptouch" ), '<span class="go">','</span>');
 						} else {
 							echo sprintf(__( "%sUnsupported. Upgrade Required.%s", "wptouch" ), '<span class="red">','</span>');

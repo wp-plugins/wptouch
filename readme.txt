@@ -29,6 +29,12 @@ For more information visit http://www.bravenewcode.com/wptouch-pro
 
 == Changelog ==
 
+= Version 1.9.5 =
+* Fixed: Depreciated references to options
+* Fixed: issue with search field
+* Updated: Compatibility with 3.4.1
+* Improved: Switch link redirect now redirects to current url even if a WPtouch homepage redirect is set
+
 = Version 1.9.42 =
 
 * Added: 8 new background options, updated default background
