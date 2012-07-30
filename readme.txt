@@ -35,6 +35,7 @@ For more information visit http://www.bravenewcode.com/wptouch-pro
 * Fixed: Issue where new switch link caused white box
 * Updated: Compatibility with 3.4.1
 * Improved: Switch link redirect now redirects to current url even if a WPtouch homepage redirect is set
+* Updated: Admin css with new prefixes for better cross-browser support, other improvements
 
 = Version 1.9.42 =
 

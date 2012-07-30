@@ -1035,13 +1035,13 @@ require_once( 'include/icons.php' );
   
 function bnc_wp_touch_page() {
 	if (isset($_POST['submit'])) {
-		echo('<div class="wrap"><div id="bnc-global"><div id="wptouchupdated" style="display:none"><p class="saved"><span>');
-		echo __( "Settings saved", "wptouch");
+		echo('<div class="wrap"><div id="bnc-global"><div id="wptouchupdated"><p class="saved"><span>');
+		echo __( "Settings saved!", "wptouch");
 		echo('</span></p></div>');
 		} 
 	elseif (isset($_POST['reset'])) {
-		echo('<div class="wrap"><div id="bnc-global"><div id="wptouchupdated" style="display:none"><p class="reset"><span>');
-		echo __( "Defaults restored", "wptouch");
+		echo('<div class="wrap"><div id="bnc-global"><div id="wptouchupdated"><p class="reset"><span>');
+		echo __( "Defaults restored.", "wptouch");
 		echo('</span></p></div>');
 	} else {
 		echo('<div class="wrap"><div id="bnc-global">');
@@ -1060,7 +1060,6 @@ function bnc_wp_touch_page() {
 		<?php require_once( 'html/ads-stats-area.php' ); ?>
 		<?php require_once( 'html/icon-area.php' ); ?>
 		<?php require_once( 'html/page-area.php' ); ?>
-		<?php // require_once( 'html/plugin-compat-area.php' ); ?>		
 		<input type="hidden" name="wptouch-nonce" value="<?php echo wp_create_nonce( 'wptouch-nonce' ); ?>" />
 		<input type="submit" name="submit" value="<?php _e('Save Options', 'wptouch' ); ?>" id="bnc-button" class="button-primary" />
 	</form>

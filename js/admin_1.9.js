@@ -1,6 +1,6 @@
 /*
  * WPtouch 1.9.x -The WPtouch Admin Javascript File
- * Last Updated: August 7th, 2010
+ * Last Updated: July 30th, 2012
  */ 
 var wptouchSpinnerCount = 1;
 var wpQuery = jQuery;
@@ -13,8 +13,7 @@ function wptouchSpinnerDone() {
 }
 
 jQuery( document ).ready( function() {
-	setTimeout(function() { jQuery('#wptouchupdated').fadeIn(250); }, 750);
-	setTimeout(function() { jQuery( '#wptouchupdated' ).fadeOut(200); }, 2750);
+	setTimeout(function() { jQuery( '#wptouchupdated' ).fadeOut(330); }, 3000);
 
 	jQuery('#header-text-color, #header-background-color, #header-border-color, #link-color').ColorPicker({
 		onSubmit: function(hsb, hex, rgb, el) { jQuery(el).val(hex); jQuery(el).ColorPickerHide(); },
