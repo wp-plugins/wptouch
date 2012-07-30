@@ -21,7 +21,7 @@ The theme also includes the ability for visitors to switch between *WPtouch* vie
 *Now Available: WPtouch Pro!*
 Totally re-written top to bottom, with a slew of new features like more style, color and branding customizations, themes, 10 languages, more advertising options, Web-Application mode, and more!
 
-Awesome iPad theme support is now available in WPtouch Pro, now at version 2.6!
+Awesome iPad theme support is now available in WPtouch Pro, now at version 2.7!
 
 For more information visit http://www.bravenewcode.com/wptouch-pro
 
@@ -30,8 +30,9 @@ For more information visit http://www.bravenewcode.com/wptouch-pro
 == Changelog ==
 
 = Version 1.9.5 =
-* Fixed: Depreciated references to options
+* Fixed: Depreciated references to options (replaced with home_url() and site_url())
 * Fixed: issue with search field
+* Fixed: Issue where new switch link caused white box
 * Updated: Compatibility with 3.4.1
 * Improved: Switch link redirect now redirects to current url even if a WPtouch homepage redirect is set
 
@@ -755,10 +756,10 @@ For more information visit http://www.bravenewcode.com/wptouch-pro
 
 == Installation ==
 
-= 2.8 and Older =
-Sorry, we do not officially support installations on WordPress 2.9 or older. You can use WPtouch versions 1.9.3.4 or previous on these installations, however.
+= 3.0 and Older =
+Sorry, we do not officially support installations on WordPress 3.0 or older.
 
-= 2.9, 3.0+ =
+= 3.1+ =
 You can install *WPtouch* directly from the WordPress admin! Visit the *Plugins - > Add New* page and search for 'WPtouch'. Click to install.
 
 Once installed and activated visit the WPtouch admin page (*Settings/WPtouch*) to customize your WPtouch installation's appearance.
