@@ -38,6 +38,7 @@ For more information visit http://www.bravenewcode.com/wptouch-pro
 * Fixed: Depreciated references to options (replaced with home_url() and site_url())
 * Fixed: issue with search field
 * Fixed: Issue where new switch link caused white box
+* Fixed: An issue with php warning regarding detection of https
 
 = Version 1.9.42 =
 
