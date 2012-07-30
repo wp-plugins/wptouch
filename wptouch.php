@@ -536,9 +536,10 @@ class WPtouchPlugin {
 					die;
 				}
 
-				$redirect_location = $_GET['wptouch_redirect'];
+				$protocol = ( !empty($_SERVER['HTTPS']) ) ? 'https://' : 'http://';
+				$redirect_location = $protocol . $_SERVER['SERVER_NAME'] . $_GET['wptouch_redirect'];
 		
-				header( 'Location: ' . home_url( '/' . $redirect_location ) );
+				header( 'Location: ' . $redirect_location );
 				die;
 			} 
 		}		
