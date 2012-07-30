@@ -30,6 +30,7 @@ For more information visit http://www.bravenewcode.com/wptouch-pro
 == Changelog ==
 
 = Version 1.9.5 =
+
 * Updated: Compatibility with 3.4.1
 * Updated: Admin css with new prefixes for better cross-browser support, other improvements
 * Updated: Switch link redirect now redirects to current url even if a WPtouch homepage redirect is set
