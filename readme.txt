@@ -3,8 +3,8 @@ Contributors: bravenewcode, duanestorey, dalemugford
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=paypal%40bravenewcode%2ecom&item_name=WPtouch%20Beer%20Fund&no_shipping=0&no_note=1&tax=0&currency_code=CAD&lc=CA&bn=PP%2dDonationsBF&charset=UTF%2d8
 Tags: wptouch, iphone, ipod, theme, apple, mac, bravenewcode, ajax, mobile, android, blackberry, smartphone, 
 Requires at least: 3.1
-Tested up to: 3.3.2
-Stable tag: 1.9.42
+Tested up to: 3.4.1
+Stable tag: 1.9.5
 
 WPtouch: A simple, powerful and elegant mobile theme for your website.
 
@@ -38,8 +38,8 @@ For more information visit http://www.bravenewcode.com/wptouch-pro
 * Changed: Cleaned up and removed unused/old assets
 * Fixed: Depreciated references to options (replaced with home_url() and site_url())
 * Fixed: issue with search field
-* Fixed: Issue where new switch link caused white box
-* Fixed: An issue with php warning regarding detection of https
+* Fixed: Issue where the new switch link caused white box
+* Fixed: PHP warnings regarding detection of https, depreciated calls
 
 = Version 1.9.42 =
 

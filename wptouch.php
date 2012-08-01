@@ -275,10 +275,10 @@ add_action( 'init', 'wptouch_ajax_handler' );
 
 function bnc_wptouch_get_exclude_user_agents() {
 	$user_agents = array(
-		'SCH-I800',				// Samsung Galaxy Tab
-		'Xoom',						// Motorola Xoom tablet
-		'P160U'	,					// HP TouchPad
-		'Nexus 7'					// Nexus 7
+	'SCH-I800',				// Samsung Galaxy Tab
+	'Xoom',						// Motorola Xoom tablet
+	'P160U'	,					// HP TouchPad
+	'Nexus 7'					// Nexus 7
 	);
 	
 	return apply_filters( 'wptouch_exclude_user_agents', $user_agents );
