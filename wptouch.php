@@ -286,23 +286,35 @@ function bnc_wptouch_get_exclude_user_agents() {
 
 function bnc_wptouch_get_user_agents() {
 	$useragents = array(		
-		"iPhone",  				 	// Apple iPhone
-		"iPod", 						// Apple iPod touch
-		"incognito", 				// Other iPhone browser
-		"webmate", 				// Other iPhone browser
-		"Android", 			 	// 1.5+ Android
-		"dream", 				 	// Pre 1.5 Android
-		"CUPCAKE", 			 	// 1.5+ Android
-		"blackberry9500",	 	// Storm
-		"blackberry9530",	 	// Storm
-		"blackberry9520",	 	// Storm v2
-		"blackberry9550",	 	// Storm v2
-		"blackberry 9800",	// Torch
-		"webOS",					// Palm Pre Experimental
-		"s8000", 				 	// Samsung Dolphin browser
-		"bada",				 		// Samsung Dolphin browser
-		"Googlebot-Mobile"	// the Google mobile crawler
-
+	'iPhone', 					// iPhone
+	'iPod', 						// iPod touch
+	'incognito', 				// iPhone alt browser
+	'webmate', 				// iPhone alt browser
+	'Android', 					// Android
+	'dream', 					// Android
+	'CUPCAKE', 				// Android
+	'froyo', 						// Android
+	'BlackBerry9500', 		// Storm 1
+	'BlackBerry9520', 		// Storm 1
+	'BlackBerry9530', 		// Storm 2
+	'BlackBerry9550', 		// Storm 2
+	'BlackBerry 9800', 	// Torch
+	'BlackBerry 9850', 	// Torch 2
+	'BlackBerry 9860', 	// Torch 2
+	'BlackBerry 9780', 	// Bold 3
+	'BlackBerry 9790', 	// Bold Touch
+	'BlackBerry 9900', 	// Bold
+	'BlackBerry 9930', 	// Bold
+	'BlackBerry 9350', 	// Curve
+	'BlackBerry 9360', 	// Curve
+	'BlackBerry 9370', 	// Curve
+	'BlackBerry 9380', 	// Curve
+	'BlackBerry 9810', 	// Torch	
+	'webOS',					// Palm Pre/Pixi
+	's8000',					// Samsung s8000
+	'bada',						// Samsung Bada Phone
+	'Googlebot-Mobile',	// Google's mobile Crawler
+	'AdsBot-Google'		// Google's Ad Bot Crawler
 	);
 	
 	$settings = bnc_wptouch_get_settings();
