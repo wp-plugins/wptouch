@@ -35,6 +35,7 @@ For more information visit http://www.bravenewcode.com/wptouch-pro
 * Updated: Admin css with new prefixes for better cross-browser support, other improvements
 * Updated: Switch link redirect now redirects to current url even if a WPtouch homepage redirect is set
 * Updated: Added HP TouchPad and Nexus 7 to the excluded tablets list (also includes Xoom and Galaxy Tab)
+* Updated: Added a variety of new Blackberry OS7 devices agents (Bold, Touch and Curve)
 * Changed: Cleaned up and removed unused/old assets
 * Fixed: Depreciated references to options (replaced with home_url() and site_url())
 * Fixed: issue with search field
