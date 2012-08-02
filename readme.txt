@@ -29,6 +29,10 @@ For more information visit http://www.bravenewcode.com/wptouch-pro
 
 == Changelog ==
 
+= Version 1.9.5.1 =
+
+* Fixed: Issue with menu sorting by ID
+
 = Version 1.9.5 =
 
 * Updated: Compatibility with WordPress 3.4.1

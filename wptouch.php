@@ -931,7 +931,12 @@ function bnc_wp_touch_get_pages() {
 	$results = false;
 
 	if ( count( $keys ) > 0 ) {
-		$query = "SELECT * from {$table_prefix}posts where ID in (" . implode(',', $keys) . ") and post_status = 'publish' order by post_title asc";
+		if ( isset( $ids['sort-order'] ) && $ids['sort-order'] == 'page' ) {
+			$query = "SELECT * from {$table_prefix}posts WHERE ID IN (" . implode(',', $keys) . ") AND post_status = 'publish' ORDER BY ID ASC";
+		} else {
+			$query = "SELECT * from {$table_prefix}posts WHERE ID IN (" . implode(',', $keys) . ") AND post_status = 'publish' ORDER BY post_title ASC";
+		}
+		
 		$results = $wpdb->get_results( $query, ARRAY_A );
 	}
 
@@ -949,7 +954,7 @@ function bnc_wp_touch_get_pages() {
 		}
 	}
 
-	if (isset($ids['sort-order']) && $ids['sort-order'] == 'page') {
+	if ( isset($ids['sort-order']) && $ids['sort-order'] == 'page' ) {
 		return $menu_order;
 	} else {
 		return $a;
