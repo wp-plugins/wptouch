@@ -28,7 +28,7 @@
 					$names = explode('.', $file);
 					$icon['friendly'] = ucfirst($names[0]);
 					$icon['name'] = $file;
-					$icon['url'] = $value[1] . "/" . $file;
+					$icon['wpurl'] = $value[1] . "/" . $file;
 					$files[ $key ][ $icon['name'] ] = $icon;
 				}
 			}
@@ -46,11 +46,14 @@
 			echo '<div class="new-icon-block ' . $key . '">';
 			foreach ( $icons[ $key ] as $icon ) {
 				echo '<ul class="wptouch-iconblock">';
-				echo '<li><img src="' . $icon['url'] . '" title="' . $icon['name'] . '" /><br />' . $icon['friendly'];
 				if ( $key == 'custom' ) {
-					echo ' <a href="' . $_SERVER['REQUEST_URI'] . '&amp;delete_icon=' . urlencode($icon['url']) . '">(x)</a>';	
+					echo '<a title="Click to Delete" href="' . $_SERVER['REQUEST_URI'] . '&amp;delete_icon=' . urlencode($icon['wpurl']) . '&amp;nonce=' . wp_create_nonce( 'wptouch_delete_nonce' ) . '">';
 				}
+				echo '<li><img src="' . $icon['wpurl'] . '" title="' . $icon['name'] . '" /><br /><span>' . $icon['friendly'] . '</span>';
 				echo '</li>';
+				if ( $key == 'custom' ) {
+					echo '</a>';	
+				}
 				echo '</ul>';
 			}	
 			echo '</div>';
@@ -92,4 +95,3 @@
 	
 	function bnc_get_master_icon_list() {
 	}
-?>

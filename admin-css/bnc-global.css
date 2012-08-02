@@ -1,5 +1,3 @@
-/* @override http://wptouch.com/wp-content/plugins/wptouch/admin-css/bnc-global.css */
-
 /* Global styles applied to BraveNewCode plugins */
 
 /* @group Global Plugin Styles */
@@ -7,14 +5,14 @@
 #bnc-global {
 	color: #444;
 	margin-bottom: 35px;
-	width: 98%;
+	width: 100%;
 }
 
 #bnc-global .postbox {
-	padding: 10px;
 	position: relative;
 	overflow: hidden;
-	-webkit-box-shadow: #ccc 0px 1px 6px;
+	background-color: #fff;
+	padding: 10px;
 }
 
 #bnc-global .postbox h3 {
@@ -24,7 +22,6 @@
 
 #bnc-global a {
 	text-decoration: none;
-	font-size: 11px;
 }
 
 #bnc-global a.orange-link {
@@ -43,7 +40,6 @@
 
 #bnc-global, #bnc-global .postbox, #bnc-global .postbox ul, #bnc-global .postbox p, #bnc-global p {
 	margin-top: 10px;
-	font-size: 11px;
 }
 
 #bnc-global .left-content {
@@ -59,8 +55,6 @@
 	padding: 0 0 4px;
 	letter-spacing: 0;
 	color: #d54e21;
-	font-size: 11px;
-	line-height: 13px;
 }
 
 #bnc-global .left-content p {
@@ -89,9 +83,8 @@
 	float: left;
 	margin-left: 3%;
 	border-left: 1px solid #e6e6e6;
-	padding-bottom: 45px;
 	padding-left: 10px;
-	margin-bottom: -30px;
+	padding-bottom: 50px;
 }
 
 #bnc-global .bnc-clearer {
@@ -102,26 +95,26 @@
 	vertical-align: baseline;
 	width: 176px;
 	margin-right: 5px;
-	border: 1px solid #6caccd;
 }
 
-#bnc-global input.checkbox {
+#bnc-global .right-content input.checkbox {
 	margin-right: 5px;
 	vertical-align: middle;
 	width: auto;
 	border-style: none;
 }
 
-#bnc-global input {
-	border: 2px solid #a4c6d3;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
+#bnc-global .right-content input {
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
 	margin-right: 7px;
 	width: 177px;
 	color: #555;
-	font-size: 11px;
-	background-color: #ebf1ff;
 	margin-left: 5px;
+}
+
+#bnc-global .right-content input:focus {
+	background-color: #fff;
 }
 
 #bnc-global ul.wptouch-make-li-italic li {
@@ -179,31 +172,22 @@
 	background: url(../images/h3_icons/rss.png) 0 1px;
 }
 
+#bnc-global h3 span.news-head {
+	background: url(../images/h3_icons/megaphone.png) 0 1px;
+}
+
 /* @end */
 
-/* @group Save/Restore Button Area */
+/* @group Save/Reset */
 
-#bnc-global .bnc-plugin-version {
-	float: right;
-	font: 18px Georgia, "Times New Roman", Times, serif;
-	color: #70777a;
-	text-shadow: #fff -1px -1px 0;
-	letter-spacing: -1px;
-	margin-top: 2px;
-	position: relative;
-	left: 10px;
-	margin-bottom: 25px;
-}
-
-#bnc-global input#bnc-button, #bnc-global input#bnc-button-reset {
-	border: 2px solid #dcdcdc;
+input#bnc-button {
 	float: left;
-	width: 12%;
+	margin-right: 10px;
 }
 
-#bnc-global input#bnc-button-reset:hover {
-	border-color: red;
-	color: red;
+input#bnc-button-reset {
 }
+
+
 
 /* @end */

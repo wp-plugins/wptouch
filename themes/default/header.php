@@ -2,7 +2,7 @@
 include( dirname(__FILE__) . '/../core/core-header.php' ); 
 // End WPtouch Core Header
 ?>
-<body class="<?php wptouch_core_body_background(); ?>">
+<body class="<?php wptouch_core_body_background(); ?> <?php wptouch_idevice_classes(); ?>">
 <!-- New noscript check, we need js on now folks -->
 <noscript>
 <div id="noscript-wrap">
@@ -20,27 +20,28 @@ include( dirname(__FILE__) . '/../core/core-header.php' );
 <div id="prowl-fail"><p><?php _e("Your Push Notification cannot be delivered at this time.", "wptouch"); ?></p></div>
 <?php } } ?>
 
+<?php if (bnc_is_login_button_enabled()) { ?>
 <!--#start The Login Overlay -->
 	<div id="wptouch-login">
 		<div id="wptouch-login-inner">
-			<form name="loginform" id="loginform" action="<?php bloginfo('wpurl'); ?>/wp-login.php" method="post">
-				<label><input type="text" name="log" id="log" onfocus="if (this.value == 'username') {this.value = ''}" value="username" /></label>
-				<label><input type="password" name="pwd"  onfocus="if (this.value == 'password') {this.value = ''}" id="pwd" value="password" /></label>
+			<form name="loginform" id="loginform" action="<?php site_url(); ?>/wp-login.php" method="post">
+				<label><input type="text" name="log" id="log" placeholder="<?php _e("Username", "wptouch"); ?>" tabindex="1" value="" /></label>
+				<label><input type="password" name="pwd" placeholder="<?php _e("Password", "wptouch"); ?>" tabindex="2" id="pwd" value="" /></label>
 				<input type="hidden" name="rememberme" value="forever" />
-				<input type="hidden" id="logsub" name="submit" value="<?php _e('Login'); ?>" tabindex="9" />
+				<input type="submit" id="logsub" name="submit" value="<?php _e("Login", "wptouch"); ?>" tabindex="3" />
 				<input type="hidden" name="redirect_to" value="<?php echo $_SERVER['REQUEST_URI']; ?>"/>
-			<a href="javascript: return false;" onclick="bnc_jquery_login_toggle();"><img class="head-close" src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/themes/core/core-images/head-close.png" alt="close" /></a>
+			<a href="javascript:return false;"><img class="head-close" src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/themes/core/core-images/head-close.png" alt="close" /></a>
 			</form>
 		</div>
 	</div>
-
+<?php } ?>
  <!-- #start The Search Overlay -->
 	<div id="wptouch-search"> 
  		<div id="wptouch-search-inner">
-			<form method="get" id="searchform" action="<?php bloginfo('home'); ?>/">
-				<input type="text" value="Search..." onfocus="if (this.value == 'Search...') {this.value = ''}" name="s" id="s" /> 
-				<input name="submit" type="hidden" tabindex="5" value="Search"  />
-			<a href="javascript: return false;" onclick="bnc_jquery_search_toggle();"><img class="head-close" src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/themes/core/core-images/head-close.png" alt="close" /></a>
+			<form method="get" id="searchform" action="<?php echo home_url('/'); ?>/">
+				<input type="text" placeholder="<?php _e( "Search...", "wptouch" ); ?>" name="s" id="s" /> 
+				<input name="submit" type="submit" tabindex="1" id="search-submit" placeholder="<?php _e("Search...", "wptouch"); ?>"  />
+			<a href="javascript:return false;"><img class="head-close" src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/themes/core/core-images/head-close.png" alt="close" /></a>
 			</form>
 		</div>
 	</div>
@@ -49,14 +50,14 @@ include( dirname(__FILE__) . '/../core/core-header.php' );
         <div id="wptouch-menu-inner">
 	        <div id="menu-head">
 	        	<div id="tabnav">
-					<a href="#head-pages"><?php _e("Menu", "wptouch"); ?></a>
+					<a href="#head-pages"><?php _e("Pages", "wptouch"); ?></a>
 		        	<?php if (bnc_is_tags_button_enabled()) { wptouch_tags_link(); } ?>
 	    	    	<?php if (bnc_is_cats_button_enabled()) { wptouch_cats_link(); } ?>
 	    	    	<?php if (bnc_is_login_button_enabled()) { ?>
 						<?php if (!is_user_logged_in()) { ?>
-						    <a href="#head-account" onclick="bnc_jquery_login_toggle();"><?php _e( 'Login', 'wptouch' ); ?></a>
+						    <a id="loginopen" href="#head-account"><?php _e( "Login", "wptouch" ); ?></a>
 						<?php } else { ?>
-							 <a href="#head-account"><?php _e( 'My Account', 'wptouch' ); ?></a>
+							 <a href="#head-account"><?php _e( "My Account", "wptouch" ); ?></a>
 						<?php } ?>
 					<?php } ?>
 	        	</div>
@@ -68,62 +69,75 @@ include( dirname(__FILE__) . '/../core/core-header.php' );
 					<?php wptouch_core_header_email(); ?>           
 				</ul>
 	
-				<ul id="head-cats">
-	  	 			<?php bnc_get_ordered_cat_list(); ?>
-				</ul>
+	    	    <?php if (bnc_is_cats_button_enabled()) { ?>
+					<ul id="head-cats">
+		  	 			<?php bnc_get_ordered_cat_list( 35 ); ?>
+					</ul>
+				<?php } ?>
 	
-				<ul id="head-tags">
-					<?php wp_tag_cloud('smallest=13&largest=13&unit=px&number=30&order=asc&format=list'); ?>
-				</ul>
+	    	    <?php if (bnc_is_tags_button_enabled()) { ?>
+					<ul id="head-tags">
+						<li><?php wptouch_ordered_tag_list( 35 ); ?></li>
+					</ul>
+				<?php } ?>
 
-		<ul id="head-account">
+	<?php if (bnc_is_login_button_enabled()) { ?>
+			<ul id="head-account">
 				<?php if (!is_user_logged_in()) { ?>
 				    <li class="text">
 				    	<?php _e( "Enter your username and password<br />in the boxes above.", "wptouch" ); ?>
-						<?php if (!get_option('comment_registration')) : ?>
-							<?php echo sprintf(__( "<br /><br />Not registered yet?<br />You can %ssign-up here%s.", "wptouch" ), '<a href="' . get_bloginfo('wpurl') . '/wp-register.php" target="_blank">','</a>'); ?>
+						<?php if ( !get_option('comment_registration') ) : ?>
+							<br /><br />
+							<?php _e( "Not registered yet?", "wptouch"); ?>
+							<br />
+							<?php echo sprintf(__( "You can %ssign-up here%s.", "wptouch" ), '<a href="' . site_url() . '/wp-register.php" target="_blank">','</a>'); ?>
 						<?php endif; ?>
 				    </li>
 				<?php } else { ?>
 					<?php if (current_user_can('edit_posts')) : ?>
-					<li><a href="<?php bloginfo('wpurl'); ?>/wp-admin/"><?php _e("Admin", "wptouch"); ?></a></li>
+					<li><a href="<?php site_url(); ?>/wp-admin/"><?php _e("Admin", "wptouch"); ?></a></li>
 					<?php endif; ?>
 					<?php if (get_option('comment_registration')) { ?>
-					<li><a href="<?php bloginfo('wpurl'); ?>/wp-register.php"><?php _e( "Register for this site", "wptouch" ); ?></a></li>
+					<li><a href="<?php site_url(); ?>/wp-register.php"><?php _e( "Register for this site", "wptouch" ); ?></a></li>
 					<?php } ?>
 					<?php if (is_user_logged_in()) { ?>
-					<li><a href="<?php bloginfo('wpurl'); ?>/wp-admin/profile.php"><?php _e( "Account Profile", "wptouch" ); ?></a></li>
-					<li><a href="<?php $version = (float)get_bloginfo('version'); if ($version >= 2.7) { ?><?php echo wp_logout_url($_SERVER['REQUEST_URI']); } else { bloginfo('wpurl'); ?>/wp-login.php?action=logout&redirect_to=<?php echo $_SERVER['REQUEST_URI']; ?><?php } ?>"><?php _e( "Logout", "wptouch" ); ?></a></li>
+					<li><a href="<?php site_url(); ?>/wp-admin/profile.php"><?php _e( "Account Profile", "wptouch" ); ?></a></li>
+					<li><a href="<?php $version = (float)get_bloginfo('version'); if ($version >= 2.7) { ?><?php echo wp_logout_url($_SERVER['REQUEST_URI']); } else { site_url(); ?>/wp-login.php?action=logout&redirect_to=<?php echo $_SERVER['REQUEST_URI']; ?><?php } ?>"><?php _e( "Logout", "wptouch" ); ?></a></li>
 					<?php } ?>
 				<?php } ?>
 			</ul>
+		<?php } ?>
 			</div>
 		</div>
     </div>
-</div>
+
 	
 <div id="headerbar">
 	<div id="headerbar-title">
 		<!-- This fetches the admin selection logo icon for the header, which is also the bookmark icon -->
-		<img id="logo-icon" src="<?php echo bnc_get_title_image(); ?>" alt="<?php $str = bnc_get_header_title(); echo stripslashes($str); ?>" />
-		<a href="<?php bloginfo('home'); ?>"><?php wptouch_core_body_sitetitle(); ?></a>
+		<a href="<?php echo home_url('/'); ?>"><img id="logo-icon" src="<?php echo bnc_get_title_image(); ?>" alt="<?php $str = bnc_get_header_title(); echo stripslashes($str); ?>" /></a>
+		<a href="<?php echo home_url('/'); ?>"><?php wptouch_core_body_sitetitle(); ?></a>
 	</div>
 	<div id="headerbar-menu">
-		    <a href="#" onclick="bnc_jquery_menu_drop(); return false;"></a>
+		    <a href="javascript:return false;"><?php _e( 'Menu', 'wptouch' ); ?></a>
 	</div>
 </div>
 
 <div id="drop-fade">
 	<?php if (bnc_is_search_enabled()) { ?>			    
-    	<a id="searchopen" class="top" href="#" onclick="bnc_jquery_search_toggle(); return false;"><?php _e( 'Search', 'wptouch' ); ?></a>
+    	<a id="searchopen" class="top" href="javascript:return false;"><?php _e( 'Search', 'wptouch' ); ?></a>
 	<?php } ?>
 
 	<?php if (bnc_is_prowl_direct_message_enabled()) { ?>			    
-    	<a id="prowlopen" class="top" href="#" onclick="bnc_jquery_prowl_open(); return false;"><?php _e( 'Message', 'wptouch' ); ?></a>
+    	<a id="prowlopen" class="top" href="javascript:return false;"><?php _e( 'Message', 'wptouch' ); ?></a>
 	<?php } ?>
 
 	<?php if ( function_exists( 'wordtwit_get_recent_tweets' ) && wordtwit_is_valid() && bnc_can_show_tweets() ) { ?>		    
-    	<a id="wordtwitopen" class="top" href="#" onclick="bnc_jquery_wordtwit_open(); return false;"><?php _e( 'Twitter', 'wptouch' ); ?></a>
+    	<a id="wordtwitopen" class="top" href="javascript:return false;"><?php _e( 'Twitter', 'wptouch' ); ?></a>
+	<?php } ?>
+
+	<?php if ( function_exists( 'gigpress_shows' ) && bnc_is_gigpress_enabled()) { ?>			    
+    	<a id="gigpressopen" class="top" href="javascript:return false;"><?php _e( 'Tour Dates', 'wptouch' ); ?></a>
 	<?php } ?>
 
  <!-- #start the Prowl Message Area -->
@@ -155,27 +169,44 @@ include( dirname(__FILE__) . '/../core/core-header.php' );
 <?php if ( function_exists( 'wordtwit_get_recent_tweets' ) && wordtwit_is_valid() && bnc_can_show_tweets() ) { ?>
  <!-- #start the WordTwit Twitter Integration -->
  	<?php $tweets = wordtwit_get_recent_tweets(); ?>
+
 	<div id="wptouch-wordtwit" class="dropper" style="display:none">
  	 <div id="twitter-style-bar"></div><!-- filler to get the styling just right -->
 			<a  id="follow-arrow" href="http://twitter.com/<?php echo wordtwit_get_username(); ?>" target="_blank"><img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/themes/core/core-images/twitter-arrow.jpg" alt="follow me" /></a>
 		<div id="wordtwit-avatar">
 			<img src="<?php echo wordtwit_get_profile_url(); ?>" alt="Twitter Avatar" />
 				<p class="twitter_username"><?php echo wordtwit_get_username(); ?></p>
-				<p><a href="http://twitter.com/<?php echo wordtwit_get_username(); ?>" target="_blank">Follow me on Twitter</a></p>
+				<p><a href="http://twitter.com/<?php echo wordtwit_get_username(); ?>" target="_blank"><?php _e( 'Follow me on Twitter', 'wptouch' ); ?></a></p>
 		</div>
 
 		<?php $now = time(); ?>
 		<ul id="tweets">
-			<?php foreach( $tweets as $tweet ) { ?>
-			<li>
-				<?php echo strip_tags( $tweet['content'], ''); ?>
-				<p class="time"><?php echo wordtwit_friendly_date( strtotime( $tweet['published'] ) ); ?></p>
-			</li>
-	  	 	<?php } ?>
+			<?php if ( $tweets ) { ?>
+				<?php foreach( $tweets as $tweet ) { ?>
+				<li>
+					<?php echo strip_tags( $tweet['content'], ''); ?>
+					<p class="time"><?php echo wordtwit_friendly_date( $tweet['published'] ); ?></p>
+				</li>
+		  	 	<?php } ?>
+		  	 <?php } else { ?>
+		  	 	<li><?php _e( "No recent Tweets.", "wptouch" ); ?><br /><br /></li>
+
+		  	 <?php } ?>
 		</ul>
-	</div>
-<?php } ?>
 </div>
- 		
-<!-- #start the wptouch plugin use check -->
-<?php wptouch_core_header_check_use(); ?>
+<?php } ?>
+
+<?php if (function_exists ('gigpress_shows')) { ?>
+ <!-- #start the GigPress Area -->
+	 <div id="wptouch-gigpress" class="dropper" style="display:none">
+	 	 <div id="gigpress-style-bar"></div><!-- filler to get the styling just right -->
+		 <img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/themes/core/core-images/gigpress.png" id="music-icon" alt="GigPress" />
+		 <h4><?php _e( 'Upcoming Tour Dates', 'wptouch' ); ?></h4>		
+			<?php
+			    $options = array('scope' => 'upcoming', 'limit' => 10);
+			    echo gigpress_shows($options);
+			?>
+	 </div>
+ <?php } ?>
+</div>
+<?php wptouch_core_header_check_use();

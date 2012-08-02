@@ -1,135 +1,216 @@
 /*
  * WPtouch 1.9.x -The WPtouch Core JS File
- * This file holds all the default jQuery & Ajax functions for the theme
- * Copyright (c) 2008-2009 Duane Storey & Dale Mugford (BraveNewCode Inc.)
- * Licensed under GPL.
- *
- * Last Updated: November 12th, 2009
  */
 
-/////// -- Get out of frames! -- ///////
-if (top.location!= self.location) {top.location = self.location.href}
+var $wpt = jQuery.noConflict();
 
-
-/////// -- Let's play nice in jQuery -- ///////
-$wptouch = jQuery.noConflict();
-
-
-/////// -- Switch Magic -- ///////
-function wptouch_switch_confirmation() {
-if (document.cookie && document.cookie.indexOf("wptouch_switch_cookie") > -1) {
-// just switch
-	$wptouch("#wptouch-switch-link a#switch-link").toggleClass("offimg");
-	setTimeout('switch_delayer()', 1250); 
+if ( ( navigator.platform == 'iPhone' || navigator.platform == 'iPod' ) && typeof orientation != 'undefined' ) { 
+	var touchStartOrClick = 'touchstart'; 
 } else {
-// ask first
-	var answer = confirm("Switch to regular view? \n \n You can switch back to mobile view again in the footer.");
-	if (answer){
-	$wptouch("#wptouch-switch-link a#switch-link").toggleClass("offimg");
-	setTimeout('switch_delayer()', 1350); 
+	var touchStartOrClick = 'click'; 
+};
+
+/* Try to get out of frames! */
+if ( window.top != window.self ) { 
+	window.top.location = self.location.href
+}
+
+$wpt.fn.wptouchFadeToggle = function( speed, easing, callback ) { 
+	return this.animate( {opacity: 'toggle'}, speed, easing, callback ); 
+};
+
+function wptouch_switch_confirmation( e ) {
+	if ( document.cookie && document.cookie.indexOf( 'wptouch_switch_toggle' ) > -1 ) {
+	// just switch
+		$wpt( '#switch span' ).removeClass( 'active' );
+		$wpt( '.off' ).addClass( 'active' );
+		setTimeout('switch_delayer()', 500 ); 
+	} else {
+	// ask first
+	    if ( confirm( "Switch to regular view? \n \n You can switch back again in the footer." ) ) {
+		$wpt( '#switch span' ).removeClass( 'active' );
+		$wpt( '.off' ).addClass( 'active' );
+			setTimeout( 'switch_delayer()', 500 );
+			
+		} else {
+	        e.preventDefault();
+	        e.stopImmediatePropagation();
 		}
 	}
 }
 
-setTimeout(function() { $wptouch('#prowl-success').fadeOut(350); }, 5250);
-setTimeout(function() { $wptouch('#prowl-fail').fadeOut(350); }, 5250);
-
-function wptouch_toggle_text() {
-	$wptouch("p").toggleClass("fontsize");
+if ( $wpt( '#prowl-success' ).length ) {
+	setTimeout( function() { $wpt( '#prowl-success' ).fadeOut( 350 ); }, 5250 );
+}
+if ( $wpt( '#prowl-fail' ).length ) {
+	setTimeout( function() { $wpt( '#prowl-fail' ).fadeOut( 350 ); }, 5250 );
 }
 
-
-/////// -- Menus -- ///////
-// Creating a new function, fadeToggle()
-$wptouch.fn.fadeToggle = function(speed, easing, callback) { 
-	return this.animate({opacity: 'toggle'}, speed, easing, callback); 
-};
- 
-function bnc_jquery_menu_drop() {
-	$wptouch('#wptouch-menu').fadeToggle(400);
-	$wptouch("#headerbar-menu a").toggleClass("open");
-}
-
-function bnc_jquery_login_toggle() {
-	$wptouch('#wptouch-login').fadeToggle(400);
-}
-
-function bnc_jquery_search_toggle() {
-	$wptouch('#wptouch-search').fadeToggle(400);
-}
-
-function bnc_jquery_prowl_open() {
-	$wptouch('#prowl-message').fadeToggle(400);
-}
-
-function bnc_jquery_wordtwit_open() {
-	$wptouch('#wptouch-wordtwit').fadeToggle(400);
-}
-
-
-/////// -- Ajax comments -- ///////
-function bnc_showhide_coms_toggle() {
-	$wptouch('#commentlist').fadeToggle(350);
-	$wptouch("img#com-arrow").toggleClass("com-arrow-down");
-	$wptouch("h3#com-head").toggleClass("comhead-open");
-}
-
-function commentAdded() {
-    if ($wptouch('#errors')) {
-        $wptouch('#errors').hide();
-	}
-        
-    if ($wptouch('#nocomment')) {
-        $wptouch('#nocomment').hide();
-    }
-    
-    if($wptouch('#hidelist')) {
-        $wptouch('#hidelist').hide();
-    }
-
-    $wptouch("#commentform").hide();
-    $wptouch("#the-new-comment").fadeIn(1500);
-    $wptouch("#refresher").fadeIn(1500);
-}
-
-
-/////// --Single Post Page -- ///////
-
-function wptouch_toggle_twitter() {
-	$wptouch('#twitter-box').fadeToggle(400);
-}
-
-function wptouch_toggle_bookmarks() {
-	$wptouch('#bookmark-box').fadeToggle(400);
-}
-
-/////// --jQuery Tabs-- ///////
-
-$wptouch(function () {
-    var tabContainers = $wptouch('#menu-head > ul');
-    
-    $wptouch('#tabnav a').click(function () {
-        tabContainers.hide().filter(this.hash).show();
-        
-        $wptouch('#tabnav a').removeClass('selected');
-        $wptouch(this).addClass('selected');
-        
+$wpt(function() {
+    var tabContainers = $wpt( '#menu-head > ul' );   
+    $wpt( '#tabnav a' ).bind(touchStartOrClick, function () {
+        tabContainers.hide().filter( this.hash ).show();
+    $wpt( '#tabnav a' ).removeClass( 'selected' );
+    $wpt( this ).addClass( 'selected' );
         return false;
-    }).filter(':first').click();
+    }).filter( ':first' ).trigger( touchStartOrClick );
 });
 
-/////// -- Tweak jQuery Timer -- ///////
-$wptouch.timerId = setInterval(function(){
-	var timers = jQuery.timers;
-	for (var i = 0; i < timers.length; i++) {
-		if (!timers[i]()) {
-			timers.splice(i--, 1);
-		}
-	}
-	if (!timers.length) {
-		clearInterval(jQuery.timerId);
-		jQuery.timerId = null;
-	}
-}, 83);
+function bnc_showhide_coms_toggle() {
+	$wpt( '#commentlist' ).wptouchFadeToggle( 350 );
+	$wpt( 'img#com-arrow' ).toggleClass( 'com-arrow-down' );
+	$wpt( 'h3#com-head' ).toggleClass( 'comhead-open' );
+}
+	
+function doWPtouchReady() {
 
-// End WPtouch jS
+	$wpt( '#headerbar-menu a' ).bind( touchStartOrClick, function( e ){
+		$wpt( '#wptouch-menu' ).wptouchFadeToggle( 350 );
+		$wpt( '#headerbar-menu a' ).toggleClass( 'open' );
+	});
+
+	$wpt( 'a#searchopen, #wptouch-search-inner a' ).click( function(){	
+		$wpt( '#wptouch-search' ).wptouchFadeToggle( 350 );
+		$wpt( '#s' ).focus();		
+	});
+	
+	$wpt( 'a#prowlopen' ).bind( touchStartOrClick, function( e ){	
+		$wpt( '#prowl-message' ).wptouchFadeToggle( 350 );
+	});
+	
+	$wpt( 'a#wordtwitopen' ).bind( touchStartOrClick, function( e ){	
+		$wpt( '#wptouch-wordtwit' ).wptouchFadeToggle( 350 );
+	});
+
+	$wpt( 'a#gigpressopen' ).bind( touchStartOrClick, function( e ){	
+		$wpt( '#wptouch-gigpress' ).wptouchFadeToggle( 350 );
+	});
+
+	$wpt( 'a#loginopen, #wptouch-login-inner a' ).bind( touchStartOrClick, function( e ){	
+		$wpt( '#wptouch-login' ).wptouchFadeToggle(350);
+	});
+	
+	$wpt( 'a#obook' ).bind( touchStartOrClick, function() {
+		$wpt( '#bookmark-box' ).wptouchFadeToggle(350);
+	});
+	
+	$wpt( '.singlentry img, .singlentry .wp-caption' ).each( function() {
+		if ( $wpt( this ).width() <= 250 ) {
+			$wpt( this ).addClass( 'aligncenter' );
+		}
+	});
+	
+	if ( $wpt( '#FollowMeTabLeftSm' ).length ) {
+		$wpt( '#FollowMeTabLeftSm' ).remove();
+	}
+	
+	/* add dynamic automatic video resizing via fitVids */
+
+	var videoSelectors = [
+		"iframe[src^='http://player.vimeo.com']",
+		"iframe[src^='http://www.youtube.com']",
+		"iframe[src^='http://www.kickstarter.com']",
+		"object",
+		"embed",
+		"video"
+	];
+	
+	var allVideos = $wpt( '.post' ).find( videoSelectors.join(',') );
+	
+	$wpt( allVideos ).each( function(){ 
+		$wpt( this ).unwrap().addClass( 'wptouch-videos' ).parentsUntil( '.content', 'div:not(.fluid-width-video-wrapper), span' ).removeAttr( 'width' ).removeAttr( 'height' ).removeAttr( 'style' );
+	});
+
+	$wpt( '.post' ).fitVids();
+	
+	$wpt( '.post-arrow' ).live( touchStartOrClick, function( e ){
+		$wpt( this ).toggleClass( 'post-arrow-down' );
+		$wpt( this ).parents( '.post' ).find( '.mainentry' ).wptouchFadeToggle(500);
+	});
+
+	$wpt( 'span.off' ).bind( 'click', function(){
+		wptouch_switch_confirmation();
+	});
+	
+}
+
+$wpt( document ).ready( function() { doWPtouchReady(); } );
+
+
+/*global jQuery */
+/*! 
+* FitVids 1.0
+*
+* Copyright 2011, Chris Coyier - http://css-tricks.com + Dave Rupert - http://daverupert.com
+* Credit to Thierry Koblentz - http://www.alistapart.com/articles/creating-intrinsic-ratios-for-video/
+* Released under the WTFPL license - http://sam.zoy.org/wtfpl/
+*
+* Date: Thu Sept 01 18:00:00 2011 -0500
+*
+* Modified by BraveNewCode for WPtouch Pro
+*/
+
+(function( $ ){
+
+  $.fn.fitVids = function( options ) {
+    var settings = {
+      customSelector: null
+    }
+    
+    var div = document.createElement('div'),
+        ref = document.getElementsByTagName('base')[0] || document.getElementsByTagName('script')[0];
+        
+  	div.className = 'fit-vids-style';
+    div.innerHTML = '&shy;<style>         \
+      .fluid-width-video-wrapper {        \
+         width: 100%;                     \
+         position: relative;              \
+         padding: 0;                      \
+      }                                   \
+                                          \
+      .fluid-width-video-wrapper *{  \
+         position: absolute;              \
+         top: 0;                          \
+         left: 0;                         \
+         width: 100%;                     \
+         height: 100%;                    \
+      }                                   \
+    </style>';
+                      
+    ref.parentNode.insertBefore(div,ref);
+    
+    if ( options ) { 
+      $.extend( settings, options );
+    }
+    
+    return this.each(function(){
+      var selectors = [
+        "iframe[src^='http://player.vimeo']", 
+        "iframe[src^='http://www.youtube']", 
+        "iframe[src^='http://www.kickstarter']",
+//     "iframe[src^='http://maps.google']",
+        "object", 
+        "embed",
+        "video"
+      ];
+      
+      if (settings.customSelector) {
+        selectors.push(settings.customSelector);
+      }
+      
+      var $allVideos = $(this).find(selectors.join(','));
+
+      $allVideos.each(function(){
+        var $this = $(this);
+
+        if (this.tagName.toLowerCase() == 'embed' && $this.parent('object').length || $this.parent('.fluid-width-video-wrapper').length) { return; } 
+		var height = $this.height(), aspectRatio = height / $this.width();
+//		var height = this.tagName.toLowerCase() == 'object' ? $this.attr('height') : $this.height(),
+
+        $this.wrap('<div class="fluid-width-video-wrapper"></div>').parent('.fluid-width-video-wrapper').css('padding-top', (aspectRatio * 100)+"%");
+        $this.removeAttr('height').removeAttr('width');
+      });
+    });
+  
+  }
+})( jQuery );
