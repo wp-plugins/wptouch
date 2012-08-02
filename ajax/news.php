@@ -8,7 +8,7 @@
 		$rss = fetch_feed( 'http://www.bravenewcode.com/tag/wptouch/feed/' );
 		if ( !is_wp_error( $rss ) ) { // Checks that the object is created correctly 
 		    // Figure out how many total items there are, but limit it to 5. 
-		    $max_items = $rss->get_item_quantity(5);
+		    $max_items = $rss->get_item_quantity(4);
 		    $rss_items = $rss->get_items( 0, $max_items ); 
 		}
 	
