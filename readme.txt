@@ -32,6 +32,7 @@ For more information visit http://www.bravenewcode.com/wptouch-pro
 = Version 1.9.5.1 =
 
 * Fixed: Issue with menu sorting by ID
+* Fixed: Broken link for iPhone/iPad icon generator
 
 = Version 1.9.5 =
 
