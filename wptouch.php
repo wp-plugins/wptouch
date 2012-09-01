@@ -2,7 +2,7 @@
 /*
 Plugin Name: WPtouch
 Plugin URI: http://wordpress.org/extend/plugins/wptouch/
-Version: 1.9.5.1
+Version: 1.9.5.2
 Description: A plugin which formats your site with a mobile theme for visitors on Apple <a href="http://www.apple.com/iphone/">iPhone</a> / <a href="http://www.apple.com/ipodtouch/">iPod touch</a>, <a href="http://www.android.com/">Google Android</a>, <a href="http://www.blackberry.com/">Blackberry Storm and Torch</a>, <a href="http://www.palm.com/us/products/phones/pre/">Palm Pre</a> and other touch-based smartphones.
 Author: BraveNewCode Inc.
 Author URI: http://www.bravenewcode.com
@@ -28,7 +28,7 @@ License: GNU General Public License 2.0 (GPL) http://www.gnu.org/licenses/gpl.ht
 load_plugin_textdomain( 'wptouch', false, dirname( plugin_basename( __FILE__ ) ) );
 
 global $bnc_wptouch_version;
-$bnc_wptouch_version = '1.9.5.1';
+$bnc_wptouch_version = '1.9.5.2';
 
 require_once( 'include/plugin.php' );
 require_once( 'include/compat.php' );
@@ -87,7 +87,8 @@ $wptouch_defaults = array(
 	'wptouch-language' => 'auto',
 	'enable-twenty-eleven-footer' => 0,
 	'enable-fixed-header' => false,
-	'ad_service' => 'adsense'
+	'ad_service' => 'adsense',
+	'show_powered_by' => false
 );
 
 function wptouch_get_plugin_dir_name() {
@@ -1026,6 +1027,11 @@ function bnc_get_h2_font() {
 function bnc_get_icon_style() {
 	$v = bnc_wp_touch_get_menu_pages();
 	return $v['icon-style'];
+}
+
+function bnc_wptouch_can_show_powered_by() {
+	$settings = bnc_wp_touch_get_menu_pages();
+	return $settings['show_powered_by'];
 }
 
 function bnc_get_wptouch_custom_lang_files() {

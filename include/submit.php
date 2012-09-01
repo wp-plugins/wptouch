@@ -257,6 +257,12 @@ if ( isset( $_POST['submit'] ) ) {
 	} else {
 		$a['ad_service'] = 'none';	
 	}	
+	
+	if ( isset( $_POST['show_powered_by'] ) ) {
+		$a['show_powered_by'] = 1;
+	} else {
+		$a['show_powered_by'] = 0;
+	}
 
 	foreach ($_POST as $k => $v) {
 		if ($k == 'enable_main_title') {
