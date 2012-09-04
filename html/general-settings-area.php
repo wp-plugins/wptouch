@@ -51,7 +51,7 @@
 							<option value="fr_FR"<?php if ( $wptouch_settings['wptouch-language'] == "fr_FR" ) echo " selected"; ?>>Français</option>
 							<option value="es_ES"<?php if ( $wptouch_settings['wptouch-language'] == "es_ES" ) echo " selected"; ?>>Español</option>
 							<option value="eu_EU"<?php if ( $wptouch_settings['wptouch-language'] == "eu_EU" ) echo " selected"; ?>>Basque</option>
-							<!-- <option value="de_DE"<?php if ( $wptouch_settings['wptouch-language'] == "de_DE" ) echo " selected"; ?>>Deutsch</option> -->
+							<option value="de_DE"<?php if ( $wptouch_settings['wptouch-language'] == "de_DE" ) echo " selected"; ?>>Deutsch</option>
 							<option value="ja_JP"<?php if ( $wptouch_settings['wptouch-language'] == "ja_JP" ) echo " selected"; ?>>Japanese</option>
 							<option value="tr_TR"<?php if ( $wptouch_settings['wptouch-language'] == "tr_TR" ) echo " selected"; ?>>Türkçe</option>
 							<option value="it_IT"<?php if ( $wptouch_settings['wptouch-language'] == "it_IT" ) echo " selected"; ?>>Italiano</option>

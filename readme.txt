@@ -31,6 +31,7 @@ For more information visit http://www.bravenewcode.com/wptouch-pro
 
 = Version 1.9.5.2 =
 
+* Added: Ability to select german language
 * Changed: 'Powered by WPtouch' in footer is now off by default
 
 = Version 1.9.5.1 =
