@@ -3,7 +3,7 @@ Contributors: bravenewcode, duanestorey, dalemugford
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=paypal%40bravenewcode%2ecom&item_name=WPtouch%20Beer%20Fund&no_shipping=0&no_note=1&tax=0&currency_code=CAD&lc=CA&bn=PP%2dDonationsBF&charset=UTF%2d8
 Tags: wptouch, iphone, ipod, theme, apple, mac, bravenewcode, ajax, mobile, android, blackberry, smartphone, 
 Requires at least: 3.1
-Tested up to: 3.4.1
+Tested up to: 3.4.2
 Stable tag: 1.9.5.2
 
 WPtouch: A simple, powerful and elegant mobile theme for your website.
@@ -28,6 +28,10 @@ For more information visit http://www.bravenewcode.com/wptouch-pro
 'WPtouch' and 'WPtouch Pro' are trademarks of BraveNewCode Inc.
 
 == Changelog ==
+
+= Version 1.9.5.3 =
+
+* Fixed: Enhanced security for Multisite installations
 
 = Version 1.9.5.2 =
 

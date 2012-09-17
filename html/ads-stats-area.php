@@ -53,9 +53,12 @@
 			</div>
 			
 			<div class="right-content">
-				<textarea id="wptouch-stats" name="statistics"><?php echo stripslashes($wptouch_settings['statistics']); ?></textarea>
+				<?php if ( is_super_admin() ) { ?>
+					<textarea id="wptouch-stats" name="statistics"><?php echo stripslashes($wptouch_settings['statistics']); ?></textarea>
+				<?php } else { ?>
+					<em><?php _e( "(Requires Super Admin priviledges)", "wptouch" ); ?></em>
+				<?php } ?>
 			</div>
-			
 			<div class="bnc-clearer"></div>
 		</div>		
 	</div><!-- postbox -->
