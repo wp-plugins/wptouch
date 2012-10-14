@@ -274,8 +274,8 @@ remove_action('wp_head', 'gigpress_head');
 remove_filter('the_excerpt', 'do_shortcode');   
 remove_filter('the_content', 'do_shortcode');
 remove_action( 'wp_default_scripts', array( 'JCP_UseGoogleLibraries', 'replace_default_scripts_action'), 1000);
-remove_filter('the_content', 'sociable_display_hook');
-remove_filter('the_excerpt', 'sociable_display_hook');
+remove_filter('the_content', 'auto_sociable');
+remove_filter('the_excerpt', 'auto_sociable');
 remove_filter('the_content', 'whydowork_adsense_filter', 100);
 remove_filter('the_excerpt', 'whydowork_adsense_filter', 100);
 
