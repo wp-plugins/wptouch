@@ -612,16 +612,15 @@ class WPtouchPlugin {
 		$this->applemobile = false;
 		$useragents = bnc_wptouch_get_user_agents();
 		$exclude_agents = bnc_wptouch_get_exclude_user_agents();
-		$devfile =  compat_get_plugin_dir( 'wptouch' ) . '/include/developer.mode';
 
 		foreach ( $useragents as $useragent ) {
-			if ( preg_match( "#$useragent#i", $container ) || file_exists( $devfile ) ) {
+			if ( preg_match( "#$useragent#i", $container ) ) {
 				$this->applemobile = true;
 				break;
 			}
 		}
 
-		if ( $this->applemobile && !file_exists( $devfile ) ) {
+		if ( $this->applemobile ) {
 			foreach( $exclude_agents as $agent ) {
 				if ( preg_match( "#$agent#i", $container ) ) {	
 					$this->applemobile = false;
