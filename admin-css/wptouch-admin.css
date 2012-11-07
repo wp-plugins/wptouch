@@ -1,0 +1,427 @@
+/* WPtouch 1.9.x Admin CSS */
+/* @group head-area.php */
+#wptouch-head.metabox-holder .postbox {
+	background: #fff url(../images/wptouch-icon.jpg) no-repeat 100% 74px;
+	overflow: hidden;
+	position: relative;
+	min-height: 216px;
+	height: 218px;
+	margin-top: 0;
+}
+
+#wptouch-head #wptouch-head-colour {
+	background-color: #d7ebf7;
+	padding: 10px 10px 0;
+	margin: -10px -10px -20px;
+	-webkit-border-top-left-radius: 2px;
+	-webkit-border-top-right-radius: 2px;
+
+	border-radius-topleft: 2px;
+	border-radius-topright: 2px;
+	border-top-left-radius: 2px;
+	border-top-right-radius: 2px;
+}
+
+#wptouch-head-title {
+	color: #333c42;
+	text-shadow: #f6f8fd 0 1px 0;
+	letter-spacing: -1px;
+	margin: 0;
+	padding: 0;
+	float: left;
+	font-size: 22px;
+}
+
+#wptouch-head .postbox img.ajax-load {
+	margin-left: 5px;
+	margin-bottom: -2px;
+}
+
+#wptouch-head-links {
+	float: right;
+	position: relative;
+	bottom: 4px;
+}
+
+#wptouch-head-links a {
+	color: #62727c;
+	font-weight: bold;
+	text-shadow: rgba(255,255,255,.5) 0 1px 0;
+	padding-right: 5px;
+	padding-left: 5px;
+}
+
+#wptouch-head-links a:hover {
+	color: #d54e21;
+	text-shadow: #cedeea 0 1px 0;
+}
+
+#wptouch-head-links li {
+	display: inline;
+	color: #618299;
+	text-shadow: #bfdfe8 1px 1px 0;
+}
+
+#wptouch-news-support {
+	border-radius: 5px;
+	margin-top: 30px;
+	width: 100%;
+	height: 140px;
+	text-transform: capitalize;
+}
+
+#wptouch-head h3 {
+	color: #444;
+	border-radius: 0px;
+}
+
+#wptouch-head li.ajax-error {
+	color: #555;
+}
+
+/* @group Latest News */
+#wptouch-news-wrap {
+	float: left;
+	width: 53%;
+	margin: 0;
+	padding: 0;
+}
+
+#wptouch-news-wrap h3 {
+	padding-left: 10px;
+	display: block;
+	width: 100%;
+	height: 15px;
+}
+
+#wptouch-support-wrap {
+	color: #777;
+	float: left;
+	width: 47%;
+	padding: 0;
+	margin-top: 0;
+	margin-right: 0;
+	margin-bottom: 0;
+}
+
+#wptouch-support-wrap ul li {
+	width: 70%;
+
+	-o-text-overflow: ellipsis;
+	-ms-text-overflow: ellipsis;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+#wptouch-support-wrap ul li a {
+	-o-text-overflow: ellipsis;
+	-ms-text-overflow: ellipsis;
+	text-overflow: ellipsis;
+}
+
+#wptouch-support-wrap h3 {
+	display: block;
+	width: 100%;
+	position: relative;
+	padding-right: 12px;
+	height: 15px;
+}
+
+#wptouch-news-support li {
+	border-bottom: 1px solid #e6e6e6;
+	margin: 0;
+	padding: 8px 0 8px 12px;
+	list-style-type: disc;
+	list-style-position: inside;
+	color: #c1cfd1;
+	width: 78%;
+	text-indent: -12px;
+}
+
+#wptouch-news-support li:last-child {
+	border-bottom-style: none;
+}
+
+a#find-out-more {
+	font-weight: bold;
+	position: absolute;
+	right: 326px;
+	top: 191px;
+	display: block;
+	width: 148px;
+	height: 30px;
+}
+
+/* @end */
+/* @end */
+/* @group general-settings.php */
+#bnc-global input.no-right-margin {
+	position: relative;
+	right: 5px;
+}
+
+#bnc-global input.no-right-margin.footer-msg {
+	width: 45%;
+}
+
+#bnc-global strong.no-pages {
+	color: red;
+	padding: 6px 15px 7px 25px;
+	display: inline-block;
+	margin-bottom: 15px;
+	border: 1px dashed #cf931d;
+	border-radius: 3px;
+	background: #fee8b9 url(../images/sortof.png) no-repeat 5px center;
+	margin-top: 5px;
+}
+
+/* @end */
+/* @group advanced-area.php */
+em.supported {
+	color: #8a9ba8;
+	display: block;
+	line-height: 16px;
+	margin-top: 3px;
+}
+
+/* @end */
+/* @group push-area.php */
+#push-area li input {
+	position: relative;
+	right: 5px;
+	width: 275px;
+}
+
+#push-area li input.checkbox {
+	position: relative;
+	left: 0;
+}
+
+#push-area li select {
+	width: auto;
+}
+
+/* @end */
+/* @group style-area.php */
+#bnc-global ul.wptouch-select-options li {
+	margin-left: 6px;
+}
+
+/* @group Skins-Menu */
+#bnc-global .skins-desc input {
+	width: 54px;
+}
+
+#bnc-global .skins-desc select {
+	width: 120px;
+	margin-left: 12px;
+}
+
+/* @end */
+/* @end */
+/* @group icons-area.php */
+#bnc-global ul.wptouch-iconblock {
+	width: auto;
+	height: auto;
+}
+
+#bnc-global .right-content ul.wptouch-iconblock li {
+	width: 80px;
+	color: #666;
+	font-size: 9px;
+	text-align: center;
+	margin: 3px;
+	height: 55px;
+	padding-top: 10px;
+	position: relative;
+	float: left;
+}
+
+#bnc-global .default ul.wptouch-iconblock li {
+	background-color: #fefae7;
+	border: 1px dashed #dcdcdc;
+	border-radius: 5px;
+}
+
+#bnc-global .custom ul.wptouch-iconblock li {
+	background-color: #e6f4fe;
+	border: 1px dashed #becbcf;
+	border-radius: 5px;
+}
+
+#bnc-global .custom ul.wptouch-iconblock li:hover {
+	border-style: solid;
+	border-color: #c58989;
+	background-color: #fba7a7;
+	color: #000;
+}
+
+#bnc-global ul.wptouch-iconblock li span {
+	margin-top: 4px;
+	display: block;
+}
+
+#bnc-global .custom ul.wptouch-iconblock li span {
+	display: block;
+	width: 91%;
+
+	-o-text-overflow: ellipsis;
+	-ms-text-overflow: ellipsis;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	margin-left: 7%;
+}
+
+#bnc-global .custom ul.wptouch-iconblock li a {
+	color: red;
+	display: inline;
+}
+
+#bnc-global ul.wptouch-iconblock img {
+	width: 32px;
+	height: 32px;
+}
+
+#bnc-global #upload-icon {
+	width: 30%;
+	border-width: 1px;
+	border-radius: 12px;
+	padding: 4px 12px;
+	height: 14px;
+	text-align: center;
+}
+
+#bnc-global #upload-icon:active {
+	border: 1px solid #6d94b1;
+}
+
+#bnc-global #upload_progress {
+	position: relative;
+	display: block;
+	font-weight: bold;
+	color: #1a4977;
+	margin-top: 10px;
+}
+
+#bnc-global #upload_progress img {
+	position: relative;
+	top: 4px;
+}
+
+#bnc-global #extras_button {
+	display: block;
+	border-top: 1px solid #eee;
+	padding-top: 10px;
+}
+
+#bnc-global #available_icons .left-content p strong {
+	width: 100%;
+	overflow: auto;
+	display: block;
+	margin-top: 10px;
+}
+
+/* @end */
+/* @group page-area.php */
+#bnc-global .wptouch-pages span {
+	display: block;
+	margin-top: 5px;
+	text-align: left;
+	width: 68%;
+	float: right;
+}
+
+#bnc-global .wptouch-pages strong {
+	color: red;
+	padding: 6px 15px 7px 25px;
+	display: inline-block;
+	margin-bottom: 15px;
+	border: 1px dashed #cf931d;
+	border-radius: 3px;
+	background: #fee8b9 url(../images/sortof.png) no-repeat 5px center;
+	margin-top: 5px;
+}
+
+#bnc-global .wptouch-pages select {
+	width: 30%;
+}
+
+#bnc-global .wptouch-pages .checkbox {
+	margin-left: -1px;
+}
+
+#bnc-global .wptouch-pages ul.pages {
+	max-height: 500px;
+	overflow: scroll;
+	margin-top: 50px;
+	border: 2px solid #eee;
+	width: 100%;
+	padding: 10px;
+}
+
+/* @end */
+/* @group ads-stats-area.php */
+textarea#wptouch-stats {
+	border-radius: 5px;
+	width: 95%;
+	margin-left: 5px;
+	height: 100px;
+	margin-bottom: 15px;
+	color: #444;
+	font-size: 11px;
+	border-width: 2px;
+	border-color: #a4c6d3;
+	background-color: #ebf1ff;
+}
+
+/* @end */
+/* @group Settings/Reset Updated */
+#bnc-global #wptouchupdated {
+	z-index: 1000;
+	overflow: hidden;
+	margin-right: auto;
+	width: 100%;
+	position: relative;
+	padding: 0;
+	margin-bottom: -18px;
+}
+
+#bnc-global #wptouchupdated p.saved,#bnc-global #wptouchupdated p.reset {
+	border-radius: 4px;
+	text-shadow: #fff 0 1px 1px;
+	font: bold 14px "Myriad Pro", "Trebuchet MS", "Lucida Sans Unicode", sans-serif;
+	background: #fff3c6 url(../images/settings_small.png) no-repeat 5px 5px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 2px;
+	margin-top: 0;
+	height: 26px;
+	border: 1px solid #ffd44d;
+}
+
+#bnc-global #wptouchupdated p span {
+	display: block;
+	margin-top: 6px;
+	margin-left: 30px;
+}
+
+/* @end */
+/* @group New Styling */
+#bnc-global .left-content p {
+	color: #777;
+	line-height: 1.4em;
+}
+
+#bnc-global .new-styles .right-content {
+	padding-bottom: 25px;
+	margin-top: 20px;
+}
+
+#bnc-global .right-content ul li {
+	padding-bottom: 3px;
+	padding-top: 3px;
+}
+
+/* @end */
