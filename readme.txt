@@ -29,6 +29,10 @@ For more information visit http://www.bravenewcode.com/wptouch-pro
 
 == Changelog ==
 
+= Version 1.9.7 =
+
+* Added: Better support for WP Super Cache
+
 = Version 1.9.6 =
 
 * Added: Catalan translation

@@ -295,7 +295,10 @@ if ( isset( $_POST['submit'] ) ) {
 	$a['prowl-api'] = $_POST['prowl-api'];
 	
 	$values = serialize($a);
+
 	update_option('bnc_iphone_pages', $values);
+
+	do_action( 'wptouch_updated_user_agents' );
 } elseif ( isset( $_POST['reset'] ) ) {
 	update_option( 'bnc_iphone_pages', false );
 }
