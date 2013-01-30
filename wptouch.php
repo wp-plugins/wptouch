@@ -18,7 +18,7 @@ License: GNU General Public License 2.0 (GPL) http://www.gnu.org/licenses/gpl.ht
 # the Push notification additions.
 # (http://codework.dk/referencer/wp-plugins/prowl-me/)
 
-# Copyright (c) 2008 - 2012 BraveNewCode Inc.
+# Copyright (c) 2008 - 2013 BraveNewCode Inc.
 
 # 'WPtouch' is an unregistered trademark of BraveNewCode Inc., 
 # and may not be used in conjuction with any redistribution 
