@@ -1,3 +1,5 @@
+/* @override http://www.bravenewcode.com/wordpress/wp-content/plugins/wptouch/admin-css/bnc-global.css */
+
 /* Global styles applied to BraveNewCode plugins */
 
 /* @group Global Plugin Styles */
@@ -11,7 +13,6 @@
 #bnc-global .postbox {
 	position: relative;
 	overflow: hidden;
-	background-color: #fff;
 	padding: 10px;
 }
 

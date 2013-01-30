@@ -5,16 +5,27 @@
 		<h3><span class="advanced-options">&nbsp;</span><?php _e( "Advanced Options", "wptouch" ); ?></h3>
 
 		<div class="left-content">
+		 	<h4><?php _e( "Custom User-Agents", "wptouch" ); ?></h4>
+		 	<p><?php _e( "Enter a comma-separated list of user-agents to enable WPtouch for a device that isn't currently officially supported.", "wptouch" ); ?></p>
+		 	<br /><br /><br /><br /><br />
+		 	<h4><?php _e( "Advanced Settings", "wptouch" ); ?></h4>
 			<p><?php _e( "Choose to enable/disable advanced features &amp; options available for WPtouch.", "wptouch"); ?></p>	
 			<p><?php _e( "* WPtouch Restricted Mode attempts to fix issues where other plugins load scripts which interfere with WPtouch CSS and JavaScript.", "wptouch" ); ?></p>
 		 	<br />
-		 	<h4><?php _e( "Custom User-Agents", "wptouch" ); ?></h4>
-		 	<p><?php _e( "Enter a comma-separated list of user-agents to enable WPtouch for a device that isn't currently officially supported.", "wptouch" ); ?></p>
-		 	<p><?php echo sprintf( __( "The currently enabled user-agents are: <em class='supported'>%s</em>", "wptouch" ), implode( ", ", bnc_wptouch_get_user_agents() ) ); ?></p>
 		</div><!-- left-content -->
 	
 	<div class="right-content">
 		<ul>
+				<ul class="wptouch-make-li-italic">
+					<li>
+						<input type="text" name="custom-user-agents" value="<?php if ( isset( $wptouch_settings['custom-user-agents'] ) ) echo implode( ', ', $wptouch_settings['custom-user-agents'] ); ?>" /><?php _e( "Custom user-agents", "wptouch" ); ?>
+						<?php if ( function_exists( 'wpsc_update_htaccess' ) ) { ?>
+							<br /><br /><?php _e( "After changing the user-agents, please visit the WP Super Cache admin page and update your rewrite rules.", "wptouch" ); ?>
+						<?php } ?>
+								 	<p><?php echo sprintf( __( "The currently enabled user-agents are: <em class='supported'>%s</em>", "wptouch" ), implode( ", ", bnc_wptouch_get_user_agents() ) ); ?></p>
+
+					</li>
+				</ul>
 			<li>
 				<input class="checkbox" type="checkbox" name="enable-zoom" <?php if ( isset( $wptouch_settings['enable-zoom']) && $wptouch_settings['enable-zoom'] == 1) echo('checked'); ?> />
 				<label class="label" for="enable-zoom"><?php _e( "Allow zooming on content", "wptouch" ); ?> <a href="#zoom-info" class="fancylink">?</a></label>
@@ -127,15 +138,6 @@
 						<p><?php _e( "Sometimes fixes incompatibilities and speeds up WPtouch.", "wptouch" ); ?></p>
 						<p><?php _e( "Some plugins load conflicting javascript, extra CSS style sheets, and other functional code into your theme to accomplish what they add to your site. As WPtouch works complete on its own without any other plugin installed, in some cases (where you have several plugins or find something doesn't work right with WPtouch) you may want to enable Restricted Mode to ensure that WPtouch works properly, and loads quickly for mobile users.", "wptouch" ); ?></p>
 					</div>
-
-	<ul class="wptouch-make-li-italic">
-					<li>
-						<input type="text" name="custom-user-agents" value="<?php if ( isset( $wptouch_settings['custom-user-agents'] ) ) echo implode( ', ', $wptouch_settings['custom-user-agents'] ); ?>" /><?php _e( "Custom user-agents", "wptouch" ); ?>
-						<?php if ( function_exists( 'wpsc_update_htaccess' ) ) { ?>
-							<br /><br /><?php _e( "After changing the user-agents, please visit the WP Super Cache admin page and update your rewrite rules.", "wptouch" ); ?>
-						<?php } ?>
-					</li>
-				</ul>
 				</li>
 			</ul>
 		</div><!-- right content -->

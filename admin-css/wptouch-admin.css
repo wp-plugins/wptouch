@@ -1,7 +1,9 @@
+/* @override http://www.bravenewcode.com/wordpress/wp-content/plugins/wptouch/admin-css/wptouch-admin.css */
+
 /* WPtouch 1.9.x Admin CSS */
 /* @group head-area.php */
 #wptouch-head.metabox-holder .postbox {
-	background: #fff url(../images/wptouch-icon.jpg) no-repeat 100% 74px;
+	background: #fff url(../images/wptouch-icon.jpg) no-repeat 100% 74px !important;
 	overflow: hidden;
 	position: relative;
 	min-height: 216px;
@@ -245,9 +247,9 @@ em.supported {
 }
 
 #bnc-global .custom ul.wptouch-iconblock li {
-	background-color: #e6f4fe;
 	border: 1px dashed #becbcf;
 	border-radius: 5px;
+	background-color: #fff;
 }
 
 #bnc-global .custom ul.wptouch-iconblock li:hover {
@@ -359,6 +361,7 @@ em.supported {
 	border: 2px solid #eee;
 	width: 100%;
 	padding: 10px;
+	background-color: #fff;
 }
 
 /* @end */
@@ -371,9 +374,10 @@ textarea#wptouch-stats {
 	margin-bottom: 15px;
 	color: #444;
 	font-size: 11px;
-	border-width: 2px;
+	border-width: 1px;
 	border-color: #a4c6d3;
-	background-color: #ebf1ff;
+	background-color: #fff;
+	box-shadow: inset rgba(0,0,0,.1) 0px 0px 6px;
 }
 
 /* @end */

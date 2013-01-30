@@ -19,24 +19,21 @@
 
 				<br /><br />
 
-				<h4><?php _e( "Excluded Categories", "wptouch" ); ?></h4>
-				<p><?php _e( "Categories by ID you want excluded everywhere in WPtouch.", "wptouch" ); ?></p>
+				<h4><?php _e( "Excluded Categories, Tags", "wptouch" ); ?></h4>
+				<p><?php _e( "Categories and/or Tags by ID you want excluded everywhere in WPtouch.", "wptouch" ); ?></p>
 
-				<h4><?php _e( "Excluded Tags", "wptouch" ); ?></h4>
-				<p><?php _e( "Tags by ID you want excluded everywhere in WPtouch.", "wptouch" ); ?></p>
-
-				<br /><br />
+				<br /><br /><br />
 
 				<h4><?php _e( "Text Justification Options", "wptouch" ); ?></h4>
 				<p><?php _e( "Set the alignment for text.", "wptouch" ); ?></p>
 
-				<br /><br />
+				<br /><br /><br /><br />
 				
 				<h4><?php _e( "Post Listings Options", "wptouch" ); ?></h4>
 				<p><?php _e( "Choose between calendar Icons, post thumbnails (WP 2.9) or none for your post listings.", "wptouch" ); ?></p>
 				<p><?php _e( "Select which meta items are shown below titles on main, search, &amp; archives pages.", "wptouch" ); ?></p>
 
-				<br /><br /><br /><br /><br /><br /><br /><br /><br />
+				<br /><br /><br /><br /><br /><br /><br />
 
 				<h4><?php _e( "Footer Message", "wptouch" ); ?></h4>
 				<p><?php _e( "Customize the default footer message shown in WPtouch here.", "wptouch" ); ?></p>

@@ -2,7 +2,7 @@
 /*
 Plugin Name: WPtouch
 Plugin URI: http://wordpress.org/extend/plugins/wptouch/
-Version: 1.9.7
+Version: 1.9.6.1
 Description: A plugin which formats your site with a mobile theme for visitors on Apple <a href="http://www.apple.com/iphone/">iPhone</a> / <a href="http://www.apple.com/ipodtouch/">iPod touch</a>, <a href="http://www.android.com/">Google Android</a>, <a href="http://www.blackberry.com/">Blackberry Storm and Torch</a>, <a href="http://www.palm.com/us/products/phones/pre/">Palm Pre</a> and other touch-based smartphones.
 Author: BraveNewCode Inc.
 Author URI: http://www.bravenewcode.com
@@ -28,7 +28,7 @@ License: GNU General Public License 2.0 (GPL) http://www.gnu.org/licenses/gpl.ht
 load_plugin_textdomain( 'wptouch', false, dirname( plugin_basename( __FILE__ ) ) );
 
 global $bnc_wptouch_version;
-$bnc_wptouch_version = '1.9.7';
+$bnc_wptouch_version = '1.9.6.1';
 
 require_once( 'include/plugin.php' );
 require_once( 'include/compat.php' );
@@ -312,6 +312,7 @@ function bnc_wptouch_get_user_agents() {
 	'BlackBerry 9370', 	// Curve
 	'BlackBerry 9380', 	// Curve
 	'BlackBerry 9810', 	// Torch	
+	'BB10',	 					// BlackBerry 10 devices	
 	'webOS',					// Palm Pre/Pixi
 	's8000',					// Samsung s8000
 	'bada',						// Samsung Bada Phone
@@ -1091,10 +1092,8 @@ function bnc_wp_touch_page() {
 	</form>
 	
 	<form method="post" action="">
-		<input type="submit" onclick="return confirm('<?php _e( 'Restore default WPtouch settings?', 'wptouch' ); ?>');" name="reset" value="<?php _e('Restore Defaults', 'wptouch' ); ?>" id="bnc-button-reset" class="button-highlighted" />
+		<input type="submit" onclick="return confirm('<?php _e( 'Restore default WPtouch settings?', 'wptouch' ); ?>');" name="reset" value="<?php _e('Restore Defaults', 'wptouch' ); ?>" id="bnc-button-reset" class="button-secondary" />
 	</form>
-		
-	<?php // echo( '' . WPtouch( '<div class="bnc-plugin-version"> This is ','</div>' ) . '' ); ?>
 
 	<div class="bnc-clearer"></div>
 </div>

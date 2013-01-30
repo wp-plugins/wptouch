@@ -2,9 +2,9 @@
 Contributors: bravenewcode, duanestorey, dalemugford
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=paypal%40bravenewcode%2ecom&item_name=WPtouch%20Beer%20Fund&no_shipping=0&no_note=1&tax=0&currency_code=CAD&lc=CA&bn=PP%2dDonationsBF&charset=UTF%2d8
 Tags: wptouch, iphone, ipod, theme, apple, mac, bravenewcode, ajax, mobile, android, blackberry, smartphone, responsive, design 
-Requires at least: 3.1
-Tested up to: 3.4.2
-Stable tag: 1.9.6
+Requires at least: 3.0
+Tested up to: 3.5.1
+Stable tag: 1.9.6.1
 
 WPtouch: A simple, powerful & elegant mobile theme for your website.
 
@@ -29,9 +29,11 @@ For more information visit http://www.bravenewcode.com/wptouch-pro
 
 == Changelog ==
 
-= Version 1.9.7 =
+= Version 1.9.6.1 =
 
-* Added: Better support for WP Super Cache
+* Added BlackBerry 10 device support
+* Changed: Verified support for WordPress 3.5
+* Changed: Updated admin layout and fixed admin styling issues
 
 = Version 1.9.6 =
 
