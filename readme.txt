@@ -29,6 +29,10 @@ For more information visit http://www.bravenewcode.com/wptouch-pro
 
 == Changelog ==
 
+= Version 1.9.6.2 =
+
+* Changed: Made email menu item disabled by default
+
 = Version 1.9.6.1 =
 
 * Added BlackBerry 10 device support
