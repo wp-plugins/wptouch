@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=paypa
 Tags: wptouch, iphone, ipod, theme, apple, mac, bravenewcode, ajax, mobile, android, blackberry, smartphone, responsive, design 
 Requires at least: 3.0
 Tested up to: 3.5.1
-Stable tag: 1.9.6.1
+Stable tag: 1.9.6.2
 
 WPtouch: A simple, powerful & elegant mobile theme for your website.
 
