@@ -1,33 +1,39 @@
 === Plugin Name ===
 Contributors: bravenewcode, duanestorey, dalemugford
-Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=paypal%40bravenewcode%2ecom&item_name=WPtouch%20Beer%20Fund&no_shipping=0&no_note=1&tax=0&currency_code=CAD&lc=CA&bn=PP%2dDonationsBF&charset=UTF%2d8
 Tags: wptouch, iphone, ipod, theme, apple, mac, bravenewcode, ajax, mobile, android, blackberry, smartphone, responsive, design 
-Requires at least: 3.0
-Tested up to: 3.5.1
+Requires at least: 3.1
+Tested up to: 3.5.2
 Stable tag: 1.9.6.2
 
-WPtouch: A simple, powerful & elegant mobile theme for your website.
+WPtouch: A simple, powerful & elegant mobile solution for your website.
 
 == Description ==
 
-WPtouch automatically transforms your WordPress website for mobile devices, complete with ajax loading articles and smooth effects when viewed from popular mobile web browsing devices like the iPhone, iPod touch, Android mobile phones, BlackBerry OS6+ mobile devices, and more!
+WPtouch automatically transforms your WordPress website for mobile devices, complete with ajax loading articles and smooth effects when viewed from popular touch mobile devices like the iPhone, iPod touch, Android mobile phones, BlackBerry OS6+ mobile devices, and more!
 
 The admin panel allows you to customize many aspects of its appearance, and deliver a *fast*, user-friendly and stylish version of your site to touch mobile visitors, without modifying *a single bit of code* (or affecting) your regular desktop theme.
 
 The theme also includes the ability for visitors to switch between *WPtouch* view and your site's regular theme.
 
-*Now includes .pot file for translations (submit yours @ http://www.bravenewcode.com/contact)*
+Now includes .pot file for translations (submit yours @ http://www.bravenewcode.com/contact)
 
-*Like WPtouch but want more out of the product? Get everything you're missing with WPtouch Pro!*
-All-new code with a slew of new features— more style, color and branding options, more advertising options, Web-Application mode, iPad support, folly translated in 11 languages and more!
+Like WPtouch but want more out of the product?
 
-WPtouch Pro is now at version 2.8, having added a tonne of great customer-requested features along the way!
+*WPtouch Pro 3 is now available!!!*
+With all-new themes, an intuitive admin panel and great one-to-one ticketing support, it's the best WPtouch yet!
 
-For more information visit http://www.bravenewcode.com/wptouch-pro
+For more information visit http://www.bravenewcode.com/wptouch/
 
-'WPtouch' and 'WPtouch Pro' are trademarks of BraveNewCode Inc.
+'WPtouch' is a trademark of BraveNewCode Inc.
+'WPtouch Pro' is a registered trademark of BraveNewCode Inc.
 
 == Changelog ==
+
+= Version 1.9.6.3 =
+
+* Changed: Added new notification for WPtouch Pro 3 in the admin
+* Changed: Removed affiliate program link (discontinued)
+* Changed: Updated read me text
 
 = Version 1.9.6.2 =
 
@@ -813,7 +819,7 @@ Yes, that's true in general. However *not all websites are created equal, with s
 
 Many WordPress sites today also make heavy use of a variety of javascript, css and image files which significantly increase load times, in turn driving visitors on data connections crazy, often causing them to abandon your site altogether. 
 
-So we created *WPtouch* to be a lightweight, fast-loading, feature-rich mobile plugin to add a theme shown to mobile visitors. The plugin includes an admin panel for customizing many aspects of your site's presentation when showing the mobile theme.
+We created *WPtouch* to be a lightweight, fast-loading, feature-rich mobile plugin to add a theme shown to mobile visitors. The plugin includes an admin panel for customizing many aspects of your site's presentation when showing the mobile theme.
 
 = Well, what if my users don't like it and want to see my regular site? =
 

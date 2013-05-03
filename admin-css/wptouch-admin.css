@@ -1,20 +1,31 @@
-/* @override http://www.bravenewcode.com/wordpress/wp-content/plugins/wptouch/admin-css/wptouch-admin.css */
-
 /* WPtouch 1.9.x Admin CSS */
 /* @group head-area.php */
+
+#wptouch-head.metabox-holder {
+	height: 188px;
+	margin: 0;
+}
+
+#wptouch-head.metabox-holder p {
+	margin: 0 0 0 -10px;
+	position: absolute;
+	top: 34px;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: #fff;
+}
 #wptouch-head.metabox-holder .postbox {
-	background: #fff url(../images/wptouch-icon.jpg) no-repeat 100% 74px !important;
 	overflow: hidden;
 	position: relative;
 	min-height: 216px;
-	height: 218px;
 	margin-top: 0;
+	margin: 0;
 }
 
 #wptouch-head #wptouch-head-colour {
 	background-color: #d7ebf7;
 	padding: 10px 10px 0;
-	margin: -10px -10px -20px;
 	-webkit-border-top-left-radius: 2px;
 	-webkit-border-top-right-radius: 2px;
 
@@ -22,6 +33,7 @@
 	border-radius-topright: 2px;
 	border-top-left-radius: 2px;
 	border-top-right-radius: 2px;
+	margin: -10px -10px 0;
 }
 
 #wptouch-head-title {
@@ -62,14 +74,6 @@
 	display: inline;
 	color: #618299;
 	text-shadow: #bfdfe8 1px 1px 0;
-}
-
-#wptouch-news-support {
-	border-radius: 5px;
-	margin-top: 30px;
-	width: 100%;
-	height: 140px;
-	text-transform: capitalize;
 }
 
 #wptouch-head h3 {
