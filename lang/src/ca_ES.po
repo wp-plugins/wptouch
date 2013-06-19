@@ -1,0 +1,1639 @@
+# Translation of the WordPress plugin WPtouch 1.9.23.1 by Dale Mugford & Duane Storey (BraveNewCode Inc.).
+# Copyright (C) 2011 Dale Mugford & Duane Storey (BraveNewCode Inc.)
+# This file is distributed under the same license as the WPtouch package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2011.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: WPtouch 1.9.23.1\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/wptouch\n"
+"POT-Creation-Date: 2011-03-10 17:51-0500\n"
+"PO-Revision-Date: 2012-11-06 12:00-0500\n"
+"Last-Translator: Aleix Vidal i Gaya <leixet@yahoo.ca>\n"
+"Language-Team: Aleix Vidal i Gaya <leixet@yahoo.ca>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"Language: ca_ES\n"
+"X-Generator: Poedit 1.5.4\n"
+
+#: ajax/file_upload.php:24
+msgid ""
+"<p style=\"color:red; padding-top:10px\">There seems to have been an error."
+"<p>Please try your upload again.</p>"
+msgstr ""
+"<p style=\"color:red; padding-top:10px\">Sembla que hi ha un error."
+"<p>Intenteu carregar-ho de nou.</p>"
+
+#: ajax/file_upload.php:26
+msgid ""
+"<p style=\"color:green; padding-top:10px\">File has been saved and added to "
+"the pool.</p>"
+msgstr ""
+"<p style=\"color:green; padding-top:10px\">L'arxiu s'ha guardat i s'ha "
+"afegit al catàleg.</p>"
+
+#: ajax/file_upload.php:29
+msgid ""
+"<p style=\"color:orange; padding-top:10px\">Sorry, only PNG, GIF and JPG "
+"images are supported.</p>"
+msgstr ""
+"<p style=\"color:orange; padding-top:10px\">Només s'accepten imatges PNG, "
+"GIF o JPG.</p>"
+
+#: ajax/file_upload.php:31
+msgid ""
+"<p style=\"color:orange; padding-top:10px\">Image too large. try something "
+"like 59x60.</p>"
+msgstr ""
+"<p style=\"color:orange; padding-top:10px\">La imatge és massa gran. Proveu "
+"amb alguna cosa com 59x60.</p>"
+
+#: ajax/file_upload.php:33
+msgid ""
+"<p style=\"color:orange; padding-top:10px\">Insufficient privileges.</"
+"p><p>You need to either be an admin or have more control over your server.</"
+"p>"
+msgstr ""
+"<p style=\"color:orange; padding-top:10px\">Privilegis insuficients.</"
+"p><p>Necessiteu ser un administrador o tenir més control sobre el servidor.</"
+"p>"
+
+#: ajax/news.php:16 ajax/support.php:16 ajax/support.php:28
+msgid "<li class=\"ajax-error\">No feed items found to display.</li>"
+msgstr ""
+"<li class=\"ajax-error\">No es troben elements al feed per mostrar.</li>"
+
+#: ajax/news.php:28
+msgid " <li class=\"ajax-error\">No feed items found to display.</li>"
+msgstr ""
+" <li class=\"ajax-error\">No es troben elements al feed per mostrar.</li>"
+
+#: html/ads-stats-area.php:5
+msgid "Adsense, Stats &amp; Custom Code"
+msgstr "Adsense, Estadístiques i Codi Personalitzat"
+
+#: html/ads-stats-area.php:8
+msgid "Adsense"
+msgstr "Adsense"
+
+#: html/ads-stats-area.php:9
+msgid ""
+"Enter your Google AdSense ID if you'd like to support mobile advertising in "
+"WPtouch posts."
+msgstr ""
+"Introudïu el vostre usuari de Google AdSense si voleu incloure publicitat "
+"mòbil als articles de WPtouch."
+
+#: html/ads-stats-area.php:10
+msgid "Make sure to include the 'pub-' part of your ID string."
+msgstr "Asegureu-vos d'incloure la part 'pub-' de la vostra cadena d'usuari."
+
+#: html/ads-stats-area.php:12
+msgid "Stats &amp; Custom Code"
+msgstr "Estadístiques i Codi Personalitzat"
+
+#: html/ads-stats-area.php:13
+msgid "If you'd like to capture traffic statistics "
+msgstr "Si voleu capturar estadístiques de trànsit"
+
+#: html/ads-stats-area.php:13
+msgid "(Google Analytics, MINT, etc.)"
+msgstr "(Google Analytics, MINT, etc.)"
+
+#: html/ads-stats-area.php:14
+msgid "Enter the code snippet(s) for your statistics tracking."
+msgstr ""
+"Introduïu el(s) snippet(s) de codi pel seguiment de les vostres "
+"estadístiques."
+
+#: html/ads-stats-area.php:14
+msgid "You can also enter custom CSS &amp; other HTML code."
+msgstr "També podeu introduir codi CSS i HTML."
+
+#: html/ads-stats-area.php:16 html/advanced-area.php:22
+#: html/advanced-area.php:31 html/advanced-area.php:40
+#: html/advanced-area.php:49 html/advanced-area.php:60
+#: html/advanced-area.php:68 html/advanced-area.php:76
+#: html/advanced-area.php:86 html/advanced-area.php:100
+#: html/advanced-area.php:109 html/general-settings-area.php:100
+#: html/page-area.php:31 html/push-area.php:17 html/push-area.php:49
+msgid "More Info"
+msgstr "Més informació"
+
+#: html/ads-stats-area.php:17
+msgid ""
+"You may enter a custom css file link easily. Simply add the full link to the "
+"css file like this:"
+msgstr ""
+"Podeu introduir un enllaç a un arxiu css propi facilment. Simplement afegiu "
+"l'enllaç complet a l'arxiu css així:"
+
+#: html/ads-stats-area.php:18
+msgid ""
+"<code>&lt;link rel=&quot;stylesheet&quot; src=&quot;http://path-to-my-css-"
+"file&quot; type=&quot;text/css&quot; media=&quot;screen&quot; /&gt;</code>"
+msgstr ""
+"<code>&lt;link rel=&quot;stylesheet&quot; src=&quot;http://ruta-al-meu-arxiu-"
+"css&quot; type=&quot;text/css&quot; media=&quot;screen&quot; /&gt;</code>"
+
+#: html/ads-stats-area.php:25
+msgid "Google AdSense ID"
+msgstr "Usuari de Google AdSense"
+
+#: html/ads-stats-area.php:26
+msgid "Google AdSense Channel"
+msgstr "Canal de Google AdSense"
+
+#: html/advanced-area.php:5
+msgid "Advanced Options"
+msgstr "Opcions Avançades"
+
+#: html/advanced-area.php:8
+msgid ""
+"Choose to enable/disable advanced features &amp; options available for "
+"WPtouch."
+msgstr ""
+"Escolliu habilitar/deshabilitar característiques avançades i opcions "
+"disponibles per a WPtouch."
+
+#: html/advanced-area.php:9
+msgid ""
+"* WPtouch Restricted Mode attempts to fix issues where other plugins load "
+"scripts which interfere with WPtouch CSS and JavaScript."
+msgstr ""
+"* El Mode Restringit de WPtouch intenta solucionar problemes on altres "
+"plugins carreguen scripts que interfereixen amb el CSS i el JavaScript de "
+"WPtouch."
+
+#: html/advanced-area.php:11
+msgid "Custom User-Agents"
+msgstr "User-Agents Personalitzats"
+
+#: html/advanced-area.php:12
+msgid ""
+"Enter a comma-separated list of user-agents to enable WPtouch for a device "
+"that isn't currently officially supported."
+msgstr ""
+"Introudïu una llista d'User-Agents separats per comes per activar WPtouch a "
+"dispositius als quals encara no es dóna suport oficialment."
+
+#: html/advanced-area.php:13
+#, php-format
+msgid "The currently enabled user-agents are: <em class='supported'>%s</em>"
+msgstr "Els user-agent activats actualment són: <em class='supported'>%s</em>"
+
+#: html/advanced-area.php:20
+msgid "Enable Categories tab in the header"
+msgstr "Activa la pestanya de Categories a la capçalera"
+
+#: html/advanced-area.php:23
+msgid "This will add a 'Categories' tab item in the WPtouch drop-down."
+msgstr "Això afegirà l'element 'Categories' al menú desplegable de WPtouch."
+
+#: html/advanced-area.php:24
+msgid "It will display a list of your popular categories."
+msgstr "Mostrarà una llista de les categories més populars."
+
+#: html/advanced-area.php:29
+msgid "Enable Tags tab in the header"
+msgstr "Activa la pestanya de Etiquetes a la capçalera"
+
+#: html/advanced-area.php:32
+msgid "This will add a 'Tags' tab item in the WPtouch drop-down."
+msgstr "Això afegirà l'element 'Etiquetes' al menú desplegable de WPtouch."
+
+#: html/advanced-area.php:33
+msgid "It will display a list of your popular tags."
+msgstr "Mostrarà una llista de les categories més populars."
+
+#: html/advanced-area.php:38
+msgid "Enable Search link in the header"
+msgstr "Activa l'enllaç de Cerca a la capçalera"
+
+#: html/advanced-area.php:41
+msgid "This will add a 'Search' item in the WPtouch sub header."
+msgstr "Això afegirà l'element 'Cerca' a sota de la capçalera de WPtouch."
+
+#: html/advanced-area.php:42
+msgid ""
+"It will display an overlay on the title area allowing users to search your "
+"website."
+msgstr ""
+"Mostrarà una superposició a la zona del títol que permetrà als usuaris "
+"cercar a la vostra web."
+
+#: html/advanced-area.php:47
+msgid "Enable Login/My Account tab in the header"
+msgstr "Activa la pestanya Entra/El meu compte a la capçalera"
+
+#: html/advanced-area.php:50
+msgid ""
+"This will add a 'Login' tab in the WPtouch sub header beside the Tags and "
+"Categories tabs if they are also enabled."
+msgstr ""
+"Això afegirà la pestanya 'Entra' a sota la capçalera de WPtouch al costat de "
+"les d'Etiquetes i Categories si també s'han activat."
+
+#: html/advanced-area.php:51
+msgid ""
+"It will display a username/password drop-down, allowing users to login plus "
+"be automatically re-directed back to the page they logged in from without "
+"seeing the WP admin."
+msgstr ""
+"Mostrarà un menú desplegable d'Usuari/Contrasenya que permetrà als usuaris "
+"identificar-se i ser automàticament redirigits a la pàgina des d'on s'han "
+"identificat sense veure l'àrea d'administració de WP."
+
+#: html/advanced-area.php:52
+msgid ""
+"Once logged in, a new 'My Account' button will appear. The 'My Account' "
+"button shows useful links depending on the type of account (subscriber, "
+"admin, etc.)."
+msgstr ""
+"Un cop idenfiticats, apareixerà el botó \"El meu compte\". Aquest botó "
+"mostrarà diferents enllaços útils depenent del tipus de compte (subscriptor, "
+"administrador, etc.)."
+
+#: html/advanced-area.php:53
+msgid ""
+"NOTE: The Account tab/links will always appear if you have enabled "
+"registration on your site or require users to login for comments."
+msgstr ""
+"NOTA: Els enllaços/pestanyes al Compte apareixeran sempre si teniu habilitat "
+"el registre a la vostra web o si es requereix que els usuaris s'identifiquin "
+"per fer comentaris."
+
+#: html/advanced-area.php:58
+msgid ""
+"Display Upcoming Dates link in the header (requires <a href='http://gigpress."
+"com/' target='_blank'>GigPress 2.0.3</a> or higher)"
+msgstr ""
+"Mostra l'enllaç Properes Dates a la capçalera (requereix <a href='http://"
+"gigpress.com/' target='_blank'>GigPress 2.0.3</a> o superior)"
+
+#: html/advanced-area.php:61
+msgid ""
+"When this option is checked and the GigPress plugin is installed, a list of "
+"your Upcoming Shows will be viewable from a drop-down in the WPtouch header."
+msgstr ""
+"Quan aquesta opció està activada i el plugin GigPress està instal·lat, es "
+"podrà visualitzar una llista dels Propers Shows des d'un menú desplegable a "
+"la capçalera de WPtouch."
+
+#: html/advanced-area.php:66
+msgid ""
+"Display Twitter link in the header (requires <a href='http://www."
+"bravenewcode.com/wordtwit/' target='_blank'>WordTwit 2.3.3</a> or higher)"
+msgstr ""
+"Mostra un enllaç a Twitter a la capçalera (requereix <a href='http://www."
+"bravenewcode.com/wordtwit/' target='_blank'>WordTwit 2.3.3</a> o superior)"
+
+#: html/advanced-area.php:69
+msgid ""
+"When this option is checked and the WordTwit plugin is installed, a list of "
+"your Tweets will be viewable from a drop-down in the WPtouch header."
+msgstr ""
+"Quan aquesta opció està activada i el pluguin WordTwit està instal·lat, es "
+"podrà visualitzar una llista dels vostres Tweets des d'un menú desplegable a "
+"la capçalera de WPtouch."
+
+#: html/advanced-area.php:74
+msgid "Enable comments on posts"
+msgstr "Activa comentaris als articles"
+
+#: html/advanced-area.php:77
+msgid ""
+"If unchecked, this will hide all commenting features on posts and blog "
+"listings."
+msgstr ""
+"Si es desactiva, ocultarà tot el sistema de comentaris als articles i "
+"llistats de blogs."
+
+#: html/advanced-area.php:84
+msgid "Enable comments on pages"
+msgstr "Activa comentaris a les pàgines"
+
+#: html/advanced-area.php:87
+msgid ""
+"This will add the comment form to all pages with 'Allow Comments' checked in "
+"your WordPress admin."
+msgstr ""
+"Això afegirà el formulari de comentaris a totes les pàgines que tinguin "
+"activada l'opció 'Permetre comentaris' a l'àrea d'administració de WordPress."
+
+#: html/advanced-area.php:93
+msgid "Enable gravatars in comments"
+msgstr "Activa gravatars als comentaris"
+
+#: html/advanced-area.php:98
+#, php-format
+msgid "1%sst%s visit mobile users will see desktop theme"
+msgstr "A la 1%sa%s visita els usuaris de mòbils veuran el tema d'escriptori"
+
+#: html/advanced-area.php:101
+msgid ""
+"When this option is checked, users will see your regular site theme first, "
+"and have the option in your footer to switch to the WPtouch mobile view."
+msgstr ""
+"Quan aquesta opció està activada, els usuaris veuran primer el tema normal "
+"de la web, i tindran l'opció de canviar al tema de WPtouch per mòbils al peu "
+"de pàgina."
+
+#: html/advanced-area.php:102
+msgid ""
+"They'll be able to change back and forth either way. Make sure you have the "
+"wp_footer(); function call in your regular theme's footer.php file for the "
+"switch link to work properly."
+msgstr ""
+"Sempre podran tornar a la vista normal i a la inversa. Assegureu-vos que el "
+"vostre tema normal fa una crida a la funció wp_footer(); des de l'arxiu "
+"footer.php per a que l'enllaç per canviar de tema funcioni correctament."
+
+#: html/advanced-area.php:107
+msgid "Enable WPtouch Restricted Mode"
+msgstr "Activa el Mode Restringit de WPtouch"
+
+#: html/advanced-area.php:110
+msgid ""
+"Disallow other plugins from loading into scripts into WPtouch's header and "
+"footer."
+msgstr ""
+"No permetis que altres plugins carreguin els seus scripts a la capçalera o "
+"peu de pàgina de WPtouch."
+
+#: html/advanced-area.php:111
+msgid "Sometimes fixes incompatibilities and speeds up WPtouch."
+msgstr "De vegades soluciona incompatibilitats i accelera el WPtouch."
+
+#: html/advanced-area.php:112
+msgid ""
+"Some plugins load conflicting javascript, extra CSS style sheets, and other "
+"functional code into your theme to accomplish what they add to your site. As "
+"WPtouch works complete on its own without any other plugin installed, in "
+"some cases (where you have several plugins or find something doesn't work "
+"right with WPtouch) you may want to enable Restricted Mode to ensure that "
+"WPtouch works properly, and loads quickly for mobile users."
+msgstr ""
+"Alguns plugins carreguen codi javascript conflictiu, fulles extra d'estils "
+"CSS i altres codis funcionals en el vostre tema per fer funcionar "
+"correctament el que afegeixen a la vostra web. Com que WPtouch funciona "
+"completament pel seu compte sense altres plugins instal·lats, en alguns "
+"casos (on hi ha diversos plugins o es troba alguna cosa que no funciona bé "
+"amb WPtouch), podeu activar el Mode Restringit per assegurar-vos que WPtouch "
+"funciona correctament i es carrega ràpidament per usuaris mòbils."
+
+#: html/advanced-area.php:117
+msgid "Custom user-agents"
+msgstr "User-agents personalitzats"
+
+#: html/advanced-area.php:119
+msgid ""
+"After changing the user-agents, please visit the WP Super Cache admin page "
+"and update your rewrite rules."
+msgstr ""
+"Després de canviar els user-agents, visiteu la pàgina d'administració de WP "
+"Super Cache i actualitzeu les vostres 'rewrite rules'."
+
+#: html/general-settings-area.php:5
+msgid "General Settings"
+msgstr "Paràmetres Generals"
+
+#: html/general-settings-area.php:8
+msgid "Regionalization Settings"
+msgstr "Paràmetres de Regionalització"
+
+#: html/general-settings-area.php:9
+msgid ""
+"Select the language you would like WPtouch to appear in.  Custom language ."
+"mo files should be placed in wp-content/wptouch/lang."
+msgstr ""
+"Selecciona l'idioma amb el qual vols que aparegui WPtouch.  Els arxius .mo "
+"d'idiomes personalitzats s'han d'ubicar a wp-content/wptouch/lang."
+
+#: html/general-settings-area.php:11
+msgid "Home Page Re-Direction"
+msgstr "Redirecció de la Pàgina d'Inici"
+
+#: html/general-settings-area.php:12
+#, php-format
+msgid ""
+"WPtouch by default follows your %sWordPress &raquo; Reading Options%s. You "
+"can also set a different one for WPtouch."
+msgstr ""
+"Per defecte WPtouch segueix les vostres %sWordPress &raquo; Opcions de "
+"Lectura%s. Podeu establir-ne de diferents per WPtouch."
+
+#: html/general-settings-area.php:14
+msgid "Site Title"
+msgstr "Títol de la Web"
+
+#: html/general-settings-area.php:15
+msgid ""
+"You can shorten your site title here so it won't be truncated by WPtouch."
+msgstr "Podeu escurçar el títol de la web de manera que WPtouch no el talli."
+
+#: html/general-settings-area.php:17
+msgid "Excluded Categories"
+msgstr "Categories Excloses"
+
+#: html/general-settings-area.php:18
+msgid ""
+"Choose categories you want excluded from the main post listings in WPtouch."
+msgstr ""
+"Trieu les categories que voleu excloure del llistat principal d'articles a "
+"WPtouch."
+
+#: html/general-settings-area.php:20
+msgid "Text Justification Options"
+msgstr "Opcions de Justificació de Text"
+
+#: html/general-settings-area.php:21
+msgid "Set the alignment for text."
+msgstr "Trieu l'aliniació del text."
+
+#: html/general-settings-area.php:24
+msgid "Post Listings Options"
+msgstr "Opcions del Llistat d'Articles"
+
+#: html/general-settings-area.php:25
+msgid ""
+"Choose between calendar Icons, post thumbnails (WP 2.9) or none for your "
+"post listings."
+msgstr ""
+"Trieu entre les icones de calendari, les miniatures d'articles (WP 2.9) o "
+"cap icona pel vostre llistat d'articles."
+
+#: html/general-settings-area.php:26
+msgid ""
+"Select which meta items are shown below titles on main, search, &amp; "
+"archives pages."
+msgstr ""
+"Seleccioneu quins meta-elements es mostren sota els títols a la pàgina "
+"principal, cerca i pàgines d'arxius."
+
+#: html/general-settings-area.php:27
+msgid "Also, choose if excerpts are shown/hidden (default is hidden)."
+msgstr ""
+"Trieu també si es mostren o s'oculten els extractes (per defecte s'oculten)."
+
+#: html/general-settings-area.php:29
+msgid "Footer Message"
+msgstr "Missatge al Peu de Pàgina"
+
+#: html/general-settings-area.php:30
+msgid "Customize the default footer message shown in WPtouch here."
+msgstr "Personalitzeu aquí el missatge mostrat al Peu de Pàgina de WPtouch."
+
+#: html/general-settings-area.php:34
+msgid "WPtouch Language"
+msgstr "Idioma de WPtouch"
+
+#: html/general-settings-area.php:38
+msgid "Automatically detected"
+msgstr "Detectat automàticament"
+
+#: html/general-settings-area.php:56
+msgid "WPtouch Home Page"
+msgstr "Pàgina Principal de WPtouch"
+
+#: html/general-settings-area.php:61 html/page-area.php:63
+msgid "You have no pages yet. Create some first!"
+msgstr "No teniu cap pàgina encara. Creeu-ne alguna abans!"
+
+#: html/general-settings-area.php:67
+msgid "Site title text"
+msgstr "Text del títol de la pàgina web."
+
+#: html/general-settings-area.php:73
+msgid "Comma list of Category IDs, eg: 1,2,3"
+msgstr "Llista separada per comes d'IDs de Categoria, per exemple: 1,2,3"
+
+#: html/general-settings-area.php:74
+msgid "Comma list of Tag IDs, eg: 1,2,3"
+msgstr "Llista separada per comes d'IDs d'Etiqueta, per exemple: 1,2,3"
+
+#: html/general-settings-area.php:82
+msgid "Left"
+msgstr "Esquerra"
+
+#: html/general-settings-area.php:83
+msgid "Full"
+msgstr "Completa"
+
+#: html/general-settings-area.php:85
+msgid "Font justification"
+msgstr "Justificació de font"
+
+#: html/general-settings-area.php:93
+msgid "Calendar Icons"
+msgstr "Icones de Calendari"
+
+#: html/general-settings-area.php:94
+msgid "Post Thumbnails / Featured Images"
+msgstr "Miniatures d'Article / Imatges Destacades"
+
+#: html/general-settings-area.php:95
+msgid "Post Thumbnails / Featured Images (Random)"
+msgstr "Miniatures d'Article / Imatges Destacades (Aleatori)"
+
+#: html/general-settings-area.php:96
+msgid "No Icon or Thumbnail"
+msgstr "Sense Icona o Miniatura"
+
+#: html/general-settings-area.php:98
+msgid "Post Listings Display"
+msgstr "Visualització del Llistat d'Articles"
+
+#: html/general-settings-area.php:98
+msgid "Thumbnails Requires WordPress 2.9+"
+msgstr "Les Miniatures Requereixen WordPress 2.9+"
+
+#: html/general-settings-area.php:101
+msgid ""
+"This will change the display of blog and post listings between Calendar "
+"Icons view and Post Thumbnails view."
+msgstr ""
+"Això canviarà l'aparença del llistat de blogs i articles entre Icones de "
+"Calendari i Miniatures d'Artícle."
+
+#: html/general-settings-area.php:102
+msgid ""
+"The <em>Post Thumbnails w/ Random</em> option will fill missing post "
+"thumbnails with random abstract images. (WP 2.9+)"
+msgstr ""
+"L'opció de <em>Miniatures d'Artícle (Aleatori)</em> omplirà les miniatures "
+"que faltin amb imatges abstractes a l'atzar. (WP 2.9+)"
+
+#: html/general-settings-area.php:109
+msgid "Enable Truncated Titles"
+msgstr "Activa Títols Tallats"
+
+#: html/general-settings-area.php:109
+msgid "Will use ellipses when titles are too long instead of wrapping them"
+msgstr ""
+"Utilitzarà elipsis quan els títols siguin massa llargs en lloc de crear "
+"noves línies."
+
+#: html/general-settings-area.php:113
+msgid "Show Author's Name"
+msgstr "Mostra el Nom de l'Autor"
+
+#: html/general-settings-area.php:117
+msgid "Show Categories"
+msgstr "Mostra les Categories"
+
+#: html/general-settings-area.php:121
+msgid "Show Tags"
+msgstr "Mostra les Etiquetes"
+
+#: html/general-settings-area.php:125
+msgid "Hide Excerpts"
+msgstr "Oculta els Extractes"
+
+#: html/general-settings-area.php:129
+msgid "Footer message"
+msgstr "Missatge al Peu de Pàgina"
+
+#: html/head-area.php:13
+#, php-format
+msgid "%sGet WPtouch Pro%s"
+msgstr "%sAconsegueix WPtouch Pro%s"
+
+#: html/head-area.php:14
+#, php-format
+msgid "%sJoin our FREE WPtouch Pro Affiliate Program%s"
+msgstr "%sApunta't al nostre Programa d'Afiliats de WPtouch Pro GRATUÏT%s"
+
+#: html/head-area.php:15
+#, php-format
+msgid "%sFollow Us on Twitter%s"
+msgstr "%sSegueix-nos a Twitter%s"
+
+#: html/head-area.php:24
+msgid "WPtouch Wire"
+msgstr "WPtouch Wire"
+
+#: html/head-area.php:33
+msgid "Find Out More &rsaquo;&rsaquo;"
+msgstr "Descobreix més coses &rsaquo;&rsaquo;"
+
+#: html/icon-area.php:24
+msgid "Default &amp; Custom Icon Pool"
+msgstr "Catàleg per Defecte i Personalizat"
+
+#: html/icon-area.php:27
+msgid "Adding Icons"
+msgstr "Afegiu Icones"
+
+#: html/icon-area.php:28
+msgid ""
+"To add icons to the pool, simply upload a .png, .jpeg or .gif image from "
+"your computer."
+msgstr ""
+"Per afegir icones al catàleg, només cal que carregueu una imatge en format ."
+"png, .jpeg o .gif des del vostre ordinador."
+
+#: html/icon-area.php:30
+#, php-format
+msgid "Default icons generously provided by %sMarcelo Marfil%s."
+msgstr "Icones per defecte proporcionades generosament per %sMarcelo Marfil%s."
+
+#: html/icon-area.php:32
+msgid "Logo/Bookmark Icons"
+msgstr "Icones de Logotip/Adreça d'Interès"
+
+#: html/icon-area.php:33
+msgid ""
+"If you're adding a logo icon, the best dimensions for it are 59x60px (png) "
+"when used as a bookmark icon."
+msgstr ""
+"Si esteu afegint una icono de logotip, si és utilitzada com a icona d'adreça "
+"d'interès, les millors dimensions són 59x60px (png)."
+
+#: html/icon-area.php:34
+#, php-format
+msgid "Need help? You can use %sthis easy online icon generator%s to make one."
+msgstr ""
+"Necessiteu ajuda? Podeu utilitzar %saquest senzill generador d'icones en "
+"línia%s per crear-ne un."
+
+#: html/icon-area.php:35
+msgid ""
+"These files will be stored in this folder we create: .../wp-content/uploads/"
+"wptouch/custom-icons"
+msgstr ""
+"Aquests arxius seran desats en aquesta carpeta: .../wp-content/uploads/"
+"wptouch/custom-icons"
+
+#: html/icon-area.php:36
+msgid ""
+"If an upload fails (usually it's a permission problem) check your wp-content "
+"path settings in WordPress' Miscellaneous Settings, or create the folder "
+"yourself using FTP and try again."
+msgstr ""
+"Si una càrrega falla (normalment per un problema de permisos) comproveu la "
+"ruta de wp-content als paràmetres del WordPress, o creeu una carpeta "
+"utilitzant FTP i torneu-ho a provar."
+
+#: html/icon-area.php:38
+msgid "Upload Icon"
+msgstr "Carrega la Icona"
+
+#: html/icon-area.php:42
+msgid "Uploading..."
+msgstr "Carregant..."
+
+#: html/page-area.php:5
+msgid "Logo Icon // Menu Items &amp; Pages Icons"
+msgstr "Icona de Logotip // Elements del Menú i Icones de Pàgina"
+
+#: html/page-area.php:8
+msgid "Logo / Home Screen Icon <br />&amp; Default Menu Items"
+msgstr ""
+"Logotip / Icona de Pantalla Principal <br />i Elements del Menú per Defecte"
+
+#: html/page-area.php:9
+#, php-format
+msgid ""
+"If you do not want your logo to have the glossy effect added to it, make "
+"sure you select %sEnable Flat Bookmark Icon%s"
+msgstr ""
+"Si no voleu que al vostre logotip se li afegeixi l'efecte brillant, "
+"assegureu-vos de seleccionar %sActiva la Icona d'Adreça d'Interès Plana%s"
+
+#: html/page-area.php:10
+msgid ""
+"Choose the logo displayed in the header (also your bookmark icon), and the "
+"pages you want included in the WPtouch drop-down menu."
+msgstr ""
+"Escolliu el logotip mostrat a la capçalera (també la icona d'adreça "
+"d'interès), i les pàgines que voleu incloure al menú desplegable de WPtouch."
+
+#: html/page-area.php:11
+msgid "Remember, only those checked will be shown."
+msgstr "Recordeu que només es mostraran les que marqueu."
+
+#: html/page-area.php:12
+msgid "Enable/Disable default items in the WPtouch site menu."
+msgstr "Activa/Desactiva els elements per defecte en el menú de WPtouch."
+
+#: html/page-area.php:14
+msgid "Pages + Icons"
+msgstr "Pàgines + Icones"
+
+#: html/page-area.php:15
+msgid ""
+"Next, select the icons from the lists that you want to pair with each page "
+"menu item."
+msgstr ""
+"Ara seleccioneu les icones de la llista que voleu aparellar amb cada element "
+"del menú."
+
+#: html/page-area.php:16
+msgid ""
+"You can also decide if pages are listed by the page order (ID) in WordPress, "
+"or by name (default)."
+msgstr ""
+"També podeu decidir si les pàgines es mostraran ordenades com al WordPress "
+"(per ID), o per nom (per defecte)."
+
+#: html/page-area.php:24
+msgid "Logo &amp; Home Screen Bookmark Icon"
+msgstr "Logotip i Icona d'Adreça d'Interès de la Pantalla Principal"
+
+#: html/page-area.php:29
+msgid "Enable Flat Bookmark Icon"
+msgstr "Activa la Icona d'Adreça d'Interès Plana"
+
+#: html/page-area.php:32
+msgid ""
+"The default applies for iPhone/iPod touch applies a glossy effect to the "
+"home-screen bookmark/logo icon you select."
+msgstr ""
+"Per defecte s'aplica un efecte brillant (a l'estil iPhone/iPod) a la icona "
+"d'adreça d'interès/logotip que escolliu."
+
+#: html/page-area.php:33
+msgid ""
+"When checked your icon will not have the glossy effect automatically applied "
+"to it."
+msgstr ""
+"Si està marcat no s'aplicarà automàticament aquest efecte brillant a la "
+"vostra icona."
+
+#: html/page-area.php:36
+msgid "Enable Home Menu Item"
+msgstr "Activa l'Element de Pàgina Principal"
+
+#: html/page-area.php:37
+msgid "Enable RSS Menu Item"
+msgstr "Activa l'Element de Menú de RSS"
+
+#: html/page-area.php:38
+msgid "Enable Email Menu Item"
+msgstr "Activa l'Element de Menú d'Email"
+
+#: html/page-area.php:38
+msgid "Uses default WordPress admin e-mail"
+msgstr ""
+"Utilitza el correu electrònic de l'administrador de WordPress per defecte"
+
+#: html/page-area.php:43
+msgid "By Name"
+msgstr "Per nom"
+
+#: html/page-area.php:44
+msgid "By Page ID"
+msgstr "Per ID de pàgina"
+
+#: html/page-area.php:46
+msgid "Menu List Sort Order"
+msgstr "Ordre de la Llista del Menú"
+
+#: html/plugin-compat-area.php:7
+msgid "Plugin Support &amp; Compatibility"
+msgstr "Assistència i Compatibilitat de Plugin"
+
+#: html/plugin-compat-area.php:13
+msgid "WordPress version: "
+msgstr "Versió del WordPress: "
+
+#: html/plugin-compat-area.php:16
+#, php-format
+msgid "WPtouch %s support: "
+msgstr "Assistència %s WPtouch: "
+
+#: html/plugin-compat-area.php:18
+#, php-format
+msgid "%sUnverified%s"
+msgstr "%sNo verificat%s"
+
+#: html/plugin-compat-area.php:20
+#, php-format
+msgid "%sSupported%s"
+msgstr "%sCompatible%s"
+
+#: html/plugin-compat-area.php:22
+#, php-format
+msgid "%sUnsupported. Upgrade Required.%s"
+msgstr "%sIncompatible. Es requereix una actualització.%s"
+
+#: html/plugin-compat-area.php:27
+msgid "Here you'll find information on plugin compatibility."
+msgstr "Aquí trobareu informació sobre compatibilitat del plugin."
+
+#: html/plugin-compat-area.php:32
+msgid "Known Plugin Support &amp; Conflicts"
+msgstr "Assistència i Conflictes de Plugins Coneguts"
+
+#: html/plugin-compat-area.php:36
+#, php-format
+msgid "%sPeter's Custom Anti-Spam%s is fully supported."
+msgstr "%sPeter's Custom Anti-Spam%s és totalment compatible."
+
+#: html/plugin-compat-area.php:41
+#, php-format
+msgid "%sWP Spam Free%s is fully supported."
+msgstr "%sWP Spam Free%s és totalment compatible."
+
+#: html/plugin-compat-area.php:46
+#, php-format
+msgid ""
+"%sFlickrRSS%s: Your photos will automatically show on a page with the slug "
+"\"photos\" if you have it. Fully supported."
+msgstr ""
+"%sFlickrRSS%s: Les vostres fotos es mostraran automàticament en una pàgina "
+"amb les \"photos\" 'slug' si en tens. Totalment compatible."
+
+#: html/plugin-compat-area.php:51
+#, php-format
+msgid ""
+"WP Cache is supported, but requires configuration. %sFollow this video "
+"tutorial%s for more information."
+msgstr ""
+"WP Cache és compatible, però necessita configurar-se. %s Seguiu aquest video "
+"tutorial%s per més informació."
+
+#: html/plugin-compat-area.php:56
+#, php-format
+msgid ""
+"WP Super Cache is supported, but requires configuration. %sFollow this video "
+"tutorial%s for more information."
+msgstr ""
+"WP Super Cache és compatible, però necessita configurar-se. %s Seguiu aquest "
+"video tutorial%s per més informació."
+
+#: html/plugin-compat-area.php:61
+#, php-format
+msgid ""
+"W3 Total Cache is supported, but requires configuration. %sFollow this video "
+"tutorial%s for more information."
+msgstr ""
+"W3 Total Cache és compatible, però necessita configurar-se. %s Seguiu aquest "
+"video tutorial%s per més informació."
+
+#: html/plugin-compat-area.php:66
+#, php-format
+msgid ""
+"%sWP CSS%s is supported, but does\tnot compress WPtouch's CSS. WPtouch files "
+"are pre-optimized for mobile devices already."
+msgstr ""
+"%sWP CSS%s és compatible, però no comprimeix els CSS de WPtouch. Els arxius "
+"de WPtouch ja estan pre-optimitzats per dispositius mòbils."
+
+#: html/plugin-compat-area.php:71
+#, php-format
+msgid ""
+"%sShare This%s is supported, but requires the WPtouch setting \"Enable "
+"Restrictive Mode\" turned on to work properly."
+msgstr ""
+"%sShare This%s és compatible, però requereix que el paràmetre \"Activa el "
+"Mode Restringit\" de WPtouch estigui activat per funcionar correctament."
+
+#: html/plugin-compat-area.php:76
+#, php-format
+msgid ""
+"WordPress Admin Bar requires additional configuration to work with WPtouch. "
+"%sFollow this comment%s on the developer's official site."
+msgstr ""
+"WordPress Admin Bar requereix configuració addicional per funcionar amb "
+"WPtouch. %sSeguiu aquest comentari%s a la web oficial del seu autor."
+
+#: html/plugin-compat-area.php:81
+#, php-format
+msgid "%sWP Simple Captcha%s is not currently supported."
+msgstr "%sWP Simple Captcha%s no és compatible actualment."
+
+#: html/plugin-compat-area.php:86
+#, php-format
+msgid "%sNextGEN Gallery%s is not currently supported."
+msgstr "%sNextGEN Gallery%s no és compatible actualment."
+
+#: html/plugin-compat-area.php:91
+#, php-format
+msgid ""
+"%sYet another ajax paged comments%s (YAAPC) is not currently supported. "
+"WPtouch uses its own ajaxed comments. WPtouch Pro supports WP 2.7+ comments "
+"out-of-the-box."
+msgstr ""
+"%sYet another ajax paged comments%s (YAAPC) no és compatible actualment. "
+"WPtouch utilitza els seu propi codi AJAX pels comentaris. WPtouch Pro és "
+"compatible amb els comentaris de WP 2.7+ directament."
+
+#: html/plugin-compat-area.php:96
+#, php-format
+msgid ""
+"%sLightview Plus%s is not currently supported. Images may not open in a  "
+"viewer or separate page."
+msgstr ""
+"%sLightview Plus%s no és compatible actualment. Les imatges poden no obrir-"
+"se en el visualitzador o en una pàgina per separat."
+
+#: html/push-area.php:4
+msgid "Push Notification Options"
+msgstr "Opcions de Notificacions Push"
+
+#: html/push-area.php:7
+#, php-format
+msgid ""
+"Here you can configure WPtouch to push selected notifications through your "
+"%sProwl%s account to your iPhone, iPod touch and Growl-enabled Mac or PC."
+msgstr ""
+"Aquí podeu configurar el WPtouch per enviar les notificacions que "
+"seleccioneu a través del vostre compte %sProwl%s al vostre iPhone, iPod "
+"Touch i Mac o PC amb Growl."
+
+#: html/push-area.php:8
+#, php-format
+msgid ""
+"%sMake sure you generate a Prowl API key to use here%s otherwise no "
+"notifications will be pushed to you."
+msgstr ""
+"%sAssegureu-vos de generar una clau API de Prowl per utilitzar aquí%s o no "
+"s'us enviaran notificacions."
+
+#: html/push-area.php:15
+msgid "Prowl API Key"
+msgstr "Clau API de Prowl"
+
+#: html/push-area.php:15
+#, php-format
+msgid "%sCreate a key now%s"
+msgstr "%sCreeu una clau ara%s"
+
+#: html/push-area.php:18
+msgid ""
+"In order to enable Prowl notifications, you must create a Prowl account, and "
+"download/configure the Prowl application for iPhone."
+msgstr ""
+"Per activar les notificacions Prwol, heu de crear-vos un compte Prowl i "
+"descarregar/configurar l'aplicació Prowl per a iPhone."
+
+#: html/push-area.php:19
+msgid ""
+"Next, visit the Prowl website and generate your API key, which we use to "
+"connect securely and send your notifications."
+msgstr ""
+"Ara, visiteu la web de Prwol i genereu la vostra clau API, que utilitzarem "
+"per connectar de forma segura i enviar-vos notificacions."
+
+#: html/push-area.php:21
+#, php-format
+msgid "%sVisit the Prowl Website%s"
+msgstr "%sVisiteu la web de Prowl%s"
+
+#: html/push-area.php:21
+#, php-format
+msgid "%sVisit iTunes to Download Prowl%s"
+msgstr "%sVisiteu iTunes per descarregar Prowl%s"
+
+#: html/push-area.php:25
+msgid "Your Prowl API key has been verified."
+msgstr "La vostra clau API de Prowl s'ha verificat correctament."
+
+#: html/push-area.php:28
+msgid "Sorry, your Prowl API key is not verified."
+msgstr "Ho sentim, la vostra clau API de Prowl no s'ha pogut verificar."
+
+#: html/push-area.php:29
+msgid ""
+"Please check your key and make sure there are no spaces or extra characters."
+msgstr ""
+"Comproveu la vostra clau i assegureu-vos que no té espais ni caràcters de "
+"més."
+
+#: html/push-area.php:39
+msgid "Notify me of new comments &amp; pingbacks/tracksbacks"
+msgstr "Notifica'm de nous comentaris i pingbacks/trackbacks"
+
+#: html/push-area.php:43
+msgid "Notify me of new account registrations"
+msgstr "Notifica'm de nous comptes registrats"
+
+#: html/push-area.php:47
+msgid "Allow users to send me direct messages"
+msgstr "Permet als usuaris enviar-me missatges directes"
+
+#: html/push-area.php:50
+msgid ""
+"This enables a new link to a drop-down in the submenu bar for WPtouch "
+"('Message Me')."
+msgstr ""
+"Això activa un nou enllaç en el menú desplegable superior de WPtouch "
+"('Envia'm un Missatge')."
+
+#: html/push-area.php:51
+msgid ""
+"When opened, a form is shown for users to fill in. The name, e-mail address, "
+"and message area is shown. Thier IP will also be sent to you, in case you "
+"want to ban it in the WordPress admin."
+msgstr ""
+"Quan s'obre, es mostra un formulari als usuaris per omplir el nom, el correu "
+"electrònic i un missatge. També s'us enviarà la seva IP, per si voleu "
+"bloquejar-lo a l'àrea d'administració de WordPress."
+
+#: html/push-area.php:55
+#, php-format
+msgid ""
+"%sCURL is required%s on your webserver to use Push capabilities in WPtouch."
+msgstr ""
+"%sEs necessita CURL%s al vostre servidor web per utilitzar les possibilitats "
+"Push a WPtouch."
+
+#: html/style-area.php:5
+msgid "Style &amp; Color Options"
+msgstr "Opcions d'Estil i Color"
+
+#: html/style-area.php:8
+msgid "Here you can customize some of the more visible features of WPtouch."
+msgstr ""
+"Aquí podeu personalitzar algunes de les característiques més visibles de "
+"WPtouch."
+
+#: html/style-area.php:17
+msgid "The default WPtouch theme emulates a native iPhone application."
+msgstr "El tema per defecte de WPtouch emula una aplicació nativa d'iPhone."
+
+#: html/style-area.php:21
+msgid "Classic"
+msgstr "Clàssic"
+
+#: html/style-area.php:24
+msgid "Horizontal Grey"
+msgstr "Gris Horitzontal"
+
+#: html/style-area.php:27
+msgid "Diagonal Grey"
+msgstr "Gris Diagonal"
+
+#: html/style-area.php:30
+msgid "Skated Concrete"
+msgstr "'Skated Concrete'"
+
+#: html/style-area.php:33
+msgid "Argyle Tie"
+msgstr "'Argyle Tie'"
+
+#: html/style-area.php:36
+msgid "Thatches"
+msgstr "Palles"
+
+#: html/style-area.php:39
+msgid "Background"
+msgstr "Fons"
+
+#: html/style-area.php:43
+msgid "Helvetica Neue"
+msgstr "Helvetica Neue"
+
+#: html/style-area.php:46
+msgid "Helvetica"
+msgstr "Helvetica"
+
+#: html/style-area.php:49
+msgid "Thonburi"
+msgstr "Thonburi"
+
+#: html/style-area.php:52
+msgid "Georgia"
+msgstr "Georgia"
+
+#: html/style-area.php:55
+msgid "Geeza Pro"
+msgstr "Geeza Pro"
+
+#: html/style-area.php:58
+msgid "Verdana"
+msgstr "Verdana"
+
+#: html/style-area.php:61
+msgid "Arial Rounded MT Bold"
+msgstr "Arial Rounded MT Bold"
+
+#: html/style-area.php:64
+msgid "Post Title H2 Font"
+msgstr "Tipus de lletra pels títols d'article (H2)"
+
+#: html/style-area.php:66
+msgid "Title text color"
+msgstr "Color del text del títol"
+
+#: html/style-area.php:67
+msgid "Header background color"
+msgstr "Color de fons de la capçalera"
+
+#: html/style-area.php:68
+msgid "Sub-header background color"
+msgstr "Color de fons de la sub-capçalera."
+
+#: html/style-area.php:69
+msgid "Site-wide links color"
+msgstr "Color del enllaços de tota la web"
+
+#: include/submit.php:7
+msgid "Nonce Failure"
+msgstr "Error momentani"
+
+#: include/submit.php:12
+msgid "Security failure.  Please log in again."
+msgstr "Error de seguretat. Torneu-vos a identificar."
+
+#: themes/core/core-functions.php:22
+#, php-format
+msgid "%sHome%s"
+msgstr "%sInici%s"
+
+#: themes/core/core-functions.php:35
+msgid "post_title"
+msgstr "títol_d'article"
+
+#: themes/core/core-functions.php:41
+#, php-format
+msgid "%sRSS Feed%s"
+msgstr "%sCanal RSS%s"
+
+#: themes/core/core-functions.php:47
+#, php-format
+msgid "%sE-Mail%s"
+msgstr "%sCorreu-e%s"
+
+#: themes/core/core-functions.php:54
+#, php-format
+msgid "%sWarning%s"
+msgstr "%sAtenció%s"
+
+#: themes/core/core-functions.php:56
+msgid "Sorry, this theme is only meant for use on touch smartphones."
+msgstr ""
+"Ho sentim, aquest tema només està pensat per utilitzar en mòbils tàctils."
+
+#: themes/core/core-functions.php:89 themes/default/index.php:130
+#: themes/default/single.php:38
+msgid "Tags"
+msgstr "Etiquetes"
+
+#: themes/core/core-functions.php:93 themes/default/index.php:129
+#: themes/default/single.php:37
+msgid "Categories"
+msgstr "Categories"
+
+#: themes/core/core-functions.php:132
+#, php-format
+msgid "Search results &rsaquo; %s"
+msgstr "Resultats de la cerca &rsaquo; %s"
+
+#: themes/core/core-functions.php:134
+#, php-format
+msgid "Categories &rsaquo; %s"
+msgstr "Categories &rsaquo; %s"
+
+#: themes/core/core-functions.php:136
+#, php-format
+msgid "Tags &rsaquo; %s"
+msgstr "Etiquetes &rsaquo; %s"
+
+#: themes/core/core-functions.php:138 themes/core/core-functions.php:140
+#: themes/core/core-functions.php:142
+#, php-format
+msgid "Archives &rsaquo; %s"
+msgstr "Arxius &rsaquo; %s"
+
+#: themes/core/core-functions.php:154
+msgid "No more entries to display."
+msgstr "No hi ha més entrades per mostrar."
+
+#: themes/core/core-functions.php:156
+msgid "No more search results to display."
+msgstr "No hi ha més resultats per mostrar."
+
+#: themes/core/core-functions.php:158
+msgid "No search results results found."
+msgstr "No s'han trobat resultats."
+
+#: themes/core/core-functions.php:158
+msgid "Try another query."
+msgstr "Proveu una altra cerca."
+
+#: themes/core/core-functions.php:161
+msgid "404 Not Found"
+msgstr "404 No s'ha Trobat."
+
+#: themes/core/core-functions.php:162
+msgid "The page or post you were looking for is missing or has been removed."
+msgstr "La pàgina o article que esteu buscant no existeix o s'ha eliminat."
+
+#: themes/core/core-functions.php:169 wptouch.php:605
+msgid "Mobile Theme"
+msgstr "Tema Mòbil"
+
+#: themes/core/core-functions.php:215
+msgid "edit"
+msgstr "edita"
+
+#: themes/core/core-functions.php:216
+msgid "del"
+msgstr "esborra"
+
+#: themes/core/core-functions.php:217
+msgid "spam"
+msgstr "brossa"
+
+#: themes/default/comments.php:7
+msgid "This post is password protected. Enter the password to view comments."
+msgstr ""
+"Aquest article està protegit amb contrasenya. Introduïu-la per veure els "
+"comentaris."
+
+#: themes/default/comments.php:18
+msgid "No Responses Yet"
+msgstr "No hi ha respostes encara"
+
+#: themes/default/comments.php:19
+msgid "1 Response"
+msgstr "1 resposta"
+
+#: themes/default/comments.php:20
+msgid "% Responses"
+msgstr "% respostes"
+
+#: themes/default/comments.php:40
+msgid "ago"
+msgstr ", fa"
+
+#: themes/default/comments.php:71
+msgid "Comments are closed."
+msgstr "Els comentaris estan tancats."
+
+#: themes/default/comments.php:81
+#, php-format
+msgid "You must %slogin</a> or %sregister</a> to comment"
+msgstr "Us heu d'%sidentificar</a> o %sregistrar-vos</a> per comentar"
+
+#: themes/default/comments.php:89
+msgid "Success! Comment added."
+msgstr "Perfecte! S'ha afegit el comentari."
+
+#: themes/default/comments.php:90
+msgid "Refresh the page to see your comment."
+msgstr "Actualitzeu la pàgina per veure el vostre comentari."
+
+#: themes/default/comments.php:91
+msgid "(If your comment requires moderation it will be added soon.)"
+msgstr "(Si el vostre comentari necessita moderació s'afegirà aviat.)"
+
+#: themes/default/comments.php:98
+msgid "Logged in as"
+msgstr "Identificat com a"
+
+#: themes/default/comments.php:102
+msgid "Leave A Comment"
+msgstr "Deixeu un comentari"
+
+#: themes/default/comments.php:105 themes/default/header.php:153
+msgid "Name"
+msgstr "Nom"
+
+#: themes/default/comments.php:110
+msgid "Mail (unpublished)"
+msgstr "Correu-e (ocult)"
+
+#: themes/default/comments.php:115
+msgid "Website"
+msgstr "Pàgina web"
+
+#: themes/default/comments.php:119
+msgid "There was an error posting your comment. Maybe it was too short?"
+msgstr ""
+"S'ha produït un error en enviar el vostre comentari. Potser era massa curt?"
+
+#: themes/default/comments.php:125
+msgid "Publish"
+msgstr "Publica"
+
+#: themes/default/comments.php:128
+msgid "Publishing..."
+msgstr "S'està publicant..."
+
+#: themes/default/footer.php:10
+msgid "Powered by"
+msgstr "Funciona amb"
+
+#: themes/default/footer.php:10
+msgid "WordPress"
+msgstr "WordPress"
+
+#: themes/default/footer.php:10
+msgid "+"
+msgstr "+"
+
+#: themes/default/functions.php:105
+msgid "mo"
+msgstr "mo"
+
+#: themes/default/functions.php:106
+msgid "wk"
+msgstr "set"
+
+#: themes/default/functions.php:107
+msgid "day"
+msgstr "dia"
+
+#: themes/default/functions.php:108
+msgid "hr"
+msgstr "h"
+
+#: themes/default/functions.php:109
+msgid "min"
+msgstr "min"
+
+#: themes/default/header.php:10
+msgid "Notice"
+msgstr "Avís"
+
+#: themes/default/header.php:11
+msgid "JavaScript for Mobile Safari is currently turned off."
+msgstr "JavaScript per a Mobile Safari actualment està desactivat."
+
+#: themes/default/header.php:12
+msgid "Turn it on in "
+msgstr "Activa'l"
+
+#: themes/default/header.php:12
+msgid "Settings &rsaquo; Safari"
+msgstr "Paràmetres &rsaquo; Safari"
+
+#: themes/default/header.php:12
+msgid " to view this website."
+msgstr " per veure aquesta web."
+
+#: themes/default/header.php:18
+msgid "Your Push Notification was sent."
+msgstr "La vostra notificació Push s'ha enviat."
+
+#: themes/default/header.php:20
+msgid "Your Push Notification cannot be delivered at this time."
+msgstr "La vostra notificació Push no s'ha pogut entregar ara mateix."
+
+#: themes/default/header.php:28
+msgid "Username"
+msgstr "Usuari"
+
+#: themes/default/header.php:29
+msgid "Password"
+msgstr "Contrasenya"
+
+#: themes/default/header.php:31 themes/default/header.php:58
+msgid "Login"
+msgstr "Entra"
+
+#: themes/default/header.php:42 themes/default/header.php:43
+msgid "Search..."
+msgstr "Cerca..."
+
+#: themes/default/header.php:53
+msgid "Menu"
+msgstr "Menú"
+
+#: themes/default/header.php:60
+msgid "My Account"
+msgstr "El Meu Compte"
+
+#: themes/default/header.php:88
+msgid "Enter your username and password<br />in the boxes above."
+msgstr "Introduïu el vostre usuari i contrasenya<br />als espais d'aquí sobre."
+
+#: themes/default/header.php:91
+msgid "Not registered yet?"
+msgstr "Encara no t'has registrat?"
+
+#: themes/default/header.php:93
+#, php-format
+msgid "You can %ssign-up here%s."
+msgstr "Podeu %sregistrar-vos aquí%s."
+
+#: themes/default/header.php:98
+msgid "Admin"
+msgstr "Admin"
+
+#: themes/default/header.php:101
+msgid "Register for this site"
+msgstr "Registreu-vos a aquesta web"
+
+#: themes/default/header.php:104
+msgid "Account Profile"
+msgstr "Perfil del compte"
+
+#: themes/default/header.php:105
+msgid "Logout"
+msgstr "Surt"
+
+#: themes/default/header.php:128
+msgid "Search"
+msgstr "Cerca"
+
+#: themes/default/header.php:132
+msgid "Message"
+msgstr "Missatge"
+
+#: themes/default/header.php:136
+msgid "Twitter"
+msgstr "Twitter"
+
+#: themes/default/header.php:140
+msgid "Tour Dates"
+msgstr "Dates de Shows"
+
+#: themes/default/header.php:147
+msgid "Send a Message"
+msgstr "Envia un missatge"
+
+#: themes/default/header.php:148
+msgid "This message will be pushed to the admin's iPhone instantly."
+msgstr "Aquest missatge es mostrarà al moment a l'iPhone de l'administrador."
+
+#: themes/default/header.php:158
+msgid "E-Mail"
+msgstr "Correu-e"
+
+#: themes/default/header.php:164
+msgid "Send Now"
+msgstr "Envia"
+
+#: themes/default/header.php:179
+msgid "Follow me on Twitter"
+msgstr "Segueix-me al Twitter"
+
+#: themes/default/header.php:192
+msgid "No recent Tweets."
+msgstr "No hi ha piulades recents."
+
+#: themes/default/header.php:204
+msgid "Upcoming Tour Dates"
+msgstr "Dates de gira pròximes"
+
+#: themes/default/index.php:127
+msgid "Written on"
+msgstr "Escrit el"
+
+#: themes/default/index.php:127
+msgid "at"
+msgstr "a les"
+
+#: themes/default/index.php:128
+msgid "By"
+msgstr "per"
+
+#: themes/default/index.php:135
+msgid "Read This Post"
+msgstr "Obre aquest article"
+
+#: themes/default/index.php:146
+msgid "Load more entries..."
+msgstr "Carrega més entrades..."
+
+#: themes/default/index.php:154
+msgid "Newer Entries"
+msgstr "Entrades posteriors"
+
+#: themes/default/index.php:157
+msgid "Older Entries"
+msgstr "Entrades anteriors"
+
+#: themes/default/page.php:38
+msgid "Tag Cloud"
+msgstr "Núvol d'etiquetes"
+
+#: themes/default/page.php:45
+msgid "Monthly Archives"
+msgstr "Arxius mensuals"
+
+#: themes/default/page.php:76
+msgid "Pages in this article: "
+msgstr "Pàgines en aquest article:"
+
+#: themes/default/single.php:7
+msgid "Permanent Link to "
+msgstr "Enllaç permanent a "
+
+#: themes/default/single.php:13 themes/default/single.php:15
+#: themes/default/single.php:19
+msgid "Skip to comments"
+msgstr "Salta als comentaris"
+
+#: themes/default/single.php:17
+msgid "Leave a comment"
+msgstr "Deixeu un comentari"
+
+#: themes/default/single.php:36
+msgid "Article Pages"
+msgstr "Pàgines d'article"
+
+#: themes/default/single.php:46
+msgid "Check out this post:"
+msgstr "Feu un cop d'ull a aquest article:"
+
+#: themes/default/single.php:46
+msgid "Mail a link to this post?"
+msgstr "Voleu enviar un enllaç a aquest article?"
+
+#: themes/default/single.php:59
+msgid "Del.icio.us"
+msgstr "Del.icio.us"
+
+#: themes/default/single.php:61
+msgid "Digg"
+msgstr "Digg"
+
+#: themes/default/single.php:62
+msgid "Technorati"
+msgstr "Technorati"
+
+#: themes/default/single.php:63
+msgid "Magnolia"
+msgstr "Magnolia"
+
+#: themes/default/single.php:64
+msgid "Newsvine"
+msgstr "Newsvine"
+
+#: themes/default/single.php:65
+msgid "Reddit"
+msgstr "Reddit"
+
+#: wptouch.php:215
+msgid "Settings"
+msgstr "Paràmetres"
+
+#: wptouch.php:392
+msgid "New Ping/Trackback"
+msgstr "Nou Ping/Trackback"
+
+#: wptouch.php:398
+msgid "New Comment"
+msgstr "Nou comentari"
+
+#: wptouch.php:426
+msgid "User Registration"
+msgstr "Registre d'usuari"
+
+#: wptouch.php:470
+msgid "Direct Message"
+msgstr "Missatge directe"
+
+#: wptouch.php:612
+msgid "WPtouch iPhone Theme"
+msgstr "Tema iPhone de WPtouch"
+
+#: wptouch.php:913
+msgid "Settings saved"
+msgstr "Paràmetres desats"
+
+#: wptouch.php:918
+msgid "Defaults restored"
+msgstr "Paràmetres per defecte restaurats"
+
+#: wptouch.php:939
+msgid "Save Options"
+msgstr "Desa les opcions"
+
+#: wptouch.php:943
+msgid "Restore default WPtouch settings?"
+msgstr "Voleu restaurar els paràmetres per defecte de WPtouch?"
+
+#: wptouch.php:943
+msgid "Restore Defaults"
+msgstr "Restaura els paràmetres per defecte"
+
+#. Plugin Name of the plugin/theme
+msgid "WPtouch"
+msgstr "WPtouch"
+
+#. Plugin URI of the plugin/theme
+msgid "http://www.bravenewcode.com/wptouch"
+msgstr "http://www.bravenewcode.com/wptouch"
+
+#. Description of the plugin/theme
+msgid ""
+"A plugin which formats your site with a mobile theme for visitors on Apple "
+"<a href=\"http://www.apple.com/iphone/\">iPhone</a> / <a href=\"http://www."
+"apple.com/ipodtouch/\">iPod touch</a>, <a href=\"http://www.android.com/"
+"\">Google Android</a>, <a href=\"http://www.blackberry.com/\">Blackberry "
+"Storm and Torch</a>, <a href=\"http://www.palm.com/us/products/phones/pre/"
+"\">Palm Pre</a> and other touch-based smartphones."
+msgstr ""
+"Un plugin que dóna un format apte per a usuaris que visitin la vostra pàgina "
+"web des d'un <a href=\"http://www.apple.com/iphone/\">iPhone</a> / <a href="
+"\"http://www.apple.com/ipodtouch/\">iPod touch</a>, <a href=\"http://www."
+"android.com/\">Google Android</a>, <a href=\"http://www.blackberry.com/"
+"\">Blackberry Storm and Torch</a>, <a href=\"http://www.palm.com/us/products/"
+"phones/pre/\">Palm Pre</a> i altres telèfons tàctils."
+
+#. Author of the plugin/theme
+msgid "Dale Mugford & Duane Storey (BraveNewCode Inc.)"
+msgstr "Dale Mugford & Duane Storey (BraveNewCode Inc.)"
+
+#. Author URI of the plugin/theme
+msgid "http://www.bravenewcode.com"
+msgstr "http://www.bravenewcode.com"

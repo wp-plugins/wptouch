@@ -21,4 +21,15 @@ a, h3#com-head {
 a.h2, a.sh2, .page h2 {
 font-family: '<?php echo bnc_get_h2_font(); ?>';
 }
+
+<?php wptouch_thumb_reflections(); ?>
+
+<?php if (bnc_is_truncated_enabled()) { ?>
+a.h2{
+text-overflow: ellipsis;
+white-space: nowrap;
+overflow: hidden;
+}
+<?php } ?>
+
 </style>
