@@ -78,7 +78,7 @@
 		<?php if (get_option('comment_registration') && !$user_ID) : ?>
 			<center>
 			<h1>
-				<?php sprintf( __( 'You must %slogin</a> or %sregister</a> to comment', 'wptouch' ), '<a href="' . site_url() . '/wp-login.php">', '<a href="' . site_url() . '"/wp-register.php">') ; ?>
+				<?php sprintf( __( 'You must %slogin</a> or %sregister</a> to comment', 'wptouch' ), '<a href="' . bloginfo( 'url' ) . '/wp-login.php">', '<a href="' . site_url() . '"/wp-register.php">') ; ?>
 			</h1>
 			</center>
 
@@ -91,11 +91,11 @@
 				<?php _e( "(If your comment requires moderation it will be added soon.)", "wptouch" ); ?>
 		</div>
 
-		<form action="<?php site_url(); ?>/wp-comments-post.php" method="post" id="commentform">
+		<form action="<?php bloginfo( 'url' ); ?>/wp-comments-post.php" method="post" id="commentform">
 
 	<?php if ($user_ID) : ?>
 
-		<p class="logged"  id="respond"><?php _e( "Logged in as", "wptouch" ); ?> <a href="<?php site_url(); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a>:</p>
+		<p class="logged"  id="respond"><?php _e( "Logged in as", "wptouch" ); ?> <a href="<?php bloginfo( 'url' ); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a>:</p>
 	
 	<?php else : ?>
 	
@@ -122,7 +122,7 @@
 		<p><textarea name="comment" id="comment" tabindex="4"></textarea></p>
 		
 		<p>
-			<input name="submit" type="submit" id="submit" tabindex="5" value="<?php _e('Publish', 'wptouch'); ?>	" />
+			<input name="submit" type="submit" id="submit" tabindex="5" value="<?php _e('Publish', 'wptouch'); ?>" />
 			<input type="hidden" name="comment_post_ID" value="<?php echo $id; ?>" />		
 			<div id="loading" style="display:none">
 				<img src="<?php echo compat_get_plugin_url( 'wptouch' ); ?>/themes/core/core-images/comment-ajax-loader.gif" alt="" /> <p><?php _e( 'Publishing...', 'wptouch' ); ?></p>
