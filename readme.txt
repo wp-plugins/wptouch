@@ -29,6 +29,10 @@ For more information visit http://www.bravenewcode.com/wptouch/
 
 == Changelog ==
 
+= Version 1.9.7.1 (Jul 18, 2013) =
+
+* Added: Brazilian Português translation (thanks!)
+
 = Version 1.9.7 =
 
 * Fixed: Issue with comment posting
