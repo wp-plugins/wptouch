@@ -11,6 +11,7 @@
 	margin: 0;
 	background: url(../images/paper.png) repeat;
 	position: relative;
+	border-style: none;
 }
 
 #wptouch-head.metabox-holder .wptouch-text {
@@ -36,7 +37,6 @@
 }
 
 #wptouch-head #wptouch-head-colour {
-	background-color: #d7ebf7;
 	padding: 10px 10px 0;
 	-webkit-border-top-left-radius: 2px;
 	-webkit-border-top-right-radius: 2px;
@@ -46,16 +46,15 @@
 	border-top-left-radius: 2px;
 	border-top-right-radius: 2px;
 	margin: -10px -10px 0;
+	background-color: #d4d4d4;
 }
 
 #wptouch-head-title {
-	color: #333c42;
 	text-shadow: #f6f8fd 0 1px 0;
-	letter-spacing: -1px;
 	margin: 0;
 	padding: 0;
 	float: left;
-	font-size: 22px;
+	font: 22px "Helvetica Neue", Helvetica, Geneva, Arial, sans-serif;
 }
 
 #wptouch-head .postbox img.ajax-load {
@@ -67,10 +66,10 @@
 	float: right;
 	position: relative;
 	bottom: 4px;
+	color: #ddd;
 }
 
 #wptouch-head-links a {
-	color: #62727c;
 	font-weight: bold;
 	text-shadow: rgba(255,255,255,.5) 0 1px 0;
 	padding-right: 5px;
@@ -447,12 +446,11 @@ textarea#wptouch-stats {
 #bnc-global a.fancylink {
 	font-weight: bold;
 	text-decoration: none;
-	background-color: #d0e6fe;
+	background-color: #d7ebf7;
 	padding: 1px 5px 1px 4px;
 	border-radius: 12px;
 	margin-left: 5px;
 	position: relative;
-	top: 3px;
 	z-index: 111;
 }
 
