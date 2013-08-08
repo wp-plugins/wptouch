@@ -30,7 +30,7 @@ For more information visit the [WPtouch Pro 3 Product Page](http://www.bravenewc
 = Version 1.9.8 =
 
 * Updated: Modified Adsense code to use asynchronous version as well as slot ID - you must create a new 320x50px ad via your adsense account
-* Updated: Brought product tooltips into the 21st century
+* Updated: Updated product tooltips codde
 * Updated: Administration text and README descriptions
 
 = Version 1.9.7.1 =
