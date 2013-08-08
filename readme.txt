@@ -32,6 +32,7 @@ For more information visit the [WPtouch Pro 3 Product Page](http://www.bravenewc
 * Updated: Modified Adsense code to use asynchronous version as well as slot ID - you must create a new 320x50px ad via your adsense account
 * Updated: Updated product tooltips codde
 * Updated: Administration text and README descriptions
+* Fixed: Admin bugs
 
 = Version 1.9.7.1 =
 
@@ -848,7 +849,7 @@ No. The entire *WPtouch* footprint is small. In fact, it should reduce load, bec
 
 = 1.9.8 =
 
-Includes administration panel updates
+Includes important administration panel updates
 
 = 1.9.7.1 =
 
