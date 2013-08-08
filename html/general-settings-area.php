@@ -17,7 +17,7 @@
 				<h4><?php _e( "Site Title", "wptouch" ); ?></h4>
 				<p><?php _e( "You can change your site title (if needed) in WPtouch.", "wptouch" ); ?></p>
 
-				<br /><br /><br /><br /><br />
+				<br /><br /><br /><br />
 
 				<h4><?php _e( "Excluded Categories, Tags", "wptouch" ); ?></h4>
 				<p><?php _e( "Categories and/or Tags by ID you want excluded everywhere in WPtouch.", "wptouch" ); ?></p>
