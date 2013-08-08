@@ -225,4 +225,9 @@ input#bnc-button-reset {
 	font-size: inherit;
 }
 
+.popover {
+	max-width: 300px;
+	width: auto;
+}
+
 /* @end */
