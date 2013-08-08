@@ -20,8 +20,19 @@
 #wptouch-head.metabox-holder .wptouch-phones {
 	position: absolute;
 	top: 30px;
-	right: 0;
+	right: -16px;
 	z-index: 0;
+}
+
+@media screen and (max-width: 1150px) {
+
+#wptouch-head.metabox-holder .wptouch-phones {
+	position: absolute;
+	top: 30px;
+	right: -22%;
+	z-index: 0;
+}
+
 }
 
 #wptouch-head #wptouch-head-colour {
