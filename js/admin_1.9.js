@@ -62,6 +62,7 @@ jQuery( document ).ready( function() {
 	});
 
 	wpQuery( '[rel=tooltip]' ).tooltip({ placement: 'top'});
+	wpQuery( '[rel=tooltip-down]' ).tooltip({ placement: 'bottom'});
 });
 
 function wptouchHandleAdvertising() {
