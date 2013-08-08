@@ -14,7 +14,6 @@
  <!-- Default skin -->
  
 		<div class="skins-desc" id="default-skin">
-			<p><?php _e( "The default WPtouch theme emulates a native iPhone application.", "wptouch" ); ?></p>
 			<ul class="wptouch-make-li-italic">
 					<li><select name="style-background">
 							<option <?php if ($wptouch_settings['style-background'] == "crossed-stripes-wptouch-bg") echo " selected"; ?> value="crossed-stripes-wptouch-bg">

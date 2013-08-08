@@ -1,26 +1,25 @@
+/* @override http://wptp3.local.com/wp-content/plugins/wptouch/admin-css/wptouch-admin.css */
+
 /* WPtouch 1.9.x Admin CSS */
 /* @group head-area.php */
 
 #wptouch-head.metabox-holder {
-	height: 188px;
 	margin: 0;
-}
-
-#wptouch-head.metabox-holder p {
-	margin: 0 0 0 -10px;
-	position: absolute;
-	top: 34px;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	background-color: #fff;
 }
 #wptouch-head.metabox-holder .postbox {
-	overflow: hidden;
-	position: relative;
-	min-height: 216px;
 	margin-top: 0;
 	margin: 0;
+	background: url(../images/paper.png) repeat;
+}
+
+#wptouch-head.metabox-holder .wptouch-text {
+	margin: 0 0 0 -10px;
+}
+
+#wptouch-head.metabox-holder .wptouch-phones {
+	position: absolute;
+	top: 30px;
+	right: 0;
 }
 
 #wptouch-head #wptouch-head-colour {
@@ -238,7 +237,7 @@ em.supported {
 	font-size: 9px;
 	text-align: center;
 	margin: 3px;
-	height: 60px;
+	height: 55px;
 	padding-top: 10px;
 	position: relative;
 	float: left;
@@ -293,9 +292,9 @@ em.supported {
 #bnc-global #upload-icon {
 	width: 30%;
 	border-width: 1px;
-	border-radius: 3px;
-	padding: 2px 12px;
-	height: 28px;
+	border-radius: 12px;
+	padding: 4px 12px;
+	height: 14px;
 	text-align: center;
 }
 

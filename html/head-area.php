@@ -18,7 +18,10 @@
 	<div class="bnc-clearer"></div>
 			</div>	
 			<p>
-				<a href="http://www.bravenewcode.com/wptouch/?utm_source=wptouch-free&amp;utm_medium=web&amp;utm_campaign=top-<?php echo str_replace( '.', '', $bnc_wptouch_version ); ?>" target="_blank"><img class="wptp3" src="<?php echo compat_get_plugin_url('wptouch'); ?>/images/wptouch-ad.jpg" alt="advertisement"/></a>
+				<a class="wptouch-text" href="http://www.bravenewcode.com/wptouch/?utm_source=wptouch-free&amp;utm_medium=web&amp;utm_campaign=top-<?php echo str_replace( '.', '', $bnc_wptouch_version ); ?>" target="_blank">
+					<img src="http://bravenewcode.s3.amazonaws.com/wptouch/text.png" alt="wptouch advertisement" />
+					<img class="wptouch-phones" src="http://bravenewcode.s3.amazonaws.com/wptouch/phones.png" alt="wptouch advertisement" />
+				</a>
 			</p>
 	<div class="bnc-clearer"></div>
 	</div><!-- postbox -->
