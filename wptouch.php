@@ -5,7 +5,7 @@ Plugin URI: http://wordpress.org/extend/plugins/wptouch/
 Version: 1.9.8
 Description: The easy way to deliver great mobile experiences for your visitors.
 Author: BraveNewCode Inc.
-Author URI: http://www.bravenewcode.com
+Author URI: http://www.bravenewcode.com/wptouch/
 Text Domain: wptouch
 Domain Path: /lang
 License: GNU General Public License 2.0 (GPL) http://www.gnu.org/licenses/gpl.html
