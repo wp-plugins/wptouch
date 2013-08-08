@@ -216,6 +216,10 @@ if ( isset( $_POST['submit'] ) ) {
 		$a['adsense-id'] = trim( $_POST['adsense-id'] );
 	}
 
+	if ( isset($_POST['adsense-slot-id']) ) {
+		$a['adsense-slot-id'] = trim( $_POST['adsense-slot-id'] );
+	}	
+
 	if ( isset($_POST['adsense-channel']) ) {
 		$a['adsense-channel'] = $_POST['adsense-channel'];
 	}		

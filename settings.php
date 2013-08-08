@@ -41,6 +41,7 @@ $wptouch_defaults = array(
 	'enable-exclusive' => false,
 	'sort-order' => 'name',
 	'adsense-id' => '',
+	'adsense-slot-id' => '',
 	'statistics' => '',
 	'adsense-channel' => '',
 	'custom-user-agents' => array(),
