@@ -1,19 +1,20 @@
 === Plugin Name ===
 Contributors: bravenewcode, duanestorey, dalemugford
-Tags: wptouch, iphone, ipod, theme, apple, mac, bravenewcode, ajax, mobile, android, blackberry, smartphone, responsive, design, mobile plugin
+Tags: wptouch, iphone, ipod, bravenewcode, mobile, android, blackberry, smartphone, responsive, design, mobile plugin, ios, mobile theme
 Requires at least: 3.1
 Tested up to: 3.6
 Stable tag: 1.9.7.1
+License: GPLv2
 
 Create a beautiful mobile WordPress website with just a few clicks.
 
 == Description ==
 
-WPtouch is a WordPress plugin that automatically transforms your WordPress website into a simple and elegant mobile theme, complete with AJAX loading articles and smooth effects when viewed from popular touch mobile devices like the iPhone, iPod touch, Android mobile phones, BlackBerry OS6+ mobile devices, and more!
+WPtouch is a WordPress plugin that automatically transforms your WordPress website via the included simple and elegant mobile theme, complete with AJAX loading articles and smooth effects when viewed from popular touch mobile devices like the iPhone, iPod touch, Android mobile phones, BlackBerry OS6+ mobile devices, and more.
 
-The admin panel allows you to customize many aspects of its appearance, and deliver a *fast*, user-friendly and stylish version of your site to your mobile visitors, without modifying *a single bit of code* (or affecting) your regular desktop theme.
+The administration panel allows you to customize many aspects of its appearance, and deliver a *fast*, user-friendly and stylish version of your site to your mobile visitors, without modifying *a single bit of code* (or affecting) your regular desktop theme.
 
-The theme also includes the ability for visitors to switch between your mobile WordPress website and your site's regular theme.
+The theme also includes the ability for visitors to switch between your mobile WordPress website and your website's regular theme.
 
 **Now Available: WPtouch Pro 3**
 
@@ -26,7 +27,11 @@ For more information visit the [WPtouch Pro 3 Product Page](http://www.bravenewc
 
 == Changelog ==
 
-= Version 1.9.7.1 (Jul 18, 2013) =
+= Version 1.9.8 =
+
+* Updated: Administration text and readme descriptions
+
+= Version 1.9.7.1 =
 
 * Added: Brazilian Português translation (thanks!)
 
@@ -836,6 +841,16 @@ We even automatically put a little snippet of code into your current desktop the
 = Will it slow down my blog, or increase my server load? =
 
 No. The entire *WPtouch* footprint is small. In fact, it should reduce load, because of its streamlined approach to serving optimized content to mobile visitors. It was designed to be as lightweight and speedy as possible, while still serving your site's content in a richly presented way, sparing no essential features like search, login, categories, tags, comments etc.
+
+== Upgrade Notice ==
+
+= 1.9.8 =
+
+Includes administration panel updates
+
+= 1.9.7.1 =
+
+Includes a new POT file for Brazilian Portuguese
 
 == Screenshots ==
 

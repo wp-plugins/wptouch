@@ -1,8 +1,8 @@
 <?php
 /*
-Plugin Name: WPtouch
+Plugin Name: WPtouch Mobile Plugin
 Plugin URI: http://wordpress.org/extend/plugins/wptouch/
-Version: 1.9.7.1
+Version: 1.9.8
 Description: The easy way to deliver great mobile experiences for your visitors.
 Author: BraveNewCode Inc.
 Author URI: http://www.bravenewcode.com
@@ -28,7 +28,7 @@ License: GNU General Public License 2.0 (GPL) http://www.gnu.org/licenses/gpl.ht
 load_plugin_textdomain( 'wptouch', false, dirname( plugin_basename( __FILE__ ) ) );
 
 global $bnc_wptouch_version;
-$bnc_wptouch_version = '1.9.7.1';
+$bnc_wptouch_version = '1.9.8';
 
 require_once( 'include/plugin.php' );
 require_once( 'include/compat.php' );
@@ -37,60 +37,7 @@ define( 'WPTOUCH_PROWL_APPNAME', 'WPtouch');
 define( 'WPTOUCH_INSTALLED', 1 );
 define( 'WPTOUCH_ATOM', 1 );
 
-//The WPtouch Settings Defaults
-global $wptouch_defaults;
-$wptouch_defaults = array(
-	'header-title' => get_bloginfo('name'),
-	'main_title' => 'Default.png',
-	'enable-post-excerpts' => true,
-	'enable-page-coms' => false,
-	'enable-zoom' => false,
-	'enable-cats-button' => true,
-	'enable-tags-button' => true,
-	'enable-search-button' => true,
-	'enable-login-button' => false,
-	'enable-gravatars' => true,
-	'enable-main-home' => true,
-	'enable-main-rss' => true,
-	'enable-main-name' => true,
-	'enable-main-tags' => true,
-	'enable-main-categories' => true,
-	'enable-main-email' => false,
-	'enable-truncated-titles' => true,
-	'prowl-api' => '',
-	'enable-prowl-comments-button' => false,
-	'enable-prowl-users-button' => false,
-	'enable-prowl-message-button' => false,
-	'header-background-color' => '000000',
-	'header-border-color' => '333333',
-	'header-text-color' => 'eeeeee',
-	'link-color' => '006bb3',
-	'post-cal-thumb' =>'calendar-icons',
-	'h2-font' =>'Helvetica Neue',
-	'style-text-justify' => 'left-justified',
-	'style-background' => 'low-contrast-linen-wptouch-bg',
-	'style-icon' => 'glossy-icon',
-	'enable-regular-default' => false,
-	'excluded-cat-ids' => '',
-	'excluded-tag-ids' => '',
-	'custom-footer-msg' => 'All content Copyright '. get_bloginfo('name') . '',
-	'home-page' => 0,
-	'enable-exclusive' => false,
-	'sort-order' => 'name',
-	'adsense-id' => '',
-	'statistics' => '',
-	'adsense-channel' => '',
-	'custom-user-agents' => array(),
-	'enable-show-comments' => true,
-	'enable-show-tweets' => false,
-	'enable-gigpress-button' => false,
-	'enable-flat-icon' => false,
-	'wptouch-language' => 'auto',
-	'enable-twenty-eleven-footer' => 0,
-	'enable-fixed-header' => false,
-	'ad_service' => 'adsense',
-	'show_powered_by' => false
-);
+require_once( 'settings.php' );
 
 function wptouch_get_plugin_dir_name() {
 	global $wptouch_plugin_dir_name;
@@ -241,7 +188,8 @@ function wptouch_admin_enqueue_files() {
 		wp_enqueue_script( 'ajax-upload', compat_get_plugin_url( 'wptouch' ) . '/js/ajax_upload.js', array( 'jquery' ) );
 		wp_enqueue_script( 'jquery-colorpicker', compat_get_plugin_url( 'wptouch' ) . '/js/colorpicker_1.4.js', array( 'ajax-upload' ) );
 		wp_enqueue_script( 'jquery-fancybox', compat_get_plugin_url( 'wptouch' ) . '/js/fancybox_1.2.5.js', array( 'jquery-colorpicker' ) );
-		wp_enqueue_script( 'wptouch-js', compat_get_plugin_url( 'wptouch' ) . '/js/admin_1.9.js', array( 'jquery-fancybox' ) );
+		wp_enqueue_script( 'wptouch-bootstrap', '//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/js/bootstrap.min.js' );
+		wp_enqueue_script( 'wptouch-js', compat_get_plugin_url( 'wptouch' ) . '/js/admin_1.9.js', array( 'jquery-fancybox', 'wptouch-bootstrap' ) );
 	}
 }
 
@@ -249,6 +197,7 @@ function wptouch_admin_enqueue_files() {
 function wptouch_admin_files() {		
 	if ( isset( $_GET['page'] ) && $_GET['page'] == 'wptouch/wptouch.php' ) {
 		echo "<script type='text/javascript' src='" . home_url() . "/?wptouch-ajax=js'></script>\n";
+		echo "<link rel='stylesheet' href='//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/css/bootstrap.min.css'>\n";
 		echo "<link rel='stylesheet' type='text/css' href='" . compat_get_plugin_url( 'wptouch' ) . "/admin-css/wptouch-admin.css' />\n";
 		echo "<link rel='stylesheet' type='text/css' href='" . compat_get_plugin_url( 'wptouch' ) . "/admin-css/bnc-global.css' />\n";
 		echo "<link rel='stylesheet' type='text/css' href='" . compat_get_plugin_url( 'wptouch' ) . "/admin-css/bnc-compressed-global.css' />\n";

@@ -238,7 +238,7 @@ em.supported {
 	font-size: 9px;
 	text-align: center;
 	margin: 3px;
-	height: 55px;
+	height: 60px;
 	padding-top: 10px;
 	position: relative;
 	float: left;
@@ -293,9 +293,9 @@ em.supported {
 #bnc-global #upload-icon {
 	width: 30%;
 	border-width: 1px;
-	border-radius: 12px;
-	padding: 4px 12px;
-	height: 14px;
+	border-radius: 3px;
+	padding: 2px 12px;
+	height: 28px;
 	text-align: center;
 }
 

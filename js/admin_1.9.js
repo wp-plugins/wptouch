@@ -60,6 +60,8 @@ jQuery( document ).ready( function() {
 			wpQuery( '#ad_service' ).change( function() { wptouchHandleAdvertising() } );
 		}
 	});
+
+	wpQuery( '[rel=tooltip]' ).tooltip({ placement: 'top'});
 });
 
 function wptouchHandleAdvertising() {

@@ -39,7 +39,7 @@
 			<?php if ( false && function_exists( 'twentyeleven_setup' ) || function_exists( 'twentyten_setup' ) ) { ?>
 				<li><input type="checkbox" class="checkbox" name="enable-twenty-eleven-footer" <?php if ( isset( $wptouch_settings['enable-twenty-eleven-footer']) && $wptouch_settings['enable-twenty-eleven-footer'] == 1) echo( 'checked' ); ?> /><label for="enable-twenty-eleven-footer"><?php _e( "Show powered by WPtouch in footer", "wptouch" ); ?> <small>(<?php _e( "Adds WPtouch to the 'Powered by WordPress' area in footer of desktop theme", "wptouch" ); ?>)</small></label>
 			<?php } ?>
-			<li><input type="checkbox" class="checkbox" name="show_powered_by" <?php if ( isset($wptouch_settings['show_powered_by']) && $wptouch_settings['show_powered_by'] == 1) echo('checked'); ?> /><label for="show_powered_by"><?php _e( "Enable 'Powered By WPtouch' in mobile theme footer", "wptouch" ); ?></label><br /></li>
+			<li><input type="checkbox" class="checkbox" name="show_powered_by" <?php if ( isset($wptouch_settings['show_powered_by']) && $wptouch_settings['show_powered_by'] == 1) echo('checked'); ?> /><label for="show_powered_by"><?php _e( "Enable 'Powered By WPtouch' display in mobile theme", "wptouch" ); ?></label><br /></li>
 
 			<br /><br /><br />
 		
