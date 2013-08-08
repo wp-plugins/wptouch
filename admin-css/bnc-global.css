@@ -34,12 +34,6 @@
 	color: #3c627f;
 }
 
-#bnc-global a.fancylink {
-	color: red;
-	font-weight: bold;
-	text-decoration: underline;
-}
-
 #bnc-global, #bnc-global .postbox, #bnc-global .postbox ul, #bnc-global .postbox p, #bnc-global p {
 	margin-top: 10px;
 }

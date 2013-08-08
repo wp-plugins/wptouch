@@ -197,10 +197,7 @@ function wptouch_admin_enqueue_files() {
 function wptouch_admin_files() {		
 	if ( isset( $_GET['page'] ) && $_GET['page'] == 'wptouch/wptouch.php' ) {
 		echo "<script type='text/javascript' src='" . home_url() . "/?wptouch-ajax=js'></script>\n";
-		echo "<link rel='stylesheet' href='//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/css/bootstrap.min.css'>\n";
 		echo "<link rel='stylesheet' type='text/css' href='" . compat_get_plugin_url( 'wptouch' ) . "/admin-css/wptouch-admin.css' />\n";
-		echo "<link rel='stylesheet' type='text/css' href='" . compat_get_plugin_url( 'wptouch' ) . "/admin-css/bnc-global.css' />\n";
-		echo "<link rel='stylesheet' type='text/css' href='" . compat_get_plugin_url( 'wptouch' ) . "/admin-css/bnc-compressed-global.css' />\n";
 	}
 }
 
