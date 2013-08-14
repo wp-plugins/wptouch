@@ -3,8 +3,13 @@
 	$directory_list = array();
 	
 	if ( current_user_can( 'upload_files' ) ) {
-		check_ajax_referer( 'wptouch-upload' );
-		$upload_dir = compat_get_upload_dir() . "/wptouch/custom-icons" . ltrim( $dir[1], '/' );
+		$nonce = $_REQUEST[ '_ajax_nonce' ];
+
+		if ( !wp_verify_nonce( $nonce, 'wptouch-upload' ) ) {
+			die( 'Nonce error' );
+		}
+
+		$upload_dir = compat_get_upload_dir() . "/wptouch/custom-icons";
 		$dir_paths = explode( '/', $upload_dir );
 		$dir = '';
 		foreach ( $dir_paths as $path ) {
@@ -17,7 +22,10 @@
 		if ( isset( $_FILES['submitted_file'] ) ) {
 			$f = $_FILES['submitted_file'];
 			if ( $f['size'] <= $max_size) {
-				if ( $f['type'] == 'image/png' || $f['type'] == 'image/jpeg' || $f['type'] == 'image/gif' || $f['type'] == 'image/x-png' || $f['type'] == 'image/pjpeg' ) {	
+				$current_file = $f[ 'name' ];
+				$path_parts = pathinfo( $current_file );
+
+				if ( preg_match( '#^(gif|jpg|jpeg|jpe|png)$#i', $path_parts['extension'] ) ) {	
 					@move_uploaded_file( $f['tmp_name'], $upload_dir . "/" . $f['name'] );
 					
 					if ( !file_exists( $upload_dir . "/" . $f['name'] ) ) {
