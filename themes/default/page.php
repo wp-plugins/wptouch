@@ -4,29 +4,14 @@
  	<div class="post content" id="post-<?php the_ID(); ?>">
 	 <div class="page">
 		<div class="page-title-icon">		
-			<?php
-			$mypages = bnc_wp_touch_get_pages();
-			
-			if ( isset( $mypages[get_the_ID()]) ) {
-				$icon_name = $mypages[get_the_ID()]['icon'];
-				if ( file_exists( compat_get_plugin_dir( 'wptouch' ) . '/images/icon-pool/' . $icon_name ) ) {
-					$image = compat_get_plugin_url( 'wptouch' ) . '/images/icon-pool/' . $icon_name;	
-				} else {
-					$image = compat_get_upload_url() . '/wptouch/custom-icons/' . $icon_name;
-				}
-				echo('<img class="pageicon" src="' . $image . '" alt="icon" />'); 
-			} else {
-				echo ('<img class="pageicon" src="' . compat_get_plugin_url( 'wptouch' ) . '/images/icon-pool/Default.png" alt="pageicon" />');
-			}
-			
-			?> 
+			<?php bnc_the_page_icon(); ?>
 		</div>
-			<h2><?php the_title(); ?></h2>
+		<h2><?php the_title(); ?></h2>
 	</div>
 	      
 <div class="clearer"></div>
   
-    <div id="entry-<?php the_ID(); ?>" class="pageentry <?php echo $wptouch_settings['style-text-size']; ?> <?php echo $wptouch_settings['style-text-justify']; ?>">
+    <div id="entry-<?php the_ID(); ?>" class="pageentry <?php echo $wptouch_settings['style-text-justify']; ?>">
         <?php if (!is_page('archives') || !is_page('links')) { the_content(); } ?>  
 
 <?php if (is_page('archives')) {
@@ -78,6 +63,24 @@
 <!--If comments are enabled for pages in the WPtouch admin, and 'Allow Comments' is checked on a page-->
 	<?php if (bnc_is_page_coms_enabled() && 'open' == $post->comment_status) : ?>
 		<?php comments_template(); ?>
+		<script type="text/javascript">
+		jQuery(document).ready( function() {
+		// Ajaxify '#commentform'
+		var formoptions = { 
+			beforeSubmit: function() {$wpt("#loading").fadeIn(400);},
+			success:  function() {
+				$wpt("#commentform").hide();
+				$wpt("#loading").fadeOut(400);
+				$wpt("#refresher").fadeIn(400);
+				}, // end success 
+			error:  function() {
+				$wpt('#errors').show();
+				$wpt("#loading").fadeOut(400);
+				} //end error
+			} 	//end options
+		$wpt('#commentform').ajaxForm(formoptions);
+		}); //End onReady
+		</script>
   	<?php endif; ?>
 <!--end comment status-->
     <?php endwhile; ?>	
@@ -91,4 +94,4 @@
  <?php endif; ?>
 
 <!-- If it's ajax, we're not bringing in footer.php -->
-<?php global $is_ajax; if (!$is_ajax) get_footer(); ?>
+<?php global $is_ajax; if (!$is_ajax) get_footer();
