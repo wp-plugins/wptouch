@@ -2,7 +2,7 @@
 /*
 Plugin Name: WPtouch Mobile Plugin
 Plugin URI: http://wordpress.org/extend/plugins/wptouch/
-Version: 1.9.8.1
+Version: 1.9.8.2
 Description: The easy way to deliver great mobile experiences for your visitors.
 Author: BraveNewCode Inc.
 Author URI: http://www.bravenewcode.com/wptouch/
@@ -28,7 +28,7 @@ License: GNU General Public License 2.0 (GPL) http://www.gnu.org/licenses/gpl.ht
 load_plugin_textdomain( 'wptouch', false, dirname( plugin_basename( __FILE__ ) ) );
 
 global $bnc_wptouch_version;
-$bnc_wptouch_version = '1.9.8.1';
+$bnc_wptouch_version = '1.9.8.2';
 
 require_once( 'include/plugin.php' );
 require_once( 'include/compat.php' );
@@ -37,7 +37,9 @@ define( 'WPTOUCH_PROWL_APPNAME', 'WPtouch');
 define( 'WPTOUCH_INSTALLED', 1 );
 define( 'WPTOUCH_ATOM', 1 );
 
-require_once( 'settings.php' );
+add_action( 'plugins_loaded', 'wptouch_setup_main_class' );
+
+require_once( dirname( __FILE__ ) . '/settings.php' );
 
 function wptouch_get_plugin_dir_name() {
 	global $wptouch_plugin_dir_name;
@@ -184,7 +186,7 @@ function wptouch_settings_link( $links, $file ) {
  
 // WPtouch Admin JavaScript
 function wptouch_admin_enqueue_files() {		
-	if ( isset( $_GET['page'] ) && $_GET['page'] == 'wptouch/wptouch.php' ) {
+	if ( isset( $_GET['page'] ) && $_GET['page'] == 'wptouch-settings' ) {
 		wp_enqueue_script( 'ajax-upload', compat_get_plugin_url( 'wptouch' ) . '/js/ajax_upload.js', array( 'jquery' ) );
 		wp_enqueue_script( 'jquery-colorpicker', compat_get_plugin_url( 'wptouch' ) . '/js/colorpicker_1.4.js', array( 'ajax-upload' ) );
 		wp_enqueue_script( 'jquery-fancybox', compat_get_plugin_url( 'wptouch' ) . '/js/fancybox_1.2.5.js', array( 'jquery-colorpicker' ) );
@@ -195,9 +197,9 @@ function wptouch_admin_enqueue_files() {
 
 // WPtouch Admin StyleSheets
 function wptouch_admin_files() {		
-	if ( isset( $_GET['page'] ) && $_GET['page'] == 'wptouch/wptouch.php' ) {
+	if ( isset( $_GET['page'] ) && $_GET['page'] == 'wptouch-settings' ) {
 		echo "<script type='text/javascript' src='" . home_url() . "/?wptouch-ajax=js'></script>\n";
-		echo "<link rel='stylesheet' type='text/css' href='" . compat_get_plugin_url( 'wptouch' ) . "/admin-css/wptouch-admin.css' />\n";
+		echo "<link rel='stylesheet' type='text/css' href='" . WP_PLUGIN_URL . "/wptouch/admin-css/wptouch-admin.css' />\n";
 	}
 }
 
@@ -312,8 +314,6 @@ class WPtouchPlugin {
 		$this->prowl_output = false;
 		$this->prowl_success = false;
 
-		// Don't change the template directory when in the admin panel
-		add_action( 'plugins_loaded', array(&$this, 'detectAppleMobile') );
 		if ( !is_admin() ) {
 			add_filter( 'stylesheet', array(&$this, 'get_stylesheet') );
 			add_filter( 'theme_root', array(&$this, 'theme_root') );
@@ -622,9 +622,11 @@ class WPtouchPlugin {
 		}
 	}
 }
-  
-global $wptouch_plugin;
-$wptouch_plugin = new WPtouchPlugin();
+
+function wptouch_setup_main_class() {
+	global $wptouch_plugin;
+	$wptouch_plugin = new WPtouchPlugin();	
+}
 
 function bnc_wptouch_is_mobile() {
 	global $wptouch_plugin;
@@ -656,7 +658,7 @@ function wptouch_switch() {
 }
   
 function bnc_options_menu() {
-	add_options_page( __( 'WPtouch Options', 'wptouch' ), 'WPtouch', 'manage_options', __FILE__, 'bnc_wp_touch_page' );
+	add_options_page( __( 'WPtouch Options', 'wptouch' ), 'WPtouch', 'manage_options', 'wptouch-settings', 'bnc_wp_touch_page' );
 }
 
 function bnc_wptouch_get_settings() {
@@ -1011,20 +1013,19 @@ function bnc_wp_touch_page() {
 		echo('<div class="wrap"><div id="bnc-global"><div id="wptouchupdated"><p class="saved"><span>');
 		echo __( "Settings saved!", "wptouch");
 		echo('</span></p></div>');
-		} 
-	elseif (isset($_POST['reset'])) {
+	} elseif (isset($_POST['reset'])) {
 		echo('<div class="wrap"><div id="bnc-global"><div id="wptouchupdated"><p class="reset"><span>');
 		echo __( "Defaults restored.", "wptouch");
 		echo('</span></p></div>');
 	} else {
 		echo('<div class="wrap"><div id="bnc-global">');
-}
-?>
+	}
+	?>
 
-<?php $icons = bnc_get_icon_list(); ?>
+	<?php $icons = bnc_get_icon_list(); ?>
 
 	<?php require_once( 'include/submit.php' ); ?>
-	<form method="post" action="<?php echo admin_url( 'options-general.php?page=wptouch/wptouch.php' ); ?>">
+	<form method="post" action="<?php echo admin_url( 'options-general.php?page=wptouch-settings' ); ?>">
 		<?php require_once( 'html/head-area.php' ); ?>
 		<?php require_once( 'html/general-settings-area.php' ); ?>
 		<?php require_once( 'html/advanced-area.php' ); ?>

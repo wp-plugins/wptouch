@@ -27,6 +27,10 @@ For more information visit the [WPtouch Pro 3 Product Page](http://www.bravenewc
 
 == Changelog ==
 
+= Version 1.9.8.2 =
+
+* Fixed: Issue with WordPress multisite
+
 = Version 1.9.8.1 =
 
 * Fixed: Potential security issues
@@ -851,6 +855,10 @@ We even automatically put a little snippet of code into your current desktop the
 No. The entire *WPtouch* footprint is small. In fact, it should reduce load, because of its streamlined approach to serving optimized content to mobile visitors. It was designed to be as lightweight and speedy as possible, while still serving your site's content in a richly presented way, sparing no essential features like search, login, categories, tags, comments etc.
 
 == Upgrade Notice ==
+
+= 1.9.8.2 =
+
+An issue with WordPress multsite was addressed
 
 = 1.9.8.1 =
 

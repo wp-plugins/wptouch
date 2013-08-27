@@ -1,6 +1,5 @@
 <?php
 
-//The WPtouch Settings Defaults
 global $wptouch_defaults;
 $wptouch_defaults = array(
 	'header-title' => get_bloginfo('name'),
