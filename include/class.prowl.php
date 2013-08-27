@@ -65,4 +65,3 @@ class Prowl
       return $response;
    }
 }
-?>

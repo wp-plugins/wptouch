@@ -10,48 +10,20 @@
 			</div>
 				<div id="wptouch-head-links">
 					<ul>
-						<!-- <li><?php echo sprintf(__( "%sSupport Forums%s", "wptouch" ), '<a href="http://support.bravenewcode.com/forum/wptouch" target="_blank">','</a>'); ?> | </li> -->
-						<li><?php echo sprintf(__( "%sWPtouch Homepage%s", "wptouch" ), '<a href="http://www.bravenewcode.com/wptouch" target="_blank">','</a>'); ?> | </li>
-						<li><?php echo sprintf(__( "%sNewsletter%s", "wordtwit" ), '<a href="http://www.bravenewcode.com/newsletter" target="_blank">','</a>'); ?> | </li>
-						<li><?php echo sprintf(__( "%sDonate%s", "wptouch" ), '<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=paypal%40bravenewcode%2ecom&amp;item_name=WPtouch%20Beer%20Fund&amp;no_shipping=1&amp;tax=0&amp;currency_code=CAD&amp;lc=CA&amp;bn=PP%2dDonationsBF&amp;charset=UTF%2d8" target="_blank">','</a>'); ?></li>
+						<li><?php echo sprintf(__( "%sDownload User's Guide%s", "wptouch" ), '<a href="http://bravenewcode.s3.amazonaws.com/wptouch/WPtouch%201.9.x%20Installation%20Guide.pdf">','</a>'); ?> | </li>
+						<li><?php echo sprintf(__( "%sUpgrade to WPtouch Pro%s", "wptouch" ), '<a href="http://www.bravenewcode.com/wptouch/?utm_source=wptouch-free&amp;utm_medium=web&amp;utm_campaign=top-' . str_replace( '.', '', $bnc_wptouch_version ) . '" target="_blank">','</a>'); ?> | </li>
+						<li><?php echo sprintf(__( "%sWPtouch on Twitter%s", "wptouch" ), '<a href="http://www.twitter.com/bravenewcode" target="_blank">','</a>'); ?> | </li>
+						<li><?php echo sprintf(__( "%sWPtouch on Facebook%s", "wptouch" ), '<a href="http://www.facebook.com/bravenewcode" target="_blank">','</a>'); ?></li>
 					</ul>
 				</div>
 	<div class="bnc-clearer"></div>
 			</div>	
-	
-		<div id="wptouch-news-support">
-
-			<div id="wptouch-news-wrap">
-			<h3><span class="rss-head">&nbsp;</span><?php _e( "WPtouch Wire", "wptouch" ); ?></h3>
-				<div id="wptouch-news-content" style="display:none">
-					<?php require_once (ABSPATH . WPINC . '/class-snoopy.php');
-					$snoop_dog = new Snoopy();
-					$snoop_dog->read_timeout = 3;
-					$result = $snoop_dog->fetch( 'http://www.bravenewcode.com/custom/wptouch-news.php?type=wptouch&version=' . $bnc_wptouch_version );
-					if ( $result ) {
-						echo $snoop_dog->results;
-					}
-					?>
-				</div>
-			</div>
-
-			<div id="wptouch-support-wrap">			
-			<h3><span class="rss-head">&nbsp;</span><?php _e( "Twitter Topics", "wptouch" ); ?></h3>
-				<div id="wptouch-support-content" style="display:none">
-					<?php require_once (ABSPATH . WPINC . '/rss.php');
-					$rss = @fetch_rss('http://search.twitter.com/search.atom?q=wptouch');						
-					if ( isset($rss->items) && 0 != count($rss->items) ) { ?>
-					<ul>
-						<?php $rss->items = array_slice($rss->items, 0, 5); foreach ($rss->items as $item ) { ?>
-						<li><a target="_blank" class="orange-link" href='<?php echo wp_filter_kses($item['link']); ?>'><?php echo wp_specialchars($item['title']); ?></a></li>
-						<?php } ?>
-					</ul>
-					<?php } ?>
-				</div>
-			</div>
-			
-		</div><!-- wptouch-news-support -->
-
+			<p>
+				<a class="wptouch-text" href="http://www.bravenewcode.com/wptouch/?utm_source=wptouch-free&amp;utm_medium=web&amp;utm_campaign=top-<?php echo str_replace( '.', '', $bnc_wptouch_version ); ?>" target="_blank">
+					<img src="http://bravenewcode.s3.amazonaws.com/wptouch/text.png" alt="wptouch advertisement" />
+					<img class="wptouch-phones" src="http://bravenewcode.s3.amazonaws.com/wptouch/phones.png" alt="wptouch advertisement" />
+				</a>
+			</p>
 	<div class="bnc-clearer"></div>
 	</div><!-- postbox -->
 </div><!-- wptouch-head -->
