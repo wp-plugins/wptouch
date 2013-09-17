@@ -3,7 +3,7 @@ Contributors: bravenewcode, duanestorey, dalemugford
 Tags: wptouch, iphone, ipod, bravenewcode, mobile, android, blackberry, smartphone, responsive, design, mobile plugin, ios, mobile theme
 Requires at least: 3.1
 Tested up to: 3.6
-Stable tag: 1.9.8.3
+Stable tag: 1.9.8.2
 License: GPLv2
 
 Create a beautiful mobile WordPress website with just a few clicks.
@@ -27,7 +27,7 @@ For more information visit the [WPtouch Pro 3 Product Page](http://www.bravenewc
 
 == Changelog ==
 
-= Version 1.9.8.3 = 
+= Version 1.9.8.4 = 
 
 * Fixed: Issue with the settings page in the admin panel
 
