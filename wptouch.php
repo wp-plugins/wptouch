@@ -2,7 +2,7 @@
 /*
 Plugin Name: WPtouch Mobile Plugin
 Plugin URI: http://wordpress.org/extend/plugins/wptouch/
-Version: 1.9.8.2
+Version: 1.9.8.3
 Description: The easy way to deliver great mobile experiences for your visitors.
 Author: BraveNewCode Inc.
 Author URI: http://www.bravenewcode.com/wptouch/
@@ -28,7 +28,7 @@ License: GNU General Public License 2.0 (GPL) http://www.gnu.org/licenses/gpl.ht
 load_plugin_textdomain( 'wptouch', false, dirname( plugin_basename( __FILE__ ) ) );
 
 global $bnc_wptouch_version;
-$bnc_wptouch_version = '1.9.8.2';
+$bnc_wptouch_version = '1.9.8.3';
 
 require_once( 'include/plugin.php' );
 require_once( 'include/compat.php' );
@@ -94,7 +94,7 @@ function wptouch_init() {
 			die( 'Security Failure' );
 		} else {
 			wptouch_delete_icon( $_GET['delete_icon'] );
-			header( 'Location: ' . site_url() . '/wp-admin/options-general.php?page=wptouch/wptouch.php#available_icons' );
+			header( 'Location: ' . admin_url( 'options-general.php?page=wptouch-settings' ) . '#available_icons' ) ;
 			die;
 		}
 	}
@@ -178,7 +178,7 @@ function wp_touch_get_comment_count() {
 //Add a link to 'Settings' on the plugin listings page
 function wptouch_settings_link( $links, $file ) {
  	if( $file == 'wptouch/wptouch.php' && function_exists( "admin_url" ) ) {
-		$settings_link = '<a href="' . admin_url( 'options-general.php?page=wptouch/wptouch.php' ) . '">' . __('Settings') . '</a>';
+		$settings_link = '<a href="' . admin_url( 'options-general.php?page=wptouch-settings' ) . '">' . __('Settings') . '</a>';
 		array_push( $links, $settings_link ); // after other links
 	}
 	return $links;
