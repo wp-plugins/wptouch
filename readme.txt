@@ -10,17 +10,17 @@ Create a beautiful mobile WordPress website with just a few clicks.
 
 == Description ==
 
-WPtouch is a WordPress plugin that automatically enables a simple and elegant mobile theme for mobile visitors of your WordPress website. The mobile theme is complete with AJAX loading articles and smooth effects when viewed from popular touch mobile devices like the iPhone, iPod touch, Android mobile phones, BlackBerry OS6+ mobile devices, and more.
+WPtouch is a mobile plugin for WordPress that automatically enables a simple and elegant mobile theme for mobile visitors of your WordPress website. The mobile WordPress theme is complete with AJAX loading articles and smooth effects when viewed from popular touch mobile devices like the iPhone, iPod touch, Android mobile phones, BlackBerry OS6+ mobile devices, and more.
 
 The administration panel allows you to customize many aspects of its appearance, and deliver a *fast*, user-friendly and stylish version of your site to your mobile visitors, without modifying *a single bit of code* (or affecting) your regular desktop theme.
 
-The theme also includes the ability for visitors to switch between your mobile WordPress website and your website's regular theme.
+The theme also includes the ability for visitors to switch between the theme on your mobile WordPress website and your website's regular theme.
 
 **Now Available: WPtouch Pro 3**
 
 With all-new themes, an intuitive admin panel and great one-to-one ticketing support, it's the best WPtouch yet!
 
-For more information visit the [WPtouch Pro 3 Product Page](http://www.bravenewcode.com/wptouch/ "WPtouch Pro 3 Product Page").
+For more information visit the [WPtouch Pro 3 Product Page](http://www.bravenewcode.com/wptouch/?utm_campaign=wptouch-front-readme&utm_medium=web&utm_source=wordpressdotorg "WPtouch Pro 3 Product Page").
 
 'WPtouch' is a trademark of BraveNewCode Inc.
 'WPtouch Pro' is a registered trademark of BraveNewCode Inc.
