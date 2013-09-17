@@ -27,7 +27,7 @@ For more information visit the [WPtouch Pro 3 Product Page](http://www.bravenewc
 
 == Changelog ==
 
-= Version 1.9.9 = 
+= Version 1.9.8.3 = 
 
 * Fixed: Issue with the settings page in the admin panel
 
