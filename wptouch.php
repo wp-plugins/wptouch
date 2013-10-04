@@ -2,7 +2,7 @@
 /*
 Plugin Name: WPtouch Mobile Plugin
 Plugin URI: http://wordpress.org/extend/plugins/wptouch/
-Version: 1.9.8.5
+Version: 1.9.8.6
 Description: The easy way to deliver great mobile experiences for your visitors.
 Author: BraveNewCode Inc.
 Author URI: http://www.bravenewcode.com/wptouch/
@@ -28,7 +28,7 @@ License: GNU General Public License 2.0 (GPL) http://www.gnu.org/licenses/gpl.ht
 load_plugin_textdomain( 'wptouch', false, dirname( plugin_basename( __FILE__ ) ) );
 
 global $bnc_wptouch_version;
-$bnc_wptouch_version = '1.9.8.5';
+$bnc_wptouch_version = '1.9.8.6';
 
 require_once( 'include/plugin.php' );
 require_once( 'include/compat.php' );
@@ -192,6 +192,29 @@ function wptouch_admin_enqueue_files() {
 		wp_enqueue_script( 'jquery-fancybox', compat_get_plugin_url( 'wptouch' ) . '/js/fancybox_1.2.5.js', array( 'jquery-colorpicker' ) );
 		wp_enqueue_script( 'wptouch-bootstrap', '//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/js/bootstrap.min.js' );
 		wp_enqueue_script( 'wptouch-js', compat_get_plugin_url( 'wptouch' ) . '/js/admin_1.9.js', array( 'jquery-fancybox', 'wptouch-bootstrap' ) );
+	}
+
+	$settings = bnc_wptouch_get_settings();
+	if ( $settings[ 'share_data'] == 1 ) {
+		$now = time();
+
+		if ( $now > $settings['share_next_time'] ) {
+			global $bnc_wptouch_version;
+			$settings['share_next_time'] = time() + 24*3600;
+
+			$share_url = 'http://api.bravenewcode.com/v/3.3/check/api/';
+
+			$params = array(
+				'bncid_temp' => '',
+				'product_name' => 'wptouch',
+				'site' => $_SERVER['HTTP_HOST'],
+				'product_version' => $bnc_wptouch_version
+			);
+
+			wp_remote_post( $share_url, array( 'timeout' => 5, 'body' => $params ) );
+
+			update_option( 'bnc_iphone_pages', $settings );
+		}
 	}
 }
 

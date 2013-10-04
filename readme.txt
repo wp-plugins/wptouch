@@ -27,6 +27,10 @@ For more information visit the [WPtouch Pro 3 Product Page](http://www.bravenewc
 
 == Changelog ==
 
+= Version 1.9.8.6 =
+
+* Added: The ability to share usage statistics to help refine the product
+
 = Version 1.9.8.5 =
 
 * Updated: Footer text

@@ -52,5 +52,7 @@ $wptouch_defaults = array(
 	'enable-twenty-eleven-footer' => 0,
 	'enable-fixed-header' => false,
 	'ad_service' => 'adsense',
-	'show_powered_by' => false
+	'show_powered_by' => false,
+	'share_data' => false,
+	'share_next_time' => 0
 );

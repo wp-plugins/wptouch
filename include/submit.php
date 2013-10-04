@@ -268,6 +268,12 @@ if ( isset( $_POST['submit'] ) ) {
 		$a['show_powered_by'] = 0;
 	}
 
+	if ( isset( $_POST['enable-data-sharing'] ) ) {
+		$a['share_data'] = 1;
+	} else {
+		$a['share_data'] = 0;
+	}	
+
 	foreach ($_POST as $k => $v) {
 		if ($k == 'enable_main_title') {
 			$a['main_title'] = $v;
