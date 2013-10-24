@@ -2,7 +2,7 @@
 /*
 Plugin Name: WPtouch Mobile Plugin
 Plugin URI: http://wordpress.org/extend/plugins/wptouch/
-Version: 1.9.8.6
+Version: 1.9.8.7
 Description: The easy way to deliver great mobile experiences for your visitors.
 Author: BraveNewCode Inc.
 Author URI: http://www.bravenewcode.com/wptouch/
@@ -28,7 +28,7 @@ License: GNU General Public License 2.0 (GPL) http://www.gnu.org/licenses/gpl.ht
 load_plugin_textdomain( 'wptouch', false, dirname( plugin_basename( __FILE__ ) ) );
 
 global $bnc_wptouch_version;
-$bnc_wptouch_version = '1.9.8.6';
+$bnc_wptouch_version = '1.9.8.7';
 
 require_once( 'include/plugin.php' );
 require_once( 'include/compat.php' );

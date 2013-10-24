@@ -10,8 +10,8 @@
 			</div>
 				<div id="wptouch-head-links">
 					<ul>
+						<li><?php echo sprintf(__( "%sUpgrade to WPtouch Pro%s", "wptouch" ), '<a href="http://www.bravenewcode.com/wptouch/?utm_source=wordpress&amp;utm_medium=web&amp;utm_campaign=wptouch-free&utm_content=top-' . str_replace( '.', '', $bnc_wptouch_version ) . '" target="_blank">','</a>'); ?> | </li>
 						<li><?php echo sprintf(__( "%sDownload User's Guide%s", "wptouch" ), '<a href="http://bravenewcode.s3.amazonaws.com/wptouch/WPtouch%201.9.x%20Installation%20Guide.pdf">','</a>'); ?> | </li>
-						<li><?php echo sprintf(__( "%sUpgrade to WPtouch Pro%s", "wptouch" ), '<a href="http://www.bravenewcode.com/wptouch/?utm_source=wptouch-free&amp;utm_medium=web&amp;utm_campaign=top-' . str_replace( '.', '', $bnc_wptouch_version ) . '" target="_blank">','</a>'); ?> | </li>
 						<li><?php echo sprintf(__( "%sWPtouch on Twitter%s", "wptouch" ), '<a href="http://www.twitter.com/bravenewcode" target="_blank">','</a>'); ?> | </li>
 						<li><?php echo sprintf(__( "%sWPtouch on Facebook%s", "wptouch" ), '<a href="http://www.facebook.com/bravenewcode" target="_blank">','</a>'); ?></li>
 					</ul>

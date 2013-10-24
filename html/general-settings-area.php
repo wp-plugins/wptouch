@@ -9,7 +9,7 @@
 				<p><?php _e( "Select the language for WPtouch.  Custom .mo files should be placed in wp-content/wptouch/lang.", "wptouch" ); ?></p>
 				<br /><br />
 
-				<h4><?php _e( "Data Sharing", "wptouch" ); ?></h4>
+				<h4><?php _e( "Share", "wptouch" ); ?></h4>
 				<p><?php _e( "Help us to improve this free product by sharing your usage information", "wptouch" ); ?></p>
 				<br /><br />				
 
@@ -75,8 +75,12 @@
 						<input type="checkbox" class="checkbox" name="enable-data-sharing" <?php if (isset($wptouch_settings['share_data']) && $wptouch_settings['share_data'] == 1) echo('checked'); ?> />
 						<label for="enable-data-sharing"><?php _e( "Enable sharing of domain and version information", "wptouch" ); ?> </label>
 					</li>		
+					<li><input type="checkbox" class="checkbox" name="show_powered_by" <?php if ( isset($wptouch_settings['show_powered_by']) && $wptouch_settings['show_powered_by'] == 1) echo('checked'); ?> />
+						<label for="show_powered_by"><?php _e( "Proudly display 'Powered By WPtouch' in mobile theme footer", "wptouch" ); ?>
+						</label>
+					</li>
 				</ul>			
-				<br /><br /><br /><br />
+				<br /><br />
 
 				<p><label for="home-page"><strong><?php _e( "WPtouch Home Page", "wptouch" ); ?></strong></label></p>
 				<?php $pages = bnc_get_pages_for_icons(); ?>
