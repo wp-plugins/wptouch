@@ -78,7 +78,7 @@
 		<?php if (get_option('comment_registration') && !$user_ID) : ?>
 			<center>
 			<h1>
-				<?php sprintf( __( 'You must %slogin</a> or %sregister</a> to comment', 'wptouch' ), '<a href="' . bloginfo( 'url' ) . '/wp-login.php">', '<a href="' . site_url() . '"/wp-register.php">') ; ?>
+				<?php sprintf( __( 'You must %slogin</a> or %sregister</a> to comment', 'wptouch' ), '<a href="' . wp_login_url() . '">', '<a href="' . wp_registration_url() . '">') ; ?>
 			</h1>
 			</center>
 
@@ -95,7 +95,7 @@
 
 	<?php if ($user_ID) : ?>
 
-		<p class="logged"  id="respond"><?php _e( "Logged in as", "wptouch" ); ?> <a href="<?php bloginfo( 'url' ); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a>:</p>
+		<p class="logged"  id="respond"><?php _e( "Logged in as", "wptouch" ); ?> <a href="<?php echo admin_url( 'profile.php' ); ?>"><?php echo $user_identity; ?></a>:</p>
 	
 	<?php else : ?>
 	

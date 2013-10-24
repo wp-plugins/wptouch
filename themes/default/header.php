@@ -24,7 +24,7 @@ include( dirname(__FILE__) . '/../core/core-header.php' );
 <!--#start The Login Overlay -->
 	<div id="wptouch-login">
 		<div id="wptouch-login-inner">
-			<form name="loginform" id="loginform" action="<?php site_url(); ?>/wp-login.php" method="post">
+			<form name="loginform" id="loginform" action="<?php echo wp_login_url(); ?>" method="post">
 				<label><input type="text" name="log" id="log" placeholder="<?php _e("Username", "wptouch"); ?>" tabindex="1" value="" /></label>
 				<label><input type="password" name="pwd" placeholder="<?php _e("Password", "wptouch"); ?>" tabindex="2" id="pwd" value="" /></label>
 				<input type="hidden" name="rememberme" value="forever" />
@@ -90,19 +90,19 @@ include( dirname(__FILE__) . '/../core/core-header.php' );
 							<br /><br />
 							<?php _e( "Not registered yet?", "wptouch"); ?>
 							<br />
-							<?php echo sprintf(__( "You can %ssign-up here%s.", "wptouch" ), '<a href="' . site_url() . '/wp-register.php" target="_blank">','</a>'); ?>
+							<?php echo sprintf(__( "You can %ssign-up here%s.", "wptouch" ), '<a href="' . wp_registration_url() . '" target="_blank">','</a>'); ?>
 						<?php endif; ?>
 				    </li>
 				<?php } else { ?>
 					<?php if (current_user_can('edit_posts')) : ?>
-					<li><a href="<?php site_url(); ?>/wp-admin/"><?php _e("Admin", "wptouch"); ?></a></li>
+					<li><a href="<?php echo admin_url( '' ); ?>"><?php _e("Admin", "wptouch"); ?></a></li>
 					<?php endif; ?>
 					<?php if (get_option('comment_registration')) { ?>
-					<li><a href="<?php site_url(); ?>/wp-register.php"><?php _e( "Register for this site", "wptouch" ); ?></a></li>
+					<li><a href="<?php echo wp_registration_url(); ?>"><?php _e( "Register for this site", "wptouch" ); ?></a></li>
 					<?php } ?>
 					<?php if (is_user_logged_in()) { ?>
-					<li><a href="<?php site_url(); ?>/wp-admin/profile.php"><?php _e( "Account Profile", "wptouch" ); ?></a></li>
-					<li><a href="<?php $version = (float)get_bloginfo('version'); if ($version >= 2.7) { ?><?php echo wp_logout_url($_SERVER['REQUEST_URI']); } else { site_url(); ?>/wp-login.php?action=logout&redirect_to=<?php echo $_SERVER['REQUEST_URI']; ?><?php } ?>"><?php _e( "Logout", "wptouch" ); ?></a></li>
+					<li><a href="<?php echo admin_url( 'profile.php' ); ?>"><?php _e( "Account Profile", "wptouch" ); ?></a></li>
+					<li><a href="<?php echo wp_logout_url( $_SERVER['REQUEST_URI'] ); ?>"><?php _e( "Logout", "wptouch" ); ?></a></li>
 					<?php } ?>
 				<?php } ?>
 			</ul>

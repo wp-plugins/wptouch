@@ -29,6 +29,7 @@ For more information visit the [WPtouch Pro 3 Product Page](http://www.bravenewc
 
 = Version 1.9.8.7 =
 
+* Fixed: Issues with logging in and logging out with WordPress sites not in root
 * Updated: Information in readme about the new user manual
 * Updated: Links to user manual
 
