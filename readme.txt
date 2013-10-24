@@ -852,6 +852,10 @@ Once installed and activated visit the WPtouch admin page (*Settings/WPtouch*) t
 
 The best way to use WPtouch on WordPress Multisite Installations is to do so via the *Activate WPtouch Site Wide* (2.9) or *Network Activate* link in the plugins area.
 
+= User Manual =
+
+You can download the user manual from within the WPtouch administration panel.  It contains information on how to configure WPtouch.
+
 == Frequently Asked Questions ==
 
 = I thought most touch smartphones show my website fine the way it is now? =
