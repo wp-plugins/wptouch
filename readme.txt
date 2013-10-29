@@ -2,11 +2,11 @@
 Contributors: bravenewcode, duanestorey, dalemugford
 Tags: wptouch, iphone, ipod, bravenewcode, mobile, android, blackberry, smartphone, responsive, design, mobile plugin, ios, mobile theme
 Requires at least: 3.2
-Tested up to: 3.6.1
-Stable tag: 1.9.8.7
+Tested up to: 3.7
+Stable tag: 1.9.8.8
 License: GPLv2
 
-Create a beautiful mobile WordPress website with just a few clicks.
+Create a slick mobile WordPress website with just a few clicks.
 
 == Description ==
 
@@ -18,24 +18,27 @@ The theme also includes the ability for visitors to switch between the theme on 
 
 **Now Available: WPtouch Pro 3**
 
-With all-new themes, an intuitive admin panel and great one-to-one ticketing support, it's the best WPtouch yet!
+With 3 all-new themes, an intuitive admin panel and great one-to-one ticketing support, it's the best WPtouch yet!
 
 For more information visit the [WPtouch Pro 3 Product Page](http://www.bravenewcode.com/wptouch/?utm_campaign=wptouch-front-readme&utm_medium=web&utm_source=wordpressdotorg "WPtouch Pro 3 Product Page").
 
-'WPtouch' is a trademark of BraveNewCode Inc.
-'WPtouch Pro' is a registered trademark of BraveNewCode Inc.
+'WPtouch' & ’WPtouch Pro' are trademarks of BraveNewCode Inc.
 
 == Changelog ==
 
 = Version 1.9.8.7 =
 
-* Fixed: Issues with logging in and logging out with WordPress sites not in root
-* Updated: Information in readme about the new user manual
+* Verified WordPress 3.7 compatibility
+
+= Version 1.9.8.7 =
+
+* Fixed: Issues with logging in / out on sites not in root
+* Updated: Information in read me about the new user manual
 * Updated: Links to user manual
 
 = Version 1.9.8.6 =
 
-* Added: The ability to share usage statistics to help refine the product
+* Added: The ability to share usage statistics to help improve the product
 
 = Version 1.9.8.5 =
 
