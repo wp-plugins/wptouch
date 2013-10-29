@@ -26,7 +26,7 @@ For more information visit the [WPtouch Pro 3 Product Page](http://www.bravenewc
 
 == Changelog ==
 
-= Version 1.9.8.7 =
+= Version 1.9.8.8 =
 
 * Verified WordPress 3.7 compatibility
 
