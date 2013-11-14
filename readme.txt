@@ -1,9 +1,9 @@
 === Plugin Name ===
 Contributors: bravenewcode, duanestorey, dalemugford
 Tags: wptouch, iphone, ipod, bravenewcode, mobile, android, blackberry, smartphone, responsive, design, mobile plugin, ios, mobile theme
-Requires at least: 3.2
-Tested up to: 3.7
-Stable tag: 1.9.8.8
+Requires at least: 3.3
+Tested up to: 3.7.1
+Stable tag: 1.9.8.9
 License: GPLv2
 
 Create a slick mobile WordPress website with just a few clicks.
@@ -25,6 +25,10 @@ For more information visit the [WPtouch Pro 3 Product Page](http://www.bravenewc
 'WPtouch' & ’WPtouch Pro' are trademarks of BraveNewCode Inc.
 
 == Changelog ==
+
+= Version 1.9.8.9 =
+
+* Fix for Adsense settings issue
 
 = Version 1.9.8.8 =
 
