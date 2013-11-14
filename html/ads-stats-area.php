@@ -20,25 +20,25 @@
 						<?php _e( "Advertising Service", "wptouch" ); ?>
 					</li>
 				</ul>	
+				<div class="bnc-clearer"></div>
 			</div>			
-			<div class="bnc-clearer"></div>
-		</div>		
 		
-		<div id="google-adsense">
-			<div class="left-content">
-				<h4><?php _e( "Google Adsense", "wptouch" ); ?></h4>
-				<p><?php _e( "Enter your Google Adsense ID if you'd like use it to add support for mobile advertising in WPtouch posts.", "wptouch" ); ?></p>
-				<p><?php _e( "Make sure to include the 'pub-' part of your ID string.", "wptouch" ); ?></p>
-			</div>
-			
-			<div class="right-content">
-				<ul class="wptouch-make-li-italic">
-					<li><input name="adsense-id" type="text" value="<?php echo $wptouch_settings['adsense-id']; ?>" /><?php _e( "Google Adsense Publisher ID", "wptouch" ); ?></li>
-					<li><input name="adsense-slot-id" type="text" value="<?php echo $wptouch_settings['adsense-slot-id']; ?>" /><?php _e( "Google Adsense Slot ID", "wptouch" ); ?></li>
-				</ul>
-			</div>			
-			<div class="bnc-clearer"></div>
-		</div>	
+			<div id="google-adsense">
+				<div class="left-content">
+					<h4><?php _e( "Google Adsense", "wptouch" ); ?></h4>
+					<p><?php _e( "Enter your Google Adsense ID if you'd like use it to add support for mobile advertising in WPtouch posts.", "wptouch" ); ?></p>
+					<p><?php _e( "Make sure to include the 'pub-' part of your ID string.", "wptouch" ); ?></p>
+				</div>
+				
+				<div class="right-content">
+					<ul class="wptouch-make-li-italic">
+						<li><input name="adsense-id" type="text" value="<?php echo $wptouch_settings['adsense-id']; ?>" /><?php _e( "Google Adsense Publisher ID", "wptouch" ); ?></li>
+						<li><input name="adsense-slot-id" type="text" value="<?php echo $wptouch_settings['adsense-slot-id']; ?>" /><?php _e( "Google Adsense Slot ID", "wptouch" ); ?></li>
+					</ul>
+				</div>			
+				<div class="bnc-clearer"></div>
+			</div>	
+		</div>		
 		
 		<div id="main-stats-area">
 			<div class="left-content">
