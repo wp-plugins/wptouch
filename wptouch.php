@@ -9,7 +9,7 @@
 	Text Domain: wptouch-pro
 	Domain Path: /lang
 	License: GNU General Public License 2.0 (GPL) http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
-	Trademark: 'WPtouch' is an unregistered trademark of BraveNewCode Inc., and 'WPtouch Pro' is a registered trademark of BraveNewCode Inc.; neither term can not be re-used in conjuction with GPL v2 distributions or conveyances of this software under the license terms of the GPL v2 without express prior permission of BraveNewCode Inc.
+	Trademark: 'WPtouch' is an unregistered trademark of BraveNewCode Inc., and 'WPtouch Pro' is a registered trademark of BraveNewCode Inc.; neither term can be re-used in conjuction with GPL v2 distributions or conveyances of this software under the license terms of the GPL v2 without express prior permission of BraveNewCode Inc.
 */
 
 define( 'WPTOUCH_VERSION', '3.1.1' );
