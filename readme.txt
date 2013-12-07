@@ -6,7 +6,7 @@ Stable tag: 3.1.1
 Tested up to: 3.8
 License: GPLv2
 
-Create a slick mobile WordPress website like magic— with just a few clicks.
+Create a slick WordPress website like magic— with just a few clicks.
 
 == Description ==
 
