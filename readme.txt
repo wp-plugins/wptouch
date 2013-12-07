@@ -867,17 +867,10 @@ For more information visit the [WPtouch Pro 3 Product Page](http://www.bravenewc
 
 == Installation ==
 
-= 3.0 and Older =
-Sorry, we do not officially support installations on WordPress 3.0 or older.
-
-= 3.1+ =
+= WordPress 3.5+ =
 You can install *WPtouch* directly from the WordPress admin! Visit the *Plugins - > Add New* page and search for 'WPtouch'. Click to install.
 
-Once installed and activated visit the WPtouch admin page (*Settings/WPtouch*) to customize your WPtouch installation's appearance.
-
-= WordPress MU/Multisite =
-
-The best way to use WPtouch on WordPress Multisite Installations is to do so via the *Activate WPtouch Site Wide* (2.9) or *Network Activate* link in the plugins area.
+Once you have installed and activated WPtouch, visit the admin page via the sidebar menu to customize your WPtouch installation's appearance.
 
 = User Manual =
 
