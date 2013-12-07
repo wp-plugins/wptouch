@@ -898,7 +898,7 @@ function wptouchLoadTouchBoardImages() {
 			var ajaxParams = {};
 			wptouchAdminAjax( 'load-touchboard-area', ajaxParams, function( result ) {
 				touchboard.html( result );
-				setTimeout( function(){ wptouchAdminResize() }, 200 );
+				setTimeout( function(){ wptouchAdminResize() }, 500 );
 			});
 		}
 	}
