@@ -1,6 +1,6 @@
 <?php
 
-define( 'FOUNDATION_VERSION', '2.0' );
+define( 'FOUNDATION_VERSION', '2.0.1' );
 
 define( 'FOUNDATION_DIR', WPTOUCH_DIR . '/themes/foundation' );
 define( 'FOUNDATION_URL', WPTOUCH_URL . '/themes/foundation' );
@@ -93,8 +93,8 @@ function foundation_setting_defaults( $settings ) {
 	$settings->logo_image = '';
 
 	// Login
-	$settings->show_login_box = false;	
-	$settings->show_login_links = false;	
+	$settings->show_login_box = false;
+	$settings->show_login_links = false;
 
 	// Branding
 	$settings->typography_sets = 'default';
@@ -146,12 +146,13 @@ function foundation_setting_defaults( $settings ) {
 	$settings->social_facebook_url = '';
 	$settings->social_twitter_url = '';
 	$settings->social_google_url = '';
+	$settings->social_tumblr_url = '';
 	$settings->social_pinterest_url = '';
 	$settings->social_vimeo_url = '';
+	$settings->social_youtube_url = '';
 	$settings->social_linkedin_url = '';
 	$settings->social_email_url = '';
 	$settings->social_rss_url = '';
-	$settings->social_youtube_url = '';
 
 	// Custom Content
 	$settings->custom_footer_message = '';
@@ -161,7 +162,7 @@ function foundation_setting_defaults( $settings ) {
 	$settings->featured_autoslide = false;
 	$settings->featured_continuous = false;
 	$settings->featured_grayscale = false;
-	$settings->featured_title_date = true;	
+	$settings->featured_title_date = true;
 	$settings->featured_type = 'latest';
 	$settings->featured_tag = '';
 	$settings->featured_category = '';
@@ -341,8 +342,8 @@ function foundation_render_theme_settings( $page_options ) {
 			__( 'Overrides the WordPress settings for showing comments on pages.', 'wptouch-pro' ),
 			WPTOUCH_SETTING_BASIC,
 			'1.0'
-		)	
-	);	
+		)
+	);
 
 	$foundation_page_settings = apply_filters( 'foundation_settings_pages', $foundation_page_settings );
 
@@ -478,7 +479,7 @@ function foundation_render_theme_settings( $page_options ) {
 		$page_options,
 		FOUNDATION_SETTING_DOMAIN
 	);
-	
+
 	wptouch_add_page_section(
 		FOUNDATION_PAGE_BRANDING,
 		__( 'Theme Footer', 'wptouch-pro' ),
@@ -600,7 +601,7 @@ function foundation_load_theme_modules() {
 				require_once( $alternate_location );
 
 				$defined_name = 'WPTOUCH_MODULE_' . str_replace( '-', '_', strtoupper( $module ) ) . '_INSTALLED';
-				define( $defined_name, '1' );				
+				define( $defined_name, '1' );
 			}
 		}
 
@@ -666,23 +667,23 @@ function foundation_body_classes( $classes ) {
 			$classes[] = 'landscape';
 		}
 	}
-	
+
 	// iOS Device
 	if ( strpos( $_SERVER['HTTP_USER_AGENT'],'iPhone' ) || strpos( $_SERVER['HTTP_USER_AGENT'],'iPod' ) || strpos( $_SERVER['HTTP_USER_AGENT'],'iPad' ) ) {
-			$classes[] = 'ios';		
+			$classes[] = 'ios';
 	}
 
 	// Android Device
 	if ( strpos( $_SERVER['HTTP_USER_AGENT'],'Android' ) ) {
-			$classes[] = 'android';		
+			$classes[] = 'android';
 	}
-	
+
 	if ( wptouch_should_load_rtl() ) {
 		$classes[] = 'rtl';
 	}
-	
+
 	if ( wptouch_fdn_iOS_7() ) {
-		$classes[] = 'ios7';		
+		$classes[] = 'ios7';
 	}
 
 	return $classes;
@@ -1034,7 +1035,7 @@ function foundation_insert_multipage_links( $content ) {
 function foundation_number_of_posts_to_show() {
 	$settings = wptouch_get_settings( 'foundation' );
 	$num_posts = $settings->posts_per_page;
-	return $num_posts;	
+	return $num_posts;
 }
 
 

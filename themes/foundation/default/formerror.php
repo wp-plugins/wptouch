@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 	<div id="content">
-		<div class="<?php wptouch_post_classes(); ?> comment-error">
+		<div class="comment-error">
 			<h2 class="heading-font">
 				<?php _e( 'Comment Error', 'wptouch-pro' ); ?>
 			</h2>

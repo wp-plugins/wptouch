@@ -1,8 +1,8 @@
 === Plugin Name ===
 Contributors: bravenewcode, duanestorey, dalemugford
 Tags: wptouch, iphone, ipod, bravenewcode, mobile, android, blackberry, smartphone, responsive, design, mobile plugin, ios, mobile theme
-Requires at least: 3.5
-Stable tag: 3.1.1
+Requires at least: 3.6
+Stable tag: 3.1.3
 Tested up to: 3.8
 License: GPLv2
 
@@ -33,18 +33,29 @@ For more information visit the [WPtouch Pro 3 Product Page](http://www.bravenewc
 5. Footer area on a single post w/ comments
 6. Page w/ featured image
 7. Drop-down menu showing a custom WordPress menu and child page tree navigation
-8. WPtouch admin - What’s New 
+8. WPtouch admin - What’s New
 9. WPtouch admin - Core Settings
 10. WPtouch admin - Theme Branding Settings
 11. WPtouch admin - Menu Setup
 
 == Changelog ==
 
+= Version 3.1.3 (Dec 13th, 2013) =
+
+* Added: Support for WordPress 3.8
+* Added: Support for all 8 WordPress 3.8 color schemes!
+* Changed: Featured gallery images and thumbnails now fallback to WordPress sizes if WPtouch's versions haven't been created yet (big speed boost!)
+* Changed: Featured image placeholder no longer shows a pencil icon; instead it shows the post date
+* Fixed: An issue which could cause the featured slider to be show even though it was disabled
+* Fixed: An issue which could cause problems related to formerror.php
+* Fixed: Removed call to erroneous get_error() function in Cloud migration routines
+* Fixed: Small file operations issues
+
 = Version 3.1.1 (Dec 6th, 2013) =
 
-* Updated: Everything.
-* Changed: Everything.
-* Fixed: Everything.
+* Updated: Everything ;)
+* Changed: Everything ;)
+* Fixed: Everything ;)
 
 = Version 1.9.8.9 =
 
@@ -68,7 +79,7 @@ For more information visit the [WPtouch Pro 3 Product Page](http://www.bravenewc
 
 * Updated: Footer text
 
-= Version 1.9.8.4 = 
+= Version 1.9.8.4 =
 
 * Fixed: Issue with the settings page in the admin panel
 
@@ -167,12 +178,12 @@ For more information visit the [WPtouch Pro 3 Product Page](http://www.bravenewc
 * Removed: AppStores support - please visit the AppStores website for the Javascript code to use if you'd like to continue using it
 * Changed: Updated fitvids() video script
 
-= Version 1.9.39 = 
+= Version 1.9.39 =
 
 * Fixed: Admin styling issues on some WordPress versions
 * Changed: File and image optimizations
 
-= Version 1.9.38 = 
+= Version 1.9.38 =
 
 * Added: Advertising integration with Appstores
 * Changed: Updated video code for better handling of videos
@@ -741,7 +752,7 @@ For more information visit the [WPtouch Pro 3 Product Page](http://www.bravenewc
 * Added option to do GZIP compression
 * Suppressed warning about multiple gzhandlers
 * Fixed user agent detection code
-* Added ability to choose if WPtouch or regular version of your site is shown first 
+* Added ability to choose if WPtouch or regular version of your site is shown first
 * Fixed WP login/out button bugs
 * Added login/out auto-detect for WP 2.7 or pre-WP 2.7 sites
 * Fixed loading path issue that caused drop-down menu button to fail
@@ -860,7 +871,7 @@ For more information visit the [WPtouch Pro 3 Product Page](http://www.bravenewc
 * bug fixes for blogs installed in directories other than root
 
 
-= Version 1.0 = 
+= Version 1.0 =
 
 * Initial release
 
@@ -880,15 +891,15 @@ You can download the user manual from within the WPtouch administration panel.  
 
 = I thought most touch smartphones show my website fine the way it is now? =
 
-Yes, that's true in general. However *not all websites are created equal, with some sites significantly failing to translate well in small mobile device viewports. 
+Yes, that's true in general. However *not all websites are created equal, with some sites significantly failing to translate well in small mobile device viewports.
 
-Many WordPress sites today also make heavy use of a variety of javascript, css and image files which significantly increase load times, in turn driving visitors on data connections crazy, often causing them to abandon your site altogether. 
+Many WordPress sites today also make heavy use of a variety of javascript, css and image files which significantly increase load times, in turn driving visitors on data connections crazy, often causing them to abandon your site altogether.
 
 We created *WPtouch* to be a lightweight, fast-loading, feature-rich mobile plugin to add a theme shown to mobile visitors. The plugin includes an admin panel for customizing many aspects of your site's presentation when showing the mobile theme.
 
 = Well, what if my users don't like it and want to see my regular site? =
 
-There's a theme switch in the footer area of *WPtouch* for your visitors to easily switch between the *WPtouch* view and your site's regular appearance. 
+There's a theme switch in the footer area of *WPtouch* for your visitors to easily switch between the *WPtouch* view and your site's regular appearance.
 
 We even automatically put a little snippet of code into your current desktop theme which will be shown only to iPhone, iPod touch, Android or BlackBerry touch mobile device visitors, giving them control to switch between the two themes easily.
 

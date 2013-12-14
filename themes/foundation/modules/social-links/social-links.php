@@ -31,7 +31,7 @@ function foundation_social_links_settings( $page_options ) {
 				__( 'Full URL to your Twitter profile', 'wptouch-pro' ),
 				WPTOUCH_SETTING_BASIC,
 				'1.0'
-			),			
+			),
 			wptouch_add_setting(
 				'text',
 				'social_google_url',
@@ -39,7 +39,15 @@ function foundation_social_links_settings( $page_options ) {
 				__( 'Full URL to your Google+ profile', 'wptouch-pro' ),
 				WPTOUCH_SETTING_BASIC,
 				'1.0'
-			),							
+			),
+			wptouch_add_setting(
+				'text',
+				'social_tumblr_url',
+				__( 'Tumblr', 'wptouch-pro' ),
+				__( 'Full URL to your Tumblr profile', 'wptouch-pro' ),
+				WPTOUCH_SETTING_BASIC,
+				'2.0.1'
+			),
 			wptouch_add_setting(
 				'text',
 				'social_pinterest_url',
@@ -47,7 +55,7 @@ function foundation_social_links_settings( $page_options ) {
 				__( 'Full URL to your Pinterest page', 'wptouch-pro' ),
 				WPTOUCH_SETTING_BASIC,
 				'1.0.2'
-			),			
+			),
 			wptouch_add_setting(
 				'text',
 				'social_vimeo_url',
@@ -55,7 +63,7 @@ function foundation_social_links_settings( $page_options ) {
 				__( 'Full URL to your Vimeo page', 'wptouch-pro' ),
 				WPTOUCH_SETTING_BASIC,
 				'1.0.2'
-			),	
+			),
 			wptouch_add_setting(
 				'text',
 				'social_youtube_url',
@@ -63,7 +71,7 @@ function foundation_social_links_settings( $page_options ) {
 				sprintf( __( 'Full URL to your %s profile', 'wptouch-pro' ), 'YouTube' ),
 				WPTOUCH_SETTING_BASIC,
 				'1.0.5'
-			),						
+			),
 			wptouch_add_setting(
 				'text',
 				'social_linkedin_url',
@@ -99,47 +107,50 @@ function foundation_social_links_settings( $page_options ) {
 
 function foundation_social_show_one_link( $href, $social_service, $friendly ) {
 	$link = '<li><a href="' . $href . '" class="social-footer-badges no-ajax icon-' . $social_service . '" role="button" title="' . $friendly . '" target="_blank"></a></li>';
-	
+
 	$link_data = new stdClass;
 	$link_data->href = $href;
-	$link_data->service = $social_service; 
-	$link_data->friendly = $friendly;	
+	$link_data->service = $social_service;
+	$link_data->friendly = $friendly;
 	echo apply_filters( 'foundation_social_show_link', $link, $link_data );
 }
 
 function foundation_social_links(){
 	$settings = foundation_get_settings();
-	
+
 	do_action( 'foundation_social_pre_output' );
-	
+
 	if ( $settings->social_twitter_url ) {
 		foundation_social_show_one_link( $settings->social_twitter_url, 'twitter', 'Twitter' );
-	} 
+	}
 	if ( $settings->social_facebook_url ) {
 		foundation_social_show_one_link( $settings->social_facebook_url, 'facebook-sign', 'Facebook' );
-	} 
-	if ( $settings->social_google_url ) {		
+	}
+	if ( $settings->social_google_url ) {
 		foundation_social_show_one_link( $settings->social_google_url, 'google-plus', 'Google+' );
-	} 
-	if ( $settings->social_pinterest_url ) {		
+	}
+	if ( $settings->social_tumblr_url ) {
+		foundation_social_show_one_link( $settings->social_tumblr_url, 'tumblr', 'Tumblr' );
+	}
+	if ( $settings->social_pinterest_url ) {
 		foundation_social_show_one_link( $settings->social_pinterest_url, 'pinterest-sign', 'Pinterest' );
-	} 
-	if ( $settings->social_vimeo_url ) {		
+	}
+	if ( $settings->social_vimeo_url ) {
 		foundation_social_show_one_link( $settings->social_vimeo_url, 'ticket', 'Vimeo' );
-	} 
-	if ( $settings->social_youtube_url ) {		
-		foundation_social_show_one_link( $settings->social_youtube_url, 'youtube', 'YouTube' );		
-	} 
-	if ( $settings->social_linkedin_url ) {		
+	}
+	if ( $settings->social_youtube_url ) {
+		foundation_social_show_one_link( $settings->social_youtube_url, 'youtube', 'YouTube' );
+	}
+	if ( $settings->social_linkedin_url ) {
 		foundation_social_show_one_link( $settings->social_linkedin_url, 'linkedin-sign', 'LinkedIn' );
-	} 
+	}
 	if ( $settings->social_email_url ) {
 		foundation_social_show_one_link( 'mailto:' . $settings->social_email_url, 'envelope-alt', 'Mail' );
-	} 
-	if ( $settings->social_rss_url ) {		
+	}
+	if ( $settings->social_rss_url ) {
 		foundation_social_show_one_link( $settings->social_rss_url, 'rss-sign', 'RSS' );
 	}
-	
+
 	do_action( 'foundation_social_post_output' );
 }
 

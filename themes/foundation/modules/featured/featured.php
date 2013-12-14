@@ -13,29 +13,33 @@ global $foundation_featured_data;
 
 
 function foundation_featured_init() {
-	wp_enqueue_script( 
-		'foundation_featured', 
-		foundation_get_base_module_url() . '/featured/swipe.js',
-		false,
-		FOUNDATION_VERSION,
-		true
-	);
+	$settings = foundation_get_settings();
+	if ( $settings->featured_enabled ) {
 
-	wp_enqueue_script( 
-		'foundation_featured_init', 
-		foundation_get_base_module_url() . '/featured/wptouch-swipe.js',
-		'foundation_featured',
-		FOUNDATION_VERSION,
-		true
-	);
+		wp_enqueue_script(
+			'foundation_featured',
+			foundation_get_base_module_url() . '/featured/swipe.js',
+			false,
+			FOUNDATION_VERSION,
+			true
+		);
 
-	foundation_determine_images();
+		wp_enqueue_script(
+			'foundation_featured_init',
+			foundation_get_base_module_url() . '/featured/wptouch-swipe.js',
+			'foundation_featured',
+			FOUNDATION_VERSION,
+			true
+		);
+
+		foundation_determine_images();
+	}
 }
 
 function foundation_featured_setup() {
 	if ( function_exists( 'add_theme_support' ) ) {
 		add_theme_support( 'post-thumbnails' );
-		add_image_size( 'foundation-featured-image', 900, 9999, false ); 
+		add_image_size( 'foundation-featured-image', 900, 9999, false );
 	}
 }
 
@@ -51,16 +55,16 @@ function foundation_featured_modify_query( $query ) {
 		return;
 	}
 
-	$should_be_ignored = apply_filters( 
-		'foundation_featured_should_modify_query', 
-		$query->is_single || $query->is_page || $query->is_feed || $query->is_search || $query->is_archive || $query->is_category, 
-		$query 
+	$should_be_ignored = apply_filters(
+		'foundation_featured_should_modify_query',
+		$query->is_single || $query->is_page || $query->is_feed || $query->is_search || $query->is_archive || $query->is_category,
+		$query
 	);
 
 	if ( $should_be_ignored ) {
 		return;
 	}
-	
+
 	global $foundation_featured_posts;
 
 	if ( count( $foundation_featured_posts ) < FOUNDATION_FEATURED_MIN_NUM ) {
@@ -90,10 +94,10 @@ function foundation_featured_get_args() {
 		'show_dots' => true,		// might not be needed
 		'before' => '',
 		'after' => '',
-		'max_search' => 20	
-	);	
+		'max_search' => 20
+	);
 	// Parse defaults into arguments
-	return wp_parse_args( $foundation_featured_args, $defaults );			
+	return wp_parse_args( $foundation_featured_args, $defaults );
 }
 
 function foundation_determine_images() {
@@ -119,25 +123,37 @@ function foundation_determine_images() {
 		case 'posts':
 			$post_ids = explode( ',', str_replace( ' ', '', $settings->featured_post_ids ) );
 			if ( is_array( $post_ids ) && count( $post_ids ) ) {
-				$new_posts = new WP_Query( array( 'post__in'  => $post_ids, 'posts_per_page' => $args[ 'max_search' ], 'post_type' => 'any' ) );	
+				$new_posts = new WP_Query( array( 'post__in'  => $post_ids, 'posts_per_page' => $args[ 'max_search' ], 'post_type' => 'any' ) );
 			}
 			break;
 		case 'latest':
 		default:
-			break;			
+			break;
 	}
 
 	if ( !$new_posts ) {
 		$new_posts = new WP_Query( 'posts_per_page=' . $args[ 'max_search' ] );
 	}
-	
-	while ( $new_posts->have_posts() ) { 
-		$new_posts->the_post();	
+
+	while ( $new_posts->have_posts() ) {
+		$new_posts->the_post();
 
 		$image = get_the_post_thumbnail( $post->ID, 'foundation-featured-image' );
-		$real_image = preg_match( '#src=\"(.*)\"#iU', $image, $matches );		
 
-		if ( $real_image ) {
+		if ( preg_match( '#src=\"(.*)\"#iU', $image, $matches ) ) {
+			$image = $matches[1];
+
+			$our_size = sprintf( "%d", WPTOUCH_FEATURED_SIZE );
+			if ( strpos( $image, $our_size ) === false ) {
+				// It's not our image, so just use the WP medium size
+				$image = get_the_post_thumbnail( $post->ID, 'large' );
+				if ( preg_match( '#src=\"(.*)\"#iU', $image, $matches ) ) {
+					$image = $matches[1];
+				}
+			}
+		}
+
+		if ( $image ) {
 			$results = new stdClass;
 			$results->image = $matches[1];
 			$results->date = get_the_date();
@@ -154,7 +170,7 @@ function foundation_determine_images() {
 		if ( count( $foundation_featured_data ) == $args[ 'num' ] ) {
 			break;
 		}
-	}	
+	}
 
 	add_filter( 'parse_query', 'foundation_featured_modify_query' );
 }
@@ -172,12 +188,12 @@ function foundation_featured_get_slider_classes() {
 
 	if ( $settings->featured_grayscale ) {
 		$featured_classes[] = 'grayscale';
-	} 
-	
+	}
+
 	if ( $settings->featured_autoslide ) {
 		$featured_classes[] = 'slide';
-	} 
-	
+	}
+
 	if ( $settings->featured_continuous ) {
 		$featured_classes[] = 'continuous';
 	}
@@ -190,7 +206,7 @@ function foundation_featured_get_slider_classes() {
 			$featured_classes[] = 'fast';
 			break;
 	}
-	
+
 	return $featured_classes;
 }
 
@@ -198,8 +214,8 @@ function foundation_featured_slider() {
 	global $foundation_featured_data;
 	$args = foundation_featured_get_args();
 	$settings = foundation_get_settings();
-	
-	if ( count( $foundation_featured_data ) >= FOUNDATION_FEATURED_MIN_NUM ) {
+
+	if ( ( count( $foundation_featured_data ) >= FOUNDATION_FEATURED_MIN_NUM ) && $settings->featured_enabled ) {
 		echo $args['before'];
 
 		echo "<div id='slider' class='" . implode( ' ', foundation_featured_get_slider_classes() ) . "'>\n";
@@ -213,14 +229,14 @@ function foundation_featured_slider() {
 			if ( $settings->featured_title_date ) {
 				echo "<p class='featured-date'>". $image_data->date . "</p>";
 				echo "<p class='featured-title'><span>". $image_data->title . "</span></p>";
-			}			
+			}
 			echo "</a>";
 			echo "</div>";
 		}
-		
+
 		echo "</div>\n";
 		echo "</div>\n";
-		echo $args['after'];		
+		echo $args['after'];
 	}
 }
 
@@ -291,7 +307,7 @@ function foundation_featured_settings( $page_options ) {
 				'',
 				WPTOUCH_SETTING_BASIC,
 				'1.0.3'
-			),				
+			),
 			wptouch_add_setting(
 				'list',
 				'featured_speed',
