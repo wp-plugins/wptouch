@@ -1,0 +1,2626 @@
+# Copyright (C) 2013
+# This file is distributed under the same license as the  package.
+msgid ""
+msgstr "Project-Id-Version:  \nReport-Msgid-Bugs-To: http://wordpress.org/tag/combined\nPOT-Creation-Date: 2013-11-26 12:08:18+00:00\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPO-Revision-Date: 2013-MO-DA HO:MI+ZONE\nLast-Translator: FULL NAME <EMAIL@ADDRESS>\nLanguage-Team: LANGUAGE <LL@li.org>\n"
+
+#: wptouch-pro-3/admin/html/help.php:1
+msgid "WPtouch Pro Help & Account Links"
+msgstr "المساعدة وروابط حساب WPtouch Pro"
+
+#: wptouch-pro-3/admin/html/help.php:3
+msgid "Support Forums"
+msgstr "منتديات الدعم"
+
+#: wptouch-pro-3/admin/html/help.php:4
+msgid "Documentation"
+msgstr "الوثائق"
+
+#: wptouch-pro-3/admin/html/help.php:5
+msgid "Account & Downloads"
+msgstr "الحساب والتنزيلات"
+
+#: wptouch-pro-3/admin/html/help.php:6
+msgid "BraveNewCode on Twitter"
+msgstr "BraveNewCode على تويتر"
+
+#: wptouch-pro-3/admin/html/help.php:7
+msgid "Plugin Licensing Terms"
+msgstr "شروط ترخيص الملحق"
+
+#: wptouch-pro-3/admin/html/notification-center.php:5
+msgid "Notifications"
+msgstr "الإشعارات"
+
+#: wptouch-pro-3/admin/html/notification-content.php:20
+msgid "No notifications"
+msgstr "لا توجد إشعارات"
+
+#: wptouch-pro-3/admin/html/plugin-area.php:7
+msgid "This copy of WPtouch Pro is unlicensed! Please %sactivate your license%s, or %spurchase a license%s to enable automatic updates and full product support from us!"
+msgstr "هذه النسخة من WPtouch Pro غير مرخصة! برجاء %sتفعيل ترخيصك%s، أو %sشراء ترخيص%s لتفعيل التحديث التلقائي والدعم الكامل للمنتج المقدم من خلالنا!"
+
+#: wptouch-pro-3/admin/html/plugin-area.php:9
+msgid "This copy of WPtouch Pro is unlicensed! Please contact the site administrator regarding product licensing."
+msgstr "هذه النسخة من WPtouch Pro غير مرخصة! برجاء التواصل مع مدير الموقع حول ترخيص المنتج."
+
+#: wptouch-pro-3/admin/pages/custom/wptouch-admin-license.php:9
+msgid "License Details"
+msgstr "تفاصيل الترخيص"
+
+#: wptouch-pro-3/admin/pages/custom/wptouch-admin-license.php:11
+msgid "Note"
+msgstr "ملاحظة"
+
+#: wptouch-pro-3/admin/pages/custom/wptouch-admin-license.php:12
+msgid "Once you activate, this page will be hidden."
+msgstr "بمجرد تفعيلك، سيتم إخفاء هذه الصفحة."
+
+#: wptouch-pro-3/admin/pages/custom/wptouch-admin-license.php:15
+msgid "It will only reappear if you reset your WPtouch Pro settings."
+msgstr "لن تظهر مرةً أخرى إلا إذا قمت بإعادة تنضيد إعدادات WPtouch Pro."
+
+#: wptouch-pro-3/admin/pages/custom/wptouch-admin-license.php:18
+msgid "Account E-Mail Address"
+msgstr "البريد الإلكتروني للحساب"
+
+#: wptouch-pro-3/admin/pages/custom/wptouch-admin-license.php:20
+msgid "Product License Key"
+msgstr "مفتاح ترخيص المنتج"
+
+#: wptouch-pro-3/admin/pages/custom/wptouch-admin-license.php:23
+#: wptouch-pro-3/admin/settings/html/theme-browser-item.php:14
+#: wptouch-pro-3/pro/settings/html/extension-browser-item.php:71
+#: wptouch-pro-3/pro/settings/html/theme-browser-item.php:109
+msgid "Activate"
+msgstr "تنشيط"
+
+#: wptouch-pro-3/admin/pages/custom/wptouch-admin-license.php:33
+msgid "Success."
+msgstr "نجحت العملية."
+
+#: wptouch-pro-3/admin/pages/custom/wptouch-admin-license.php:34
+msgid "Activation Complete. Enjoy WPtouch Pro!"
+msgstr "اكتمل التفعيل. استمتع بتطبيق WPtouch Pro!"
+
+#: wptouch-pro-3/admin/pages/custom/wptouch-admin-license.php:38
+msgid "E-mail address or license key rejected"
+msgstr "حدث رفض لعنوان البريد الإلكتروني أو مفتاح الترخيص"
+
+#: wptouch-pro-3/admin/pages/custom/wptouch-admin-license.php:39
+msgid "The bravenewcode.com server rejected your E-Mail address and/or License Key. Please check they are correct and try again."
+msgstr "قام خادم bravenewcode.com برفض بريدك الإلكتروني و/أو مفتاح الترخيص. برجاء التحقق من صحتهما ثم المحاولة مرةً أخرى."
+
+#: wptouch-pro-3/admin/pages/custom/wptouch-admin-license.php:43
+msgid "No licenses remaining."
+msgstr "لم تعد هناك رخص متاحة."
+
+#: wptouch-pro-3/admin/pages/custom/wptouch-admin-license.php:44
+msgid "You have used all your activations. What do you want to do?"
+msgstr "لقد استخدمت جميع ترخيصاتك. ماذا تريد أن تفعل الآن؟"
+
+#: wptouch-pro-3/admin/pages/custom/wptouch-admin-license.php:45
+msgid "Upgrade My License"
+msgstr "ترقية ترخيصي"
+
+#: wptouch-pro-3/admin/pages/custom/wptouch-admin-license.php:46
+msgid "Contact support for assistance"
+msgstr "اتصل بالدعم لطلب المساعدة"
+
+#: wptouch-pro-3/admin/pages/custom/wptouch-admin-license.php:50
+msgid "The server is unavailable."
+msgstr "الخادم غير متاح."
+
+#: wptouch-pro-3/admin/pages/custom/wptouch-admin-license.php:51
+msgid "The bravenewcode.com server currently cannot authorize your License."
+msgstr "لا يمكن لخادم bravenewcode.com حاليًا أن يجيز ترخيصك."
+
+#: wptouch-pro-3/admin/pages/custom/wptouch-admin-license.php:52
+msgid "Please %scontact us%s and let us know about it."
+msgstr "برجاء %sاتصل بنا%s وأطلعنا عليه."
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:3
+#: wptouch-pro-3/themes/foundation/root-functions.php:10
+msgid "General"
+msgstr "عام"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:4
+msgid "Compatibility"
+msgstr "الملائمة"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:10
+msgid "Auto-detect"
+msgstr "الكشف التلقائي"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:45
+msgid "Site Title & Byline"
+msgstr "عنوان الموقع والعنوان الثانوي"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:51
+msgid "WPtouch Pro site title"
+msgstr "عنوان موقع WPtouch Pro"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:52
+msgid "If the title of your site is long, you can shorten it for display within WPtouch Pro themes."
+msgstr "إذا كان عنوان موقعك طويلاً، يمكنك جعله أقصر للعرض في سمات WPtouch Pro."
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:59
+msgid "Display %sPowered by WPtouch Pro%s in footer"
+msgstr "عرض %sمدعوم من WPtouch Pro%s في ذيل الصفحة"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:71
+msgid "Regionalization"
+msgstr "الأقلمة"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:77
+msgid "Language"
+msgstr "اللغة"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:78
+msgid "The WPtouch Pro admin panel &amp; supported themes will be shown in this locale."
+msgstr "سيتم عرض لوحة تحكم مدير WPtouch Pro والسمات المدعومة في هذا الموضع."
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:86
+msgid "Translate administration panel text"
+msgstr "ترجمة نص لوحة تحكم المدير"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:97
+msgid "Display Mode"
+msgstr "وضع العرض"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:103
+msgid "Theme Display"
+msgstr "عرض السمة"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:108
+msgid "Normal (active for all mobile visitors)"
+msgstr "عادي (نشط لجميع زوار الهواتف المحمولة)"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:109
+msgid "Preview (active only for logged-in site administrators)"
+msgstr "عرض (نشط فقط لمدراء الموقع مسجلي الدخول)"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:110
+msgid "Disabled (mobile theme will never show)"
+msgstr "معطل (لن يتم عرض سمة الهواتف المحمولة نهائيًا)"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:119
+msgid "Landing Page"
+msgstr "الصفحة المقصودة"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:125
+msgid "WPtouch Pro landing page"
+msgstr "صفحة WPtouch Pro المقصودة"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:130
+msgid "Default (same as WordPress)"
+msgstr "افتراضي (تمامًا مثل WordPress)"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:131
+msgid "Select from WordPress pages"
+msgstr "اختر من صفحات WordPress"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:139
+msgid "Custom Slug or URL"
+msgstr "رابط لطيف أو رابط كامل مخصص"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:140
+msgid "Enter a Slug (i.e. \"/home\") or a full URL path"
+msgstr "قم بإدخال رابط لطيف (مثل \"/home\") أو رابط مسار كامل"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:150
+msgid "Desktop / Mobile Switching"
+msgstr "التبديل بين سطح المكتب/الهاتف المحمول"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:156
+msgid "1st time visitors see desktop theme"
+msgstr "عرض سمة سطح المكتب لزوار المرة الأولى"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:157
+msgid "Your regular theme will be shown to 1st time mobile visitors."
+msgstr "سيتم عرض السمة العادية أولاً لزوار الهواتف المحمولة من أصحاب الزيارة الأولى."
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:164
+msgid "Show switch link in mobile view"
+msgstr "عرض رابط التحويل في سمة الهاتف المحمول"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:165
+msgid "Will show toggle buttons in the theme's footer allowing users to switch to your desktop theme. Is not shown in Web-App Mode."
+msgstr "سيتم عرض أزرار التحويل في ذيل السمة للسماح للمستخدمين بالتحويل إلى سمة سطح المكتب. غير معروض في وضع تطبيق الويب."
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:172
+msgid "Choose the target for the mobile switch link"
+msgstr "اختر الهدف لرابط التحويل للهاتف المحمول"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:177
+msgid "Current page"
+msgstr "الصفحة الحالية"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:178
+msgid "Home page"
+msgstr "الصفحة الرئيسية"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:184
+msgid "Desktop theme switch buttons"
+msgstr "أزرار التحويل لسمة سطح المكتب"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:185
+msgid "Allows visitors to switch from your desktop theme to your mobile theme. You can also customize the placement of Switch buttons by placing the wptouch_desktop_switch_link() template tag somewhere in your desktop theme."
+msgstr "يسمح للزوار بالتحويل من سمة سطح المكتب إلى سمة الهاتف المحمول. كما يمكنك مواءمة وضع أزرار التحويل عن طريق وضع الرابط الذكي للقالب wptouch_desktop_switch_link() في مكانٍ ما في سمة سطح المكتب."
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:189
+msgid "Automatically inserted inline"
+msgstr "يتم الإدخال تلقائيًا كجزء مضمن"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:190
+msgid "Automatically inserted with AJAX (better for caching)"
+msgstr "يتم الإدخال تلقائيًا باستخدام AJAX (أفضل للتخزين المؤقت)"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:191
+msgid "Template tag"
+msgstr "الرابط الذكي للقالب"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:200
+msgid "Custom Code"
+msgstr "كود مخصص"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:206
+msgid "HTML, JavaScript, statistics or custom code"
+msgstr "HTML، أو JavaScript، أو إحصائيات، أو كود مخصص"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:207
+msgid "Enter any custom code here to be output in the theme footer."
+msgstr "أدخل أي كود مخصص هنا ليظهر في ذيل السمة."
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:217
+msgid "Custom Stylesheet"
+msgstr "ورقة أنماط مخصصة"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:223
+msgid "URL to a custom CSS file to load"
+msgstr "رابط URL إلى ملف CSS مخصص للتحميل"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:224
+msgid "Useful if you have specific compatibility CSS you need to add."
+msgstr "من المفيد إذا كانت لديك ورقة النمط CSS المحددة المتوافقة التي تحتاج إلى إضافتها."
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:234
+msgid "Shortcodes"
+msgstr "الأكواد القصيرة"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:240
+msgid "Remove these shortcodes when WPtouch Pro is active"
+msgstr "أزل هذه الأكواد القصيرة عندما يكون WPtouch Pro نشطًا"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:241
+msgid "Enter a comma separated list of shortcodes to remove."
+msgstr "للحذف، قم بإدخال قائمة بالأكواد القصيرة مفصولة بفاصلة."
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:251
+msgid "Ignored URLs"
+msgstr "الروابط المهملة"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:257
+msgid "Do not load WPtouch Pro on these URLs/Pages"
+msgstr "لا تقم بتحميل WPtouch Pro على هذه الروابط/الصفحات"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:258
+msgid "Each permalink URL fragment should be on its own line and relative, e.g. \"/about\" or \"/products/store\""
+msgstr "كل جزء من الرابط الدائم يجب أن يكون محددًا بحسب صفته والموضوع ذي الصلة، مثل \"/نبذة\" أو \"/المنتجات/المتجر\""
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:268
+msgid "Desktop Theme"
+msgstr "سمة سطح المكتب"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:274
+msgid "Try to include desktop theme functions.php file"
+msgstr "محاولة تضمين ملف functions.php لسمة سطح المكتب"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:275
+msgid "This may be required for desktop themes with unique features that are not showing when WPtouch Pro is active."
+msgstr "قد يكون ذلك لازمًا مع سمات سطح المكتب ذات الخصائص الفريدة التي لا تظهر عندما يكون WPtouch Pro نشطًا."
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:282
+msgid "Method to load file"
+msgstr "وسيلة تحميل ملف"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:287
+msgid "Include file directly"
+msgstr "تضمين الملف مباشرة"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:288
+msgid "Translate and create new files"
+msgstr "الترجمة وإنشاء ملفات جديدة"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:297
+msgid "Custom User-Agents"
+msgstr "أدوات مستخدم مخصصة"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:303
+msgid "User-agents (line separated)"
+msgstr "أدوات المستخدم (مرتبة في أسطر)"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:304
+msgid "Adding additional user-agents will force WPtouch Pro to be active for matching browsers."
+msgstr "إضافة المزيد من أدوات المستخدم ستجعل من WPtouch Pro نشطًا مع المتصفحات الملائمة."
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:318
+msgid "Backup &amp; Import"
+msgstr "النسخة الاحتياطية واستيرادها"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:324
+msgid "Automatically backup settings to the %s folder"
+msgstr "حفظ تلقائي لنسخة احتياطية من الإعدادات في المجلد %s"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:326
+msgid "WPtouch Pro backups your settings each time they are saved."
+msgstr "يحتفظ WPtouch Pro بنسخ احتياطية من إعداداتك مع كل مرة يتم حفظها."
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:337
+msgid "Tools &amp; Debug"
+msgstr "الأدوات والتصحيح"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:343
+msgid "Use jQuery 2.0 in themes (faster for mobile devices) instead of WordPress' version"
+msgstr "استخدم jQuery 2.0 في السمات (أسرع مع أجهزة الهواتف المحمولة) بدلاً من نسخة WordPress"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:344
+msgid "jQuery 2.0 is significantly smaller and faster than previous jQuery versions - may cause problems with other plugins, use carefully."
+msgstr "jQuery 2.0 أصغر وأسرع بكثير عن النسخ السابقة من jQuery- قد تنتج عنه مشاكل مع الملحقات الأخرى، لذا يجب استخدامه بحرص."
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:351
+msgid "Show load times and query counts in the footer"
+msgstr "عرض زمن التحميل وعدد الاستعلامات في ذيل الصفحة"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:352
+msgid "Helps you find slow pages/posts on your site."
+msgstr "يساعدك في العثور على الصفحات/المنشورات البطيئة بموقعك."
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:359
+msgid "Enable debug log"
+msgstr "تمكين سجل التصحيح"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:360
+msgid "Creates a debug file to help diagnose installation issues."
+msgstr "يقوم بإنشاء ملف تصحيح للمساعدة في تشخيص مشاكل التثبيت."
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:371
+msgid "WordPress Plugins"
+msgstr "ملحقات WordPress"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:384
+msgid "Admin Mode"
+msgstr "وضع المدير"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:390
+msgid "Admin panel settings shown"
+msgstr "عرض إعدادات لوحة تحكم المدير"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:395
+msgid "Default"
+msgstr "افتراضي"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:396
+#: wptouch-pro-3/admin/settings/html/button.php:5
+#: wptouch-pro-3/admin/settings/html/checkbox.php:6
+#: wptouch-pro-3/admin/settings/html/custom-latest-posts.php:4
+#: wptouch-pro-3/admin/settings/html/list.php:16
+#: wptouch-pro-3/admin/settings/html/numeric.php:12
+#: wptouch-pro-3/admin/settings/html/radiolist.php:12
+#: wptouch-pro-3/admin/settings/html/text.php:8
+#: wptouch-pro-3/admin/settings/html/textarea.php:8
+msgid "Advanced"
+msgstr "متقدم"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-menus.php:3
+msgid "Theme Menus"
+msgstr "قوائم السمة"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-menus.php:4
+msgid "Menu Setup"
+msgstr "إعداد القائمة"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-menus.php:5
+msgid "Icon Upload & Sets"
+msgstr "رفع الأيقونات ومجموعاتها"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-menus.php:22
+msgid "WordPress Pages"
+msgstr "صفحات WordPress"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-menus.php:28
+#: wptouch-pro-3/admin/settings/html/icon_menu_area.php:6
+#: wptouch-pro-3/themes/foundation/modules/advertising/advertising.php:180
+#: wptouch-pro-3/themes/foundation/modules/media/media.php:59
+#: wptouch-pro-3-extras/extensions/infinity-cache/infinity-cache.php:206
+msgid "None"
+msgstr "لا شيء"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-menus.php:66
+msgid "Menu Options"
+msgstr "خيارات القائمة"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-menus.php:72
+msgid "Enable parent items as links"
+msgstr "تمكين العناصر الرئيسية كروابط"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-menus.php:73
+msgid "If disabled, parent menu items will only toggle child items."
+msgstr "إذا كانت معطلة، ستقوم عناصر القائمة الرئيسية بعرض العناصر الفرعية فقط"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-menus.php:80
+msgid "Use menu icons"
+msgstr "استخدام أيقونات القائمة"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-menus.php:104
+msgid "Icon Upload"
+msgstr "تحميل أيقونة"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-menus.php:117
+msgid "Uploaded Icons"
+msgstr "الأيقونات المرفوعة"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-menus.php:130
+msgid "Icon Sets"
+msgstr "مجموعة الأيقونات"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-themes-and-addons.php:3
+msgid "Themes"
+msgstr "السمات"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-themes-and-addons.php:4
+msgid "Extensions"
+msgstr "الإضافات"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-touchboard.php:3
+#: wptouch-pro-3/core/admin-menu.php:34 wptouch-pro-3/core/admin-menu.php:38
+msgid "What's New"
+msgstr "ما الجديد"
+
+#: wptouch-pro-3/admin/settings/html/addon-browser-item.php:38
+#: wptouch-pro-3/admin/settings/html/installed_icon_sets_ajax.php:8
+#: wptouch-pro-3/admin/settings/html/installed_icon_sets_ajax.php:20
+#: wptouch-pro-3/admin/settings/html/theme-browser-item.php:59
+#: wptouch-pro-3/pro/settings/html/extension-browser-item.php:41
+#: wptouch-pro-3/pro/settings/html/theme-browser-item.php:62
+msgid "by %s"
+msgstr "بواسطة %s"
+
+#: wptouch-pro-3/admin/settings/html/addon-browser-item.php:43
+msgid "This add-on is only available in WPtouch Pro"
+msgstr "هذا الملحق متاح فقط في WPtouch Pro"
+
+#: wptouch-pro-3/admin/settings/html/backup.php:1
+msgid "Download Backup File"
+msgstr "تنزيل النسخة الاحتياطية"
+
+#: wptouch-pro-3/admin/settings/html/backup.php:2
+msgid "Restore Backup File"
+msgstr "استرداد ملف النسخة الاحتياطية"
+
+#: wptouch-pro-3/admin/settings/html/button.php:6
+#: wptouch-pro-3/admin/settings/html/checkbox.php:7
+#: wptouch-pro-3/admin/settings/html/custom-latest-posts.php:8
+#: wptouch-pro-3/admin/settings/html/list.php:20
+#: wptouch-pro-3/admin/settings/html/numeric.php:16
+#: wptouch-pro-3/admin/settings/html/radiolist.php:14
+#: wptouch-pro-3/admin/settings/html/text.php:9
+#: wptouch-pro-3/admin/settings/html/textarea.php:9
+msgid "New"
+msgstr "جديد"
+
+#: wptouch-pro-3/admin/settings/html/color.php:6
+msgid "Undo"
+msgstr "تراجع"
+
+#: wptouch-pro-3/admin/settings/html/color.php:7
+msgid "Desktop theme colors"
+msgstr "ألوان سمة سطح المكتب"
+
+#: wptouch-pro-3/admin/settings/html/color.php:7
+msgid "Palette"
+msgstr "مجموعة الألوان"
+
+#: wptouch-pro-3/admin/settings/html/custom-latest-posts.php:1
+msgid "Custom latest posts page"
+msgstr "صفحة مخصصة لأحدث المنشورات"
+
+#: wptouch-pro-3/admin/settings/html/custom_icon_management.php:3
+msgid "No icons have been uploaded yet"
+msgstr "لم يتم تحميل أيقونات حتى الآن"
+
+#: wptouch-pro-3/admin/settings/html/custom_icon_management.php:12
+#: wptouch-pro-3/admin/settings/html/image-upload.php:13
+#: wptouch-pro-3/admin/settings/html/theme-browser-item.php:18
+#: wptouch-pro-3/pro/settings/html/theme-browser-item.php:115
+msgid "Delete"
+msgstr "حذف"
+
+#: wptouch-pro-3/admin/settings/html/custom_icon_upload.php:3
+msgid "Upload Icon"
+msgstr "تحميل أيقونة"
+
+#: wptouch-pro-3/admin/settings/html/custom_icon_upload.php:4
+#: wptouch-pro-3/admin/settings/html/image-upload.php:15
+msgid "Upload Complete!"
+msgstr "اكتمل التحميل!"
+
+#: wptouch-pro-3/admin/settings/html/custom_icon_upload.php:9
+msgid "Ready to upload"
+msgstr "مستعد للتحميل"
+
+#: wptouch-pro-3/admin/settings/html/debuginfo.php:12
+msgid "View Debug File"
+msgstr "عرض ملف التصحيح"
+
+#: wptouch-pro-3/admin/settings/html/debuginfo.php:16
+#: wptouch-pro-3/admin/settings/html/debuginfo.php:18
+msgid "Your Server Configuration"
+msgstr "بيانات ضبط الخادم"
+
+#: wptouch-pro-3/admin/settings/html/icon_menu_area.php:5
+msgid "Check All"
+msgstr "تحديد الكل"
+
+#: wptouch-pro-3/admin/settings/html/icon_menu_area.php:7
+msgid "Reset"
+msgstr "إعادة التنضيد"
+
+#: wptouch-pro-3/admin/settings/html/icon_menu_area.php:9
+#: wptouch-pro-3-extras/themes/bio/default/header-bottom.php:13
+#: wptouch-pro-3-extras/themes/classic-redux/default/header-bottom.php:21
+#: wptouch-pro-3-extras/themes/classic-redux/default/header-bottom.php:32
+#: wptouch-pro-3-extras/themes/classic-redux/default/header-bottom.php:112
+#: wptouch-pro-3-extras/themes/hammock/default/header-bottom.php:23
+#: wptouch-pro-3-extras/themes/hammock/default/header-bottom.php:36
+#: wptouch-pro-3-extras/themes/hammock/root-functions.php:82
+#: wptouch-pro-3-extras/themes/scaffold/default/header-bottom.php:13
+msgid "Menu"
+msgstr "القائمة"
+
+#: wptouch-pro-3/admin/settings/html/icon_menu_area.php:19
+msgid "Active menus used in this theme."
+msgstr "القوائم النشطة المستخدمة في هذه السمة."
+
+#: wptouch-pro-3/admin/settings/html/icon_menu_area.php:23
+msgid "Show/Hide"
+msgstr "عرض/إخفاء"
+
+#: wptouch-pro-3/admin/settings/html/icon_menu_area.php:24
+msgid "Menu Item"
+msgstr "عنصر قائمة"
+
+#: wptouch-pro-3/admin/settings/html/icon_menu_area.php:44
+msgid "Icon Set"
+msgstr "مجموعة الأيقونات"
+
+#: wptouch-pro-3/admin/settings/html/icon_menu_area.php:54
+msgid "Drag icons to associate them with menu items"
+msgstr "اسحب الأيقونات وضعها على عناصر القائمة لربطها بها"
+
+#: wptouch-pro-3/admin/settings/html/icon_menu_area.php:79
+msgid "You don't have any custom icons yet."
+msgstr "ليست لديك أية أيقونات مخصصة حتى الآن."
+
+#: wptouch-pro-3/admin/settings/html/icon_menu_area.php:94
+msgid "Default Icon"
+msgstr "الأيقونة الافتراضية"
+
+#: wptouch-pro-3/admin/settings/html/icon_menu_area.php:95
+msgid "applies to all unset icons"
+msgstr "مطبق على كافة الأيقونات غير المحددة"
+
+#: wptouch-pro-3/admin/settings/html/icon_menu_area.php:103
+msgid "Trash"
+msgstr "سلة المحذوفات"
+
+#: wptouch-pro-3/admin/settings/html/icon_menu_area.php:104
+msgid "drag icon here to reset"
+msgstr "اسحب أيقونة إلى هنا لإعادة التنضيد"
+
+#: wptouch-pro-3/admin/settings/html/image-upload.php:11
+msgid "Upload"
+msgstr "تحميل"
+
+#: wptouch-pro-3/admin/settings/html/installed_icon_sets.php:2
+msgid "Gathering information about available icon sets..."
+msgstr "جاري جمع البيانات حول مجموعات الأيقونات المتاحة..."
+
+#: wptouch-pro-3/admin/settings/html/installed_icon_sets.php:4
+#: wptouch-pro-3/core/notifications.php:264
+msgid "The %s%s%s directory is not currently writable. %sPlease fix this issue to enable installation of additional icon sets."
+msgstr "دليل %s%s%s غير قابل للتحرير حاليًا. %sبرجاء حل هذه المشكلة لتمكين تنصيب مجموعات الأيقونات الإضافية."
+
+#: wptouch-pro-3/admin/settings/html/installed_icon_sets_ajax.php:4
+#: wptouch-pro-3/core/class-wptouch-pro.php:1555
+#: wptouch-pro-3/core/class-wptouch-pro.php:1556
+#: wptouch-pro-3/core/config.php:54
+msgid "Custom Icons"
+msgstr "أيقونات مخصصة"
+
+#: wptouch-pro-3/admin/settings/html/installed_icon_sets_ajax.php:9
+#: wptouch-pro-3/admin/settings/html/installed_icon_sets_ajax.php:22
+msgid "Installed"
+msgstr "مُثبّت"
+
+#: wptouch-pro-3/admin/settings/html/installed_icon_sets_ajax.php:21
+msgid "Installing..."
+msgstr "جاري التنصيب..."
+
+#: wptouch-pro-3/admin/settings/html/installed_icon_sets_ajax.php:21
+#: wptouch-pro-3/pro/settings/html/extension-browser-item.php:66
+#: wptouch-pro-3/pro/settings/html/theme-browser-item.php:96
+msgid "Install"
+msgstr "تنصيب"
+
+#: wptouch-pro-3/admin/settings/html/installed_icon_sets_ajax.php:23
+msgid "Unable to Install"
+msgstr "غير قادر على التنصيب"
+
+#: wptouch-pro-3/admin/settings/html/plugin-compat-ajax.php:11
+#: wptouch-pro-3/themes/foundation/modules/custom-posts/custom-posts.php:64
+msgid "Enable %s"
+msgstr "تمكين %s"
+
+#: wptouch-pro-3/admin/settings/html/plugin-compat-ajax.php:12
+msgid "When unchecked, %s will be disabled for users viewing your WPtouch Pro theme."
+msgstr "عند إزالة علامة الاختيار، سيتم تعطيل %s على المستخدمين الذين يشاهدون سمة WPtouch Pro الخاصة بك."
+
+#: wptouch-pro-3/admin/settings/html/plugin-compat-ajax.php:20
+msgid "No plugins to disable."
+msgstr "لا توجد ملحقات لتعطيلها"
+
+#: wptouch-pro-3/admin/settings/html/plugin-compat.php:3
+msgid "Your active plugin list is refreshing"
+msgstr "جاري تجديد قائمة الملحق النشط"
+
+#: wptouch-pro-3/admin/settings/html/redirect.php:17
+msgid "WordPress Page"
+msgstr "صفحة WordPress"
+
+#: wptouch-pro-3/admin/settings/html/restore.php:2
+msgid "Please paste your encoded settings below and save to restore your settings."
+msgstr "برجاء لصق إعداداتك المكوّدة أدناه ثم الحفظ لاستعادة إعداداتك."
+
+#: wptouch-pro-3/admin/settings/html/theme-browser-item.php:6
+#: wptouch-pro-3/pro/settings/html/theme-browser-item.php:6
+#: wptouch-pro-3/pro/settings/html/theme-browser-item.php:10
+msgid "Click to view screenshots"
+msgstr "انقر لعرض صور الشاشة"
+
+#: wptouch-pro-3/admin/settings/html/theme-browser-item.php:11
+#: wptouch-pro-3/pro/settings/html/extension-browser-item.php:74
+#: wptouch-pro-3/pro/settings/html/theme-browser-item.php:105
+msgid "Setup"
+msgstr "إعداد"
+
+#: wptouch-pro-3/admin/settings/html/theme-browser-item.php:16
+#: wptouch-pro-3/pro/settings/html/theme-browser-item.php:112
+msgid "Copy"
+msgstr "نسخ"
+
+#: wptouch-pro-3/admin/settings/html/theme-browser-item.php:54
+#: wptouch-pro-3/pro/settings/html/theme-browser-item.php:57
+msgid "This theme supports %s devices"
+msgstr "هذه السمة تدعم أجهزة %s"
+
+#: wptouch-pro-3/admin/settings/html/theme-browser-item.php:64
+#: wptouch-pro-3/pro/settings/html/theme-browser-item.php:69
+msgid "Theme location: %s"
+msgstr "موقع تخزين السمة: %s"
+
+#: wptouch-pro-3/admin/settings/html/theme-browser-item.php:65
+#: wptouch-pro-3/pro/settings/html/extension-browser-item.php:48
+#: wptouch-pro-3/pro/settings/html/theme-browser-item.php:70
+msgid "Relative to your WordPress wp-content directory."
+msgstr "ذو صلة بدليل محتوى WordPress wp-content."
+
+#: wptouch-pro-3/admin/settings/html/touchboard.php:6
+msgid "Quick Links"
+msgstr "الروابط السريعة"
+
+#: wptouch-pro-3/admin/settings/html/touchboard.php:8
+msgid "What's New Changelog"
+msgstr "سجل تغييرات ما الجديد"
+
+#: wptouch-pro-3/admin/settings/html/touchboard.php:9
+msgid "Product Knowledgebase"
+msgstr "قاعدة المعرفة للمنتج"
+
+#: wptouch-pro-3/admin/settings/html/touchboard.php:10
+msgid "Product Support"
+msgstr "دعم المنتج"
+
+#: wptouch-pro-3/admin/settings/html/touchboard.php:11
+msgid "Manage Account"
+msgstr "إدارة الحساب"
+
+#: wptouch-pro-3/admin/settings/html/touchboard.php:12
+msgid "Manage License"
+msgstr "إدارة الترخيص"
+
+#: wptouch-pro-3/admin/settings/html/touchboard.php:18
+msgid "WPtouch News"
+msgstr "أخبار WPtouch"
+
+#: wptouch-pro-3/admin/settings/html/touchboard.php:19
+msgid "Read More"
+msgstr "قراءة المزيد"
+
+#: wptouch-pro-3/admin/settings/html/touchboard.php:25
+msgid "WPtouch Updates"
+msgstr "تحديثات WPtouch"
+
+#: wptouch-pro-3/admin/settings/html/touchboard.php:35
+msgid "What's New in %s"
+msgstr "ما الجديد في %s"
+
+#: wptouch-pro-3/admin/settings/html/touchboard.php:38
+#: wptouch-pro-3/admin/settings/html/touchboard.php:40
+#: wptouch-pro-3/core/admin-menu.php:59
+msgid "License"
+msgstr "الترخيص"
+
+#: wptouch-pro-3/admin/settings/html/touchboard.php:38
+msgid "Unlicensed"
+msgstr "غير مرخص"
+
+#: wptouch-pro-3/admin/settings/html/touchboard.php:38
+#: wptouch-pro-3/core/class-wptouch-pro.php:453
+msgid "Offline"
+msgstr "مفصول"
+
+#: wptouch-pro-3/admin/settings/html/touchboard.php:40
+msgid "Active"
+msgstr "نشط"
+
+#: wptouch-pro-3/admin/settings/html/touchboard.php:40
+msgid "Online"
+msgstr "متصل"
+
+#: wptouch-pro-3/admin/settings/html/touchboard.php:64
+msgid "%s Change Log"
+msgstr "%s سجل تغييرات"
+
+#: wptouch-pro-3/admin/settings/html/user-agent-list.php:4
+#: wptouch-pro-3/admin/settings/html/user-agent-list.php:6
+msgid "WPtouch Pro will be active when any of the following user-agents or user-agent combinations are matched"
+msgstr "سيصبح WPtouch Pro نشطًا عندما تتوافق أحد أدوات المستخدم أو مجموعات الأدوات التالية"
+
+#: wptouch-pro-3/admin/settings/include/custom-latest-posts.php:14
+msgid "None (Use WordPress Settings)"
+msgstr "بدون (استخدم إعدادات WordPress)"
+
+#: wptouch-pro-3/core/admin-ajax.php:286
+msgid "Version %s"
+msgstr "النسخة %s"
+
+#: wptouch-pro-3/core/admin-ajax.php:292
+msgid "There is a temporary issue retrieving the change-log.  Please try again later."
+msgstr "هناك مشكلة عارضة تمنع من جلب سجل التغييرات.\nبرجاء المحاولة مرةً اخرى لاحقًا."
+
+#: wptouch-pro-3/core/admin-menu.php:39
+msgid "Core Settings"
+msgstr "الإعدادات الأساسية"
+
+#: wptouch-pro-3/core/admin-menu.php:40
+msgid "Themes & Extensions"
+msgstr "السمات والإضافات"
+
+#: wptouch-pro-3/core/admin-menu.php:41
+msgid "Theme Settings"
+msgstr "إعدادات السمة"
+
+#: wptouch-pro-3/core/admin-menu.php:41
+msgid "%s Settings"
+msgstr "إعدادات %s"
+
+#: wptouch-pro-3/core/admin-menu.php:46
+msgid "Extension Settings"
+msgstr "إعدادات الإضافات"
+
+#: wptouch-pro-3/core/admin-menu.php:51 wptouch-pro-3/core/admin-menu.php:53
+msgid "Menus"
+msgstr "القوائم"
+
+#: wptouch-pro-3/core/admin-page-templates.php:16
+msgid "Mobile Page Template"
+msgstr "قالب صفحة الهاتف المحمول"
+
+#: wptouch-pro-3/core/admin-render.php:25
+msgid "This copy of %s is currently unlicensed!"
+msgstr "هذه النسخة من %s غير مرخصة حاليًا!"
+
+#: wptouch-pro-3/core/admin-render.php:27
+msgid "Add a license %s"
+msgstr "إضافة رخصة %s"
+
+#: wptouch-pro-3/core/admin-render.php:81
+msgid "Save Changes"
+msgstr "حفظ التغييرات"
+
+#: wptouch-pro-3/core/admin-render.php:82
+msgid "Preview Theme"
+msgstr "مشاهدة السمة"
+
+#: wptouch-pro-3/core/admin-render.php:83
+msgid "Reset Settings"
+msgstr "إعادة تنضيد الإعدادات"
+
+#: wptouch-pro-3/core/class-wptouch-pro.php:232
+msgid "Automatic theme migration from uploads/wptouch-data directory failed. Please manually move these files to wp-content/wptouch-data, or %scontact support%s to address this issue."
+msgstr "فشل الترحيل التلقائي للسمة من دليل uploads/wptouch-data. برجاء نقل هذه الملفات يدويًا إلى wp-content/wptouch-data، أو %scontact support%s لحل هذه المشكلة."
+
+#: wptouch-pro-3/core/class-wptouch-pro.php:239
+msgid "Please wait, we are downloading a fresh copy of your active WPtouch theme from the Cloud."
+msgstr "برجاء الانتظار، نقوم بتحميل نسخة جديدة من سمة WPtouch النشطة الخاصة بك من Cloud."
+
+#: wptouch-pro-3/core/class-wptouch-pro.php:242
+msgid "We were unable to install your WPtouch theme from the Cloud. Please visit %sthis article%s for more information."
+msgstr "لم يمكننا تثبيت سمة WPtouch الخاصة بك من Cloud. برجاء زيارة %sهذا المقال%s للمزيد من المعلومات."
+
+#: wptouch-pro-3/core/class-wptouch-pro.php:449
+msgid "Unsupported Browser"
+msgstr "متصفح غير مدعوم"
+
+#: wptouch-pro-3/core/class-wptouch-pro.php:450
+msgid "Theme Preview requires Chrome or Safari."
+msgstr "لمشاهدة السمة فأنت تحتاج إلى متصفح جوجل كروم أو متصفح سفاري."
+
+#: wptouch-pro-3/core/class-wptouch-pro.php:451
+msgid "This will reset all WPtouch Pro settings.\nAre you sure?"
+msgstr "سيتسبب ذلك في إعادة تعيين إعدادات WPtouch Pro إلى القيم الافتراضية.\nهل أنت متأكد؟"
+
+#: wptouch-pro-3/core/class-wptouch-pro.php:452
+msgid "This will reset all WPtouch Pro menu and icon settings.\nAre you sure?"
+msgstr "سيتسبب ذلك في إعادة تعيين كافة إعدادات قائمة وأيقونات WPtouch Pro إلى القيم الافتراضية.\nهل أنت متأكد؟"
+
+#: wptouch-pro-3/core/class-wptouch-pro.php:454
+msgid "You appear to be offline. Connect to the internet to see available BraveNewCloud items."
+msgstr "أنت تظهر كمفصول عن الإنترنت. اتصل بالإنترنت لرؤية عناصر BraveNewCloud المتاحة."
+
+#: wptouch-pro-3/core/class-wptouch-pro.php:455
+msgid "The item failed to download. Please refresh the page and try again."
+msgstr "فشل تحميل العنصر. برجاء إعادة تحميل الصفحة والمحاولة مجددًا."
+
+#: wptouch-pro-3/core/class-wptouch-pro.php:1069
+#: wptouch-pro-3/themes/foundation/modules/webapp/webapp.php:207
+msgid "Settings"
+msgstr "الإعدادات"
+
+#: wptouch-pro-3/core/class-wptouch-pro.php:1150
+msgid "WPtouch Pro Changelog"
+msgstr "سجل تغييرات WPtouch Pro"
+
+#: wptouch-pro-3/core/class-wptouch-pro.php:2326
+msgid "Directory Problem"
+msgstr "مشكلة في الدليل"
+
+#: wptouch-pro-3/core/class-wptouch-pro.php:2327
+msgid "One or more required directories could not be created"
+msgstr "لم يمكن إنشاء دليل أو أكثر من الدلائل المطلوبة"
+
+#: wptouch-pro-3/core/globals.php:192
+msgid "smartphone"
+msgstr "هاتف ذكي"
+
+#: wptouch-pro-3/core/globals.php:194
+msgid "tablet"
+msgstr "حاسوب لوحي"
+
+#: wptouch-pro-3/core/notifications.php:121
+msgid "License Missing"
+msgstr "الترخيص مفقود"
+
+#: wptouch-pro-3/core/notifications.php:122
+msgid "This installation of WPtouch Pro is currently unlicensed."
+msgstr "هذا التثبيت لبرنامج WPtouch Pro غير مرخص حاليًا."
+
+#: wptouch-pro-3/core/notifications.php:133
+msgid "WPtouch Pro %s"
+msgstr "WPtouch Pro %s"
+
+#: wptouch-pro-3/core/notifications.php:134
+msgid "A new version of WPtouch Pro is available."
+msgstr "تتوافر نسخة أحدث من WPtouch Pro."
+
+#: wptouch-pro-3/core/notifications.php:145
+msgid "Theme Update Available"
+msgstr "تحديث متاح للسمة"
+
+#: wptouch-pro-3/core/notifications.php:146
+msgid "One or more updates are available for your installed themes."
+msgstr "هناك تحديث أو أكثر متاحين لسماتك المثبتة."
+
+#: wptouch-pro-3/core/notifications.php:160
+msgid "Extension Update Available"
+msgstr "تحديث متاح للإضافات"
+
+#: wptouch-pro-3/core/notifications.php:161
+msgid "One or more updates are available for your installed extensions."
+msgstr "هناك تحديث واحد أو أكثر متاح لإضافاتك المثبتة."
+
+#: wptouch-pro-3/core/notifications.php:173
+msgid "Preview Mode Enabled"
+msgstr "وضع المعاينة ممكن"
+
+#: wptouch-pro-3/core/notifications.php:174
+msgid "Only logged-in admins can see the mobile theme right now. You can change this at any time in %sCore Settings%s under %sDisplay Mode%s."
+msgstr "فقط المدراء مسجلي الدخول من يمكنهم رؤية سمة الهاتف المحمول في الوقت الحالي. يمكنك تغيير ذلك في أي وقت من خلال %sالإعدادات الأساسية%s تحت %sوضع العرض%s."
+
+#: wptouch-pro-3/core/notifications.php:182
+msgid "Theme Presentation Disabled"
+msgstr "عرض السمة معطل"
+
+#: wptouch-pro-3/core/notifications.php:183
+msgid "No one can see the mobile theme right now. You can change this at any time in %sCore Settings%s under %sDisplay Mode%s."
+msgstr "لا يمكن لأحد رؤية سمة الهاتف المحمول في الوقت الحالي. يمكنك تغيير ذلك في أي وقت من خلال %sالإعدادات الأساسية%s تحت %sوضع العرض%s."
+
+#: wptouch-pro-3/core/notifications.php:194
+msgid "WPtouch Pro prefers pretty permalinks to be enabled within WordPress."
+msgstr "من المفضل لبرنامج WPtouch Pro أن يتم تفعيل روابط دائمة لطيفة في WordPress."
+
+#: wptouch-pro-3/core/notifications.php:204
+msgid "WPtouch Pro will not work fully in safe mode."
+msgstr "لن يعمل WPtouch Pro بكامل طاقته في الوضع الآمن."
+
+#: wptouch-pro-3/core/notifications.php:214
+#: wptouch-pro-3/core/notifications.php:224
+#: wptouch-pro-3/core/notifications.php:234
+msgid "Extra configuration is required. The plugin must be configured to exclude the user agents that WPtouch Pro uses."
+msgstr "هناك حاجة لضبطٍ إضافي. يجب ضبط الملحق على استثناء أدوات المستخدم التي يستخدمها WPtouch Pro."
+
+#: wptouch-pro-3/core/notifications.php:244
+msgid "Extra configuration is required. Add paths to your active WPtouch Pro theme CSS and Javascript files as files to ignore in WPMinify."
+msgstr "هناك حاجة لضبطٍ إضافي. قم بإضافة مسارات لملفات CSS وJavascript النشطة في سمة WPtouch Pro بالملفات التي يجب تجاهلها في WPMinify."
+
+#: wptouch-pro-3/core/notifications.php:254
+msgid "This plugin may not work correctly in WPtouch Pro, and should be disabled in the Plugin Compatibility section."
+msgstr "قد لا يعمل هذا الملحق بشكلٍ صحيح مع WPtouch Pro، ويجب تعطيله في قسم الملحقات الملائمة."
+
+#: wptouch-pro-3/core/notifications.php:263
+msgid "Icon Installation Issue"
+msgstr "مشكلة تثبيت أيقونة"
+
+#: wptouch-pro-3/core/notifications.php:274
+msgid "WPtouch Pro 3 cannot co-exist with WPtouch 1.x. Disable it first in the WordPress Plugins settings."
+msgstr "لا يمكن لبرنامج WPtouch Pro 3 أن يتواجد بشكلٍ متزامن مع الإصدارات الأقدم WPtouch 1.x. قم بتعطيل الإصدار القديم أولاً من إعدادات ملحقات WordPress."
+
+#: wptouch-pro-3/core/notifications.php:284
+msgid "WPtouch Pro 3 cannot co-exist with WPtouch Pro 2.x. Disable it first in the WordPress Plugins settings."
+msgstr "لا يمكن لبرنامج WPtouch Pro 3 أن يتواجد بشكلٍ متزامن مع الإصدارات الأقدم WPtouch Pro 2.x. قم بتعطيل الإصدار القديم أولاً من إعدادات ملحقات WordPress."
+
+#: wptouch-pro-3/include/add-ons/wordtwit-pro.php:179
+#: wptouch-pro-3/themes/foundation/modules/twitter/twitter.php:42
+msgid "%d second ago"
+msgid_plural "%d seconds ago"
+msgstr[0] "%d ثانية مضت"
+msgstr[1] "%d ثوانٍ مضت"
+
+#: wptouch-pro-3/include/add-ons/wordtwit-pro.php:182
+#: wptouch-pro-3/themes/foundation/modules/twitter/twitter.php:45
+msgid "%d minute ago"
+msgid_plural "%d minutes ago"
+msgstr[0] "%d دقيقة مضت"
+msgstr[1] "%d دقائق مضت"
+
+#: wptouch-pro-3/include/add-ons/wordtwit-pro.php:185
+#: wptouch-pro-3/themes/foundation/modules/twitter/twitter.php:48
+msgid "%d hour ago"
+msgid_plural "%d hours ago"
+msgstr[0] "%d ساعة مضت"
+msgstr[1] "%d ساعات مضت"
+
+#: wptouch-pro-3/include/add-ons/wordtwit-pro.php:188
+#: wptouch-pro-3/themes/foundation/modules/twitter/twitter.php:51
+msgid "%d day ago"
+msgid_plural "%d days ago"
+msgstr[0] "%d يومٍ مضى"
+msgstr[1] "%d أيامٍ مضت"
+
+#: wptouch-pro-3/include/html/desktop-switch.php:2
+msgid "Desktop Version"
+msgstr "نسخة سطح المكتب"
+
+#: wptouch-pro-3/include/html/desktop-switch.php:2
+msgid "Switch To Mobile Version"
+msgstr "التحويل إلى نسخة الهواتف المحمولة"
+
+#: wptouch-pro-3/include/html/footer.php:2
+msgid "Powered by %s%s%s"
+msgstr "مدعوم من %s%s%s"
+
+#: wptouch-pro-3/include/html/footer.php:3
+msgid "By %s"
+msgstr "بواسطة %s"
+
+#: wptouch-pro-3/include/html/load-times.php:2
+msgid "%d queries in %0.1f ms"
+msgstr "%d استعلام %0.1f مللي ثانية"
+
+#: wptouch-pro-3/include/html/page-template.php:8
+msgid "Default Template"
+msgstr "القالب الافتراضي"
+
+#: wptouch-pro-3/pro/settings/html/extension-browser-item.php:35
+#: wptouch-pro-3/pro/settings/html/theme-browser-item.php:47
+msgid "Upgrading..."
+msgstr "الترقية جارية..."
+
+#: wptouch-pro-3/pro/settings/html/extension-browser-item.php:35
+msgid "Upgrade to %s"
+msgstr "ترقية إلى %s"
+
+#: wptouch-pro-3/pro/settings/html/extension-browser-item.php:47
+msgid "Extension location: %s"
+msgstr "مكان الإضافة: %s"
+
+#: wptouch-pro-3/pro/settings/html/extension-browser-item.php:56
+#: wptouch-pro-3/pro/settings/html/theme-browser-item.php:81
+msgid "More Info"
+msgstr "المزيد من المعلومات"
+
+#: wptouch-pro-3/pro/settings/html/extension-browser-item.php:59
+#: wptouch-pro-3/pro/settings/html/theme-browser-item.php:84
+msgid "Upgrade License"
+msgstr "ترقية الرخصة"
+
+#: wptouch-pro-3/pro/settings/html/extension-browser-item.php:61
+#: wptouch-pro-3/pro/settings/html/theme-browser-item.php:86
+msgid "Get License"
+msgstr "الحصول على ترخيص"
+
+#: wptouch-pro-3/pro/settings/html/extension-browser-item.php:66
+#: wptouch-pro-3/pro/settings/html/theme-browser-item.php:95
+msgid "Downloading..."
+msgstr "جاري التحميل..."
+
+#: wptouch-pro-3/pro/settings/html/extension-browser-item.php:75
+msgid "Deactivate"
+msgstr "تعطيل"
+
+#: wptouch-pro-3/pro/settings/html/extension-browser-pro.php:10
+msgid "Loading Cloud Extensions"
+msgstr "جاري تحميل إضافات Cloud"
+
+#: wptouch-pro-3/pro/settings/html/theme-browser-item.php:49
+msgid "Update to %s"
+msgstr "تحديث إلى %s"
+
+#: wptouch-pro-3/pro/settings/html/theme-browser-item.php:89
+msgid "Buy Now"
+msgstr "اشتر الآن"
+
+#: wptouch-pro-3/pro/settings/html/theme-browser-pro.php:11
+msgid "Loading Cloud Themes"
+msgstr "جاري تحميل سمات Cloud"
+
+#: wptouch-pro-3/themes/foundation/default/404.php:6
+msgid "404 Not Found"
+msgstr "404 غير موجود"
+
+#: wptouch-pro-3/themes/foundation/default/404.php:8
+msgid "The post or page you requested is no longer available."
+msgstr "المنشور أو الصفحة التي طلبتها لم تعد موجودة."
+
+#: wptouch-pro-3/themes/foundation/default/attachment.php:43
+msgid "&laquo; previous in gallery"
+msgstr "&laquo; السابق في المعرض"
+
+#: wptouch-pro-3/themes/foundation/default/attachment.php:45
+msgid "next in gallery &raquo;"
+msgstr "التالي في المعرض &raquo;"
+
+#: wptouch-pro-3/themes/foundation/default/comments.php:10
+#: wptouch-pro-3-extras/themes/classic-redux/default/post-loop.php:33
+msgid "no responses"
+msgstr "لا ردود"
+
+#: wptouch-pro-3/themes/foundation/default/comments.php:10
+#: wptouch-pro-3-extras/themes/classic-redux/default/post-loop.php:33
+msgid "1 response"
+msgstr "1 رد"
+
+#: wptouch-pro-3/themes/foundation/default/comments.php:10
+#: wptouch-pro-3-extras/themes/classic-redux/default/post-loop.php:33
+msgid "% responses"
+msgstr "% ردود"
+
+#: wptouch-pro-3/themes/foundation/default/comments.php:20
+#: wptouch-pro-3/themes/foundation/default/comments.php:26
+msgid "Load More Comments&hellip;"
+msgstr "تحميل المزيد من التعليقات&hellip;"
+
+#: wptouch-pro-3/themes/foundation/default/comments.php:38
+msgid "Comments are closed"
+msgstr "تم منع التعليقات"
+
+#: wptouch-pro-3/themes/foundation/default/comments.php:48
+msgid "Cancel"
+msgstr "إلغاء"
+
+#: wptouch-pro-3/themes/foundation/default/comments.php:51
+msgid "Leave a Reply"
+msgstr "كتابة رد"
+
+#: wptouch-pro-3/themes/foundation/default/comments.php:51
+msgid "Leave a Reply to %s"
+msgstr "الرد على %s"
+
+#: wptouch-pro-3/themes/foundation/default/comments.php:54
+msgid "You must be %slogged in%s to post a comment."
+msgstr "يجب أن تكون %slogged in%s لنشر تعليق."
+
+#: wptouch-pro-3/themes/foundation/default/comments.php:61
+msgid "Logged in as"
+msgstr "مسجل الدخول بحساب"
+
+#: wptouch-pro-3/themes/foundation/default/comments.php:61
+msgid "Log out"
+msgstr "تسجيل الخروج"
+
+#: wptouch-pro-3/themes/foundation/default/comments.php:65
+msgid "Name"
+msgstr "الاسم"
+
+#: wptouch-pro-3/themes/foundation/default/comments.php:67
+#: wptouch-pro-3/themes/foundation/modules/social-links/social-links.php:78
+msgid "E-Mail"
+msgstr "البريد الإلكتروني"
+
+#: wptouch-pro-3/themes/foundation/default/comments.php:69
+msgid "Website"
+msgstr "الموقع"
+
+#: wptouch-pro-3/themes/foundation/default/comments.php:75
+msgid "Publish"
+msgstr "نشر"
+
+#: wptouch-pro-3/themes/foundation/default/formerror.php:6
+msgid "Comment Error"
+msgstr "خطأ تعليق"
+
+#: wptouch-pro-3/themes/foundation/default/formerror.php:8
+msgid "Please enter all fields correctly to post a comment."
+msgstr "برجاء إدخال جميع الحقول بشكلٍ صحيح لنشر تعليق."
+
+#: wptouch-pro-3/themes/foundation/default/formerror.php:9
+msgid "Go back"
+msgstr "رجوع"
+
+#: wptouch-pro-3/themes/foundation/default/index.php:33
+#: wptouch-pro-3-extras/themes/classic-redux/default/index.php:34
+#: wptouch-pro-3-extras/themes/cms/default/header-bottom.php:60
+#: wptouch-pro-3-extras/themes/hammock/default/index.php:34
+msgid "newer posts"
+msgstr "المنشورات الأحدث"
+
+#: wptouch-pro-3/themes/foundation/default/index.php:33
+#: wptouch-pro-3-extras/themes/classic-redux/default/index.php:34
+#: wptouch-pro-3-extras/themes/cms/default/header-bottom.php:56
+#: wptouch-pro-3-extras/themes/hammock/default/index.php:34
+msgid "older posts"
+msgstr "المنشورات الأقدم"
+
+#: wptouch-pro-3/themes/foundation/default/nav-bar.php:6
+#: wptouch-pro-3-extras/themes/bauhaus/default/nav-bar.php:6
+msgid "previous post"
+msgstr "المنشور السابق"
+
+#: wptouch-pro-3/themes/foundation/default/nav-bar.php:12
+#: wptouch-pro-3-extras/themes/bauhaus/default/nav-bar.php:13
+msgid "next post"
+msgstr "المنشور التالي"
+
+#: wptouch-pro-3/themes/foundation/default/one-comment.php:12
+msgid "Your comment is awaiting moderation"
+msgstr "تعليقك في انتظار موافقة المدير"
+
+#: wptouch-pro-3/themes/foundation/default/related-posts.php:4
+msgid "Related"
+msgstr "ذات الصلة"
+
+#: wptouch-pro-3/themes/foundation/default/search.php:6
+#: wptouch-pro-3-extras/themes/bauhaus/default/search.php:6
+#: wptouch-pro-3-extras/themes/classic-redux/default/search.php:5
+#: wptouch-pro-3-extras/themes/hammock/default/search.php:5
+msgid "You searched for \"%s\""
+msgstr "قمت بالبحث عن \"%s\""
+
+#: wptouch-pro-3/themes/foundation/default/search.php:16
+#: wptouch-pro-3-extras/themes/classic-redux/default/search.php:15
+#: wptouch-pro-3-extras/themes/hammock/default/search.php:16
+msgid "%s results"
+msgstr "%s نتيجة"
+
+#: wptouch-pro-3/themes/foundation/default/search.php:36
+#: wptouch-pro-3-extras/themes/classic-redux/default/search.php:38
+#: wptouch-pro-3-extras/themes/hammock/default/search.php:40
+msgid "No search results found"
+msgstr "لم يتم العثور على نتائج للبحث"
+
+#: wptouch-pro-3/themes/foundation/default/search.php:45
+#: wptouch-pro-3-extras/themes/bauhaus/default/search.php:46
+#: wptouch-pro-3-extras/themes/classic-redux/default/search.php:47
+msgid "Load more %s results"
+msgstr "عرض %s نتائج بحث أخرى"
+
+#: wptouch-pro-3/themes/foundation/default/single.php:13
+#: wptouch-pro-3-extras/themes/hammock/default/post-loop-menu.php:15
+#: wptouch-pro-3-extras/themes/hammock/default/post-loop.php:19
+msgid "By"
+msgstr "بواسطة"
+
+#: wptouch-pro-3/themes/foundation/default/switch-link.php:8
+msgid "mobile"
+msgstr "هاتف محمول"
+
+#: wptouch-pro-3/themes/foundation/default/switch-link.php:9
+msgid "desktop"
+msgstr "سطح المكتب"
+
+#: wptouch-pro-3/themes/foundation/modules/advertising/advertising.php:169
+msgid "Service"
+msgstr "الخدمات"
+
+#: wptouch-pro-3/themes/foundation/modules/advertising/advertising.php:175
+msgid "Choose a service"
+msgstr "اختر خدمة"
+
+#: wptouch-pro-3/themes/foundation/modules/advertising/advertising.php:181
+msgid "Google Adsense"
+msgstr "Google Adsense"
+
+#: wptouch-pro-3/themes/foundation/modules/advertising/advertising.php:182
+msgid "Custom"
+msgstr "مخصص"
+
+#: wptouch-pro-3/themes/foundation/modules/advertising/advertising.php:192
+msgid "Google AdSense"
+msgstr "Google AdSense"
+
+#: wptouch-pro-3/themes/foundation/modules/advertising/advertising.php:195
+msgid "Publisher ID"
+msgstr "تعريف هوية الناشر"
+
+#: wptouch-pro-3/themes/foundation/modules/advertising/advertising.php:196
+msgid "Slot ID"
+msgstr "رقم تعريف الموضع"
+
+#: wptouch-pro-3/themes/foundation/modules/advertising/advertising.php:200
+msgid "Code Type"
+msgstr "نوع الكود"
+
+#: wptouch-pro-3/themes/foundation/modules/advertising/advertising.php:212
+msgid "Custom Ads"
+msgstr "إعلانات مخصصة"
+
+#: wptouch-pro-3/themes/foundation/modules/advertising/advertising.php:215
+msgid "Mobile advertising script"
+msgstr "البرنامج النصي لإعلانات الهواتف المحمولة"
+
+#: wptouch-pro-3/themes/foundation/modules/advertising/advertising.php:224
+msgid "Ad Presentation"
+msgstr "مقدمة الإعلان"
+
+#: wptouch-pro-3/themes/foundation/modules/advertising/advertising.php:230
+msgid "Theme location"
+msgstr "موقع تخزين السمة"
+
+#: wptouch-pro-3/themes/foundation/modules/advertising/advertising.php:235
+msgid "In the header"
+msgstr "في رأس الصفحة"
+
+#: wptouch-pro-3/themes/foundation/modules/advertising/advertising.php:236
+msgid "Above the page content"
+msgstr "أعلى محتوى الصفحة"
+
+#: wptouch-pro-3/themes/foundation/modules/advertising/advertising.php:237
+msgid "Below the page content"
+msgstr "أسفل محتوى الصفحة"
+
+#: wptouch-pro-3/themes/foundation/modules/advertising/advertising.php:247
+msgid "Active Pages"
+msgstr "الصفحات النشطة"
+
+#: wptouch-pro-3/themes/foundation/modules/advertising/advertising.php:250
+msgid "Blog listings"
+msgstr "سجلات المدونة"
+
+#: wptouch-pro-3/themes/foundation/modules/advertising/advertising.php:251
+msgid "Single posts"
+msgstr "المنشورات المنفردة"
+
+#: wptouch-pro-3/themes/foundation/modules/advertising/advertising.php:252
+msgid "Static pages"
+msgstr "الصفحات الثابتة"
+
+#: wptouch-pro-3/themes/foundation/modules/advertising/advertising.php:253
+msgid "Taxonomy"
+msgstr "التصنيف"
+
+#: wptouch-pro-3/themes/foundation/modules/advertising/advertising.php:254
+msgid "Search results"
+msgstr "نتائج البحث"
+
+#: wptouch-pro-3/themes/foundation/modules/base/base.php:69
+msgid "Loading"
+msgstr "جاري التحميل"
+
+#: wptouch-pro-3/themes/foundation/modules/base/preview-bar.php:2
+msgid "Theme Preview"
+msgstr "مشاهدة السمة"
+
+#: wptouch-pro-3/themes/foundation/modules/base/preview-bar.php:3
+msgid "Reload"
+msgstr "إعادة التحميل"
+
+#: wptouch-pro-3/themes/foundation/modules/custom-posts/custom-posts.php:76
+msgid "Custom Post Support"
+msgstr "دعم منشور مخصص"
+
+#: wptouch-pro-3/themes/foundation/modules/custom-posts/custom-posts.php:82
+msgid "Enable custom post-type support"
+msgstr "تمكين دعم المنشورات المخصصة"
+
+#: wptouch-pro-3/themes/foundation/modules/custom-posts/custom-posts.php:90
+msgid "Show custom post taxonomy"
+msgstr "عرض تصنيف المنشور المخصص"
+
+#: wptouch-pro-3/themes/foundation/modules/custom-posts/custom-posts.php:102
+msgid "Custom Post Types"
+msgstr "أنواع منشورات مخصصة"
+
+#: wptouch-pro-3/themes/foundation/modules/featured/featured.php:231
+msgid "Featured Slider"
+msgstr "شريط التمرير البارز"
+
+#: wptouch-pro-3/themes/foundation/modules/featured/featured.php:237
+msgid "Enable featured slider"
+msgstr "تفعيل شريط التمرير البارز"
+
+#: wptouch-pro-3/themes/foundation/modules/featured/featured.php:238
+msgid "Requires at least 2 entries to contain featured images"
+msgstr "لابد من إدخالين على الأقل لتضمين الصور البارزة"
+
+#: wptouch-pro-3/themes/foundation/modules/featured/featured.php:245
+msgid "Maximum number of posts"
+msgstr "العدد الأقصى للمنشورات"
+
+#: wptouch-pro-3/themes/foundation/modules/featured/featured.php:250
+msgid "3 posts"
+msgstr "3 منشورات"
+
+#: wptouch-pro-3/themes/foundation/modules/featured/featured.php:251
+msgid "5 posts"
+msgstr "5 منشورات"
+
+#: wptouch-pro-3/themes/foundation/modules/featured/featured.php:252
+msgid "10 posts"
+msgstr "10 منشورات"
+
+#: wptouch-pro-3/themes/foundation/modules/featured/featured.php:258
+msgid "Automatically slide"
+msgstr "التمرير التلقائي"
+
+#: wptouch-pro-3/themes/foundation/modules/featured/featured.php:266
+msgid "Continuously slide"
+msgstr "التمرير المستمر"
+
+#: wptouch-pro-3/themes/foundation/modules/featured/featured.php:274
+msgid "Grayscale images (CSS 3 effect)"
+msgstr "صور بالتدرج الرمادي (تأثير CSS 3)"
+
+#: wptouch-pro-3/themes/foundation/modules/featured/featured.php:275
+msgid "Featured slider images will be in grayscale for devices that support CSS filters."
+msgstr "ستظهر صور شريط التمرير البارز بالتدرج الرمادي مع الأجهزة الداعمة لفلترات CSS."
+
+#: wptouch-pro-3/themes/foundation/modules/featured/featured.php:282
+msgid "Show title & date"
+msgstr "عرض العنوان والتاريخ"
+
+#: wptouch-pro-3/themes/foundation/modules/featured/featured.php:283
+msgid "If disabled, the title and date will not be shown. Note: some themes do not show the date."
+msgstr "عند التعطيل، لن يتم عرض العنوان والتاريخ. ملحوظة: هناك بعض السمات التي لا تعرض التاريخ."
+
+#: wptouch-pro-3/themes/foundation/modules/featured/featured.php:290
+msgid "Featured slider posts also show in listings"
+msgstr "عرض المنشورات المميزة بشريط تمرير في القوائم"
+
+#: wptouch-pro-3/themes/foundation/modules/featured/featured.php:298
+msgid "Slide transition speed"
+msgstr "سرعة الحركة خلال التمرير"
+
+#: wptouch-pro-3/themes/foundation/modules/featured/featured.php:303
+msgid "Slow"
+msgstr "بطيئة"
+
+#: wptouch-pro-3/themes/foundation/modules/featured/featured.php:304
+msgid "Normal"
+msgstr "عادية"
+
+#: wptouch-pro-3/themes/foundation/modules/featured/featured.php:305
+msgid "Fast"
+msgstr "سريعة"
+
+#: wptouch-pro-3/themes/foundation/modules/featured/featured.php:316
+msgid "Show latest posts"
+msgstr "عرض آخر المنشورات"
+
+#: wptouch-pro-3/themes/foundation/modules/featured/featured.php:317
+msgid "Show posts from a specific tag"
+msgstr "عرض المنشورات من رابط ذكي محدد"
+
+#: wptouch-pro-3/themes/foundation/modules/featured/featured.php:318
+msgid "Show posts from a specific category"
+msgstr "عرض المنشورات من فئة محددة"
+
+#: wptouch-pro-3/themes/foundation/modules/featured/featured.php:319
+msgid "Show only specific posts or pages"
+msgstr "عرض منشورات أو صفحات محددة فقط"
+
+#: wptouch-pro-3/themes/foundation/modules/featured/featured.php:325
+msgid "Only this tag"
+msgstr "هذا الرابط الذكي فقط"
+
+#: wptouch-pro-3/themes/foundation/modules/featured/featured.php:334
+msgid "Only this category"
+msgstr "هذه الفئة فقط"
+
+#: wptouch-pro-3/themes/foundation/modules/featured/featured.php:343
+msgid "Comma-separated list of post/page IDs"
+msgstr "قائمة مفصولة بفاصلة لهويات تعريف المنشورات/الصفحات"
+
+#: wptouch-pro-3/themes/foundation/modules/google-fonts/google-fonts.php:10
+msgid "Browser Fonts"
+msgstr "خطوط المتصفح"
+
+#: wptouch-pro-3/themes/foundation/modules/google-fonts/google-fonts.php:18
+msgid "Typography"
+msgstr "أسلوب الطباعة"
+
+#: wptouch-pro-3/themes/foundation/modules/google-fonts/google-fonts.php:24
+msgid "Font style"
+msgstr "نوع الخط"
+
+#: wptouch-pro-3/themes/foundation/modules/google-fonts/google-fonts.php:25
+msgid "Choose a Google font pairing designed for this theme, or default browser fonts."
+msgstr "اختر خط كتابة Google المتوافق والمصمم لهذه السمة، أو أحد الخطوط الخاصة بالمتصفح الافتراضي."
+
+#: wptouch-pro-3/themes/foundation/modules/login/login-html.php:7
+msgid "Remember Me"
+msgstr "تذكرني"
+
+#: wptouch-pro-3/themes/foundation/modules/login/login-html.php:9
+msgid "Log In"
+msgstr "تسجيل الدخول"
+
+#: wptouch-pro-3/themes/foundation/modules/login/login-html.php:20
+#: wptouch-pro-3-extras/themes/classic-redux/default/header-bottom.php:51
+#: wptouch-pro-3-extras/themes/hammock/default/header-bottom.php:49
+#: wptouch-pro-3-extras/themes/simple/default/header-bottom.php:22
+msgid "Login"
+msgstr "تسجيل الدخول"
+
+#: wptouch-pro-3/themes/foundation/modules/login/login-html.php:29
+#: wptouch-pro-3-extras/extensions/infinity-cache/infinity-cache.php:207
+msgid "Sign-up"
+msgstr "التسجيل"
+
+#: wptouch-pro-3/themes/foundation/modules/login/login-html.php:30
+msgid "Lost password?"
+msgstr "فقدت كلمة المرور؟"
+
+#: wptouch-pro-3/themes/foundation/modules/login/login.php:22
+msgid "Account Username"
+msgstr "اسم المستخدم للحساب"
+
+#: wptouch-pro-3/themes/foundation/modules/login/login.php:23
+msgid "Account Password"
+msgstr "كلمة المرور للحساب"
+
+#: wptouch-pro-3/themes/foundation/modules/login/login.php:32
+msgid "Login Form"
+msgstr "نموذج تسجيل الدخول"
+
+#: wptouch-pro-3/themes/foundation/modules/login/login.php:38
+msgid "Use fly-in login form"
+msgstr "استخدم نموذج fly-in لتسجيل الدخول"
+
+#: wptouch-pro-3/themes/foundation/modules/login/login.php:39
+msgid "Will add login links and allow mobile visitors to login to your website from mobile devices"
+msgstr "ستتم إضافة روابط تسجيل الدخول والسماح لزوار الهواتف المحمولة تسجيل الدخول لموقعك من هواتفهم"
+
+#: wptouch-pro-3/themes/foundation/modules/login/login.php:46
+msgid "Show \"Sign-up\" and \"Lost Password?\" links"
+msgstr "عرض روابط \"التسجيل\" و \"نسيت كلمة المرور؟\""
+
+#: wptouch-pro-3/themes/foundation/modules/media/media.php:48
+msgid "Video Handling"
+msgstr "معالجة الفيديو"
+
+#: wptouch-pro-3/themes/foundation/modules/media/media.php:60
+msgid "CSS only (HTML5 videos)"
+msgstr "CSS فقط (فيديوهات HTML5)"
+
+#: wptouch-pro-3/themes/foundation/modules/media/media.php:61
+msgid "FitVids Method"
+msgstr "طريقة FitVids"
+
+#: wptouch-pro-3/themes/foundation/modules/media/media.php:62
+msgid "Fluid-Width Method"
+msgstr "طريقة Fluid-Width"
+
+#: wptouch-pro-3/themes/foundation/modules/related-posts/related-posts.php:106
+msgid "Related Posts"
+msgstr "المنشورات ذات الصلة"
+
+#: wptouch-pro-3/themes/foundation/modules/related-posts/related-posts.php:112
+msgid "Enable display of related posts"
+msgstr "تمكين عرض المنشورات ذات الصلة"
+
+#: wptouch-pro-3/themes/foundation/modules/related-posts/related-posts.php:120
+msgid "Maximum number of related posts to show"
+msgstr "العدد الأقصى للمنشورات ذات الصلة المعروضة"
+
+#: wptouch-pro-3/themes/foundation/modules/sharing/sharing-html.php:1
+#: wptouch-pro-3-extras/themes/hammock/default/sharing-html.php:2
+msgid "Share"
+msgstr "مشاركة"
+
+#: wptouch-pro-3/themes/foundation/modules/sharing/sharing-html.php:1
+#: wptouch-pro-3-extras/themes/hammock/default/sharing-html.php:3
+msgid "Tweet"
+msgstr "تغريد"
+
+#: wptouch-pro-3/themes/foundation/modules/sharing/sharing-html.php:1
+#: wptouch-pro-3-extras/themes/hammock/default/sharing-html.php:5
+msgid "Mail"
+msgstr "إرسال كبريد إلكتروني"
+
+#: wptouch-pro-3/themes/foundation/modules/sharing/sharing.php:81
+#: wptouch-pro-3-extras/themes/hammock/root-functions.php:317
+msgid "Sharing"
+msgstr "المشاركة"
+
+#: wptouch-pro-3/themes/foundation/modules/sharing/sharing.php:87
+#: wptouch-pro-3-extras/themes/hammock/root-functions.php:323
+msgid "Show sharing links"
+msgstr "عرض روابط المشاركة"
+
+#: wptouch-pro-3/themes/foundation/modules/sharing/sharing.php:88
+#: wptouch-pro-3-extras/themes/hammock/root-functions.php:324
+msgid "Will show Facebook, Twitter, Google+ and Email buttons on single posts."
+msgstr "سيتم عرض أزرار فيسبوك وتويتر وGoogle+ والبريد الإلكتروني في كل المنشورات."
+
+#: wptouch-pro-3/themes/foundation/modules/sharing/sharing.php:95
+msgid "Show sharing links on pages"
+msgstr "عرض روابط المشاركة على الصفحات"
+
+#: wptouch-pro-3/themes/foundation/modules/sharing/sharing.php:96
+msgid "Will show Facebook, Twitter, Google+ and Email buttons on pages as well as single posts."
+msgstr "سيتم عرض أزرار فيسبوك وتويتر وجوجل بلس والبريد الإلكتروني على الصفحات وكذا المنشورات الفردية."
+
+#: wptouch-pro-3/themes/foundation/modules/sharing/sharing.php:103
+msgid "Sharing links location"
+msgstr "مشاركة موقع الروابط"
+
+#: wptouch-pro-3/themes/foundation/modules/sharing/sharing.php:108
+msgid "Above post content"
+msgstr "أعلى محتوى المنشور"
+
+#: wptouch-pro-3/themes/foundation/modules/sharing/sharing.php:109
+msgid "Below post content"
+msgstr "أسفل محتوى المنشور"
+
+#: wptouch-pro-3/themes/foundation/modules/sharing/sharing.php:115
+msgid "Color scheme"
+msgstr "مخطط اللون"
+
+#: wptouch-pro-3/themes/foundation/modules/sharing/sharing.php:120
+msgid "Theme colors"
+msgstr "ألوان السمة"
+
+#: wptouch-pro-3/themes/foundation/modules/sharing/sharing.php:121
+msgid "Social network colors"
+msgstr "ألوان شبكات التواصل الاجتماعي"
+
+#: wptouch-pro-3/themes/foundation/modules/social-links/social-links.php:8
+msgid "Footer Social Links"
+msgstr "روابط شبكات التواصل في ذيل الصفحة"
+
+#: wptouch-pro-3/themes/foundation/modules/social-links/social-links.php:23
+msgid "Full URL to your Facebook page"
+msgstr "رابط كامل لصفحتك على الفيسبوك"
+
+#: wptouch-pro-3/themes/foundation/modules/social-links/social-links.php:31
+msgid "Full URL to your Twitter profile"
+msgstr "رابط كامل لحسابك على تويتر"
+
+#: wptouch-pro-3/themes/foundation/modules/social-links/social-links.php:39
+msgid "Full URL to your Google+ profile"
+msgstr "رابط كامل لحسابك على Google+"
+
+#: wptouch-pro-3/themes/foundation/modules/social-links/social-links.php:47
+msgid "Full URL to your Pinterest page"
+msgstr "رابط كامل لصفحتك على Pinterest"
+
+#: wptouch-pro-3/themes/foundation/modules/social-links/social-links.php:55
+msgid "Full URL to your Vimeo page"
+msgstr "رابط كامل لصفحتك على Vimeo"
+
+#: wptouch-pro-3/themes/foundation/modules/social-links/social-links.php:63
+msgid "Full URL to your %s profile"
+msgstr "رابط كامل إلى ملف تعريفك %s"
+
+#: wptouch-pro-3/themes/foundation/modules/social-links/social-links.php:70
+msgid "LinkedIn"
+msgstr "LinkedIn"
+
+#: wptouch-pro-3/themes/foundation/modules/social-links/social-links.php:71
+msgid "Full URL to your LinkedIn profile"
+msgstr "رابط كامل لحسابك على LinkedIn"
+
+#: wptouch-pro-3/themes/foundation/modules/social-links/social-links.php:79
+msgid "E-Mail address"
+msgstr "عنوان البريد الإلكتروني"
+
+#: wptouch-pro-3/themes/foundation/modules/social-links/social-links.php:87
+msgid "Full URL to your RSS feed"
+msgstr "رابط كامل لتغذية RSS"
+
+#: wptouch-pro-3/themes/foundation/modules/tablets/tablets.php:46
+msgid "iPad"
+msgstr "iPad"
+
+#: wptouch-pro-3/themes/foundation/modules/tablets/tablets.php:52
+#: wptouch-pro-3/themes/foundation/modules/webapp/webapp.php:268
+#: wptouch-pro-3/themes/foundation/modules/webapp/webapp.php:286
+#: wptouch-pro-3/themes/foundation/modules/webapp/webapp.php:304
+#: wptouch-pro-3/themes/foundation/modules/webapp/webapp.php:323
+#: wptouch-pro-3/themes/foundation/modules/webapp/webapp.php:331
+#: wptouch-pro-3/themes/foundation/modules/webapp/webapp.php:349
+#: wptouch-pro-3/themes/foundation/modules/webapp/webapp.php:357
+#: wptouch-pro-3/themes/foundation/root-functions.php:390
+#: wptouch-pro-3/themes/foundation/root-functions.php:408
+msgid "%d by %d pixels (PNG)"
+msgstr "%d في %d بكسل (PNG)"
+
+#: wptouch-pro-3/themes/foundation/modules/twitter/twitter.php:66
+msgid "Disabled"
+msgstr "معطل"
+
+#: wptouch-pro-3/themes/foundation/modules/twitter/twitter.php:81
+msgid "Twitter account to use for Tweet display"
+msgstr "حساب تويتر للنشر على تويتر"
+
+#: wptouch-pro-3/themes/foundation/modules/webapp/webapp.php:122
+msgid "External link— open it in the browser?"
+msgstr "رابط خارجي— فتح الرابط في المتصفح؟"
+
+#: wptouch-pro-3/themes/foundation/modules/webapp/webapp.php:123
+msgid "File link— Do you want to open it in the browser?"
+msgstr "رابط ملف— هل ترغب في فتح الرابط في المتصفح؟"
+
+#: wptouch-pro-3/themes/foundation/modules/webapp/webapp.php:210
+msgid "Enable iOS Web-App Mode"
+msgstr "تمكين وضع تطبيق الويب لنظام iOS"
+
+#: wptouch-pro-3/themes/foundation/modules/webapp/webapp.php:214
+msgid "Enable persistence"
+msgstr "تفعيل الثبات"
+
+#: wptouch-pro-3/themes/foundation/modules/webapp/webapp.php:215
+msgid "Loads the last visited URL for visitors on open."
+msgstr "تحميل آخر رابط تمت زيارته للزوار عند الفتح."
+
+#: wptouch-pro-3/themes/foundation/modules/webapp/webapp.php:222
+msgid "URLs to ignore in Web-App Mode"
+msgstr "الراوبط المهملة في وضع تطبيق الويب"
+
+#: wptouch-pro-3/themes/foundation/modules/webapp/webapp.php:235
+msgid "Notice Message"
+msgstr "رسالة تنبيه"
+
+#: wptouch-pro-3/themes/foundation/modules/webapp/webapp.php:238
+msgid "Show a notice message for iPhone, iPod touch & iPad visitors about my Web-App"
+msgstr "عرض رسالة تنبيه للزوار من أجهزة آي فون وآيبود تاتش وآي باد حول تطبيق الويب الخاص بي"
+
+#: wptouch-pro-3/themes/foundation/modules/webapp/webapp.php:238
+msgid "WPtouch shows a notice bubble on 1st visit letting users know about your Web-App enabled website on iOS devices."
+msgstr "يقوم WPtouch بعرض نافذة منبثقة مع أول زيارة لتعريف المستخدمين بأن موقعك مزود بتطبيق الويب لأجهزة iOS."
+
+#: wptouch-pro-3/themes/foundation/modules/webapp/webapp.php:239
+msgid "Notice message contents"
+msgstr "محتويات رسالة التنبيه"
+
+#: wptouch-pro-3/themes/foundation/modules/webapp/webapp.php:239
+msgid "[device] and [icon] are dynamic and used to determine the device and iOS version. Do not remove these from your message."
+msgstr "[device] و [icon] ديناميكيان ويستخدمان للتعرف على الجهاز ونسخة نظام iOS. لا تحذفهم من رسالتك."
+
+#: wptouch-pro-3/themes/foundation/modules/webapp/webapp.php:243
+msgid "the notice message will be shown again for visitors"
+msgstr "سيتم عرض رسالة التنبيه مرةً أخرى للزوار"
+
+#: wptouch-pro-3/themes/foundation/modules/webapp/webapp.php:248
+msgid "1 day until"
+msgstr "يوم واحد حتى"
+
+#: wptouch-pro-3/themes/foundation/modules/webapp/webapp.php:249
+msgid "7 days until"
+msgstr "7 أيام حتى"
+
+#: wptouch-pro-3/themes/foundation/modules/webapp/webapp.php:250
+msgid "1 month until"
+msgstr "شهر واحد حتى"
+
+#: wptouch-pro-3/themes/foundation/modules/webapp/webapp.php:251
+msgid "Every time"
+msgstr "كل مرة"
+
+#: wptouch-pro-3/themes/foundation/modules/webapp/webapp.php:262
+msgid "iPhone Startup Screen"
+msgstr "شاشة بدء iPhone"
+
+#: wptouch-pro-3/themes/foundation/modules/webapp/webapp.php:280
+msgid "Retina iPhone Startup Screen"
+msgstr "شاشة بدء شبكية iPhone"
+
+#: wptouch-pro-3/themes/foundation/modules/webapp/webapp.php:298
+msgid "iPhone 5 Startup Screen"
+msgstr "شاشة بدء iPhone 5"
+
+#: wptouch-pro-3/themes/foundation/modules/webapp/webapp.php:317
+msgid "iPad Mini and iPad Startup Screens"
+msgstr "شاشات بدء iPad Mini وiPad"
+
+#: wptouch-pro-3/themes/foundation/modules/webapp/webapp.php:343
+msgid "Retina iPad Startup Screens"
+msgstr "شاشات بدء شبكية iPad"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:11
+msgid "Branding"
+msgstr "التصنيف"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:12
+msgid "Media Handling"
+msgstr "معالجة الوسائط"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:13
+msgid "Web-App Mode"
+msgstr "وضع تطبيق الويب"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:14
+msgid "Bookmark Icons"
+msgstr "أيقونات المفضلة"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:15
+msgid "Advertising"
+msgstr "الإعلانات"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:16
+msgid "Custom Content"
+msgstr "محتوى مخصص"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:113
+msgid "Install this Web-App on your [device]: tap [icon] then \"Add to Home Screen\""
+msgstr "قم بتنصيب تطبيق الويب هذا على [device]: انقر على [icon] ثم \"أضف إلى الشاشة الرئيسية\""
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:304
+msgid "Number of posts in post listings"
+msgstr "عدد المنشورات في سجلات المنشور"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:305
+msgid "Overrides the WordPress Reading settings for \"Blog pages show at most\""
+msgstr "يتجاهل إعدادات قراءة WordPress لـ \"عرض صفحات المدونة على الأكثر\""
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:312
+msgid "Excluded categories"
+msgstr "الفئات المستبعدة"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:313
+msgid "Comma separated by category name"
+msgstr "مرتبة بحسب اسم الفئة ومفصولة بفاصلة"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:320
+msgid "Excluded tags"
+msgstr "الروابط الذكية المستبعدة"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:321
+msgid "Comma separated by tag name"
+msgstr "مرتبة بحسب اسم الرابط الذكي ومفصولة بفاصلة"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:331
+msgid "Blog"
+msgstr "المدونة"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:342
+msgid "Show comments on pages"
+msgstr "عرض التعليقات على الصفحات"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:343
+msgid "Overrides the WordPress settings for showing comments on pages."
+msgstr "تجاوز إعدادات WordPress لعرض التعليقات على الصفحات."
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:353
+#: wptouch-pro-3/themes/foundation/root-functions.php:1024
+msgid "Pages"
+msgstr "الصفحات"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:366
+msgid "Icon Title"
+msgstr "عنوان الأيقونة"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:372
+msgid "Icon title"
+msgstr "عنوان الأيقونة"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:373
+msgid "When visitors bookmark your website, this will be the title shown."
+msgstr "عند حفظ الزوار لموقعك في المفضلة لديهم، فهذا هو العنوان الذي سيظهر لهم."
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:384
+msgid "Android"
+msgstr "أندرويد"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:402
+msgid "iPhone & iPod touch"
+msgstr "آيفون وآيبود تاتش"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:438
+msgid "Theme Colors"
+msgstr "ألوان السمات"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:448
+msgid "Site Logo"
+msgstr "شعار الموقع"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:454
+msgid "(Scaled by themes to fit logo areas as needed)"
+msgstr "(منسقة بحسب السمات لتلائم أماكن الشعار، عند الحاجة لذلك)"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:467
+msgid "Smart App Banner"
+msgstr "خاصية Smart App Banner"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:473
+msgid "Enter your app's %sApp Store ID%s"
+msgstr "أدخل رقم تعريف التطبيق %sApp Store ID%s"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:474
+msgid "Your app's unique identifier. Find your ID from the iTunes Link Maker: Search for your app. In the link it provides, your app ID is the nine-digit number in between id and ?mt. For example Angry Birds's ID is 343200656."
+msgstr "معرف التطبيق الفريد. يمكنك الحصول على رقم تعريف التطبيق من صانع روابط iTunes Link Maker: ابحث عن تطبيقك. ففي الرابط الذي ستحصل عليه، سيكون رقم تعريف التطبيق هو الرقم المكون من تسعة أرقام والواقع بين معرف الهوية id و?mt. على سبيل المثال، رقم تعريف تطبيق لعبة Angry Birds هو 343200656."
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:486
+msgid "Theme Footer"
+msgstr "ذيل السمة"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:489
+msgid "Custom footer content (HTML is allowed)"
+msgstr "محتوى مخصص لذيل الصفحة (مسموح بلغة HTML)"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:489
+msgid "You can add custom footer content that will be displayed below the switch link."
+msgstr "يمكنك إضافة محتوى مخصص لذيل الصفحة، والذي سيعرض أسفل رابط التحويل بين السمات."
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:854
+msgid "search results for '%s'"
+msgstr "نتائج البحث عن '%s'"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:856
+msgid "%sCategories &rsaquo;%s %s"
+msgstr "%sالفئات &rsaquo;%s %s"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:858
+msgid "Tags &rsaquo; %s"
+msgstr "الروابط الذكية &rsaquo; %s"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:860
+#: wptouch-pro-3/themes/foundation/root-functions.php:862
+#: wptouch-pro-3/themes/foundation/root-functions.php:864
+msgid "Archives &rsaquo; %s"
+msgstr "أرشيف &rsaquo; %s"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:879
+msgid "Load more from this category"
+msgstr "تحميل المزيد من هذه الفئة"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:881
+msgid "Load more tagged like this"
+msgstr "تحميل المزيد مما لديه علامة كهذه"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:883
+msgid "Load more from this day"
+msgstr "تحميل المزيد من ذلك اليوم"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:885
+msgid "Load more from this month"
+msgstr "تحميل المزيد من ذلك الشهر"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:887
+msgid "Load more from this year"
+msgstr "تحميل المزيد من ذلك العام"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:889
+msgid "Load more in this section"
+msgstr "تحميل المزيد في هذا القسم"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:891
+msgid "Load more entries"
+msgstr "تحميل المزيد من الإدخالات"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:973
+msgid "Post"
+msgstr "منشور"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:975
+msgid "Page"
+msgstr "صفحة"
+
+#: wptouch-pro-3-extras/extensions/infinity-cache/infinity-cache.php:63
+#: wptouch-pro-3-extras/extensions/infinity-cache/infinity-cache.php:225
+msgid "Purge Page Cache"
+msgstr "إزالة الذاكرة المؤقتة للصفحة"
+
+#: wptouch-pro-3-extras/extensions/infinity-cache/infinity-cache.php:123
+msgid "Enable Infinity Cache"
+msgstr "تمكين التخزين المؤقت اللامحدود"
+
+#: wptouch-pro-3-extras/extensions/infinity-cache/infinity-cache.php:131
+msgid "Create cache for desktop users"
+msgstr "إنشاء تخزين مؤقت لمستخدمي سطح المكتب"
+
+#: wptouch-pro-3-extras/extensions/infinity-cache/infinity-cache.php:132
+msgid "If you are using another cache plugin such as W3, you can disable this."
+msgstr "إذا كنت تستخدم ملحقًا آخرًا للتخزين المؤقت مثل W3، فيمكنك تعطيله."
+
+#: wptouch-pro-3-extras/extensions/infinity-cache/infinity-cache.php:153
+msgid "Compress output using GZIP"
+msgstr "ضغط الناتج باستخدام GZIP"
+
+#: wptouch-pro-3-extras/extensions/infinity-cache/infinity-cache.php:163
+msgid "Maximum age of cached content"
+msgstr "العمر الأقصى لمحتوى التخزين المؤقت"
+
+#: wptouch-pro-3-extras/extensions/infinity-cache/infinity-cache.php:164
+msgid "Each cached page will automatically be regenerated after this period elapses"
+msgstr "ستتم تلقائيًا إعادة توليد كل صفحة مخزنة مؤقتًا بعد انقضاء هذه المدة"
+
+#: wptouch-pro-3-extras/extensions/infinity-cache/infinity-cache.php:168
+#: wptouch-pro-3-extras/extensions/infinity-cache/infinity-cache.php:169
+#: wptouch-pro-3-extras/extensions/infinity-cache/infinity-cache.php:170
+#: wptouch-pro-3-extras/extensions/infinity-cache/infinity-cache.php:171
+#: wptouch-pro-3-extras/extensions/infinity-cache/infinity-cache.php:172
+msgid "%d hour"
+msgid_plural "%d hours"
+msgstr[0] "%d ساعة"
+msgstr[1] "%d ساعات"
+
+#: wptouch-pro-3-extras/extensions/infinity-cache/infinity-cache.php:179
+msgid "Remove stale cache file interval"
+msgstr "إزالة الفاصل الزمني لملف ذاكرة التخزين المؤقت"
+
+#: wptouch-pro-3-extras/extensions/infinity-cache/infinity-cache.php:184
+msgid "Hourly"
+msgstr "كل ساعة"
+
+#: wptouch-pro-3-extras/extensions/infinity-cache/infinity-cache.php:185
+msgid "Daily"
+msgstr "يومي"
+
+#: wptouch-pro-3-extras/extensions/infinity-cache/infinity-cache.php:192
+msgid "Disable caching for any of these matched URL fragments"
+msgstr "تعطيل التخزين المؤقت لأحد أجزاء الروابط المتوافقة"
+
+#: wptouch-pro-3-extras/extensions/infinity-cache/infinity-cache.php:193
+msgid "Add one URL fragment per line, i.e. %s, to not cache pages that contain each URL fragment"
+msgstr "أضف جزء رابط واحد في كل سطر، أي %s، وذلك لكي لا يتم تخزين صفحات تحتوي على كل جزء من الرابط بشكلٍ مؤقت"
+
+#: wptouch-pro-3-extras/extensions/infinity-cache/infinity-cache.php:201
+msgid "Content Distribution Network Service"
+msgstr "خدمة شبكة توزيع المحتوى CDN"
+
+#: wptouch-pro-3-extras/extensions/infinity-cache/infinity-cache.php:202
+msgid "Using a content distribution network (CDN) can significantly enhance the responsiveness of your website."
+msgstr "يمكن لاستخدام خدمة شبكة توزيع المحتوى (CDN) أن يعزز بشكلٍ كبير من سرعة استجابة موقعك."
+
+#: wptouch-pro-3-extras/extensions/infinity-cache/infinity-cache.php:215
+msgid "URL %d"
+msgstr "الرابط %d"
+
+#: wptouch-pro-3-extras/extensions/infinity-cache/infinity-cache.php:216
+msgid "Add the URLs you have configured for your CDN, for example http://cdn%d.mysite.com"
+msgstr "أضف الروابط التي قم بتهيئتها لخدمة شبكة توزيع المحتوى خاصتك، على سبيل المثال http://cdn%d.mysite.com"
+
+#: wptouch-pro-3-extras/extensions/infinity-cache/infinity-cache.php:233
+msgid "Infinity Cache"
+msgstr "التخزين المؤقت اللامحدود"
+
+#: wptouch-pro-3-extras/extensions/mobile-content/mobile-content.php:20
+msgid "WPtouch Alternate Mobile Content"
+msgstr "محتوى WPtouch البديل للهواتف المحمولة"
+
+#: wptouch-pro-3-extras/extensions/mobile-content/mobile-content.php:38
+msgid "Mobile Content"
+msgstr "محتوى الهاتف المحمول"
+
+#: wptouch-pro-3-extras/extensions/mobile-content/mobile-content.php:44
+msgid "Enable mobile content display"
+msgstr "تمكين عرض محتوى الهاتف المحمول"
+
+#: wptouch-pro-3-extras/extensions/responsive-images/responsive-images.php:92
+msgid "Responsive Images"
+msgstr "الصور المتفاعلة"
+
+#: wptouch-pro-3-extras/extensions/responsive-images/responsive-images.php:98
+msgid "Include desktop optimizations for mobile devices"
+msgstr "ضم تحسينات سطح المكتب للهواتف المحمولة"
+
+#: wptouch-pro-3-extras/extensions/responsive-images/responsive-images.php:99
+msgid "Normally only images on mobile are optimized"
+msgstr "عادة ما يتم تحسين الصور فقط على الهاتف المحمول"
+
+#: wptouch-pro-3-extras/extensions/responsive-images/responsive-images.php:106
+msgid "Performance preference"
+msgstr "تفضيلات الأداء"
+
+#: wptouch-pro-3-extras/extensions/responsive-images/responsive-images.php:111
+msgid "Optimize for page speed"
+msgstr "تحسين من أجل سرعة الصفحة"
+
+#: wptouch-pro-3-extras/extensions/responsive-images/responsive-images.php:112
+msgid "Optimize for quality"
+msgstr "تحسين من أجل الجودة"
+
+#: wptouch-pro-3-extras/themes/bauhaus/default/header-bottom.php:21
+#: wptouch-pro-3-extras/themes/bio/default/header-bottom.php:24
+#: wptouch-pro-3-extras/themes/classic-redux/default/header-bottom.php:76
+#: wptouch-pro-3-extras/themes/hammock/default/header-bottom.php:84
+#: wptouch-pro-3-extras/themes/scaffold/default/header-bottom.php:24
+msgid "Search this website"
+msgstr "بحث في هذا الموقع"
+
+#: wptouch-pro-3-extras/themes/bauhaus/default/header-bottom.php:22
+#: wptouch-pro-3-extras/themes/bio/default/header-bottom.php:14
+#: wptouch-pro-3-extras/themes/bio/default/header-bottom.php:25
+#: wptouch-pro-3-extras/themes/classic-redux/default/header-bottom.php:46
+#: wptouch-pro-3-extras/themes/classic-redux/default/header-bottom.php:78
+#: wptouch-pro-3-extras/themes/hammock/default/header-bottom.php:42
+#: wptouch-pro-3-extras/themes/scaffold/default/header-bottom.php:14
+#: wptouch-pro-3-extras/themes/scaffold/default/header-bottom.php:25
+msgid "Search"
+msgstr "بحث"
+
+#: wptouch-pro-3-extras/themes/bauhaus/default/header-bottom.php:40
+#: wptouch-pro-3-extras/themes/bauhaus/default/header-bottom.php:42
+#: wptouch-pro-3-extras/themes/classic-redux/default/header-bottom.php:53
+#: wptouch-pro-3-extras/themes/hammock/default/header-bottom.php:51
+#: wptouch-pro-3-extras/themes/simple/default/header-bottom.php:24
+msgid "Logout"
+msgstr "تسجيل الخروج"
+
+#: wptouch-pro-3-extras/themes/bauhaus/default/post-loop.php:19
+#: wptouch-pro-3-extras/themes/bio/default/post-loop.php:19
+#: wptouch-pro-3-extras/themes/classic-redux/default/post-loop.php:24
+msgid "by"
+msgstr "بواسطة"
+
+#: wptouch-pro-3-extras/themes/bauhaus/default/search.php:14
+msgid "Show %s Results"
+msgstr "عرض %s نتائج"
+
+#: wptouch-pro-3-extras/themes/bauhaus/default/search.php:38
+msgid "No results found"
+msgstr "لم يتم العثور على نتائج"
+
+#: wptouch-pro-3-extras/themes/bauhaus/default/single.php:25
+msgid "no comments"
+msgstr "لا تعليقات"
+
+#: wptouch-pro-3-extras/themes/bauhaus/default/single.php:25
+msgid "1 comment"
+msgstr "1 تعليق"
+
+#: wptouch-pro-3-extras/themes/bauhaus/default/single.php:25
+msgid "% comments"
+msgstr "% تعليقات"
+
+#: wptouch-pro-3-extras/themes/bauhaus/default/single.php:44
+#: wptouch-pro-3-extras/themes/classic-redux/default/header-bottom.php:35
+#: wptouch-pro-3-extras/themes/classic-redux/default/header-bottom.php:61
+#: wptouch-pro-3-extras/themes/hammock/default/header-bottom.php:39
+msgid "Categories"
+msgstr "الفئات"
+
+#: wptouch-pro-3-extras/themes/bauhaus/default/single.php:47
+#: wptouch-pro-3-extras/themes/classic-redux/default/header-bottom.php:39
+#: wptouch-pro-3-extras/themes/classic-redux/default/header-bottom.php:68
+msgid "Tags"
+msgstr "الروابط الذكية"
+
+#: wptouch-pro-3-extras/themes/bauhaus/root-functions.php:118
+#: wptouch-pro-3-extras/themes/classic-redux/root-functions.php:97
+#: wptouch-pro-3-extras/themes/hammock/root-functions.php:72
+msgid "Header Menu"
+msgstr "قائمة رأس الصفحة"
+
+#: wptouch-pro-3-extras/themes/bauhaus/root-functions.php:120
+#: wptouch-pro-3-extras/themes/bio/root-functions.php:89
+#: wptouch-pro-3-extras/themes/classic-redux/root-functions.php:99
+#: wptouch-pro-3-extras/themes/cms/root-functions.php:116
+#: wptouch-pro-3-extras/themes/cms/root-functions.php:125
+#: wptouch-pro-3-extras/themes/hammock/root-functions.php:74
+#: wptouch-pro-3-extras/themes/scaffold/root-functions.php:77
+#: wptouch-pro-3-extras/themes/simple/root-functions.php:60
+#: wptouch-pro-3-extras/themes/simple/root-functions.php:71
+msgid "Choose a menu"
+msgstr "اختر قائمة"
+
+#: wptouch-pro-3-extras/themes/bauhaus/root-functions.php:121
+msgid "Main menu selection"
+msgstr "اختيار القائمة الرئيسية"
+
+#: wptouch-pro-3-extras/themes/bauhaus/root-functions.php:128
+#: wptouch-pro-3-extras/themes/bio/root-functions.php:97
+#: wptouch-pro-3-extras/themes/classic-redux/root-functions.php:107
+#: wptouch-pro-3-extras/themes/cms/root-functions.php:132
+#: wptouch-pro-3-extras/themes/scaffold/root-functions.php:85
+#: wptouch-pro-3-extras/themes/simple/root-functions.php:79
+msgid "Theme background"
+msgstr "خلفية السمة"
+
+#: wptouch-pro-3-extras/themes/bauhaus/root-functions.php:129
+msgid "Header & Menu"
+msgstr "رأس الصفحة والقائمة"
+
+#: wptouch-pro-3-extras/themes/bauhaus/root-functions.php:130
+#: wptouch-pro-3-extras/themes/bio/root-functions.php:98
+#: wptouch-pro-3-extras/themes/classic-redux/root-functions.php:108
+#: wptouch-pro-3-extras/themes/cms/root-functions.php:133
+#: wptouch-pro-3-extras/themes/hammock/root-functions.php:84
+#: wptouch-pro-3-extras/themes/scaffold/root-functions.php:86
+#: wptouch-pro-3-extras/themes/simple/root-functions.php:80
+msgid "Links"
+msgstr "الراوبط"
+
+#: wptouch-pro-3-extras/themes/bauhaus/root-functions.php:131
+msgid "Post/Page Headers"
+msgstr "رأس المنشور/الصفحة"
+
+#: wptouch-pro-3-extras/themes/bauhaus/root-functions.php:232
+msgid "Theme Shapes"
+msgstr "أشكال السمة"
+
+#: wptouch-pro-3-extras/themes/bauhaus/root-functions.php:238
+msgid "Theme shape style"
+msgstr "نمط شكل السمة"
+
+#: wptouch-pro-3-extras/themes/bauhaus/root-functions.php:239
+msgid "Bauhaus will use this shape style throughout its appearance"
+msgstr "سيستخدم Bauhaus نمط الشكل هذا طوال فترة ظهوره"
+
+#: wptouch-pro-3-extras/themes/bauhaus/root-functions.php:243
+msgid "Circles"
+msgstr "دوائر"
+
+#: wptouch-pro-3-extras/themes/bauhaus/root-functions.php:245
+msgid "Rounded squares"
+msgstr "مربعات مستديرة"
+
+#: wptouch-pro-3-extras/themes/bauhaus/root-functions.php:264
+#: wptouch-pro-3-extras/themes/bio/root-functions.php:131
+#: wptouch-pro-3-extras/themes/classic-redux/root-functions.php:238
+msgid "Post thumbnails"
+msgstr "نشر الصور المصغّرة"
+
+#: wptouch-pro-3-extras/themes/bauhaus/root-functions.php:269
+#: wptouch-pro-3-extras/themes/bio/root-functions.php:136
+#: wptouch-pro-3-extras/themes/classic-redux/root-functions.php:243
+msgid "No thumbnails"
+msgstr "بدون صور مصغّرة"
+
+#: wptouch-pro-3-extras/themes/bauhaus/root-functions.php:270
+#: wptouch-pro-3-extras/themes/bio/root-functions.php:137
+#: wptouch-pro-3-extras/themes/classic-redux/root-functions.php:244
+#: wptouch-pro-3-extras/themes/hammock/root-functions.php:230
+msgid "Blog listing only"
+msgstr "سجلات المدونة فقط"
+
+#: wptouch-pro-3-extras/themes/bauhaus/root-functions.php:271
+#: wptouch-pro-3-extras/themes/bio/root-functions.php:138
+#: wptouch-pro-3-extras/themes/classic-redux/root-functions.php:245
+#: wptouch-pro-3-extras/themes/hammock/root-functions.php:231
+msgid "Blog listing, single posts"
+msgstr "سجلات المدونة، المنشورات الفردية"
+
+#: wptouch-pro-3-extras/themes/bauhaus/root-functions.php:272
+#: wptouch-pro-3-extras/themes/bio/root-functions.php:139
+msgid "Blog listing, single posts & pages"
+msgstr "قائمة المدونة والمنشورات المفردة والصفحات"
+
+#: wptouch-pro-3-extras/themes/bauhaus/root-functions.php:273
+#: wptouch-pro-3-extras/themes/bio/root-functions.php:140
+msgid "All (blog, single, pages, search & archive)"
+msgstr "الكل (المدونة، والمفردة، والصفحات، والبحث، والأرشيف)"
+
+#: wptouch-pro-3-extras/themes/bauhaus/root-functions.php:281
+#: wptouch-pro-3-extras/themes/bio/root-functions.php:148
+#: wptouch-pro-3-extras/themes/classic-redux/root-functions.php:254
+msgid "Thumbnail Selection"
+msgstr "اختيار الصورة المصغّرة"
+
+#: wptouch-pro-3-extras/themes/bauhaus/root-functions.php:286
+#: wptouch-pro-3-extras/themes/bio/root-functions.php:153
+#: wptouch-pro-3-extras/themes/classic-redux/root-functions.php:259
+msgid "Post featured image"
+msgstr "صورة المنشور المميزة"
+
+#: wptouch-pro-3-extras/themes/bauhaus/root-functions.php:287
+#: wptouch-pro-3-extras/themes/bio/root-functions.php:154
+#: wptouch-pro-3-extras/themes/classic-redux/root-functions.php:260
+msgid "Post custom field"
+msgstr "الحقل المخصص للمنشور"
+
+#: wptouch-pro-3-extras/themes/bauhaus/root-functions.php:295
+#: wptouch-pro-3-extras/themes/bio/root-functions.php:162
+#: wptouch-pro-3-extras/themes/classic-redux/root-functions.php:268
+msgid "Thumbnail custom field name"
+msgstr "اسم الحقل المخصص للصورة المصغّرة"
+
+#: wptouch-pro-3-extras/themes/bauhaus/root-functions.php:306
+#: wptouch-pro-3-extras/themes/classic-redux/root-functions.php:301
+#: wptouch-pro-3-extras/themes/hammock/root-functions.php:262
+msgid "Show post categories and tags"
+msgstr "عرض فئات المنشور والعلامات عليه"
+
+#: wptouch-pro-3-extras/themes/bauhaus/root-functions.php:317
+#: wptouch-pro-3-extras/themes/bio/root-functions.php:173
+#: wptouch-pro-3-extras/themes/classic-redux/root-functions.php:279
+#: wptouch-pro-3-extras/themes/hammock/root-functions.php:240
+msgid "Show post date"
+msgstr "عرض تاريخ المنشور"
+
+#: wptouch-pro-3-extras/themes/bauhaus/root-functions.php:328
+#: wptouch-pro-3-extras/themes/bio/root-functions.php:184
+#: wptouch-pro-3-extras/themes/classic-redux/root-functions.php:290
+#: wptouch-pro-3-extras/themes/hammock/root-functions.php:251
+msgid "Show post author"
+msgstr "عرض صاحب المنشور"
+
+#: wptouch-pro-3-extras/themes/bauhaus/root-functions.php:339
+#: wptouch-pro-3-extras/themes/bio/root-functions.php:195
+msgid "Show search in header"
+msgstr "عرض البحث في رأس الصفحة"
+
+#: wptouch-pro-3-extras/themes/bauhaus/root-functions.php:340
+#: wptouch-pro-3-extras/themes/bio/root-functions.php:196
+msgid "Adds Search capability in the site header."
+msgstr "يضيف إمكانية البحث في رأس صفحات الموقع."
+
+#: wptouch-pro-3-extras/themes/bauhaus/root-functions.php:350
+#: wptouch-pro-3-extras/themes/bio/root-functions.php:206
+#: wptouch-pro-3-extras/themes/classic-redux/root-functions.php:312
+#: wptouch-pro-3-extras/themes/hammock/root-functions.php:285
+msgid "Use infinite scrolling for blog"
+msgstr "استخدام التمرير غير المحدود للمدونة"
+
+#: wptouch-pro-3-extras/themes/bauhaus/root-functions.php:367
+msgid "Show featured slider on front page"
+msgstr "إظهار شريط التمرير البارز على الصفحة الأولى"
+
+#: wptouch-pro-3-extras/themes/bio/root-functions.php:87
+#: wptouch-pro-3-extras/themes/scaffold/root-functions.php:75
+msgid "Primary Menu"
+msgstr "القائمة الرئيسية"
+
+#: wptouch-pro-3-extras/themes/bio/root-functions.php:90
+#: wptouch-pro-3-extras/themes/scaffold/root-functions.php:78
+msgid "Menus are awesome!"
+msgstr "القوائم رائعة!"
+
+#: wptouch-pro-3-extras/themes/classic-redux/default/header-bottom.php:43
+#: wptouch-pro-3-extras/themes/classic-redux/default/header-bottom.php:88
+msgid "Tweets"
+msgstr "التغريدات"
+
+#: wptouch-pro-3-extras/themes/classic-redux/default/header-bottom.php:92
+msgid "Follow %s on Twitter"
+msgstr "تابع %s على تويتر"
+
+#: wptouch-pro-3-extras/themes/classic-redux/default/post-loop.php:56
+msgid "Read This Post"
+msgstr "اقرأ هذا المنشور"
+
+#: wptouch-pro-3-extras/themes/classic-redux/default/single.php:16
+msgid "%s at %s"
+msgstr "%s عند %s"
+
+#: wptouch-pro-3-extras/themes/classic-redux/default/single.php:18
+#: wptouch-pro-3-extras/themes/hammock/default/single.php:21
+msgid "Written by %s"
+msgstr "كتبه %s"
+
+#: wptouch-pro-3-extras/themes/classic-redux/root-functions.php:6
+#: wptouch-pro-3-extras/themes/classic-redux/root-functions.php:357
+msgid "Tablets"
+msgstr "الحواسيب اللوحية"
+
+#: wptouch-pro-3-extras/themes/classic-redux/root-functions.php:106
+#: wptouch-pro-3-extras/themes/cms/root-functions.php:131
+#: wptouch-pro-3-extras/themes/simple/root-functions.php:78
+msgid "Header background"
+msgstr "خلفية رأس الصفحة"
+
+#: wptouch-pro-3-extras/themes/classic-redux/root-functions.php:246
+#: wptouch-pro-3-extras/themes/hammock/root-functions.php:232
+msgid "All (blog, single, search and archive)"
+msgstr "الكل (المدونة، والفردي، والبحث، والأرشيف)"
+
+#: wptouch-pro-3-extras/themes/classic-redux/root-functions.php:323
+msgid "Use rounded corners"
+msgstr "استخدام زوايا مستديرة"
+
+#: wptouch-pro-3-extras/themes/classic-redux/root-functions.php:341
+#: wptouch-pro-3-extras/themes/hammock/root-functions.php:302
+msgid "Show page title areas on pages"
+msgstr "عرض مناطق عنوان الصفحة على الصفحات"
+
+#: wptouch-pro-3-extras/themes/classic-redux/root-functions.php:363
+msgid "Add tablet support"
+msgstr "أضف دعم الحواسيب اللوحية"
+
+#: wptouch-pro-3-extras/themes/classic-redux/root-functions.php:375
+#: wptouch-pro-3-extras/themes/hammock/root-functions.php:335
+msgid "Header Menu Area"
+msgstr "منطقة قائمة رأس الصفحة"
+
+#: wptouch-pro-3-extras/themes/classic-redux/root-functions.php:381
+#: wptouch-pro-3-extras/themes/hammock/root-functions.php:341
+msgid "Drop-down button says \"Menu\""
+msgstr "زر القائمة المنسدلة يشير إلى \"القائمة\""
+
+#: wptouch-pro-3-extras/themes/classic-redux/root-functions.php:389
+msgid "Show tab bar"
+msgstr "عرض شريط علامات الجدولة"
+
+#: wptouch-pro-3-extras/themes/classic-redux/root-functions.php:397
+msgid "Tab-bar shows categories or tags"
+msgstr "عرض شريط علامات الجدولة للفئات والروابط الذكية"
+
+#: wptouch-pro-3-extras/themes/classic-redux/root-functions.php:402
+msgid "Categories and tags"
+msgstr "الفئات والراوبط الذكية"
+
+#: wptouch-pro-3-extras/themes/classic-redux/root-functions.php:403
+msgid "Categories only"
+msgstr "الفئات فقط"
+
+#: wptouch-pro-3-extras/themes/classic-redux/root-functions.php:404
+msgid "Tags only"
+msgstr "الروابط الذكية فقط"
+
+#: wptouch-pro-3-extras/themes/classic-redux/root-functions.php:405
+msgid "No categories or tags"
+msgstr "لا فئات أو روابط ذكية"
+
+#: wptouch-pro-3-extras/themes/classic-redux/root-functions.php:411
+msgid "Max categories / tags"
+msgstr "أقصى عدد فئات/روابط ذكية"
+
+#: wptouch-pro-3-extras/themes/classic-redux/root-functions.php:429
+#: wptouch-pro-3-extras/themes/cms/root-functions.php:242
+#: wptouch-pro-3-extras/themes/simple/root-functions.php:275
+msgid "CSS Effects"
+msgstr "تأثيرات CSS"
+
+#: wptouch-pro-3-extras/themes/classic-redux/root-functions.php:435
+#: wptouch-pro-3-extras/themes/cms/root-functions.php:248
+msgid "Add a noise effect to the header and theme background"
+msgstr "أضف تأثير ضوضاء إلى رأس الصفحة وخلفية السمة"
+
+#: wptouch-pro-3-extras/themes/classic-redux/root-functions.php:436
+#: wptouch-pro-3-extras/themes/cms/root-functions.php:249
+#: wptouch-pro-3-extras/themes/simple/root-functions.php:282
+msgid "Will apply the effect overtop of any background image you upload."
+msgstr "سيتم تطبيق التأثير فوق أي صورة خلفية تقوم برفعها."
+
+#: wptouch-pro-3-extras/themes/cms/default/header-bottom.php:14
+msgid "menu"
+msgstr "القائمة"
+
+#: wptouch-pro-3-extras/themes/cms/default/header-bottom.php:21
+msgid "login"
+msgstr "تسجيل الدخول"
+
+#: wptouch-pro-3-extras/themes/cms/default/header-bottom.php:25
+msgid "logout"
+msgstr "تسجيل الخروج"
+
+#: wptouch-pro-3-extras/themes/cms/default/header-bottom.php:38
+#: wptouch-pro-3-extras/themes/simple/default/footer-top.php:3
+msgid "search this website"
+msgstr "بحث في هذا الموقع"
+
+#: wptouch-pro-3-extras/themes/cms/default/header-bottom.php:39
+#: wptouch-pro-3-extras/themes/simple/default/footer-top.php:5
+msgid "search"
+msgstr "بحث"
+
+#: wptouch-pro-3-extras/themes/cms/root-functions.php:49
+msgid "Alt Menu"
+msgstr "قائمة Alt"
+
+#: wptouch-pro-3-extras/themes/cms/root-functions.php:114
+msgid "Main Menu"
+msgstr "القائمة الرئيسية"
+
+#: wptouch-pro-3-extras/themes/cms/root-functions.php:123
+msgid "Alternate Menu"
+msgstr "قائمة بديلة"
+
+#: wptouch-pro-3-extras/themes/cms/root-functions.php:171
+msgid "Show titles on pages"
+msgstr "عرض العناوين على الصفحات"
+
+#: wptouch-pro-3-extras/themes/cms/root-functions.php:186
+msgid "Category Slider"
+msgstr "شريط تمرير الفئة"
+
+#: wptouch-pro-3-extras/themes/cms/root-functions.php:192
+msgid "Enable category slider"
+msgstr "تمكين شريط تمرير الفئة"
+
+#: wptouch-pro-3-extras/themes/cms/root-functions.php:205
+#: wptouch-pro-3-extras/themes/simple/root-functions.php:256
+msgid "Tiled Background Image"
+msgstr "صورة خلفية متجانبة"
+
+#: wptouch-pro-3-extras/themes/cms/root-functions.php:211
+#: wptouch-pro-3-extras/themes/simple/root-functions.php:262
+msgid "(Scaled for retina displays)"
+msgstr "(منسقة للشاشات الشبكية ريتينا)"
+
+#: wptouch-pro-3-extras/themes/cms/root-functions.php:223
+msgid "Alternate Menu Title"
+msgstr "عنوان للقائمة البديلة"
+
+#: wptouch-pro-3-extras/themes/cms/root-functions.php:229
+msgid "Alternate menu title (if used)"
+msgstr "عنوان للقائمة البديلة (إذا استخدمت)"
+
+#: wptouch-pro-3-extras/themes/cms/root-functions.php:230
+msgid "If you use a second menu in CMS, this text will be used for the drop-down button title."
+msgstr "إذا استخدمت قائمة ثانوية في CMS، فسيتم استخدام هذا النص كعنوان للقائمة المنسدلة للأزرار."
+
+#: wptouch-pro-3-extras/themes/cms/root-functions.php:260
+msgid "Static Front Page"
+msgstr "الصفحة الأولى الثابتة"
+
+#: wptouch-pro-3-extras/themes/cms/root-functions.php:266
+msgid "Static front page alternate content"
+msgstr "المحتوى البديل للصفحة الأولى الثابتة"
+
+#: wptouch-pro-3-extras/themes/cms/root-functions.php:267
+msgid "Shows after the featured slider (if enabled), and replaces your Static Front Page content. HTML allowed."
+msgstr "عرض بعد شريط التمرير المميز (إذا كان ممكنًا)، مع استبدال محتوى الصفحة الأولى الثابتة لديك. مسموح بصيغة HTML."
+
+#: wptouch-pro-3-extras/themes/hammock/default/header-bottom.php:34
+msgid "Recent"
+msgstr "حديث"
+
+#: wptouch-pro-3-extras/themes/hammock/default/header-bottom.php:44
+msgid "Size"
+msgstr "الحجم"
+
+#: wptouch-pro-3-extras/themes/hammock/default/header-bottom.php:86
+msgid "Go"
+msgstr "اذهب"
+
+#: wptouch-pro-3-extras/themes/hammock/default/page-content.php:24
+#: wptouch-pro-3-extras/themes/hammock/default/single.php:48
+msgid "Comment on this post"
+msgstr "تعليق على هذا المنشور"
+
+#: wptouch-pro-3-extras/themes/hammock/default/page-content.php:26
+#: wptouch-pro-3-extras/themes/hammock/default/single.php:50
+msgid "View Discussion"
+msgstr "عرض المناقشة"
+
+#: wptouch-pro-3-extras/themes/hammock/default/single.php:25
+msgid "%s"
+msgstr "%s"
+
+#: wptouch-pro-3-extras/themes/hammock/root-functions.php:81
+msgid "Site name"
+msgstr "اسم الموقع"
+
+#: wptouch-pro-3-extras/themes/hammock/root-functions.php:83
+msgid "Content background"
+msgstr "خلفية المحتوى"
+
+#: wptouch-pro-3-extras/themes/hammock/root-functions.php:224
+msgid "Display featured image"
+msgstr "عرض الصورة المميزة"
+
+#: wptouch-pro-3-extras/themes/hammock/root-functions.php:229
+msgid "Do not display featured image"
+msgstr "لا تعرض الصورة المميزة"
+
+#: wptouch-pro-3-extras/themes/hammock/root-functions.php:274
+msgid "Show post excerpts in listings"
+msgstr "عرض مقتطفات المنشور في قوائم"
+
+#: wptouch-pro-3-extras/themes/hammock/root-functions.php:350
+msgid "Show category list in menu"
+msgstr "عرض قائمة الفئة في القائمة"
+
+#: wptouch-pro-3-extras/themes/simple/default/front-page.php:14
+msgid "Call Us"
+msgstr "اتصل بنا"
+
+#: wptouch-pro-3-extras/themes/simple/default/front-page.php:20
+msgid "Our Location"
+msgstr "موقعنا"
+
+#: wptouch-pro-3-extras/themes/simple/default/header-bottom.php:15
+msgid "Toggle Menu"
+msgstr "قائمة منسدلة"
+
+#: wptouch-pro-3-extras/themes/simple/root-functions.php:58
+msgid "Site Menu (Pulldown)"
+msgstr "قائمة الموقع (منسدلة)"
+
+#: wptouch-pro-3-extras/themes/simple/root-functions.php:61
+msgid "Pull-down menu at top of pages"
+msgstr "قائمة منسدلة في أعلى الصفحات"
+
+#: wptouch-pro-3-extras/themes/simple/root-functions.php:69
+msgid "Front Page Menu"
+msgstr "قائمة الصفحة الأولى"
+
+#: wptouch-pro-3-extras/themes/simple/root-functions.php:72
+msgid "Displayed below front page menu and content"
+msgstr "يتم العرض أسفل قائمة ومحتوى الصفحة الأولى"
+
+#: wptouch-pro-3-extras/themes/simple/root-functions.php:185
+msgid "Enable search on blog pages"
+msgstr "تمكين البحث في صفحات المدونة"
+
+#: wptouch-pro-3-extras/themes/simple/root-functions.php:199
+msgid "Homepage Call Us"
+msgstr "الصفحة الرئيسية للاتصال بنا"
+
+#: wptouch-pro-3-extras/themes/simple/root-functions.php:205
+msgid "Phone number"
+msgstr "رقم الهاتف"
+
+#: wptouch-pro-3-extras/themes/simple/root-functions.php:206
+msgid "Enter a phone number and a homepage menu item for 'call us' will be shown."
+msgstr "أدخل رقم هاتف وسيتم عرض عنصر قائمة صفحة رئيسية خاص بـ 'اتصل بنا'."
+
+#: wptouch-pro-3-extras/themes/simple/root-functions.php:218
+msgid "Homepage Location"
+msgstr "موقع الصفحة الرئيسية"
+
+#: wptouch-pro-3-extras/themes/simple/root-functions.php:224
+msgid "Map address"
+msgstr "عنوان الخريطة"
+
+#: wptouch-pro-3-extras/themes/simple/root-functions.php:225
+msgid "Enter an address and a homepage menu item for 'Our Location' will be shown."
+msgstr "سيتم عرض أدخل عنوانًا وعنصر قائمة صفحة رئيسية 'لموقعنا'."
+
+#: wptouch-pro-3-extras/themes/simple/root-functions.php:237
+msgid "Front Page Content"
+msgstr "محتوى الصفحة الأولى"
+
+#: wptouch-pro-3-extras/themes/simple/root-functions.php:243
+msgid "Front page alternate content"
+msgstr "المحتوى البديل للصفحة الأولى"
+
+#: wptouch-pro-3-extras/themes/simple/root-functions.php:244
+msgid "Shows above the front page menu (if enabled), HTML allowed."
+msgstr "عرض فوق قائمة الصفحة الأولى (إذا كانت ممكنة)، مسموح بصيغة HTML."
+
+#: wptouch-pro-3-extras/themes/simple/root-functions.php:281
+msgid "Add a light noise effect to the drop-down menu and theme background"
+msgstr "أضف تأثير ضوضاء لطيف إلى القائمة المنسدلة وخلفية السمة"

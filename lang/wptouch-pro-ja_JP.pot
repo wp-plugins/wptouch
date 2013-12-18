@@ -1,0 +1,2626 @@
+# Copyright (C) 2013
+# This file is distributed under the same license as the  package.
+msgid ""
+msgstr "Project-Id-Version:  \nReport-Msgid-Bugs-To: http://wordpress.org/tag/combined\nPOT-Creation-Date: 2013-11-26 12:08:18+00:00\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPO-Revision-Date: 2013-MO-DA HO:MI+ZONE\nLast-Translator: FULL NAME <EMAIL@ADDRESS>\nLanguage-Team: LANGUAGE <LL@li.org>\n"
+
+#: wptouch-pro-3/admin/html/help.php:1
+msgid "WPtouch Pro Help & Account Links"
+msgstr "WPtouch Pro版　ヘルプ＆アカウントリンク"
+
+#: wptouch-pro-3/admin/html/help.php:3
+msgid "Support Forums"
+msgstr "サポートフォーラム"
+
+#: wptouch-pro-3/admin/html/help.php:4
+msgid "Documentation"
+msgstr "文書"
+
+#: wptouch-pro-3/admin/html/help.php:5
+msgid "Account & Downloads"
+msgstr "アカウント & ダウンロード"
+
+#: wptouch-pro-3/admin/html/help.php:6
+msgid "BraveNewCode on Twitter"
+msgstr "TwitterのBraveNewCode"
+
+#: wptouch-pro-3/admin/html/help.php:7
+msgid "Plugin Licensing Terms"
+msgstr "プラグインライセンス諸条件"
+
+#: wptouch-pro-3/admin/html/notification-center.php:5
+msgid "Notifications"
+msgstr "通知"
+
+#: wptouch-pro-3/admin/html/notification-content.php:20
+msgid "No notifications"
+msgstr "通知なし"
+
+#: wptouch-pro-3/admin/html/plugin-area.php:7
+msgid "This copy of WPtouch Pro is unlicensed! Please %sactivate your license%s, or %spurchase a license%s to enable automatic updates and full product support from us!"
+msgstr "WPtouch Proのこのコピーはライセンスが取得されていません！%sライセンスを取得する%sまたは%sライセンスを購入%sして自動更新を有効にして当社から全ての製品のサポートを受けてください！"
+
+#: wptouch-pro-3/admin/html/plugin-area.php:9
+msgid "This copy of WPtouch Pro is unlicensed! Please contact the site administrator regarding product licensing."
+msgstr "WPtouch Proのこのコピーがライセンス認証ありません！製品のライセンス認証に関してこの管理者に連絡してください。"
+
+#: wptouch-pro-3/admin/pages/custom/wptouch-admin-license.php:9
+msgid "License Details"
+msgstr "ライセンス詳細"
+
+#: wptouch-pro-3/admin/pages/custom/wptouch-admin-license.php:11
+msgid "Note"
+msgstr "メモ"
+
+#: wptouch-pro-3/admin/pages/custom/wptouch-admin-license.php:12
+msgid "Once you activate, this page will be hidden."
+msgstr "アクティベートするとこのページは非表示になります。"
+
+#: wptouch-pro-3/admin/pages/custom/wptouch-admin-license.php:15
+msgid "It will only reappear if you reset your WPtouch Pro settings."
+msgstr "WPtouch Pro設定をリセットする際のみ、再び表示されます。"
+
+#: wptouch-pro-3/admin/pages/custom/wptouch-admin-license.php:18
+msgid "Account E-Mail Address"
+msgstr "アカウントメールアドレス"
+
+#: wptouch-pro-3/admin/pages/custom/wptouch-admin-license.php:20
+msgid "Product License Key"
+msgstr "プロダクトライセンスキー"
+
+#: wptouch-pro-3/admin/pages/custom/wptouch-admin-license.php:23
+#: wptouch-pro-3/admin/settings/html/theme-browser-item.php:14
+#: wptouch-pro-3/pro/settings/html/extension-browser-item.php:71
+#: wptouch-pro-3/pro/settings/html/theme-browser-item.php:109
+msgid "Activate"
+msgstr "有効にする"
+
+#: wptouch-pro-3/admin/pages/custom/wptouch-admin-license.php:33
+msgid "Success."
+msgstr "成功。"
+
+#: wptouch-pro-3/admin/pages/custom/wptouch-admin-license.php:34
+msgid "Activation Complete. Enjoy WPtouch Pro!"
+msgstr "アクティベーション完了。WPtouch Pro版をお楽しみください！"
+
+#: wptouch-pro-3/admin/pages/custom/wptouch-admin-license.php:38
+msgid "E-mail address or license key rejected"
+msgstr "メールアドレスまたはライセンスキーが拒否されました"
+
+#: wptouch-pro-3/admin/pages/custom/wptouch-admin-license.php:39
+msgid "The bravenewcode.com server rejected your E-Mail address and/or License Key. Please check they are correct and try again."
+msgstr "bravenewcode.comサーバーがあなたのメールアドレスと/またはライセンスキーを拒否しました。正しいメールアドレス及びライセンスキーか確認して再試行してください。"
+
+#: wptouch-pro-3/admin/pages/custom/wptouch-admin-license.php:43
+msgid "No licenses remaining."
+msgstr "ライセンスキーが承認されません。"
+
+#: wptouch-pro-3/admin/pages/custom/wptouch-admin-license.php:44
+msgid "You have used all your activations. What do you want to do?"
+msgstr "全てのアクティベーションを使用しました。どうしますか？"
+
+#: wptouch-pro-3/admin/pages/custom/wptouch-admin-license.php:45
+msgid "Upgrade My License"
+msgstr "マイライセンスを更新"
+
+#: wptouch-pro-3/admin/pages/custom/wptouch-admin-license.php:46
+msgid "Contact support for assistance"
+msgstr "ヘルプサポートへ連絡"
+
+#: wptouch-pro-3/admin/pages/custom/wptouch-admin-license.php:50
+msgid "The server is unavailable."
+msgstr "サービスがご利用できません。"
+
+#: wptouch-pro-3/admin/pages/custom/wptouch-admin-license.php:51
+msgid "The bravenewcode.com server currently cannot authorize your License."
+msgstr "bravenewcode.comのサーバーが現在ライセンスキーを認証できません。"
+
+#: wptouch-pro-3/admin/pages/custom/wptouch-admin-license.php:52
+msgid "Please %scontact us%s and let us know about it."
+msgstr "%s当社へ連絡%sしてそれについて教えてください。"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:3
+#: wptouch-pro-3/themes/foundation/root-functions.php:10
+msgid "General"
+msgstr "一般"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:4
+msgid "Compatibility"
+msgstr "互換性"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:10
+msgid "Auto-detect"
+msgstr "自動検知"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:45
+msgid "Site Title & Byline"
+msgstr "サイトタイトル & 署名欄"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:51
+msgid "WPtouch Pro site title"
+msgstr "WPtouch Proサイトタイトル"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:52
+msgid "If the title of your site is long, you can shorten it for display within WPtouch Pro themes."
+msgstr "サイトのタイトルが長い場合、WPtouch Proテーマ内で表示するために短くすることができます。"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:59
+msgid "Display %sPowered by WPtouch Pro%s in footer"
+msgstr "フッターで%sPowered by WPtouch Pro%sを表示"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:71
+msgid "Regionalization"
+msgstr "地域化"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:77
+msgid "Language"
+msgstr "言語"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:78
+msgid "The WPtouch Pro admin panel &amp; supported themes will be shown in this locale."
+msgstr "WPtouch Pro版　管理パネル &amp; このロケール内で対応テーマが表示されます。"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:86
+msgid "Translate administration panel text"
+msgstr "アドミンパネルテキストを翻訳"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:97
+msgid "Display Mode"
+msgstr "ディスプレイモード"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:103
+msgid "Theme Display"
+msgstr "テーマディスプレイ"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:108
+msgid "Normal (active for all mobile visitors)"
+msgstr "標準(全てのモバイルビジターに有効)"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:109
+msgid "Preview (active only for logged-in site administrators)"
+msgstr "プレビュー(ログインサイト管理のみ有効)"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:110
+msgid "Disabled (mobile theme will never show)"
+msgstr "無効(モバイルテーマは二度と表示されません)"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:119
+msgid "Landing Page"
+msgstr "ランディングページ"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:125
+msgid "WPtouch Pro landing page"
+msgstr "WPtouch Pro待ち受けページ"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:130
+msgid "Default (same as WordPress)"
+msgstr "デフォルト (WordPressと同様)"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:131
+msgid "Select from WordPress pages"
+msgstr "WordPressページから選択"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:139
+msgid "Custom Slug or URL"
+msgstr "スラグまたはURLをカスタマイズ"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:140
+msgid "Enter a Slug (i.e. \"/home\") or a full URL path"
+msgstr "スラグ(i.e. \"/ホーム\") または完全なURLパスを入力"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:150
+msgid "Desktop / Mobile Switching"
+msgstr "デスクトップ / モバイル切替"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:156
+msgid "1st time visitors see desktop theme"
+msgstr "最初のビジターがデスクトップテーマを確認できます"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:157
+msgid "Your regular theme will be shown to 1st time mobile visitors."
+msgstr "通常のテーマは最初の携帯ビジターに表示されます。"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:164
+msgid "Show switch link in mobile view"
+msgstr "携帯表示で切替リンクを表示"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:165
+msgid "Will show toggle buttons in the theme's footer allowing users to switch to your desktop theme. Is not shown in Web-App Mode."
+msgstr "テーマフッター内でトグルボタンを表示してユーザーがデスクトップテーマに切替できるようにする。Web-Appモード内では表示されません。"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:172
+msgid "Choose the target for the mobile switch link"
+msgstr "携帯切り替えリンクのターゲットを選択"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:177
+msgid "Current page"
+msgstr "現在のページ"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:178
+msgid "Home page"
+msgstr "ホームページ"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:184
+msgid "Desktop theme switch buttons"
+msgstr "デスクトップテーマ切替ボタン"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:185
+msgid "Allows visitors to switch from your desktop theme to your mobile theme. You can also customize the placement of Switch buttons by placing the wptouch_desktop_switch_link() template tag somewhere in your desktop theme."
+msgstr "ビジターがデスクトップテーマからモバイルテーマへ切替できるようにする。wptouch_desktop_switch_link()テンプレートタグをデスクトップテーマ内のどこかにタグを置いて切替ボタンの配置をカスタマイズできます。"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:189
+msgid "Automatically inserted inline"
+msgstr "自動挿入インライン"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:190
+msgid "Automatically inserted with AJAX (better for caching)"
+msgstr "AJAXで自動挿入(キャッシングにベター)"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:191
+msgid "Template tag"
+msgstr "テンプレートタグ"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:200
+msgid "Custom Code"
+msgstr "カスタムコード"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:206
+msgid "HTML, JavaScript, statistics or custom code"
+msgstr "HTML、JavaScript、統計またはカスタムコード"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:207
+msgid "Enter any custom code here to be output in the theme footer."
+msgstr "ここにカスタムコードを入力してテーマフォルダー内に出力する。"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:217
+msgid "Custom Stylesheet"
+msgstr "カスタムスタイルシート"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:223
+msgid "URL to a custom CSS file to load"
+msgstr "カスタムCSSファイルを読み込むためのURL"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:224
+msgid "Useful if you have specific compatibility CSS you need to add."
+msgstr "もし追加が必要な特定の準拠CSSがあれば便利です。"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:234
+msgid "Shortcodes"
+msgstr "ショートコード"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:240
+msgid "Remove these shortcodes when WPtouch Pro is active"
+msgstr "WPtouch Proが起動中これらのスクリーンショットを削除"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:241
+msgid "Enter a comma separated list of shortcodes to remove."
+msgstr "削除するにはショートコードのコンマで分けられたリストを入力してください。"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:251
+msgid "Ignored URLs"
+msgstr "無視されたURL"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:257
+msgid "Do not load WPtouch Pro on these URLs/Pages"
+msgstr "WPtouch ProをこれらのURL/ページで読み込まない"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:258
+msgid "Each permalink URL fragment should be on its own line and relative, e.g. \"/about\" or \"/products/store\""
+msgstr "各パーマリンクURLフレグメントは、独自のラインと関連がなければなりません　例. \"/about\" または \"/products/store\""
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:268
+msgid "Desktop Theme"
+msgstr "デスクトップテーマ"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:274
+msgid "Try to include desktop theme functions.php file"
+msgstr "デスクトップテーマ機能.php ファイルを含んでください"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:275
+msgid "This may be required for desktop themes with unique features that are not showing when WPtouch Pro is active."
+msgstr "WPtouch Proがアクティブになった際、表示されないユニークな機能でデスクトップテーマに必要になることがあります。"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:282
+msgid "Method to load file"
+msgstr "ファイルの読み込み方法"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:287
+msgid "Include file directly"
+msgstr "ファイルダイレクトリーを含む"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:288
+msgid "Translate and create new files"
+msgstr "翻訳して新しいファイルを作成"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:297
+msgid "Custom User-Agents"
+msgstr "カスタムユーザーエージェント"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:303
+msgid "User-agents (line separated)"
+msgstr "ユーザーエージェント (行が分かれています)"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:304
+msgid "Adding additional user-agents will force WPtouch Pro to be active for matching browsers."
+msgstr "ユーザーエージェントを追加すると、WPtouch Pro版がマッチするブラウザーが強制的にアクティブになります。"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:318
+msgid "Backup &amp; Import"
+msgstr "バックアップ &amp; インポート"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:324
+msgid "Automatically backup settings to the %s folder"
+msgstr "%sフォルダーの自動バックアップ設定"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:326
+msgid "WPtouch Pro backups your settings each time they are saved."
+msgstr "WPtouch Proは保存される度にあなたの設定をバックアップします。"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:337
+msgid "Tools &amp; Debug"
+msgstr "ツール &amp; デバッグ"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:343
+msgid "Use jQuery 2.0 in themes (faster for mobile devices) instead of WordPress' version"
+msgstr "WordPressのバージョンの代わりにjQuery 2.0をテーマ内で使用(モバイルデバイスではより速く起動します)"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:344
+msgid "jQuery 2.0 is significantly smaller and faster than previous jQuery versions - may cause problems with other plugins, use carefully."
+msgstr "jQuery 2.0は以前のjQueryバージョンよりかなり小さく速くなりました - 他のプラグインとの接続に問題が生じる場合がございます。慎重にご使用ください。"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:351
+msgid "Show load times and query counts in the footer"
+msgstr "ロードタイムとクエリーコンテンツをフットバーで表示"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:352
+msgid "Helps you find slow pages/posts on your site."
+msgstr "あなたのサイトのスローなページ/投稿を見つけるお手伝いをします。"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:359
+msgid "Enable debug log"
+msgstr "デバッグログを有効にする"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:360
+msgid "Creates a debug file to help diagnose installation issues."
+msgstr "デバッグファイルを作成してインストール問題を診断します。"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:371
+msgid "WordPress Plugins"
+msgstr "WordPress プラグイン"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:384
+msgid "Admin Mode"
+msgstr "アドミンモード"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:390
+msgid "Admin panel settings shown"
+msgstr "アドミンパネル設定表示"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:395
+msgid "Default"
+msgstr "デフォルト"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:396
+#: wptouch-pro-3/admin/settings/html/button.php:5
+#: wptouch-pro-3/admin/settings/html/checkbox.php:6
+#: wptouch-pro-3/admin/settings/html/custom-latest-posts.php:4
+#: wptouch-pro-3/admin/settings/html/list.php:16
+#: wptouch-pro-3/admin/settings/html/numeric.php:12
+#: wptouch-pro-3/admin/settings/html/radiolist.php:12
+#: wptouch-pro-3/admin/settings/html/text.php:8
+#: wptouch-pro-3/admin/settings/html/textarea.php:8
+msgid "Advanced"
+msgstr "詳細設定"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-menus.php:3
+msgid "Theme Menus"
+msgstr "テーマメニュー"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-menus.php:4
+msgid "Menu Setup"
+msgstr "メニューセットアップ"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-menus.php:5
+msgid "Icon Upload & Sets"
+msgstr "アイコンアップデート＆設定"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-menus.php:22
+msgid "WordPress Pages"
+msgstr "WordPressページ"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-menus.php:28
+#: wptouch-pro-3/admin/settings/html/icon_menu_area.php:6
+#: wptouch-pro-3/themes/foundation/modules/advertising/advertising.php:180
+#: wptouch-pro-3/themes/foundation/modules/media/media.php:59
+#: wptouch-pro-3-extras/extensions/infinity-cache/infinity-cache.php:206
+msgid "None"
+msgstr "なし"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-menus.php:66
+msgid "Menu Options"
+msgstr "メニューオプション"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-menus.php:72
+msgid "Enable parent items as links"
+msgstr "パアレントアイテムをリンクとして有効にする"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-menus.php:73
+msgid "If disabled, parent menu items will only toggle child items."
+msgstr "無効の場合、パアレントメニューアイテムがチャイルドアイテムのみ切り替えます。"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-menus.php:80
+msgid "Use menu icons"
+msgstr "メニューアイコンを使用"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-menus.php:104
+msgid "Icon Upload"
+msgstr "アイコンアップロード"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-menus.php:117
+msgid "Uploaded Icons"
+msgstr "アップロードされたアイコン"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-menus.php:130
+msgid "Icon Sets"
+msgstr "アイコン設定"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-themes-and-addons.php:3
+msgid "Themes"
+msgstr "テーマ"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-themes-and-addons.php:4
+msgid "Extensions"
+msgstr ""
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-touchboard.php:3
+#: wptouch-pro-3/core/admin-menu.php:34 wptouch-pro-3/core/admin-menu.php:38
+msgid "What's New"
+msgstr "新着情報"
+
+#: wptouch-pro-3/admin/settings/html/addon-browser-item.php:38
+#: wptouch-pro-3/admin/settings/html/installed_icon_sets_ajax.php:8
+#: wptouch-pro-3/admin/settings/html/installed_icon_sets_ajax.php:20
+#: wptouch-pro-3/admin/settings/html/theme-browser-item.php:59
+#: wptouch-pro-3/pro/settings/html/extension-browser-item.php:41
+#: wptouch-pro-3/pro/settings/html/theme-browser-item.php:62
+msgid "by %s"
+msgstr "%sで"
+
+#: wptouch-pro-3/admin/settings/html/addon-browser-item.php:43
+msgid "This add-on is only available in WPtouch Pro"
+msgstr "このアドオンはWPtouch Proのみでご利用できます"
+
+#: wptouch-pro-3/admin/settings/html/backup.php:1
+msgid "Download Backup File"
+msgstr "バックアップファイルをダウンロード"
+
+#: wptouch-pro-3/admin/settings/html/backup.php:2
+msgid "Restore Backup File"
+msgstr "バックアップファイルを復元"
+
+#: wptouch-pro-3/admin/settings/html/button.php:6
+#: wptouch-pro-3/admin/settings/html/checkbox.php:7
+#: wptouch-pro-3/admin/settings/html/custom-latest-posts.php:8
+#: wptouch-pro-3/admin/settings/html/list.php:20
+#: wptouch-pro-3/admin/settings/html/numeric.php:16
+#: wptouch-pro-3/admin/settings/html/radiolist.php:14
+#: wptouch-pro-3/admin/settings/html/text.php:9
+#: wptouch-pro-3/admin/settings/html/textarea.php:9
+msgid "New"
+msgstr "新しい"
+
+#: wptouch-pro-3/admin/settings/html/color.php:6
+msgid "Undo"
+msgstr "取り消し"
+
+#: wptouch-pro-3/admin/settings/html/color.php:7
+msgid "Desktop theme colors"
+msgstr "Desktopテーマカラー"
+
+#: wptouch-pro-3/admin/settings/html/color.php:7
+msgid "Palette"
+msgstr "パレット"
+
+#: wptouch-pro-3/admin/settings/html/custom-latest-posts.php:1
+msgid "Custom latest posts page"
+msgstr "カスタム最新投稿ページ"
+
+#: wptouch-pro-3/admin/settings/html/custom_icon_management.php:3
+msgid "No icons have been uploaded yet"
+msgstr "アップロードされたアイコンはありません"
+
+#: wptouch-pro-3/admin/settings/html/custom_icon_management.php:12
+#: wptouch-pro-3/admin/settings/html/image-upload.php:13
+#: wptouch-pro-3/admin/settings/html/theme-browser-item.php:18
+#: wptouch-pro-3/pro/settings/html/theme-browser-item.php:115
+msgid "Delete"
+msgstr "削除"
+
+#: wptouch-pro-3/admin/settings/html/custom_icon_upload.php:3
+msgid "Upload Icon"
+msgstr "アイコンを読み込む"
+
+#: wptouch-pro-3/admin/settings/html/custom_icon_upload.php:4
+#: wptouch-pro-3/admin/settings/html/image-upload.php:15
+msgid "Upload Complete!"
+msgstr "アップロード完了！"
+
+#: wptouch-pro-3/admin/settings/html/custom_icon_upload.php:9
+msgid "Ready to upload"
+msgstr "アップロードの準備ができました"
+
+#: wptouch-pro-3/admin/settings/html/debuginfo.php:12
+msgid "View Debug File"
+msgstr "デバッグファイル表示"
+
+#: wptouch-pro-3/admin/settings/html/debuginfo.php:16
+#: wptouch-pro-3/admin/settings/html/debuginfo.php:18
+msgid "Your Server Configuration"
+msgstr "サーバー設定"
+
+#: wptouch-pro-3/admin/settings/html/icon_menu_area.php:5
+msgid "Check All"
+msgstr "全てチェック"
+
+#: wptouch-pro-3/admin/settings/html/icon_menu_area.php:7
+msgid "Reset"
+msgstr "再設定"
+
+#: wptouch-pro-3/admin/settings/html/icon_menu_area.php:9
+#: wptouch-pro-3-extras/themes/bio/default/header-bottom.php:13
+#: wptouch-pro-3-extras/themes/classic-redux/default/header-bottom.php:21
+#: wptouch-pro-3-extras/themes/classic-redux/default/header-bottom.php:32
+#: wptouch-pro-3-extras/themes/classic-redux/default/header-bottom.php:112
+#: wptouch-pro-3-extras/themes/hammock/default/header-bottom.php:23
+#: wptouch-pro-3-extras/themes/hammock/default/header-bottom.php:36
+#: wptouch-pro-3-extras/themes/hammock/root-functions.php:82
+#: wptouch-pro-3-extras/themes/scaffold/default/header-bottom.php:13
+msgid "Menu"
+msgstr "メニュー"
+
+#: wptouch-pro-3/admin/settings/html/icon_menu_area.php:19
+msgid "Active menus used in this theme."
+msgstr "このテーマ内で使用されたアクティブなメニュー。"
+
+#: wptouch-pro-3/admin/settings/html/icon_menu_area.php:23
+msgid "Show/Hide"
+msgstr "表示/非表示"
+
+#: wptouch-pro-3/admin/settings/html/icon_menu_area.php:24
+msgid "Menu Item"
+msgstr "メニューアイテム"
+
+#: wptouch-pro-3/admin/settings/html/icon_menu_area.php:44
+msgid "Icon Set"
+msgstr "アイコン設定"
+
+#: wptouch-pro-3/admin/settings/html/icon_menu_area.php:54
+msgid "Drag icons to associate them with menu items"
+msgstr "アイコンをドラッグしてメニューアイテムと関連づけてください"
+
+#: wptouch-pro-3/admin/settings/html/icon_menu_area.php:79
+msgid "You don't have any custom icons yet."
+msgstr "カスタムアイコンをまだ持っていません。"
+
+#: wptouch-pro-3/admin/settings/html/icon_menu_area.php:94
+msgid "Default Icon"
+msgstr "デフォルトアイコン"
+
+#: wptouch-pro-3/admin/settings/html/icon_menu_area.php:95
+msgid "applies to all unset icons"
+msgstr "全ての未設定アイコンへ適用"
+
+#: wptouch-pro-3/admin/settings/html/icon_menu_area.php:103
+msgid "Trash"
+msgstr "ゴミ箱"
+
+#: wptouch-pro-3/admin/settings/html/icon_menu_area.php:104
+msgid "drag icon here to reset"
+msgstr "ここにアイコンをドラッグして再設定"
+
+#: wptouch-pro-3/admin/settings/html/image-upload.php:11
+msgid "Upload"
+msgstr "アップロード"
+
+#: wptouch-pro-3/admin/settings/html/installed_icon_sets.php:2
+msgid "Gathering information about available icon sets..."
+msgstr "有効なアイコン設定についての情報取得中..."
+
+#: wptouch-pro-3/admin/settings/html/installed_icon_sets.php:4
+#: wptouch-pro-3/core/notifications.php:264
+msgid "The %s%s%s directory is not currently writable. %sPlease fix this issue to enable installation of additional icon sets."
+msgstr "%s%s%sディレクトリーは現在書き込みできません。%s\nこの問題を解決して追加アイコン設定のインストールを有効にしてください。"
+
+#: wptouch-pro-3/admin/settings/html/installed_icon_sets_ajax.php:4
+#: wptouch-pro-3/core/class-wptouch-pro.php:1555
+#: wptouch-pro-3/core/class-wptouch-pro.php:1556
+#: wptouch-pro-3/core/config.php:54
+msgid "Custom Icons"
+msgstr "カスタムアイコン"
+
+#: wptouch-pro-3/admin/settings/html/installed_icon_sets_ajax.php:9
+#: wptouch-pro-3/admin/settings/html/installed_icon_sets_ajax.php:22
+msgid "Installed"
+msgstr "インストール済"
+
+#: wptouch-pro-3/admin/settings/html/installed_icon_sets_ajax.php:21
+msgid "Installing..."
+msgstr "インストール中..."
+
+#: wptouch-pro-3/admin/settings/html/installed_icon_sets_ajax.php:21
+#: wptouch-pro-3/pro/settings/html/extension-browser-item.php:66
+#: wptouch-pro-3/pro/settings/html/theme-browser-item.php:96
+msgid "Install"
+msgstr "インストール"
+
+#: wptouch-pro-3/admin/settings/html/installed_icon_sets_ajax.php:23
+msgid "Unable to Install"
+msgstr "インストール不可"
+
+#: wptouch-pro-3/admin/settings/html/plugin-compat-ajax.php:11
+#: wptouch-pro-3/themes/foundation/modules/custom-posts/custom-posts.php:64
+msgid "Enable %s"
+msgstr "%sを有効にする"
+
+#: wptouch-pro-3/admin/settings/html/plugin-compat-ajax.php:12
+msgid "When unchecked, %s will be disabled for users viewing your WPtouch Pro theme."
+msgstr "チェックが外されると、%sがあなたのWPtouch Proテーマを表示できなくなります。"
+
+#: wptouch-pro-3/admin/settings/html/plugin-compat-ajax.php:20
+msgid "No plugins to disable."
+msgstr "無効にするプラグインなし。"
+
+#: wptouch-pro-3/admin/settings/html/plugin-compat.php:3
+msgid "Your active plugin list is refreshing"
+msgstr "アクティブプラグインリストが再読み込み中です"
+
+#: wptouch-pro-3/admin/settings/html/redirect.php:17
+msgid "WordPress Page"
+msgstr "WordPressページ"
+
+#: wptouch-pro-3/admin/settings/html/restore.php:2
+msgid "Please paste your encoded settings below and save to restore your settings."
+msgstr "エンコード済の設定を下記よりペーストして設定を保存してください。"
+
+#: wptouch-pro-3/admin/settings/html/theme-browser-item.php:6
+#: wptouch-pro-3/pro/settings/html/theme-browser-item.php:6
+#: wptouch-pro-3/pro/settings/html/theme-browser-item.php:10
+msgid "Click to view screenshots"
+msgstr "クリックしてスクリーンショットを表示"
+
+#: wptouch-pro-3/admin/settings/html/theme-browser-item.php:11
+#: wptouch-pro-3/pro/settings/html/extension-browser-item.php:74
+#: wptouch-pro-3/pro/settings/html/theme-browser-item.php:105
+msgid "Setup"
+msgstr "設定"
+
+#: wptouch-pro-3/admin/settings/html/theme-browser-item.php:16
+#: wptouch-pro-3/pro/settings/html/theme-browser-item.php:112
+msgid "Copy"
+msgstr "コピー"
+
+#: wptouch-pro-3/admin/settings/html/theme-browser-item.php:54
+#: wptouch-pro-3/pro/settings/html/theme-browser-item.php:57
+msgid "This theme supports %s devices"
+msgstr "このテーマは%sデバイスに対応しています"
+
+#: wptouch-pro-3/admin/settings/html/theme-browser-item.php:64
+#: wptouch-pro-3/pro/settings/html/theme-browser-item.php:69
+msgid "Theme location: %s"
+msgstr "テーマロケーション: %s"
+
+#: wptouch-pro-3/admin/settings/html/theme-browser-item.php:65
+#: wptouch-pro-3/pro/settings/html/extension-browser-item.php:48
+#: wptouch-pro-3/pro/settings/html/theme-browser-item.php:70
+msgid "Relative to your WordPress wp-content directory."
+msgstr "WordPress wp-コンテンツディレクトリーに関連。"
+
+#: wptouch-pro-3/admin/settings/html/touchboard.php:6
+msgid "Quick Links"
+msgstr "クイックリンク"
+
+#: wptouch-pro-3/admin/settings/html/touchboard.php:8
+msgid "What's New Changelog"
+msgstr "最新情報変更ログ"
+
+#: wptouch-pro-3/admin/settings/html/touchboard.php:9
+msgid "Product Knowledgebase"
+msgstr "製品知識ベース"
+
+#: wptouch-pro-3/admin/settings/html/touchboard.php:10
+msgid "Product Support"
+msgstr "製品サポート"
+
+#: wptouch-pro-3/admin/settings/html/touchboard.php:11
+msgid "Manage Account"
+msgstr "アカウント管理"
+
+#: wptouch-pro-3/admin/settings/html/touchboard.php:12
+msgid "Manage License"
+msgstr "ライセンス管理"
+
+#: wptouch-pro-3/admin/settings/html/touchboard.php:18
+msgid "WPtouch News"
+msgstr "WPtouchニュース"
+
+#: wptouch-pro-3/admin/settings/html/touchboard.php:19
+msgid "Read More"
+msgstr "他を読む"
+
+#: wptouch-pro-3/admin/settings/html/touchboard.php:25
+msgid "WPtouch Updates"
+msgstr "WPtouchアップデート"
+
+#: wptouch-pro-3/admin/settings/html/touchboard.php:35
+msgid "What's New in %s"
+msgstr ""
+
+#: wptouch-pro-3/admin/settings/html/touchboard.php:38
+#: wptouch-pro-3/admin/settings/html/touchboard.php:40
+#: wptouch-pro-3/core/admin-menu.php:59
+msgid "License"
+msgstr "ライセンス"
+
+#: wptouch-pro-3/admin/settings/html/touchboard.php:38
+msgid "Unlicensed"
+msgstr "ライセンスなし"
+
+#: wptouch-pro-3/admin/settings/html/touchboard.php:38
+#: wptouch-pro-3/core/class-wptouch-pro.php:453
+msgid "Offline"
+msgstr "オフライン"
+
+#: wptouch-pro-3/admin/settings/html/touchboard.php:40
+msgid "Active"
+msgstr "アクティブ"
+
+#: wptouch-pro-3/admin/settings/html/touchboard.php:40
+msgid "Online"
+msgstr "オンライン"
+
+#: wptouch-pro-3/admin/settings/html/touchboard.php:64
+msgid "%s Change Log"
+msgstr "%s変更ログ"
+
+#: wptouch-pro-3/admin/settings/html/user-agent-list.php:4
+#: wptouch-pro-3/admin/settings/html/user-agent-list.php:6
+msgid "WPtouch Pro will be active when any of the following user-agents or user-agent combinations are matched"
+msgstr "WPtouch Proは以下のユーザーエージェントまたはユーザーエージェントの組合せが一致したらアクティブになります"
+
+#: wptouch-pro-3/admin/settings/include/custom-latest-posts.php:14
+msgid "None (Use WordPress Settings)"
+msgstr "なし(WordPress設定を使用)"
+
+#: wptouch-pro-3/core/admin-ajax.php:286
+msgid "Version %s"
+msgstr "バージョン%s"
+
+#: wptouch-pro-3/core/admin-ajax.php:292
+msgid "There is a temporary issue retrieving the change-log.  Please try again later."
+msgstr "変更ログを読み出し中に一時的な問題が発生しました。後で再試行してください。"
+
+#: wptouch-pro-3/core/admin-menu.php:39
+msgid "Core Settings"
+msgstr "コア設定"
+
+#: wptouch-pro-3/core/admin-menu.php:40
+msgid "Themes & Extensions"
+msgstr ""
+
+#: wptouch-pro-3/core/admin-menu.php:41
+msgid "Theme Settings"
+msgstr "テーマ設定"
+
+#: wptouch-pro-3/core/admin-menu.php:41
+msgid "%s Settings"
+msgstr "%s設定"
+
+#: wptouch-pro-3/core/admin-menu.php:46
+msgid "Extension Settings"
+msgstr ""
+
+#: wptouch-pro-3/core/admin-menu.php:51 wptouch-pro-3/core/admin-menu.php:53
+msgid "Menus"
+msgstr "メニュー"
+
+#: wptouch-pro-3/core/admin-page-templates.php:16
+msgid "Mobile Page Template"
+msgstr "モバイルページテンプレート"
+
+#: wptouch-pro-3/core/admin-render.php:25
+msgid "This copy of %s is currently unlicensed!"
+msgstr "%sのコピーは現在ライセンスが取得されていません！"
+
+#: wptouch-pro-3/core/admin-render.php:27
+msgid "Add a license %s"
+msgstr "ライセンス%s追加"
+
+#: wptouch-pro-3/core/admin-render.php:81
+msgid "Save Changes"
+msgstr "変更を保存"
+
+#: wptouch-pro-3/core/admin-render.php:82
+msgid "Preview Theme"
+msgstr "テーマプレビュー"
+
+#: wptouch-pro-3/core/admin-render.php:83
+msgid "Reset Settings"
+msgstr "リセット設定"
+
+#: wptouch-pro-3/core/class-wptouch-pro.php:232
+msgid "Automatic theme migration from uploads/wptouch-data directory failed. Please manually move these files to wp-content/wptouch-data, or %scontact support%s to address this issue."
+msgstr "アップロード/wptouch-データディレクトリからの自動テーマ統合に失敗しました。これらのファイルを手動でwp-content/wptouch-dataまたは%scontact support%sに移動してこの問題に対処してください。"
+
+#: wptouch-pro-3/core/class-wptouch-pro.php:239
+msgid "Please wait, we are downloading a fresh copy of your active WPtouch theme from the Cloud."
+msgstr ""
+
+#: wptouch-pro-3/core/class-wptouch-pro.php:242
+msgid "We were unable to install your WPtouch theme from the Cloud. Please visit %sthis article%s for more information."
+msgstr ""
+
+#: wptouch-pro-3/core/class-wptouch-pro.php:449
+msgid "Unsupported Browser"
+msgstr "サポートしていないブラウザー"
+
+#: wptouch-pro-3/core/class-wptouch-pro.php:450
+msgid "Theme Preview requires Chrome or Safari."
+msgstr "テーマのプレビューにはChromeまたはSafariが必要です。"
+
+#: wptouch-pro-3/core/class-wptouch-pro.php:451
+msgid "This will reset all WPtouch Pro settings.\nAre you sure?"
+msgstr "これで全てのWPtouch Pro設定が再設定されます。\n実行しますか？"
+
+#: wptouch-pro-3/core/class-wptouch-pro.php:452
+msgid "This will reset all WPtouch Pro menu and icon settings.\nAre you sure?"
+msgstr "全てのWPtouch Proメニューとアイコン設定が再設定されます。\n実行しますか？"
+
+#: wptouch-pro-3/core/class-wptouch-pro.php:454
+msgid "You appear to be offline. Connect to the internet to see available BraveNewCloud items."
+msgstr "オフラインになっています。インターネットに接続して利用できるBraveNewCloudアイテムを表示する。"
+
+#: wptouch-pro-3/core/class-wptouch-pro.php:455
+msgid "The item failed to download. Please refresh the page and try again."
+msgstr "アイテムのダウンロードに失敗しました。ページを再読込みして再試行してください。"
+
+#: wptouch-pro-3/core/class-wptouch-pro.php:1069
+#: wptouch-pro-3/themes/foundation/modules/webapp/webapp.php:207
+msgid "Settings"
+msgstr "設定"
+
+#: wptouch-pro-3/core/class-wptouch-pro.php:1150
+msgid "WPtouch Pro Changelog"
+msgstr "WPtouch Pro変更ログ"
+
+#: wptouch-pro-3/core/class-wptouch-pro.php:2326
+msgid "Directory Problem"
+msgstr "ディレクトリー問題"
+
+#: wptouch-pro-3/core/class-wptouch-pro.php:2327
+msgid "One or more required directories could not be created"
+msgstr "1またはそれ以上必要なディレクトリーが作成できませんでした"
+
+#: wptouch-pro-3/core/globals.php:192
+msgid "smartphone"
+msgstr "スマートフォン"
+
+#: wptouch-pro-3/core/globals.php:194
+msgid "tablet"
+msgstr "タブレット"
+
+#: wptouch-pro-3/core/notifications.php:121
+msgid "License Missing"
+msgstr "ライセンスが見つかりません"
+
+#: wptouch-pro-3/core/notifications.php:122
+msgid "This installation of WPtouch Pro is currently unlicensed."
+msgstr "WPtouch Proのこのインストールは現在ライセンスが取得されていません。"
+
+#: wptouch-pro-3/core/notifications.php:133
+msgid "WPtouch Pro %s"
+msgstr "WPtouch Pro %s"
+
+#: wptouch-pro-3/core/notifications.php:134
+msgid "A new version of WPtouch Pro is available."
+msgstr "WPtouch Pro版の新バージョンがご利用できます。"
+
+#: wptouch-pro-3/core/notifications.php:145
+msgid "Theme Update Available"
+msgstr "利用可能なテーマアップデート"
+
+#: wptouch-pro-3/core/notifications.php:146
+msgid "One or more updates are available for your installed themes."
+msgstr "あなたのインストールしたテーマに1つ以上の利用できるアップデートがあります。"
+
+#: wptouch-pro-3/core/notifications.php:160
+msgid "Extension Update Available"
+msgstr ""
+
+#: wptouch-pro-3/core/notifications.php:161
+msgid "One or more updates are available for your installed extensions."
+msgstr ""
+
+#: wptouch-pro-3/core/notifications.php:173
+msgid "Preview Mode Enabled"
+msgstr ""
+
+#: wptouch-pro-3/core/notifications.php:174
+msgid "Only logged-in admins can see the mobile theme right now. You can change this at any time in %sCore Settings%s under %sDisplay Mode%s."
+msgstr ""
+
+#: wptouch-pro-3/core/notifications.php:182
+msgid "Theme Presentation Disabled"
+msgstr ""
+
+#: wptouch-pro-3/core/notifications.php:183
+msgid "No one can see the mobile theme right now. You can change this at any time in %sCore Settings%s under %sDisplay Mode%s."
+msgstr ""
+
+#: wptouch-pro-3/core/notifications.php:194
+msgid "WPtouch Pro prefers pretty permalinks to be enabled within WordPress."
+msgstr "WPtouch ProはWordPress内で有効なかなりのパーマリンクを好みます。"
+
+#: wptouch-pro-3/core/notifications.php:204
+msgid "WPtouch Pro will not work fully in safe mode."
+msgstr "WPtouch Pro版はセーフモードで完全に起動しません。"
+
+#: wptouch-pro-3/core/notifications.php:214
+#: wptouch-pro-3/core/notifications.php:224
+#: wptouch-pro-3/core/notifications.php:234
+msgid "Extra configuration is required. The plugin must be configured to exclude the user agents that WPtouch Pro uses."
+msgstr "追加設定が必要です。プラグインはWPtouch Pro版を使用するユーザーエージェントを排他するには設定が必要です。"
+
+#: wptouch-pro-3/core/notifications.php:244
+msgid "Extra configuration is required. Add paths to your active WPtouch Pro theme CSS and Javascript files as files to ignore in WPMinify."
+msgstr "追加設定が必要です。パスをアクティブなWPtouch Pro版のテーマCSSとJavascriptファイルに、WPMinify内で無視するファイルとして追加。"
+
+#: wptouch-pro-3/core/notifications.php:254
+msgid "This plugin may not work correctly in WPtouch Pro, and should be disabled in the Plugin Compatibility section."
+msgstr "このプラグインはWPtouch Proで正しく起動しません。プラグイン準拠セクション内で無効にしなければなりません。"
+
+#: wptouch-pro-3/core/notifications.php:263
+msgid "Icon Installation Issue"
+msgstr "アイコンインストール問題"
+
+#: wptouch-pro-3/core/notifications.php:274
+msgid "WPtouch Pro 3 cannot co-exist with WPtouch 1.x. Disable it first in the WordPress Plugins settings."
+msgstr "WPtouch Pro 3はWPtouch 1.xと別のものです。まずWordPressプラグイン設定で無効にしてください。"
+
+#: wptouch-pro-3/core/notifications.php:284
+msgid "WPtouch Pro 3 cannot co-exist with WPtouch Pro 2.x. Disable it first in the WordPress Plugins settings."
+msgstr "WPtouch Pro 3はWPtouch 2.xと別のものです。まずWordPressプラグイン設定で無効にしてください。"
+
+#: wptouch-pro-3/include/add-ons/wordtwit-pro.php:179
+#: wptouch-pro-3/themes/foundation/modules/twitter/twitter.php:42
+msgid "%d second ago"
+msgid_plural "%d seconds ago"
+msgstr[0] "%d 秒前"
+msgstr[1] "%d 秒前"
+
+#: wptouch-pro-3/include/add-ons/wordtwit-pro.php:182
+#: wptouch-pro-3/themes/foundation/modules/twitter/twitter.php:45
+msgid "%d minute ago"
+msgid_plural "%d minutes ago"
+msgstr[0] "%d分前"
+msgstr[1] "%d分前"
+
+#: wptouch-pro-3/include/add-ons/wordtwit-pro.php:185
+#: wptouch-pro-3/themes/foundation/modules/twitter/twitter.php:48
+msgid "%d hour ago"
+msgid_plural "%d hours ago"
+msgstr[0] "%d時間"
+msgstr[1] "%d時間"
+
+#: wptouch-pro-3/include/add-ons/wordtwit-pro.php:188
+#: wptouch-pro-3/themes/foundation/modules/twitter/twitter.php:51
+msgid "%d day ago"
+msgid_plural "%d days ago"
+msgstr[0] "%d日前"
+msgstr[1] "%d日前"
+
+#: wptouch-pro-3/include/html/desktop-switch.php:2
+msgid "Desktop Version"
+msgstr "デスクトップバージョン"
+
+#: wptouch-pro-3/include/html/desktop-switch.php:2
+msgid "Switch To Mobile Version"
+msgstr "モバイルバージョンにスイッチ"
+
+#: wptouch-pro-3/include/html/footer.php:2
+msgid "Powered by %s%s%s"
+msgstr "%s%s%sによって起動されています"
+
+#: wptouch-pro-3/include/html/footer.php:3
+msgid "By %s"
+msgstr "%sで"
+
+#: wptouch-pro-3/include/html/load-times.php:2
+msgid "%d queries in %0.1f ms"
+msgstr "%0.1f msの%dクエリー"
+
+#: wptouch-pro-3/include/html/page-template.php:8
+msgid "Default Template"
+msgstr "デフォルトテンプレート"
+
+#: wptouch-pro-3/pro/settings/html/extension-browser-item.php:35
+#: wptouch-pro-3/pro/settings/html/theme-browser-item.php:47
+msgid "Upgrading..."
+msgstr "アップグレード中..."
+
+#: wptouch-pro-3/pro/settings/html/extension-browser-item.php:35
+msgid "Upgrade to %s"
+msgstr "%sにアップグレード"
+
+#: wptouch-pro-3/pro/settings/html/extension-browser-item.php:47
+msgid "Extension location: %s"
+msgstr ""
+
+#: wptouch-pro-3/pro/settings/html/extension-browser-item.php:56
+#: wptouch-pro-3/pro/settings/html/theme-browser-item.php:81
+msgid "More Info"
+msgstr "他の情報"
+
+#: wptouch-pro-3/pro/settings/html/extension-browser-item.php:59
+#: wptouch-pro-3/pro/settings/html/theme-browser-item.php:84
+msgid "Upgrade License"
+msgstr ""
+
+#: wptouch-pro-3/pro/settings/html/extension-browser-item.php:61
+#: wptouch-pro-3/pro/settings/html/theme-browser-item.php:86
+msgid "Get License"
+msgstr ""
+
+#: wptouch-pro-3/pro/settings/html/extension-browser-item.php:66
+#: wptouch-pro-3/pro/settings/html/theme-browser-item.php:95
+msgid "Downloading..."
+msgstr "ダウンロード中..."
+
+#: wptouch-pro-3/pro/settings/html/extension-browser-item.php:75
+msgid "Deactivate"
+msgstr "解除"
+
+#: wptouch-pro-3/pro/settings/html/extension-browser-pro.php:10
+msgid "Loading Cloud Extensions"
+msgstr ""
+
+#: wptouch-pro-3/pro/settings/html/theme-browser-item.php:49
+msgid "Update to %s"
+msgstr "%sにアップデート"
+
+#: wptouch-pro-3/pro/settings/html/theme-browser-item.php:89
+msgid "Buy Now"
+msgstr "今すぐ購入"
+
+#: wptouch-pro-3/pro/settings/html/theme-browser-pro.php:11
+msgid "Loading Cloud Themes"
+msgstr "Cloudテーマを読み込み中"
+
+#: wptouch-pro-3/themes/foundation/default/404.php:6
+msgid "404 Not Found"
+msgstr "404 Not Found"
+
+#: wptouch-pro-3/themes/foundation/default/404.php:8
+msgid "The post or page you requested is no longer available."
+msgstr "リクエストされた投稿やページは無効です。"
+
+#: wptouch-pro-3/themes/foundation/default/attachment.php:43
+msgid "&laquo; previous in gallery"
+msgstr "&laquo; ギャラリーの以前のもの"
+
+#: wptouch-pro-3/themes/foundation/default/attachment.php:45
+msgid "next in gallery &raquo;"
+msgstr "ギャラリーの次のもの &raquo;"
+
+#: wptouch-pro-3/themes/foundation/default/comments.php:10
+#: wptouch-pro-3-extras/themes/classic-redux/default/post-loop.php:33
+msgid "no responses"
+msgstr "返答なし"
+
+#: wptouch-pro-3/themes/foundation/default/comments.php:10
+#: wptouch-pro-3-extras/themes/classic-redux/default/post-loop.php:33
+msgid "1 response"
+msgstr "1レス"
+
+#: wptouch-pro-3/themes/foundation/default/comments.php:10
+#: wptouch-pro-3-extras/themes/classic-redux/default/post-loop.php:33
+msgid "% responses"
+msgstr "%レス"
+
+#: wptouch-pro-3/themes/foundation/default/comments.php:20
+#: wptouch-pro-3/themes/foundation/default/comments.php:26
+msgid "Load More Comments&hellip;"
+msgstr "他のコメントを読み込む&hellip;"
+
+#: wptouch-pro-3/themes/foundation/default/comments.php:38
+msgid "Comments are closed"
+msgstr "コメントが閉鎖中です"
+
+#: wptouch-pro-3/themes/foundation/default/comments.php:48
+msgid "Cancel"
+msgstr "キャンセル"
+
+#: wptouch-pro-3/themes/foundation/default/comments.php:51
+msgid "Leave a Reply"
+msgstr "返信を残す"
+
+#: wptouch-pro-3/themes/foundation/default/comments.php:51
+msgid "Leave a Reply to %s"
+msgstr "%sに返信を残す"
+
+#: wptouch-pro-3/themes/foundation/default/comments.php:54
+msgid "You must be %slogged in%s to post a comment."
+msgstr "コメントの投稿は%sログイン%sしてください。"
+
+#: wptouch-pro-3/themes/foundation/default/comments.php:61
+msgid "Logged in as"
+msgstr "右記としてログイン"
+
+#: wptouch-pro-3/themes/foundation/default/comments.php:61
+msgid "Log out"
+msgstr "ログアウト"
+
+#: wptouch-pro-3/themes/foundation/default/comments.php:65
+msgid "Name"
+msgstr "名前"
+
+#: wptouch-pro-3/themes/foundation/default/comments.php:67
+#: wptouch-pro-3/themes/foundation/modules/social-links/social-links.php:78
+msgid "E-Mail"
+msgstr "Eメール"
+
+#: wptouch-pro-3/themes/foundation/default/comments.php:69
+msgid "Website"
+msgstr "ウェブサイト"
+
+#: wptouch-pro-3/themes/foundation/default/comments.php:75
+msgid "Publish"
+msgstr "公開する"
+
+#: wptouch-pro-3/themes/foundation/default/formerror.php:6
+msgid "Comment Error"
+msgstr "コメントエラー"
+
+#: wptouch-pro-3/themes/foundation/default/formerror.php:8
+msgid "Please enter all fields correctly to post a comment."
+msgstr "コメントの投稿は正しく全てのフィールドを入力してください。"
+
+#: wptouch-pro-3/themes/foundation/default/formerror.php:9
+msgid "Go back"
+msgstr "戻る"
+
+#: wptouch-pro-3/themes/foundation/default/index.php:33
+#: wptouch-pro-3-extras/themes/classic-redux/default/index.php:34
+#: wptouch-pro-3-extras/themes/cms/default/header-bottom.php:60
+#: wptouch-pro-3-extras/themes/hammock/default/index.php:34
+msgid "newer posts"
+msgstr "新しい投稿"
+
+#: wptouch-pro-3/themes/foundation/default/index.php:33
+#: wptouch-pro-3-extras/themes/classic-redux/default/index.php:34
+#: wptouch-pro-3-extras/themes/cms/default/header-bottom.php:56
+#: wptouch-pro-3-extras/themes/hammock/default/index.php:34
+msgid "older posts"
+msgstr "以前の投稿"
+
+#: wptouch-pro-3/themes/foundation/default/nav-bar.php:6
+#: wptouch-pro-3-extras/themes/bauhaus/default/nav-bar.php:6
+msgid "previous post"
+msgstr "以前の投稿"
+
+#: wptouch-pro-3/themes/foundation/default/nav-bar.php:12
+#: wptouch-pro-3-extras/themes/bauhaus/default/nav-bar.php:13
+msgid "next post"
+msgstr "次の投稿"
+
+#: wptouch-pro-3/themes/foundation/default/one-comment.php:12
+msgid "Your comment is awaiting moderation"
+msgstr "コメントが適正化を待っています"
+
+#: wptouch-pro-3/themes/foundation/default/related-posts.php:4
+msgid "Related"
+msgstr "関連"
+
+#: wptouch-pro-3/themes/foundation/default/search.php:6
+#: wptouch-pro-3-extras/themes/bauhaus/default/search.php:6
+#: wptouch-pro-3-extras/themes/classic-redux/default/search.php:5
+#: wptouch-pro-3-extras/themes/hammock/default/search.php:5
+msgid "You searched for \"%s\""
+msgstr "\"%s\"を検索中"
+
+#: wptouch-pro-3/themes/foundation/default/search.php:16
+#: wptouch-pro-3-extras/themes/classic-redux/default/search.php:15
+#: wptouch-pro-3-extras/themes/hammock/default/search.php:16
+msgid "%s results"
+msgstr "%s結果"
+
+#: wptouch-pro-3/themes/foundation/default/search.php:36
+#: wptouch-pro-3-extras/themes/classic-redux/default/search.php:38
+#: wptouch-pro-3-extras/themes/hammock/default/search.php:40
+msgid "No search results found"
+msgstr "検索結果が見つかりませんでした"
+
+#: wptouch-pro-3/themes/foundation/default/search.php:45
+#: wptouch-pro-3-extras/themes/bauhaus/default/search.php:46
+#: wptouch-pro-3-extras/themes/classic-redux/default/search.php:47
+msgid "Load more %s results"
+msgstr "より多くの%sの結果を読込む"
+
+#: wptouch-pro-3/themes/foundation/default/single.php:13
+#: wptouch-pro-3-extras/themes/hammock/default/post-loop-menu.php:15
+#: wptouch-pro-3-extras/themes/hammock/default/post-loop.php:19
+msgid "By"
+msgstr "によって"
+
+#: wptouch-pro-3/themes/foundation/default/switch-link.php:8
+msgid "mobile"
+msgstr "モバイル"
+
+#: wptouch-pro-3/themes/foundation/default/switch-link.php:9
+msgid "desktop"
+msgstr "デスクトップ"
+
+#: wptouch-pro-3/themes/foundation/modules/advertising/advertising.php:169
+msgid "Service"
+msgstr "サービス"
+
+#: wptouch-pro-3/themes/foundation/modules/advertising/advertising.php:175
+msgid "Choose a service"
+msgstr "サービスを選択"
+
+#: wptouch-pro-3/themes/foundation/modules/advertising/advertising.php:181
+msgid "Google Adsense"
+msgstr "Googleアドセンス"
+
+#: wptouch-pro-3/themes/foundation/modules/advertising/advertising.php:182
+msgid "Custom"
+msgstr "カスタム"
+
+#: wptouch-pro-3/themes/foundation/modules/advertising/advertising.php:192
+msgid "Google AdSense"
+msgstr "Google AdSense"
+
+#: wptouch-pro-3/themes/foundation/modules/advertising/advertising.php:195
+msgid "Publisher ID"
+msgstr "発行人ID"
+
+#: wptouch-pro-3/themes/foundation/modules/advertising/advertising.php:196
+msgid "Slot ID"
+msgstr "スロットID"
+
+#: wptouch-pro-3/themes/foundation/modules/advertising/advertising.php:200
+msgid "Code Type"
+msgstr "コードタイプ"
+
+#: wptouch-pro-3/themes/foundation/modules/advertising/advertising.php:212
+msgid "Custom Ads"
+msgstr "広告をカスタマイズ"
+
+#: wptouch-pro-3/themes/foundation/modules/advertising/advertising.php:215
+msgid "Mobile advertising script"
+msgstr "モバイル広告スクリプト"
+
+#: wptouch-pro-3/themes/foundation/modules/advertising/advertising.php:224
+msgid "Ad Presentation"
+msgstr "広告プレゼン"
+
+#: wptouch-pro-3/themes/foundation/modules/advertising/advertising.php:230
+msgid "Theme location"
+msgstr "テーマロケーション"
+
+#: wptouch-pro-3/themes/foundation/modules/advertising/advertising.php:235
+msgid "In the header"
+msgstr "ヘッダー内"
+
+#: wptouch-pro-3/themes/foundation/modules/advertising/advertising.php:236
+msgid "Above the page content"
+msgstr "ページコンテンツの上"
+
+#: wptouch-pro-3/themes/foundation/modules/advertising/advertising.php:237
+msgid "Below the page content"
+msgstr "ページコンテンツの下"
+
+#: wptouch-pro-3/themes/foundation/modules/advertising/advertising.php:247
+msgid "Active Pages"
+msgstr "アクティブページ"
+
+#: wptouch-pro-3/themes/foundation/modules/advertising/advertising.php:250
+msgid "Blog listings"
+msgstr "ブログリスト"
+
+#: wptouch-pro-3/themes/foundation/modules/advertising/advertising.php:251
+msgid "Single posts"
+msgstr "1回の投稿"
+
+#: wptouch-pro-3/themes/foundation/modules/advertising/advertising.php:252
+msgid "Static pages"
+msgstr "静的ページ"
+
+#: wptouch-pro-3/themes/foundation/modules/advertising/advertising.php:253
+msgid "Taxonomy"
+msgstr "分類法"
+
+#: wptouch-pro-3/themes/foundation/modules/advertising/advertising.php:254
+msgid "Search results"
+msgstr "検索結果"
+
+#: wptouch-pro-3/themes/foundation/modules/base/base.php:69
+msgid "Loading"
+msgstr "読み込み中"
+
+#: wptouch-pro-3/themes/foundation/modules/base/preview-bar.php:2
+msgid "Theme Preview"
+msgstr "テーマプレビュー"
+
+#: wptouch-pro-3/themes/foundation/modules/base/preview-bar.php:3
+msgid "Reload"
+msgstr "再読み込み"
+
+#: wptouch-pro-3/themes/foundation/modules/custom-posts/custom-posts.php:76
+msgid "Custom Post Support"
+msgstr "カスタム投稿サポート"
+
+#: wptouch-pro-3/themes/foundation/modules/custom-posts/custom-posts.php:82
+msgid "Enable custom post-type support"
+msgstr "カスタムポストタイプサポートを有効にする"
+
+#: wptouch-pro-3/themes/foundation/modules/custom-posts/custom-posts.php:90
+msgid "Show custom post taxonomy"
+msgstr "カスタム投稿分類"
+
+#: wptouch-pro-3/themes/foundation/modules/custom-posts/custom-posts.php:102
+msgid "Custom Post Types"
+msgstr "カスタム投稿タイプ"
+
+#: wptouch-pro-3/themes/foundation/modules/featured/featured.php:231
+msgid "Featured Slider"
+msgstr "機能スライダー"
+
+#: wptouch-pro-3/themes/foundation/modules/featured/featured.php:237
+msgid "Enable featured slider"
+msgstr "機能スライダーを有効にする"
+
+#: wptouch-pro-3/themes/foundation/modules/featured/featured.php:238
+msgid "Requires at least 2 entries to contain featured images"
+msgstr "特集された画像を含む少なくとも2エントリーが必要です"
+
+#: wptouch-pro-3/themes/foundation/modules/featured/featured.php:245
+msgid "Maximum number of posts"
+msgstr "投稿最大数"
+
+#: wptouch-pro-3/themes/foundation/modules/featured/featured.php:250
+msgid "3 posts"
+msgstr "3投稿"
+
+#: wptouch-pro-3/themes/foundation/modules/featured/featured.php:251
+msgid "5 posts"
+msgstr "5投稿"
+
+#: wptouch-pro-3/themes/foundation/modules/featured/featured.php:252
+msgid "10 posts"
+msgstr "10投稿"
+
+#: wptouch-pro-3/themes/foundation/modules/featured/featured.php:258
+msgid "Automatically slide"
+msgstr "自動スライド"
+
+#: wptouch-pro-3/themes/foundation/modules/featured/featured.php:266
+msgid "Continuously slide"
+msgstr "継続スライド"
+
+#: wptouch-pro-3/themes/foundation/modules/featured/featured.php:274
+msgid "Grayscale images (CSS 3 effect)"
+msgstr "グレースケール画像 (CSS 3効果)"
+
+#: wptouch-pro-3/themes/foundation/modules/featured/featured.php:275
+msgid "Featured slider images will be in grayscale for devices that support CSS filters."
+msgstr "特集されたスライダー画像はCSSフィルターをサポートするデバイスにはグレースケールで表示されます。"
+
+#: wptouch-pro-3/themes/foundation/modules/featured/featured.php:282
+msgid "Show title & date"
+msgstr "タイトル&日付を表示"
+
+#: wptouch-pro-3/themes/foundation/modules/featured/featured.php:283
+msgid "If disabled, the title and date will not be shown. Note: some themes do not show the date."
+msgstr ""
+
+#: wptouch-pro-3/themes/foundation/modules/featured/featured.php:290
+msgid "Featured slider posts also show in listings"
+msgstr "特集スライダー投稿がリスト内でも表示"
+
+#: wptouch-pro-3/themes/foundation/modules/featured/featured.php:298
+msgid "Slide transition speed"
+msgstr "推移速度をスライド"
+
+#: wptouch-pro-3/themes/foundation/modules/featured/featured.php:303
+msgid "Slow"
+msgstr "遅い"
+
+#: wptouch-pro-3/themes/foundation/modules/featured/featured.php:304
+msgid "Normal"
+msgstr "標準"
+
+#: wptouch-pro-3/themes/foundation/modules/featured/featured.php:305
+msgid "Fast"
+msgstr "速い"
+
+#: wptouch-pro-3/themes/foundation/modules/featured/featured.php:316
+msgid "Show latest posts"
+msgstr "最新の投稿を表示"
+
+#: wptouch-pro-3/themes/foundation/modules/featured/featured.php:317
+msgid "Show posts from a specific tag"
+msgstr "特別なタグから投稿を表示"
+
+#: wptouch-pro-3/themes/foundation/modules/featured/featured.php:318
+msgid "Show posts from a specific category"
+msgstr "特別なカテゴリーから投稿を表示"
+
+#: wptouch-pro-3/themes/foundation/modules/featured/featured.php:319
+msgid "Show only specific posts or pages"
+msgstr "特定の投稿またはページのみを表示"
+
+#: wptouch-pro-3/themes/foundation/modules/featured/featured.php:325
+msgid "Only this tag"
+msgstr "このタグのみ"
+
+#: wptouch-pro-3/themes/foundation/modules/featured/featured.php:334
+msgid "Only this category"
+msgstr "このカテゴリーのみ"
+
+#: wptouch-pro-3/themes/foundation/modules/featured/featured.php:343
+msgid "Comma-separated list of post/page IDs"
+msgstr "コンマで区切られる投稿リスト/ページID"
+
+#: wptouch-pro-3/themes/foundation/modules/google-fonts/google-fonts.php:10
+msgid "Browser Fonts"
+msgstr "ブラウザーフォント"
+
+#: wptouch-pro-3/themes/foundation/modules/google-fonts/google-fonts.php:18
+msgid "Typography"
+msgstr "印刷"
+
+#: wptouch-pro-3/themes/foundation/modules/google-fonts/google-fonts.php:24
+msgid "Font style"
+msgstr "フォントスタイル"
+
+#: wptouch-pro-3/themes/foundation/modules/google-fonts/google-fonts.php:25
+msgid "Choose a Google font pairing designed for this theme, or default browser fonts."
+msgstr "このテーマのためにデザインされたGoogleフォントまたはデフォルトのブラウザーフォントを選択。"
+
+#: wptouch-pro-3/themes/foundation/modules/login/login-html.php:7
+msgid "Remember Me"
+msgstr "覚えておく"
+
+#: wptouch-pro-3/themes/foundation/modules/login/login-html.php:9
+msgid "Log In"
+msgstr "ログイン"
+
+#: wptouch-pro-3/themes/foundation/modules/login/login-html.php:20
+#: wptouch-pro-3-extras/themes/classic-redux/default/header-bottom.php:51
+#: wptouch-pro-3-extras/themes/hammock/default/header-bottom.php:49
+#: wptouch-pro-3-extras/themes/simple/default/header-bottom.php:22
+msgid "Login"
+msgstr "ログイン"
+
+#: wptouch-pro-3/themes/foundation/modules/login/login-html.php:29
+#: wptouch-pro-3-extras/extensions/infinity-cache/infinity-cache.php:207
+msgid "Sign-up"
+msgstr "サインアップ"
+
+#: wptouch-pro-3/themes/foundation/modules/login/login-html.php:30
+msgid "Lost password?"
+msgstr "パスワードをなくしましたか？"
+
+#: wptouch-pro-3/themes/foundation/modules/login/login.php:22
+msgid "Account Username"
+msgstr "アカウントユーザー名"
+
+#: wptouch-pro-3/themes/foundation/modules/login/login.php:23
+msgid "Account Password"
+msgstr "アカウントパスワード"
+
+#: wptouch-pro-3/themes/foundation/modules/login/login.php:32
+msgid "Login Form"
+msgstr "ログインフォーム"
+
+#: wptouch-pro-3/themes/foundation/modules/login/login.php:38
+msgid "Use fly-in login form"
+msgstr "フライインログインフォームを使用する"
+
+#: wptouch-pro-3/themes/foundation/modules/login/login.php:39
+msgid "Will add login links and allow mobile visitors to login to your website from mobile devices"
+msgstr "ログインリンクを追加して、モバイルビジターが携帯デバイスからあなたのウェブサイトにログインできるようにする"
+
+#: wptouch-pro-3/themes/foundation/modules/login/login.php:46
+msgid "Show \"Sign-up\" and \"Lost Password?\" links"
+msgstr "\"サインアップ\"と\"パスワードをなくしましたか?\"のリンクを表示"
+
+#: wptouch-pro-3/themes/foundation/modules/media/media.php:48
+msgid "Video Handling"
+msgstr "ビデオハンドリング"
+
+#: wptouch-pro-3/themes/foundation/modules/media/media.php:60
+msgid "CSS only (HTML5 videos)"
+msgstr "CSSのみ (HTML5ビデオ)"
+
+#: wptouch-pro-3/themes/foundation/modules/media/media.php:61
+msgid "FitVids Method"
+msgstr "FitVids方法"
+
+#: wptouch-pro-3/themes/foundation/modules/media/media.php:62
+msgid "Fluid-Width Method"
+msgstr "流動幅方法"
+
+#: wptouch-pro-3/themes/foundation/modules/related-posts/related-posts.php:106
+msgid "Related Posts"
+msgstr "関連の投稿"
+
+#: wptouch-pro-3/themes/foundation/modules/related-posts/related-posts.php:112
+msgid "Enable display of related posts"
+msgstr "関連の投稿のディスプレイを有効"
+
+#: wptouch-pro-3/themes/foundation/modules/related-posts/related-posts.php:120
+msgid "Maximum number of related posts to show"
+msgstr "表示する関連の最大投稿数"
+
+#: wptouch-pro-3/themes/foundation/modules/sharing/sharing-html.php:1
+#: wptouch-pro-3-extras/themes/hammock/default/sharing-html.php:2
+msgid "Share"
+msgstr "共有"
+
+#: wptouch-pro-3/themes/foundation/modules/sharing/sharing-html.php:1
+#: wptouch-pro-3-extras/themes/hammock/default/sharing-html.php:3
+msgid "Tweet"
+msgstr "ツイート"
+
+#: wptouch-pro-3/themes/foundation/modules/sharing/sharing-html.php:1
+#: wptouch-pro-3-extras/themes/hammock/default/sharing-html.php:5
+msgid "Mail"
+msgstr "メール"
+
+#: wptouch-pro-3/themes/foundation/modules/sharing/sharing.php:81
+#: wptouch-pro-3-extras/themes/hammock/root-functions.php:317
+msgid "Sharing"
+msgstr "共有中"
+
+#: wptouch-pro-3/themes/foundation/modules/sharing/sharing.php:87
+#: wptouch-pro-3-extras/themes/hammock/root-functions.php:323
+msgid "Show sharing links"
+msgstr "共有中のリンクを表示"
+
+#: wptouch-pro-3/themes/foundation/modules/sharing/sharing.php:88
+#: wptouch-pro-3-extras/themes/hammock/root-functions.php:324
+msgid "Will show Facebook, Twitter, Google+ and Email buttons on single posts."
+msgstr "シングル投稿でFacebook、Twitter、Google+、メールボタン表示。"
+
+#: wptouch-pro-3/themes/foundation/modules/sharing/sharing.php:95
+msgid "Show sharing links on pages"
+msgstr "ページで共有リンク表示"
+
+#: wptouch-pro-3/themes/foundation/modules/sharing/sharing.php:96
+msgid "Will show Facebook, Twitter, Google+ and Email buttons on pages as well as single posts."
+msgstr "1回の投稿と同様ページ上のFacebook、Twitter、Google+とEメールボタンが表示されます。"
+
+#: wptouch-pro-3/themes/foundation/modules/sharing/sharing.php:103
+msgid "Sharing links location"
+msgstr "リンクロケーション共有中"
+
+#: wptouch-pro-3/themes/foundation/modules/sharing/sharing.php:108
+msgid "Above post content"
+msgstr "上記投稿コンテンツ"
+
+#: wptouch-pro-3/themes/foundation/modules/sharing/sharing.php:109
+msgid "Below post content"
+msgstr "下記投稿コンテンツ"
+
+#: wptouch-pro-3/themes/foundation/modules/sharing/sharing.php:115
+msgid "Color scheme"
+msgstr "カラースキーム"
+
+#: wptouch-pro-3/themes/foundation/modules/sharing/sharing.php:120
+msgid "Theme colors"
+msgstr "テーマカラー"
+
+#: wptouch-pro-3/themes/foundation/modules/sharing/sharing.php:121
+msgid "Social network colors"
+msgstr "ソーシャルネットワークカラー"
+
+#: wptouch-pro-3/themes/foundation/modules/social-links/social-links.php:8
+msgid "Footer Social Links"
+msgstr "フッターソーシャルリンク"
+
+#: wptouch-pro-3/themes/foundation/modules/social-links/social-links.php:23
+msgid "Full URL to your Facebook page"
+msgstr "FacebookページへのフルURL"
+
+#: wptouch-pro-3/themes/foundation/modules/social-links/social-links.php:31
+msgid "Full URL to your Twitter profile"
+msgstr "TwitterプロフィールへのフルURL"
+
+#: wptouch-pro-3/themes/foundation/modules/social-links/social-links.php:39
+msgid "Full URL to your Google+ profile"
+msgstr "Google+プロフィールへのフルURL"
+
+#: wptouch-pro-3/themes/foundation/modules/social-links/social-links.php:47
+msgid "Full URL to your Pinterest page"
+msgstr "ピンタレストページへのフルURL"
+
+#: wptouch-pro-3/themes/foundation/modules/social-links/social-links.php:55
+msgid "Full URL to your Vimeo page"
+msgstr "VimeoページへのフルURL"
+
+#: wptouch-pro-3/themes/foundation/modules/social-links/social-links.php:63
+msgid "Full URL to your %s profile"
+msgstr "あなたの%sプロフィールへの完全なURL"
+
+#: wptouch-pro-3/themes/foundation/modules/social-links/social-links.php:70
+msgid "LinkedIn"
+msgstr "LinkedIn"
+
+#: wptouch-pro-3/themes/foundation/modules/social-links/social-links.php:71
+msgid "Full URL to your LinkedIn profile"
+msgstr "LinkedInプロフィールへのフルURL"
+
+#: wptouch-pro-3/themes/foundation/modules/social-links/social-links.php:79
+msgid "E-Mail address"
+msgstr "メールアドレス"
+
+#: wptouch-pro-3/themes/foundation/modules/social-links/social-links.php:87
+msgid "Full URL to your RSS feed"
+msgstr "RSSフィードへのフルURL"
+
+#: wptouch-pro-3/themes/foundation/modules/tablets/tablets.php:46
+msgid "iPad"
+msgstr "iPad"
+
+#: wptouch-pro-3/themes/foundation/modules/tablets/tablets.php:52
+#: wptouch-pro-3/themes/foundation/modules/webapp/webapp.php:268
+#: wptouch-pro-3/themes/foundation/modules/webapp/webapp.php:286
+#: wptouch-pro-3/themes/foundation/modules/webapp/webapp.php:304
+#: wptouch-pro-3/themes/foundation/modules/webapp/webapp.php:323
+#: wptouch-pro-3/themes/foundation/modules/webapp/webapp.php:331
+#: wptouch-pro-3/themes/foundation/modules/webapp/webapp.php:349
+#: wptouch-pro-3/themes/foundation/modules/webapp/webapp.php:357
+#: wptouch-pro-3/themes/foundation/root-functions.php:390
+#: wptouch-pro-3/themes/foundation/root-functions.php:408
+msgid "%d by %d pixels (PNG)"
+msgstr "%dピクセル%dの(PNG)"
+
+#: wptouch-pro-3/themes/foundation/modules/twitter/twitter.php:66
+msgid "Disabled"
+msgstr "無効済"
+
+#: wptouch-pro-3/themes/foundation/modules/twitter/twitter.php:81
+msgid "Twitter account to use for Tweet display"
+msgstr "ツイート表示のために使用するTwitterアカウント"
+
+#: wptouch-pro-3/themes/foundation/modules/webapp/webapp.php:122
+msgid "External link— open it in the browser?"
+msgstr "外部リンク - ブラウザーで開きますか？"
+
+#: wptouch-pro-3/themes/foundation/modules/webapp/webapp.php:123
+msgid "File link— Do you want to open it in the browser?"
+msgstr "ファイルリンク— ブラウザーで開きますか？"
+
+#: wptouch-pro-3/themes/foundation/modules/webapp/webapp.php:210
+msgid "Enable iOS Web-App Mode"
+msgstr "iOSウェブアプリモードを有効にする"
+
+#: wptouch-pro-3/themes/foundation/modules/webapp/webapp.php:214
+msgid "Enable persistence"
+msgstr "持続性を有効にする"
+
+#: wptouch-pro-3/themes/foundation/modules/webapp/webapp.php:215
+msgid "Loads the last visited URL for visitors on open."
+msgstr "開いている時の訪問者の最終訪問URLを読み込む。"
+
+#: wptouch-pro-3/themes/foundation/modules/webapp/webapp.php:222
+msgid "URLs to ignore in Web-App Mode"
+msgstr "Web-Appモード内で無視するURL"
+
+#: wptouch-pro-3/themes/foundation/modules/webapp/webapp.php:235
+msgid "Notice Message"
+msgstr "通知メッセージ"
+
+#: wptouch-pro-3/themes/foundation/modules/webapp/webapp.php:238
+msgid "Show a notice message for iPhone, iPod touch & iPad visitors about my Web-App"
+msgstr "Web-AppについてiPhone、iPod touch & iPadビジターへ通知メッセージを表示"
+
+#: wptouch-pro-3/themes/foundation/modules/webapp/webapp.php:238
+msgid "WPtouch shows a notice bubble on 1st visit letting users know about your Web-App enabled website on iOS devices."
+msgstr "WPtouchは最初の訪問でユーザーにWeb-Appについてお知らせバブルを表示し、iOSデバイスでウェブサイトを有効にします。"
+
+#: wptouch-pro-3/themes/foundation/modules/webapp/webapp.php:239
+msgid "Notice message contents"
+msgstr "通知メッセージコンテンツ"
+
+#: wptouch-pro-3/themes/foundation/modules/webapp/webapp.php:239
+msgid "[device] and [icon] are dynamic and used to determine the device and iOS version. Do not remove these from your message."
+msgstr "[device]と[icon]はダイナミックでデバイスとiOSバージョンの決定に使用されます。メッセージからこれらを削除しないでください。"
+
+#: wptouch-pro-3/themes/foundation/modules/webapp/webapp.php:243
+msgid "the notice message will be shown again for visitors"
+msgstr "通知メッセージはビジターに再度表示されます"
+
+#: wptouch-pro-3/themes/foundation/modules/webapp/webapp.php:248
+msgid "1 day until"
+msgstr "残り1日"
+
+#: wptouch-pro-3/themes/foundation/modules/webapp/webapp.php:249
+msgid "7 days until"
+msgstr "残り7日"
+
+#: wptouch-pro-3/themes/foundation/modules/webapp/webapp.php:250
+msgid "1 month until"
+msgstr "残り1ヶ月"
+
+#: wptouch-pro-3/themes/foundation/modules/webapp/webapp.php:251
+msgid "Every time"
+msgstr "毎回"
+
+#: wptouch-pro-3/themes/foundation/modules/webapp/webapp.php:262
+msgid "iPhone Startup Screen"
+msgstr "iPhoneスタートアップスクリーン"
+
+#: wptouch-pro-3/themes/foundation/modules/webapp/webapp.php:280
+msgid "Retina iPhone Startup Screen"
+msgstr "Retina iPhoneスタートアップスクリーン"
+
+#: wptouch-pro-3/themes/foundation/modules/webapp/webapp.php:298
+msgid "iPhone 5 Startup Screen"
+msgstr "iPhone 5スタートアップスクリーン"
+
+#: wptouch-pro-3/themes/foundation/modules/webapp/webapp.php:317
+msgid "iPad Mini and iPad Startup Screens"
+msgstr "iPad MiniとiPadスタートアップスクリーン"
+
+#: wptouch-pro-3/themes/foundation/modules/webapp/webapp.php:343
+msgid "Retina iPad Startup Screens"
+msgstr "Retina iPadスタートアップスクリーン"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:11
+msgid "Branding"
+msgstr "ブランド設定"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:12
+msgid "Media Handling"
+msgstr "メディアハンドリング"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:13
+msgid "Web-App Mode"
+msgstr "ウェブアプリモード"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:14
+msgid "Bookmark Icons"
+msgstr "ブックマークアイコン"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:15
+msgid "Advertising"
+msgstr "広告"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:16
+msgid "Custom Content"
+msgstr "カスタムコンテンツ"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:113
+msgid "Install this Web-App on your [device]: tap [icon] then \"Add to Home Screen\""
+msgstr "あなたの[device]でこのウェブアプリをインストールしてください: [icon]をタップして\"ホームスクリーンに追加\""
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:304
+msgid "Number of posts in post listings"
+msgstr "投稿リストの投稿数"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:305
+msgid "Overrides the WordPress Reading settings for \"Blog pages show at most\""
+msgstr "WordPressリーディング設定を\"ブログページを最大限に表示する\"に優先する"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:312
+msgid "Excluded categories"
+msgstr "除外カテゴリー"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:313
+msgid "Comma separated by category name"
+msgstr "カテゴリー名をコンマで区切る"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:320
+msgid "Excluded tags"
+msgstr "外部タグ"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:321
+msgid "Comma separated by tag name"
+msgstr "タグ名をコンマで区切る"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:331
+msgid "Blog"
+msgstr "ブログ"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:342
+msgid "Show comments on pages"
+msgstr "ページにコメント表示"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:343
+msgid "Overrides the WordPress settings for showing comments on pages."
+msgstr "ページ上にコメントを表示してWordPress設定を優先にする。"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:353
+#: wptouch-pro-3/themes/foundation/root-functions.php:1024
+msgid "Pages"
+msgstr "ページ"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:366
+msgid "Icon Title"
+msgstr "アイコンタイトル"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:372
+msgid "Icon title"
+msgstr "アイコンタイトル"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:373
+msgid "When visitors bookmark your website, this will be the title shown."
+msgstr "あなたのウェブサイトをビジターが訪問すると、タイトルが表示されます。"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:384
+msgid "Android"
+msgstr "Android"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:402
+msgid "iPhone & iPod touch"
+msgstr "iPhone & iPod touch"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:438
+msgid "Theme Colors"
+msgstr "テーマカラー"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:448
+msgid "Site Logo"
+msgstr "サイトロゴ"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:454
+msgid "(Scaled by themes to fit logo areas as needed)"
+msgstr "(必要なロゴエリアに合うテーマによって計れます)"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:467
+msgid "Smart App Banner"
+msgstr "スマートアプリバナー"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:473
+msgid "Enter your app's %sApp Store ID%s"
+msgstr "アプリの%sApp Store ID%sを入力してください"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:474
+msgid "Your app's unique identifier. Find your ID from the iTunes Link Maker: Search for your app. In the link it provides, your app ID is the nine-digit number in between id and ?mt. For example Angry Birds's ID is 343200656."
+msgstr "あなたのアプリのユニークなID。iTunesリンクメーカーよりIDを見つける: あなたのアプリを検索。提供するリンク内で、あなたのアプリIDはidと?mtで9桁です。例 Angry Birds ID: 343200656"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:486
+msgid "Theme Footer"
+msgstr "テーマフッター"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:489
+msgid "Custom footer content (HTML is allowed)"
+msgstr "カスタムフッターコンテンツ (HTMLが許可されています)"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:489
+msgid "You can add custom footer content that will be displayed below the switch link."
+msgstr "切替リンクの下にディスプレイされるカスタムフッターコンテンツを追加できます。"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:854
+msgid "search results for '%s'"
+msgstr "'%s'の検索結果"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:856
+msgid "%sCategories &rsaquo;%s %s"
+msgstr "%sカテゴリー &rsaquo;%s %s"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:858
+msgid "Tags &rsaquo; %s"
+msgstr "タグ &rsaquo; %s"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:860
+#: wptouch-pro-3/themes/foundation/root-functions.php:862
+#: wptouch-pro-3/themes/foundation/root-functions.php:864
+msgid "Archives &rsaquo; %s"
+msgstr "アーカイブ &rsaquo; %s"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:879
+msgid "Load more from this category"
+msgstr "このカテゴリーからもっと読み込む"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:881
+msgid "Load more tagged like this"
+msgstr "このように他のタグを読み込む"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:883
+msgid "Load more from this day"
+msgstr "この日から他を読み込む"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:885
+msgid "Load more from this month"
+msgstr "今月からもっと読み込む"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:887
+msgid "Load more from this year"
+msgstr "今年からもっと読み込む"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:889
+msgid "Load more in this section"
+msgstr "このセクションでもっと読み込む"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:891
+msgid "Load more entries"
+msgstr "他のエントリーを読み込む"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:973
+msgid "Post"
+msgstr "投稿"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:975
+msgid "Page"
+msgstr "ページ"
+
+#: wptouch-pro-3-extras/extensions/infinity-cache/infinity-cache.php:63
+#: wptouch-pro-3-extras/extensions/infinity-cache/infinity-cache.php:225
+msgid "Purge Page Cache"
+msgstr "ページキャッシュをパージ"
+
+#: wptouch-pro-3-extras/extensions/infinity-cache/infinity-cache.php:123
+msgid "Enable Infinity Cache"
+msgstr "無制限のキャッシュを有効にする"
+
+#: wptouch-pro-3-extras/extensions/infinity-cache/infinity-cache.php:131
+msgid "Create cache for desktop users"
+msgstr "デスクトップユーザーのキャッシュを作成"
+
+#: wptouch-pro-3-extras/extensions/infinity-cache/infinity-cache.php:132
+msgid "If you are using another cache plugin such as W3, you can disable this."
+msgstr "W3のような他のキャッシュプラグインを使用中の場合、これを無効にできます。"
+
+#: wptouch-pro-3-extras/extensions/infinity-cache/infinity-cache.php:153
+msgid "Compress output using GZIP"
+msgstr "GZIPを使用中の圧縮出力"
+
+#: wptouch-pro-3-extras/extensions/infinity-cache/infinity-cache.php:163
+msgid "Maximum age of cached content"
+msgstr "キャッシュコンテンツの最大寿命"
+
+#: wptouch-pro-3-extras/extensions/infinity-cache/infinity-cache.php:164
+msgid "Each cached page will automatically be regenerated after this period elapses"
+msgstr "各キャッシュページは自動でこの期間までの間、自動で登録されます"
+
+#: wptouch-pro-3-extras/extensions/infinity-cache/infinity-cache.php:168
+#: wptouch-pro-3-extras/extensions/infinity-cache/infinity-cache.php:169
+#: wptouch-pro-3-extras/extensions/infinity-cache/infinity-cache.php:170
+#: wptouch-pro-3-extras/extensions/infinity-cache/infinity-cache.php:171
+#: wptouch-pro-3-extras/extensions/infinity-cache/infinity-cache.php:172
+msgid "%d hour"
+msgid_plural "%d hours"
+msgstr[0] "%d時間"
+msgstr[1] "%d時間"
+
+#: wptouch-pro-3-extras/extensions/infinity-cache/infinity-cache.php:179
+msgid "Remove stale cache file interval"
+msgstr "ステイルキャッシュファイルインターバルを削除"
+
+#: wptouch-pro-3-extras/extensions/infinity-cache/infinity-cache.php:184
+msgid "Hourly"
+msgstr "毎時"
+
+#: wptouch-pro-3-extras/extensions/infinity-cache/infinity-cache.php:185
+msgid "Daily"
+msgstr "毎日"
+
+#: wptouch-pro-3-extras/extensions/infinity-cache/infinity-cache.php:192
+msgid "Disable caching for any of these matched URL fragments"
+msgstr "これらの一致したURLのフラグメントのキャッシングを無効にする"
+
+#: wptouch-pro-3-extras/extensions/infinity-cache/infinity-cache.php:193
+msgid "Add one URL fragment per line, i.e. %s, to not cache pages that contain each URL fragment"
+msgstr "各URLフラグメントを含むページをキャッチュしないように1ラインすなわち%sごとに1つのURLフラグメントを追加"
+
+#: wptouch-pro-3-extras/extensions/infinity-cache/infinity-cache.php:201
+msgid "Content Distribution Network Service"
+msgstr "コンテンツ流通ネットワークサービス"
+
+#: wptouch-pro-3-extras/extensions/infinity-cache/infinity-cache.php:202
+msgid "Using a content distribution network (CDN) can significantly enhance the responsiveness of your website."
+msgstr "コンテンツ流通ネットワーク(CDN)を使用すると、ウェブサイトの応答をかなり強化できます。"
+
+#: wptouch-pro-3-extras/extensions/infinity-cache/infinity-cache.php:215
+msgid "URL %d"
+msgstr "URL %d"
+
+#: wptouch-pro-3-extras/extensions/infinity-cache/infinity-cache.php:216
+msgid "Add the URLs you have configured for your CDN, for example http://cdn%d.mysite.com"
+msgstr "あなたのCDNに設定されたURLを追加　例 http://cdn%d.mysite.com"
+
+#: wptouch-pro-3-extras/extensions/infinity-cache/infinity-cache.php:233
+msgid "Infinity Cache"
+msgstr "無制限キャッシュ"
+
+#: wptouch-pro-3-extras/extensions/mobile-content/mobile-content.php:20
+msgid "WPtouch Alternate Mobile Content"
+msgstr "WPtouch代替モバイルコンテンツ"
+
+#: wptouch-pro-3-extras/extensions/mobile-content/mobile-content.php:38
+msgid "Mobile Content"
+msgstr "モバイルコンテンツ"
+
+#: wptouch-pro-3-extras/extensions/mobile-content/mobile-content.php:44
+msgid "Enable mobile content display"
+msgstr "モバイルコンテンツディスプレイを有効にする"
+
+#: wptouch-pro-3-extras/extensions/responsive-images/responsive-images.php:92
+msgid "Responsive Images"
+msgstr ""
+
+#: wptouch-pro-3-extras/extensions/responsive-images/responsive-images.php:98
+msgid "Include desktop optimizations for mobile devices"
+msgstr "モバイルでバイスのデスクトップ最適化を含む"
+
+#: wptouch-pro-3-extras/extensions/responsive-images/responsive-images.php:99
+msgid "Normally only images on mobile are optimized"
+msgstr "通常モバイルの画像のみ最適化されます"
+
+#: wptouch-pro-3-extras/extensions/responsive-images/responsive-images.php:106
+msgid "Performance preference"
+msgstr "パフォーマンス詳細設定"
+
+#: wptouch-pro-3-extras/extensions/responsive-images/responsive-images.php:111
+msgid "Optimize for page speed"
+msgstr "ページ速度最適化"
+
+#: wptouch-pro-3-extras/extensions/responsive-images/responsive-images.php:112
+msgid "Optimize for quality"
+msgstr "品質速度の最適化"
+
+#: wptouch-pro-3-extras/themes/bauhaus/default/header-bottom.php:21
+#: wptouch-pro-3-extras/themes/bio/default/header-bottom.php:24
+#: wptouch-pro-3-extras/themes/classic-redux/default/header-bottom.php:76
+#: wptouch-pro-3-extras/themes/hammock/default/header-bottom.php:84
+#: wptouch-pro-3-extras/themes/scaffold/default/header-bottom.php:24
+msgid "Search this website"
+msgstr "このサイトを検索"
+
+#: wptouch-pro-3-extras/themes/bauhaus/default/header-bottom.php:22
+#: wptouch-pro-3-extras/themes/bio/default/header-bottom.php:14
+#: wptouch-pro-3-extras/themes/bio/default/header-bottom.php:25
+#: wptouch-pro-3-extras/themes/classic-redux/default/header-bottom.php:46
+#: wptouch-pro-3-extras/themes/classic-redux/default/header-bottom.php:78
+#: wptouch-pro-3-extras/themes/hammock/default/header-bottom.php:42
+#: wptouch-pro-3-extras/themes/scaffold/default/header-bottom.php:14
+#: wptouch-pro-3-extras/themes/scaffold/default/header-bottom.php:25
+msgid "Search"
+msgstr "検索"
+
+#: wptouch-pro-3-extras/themes/bauhaus/default/header-bottom.php:40
+#: wptouch-pro-3-extras/themes/bauhaus/default/header-bottom.php:42
+#: wptouch-pro-3-extras/themes/classic-redux/default/header-bottom.php:53
+#: wptouch-pro-3-extras/themes/hammock/default/header-bottom.php:51
+#: wptouch-pro-3-extras/themes/simple/default/header-bottom.php:24
+msgid "Logout"
+msgstr "ログアウト"
+
+#: wptouch-pro-3-extras/themes/bauhaus/default/post-loop.php:19
+#: wptouch-pro-3-extras/themes/bio/default/post-loop.php:19
+#: wptouch-pro-3-extras/themes/classic-redux/default/post-loop.php:24
+msgid "by"
+msgstr "で"
+
+#: wptouch-pro-3-extras/themes/bauhaus/default/search.php:14
+msgid "Show %s Results"
+msgstr "%sの結果を表示"
+
+#: wptouch-pro-3-extras/themes/bauhaus/default/search.php:38
+msgid "No results found"
+msgstr "結果なし"
+
+#: wptouch-pro-3-extras/themes/bauhaus/default/single.php:25
+msgid "no comments"
+msgstr "コメントなし"
+
+#: wptouch-pro-3-extras/themes/bauhaus/default/single.php:25
+msgid "1 comment"
+msgstr "1コメント"
+
+#: wptouch-pro-3-extras/themes/bauhaus/default/single.php:25
+msgid "% comments"
+msgstr "%コメント"
+
+#: wptouch-pro-3-extras/themes/bauhaus/default/single.php:44
+#: wptouch-pro-3-extras/themes/classic-redux/default/header-bottom.php:35
+#: wptouch-pro-3-extras/themes/classic-redux/default/header-bottom.php:61
+#: wptouch-pro-3-extras/themes/hammock/default/header-bottom.php:39
+msgid "Categories"
+msgstr "カテゴリー"
+
+#: wptouch-pro-3-extras/themes/bauhaus/default/single.php:47
+#: wptouch-pro-3-extras/themes/classic-redux/default/header-bottom.php:39
+#: wptouch-pro-3-extras/themes/classic-redux/default/header-bottom.php:68
+msgid "Tags"
+msgstr "タグ"
+
+#: wptouch-pro-3-extras/themes/bauhaus/root-functions.php:118
+#: wptouch-pro-3-extras/themes/classic-redux/root-functions.php:97
+#: wptouch-pro-3-extras/themes/hammock/root-functions.php:72
+msgid "Header Menu"
+msgstr "ヘッダーメニュー"
+
+#: wptouch-pro-3-extras/themes/bauhaus/root-functions.php:120
+#: wptouch-pro-3-extras/themes/bio/root-functions.php:89
+#: wptouch-pro-3-extras/themes/classic-redux/root-functions.php:99
+#: wptouch-pro-3-extras/themes/cms/root-functions.php:116
+#: wptouch-pro-3-extras/themes/cms/root-functions.php:125
+#: wptouch-pro-3-extras/themes/hammock/root-functions.php:74
+#: wptouch-pro-3-extras/themes/scaffold/root-functions.php:77
+#: wptouch-pro-3-extras/themes/simple/root-functions.php:60
+#: wptouch-pro-3-extras/themes/simple/root-functions.php:71
+msgid "Choose a menu"
+msgstr "メニューを選択"
+
+#: wptouch-pro-3-extras/themes/bauhaus/root-functions.php:121
+msgid "Main menu selection"
+msgstr "メインメニュー選択"
+
+#: wptouch-pro-3-extras/themes/bauhaus/root-functions.php:128
+#: wptouch-pro-3-extras/themes/bio/root-functions.php:97
+#: wptouch-pro-3-extras/themes/classic-redux/root-functions.php:107
+#: wptouch-pro-3-extras/themes/cms/root-functions.php:132
+#: wptouch-pro-3-extras/themes/scaffold/root-functions.php:85
+#: wptouch-pro-3-extras/themes/simple/root-functions.php:79
+msgid "Theme background"
+msgstr "テーマ背景"
+
+#: wptouch-pro-3-extras/themes/bauhaus/root-functions.php:129
+msgid "Header & Menu"
+msgstr "ヘッダー＆メニュー"
+
+#: wptouch-pro-3-extras/themes/bauhaus/root-functions.php:130
+#: wptouch-pro-3-extras/themes/bio/root-functions.php:98
+#: wptouch-pro-3-extras/themes/classic-redux/root-functions.php:108
+#: wptouch-pro-3-extras/themes/cms/root-functions.php:133
+#: wptouch-pro-3-extras/themes/hammock/root-functions.php:84
+#: wptouch-pro-3-extras/themes/scaffold/root-functions.php:86
+#: wptouch-pro-3-extras/themes/simple/root-functions.php:80
+msgid "Links"
+msgstr "リンク"
+
+#: wptouch-pro-3-extras/themes/bauhaus/root-functions.php:131
+msgid "Post/Page Headers"
+msgstr "投稿/ページヘッダー"
+
+#: wptouch-pro-3-extras/themes/bauhaus/root-functions.php:232
+msgid "Theme Shapes"
+msgstr "テーマシェイプ"
+
+#: wptouch-pro-3-extras/themes/bauhaus/root-functions.php:238
+msgid "Theme shape style"
+msgstr "テーマシェイプスタイル"
+
+#: wptouch-pro-3-extras/themes/bauhaus/root-functions.php:239
+msgid "Bauhaus will use this shape style throughout its appearance"
+msgstr "Bauhausは外見を通してこのシェイプスタイルを使用します"
+
+#: wptouch-pro-3-extras/themes/bauhaus/root-functions.php:243
+msgid "Circles"
+msgstr "サークル"
+
+#: wptouch-pro-3-extras/themes/bauhaus/root-functions.php:245
+msgid "Rounded squares"
+msgstr "ラウンドスクエア"
+
+#: wptouch-pro-3-extras/themes/bauhaus/root-functions.php:264
+#: wptouch-pro-3-extras/themes/bio/root-functions.php:131
+#: wptouch-pro-3-extras/themes/classic-redux/root-functions.php:238
+msgid "Post thumbnails"
+msgstr "サムネイルを投稿"
+
+#: wptouch-pro-3-extras/themes/bauhaus/root-functions.php:269
+#: wptouch-pro-3-extras/themes/bio/root-functions.php:136
+#: wptouch-pro-3-extras/themes/classic-redux/root-functions.php:243
+msgid "No thumbnails"
+msgstr "サムネイルなし"
+
+#: wptouch-pro-3-extras/themes/bauhaus/root-functions.php:270
+#: wptouch-pro-3-extras/themes/bio/root-functions.php:137
+#: wptouch-pro-3-extras/themes/classic-redux/root-functions.php:244
+#: wptouch-pro-3-extras/themes/hammock/root-functions.php:230
+msgid "Blog listing only"
+msgstr "ブログリストのみ"
+
+#: wptouch-pro-3-extras/themes/bauhaus/root-functions.php:271
+#: wptouch-pro-3-extras/themes/bio/root-functions.php:138
+#: wptouch-pro-3-extras/themes/classic-redux/root-functions.php:245
+#: wptouch-pro-3-extras/themes/hammock/root-functions.php:231
+msgid "Blog listing, single posts"
+msgstr "ブログリスト、シングル投稿"
+
+#: wptouch-pro-3-extras/themes/bauhaus/root-functions.php:272
+#: wptouch-pro-3-extras/themes/bio/root-functions.php:139
+msgid "Blog listing, single posts & pages"
+msgstr "ブログリスニング、シングル投稿 & ページ"
+
+#: wptouch-pro-3-extras/themes/bauhaus/root-functions.php:273
+#: wptouch-pro-3-extras/themes/bio/root-functions.php:140
+msgid "All (blog, single, pages, search & archive)"
+msgstr "全て (ブログ、シングル、ページ、検索&アーカイブ)"
+
+#: wptouch-pro-3-extras/themes/bauhaus/root-functions.php:281
+#: wptouch-pro-3-extras/themes/bio/root-functions.php:148
+#: wptouch-pro-3-extras/themes/classic-redux/root-functions.php:254
+msgid "Thumbnail Selection"
+msgstr "サムネイル選択"
+
+#: wptouch-pro-3-extras/themes/bauhaus/root-functions.php:286
+#: wptouch-pro-3-extras/themes/bio/root-functions.php:153
+#: wptouch-pro-3-extras/themes/classic-redux/root-functions.php:259
+msgid "Post featured image"
+msgstr "特集画像を投稿"
+
+#: wptouch-pro-3-extras/themes/bauhaus/root-functions.php:287
+#: wptouch-pro-3-extras/themes/bio/root-functions.php:154
+#: wptouch-pro-3-extras/themes/classic-redux/root-functions.php:260
+msgid "Post custom field"
+msgstr "カスタムフィールド投稿"
+
+#: wptouch-pro-3-extras/themes/bauhaus/root-functions.php:295
+#: wptouch-pro-3-extras/themes/bio/root-functions.php:162
+#: wptouch-pro-3-extras/themes/classic-redux/root-functions.php:268
+msgid "Thumbnail custom field name"
+msgstr "サムネイルカスタムフィールド名"
+
+#: wptouch-pro-3-extras/themes/bauhaus/root-functions.php:306
+#: wptouch-pro-3-extras/themes/classic-redux/root-functions.php:301
+#: wptouch-pro-3-extras/themes/hammock/root-functions.php:262
+msgid "Show post categories and tags"
+msgstr "投稿カテゴリーとタグ表示"
+
+#: wptouch-pro-3-extras/themes/bauhaus/root-functions.php:317
+#: wptouch-pro-3-extras/themes/bio/root-functions.php:173
+#: wptouch-pro-3-extras/themes/classic-redux/root-functions.php:279
+#: wptouch-pro-3-extras/themes/hammock/root-functions.php:240
+msgid "Show post date"
+msgstr "投稿日表示"
+
+#: wptouch-pro-3-extras/themes/bauhaus/root-functions.php:328
+#: wptouch-pro-3-extras/themes/bio/root-functions.php:184
+#: wptouch-pro-3-extras/themes/classic-redux/root-functions.php:290
+#: wptouch-pro-3-extras/themes/hammock/root-functions.php:251
+msgid "Show post author"
+msgstr "投稿著者を表示"
+
+#: wptouch-pro-3-extras/themes/bauhaus/root-functions.php:339
+#: wptouch-pro-3-extras/themes/bio/root-functions.php:195
+msgid "Show search in header"
+msgstr "ヘッダーで検索表示"
+
+#: wptouch-pro-3-extras/themes/bauhaus/root-functions.php:340
+#: wptouch-pro-3-extras/themes/bio/root-functions.php:196
+msgid "Adds Search capability in the site header."
+msgstr "再とヘッダー内で検索キャパ追加"
+
+#: wptouch-pro-3-extras/themes/bauhaus/root-functions.php:350
+#: wptouch-pro-3-extras/themes/bio/root-functions.php:206
+#: wptouch-pro-3-extras/themes/classic-redux/root-functions.php:312
+#: wptouch-pro-3-extras/themes/hammock/root-functions.php:285
+msgid "Use infinite scrolling for blog"
+msgstr "ブログで無限のスクロール使用"
+
+#: wptouch-pro-3-extras/themes/bauhaus/root-functions.php:367
+msgid "Show featured slider on front page"
+msgstr ""
+
+#: wptouch-pro-3-extras/themes/bio/root-functions.php:87
+#: wptouch-pro-3-extras/themes/scaffold/root-functions.php:75
+msgid "Primary Menu"
+msgstr "プライマリーメニュー"
+
+#: wptouch-pro-3-extras/themes/bio/root-functions.php:90
+#: wptouch-pro-3-extras/themes/scaffold/root-functions.php:78
+msgid "Menus are awesome!"
+msgstr "メニューがすごい！"
+
+#: wptouch-pro-3-extras/themes/classic-redux/default/header-bottom.php:43
+#: wptouch-pro-3-extras/themes/classic-redux/default/header-bottom.php:88
+msgid "Tweets"
+msgstr "ツイート"
+
+#: wptouch-pro-3-extras/themes/classic-redux/default/header-bottom.php:92
+msgid "Follow %s on Twitter"
+msgstr "Twitterで%sをフォロー"
+
+#: wptouch-pro-3-extras/themes/classic-redux/default/post-loop.php:56
+msgid "Read This Post"
+msgstr "この投稿を読む"
+
+#: wptouch-pro-3-extras/themes/classic-redux/default/single.php:16
+msgid "%s at %s"
+msgstr "%sの%s"
+
+#: wptouch-pro-3-extras/themes/classic-redux/default/single.php:18
+#: wptouch-pro-3-extras/themes/hammock/default/single.php:21
+msgid "Written by %s"
+msgstr "%sによって書き込まれました"
+
+#: wptouch-pro-3-extras/themes/classic-redux/root-functions.php:6
+#: wptouch-pro-3-extras/themes/classic-redux/root-functions.php:357
+msgid "Tablets"
+msgstr "タブレット"
+
+#: wptouch-pro-3-extras/themes/classic-redux/root-functions.php:106
+#: wptouch-pro-3-extras/themes/cms/root-functions.php:131
+#: wptouch-pro-3-extras/themes/simple/root-functions.php:78
+msgid "Header background"
+msgstr "ヘッダー背景"
+
+#: wptouch-pro-3-extras/themes/classic-redux/root-functions.php:246
+#: wptouch-pro-3-extras/themes/hammock/root-functions.php:232
+msgid "All (blog, single, search and archive)"
+msgstr "全て(ブログ、シングル、サーチ、アーカイブ)"
+
+#: wptouch-pro-3-extras/themes/classic-redux/root-functions.php:323
+msgid "Use rounded corners"
+msgstr "丸端を使用"
+
+#: wptouch-pro-3-extras/themes/classic-redux/root-functions.php:341
+#: wptouch-pro-3-extras/themes/hammock/root-functions.php:302
+msgid "Show page title areas on pages"
+msgstr "ページのタイトルエリアを表示"
+
+#: wptouch-pro-3-extras/themes/classic-redux/root-functions.php:363
+msgid "Add tablet support"
+msgstr "タブレットサポート追加"
+
+#: wptouch-pro-3-extras/themes/classic-redux/root-functions.php:375
+#: wptouch-pro-3-extras/themes/hammock/root-functions.php:335
+msgid "Header Menu Area"
+msgstr "ヘッダーメニューエリア"
+
+#: wptouch-pro-3-extras/themes/classic-redux/root-functions.php:381
+#: wptouch-pro-3-extras/themes/hammock/root-functions.php:341
+msgid "Drop-down button says \"Menu\""
+msgstr "ドロップダウンボタンが\"メニュー\"を表示"
+
+#: wptouch-pro-3-extras/themes/classic-redux/root-functions.php:389
+msgid "Show tab bar"
+msgstr "タブバー表示"
+
+#: wptouch-pro-3-extras/themes/classic-redux/root-functions.php:397
+msgid "Tab-bar shows categories or tags"
+msgstr "タブバーがカテゴリーまたはタグ表示"
+
+#: wptouch-pro-3-extras/themes/classic-redux/root-functions.php:402
+msgid "Categories and tags"
+msgstr "カテゴリーとタグ"
+
+#: wptouch-pro-3-extras/themes/classic-redux/root-functions.php:403
+msgid "Categories only"
+msgstr "カテゴリーのみ"
+
+#: wptouch-pro-3-extras/themes/classic-redux/root-functions.php:404
+msgid "Tags only"
+msgstr "タグのみ"
+
+#: wptouch-pro-3-extras/themes/classic-redux/root-functions.php:405
+msgid "No categories or tags"
+msgstr "カテゴリーまたはタグなし"
+
+#: wptouch-pro-3-extras/themes/classic-redux/root-functions.php:411
+msgid "Max categories / tags"
+msgstr "最大カテゴリー / タグ"
+
+#: wptouch-pro-3-extras/themes/classic-redux/root-functions.php:429
+#: wptouch-pro-3-extras/themes/cms/root-functions.php:242
+#: wptouch-pro-3-extras/themes/simple/root-functions.php:275
+msgid "CSS Effects"
+msgstr "CSS効果"
+
+#: wptouch-pro-3-extras/themes/classic-redux/root-functions.php:435
+#: wptouch-pro-3-extras/themes/cms/root-functions.php:248
+msgid "Add a noise effect to the header and theme background"
+msgstr "ヘッダーとテーマ背景にノイズ効果を追加"
+
+#: wptouch-pro-3-extras/themes/classic-redux/root-functions.php:436
+#: wptouch-pro-3-extras/themes/cms/root-functions.php:249
+#: wptouch-pro-3-extras/themes/simple/root-functions.php:282
+msgid "Will apply the effect overtop of any background image you upload."
+msgstr "アップロードした背景画像上に効果を適用。"
+
+#: wptouch-pro-3-extras/themes/cms/default/header-bottom.php:14
+msgid "menu"
+msgstr "メニュー"
+
+#: wptouch-pro-3-extras/themes/cms/default/header-bottom.php:21
+msgid "login"
+msgstr "ログイン"
+
+#: wptouch-pro-3-extras/themes/cms/default/header-bottom.php:25
+msgid "logout"
+msgstr "ログアウト"
+
+#: wptouch-pro-3-extras/themes/cms/default/header-bottom.php:38
+#: wptouch-pro-3-extras/themes/simple/default/footer-top.php:3
+msgid "search this website"
+msgstr "このウェブサイトを検索"
+
+#: wptouch-pro-3-extras/themes/cms/default/header-bottom.php:39
+#: wptouch-pro-3-extras/themes/simple/default/footer-top.php:5
+msgid "search"
+msgstr "検索"
+
+#: wptouch-pro-3-extras/themes/cms/root-functions.php:49
+msgid "Alt Menu"
+msgstr "Alt　メニュー"
+
+#: wptouch-pro-3-extras/themes/cms/root-functions.php:114
+msgid "Main Menu"
+msgstr "メインメニュー"
+
+#: wptouch-pro-3-extras/themes/cms/root-functions.php:123
+msgid "Alternate Menu"
+msgstr "代替メニュー"
+
+#: wptouch-pro-3-extras/themes/cms/root-functions.php:171
+msgid "Show titles on pages"
+msgstr ""
+
+#: wptouch-pro-3-extras/themes/cms/root-functions.php:186
+msgid "Category Slider"
+msgstr "カテゴリースライダー"
+
+#: wptouch-pro-3-extras/themes/cms/root-functions.php:192
+msgid "Enable category slider"
+msgstr "カテゴリースライダーを有効にする"
+
+#: wptouch-pro-3-extras/themes/cms/root-functions.php:205
+#: wptouch-pro-3-extras/themes/simple/root-functions.php:256
+msgid "Tiled Background Image"
+msgstr "タイル背景画像"
+
+#: wptouch-pro-3-extras/themes/cms/root-functions.php:211
+#: wptouch-pro-3-extras/themes/simple/root-functions.php:262
+msgid "(Scaled for retina displays)"
+msgstr "(Retinaディスプレイ用にスケール)"
+
+#: wptouch-pro-3-extras/themes/cms/root-functions.php:223
+msgid "Alternate Menu Title"
+msgstr "メニュータイトルを変更"
+
+#: wptouch-pro-3-extras/themes/cms/root-functions.php:229
+msgid "Alternate menu title (if used)"
+msgstr "メニュータイトルを変更 (使用する場合)"
+
+#: wptouch-pro-3-extras/themes/cms/root-functions.php:230
+msgid "If you use a second menu in CMS, this text will be used for the drop-down button title."
+msgstr "CMS内でセカンドメニューを使用する場合、このテキストがドロップダウンボタンタイトルで使用されます。"
+
+#: wptouch-pro-3-extras/themes/cms/root-functions.php:260
+msgid "Static Front Page"
+msgstr "固定フロントページ"
+
+#: wptouch-pro-3-extras/themes/cms/root-functions.php:266
+msgid "Static front page alternate content"
+msgstr "固定フロントページ代替コンテンツ"
+
+#: wptouch-pro-3-extras/themes/cms/root-functions.php:267
+msgid "Shows after the featured slider (if enabled), and replaces your Static Front Page content. HTML allowed."
+msgstr "機能スライダーの後に表示(有効な場合)してあなたの固定フロントページのコンテンツを置き換える。HTML許可。"
+
+#: wptouch-pro-3-extras/themes/hammock/default/header-bottom.php:34
+msgid "Recent"
+msgstr "最近"
+
+#: wptouch-pro-3-extras/themes/hammock/default/header-bottom.php:44
+msgid "Size"
+msgstr "サイズ"
+
+#: wptouch-pro-3-extras/themes/hammock/default/header-bottom.php:86
+msgid "Go"
+msgstr "ゴー"
+
+#: wptouch-pro-3-extras/themes/hammock/default/page-content.php:24
+#: wptouch-pro-3-extras/themes/hammock/default/single.php:48
+msgid "Comment on this post"
+msgstr "この投稿のコメント"
+
+#: wptouch-pro-3-extras/themes/hammock/default/page-content.php:26
+#: wptouch-pro-3-extras/themes/hammock/default/single.php:50
+msgid "View Discussion"
+msgstr "議論を表示"
+
+#: wptouch-pro-3-extras/themes/hammock/default/single.php:25
+msgid "%s"
+msgstr "%s"
+
+#: wptouch-pro-3-extras/themes/hammock/root-functions.php:81
+msgid "Site name"
+msgstr "サイト名"
+
+#: wptouch-pro-3-extras/themes/hammock/root-functions.php:83
+msgid "Content background"
+msgstr "コンテンツの背景"
+
+#: wptouch-pro-3-extras/themes/hammock/root-functions.php:224
+msgid "Display featured image"
+msgstr "特集画像を表示"
+
+#: wptouch-pro-3-extras/themes/hammock/root-functions.php:229
+msgid "Do not display featured image"
+msgstr "特集画像を表示しない"
+
+#: wptouch-pro-3-extras/themes/hammock/root-functions.php:274
+msgid "Show post excerpts in listings"
+msgstr "リスト内の投稿引用を表示"
+
+#: wptouch-pro-3-extras/themes/hammock/root-functions.php:350
+msgid "Show category list in menu"
+msgstr "メニューのカテゴリーリスト表示"
+
+#: wptouch-pro-3-extras/themes/simple/default/front-page.php:14
+msgid "Call Us"
+msgstr "当社に電話してください"
+
+#: wptouch-pro-3-extras/themes/simple/default/front-page.php:20
+msgid "Our Location"
+msgstr "当社ロケーション"
+
+#: wptouch-pro-3-extras/themes/simple/default/header-bottom.php:15
+msgid "Toggle Menu"
+msgstr "メニュー切替え"
+
+#: wptouch-pro-3-extras/themes/simple/root-functions.php:58
+msgid "Site Menu (Pulldown)"
+msgstr "サイトメニュー (プルダウン)"
+
+#: wptouch-pro-3-extras/themes/simple/root-functions.php:61
+msgid "Pull-down menu at top of pages"
+msgstr "トップページのプルダウンメニュー"
+
+#: wptouch-pro-3-extras/themes/simple/root-functions.php:69
+msgid "Front Page Menu"
+msgstr "フロントページメニュー"
+
+#: wptouch-pro-3-extras/themes/simple/root-functions.php:72
+msgid "Displayed below front page menu and content"
+msgstr "フロントページメニューとコンテンツの下にディスプレイされました"
+
+#: wptouch-pro-3-extras/themes/simple/root-functions.php:185
+msgid "Enable search on blog pages"
+msgstr "ブログページで検索を有効にする"
+
+#: wptouch-pro-3-extras/themes/simple/root-functions.php:199
+msgid "Homepage Call Us"
+msgstr "ホームページ　当社に電話してください"
+
+#: wptouch-pro-3-extras/themes/simple/root-functions.php:205
+msgid "Phone number"
+msgstr "電話番号"
+
+#: wptouch-pro-3-extras/themes/simple/root-functions.php:206
+msgid "Enter a phone number and a homepage menu item for 'call us' will be shown."
+msgstr "電話番号とホームページメニューアイテムを入力すると'当社に電話する'が表示されます。"
+
+#: wptouch-pro-3-extras/themes/simple/root-functions.php:218
+msgid "Homepage Location"
+msgstr "ホームページロケーション"
+
+#: wptouch-pro-3-extras/themes/simple/root-functions.php:224
+msgid "Map address"
+msgstr "地図アドレス"
+
+#: wptouch-pro-3-extras/themes/simple/root-functions.php:225
+msgid "Enter an address and a homepage menu item for 'Our Location' will be shown."
+msgstr "アドレスを入力すると'当社ロケーション'のホームページメニューアイテムが表示されます。"
+
+#: wptouch-pro-3-extras/themes/simple/root-functions.php:237
+msgid "Front Page Content"
+msgstr "フロントページコンテンツ"
+
+#: wptouch-pro-3-extras/themes/simple/root-functions.php:243
+msgid "Front page alternate content"
+msgstr "フロントページ代替コンテンツ"
+
+#: wptouch-pro-3-extras/themes/simple/root-functions.php:244
+msgid "Shows above the front page menu (if enabled), HTML allowed."
+msgstr "フロントページメニューの上に表示(有効な場合)、HTML許可。"
+
+#: wptouch-pro-3-extras/themes/simple/root-functions.php:281
+msgid "Add a light noise effect to the drop-down menu and theme background"
+msgstr "ドロップダウンメニューとテーマ背景へ軽くノイズ効果を追加"
