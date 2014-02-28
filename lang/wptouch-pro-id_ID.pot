@@ -1,0 +1,2626 @@
+# Copyright (C) 2013
+# This file is distributed under the same license as the  package.
+msgid ""
+msgstr "Project-Id-Version:  \nReport-Msgid-Bugs-To: http://wordpress.org/tag/combined\nPOT-Creation-Date: 2013-11-26 12:08:18+00:00\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPO-Revision-Date: 2013-MO-DA HO:MI+ZONE\nLast-Translator: FULL NAME <EMAIL@ADDRESS>\nLanguage-Team: LANGUAGE <LL@li.org>\n"
+
+#: wptouch-pro-3/admin/html/help.php:1
+msgid "WPtouch Pro Help & Account Links"
+msgstr "Bantuan WPtouch Pro & Tautan Akun"
+
+#: wptouch-pro-3/admin/html/help.php:3
+msgid "Support Forums"
+msgstr "Forum Dukungan"
+
+#: wptouch-pro-3/admin/html/help.php:4
+msgid "Documentation"
+msgstr "Dokumentasi"
+
+#: wptouch-pro-3/admin/html/help.php:5
+msgid "Account & Downloads"
+msgstr "Akun & Unduhan"
+
+#: wptouch-pro-3/admin/html/help.php:6
+msgid "BraveNewCode on Twitter"
+msgstr "BraveNewCode pada Twitter"
+
+#: wptouch-pro-3/admin/html/help.php:7
+msgid "Plugin Licensing Terms"
+msgstr "Persyaratan Pelisensian Plugin"
+
+#: wptouch-pro-3/admin/html/notification-center.php:5
+msgid "Notifications"
+msgstr "Notifikasi"
+
+#: wptouch-pro-3/admin/html/notification-content.php:20
+msgid "No notifications"
+msgstr "Tidak ada notifikasi"
+
+#: wptouch-pro-3/admin/html/plugin-area.php:7
+msgid "This copy of WPtouch Pro is unlicensed! Please %sactivate your license%s, or %spurchase a license%s to enable automatic updates and full product support from us!"
+msgstr "Salinan WPtouch Pro tidak berlisensi! Harap %saktifkan lisensi%s Anda, atau %sbeli lisensi%s untuk memungkinkan pembaruan otomatis dan dukungan produk penuh dari kami!"
+
+#: wptouch-pro-3/admin/html/plugin-area.php:9
+msgid "This copy of WPtouch Pro is unlicensed! Please contact the site administrator regarding product licensing."
+msgstr "Salinan WPtouch Pro tidak berlisensi! Harap hubungi administrator situs mengenai pelisensian produk."
+
+#: wptouch-pro-3/admin/pages/custom/wptouch-admin-license.php:9
+msgid "License Details"
+msgstr "Rincian Lisensi"
+
+#: wptouch-pro-3/admin/pages/custom/wptouch-admin-license.php:11
+msgid "Note"
+msgstr "Catatan"
+
+#: wptouch-pro-3/admin/pages/custom/wptouch-admin-license.php:12
+msgid "Once you activate, this page will be hidden."
+msgstr "Begitu Anda mengaktifkan, halaman ini akan tersembunyi."
+
+#: wptouch-pro-3/admin/pages/custom/wptouch-admin-license.php:15
+msgid "It will only reappear if you reset your WPtouch Pro settings."
+msgstr "Ini hanya akan muncul kembali jika Anda mereset pengaturan WPtouch Pro Anda."
+
+#: wptouch-pro-3/admin/pages/custom/wptouch-admin-license.php:18
+msgid "Account E-Mail Address"
+msgstr "Alamat Email Akun"
+
+#: wptouch-pro-3/admin/pages/custom/wptouch-admin-license.php:20
+msgid "Product License Key"
+msgstr "Kode Lisensi Produk"
+
+#: wptouch-pro-3/admin/pages/custom/wptouch-admin-license.php:23
+#: wptouch-pro-3/admin/settings/html/theme-browser-item.php:14
+#: wptouch-pro-3/pro/settings/html/extension-browser-item.php:71
+#: wptouch-pro-3/pro/settings/html/theme-browser-item.php:109
+msgid "Activate"
+msgstr "Aktifkan"
+
+#: wptouch-pro-3/admin/pages/custom/wptouch-admin-license.php:33
+msgid "Success."
+msgstr "Sukses."
+
+#: wptouch-pro-3/admin/pages/custom/wptouch-admin-license.php:34
+msgid "Activation Complete. Enjoy WPtouch Pro!"
+msgstr "Aktivasi Lengkap. Nikmati WPtouch Pro!!"
+
+#: wptouch-pro-3/admin/pages/custom/wptouch-admin-license.php:38
+msgid "E-mail address or license key rejected"
+msgstr "Alamat email atau kunci lisensi ditolak"
+
+#: wptouch-pro-3/admin/pages/custom/wptouch-admin-license.php:39
+msgid "The bravenewcode.com server rejected your E-Mail address and/or License Key. Please check they are correct and try again."
+msgstr "Server bravenewcode.com menolak alamat Email address dan/atau Kode Lisensi Anda. Harap periksa bahwa keduanya benar dan coba lagi."
+
+#: wptouch-pro-3/admin/pages/custom/wptouch-admin-license.php:43
+msgid "No licenses remaining."
+msgstr "Tidak ada lisensi yang tersisa."
+
+#: wptouch-pro-3/admin/pages/custom/wptouch-admin-license.php:44
+msgid "You have used all your activations. What do you want to do?"
+msgstr "Anda telah menggunakan semua aktivasi Anda. Apa yang Anda ingin lakukan?"
+
+#: wptouch-pro-3/admin/pages/custom/wptouch-admin-license.php:45
+msgid "Upgrade My License"
+msgstr "Tingkatkan Lisensi Saya"
+
+#: wptouch-pro-3/admin/pages/custom/wptouch-admin-license.php:46
+msgid "Contact support for assistance"
+msgstr "Hubungi dukungan untuk bantuan"
+
+#: wptouch-pro-3/admin/pages/custom/wptouch-admin-license.php:50
+msgid "The server is unavailable."
+msgstr "Server tidak tersedia."
+
+#: wptouch-pro-3/admin/pages/custom/wptouch-admin-license.php:51
+msgid "The bravenewcode.com server currently cannot authorize your License."
+msgstr "Saat ini server bravenewcode.com tidak dapat mengotorisasi Lisensi Anda."
+
+#: wptouch-pro-3/admin/pages/custom/wptouch-admin-license.php:52
+msgid "Please %scontact us%s and let us know about it."
+msgstr "Silakan %scontact us%s dan beri tahu kami tentang itu."
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:3
+#: wptouch-pro-3/themes/foundation/root-functions.php:10
+msgid "General"
+msgstr "Umum"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:4
+msgid "Compatibility"
+msgstr "Kompatibilitas"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:10
+msgid "Auto-detect"
+msgstr "Deteksi-otomatis"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:45
+msgid "Site Title & Byline"
+msgstr "Judul Situs & Keterangan"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:51
+msgid "WPtouch Pro site title"
+msgstr "Judul Situs WPtouch Pro"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:52
+msgid "If the title of your site is long, you can shorten it for display within WPtouch Pro themes."
+msgstr "Jika judul situs Anda panjang, Anda dapat memendekkannya untuk tampilan dalam tema WPtouch Pro."
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:59
+msgid "Display %sPowered by WPtouch Pro%s in footer"
+msgstr "Tampilan %sDipersembahkan oleh WPtouch Pro%s di catatan kaki"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:71
+msgid "Regionalization"
+msgstr "Regionalisasi"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:77
+msgid "Language"
+msgstr "Bahasa"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:78
+msgid "The WPtouch Pro admin panel &amp; supported themes will be shown in this locale."
+msgstr "Tema panel admin WPtouch Pro &amp; yang didukung akan ditampilkan di lokal ini."
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:86
+msgid "Translate administration panel text"
+msgstr "Terjemahkan teks panel administrasi"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:97
+msgid "Display Mode"
+msgstr "Mode Tampilan"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:103
+msgid "Theme Display"
+msgstr "Tampilan Tema"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:108
+msgid "Normal (active for all mobile visitors)"
+msgstr "Normal (aktif bagi semua pengunjung mobile)"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:109
+msgid "Preview (active only for logged-in site administrators)"
+msgstr "Pratinjau (aktif hanya bagi administrator situs yang masuk)"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:110
+msgid "Disabled (mobile theme will never show)"
+msgstr "Dinonaktifkan (tema mobile tidak akan pernah ditampilkan)"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:119
+msgid "Landing Page"
+msgstr "Halaman Arahan"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:125
+msgid "WPtouch Pro landing page"
+msgstr "Halaman arahan WPtouch Pro"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:130
+msgid "Default (same as WordPress)"
+msgstr "Standar (sama seperti WordPress)"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:131
+msgid "Select from WordPress pages"
+msgstr "Pilih dari halaman WordPress"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:139
+msgid "Custom Slug or URL"
+msgstr "Slug atau URL Tersuai"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:140
+msgid "Enter a Slug (i.e. \"/home\") or a full URL path"
+msgstr "Masukkan Slug (misalnya \"/beranda\") or atau jejak URL penuh"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:150
+msgid "Desktop / Mobile Switching"
+msgstr "Pemindahan Desktop/Mobile"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:156
+msgid "1st time visitors see desktop theme"
+msgstr "Pertama kali pengunjung melihat tema desktop"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:157
+msgid "Your regular theme will be shown to 1st time mobile visitors."
+msgstr "Tema reguler Anda akan ditampilkan bagi pengunjung mobile yang pertama kali."
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:164
+msgid "Show switch link in mobile view"
+msgstr "Tampilkan tautan berpindah dalam tampilan mobile"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:165
+msgid "Will show toggle buttons in the theme's footer allowing users to switch to your desktop theme. Is not shown in Web-App Mode."
+msgstr "Akan menampilkan tombol beralih di catatan kaki tema, memungkinkan pengguna untuk berpindah ke tema desktop Anda. Tidak ditampilkan di Mode Aplikasi Web."
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:172
+msgid "Choose the target for the mobile switch link"
+msgstr "Pilih target untuk tautan tombol mobile"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:177
+msgid "Current page"
+msgstr "Halaman saat ini"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:178
+msgid "Home page"
+msgstr "Beranda"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:184
+msgid "Desktop theme switch buttons"
+msgstr "Tombol berpindah tema desktop"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:185
+msgid "Allows visitors to switch from your desktop theme to your mobile theme. You can also customize the placement of Switch buttons by placing the wptouch_desktop_switch_link() template tag somewhere in your desktop theme."
+msgstr "Mungkinkan pengunjung untuk berpindah dari tema desktop Anda ke tema mobile Anda. Anda juga dapat menyesuaikan penempatan tombol Berpindah dengan menempatkan tag templat wptouch_desktop_switch_link() di suatu tempat di tema desktop Anda."
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:189
+msgid "Automatically inserted inline"
+msgstr "Garis dimasukkan secara otomatis"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:190
+msgid "Automatically inserted with AJAX (better for caching)"
+msgstr "Otomatis dimasukkan dengan AJAX (baik untuk caching)"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:191
+msgid "Template tag"
+msgstr "Tag templat"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:200
+msgid "Custom Code"
+msgstr "Kode Tersuai"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:206
+msgid "HTML, JavaScript, statistics or custom code"
+msgstr "HTML, JavaScript, statistik atau kode khusus"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:207
+msgid "Enter any custom code here to be output in the theme footer."
+msgstr "Masukkan kode khusus di sini untuk menjadi output di catatan kaki tema."
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:217
+msgid "Custom Stylesheet"
+msgstr "Kertas Gaya Tersuai"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:223
+msgid "URL to a custom CSS file to load"
+msgstr "URL ke berkas CSS tersuai untuk dimuat"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:224
+msgid "Useful if you have specific compatibility CSS you need to add."
+msgstr "Berguna jika Anda memiliki kompatibilitas CSS yang perlu Anda tambahkan."
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:234
+msgid "Shortcodes"
+msgstr "Shortcode"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:240
+msgid "Remove these shortcodes when WPtouch Pro is active"
+msgstr "Hilangkan kode pendek (shortcode) ini saat WPtouch Pro aktif"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:241
+msgid "Enter a comma separated list of shortcodes to remove."
+msgstr "Masukkan daftar kode pendek (shortcode) yang dipisahkan oleh koma untuk menghapus."
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:251
+msgid "Ignored URLs"
+msgstr "URL Diabaikan"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:257
+msgid "Do not load WPtouch Pro on these URLs/Pages"
+msgstr "Jangan muat WPtouch Pro pada URL/Halaman ini"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:258
+msgid "Each permalink URL fragment should be on its own line and relative, e.g. \"/about\" or \"/products/store\""
+msgstr "Tiap fragmen URL tautan (permalink permanen), harus berada di jalur dan relatifnya sendiri, misalnya \"/tentang\" atau \"/produk/toko\""
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:268
+msgid "Desktop Theme"
+msgstr "Tema Desktop"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:274
+msgid "Try to include desktop theme functions.php file"
+msgstr "Coba untuk mencakup berkas functions.php tema desktop"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:275
+msgid "This may be required for desktop themes with unique features that are not showing when WPtouch Pro is active."
+msgstr "Ini mungkin diperlukan untuk tema desktop yang dengan fitur unik yang tidak terlihat saat WPtouch Pro aktif."
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:282
+msgid "Method to load file"
+msgstr "Metode untuk memuat berkas"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:287
+msgid "Include file directly"
+msgstr "Sertakan berkas secara langsung"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:288
+msgid "Translate and create new files"
+msgstr "Terjemahkan dan buat berkas baru"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:297
+msgid "Custom User-Agents"
+msgstr "Agen-Pengguna Tersuai"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:303
+msgid "User-agents (line separated)"
+msgstr "Agen-Pengguna (dipisahkan garis)"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:304
+msgid "Adding additional user-agents will force WPtouch Pro to be active for matching browsers."
+msgstr "Menambahkan agen-pengguna tambahan akan memaksa WPtouch Pro untuk diaktifkan untuk browser yang sesuai."
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:318
+msgid "Backup &amp; Import"
+msgstr "Impor &amp; Cadangan"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:324
+msgid "Automatically backup settings to the %s folder"
+msgstr "Secara otomatis mencadangkan pengaturan ke berkas %s"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:326
+msgid "WPtouch Pro backups your settings each time they are saved."
+msgstr "WPtouch Pro membuat cadangan pengaturan Anda setiap kali pengaturan disimpan."
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:337
+msgid "Tools &amp; Debug"
+msgstr "Peralatan &amp; Debug"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:343
+msgid "Use jQuery 2.0 in themes (faster for mobile devices) instead of WordPress' version"
+msgstr "Gunakan jQuery 2.0 dalam tema (lebih cepat untuk perangkat mobile) dibandingkan versi WordPress"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:344
+msgid "jQuery 2.0 is significantly smaller and faster than previous jQuery versions - may cause problems with other plugins, use carefully."
+msgstr "jQuery 2.0 secara signifikan lebih kecil dan lebih cepat dari versi jQuery sebelumnya - dapat menyebabkan masalah dengan plugin lain, gunakan dengan hati-hati."
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:351
+msgid "Show load times and query counts in the footer"
+msgstr "Tampilkan waktu muat dan hitungan permintaan dalam catatan kaki"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:352
+msgid "Helps you find slow pages/posts on your site."
+msgstr "Membantu Anda menemukan halaman/kiriman yang lambat pada situs Anda."
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:359
+msgid "Enable debug log"
+msgstr "Aktifkan catatan debug"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:360
+msgid "Creates a debug file to help diagnose installation issues."
+msgstr "Membuat berkas debug untuk membantu mendiagnosa masalah instalasi."
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:371
+msgid "WordPress Plugins"
+msgstr "Plugin WordPress"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:384
+msgid "Admin Mode"
+msgstr "Mode Admin"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:390
+msgid "Admin panel settings shown"
+msgstr "Pengaturan panel admin ditampilkan"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:395
+msgid "Default"
+msgstr "Standar"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-general-settings.php:396
+#: wptouch-pro-3/admin/settings/html/button.php:5
+#: wptouch-pro-3/admin/settings/html/checkbox.php:6
+#: wptouch-pro-3/admin/settings/html/custom-latest-posts.php:4
+#: wptouch-pro-3/admin/settings/html/list.php:16
+#: wptouch-pro-3/admin/settings/html/numeric.php:12
+#: wptouch-pro-3/admin/settings/html/radiolist.php:12
+#: wptouch-pro-3/admin/settings/html/text.php:8
+#: wptouch-pro-3/admin/settings/html/textarea.php:8
+msgid "Advanced"
+msgstr "Lanjutan"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-menus.php:3
+msgid "Theme Menus"
+msgstr "Menu Tema"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-menus.php:4
+msgid "Menu Setup"
+msgstr "Pengaturan Menu"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-menus.php:5
+msgid "Icon Upload & Sets"
+msgstr "Unggah & Pengaturan Ikon"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-menus.php:22
+msgid "WordPress Pages"
+msgstr "Halaman WordPress"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-menus.php:28
+#: wptouch-pro-3/admin/settings/html/icon_menu_area.php:6
+#: wptouch-pro-3/themes/foundation/modules/advertising/advertising.php:180
+#: wptouch-pro-3/themes/foundation/modules/media/media.php:59
+#: wptouch-pro-3-extras/extensions/infinity-cache/infinity-cache.php:206
+msgid "None"
+msgstr "Tidak ada"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-menus.php:66
+msgid "Menu Options"
+msgstr "Opsi Menu"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-menus.php:72
+msgid "Enable parent items as links"
+msgstr "Aktifkan butir-butir induk sebagai tautan"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-menus.php:73
+msgid "If disabled, parent menu items will only toggle child items."
+msgstr "Jika dinonaktifkan, menu induk hanya akan mengaktifkan butir-butir anak."
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-menus.php:80
+msgid "Use menu icons"
+msgstr "Gunakan ikon menu"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-menus.php:104
+msgid "Icon Upload"
+msgstr "Unggah Ikon"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-menus.php:117
+msgid "Uploaded Icons"
+msgstr "Ikon Diunggah"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-menus.php:130
+msgid "Icon Sets"
+msgstr "Rangkaian Ikon"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-themes-and-addons.php:3
+msgid "Themes"
+msgstr "Tema"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-themes-and-addons.php:4
+msgid "Extensions"
+msgstr "Ekstensi"
+
+#: wptouch-pro-3/admin/pages/wptouch-admin-touchboard.php:3
+#: wptouch-pro-3/core/admin-menu.php:34 wptouch-pro-3/core/admin-menu.php:38
+msgid "What's New"
+msgstr "Apa yang Baru"
+
+#: wptouch-pro-3/admin/settings/html/addon-browser-item.php:38
+#: wptouch-pro-3/admin/settings/html/installed_icon_sets_ajax.php:8
+#: wptouch-pro-3/admin/settings/html/installed_icon_sets_ajax.php:20
+#: wptouch-pro-3/admin/settings/html/theme-browser-item.php:59
+#: wptouch-pro-3/pro/settings/html/extension-browser-item.php:41
+#: wptouch-pro-3/pro/settings/html/theme-browser-item.php:62
+msgid "by %s"
+msgstr "berdasarkan %s"
+
+#: wptouch-pro-3/admin/settings/html/addon-browser-item.php:43
+msgid "This add-on is only available in WPtouch Pro"
+msgstr "Pengaya ini hanya tersedia dalam WPtouch Pro"
+
+#: wptouch-pro-3/admin/settings/html/backup.php:1
+msgid "Download Backup File"
+msgstr "Unduh Berkas Cadangan"
+
+#: wptouch-pro-3/admin/settings/html/backup.php:2
+msgid "Restore Backup File"
+msgstr "Pulihkan Berkas Cadangan"
+
+#: wptouch-pro-3/admin/settings/html/button.php:6
+#: wptouch-pro-3/admin/settings/html/checkbox.php:7
+#: wptouch-pro-3/admin/settings/html/custom-latest-posts.php:8
+#: wptouch-pro-3/admin/settings/html/list.php:20
+#: wptouch-pro-3/admin/settings/html/numeric.php:16
+#: wptouch-pro-3/admin/settings/html/radiolist.php:14
+#: wptouch-pro-3/admin/settings/html/text.php:9
+#: wptouch-pro-3/admin/settings/html/textarea.php:9
+msgid "New"
+msgstr "Baru"
+
+#: wptouch-pro-3/admin/settings/html/color.php:6
+msgid "Undo"
+msgstr "Batalkan"
+
+#: wptouch-pro-3/admin/settings/html/color.php:7
+msgid "Desktop theme colors"
+msgstr "Warna tema Desktop"
+
+#: wptouch-pro-3/admin/settings/html/color.php:7
+msgid "Palette"
+msgstr "Palet"
+
+#: wptouch-pro-3/admin/settings/html/custom-latest-posts.php:1
+msgid "Custom latest posts page"
+msgstr "Kustom halaman posting terbaru"
+
+#: wptouch-pro-3/admin/settings/html/custom_icon_management.php:3
+msgid "No icons have been uploaded yet"
+msgstr "Belum ada ikon yang diunggah"
+
+#: wptouch-pro-3/admin/settings/html/custom_icon_management.php:12
+#: wptouch-pro-3/admin/settings/html/image-upload.php:13
+#: wptouch-pro-3/admin/settings/html/theme-browser-item.php:18
+#: wptouch-pro-3/pro/settings/html/theme-browser-item.php:115
+msgid "Delete"
+msgstr "Hapus"
+
+#: wptouch-pro-3/admin/settings/html/custom_icon_upload.php:3
+msgid "Upload Icon"
+msgstr "Unggah Ikon"
+
+#: wptouch-pro-3/admin/settings/html/custom_icon_upload.php:4
+#: wptouch-pro-3/admin/settings/html/image-upload.php:15
+msgid "Upload Complete!"
+msgstr "Unggahan Selesai!"
+
+#: wptouch-pro-3/admin/settings/html/custom_icon_upload.php:9
+msgid "Ready to upload"
+msgstr "Siap untuk mengunduh"
+
+#: wptouch-pro-3/admin/settings/html/debuginfo.php:12
+msgid "View Debug File"
+msgstr "Lihat Berkas Debug"
+
+#: wptouch-pro-3/admin/settings/html/debuginfo.php:16
+#: wptouch-pro-3/admin/settings/html/debuginfo.php:18
+msgid "Your Server Configuration"
+msgstr "Konfigurasi Server Anda"
+
+#: wptouch-pro-3/admin/settings/html/icon_menu_area.php:5
+msgid "Check All"
+msgstr "Periksa Semua"
+
+#: wptouch-pro-3/admin/settings/html/icon_menu_area.php:7
+msgid "Reset"
+msgstr "Reset"
+
+#: wptouch-pro-3/admin/settings/html/icon_menu_area.php:9
+#: wptouch-pro-3-extras/themes/bio/default/header-bottom.php:13
+#: wptouch-pro-3-extras/themes/classic-redux/default/header-bottom.php:21
+#: wptouch-pro-3-extras/themes/classic-redux/default/header-bottom.php:32
+#: wptouch-pro-3-extras/themes/classic-redux/default/header-bottom.php:112
+#: wptouch-pro-3-extras/themes/hammock/default/header-bottom.php:23
+#: wptouch-pro-3-extras/themes/hammock/default/header-bottom.php:36
+#: wptouch-pro-3-extras/themes/hammock/root-functions.php:82
+#: wptouch-pro-3-extras/themes/scaffold/default/header-bottom.php:13
+msgid "Menu"
+msgstr "Menu"
+
+#: wptouch-pro-3/admin/settings/html/icon_menu_area.php:19
+msgid "Active menus used in this theme."
+msgstr "Menu aktif yang digunakan di tema ini."
+
+#: wptouch-pro-3/admin/settings/html/icon_menu_area.php:23
+msgid "Show/Hide"
+msgstr "Tampilkan/Sembunyikan"
+
+#: wptouch-pro-3/admin/settings/html/icon_menu_area.php:24
+msgid "Menu Item"
+msgstr "Butir Menu"
+
+#: wptouch-pro-3/admin/settings/html/icon_menu_area.php:44
+msgid "Icon Set"
+msgstr "Rangkaian Ikon"
+
+#: wptouch-pro-3/admin/settings/html/icon_menu_area.php:54
+msgid "Drag icons to associate them with menu items"
+msgstr "Seret ikon untuk mengasosiasikannya dengan butir menu"
+
+#: wptouch-pro-3/admin/settings/html/icon_menu_area.php:79
+msgid "You don't have any custom icons yet."
+msgstr "Anda belum memiliki ikon tersuai sama sekali."
+
+#: wptouch-pro-3/admin/settings/html/icon_menu_area.php:94
+msgid "Default Icon"
+msgstr "Ikon Standar"
+
+#: wptouch-pro-3/admin/settings/html/icon_menu_area.php:95
+msgid "applies to all unset icons"
+msgstr "aplikasikan ke semua ikon yang belum diatur"
+
+#: wptouch-pro-3/admin/settings/html/icon_menu_area.php:103
+msgid "Trash"
+msgstr "Sampah"
+
+#: wptouch-pro-3/admin/settings/html/icon_menu_area.php:104
+msgid "drag icon here to reset"
+msgstr "seret ikon ke sini untuk me-reset"
+
+#: wptouch-pro-3/admin/settings/html/image-upload.php:11
+msgid "Upload"
+msgstr "Unggah"
+
+#: wptouch-pro-3/admin/settings/html/installed_icon_sets.php:2
+msgid "Gathering information about available icon sets..."
+msgstr "Pengumpulan informasi tentang rangkaian ikon yang tersedia..."
+
+#: wptouch-pro-3/admin/settings/html/installed_icon_sets.php:4
+#: wptouch-pro-3/core/notifications.php:264
+msgid "The %s%s%s directory is not currently writable. %sPlease fix this issue to enable installation of additional icon sets."
+msgstr "Saat ini direktori %s%s%s tidak dapat ditulis. %sSilakan perbaiki masalah ini untuk mengaktifkan instalasi dari set ikon tambahan."
+
+#: wptouch-pro-3/admin/settings/html/installed_icon_sets_ajax.php:4
+#: wptouch-pro-3/core/class-wptouch-pro.php:1555
+#: wptouch-pro-3/core/class-wptouch-pro.php:1556
+#: wptouch-pro-3/core/config.php:54
+msgid "Custom Icons"
+msgstr "Ikon tersuai"
+
+#: wptouch-pro-3/admin/settings/html/installed_icon_sets_ajax.php:9
+#: wptouch-pro-3/admin/settings/html/installed_icon_sets_ajax.php:22
+msgid "Installed"
+msgstr "Terpasang"
+
+#: wptouch-pro-3/admin/settings/html/installed_icon_sets_ajax.php:21
+msgid "Installing..."
+msgstr "Menginstal..."
+
+#: wptouch-pro-3/admin/settings/html/installed_icon_sets_ajax.php:21
+#: wptouch-pro-3/pro/settings/html/extension-browser-item.php:66
+#: wptouch-pro-3/pro/settings/html/theme-browser-item.php:96
+msgid "Install"
+msgstr "Instal"
+
+#: wptouch-pro-3/admin/settings/html/installed_icon_sets_ajax.php:23
+msgid "Unable to Install"
+msgstr "Tidak dapat Menginstal"
+
+#: wptouch-pro-3/admin/settings/html/plugin-compat-ajax.php:11
+#: wptouch-pro-3/themes/foundation/modules/custom-posts/custom-posts.php:64
+msgid "Enable %s"
+msgstr "Aktifkan %s"
+
+#: wptouch-pro-3/admin/settings/html/plugin-compat-ajax.php:12
+msgid "When unchecked, %s will be disabled for users viewing your WPtouch Pro theme."
+msgstr "Saat tidak ditandai, %s akan dinonaktifkan bagi pengguna melihat tema WPtouch Anda."
+
+#: wptouch-pro-3/admin/settings/html/plugin-compat-ajax.php:20
+msgid "No plugins to disable."
+msgstr "Tidak ada plugin untuk dinonaktifkan."
+
+#: wptouch-pro-3/admin/settings/html/plugin-compat.php:3
+msgid "Your active plugin list is refreshing"
+msgstr "Daftar plugin aktif Anda sedang menyegarkan"
+
+#: wptouch-pro-3/admin/settings/html/redirect.php:17
+msgid "WordPress Page"
+msgstr "Halaman WordPress"
+
+#: wptouch-pro-3/admin/settings/html/restore.php:2
+msgid "Please paste your encoded settings below and save to restore your settings."
+msgstr "Silakan tempelkan pengaturan tersandikan Anda di bawah ini dan simpan untuk mengembalikan pengaturan Anda."
+
+#: wptouch-pro-3/admin/settings/html/theme-browser-item.php:6
+#: wptouch-pro-3/pro/settings/html/theme-browser-item.php:6
+#: wptouch-pro-3/pro/settings/html/theme-browser-item.php:10
+msgid "Click to view screenshots"
+msgstr "Klik untuk melihat tangkapan layar"
+
+#: wptouch-pro-3/admin/settings/html/theme-browser-item.php:11
+#: wptouch-pro-3/pro/settings/html/extension-browser-item.php:74
+#: wptouch-pro-3/pro/settings/html/theme-browser-item.php:105
+msgid "Setup"
+msgstr "Pengaturan"
+
+#: wptouch-pro-3/admin/settings/html/theme-browser-item.php:16
+#: wptouch-pro-3/pro/settings/html/theme-browser-item.php:112
+msgid "Copy"
+msgstr "Salin"
+
+#: wptouch-pro-3/admin/settings/html/theme-browser-item.php:54
+#: wptouch-pro-3/pro/settings/html/theme-browser-item.php:57
+msgid "This theme supports %s devices"
+msgstr "Tema ini mendukung perangkat %s"
+
+#: wptouch-pro-3/admin/settings/html/theme-browser-item.php:64
+#: wptouch-pro-3/pro/settings/html/theme-browser-item.php:69
+msgid "Theme location: %s"
+msgstr "Lokasi Tema: %s"
+
+#: wptouch-pro-3/admin/settings/html/theme-browser-item.php:65
+#: wptouch-pro-3/pro/settings/html/extension-browser-item.php:48
+#: wptouch-pro-3/pro/settings/html/theme-browser-item.php:70
+msgid "Relative to your WordPress wp-content directory."
+msgstr "Sehubungan dengan direktori wp-konten WordPress Anda."
+
+#: wptouch-pro-3/admin/settings/html/touchboard.php:6
+msgid "Quick Links"
+msgstr "Tautan Cepat"
+
+#: wptouch-pro-3/admin/settings/html/touchboard.php:8
+msgid "What's New Changelog"
+msgstr "Catatan Perubahan Hal Baru"
+
+#: wptouch-pro-3/admin/settings/html/touchboard.php:9
+msgid "Product Knowledgebase"
+msgstr "Basis Pengetahuan Produk"
+
+#: wptouch-pro-3/admin/settings/html/touchboard.php:10
+msgid "Product Support"
+msgstr "Dukungan Produk"
+
+#: wptouch-pro-3/admin/settings/html/touchboard.php:11
+msgid "Manage Account"
+msgstr "Atur Akun"
+
+#: wptouch-pro-3/admin/settings/html/touchboard.php:12
+msgid "Manage License"
+msgstr "Atur Lisensi"
+
+#: wptouch-pro-3/admin/settings/html/touchboard.php:18
+msgid "WPtouch News"
+msgstr "Berita WPtouch"
+
+#: wptouch-pro-3/admin/settings/html/touchboard.php:19
+msgid "Read More"
+msgstr "Baca Lainnya"
+
+#: wptouch-pro-3/admin/settings/html/touchboard.php:25
+msgid "WPtouch Updates"
+msgstr "Pembaruan WPtouch"
+
+#: wptouch-pro-3/admin/settings/html/touchboard.php:35
+msgid "What's New in %s"
+msgstr "Yang Baru di %s"
+
+#: wptouch-pro-3/admin/settings/html/touchboard.php:38
+#: wptouch-pro-3/admin/settings/html/touchboard.php:40
+#: wptouch-pro-3/core/admin-menu.php:59
+msgid "License"
+msgstr "Lisensi"
+
+#: wptouch-pro-3/admin/settings/html/touchboard.php:38
+msgid "Unlicensed"
+msgstr "Tanpa lisensi"
+
+#: wptouch-pro-3/admin/settings/html/touchboard.php:38
+#: wptouch-pro-3/core/class-wptouch-pro.php:453
+msgid "Offline"
+msgstr "Offline"
+
+#: wptouch-pro-3/admin/settings/html/touchboard.php:40
+msgid "Active"
+msgstr "Aktif"
+
+#: wptouch-pro-3/admin/settings/html/touchboard.php:40
+msgid "Online"
+msgstr "Online"
+
+#: wptouch-pro-3/admin/settings/html/touchboard.php:64
+msgid "%s Change Log"
+msgstr "Catatan Perubahan %s"
+
+#: wptouch-pro-3/admin/settings/html/user-agent-list.php:4
+#: wptouch-pro-3/admin/settings/html/user-agent-list.php:6
+msgid "WPtouch Pro will be active when any of the following user-agents or user-agent combinations are matched"
+msgstr "WPtouch Pro akan aktif ketika salah satu dari agen-pengguna berikut atau kombinasi agen-pengguna dicocokkan"
+
+#: wptouch-pro-3/admin/settings/include/custom-latest-posts.php:14
+msgid "None (Use WordPress Settings)"
+msgstr "Tak ada (Gunakan Pengaturan WordPress)"
+
+#: wptouch-pro-3/core/admin-ajax.php:286
+msgid "Version %s"
+msgstr "Versi %s"
+
+#: wptouch-pro-3/core/admin-ajax.php:292
+msgid "There is a temporary issue retrieving the change-log.  Please try again later."
+msgstr "Ada masalah sementara dalam mendapatkan catatan-perubahan. Silakan coba lagi nanti."
+
+#: wptouch-pro-3/core/admin-menu.php:39
+msgid "Core Settings"
+msgstr "Pengaturan Inti"
+
+#: wptouch-pro-3/core/admin-menu.php:40
+msgid "Themes & Extensions"
+msgstr "Tema & Ekstensi"
+
+#: wptouch-pro-3/core/admin-menu.php:41
+msgid "Theme Settings"
+msgstr "Pengaturan Tema"
+
+#: wptouch-pro-3/core/admin-menu.php:41
+msgid "%s Settings"
+msgstr "Pengaturan %s"
+
+#: wptouch-pro-3/core/admin-menu.php:46
+msgid "Extension Settings"
+msgstr "Pengaturan Ekstensi"
+
+#: wptouch-pro-3/core/admin-menu.php:51 wptouch-pro-3/core/admin-menu.php:53
+msgid "Menus"
+msgstr "Menu"
+
+#: wptouch-pro-3/core/admin-page-templates.php:16
+msgid "Mobile Page Template"
+msgstr "Templat Halaman Mobile"
+
+#: wptouch-pro-3/core/admin-render.php:25
+msgid "This copy of %s is currently unlicensed!"
+msgstr "Salinan %s ini tidak berlisensi!"
+
+#: wptouch-pro-3/core/admin-render.php:27
+msgid "Add a license %s"
+msgstr "Tambahkan %s lisensi"
+
+#: wptouch-pro-3/core/admin-render.php:81
+msgid "Save Changes"
+msgstr "Simpan Perubahan"
+
+#: wptouch-pro-3/core/admin-render.php:82
+msgid "Preview Theme"
+msgstr "Pratinjau Tema"
+
+#: wptouch-pro-3/core/admin-render.php:83
+msgid "Reset Settings"
+msgstr "Reset Pengaturan"
+
+#: wptouch-pro-3/core/class-wptouch-pro.php:232
+msgid "Automatic theme migration from uploads/wptouch-data directory failed. Please manually move these files to wp-content/wptouch-data, or %scontact support%s to address this issue."
+msgstr "Migrasi tema otomatis dari uploads/wptouch-data directory failed. Silakan pindahkan secara manual berkas ini ke to wp-content/wptouch-data, atau %scontact support%s untuk menangani masalah ini."
+
+#: wptouch-pro-3/core/class-wptouch-pro.php:239
+msgid "Please wait, we are downloading a fresh copy of your active WPtouch theme from the Cloud."
+msgstr "Harap tunggu, kami sedang mengunduh salinan segar dari tema WPtouch aktif Anda dari Cloud."
+
+#: wptouch-pro-3/core/class-wptouch-pro.php:242
+msgid "We were unable to install your WPtouch theme from the Cloud. Please visit %sthis article%s for more information."
+msgstr "Kami tidak dapat menginstal tema WPTouch Anda dari Cloud. Silakan hubungi  %sartikel ini%s untuk informasi lengkap."
+
+#: wptouch-pro-3/core/class-wptouch-pro.php:449
+msgid "Unsupported Browser"
+msgstr "Browser Tidak Didukung"
+
+#: wptouch-pro-3/core/class-wptouch-pro.php:450
+msgid "Theme Preview requires Chrome or Safari."
+msgstr "Pratinjau Tema memerlukan browser Chrome atau Safari."
+
+#: wptouch-pro-3/core/class-wptouch-pro.php:451
+msgid "This will reset all WPtouch Pro settings.\nAre you sure?"
+msgstr "Ini akan mengatur ulang semua pengaturan WPtouch Pro settings.\nAnda yakin?"
+
+#: wptouch-pro-3/core/class-wptouch-pro.php:452
+msgid "This will reset all WPtouch Pro menu and icon settings.\nAre you sure?"
+msgstr "Ini akan mengatur ulang semua menu dan ikon WPtouch Pro settings.\nAnda yakin?"
+
+#: wptouch-pro-3/core/class-wptouch-pro.php:454
+msgid "You appear to be offline. Connect to the internet to see available BraveNewCloud items."
+msgstr "Anda terliht offline. Menghubunglah ke internet untuk melihat item BraveNewCloud yang tersedia."
+
+#: wptouch-pro-3/core/class-wptouch-pro.php:455
+msgid "The item failed to download. Please refresh the page and try again."
+msgstr "Item ini gagal diunduh. Silakan segarkan halaman dan coba lagi."
+
+#: wptouch-pro-3/core/class-wptouch-pro.php:1069
+#: wptouch-pro-3/themes/foundation/modules/webapp/webapp.php:207
+msgid "Settings"
+msgstr "Pengaturan"
+
+#: wptouch-pro-3/core/class-wptouch-pro.php:1150
+msgid "WPtouch Pro Changelog"
+msgstr "Changelog WPtouch Pro"
+
+#: wptouch-pro-3/core/class-wptouch-pro.php:2326
+msgid "Directory Problem"
+msgstr "Masalah Direktori"
+
+#: wptouch-pro-3/core/class-wptouch-pro.php:2327
+msgid "One or more required directories could not be created"
+msgstr "Satu atau lebih direktori yang dibutuhkan tidak dapat dibuat"
+
+#: wptouch-pro-3/core/globals.php:192
+msgid "smartphone"
+msgstr "ponsel cerdas"
+
+#: wptouch-pro-3/core/globals.php:194
+msgid "tablet"
+msgstr "tablet"
+
+#: wptouch-pro-3/core/notifications.php:121
+msgid "License Missing"
+msgstr "Lisensi Menghilang"
+
+#: wptouch-pro-3/core/notifications.php:122
+msgid "This installation of WPtouch Pro is currently unlicensed."
+msgstr "Instalasi WPtouch Pro ini tidak berlisensi."
+
+#: wptouch-pro-3/core/notifications.php:133
+msgid "WPtouch Pro %s"
+msgstr "WPtouch Pro %s"
+
+#: wptouch-pro-3/core/notifications.php:134
+msgid "A new version of WPtouch Pro is available."
+msgstr "Versi WPtouch Pro baru tersedia."
+
+#: wptouch-pro-3/core/notifications.php:145
+msgid "Theme Update Available"
+msgstr "Pembaruan Tema Tersedia"
+
+#: wptouch-pro-3/core/notifications.php:146
+msgid "One or more updates are available for your installed themes."
+msgstr "Satu pembaruan atau lebih tersedia untuk tema Anda yang terinstal."
+
+#: wptouch-pro-3/core/notifications.php:160
+msgid "Extension Update Available"
+msgstr "Pembaruan Ekstensi Tersedia"
+
+#: wptouch-pro-3/core/notifications.php:161
+msgid "One or more updates are available for your installed extensions."
+msgstr "Satu permbaruan atau lebih tersedia untuk ekstensi yang telah Anda instal."
+
+#: wptouch-pro-3/core/notifications.php:173
+msgid "Preview Mode Enabled"
+msgstr "Aktifkan Mode Pratinjau"
+
+#: wptouch-pro-3/core/notifications.php:174
+msgid "Only logged-in admins can see the mobile theme right now. You can change this at any time in %sCore Settings%s under %sDisplay Mode%s."
+msgstr "Hanya admin yang masuk yang dapat melihat tema mobile saat ini. Anda dapat mengubah ini setiap saat di %sPengaturan Utama%s dalam %sMode Tampilan%s.."
+
+#: wptouch-pro-3/core/notifications.php:182
+msgid "Theme Presentation Disabled"
+msgstr "Tema Presentasi Dinonaktifkan"
+
+#: wptouch-pro-3/core/notifications.php:183
+msgid "No one can see the mobile theme right now. You can change this at any time in %sCore Settings%s under %sDisplay Mode%s."
+msgstr "Tidak ada yang bisa melihat tema ponsel saat ini. Anda dapat mengubah ini setiap saat di %sPengaturan Utama %s dalam %sMenu Tampilan%s."
+
+#: wptouch-pro-3/core/notifications.php:194
+msgid "WPtouch Pro prefers pretty permalinks to be enabled within WordPress."
+msgstr "WPtouch Pro memilih tautan permanent untuk diaktifkan di dalam WordPress."
+
+#: wptouch-pro-3/core/notifications.php:204
+msgid "WPtouch Pro will not work fully in safe mode."
+msgstr "WPtouch Pro tidak akan bekerja sepenuhnya di mode aman (safe mode)."
+
+#: wptouch-pro-3/core/notifications.php:214
+#: wptouch-pro-3/core/notifications.php:224
+#: wptouch-pro-3/core/notifications.php:234
+msgid "Extra configuration is required. The plugin must be configured to exclude the user agents that WPtouch Pro uses."
+msgstr "Konfigurasi ekstra diperlukan. Plugin harus dikonfigurasi untuk mengecualikan agen pengguna yang WPtouch Pro gunakan."
+
+#: wptouch-pro-3/core/notifications.php:244
+msgid "Extra configuration is required. Add paths to your active WPtouch Pro theme CSS and Javascript files as files to ignore in WPMinify."
+msgstr "Konfigurasi ekstra diperlukan. Tambahkan WPtouch Pro theme CSS dan berkas Javascript sebagai berkas untuk diabaikan di WPMinify."
+
+#: wptouch-pro-3/core/notifications.php:254
+msgid "This plugin may not work correctly in WPtouch Pro, and should be disabled in the Plugin Compatibility section."
+msgstr "Mungkin Plugin ini tidak bekerja dengan benar di WPtouch Pro, dan harus dinonaktifkan di bagian Kompatibilitas Plugin."
+
+#: wptouch-pro-3/core/notifications.php:263
+msgid "Icon Installation Issue"
+msgstr "Masalah instalasi ikon"
+
+#: wptouch-pro-3/core/notifications.php:274
+msgid "WPtouch Pro 3 cannot co-exist with WPtouch 1.x. Disable it first in the WordPress Plugins settings."
+msgstr "WPtouch Pro 3 tidak dapat berdampingan dengan WPtouch 1.x. Nonaktifkan dulu di pengaturan Plugin WordPress."
+
+#: wptouch-pro-3/core/notifications.php:284
+msgid "WPtouch Pro 3 cannot co-exist with WPtouch Pro 2.x. Disable it first in the WordPress Plugins settings."
+msgstr "WPtouch Pro 3 tidak dapat berdampingan dengaa WPtouch 2.x. Nonaktifkan dulu di pengaturan Plugin WordPress."
+
+#: wptouch-pro-3/include/add-ons/wordtwit-pro.php:179
+#: wptouch-pro-3/themes/foundation/modules/twitter/twitter.php:42
+msgid "%d second ago"
+msgid_plural "%d seconds ago"
+msgstr[0] "%d detik yang lalu"
+msgstr[1] "%d detik yang lalu"
+
+#: wptouch-pro-3/include/add-ons/wordtwit-pro.php:182
+#: wptouch-pro-3/themes/foundation/modules/twitter/twitter.php:45
+msgid "%d minute ago"
+msgid_plural "%d minutes ago"
+msgstr[0] "%d menit lalu"
+msgstr[1] "%d menit lalu"
+
+#: wptouch-pro-3/include/add-ons/wordtwit-pro.php:185
+#: wptouch-pro-3/themes/foundation/modules/twitter/twitter.php:48
+msgid "%d hour ago"
+msgid_plural "%d hours ago"
+msgstr[0] "%d jam yang lalu"
+msgstr[1] "%d jam yamg lalu"
+
+#: wptouch-pro-3/include/add-ons/wordtwit-pro.php:188
+#: wptouch-pro-3/themes/foundation/modules/twitter/twitter.php:51
+msgid "%d day ago"
+msgid_plural "%d days ago"
+msgstr[0] "%d hari lalu"
+msgstr[1] "%d hari lalu"
+
+#: wptouch-pro-3/include/html/desktop-switch.php:2
+msgid "Desktop Version"
+msgstr "Versi Desktop"
+
+#: wptouch-pro-3/include/html/desktop-switch.php:2
+msgid "Switch To Mobile Version"
+msgstr "Pindah Ke Versi Mobile"
+
+#: wptouch-pro-3/include/html/footer.php:2
+msgid "Powered by %s%s%s"
+msgstr "Dipersembahkan oleh %s%s%s"
+
+#: wptouch-pro-3/include/html/footer.php:3
+msgid "By %s"
+msgstr "Berdasarkan %s"
+
+#: wptouch-pro-3/include/html/load-times.php:2
+msgid "%d queries in %0.1f ms"
+msgstr "%d pertanyaan dalam %0.1f ml dtk"
+
+#: wptouch-pro-3/include/html/page-template.php:8
+msgid "Default Template"
+msgstr "Templat Stanadar"
+
+#: wptouch-pro-3/pro/settings/html/extension-browser-item.php:35
+#: wptouch-pro-3/pro/settings/html/theme-browser-item.php:47
+msgid "Upgrading..."
+msgstr "Meningkatkan..."
+
+#: wptouch-pro-3/pro/settings/html/extension-browser-item.php:35
+msgid "Upgrade to %s"
+msgstr "Meningkatkan ke %s"
+
+#: wptouch-pro-3/pro/settings/html/extension-browser-item.php:47
+msgid "Extension location: %s"
+msgstr "Lokasi Ekstensi: %s"
+
+#: wptouch-pro-3/pro/settings/html/extension-browser-item.php:56
+#: wptouch-pro-3/pro/settings/html/theme-browser-item.php:81
+msgid "More Info"
+msgstr "Info Lainnya"
+
+#: wptouch-pro-3/pro/settings/html/extension-browser-item.php:59
+#: wptouch-pro-3/pro/settings/html/theme-browser-item.php:84
+msgid "Upgrade License"
+msgstr "Tingkatkan Lisensi"
+
+#: wptouch-pro-3/pro/settings/html/extension-browser-item.php:61
+#: wptouch-pro-3/pro/settings/html/theme-browser-item.php:86
+msgid "Get License"
+msgstr "Dapatkan Lisensi"
+
+#: wptouch-pro-3/pro/settings/html/extension-browser-item.php:66
+#: wptouch-pro-3/pro/settings/html/theme-browser-item.php:95
+msgid "Downloading..."
+msgstr "Mengunduh..."
+
+#: wptouch-pro-3/pro/settings/html/extension-browser-item.php:75
+msgid "Deactivate"
+msgstr "Nonaktifkan"
+
+#: wptouch-pro-3/pro/settings/html/extension-browser-pro.php:10
+msgid "Loading Cloud Extensions"
+msgstr "Memuat Ekstensi Cloud"
+
+#: wptouch-pro-3/pro/settings/html/theme-browser-item.php:49
+msgid "Update to %s"
+msgstr "Meningkatkan ke %s"
+
+#: wptouch-pro-3/pro/settings/html/theme-browser-item.php:89
+msgid "Buy Now"
+msgstr "Beli Sekarang"
+
+#: wptouch-pro-3/pro/settings/html/theme-browser-pro.php:11
+msgid "Loading Cloud Themes"
+msgstr "Memuat Tema Awan"
+
+#: wptouch-pro-3/themes/foundation/default/404.php:6
+msgid "404 Not Found"
+msgstr "404 Tidak Ditemukan"
+
+#: wptouch-pro-3/themes/foundation/default/404.php:8
+msgid "The post or page you requested is no longer available."
+msgstr "Kiriman atau halaman yang Anda minta tidak lagi tersedia."
+
+#: wptouch-pro-3/themes/foundation/default/attachment.php:43
+msgid "&laquo; previous in gallery"
+msgstr "&laquo; sebelumnya di galeri"
+
+#: wptouch-pro-3/themes/foundation/default/attachment.php:45
+msgid "next in gallery &raquo;"
+msgstr "berikutnya di &raquo;"
+
+#: wptouch-pro-3/themes/foundation/default/comments.php:10
+#: wptouch-pro-3-extras/themes/classic-redux/default/post-loop.php:33
+msgid "no responses"
+msgstr "tanpa respons"
+
+#: wptouch-pro-3/themes/foundation/default/comments.php:10
+#: wptouch-pro-3-extras/themes/classic-redux/default/post-loop.php:33
+msgid "1 response"
+msgstr "1 respons"
+
+#: wptouch-pro-3/themes/foundation/default/comments.php:10
+#: wptouch-pro-3-extras/themes/classic-redux/default/post-loop.php:33
+msgid "% responses"
+msgstr "% respons"
+
+#: wptouch-pro-3/themes/foundation/default/comments.php:20
+#: wptouch-pro-3/themes/foundation/default/comments.php:26
+msgid "Load More Comments&hellip;"
+msgstr "Muat Lebih Banyak Komentar&hellip;"
+
+#: wptouch-pro-3/themes/foundation/default/comments.php:38
+msgid "Comments are closed"
+msgstr "Komentar ditutup"
+
+#: wptouch-pro-3/themes/foundation/default/comments.php:48
+msgid "Cancel"
+msgstr "Batalkan"
+
+#: wptouch-pro-3/themes/foundation/default/comments.php:51
+msgid "Leave a Reply"
+msgstr "Tinggalkan Balasan"
+
+#: wptouch-pro-3/themes/foundation/default/comments.php:51
+msgid "Leave a Reply to %s"
+msgstr "Tinggalkan Balasan ke %s"
+
+#: wptouch-pro-3/themes/foundation/default/comments.php:54
+msgid "You must be %slogged in%s to post a comment."
+msgstr "Untuk mengirim komentar Anda harus %slogged in%s."
+
+#: wptouch-pro-3/themes/foundation/default/comments.php:61
+msgid "Logged in as"
+msgstr "Masuk sebagai"
+
+#: wptouch-pro-3/themes/foundation/default/comments.php:61
+msgid "Log out"
+msgstr "Keluar"
+
+#: wptouch-pro-3/themes/foundation/default/comments.php:65
+msgid "Name"
+msgstr "Nama"
+
+#: wptouch-pro-3/themes/foundation/default/comments.php:67
+#: wptouch-pro-3/themes/foundation/modules/social-links/social-links.php:78
+msgid "E-Mail"
+msgstr "EMail"
+
+#: wptouch-pro-3/themes/foundation/default/comments.php:69
+msgid "Website"
+msgstr "Situs web"
+
+#: wptouch-pro-3/themes/foundation/default/comments.php:75
+msgid "Publish"
+msgstr "Publikasikan"
+
+#: wptouch-pro-3/themes/foundation/default/formerror.php:6
+msgid "Comment Error"
+msgstr "Galat Komentar"
+
+#: wptouch-pro-3/themes/foundation/default/formerror.php:8
+msgid "Please enter all fields correctly to post a comment."
+msgstr "Silakan isi semua kolom dengan tepat untuk mengirimkan komentar."
+
+#: wptouch-pro-3/themes/foundation/default/formerror.php:9
+msgid "Go back"
+msgstr "Kembali"
+
+#: wptouch-pro-3/themes/foundation/default/index.php:33
+#: wptouch-pro-3-extras/themes/classic-redux/default/index.php:34
+#: wptouch-pro-3-extras/themes/cms/default/header-bottom.php:60
+#: wptouch-pro-3-extras/themes/hammock/default/index.php:34
+msgid "newer posts"
+msgstr "kiriman lebih baru"
+
+#: wptouch-pro-3/themes/foundation/default/index.php:33
+#: wptouch-pro-3-extras/themes/classic-redux/default/index.php:34
+#: wptouch-pro-3-extras/themes/cms/default/header-bottom.php:56
+#: wptouch-pro-3-extras/themes/hammock/default/index.php:34
+msgid "older posts"
+msgstr "kiriman lebih lama"
+
+#: wptouch-pro-3/themes/foundation/default/nav-bar.php:6
+#: wptouch-pro-3-extras/themes/bauhaus/default/nav-bar.php:6
+msgid "previous post"
+msgstr "kiriman sebelumnya"
+
+#: wptouch-pro-3/themes/foundation/default/nav-bar.php:12
+#: wptouch-pro-3-extras/themes/bauhaus/default/nav-bar.php:13
+msgid "next post"
+msgstr "kiriman berikutnya"
+
+#: wptouch-pro-3/themes/foundation/default/one-comment.php:12
+msgid "Your comment is awaiting moderation"
+msgstr "Komentar anda sedang menunggu moderasi"
+
+#: wptouch-pro-3/themes/foundation/default/related-posts.php:4
+msgid "Related"
+msgstr "Terkait"
+
+#: wptouch-pro-3/themes/foundation/default/search.php:6
+#: wptouch-pro-3-extras/themes/bauhaus/default/search.php:6
+#: wptouch-pro-3-extras/themes/classic-redux/default/search.php:5
+#: wptouch-pro-3-extras/themes/hammock/default/search.php:5
+msgid "You searched for \"%s\""
+msgstr "Anda mencari untuk \"%s\""
+
+#: wptouch-pro-3/themes/foundation/default/search.php:16
+#: wptouch-pro-3-extras/themes/classic-redux/default/search.php:15
+#: wptouch-pro-3-extras/themes/hammock/default/search.php:16
+msgid "%s results"
+msgstr "%s hasil"
+
+#: wptouch-pro-3/themes/foundation/default/search.php:36
+#: wptouch-pro-3-extras/themes/classic-redux/default/search.php:38
+#: wptouch-pro-3-extras/themes/hammock/default/search.php:40
+msgid "No search results found"
+msgstr "Tak ada hasil ditemukan"
+
+#: wptouch-pro-3/themes/foundation/default/search.php:45
+#: wptouch-pro-3-extras/themes/bauhaus/default/search.php:46
+#: wptouch-pro-3-extras/themes/classic-redux/default/search.php:47
+msgid "Load more %s results"
+msgstr "Muat %s hasil lainnya"
+
+#: wptouch-pro-3/themes/foundation/default/single.php:13
+#: wptouch-pro-3-extras/themes/hammock/default/post-loop-menu.php:15
+#: wptouch-pro-3-extras/themes/hammock/default/post-loop.php:19
+msgid "By"
+msgstr "Oleh"
+
+#: wptouch-pro-3/themes/foundation/default/switch-link.php:8
+msgid "mobile"
+msgstr "mobile"
+
+#: wptouch-pro-3/themes/foundation/default/switch-link.php:9
+msgid "desktop"
+msgstr "desktop"
+
+#: wptouch-pro-3/themes/foundation/modules/advertising/advertising.php:169
+msgid "Service"
+msgstr "Layanan"
+
+#: wptouch-pro-3/themes/foundation/modules/advertising/advertising.php:175
+msgid "Choose a service"
+msgstr "Pilih layanan"
+
+#: wptouch-pro-3/themes/foundation/modules/advertising/advertising.php:181
+msgid "Google Adsense"
+msgstr "Google Adsense"
+
+#: wptouch-pro-3/themes/foundation/modules/advertising/advertising.php:182
+msgid "Custom"
+msgstr "Tersuai"
+
+#: wptouch-pro-3/themes/foundation/modules/advertising/advertising.php:192
+msgid "Google AdSense"
+msgstr "Google AdSense"
+
+#: wptouch-pro-3/themes/foundation/modules/advertising/advertising.php:195
+msgid "Publisher ID"
+msgstr "ID Penerbit"
+
+#: wptouch-pro-3/themes/foundation/modules/advertising/advertising.php:196
+msgid "Slot ID"
+msgstr "ID Slot"
+
+#: wptouch-pro-3/themes/foundation/modules/advertising/advertising.php:200
+msgid "Code Type"
+msgstr "Tipe kode"
+
+#: wptouch-pro-3/themes/foundation/modules/advertising/advertising.php:212
+msgid "Custom Ads"
+msgstr "Iklan Tersuai"
+
+#: wptouch-pro-3/themes/foundation/modules/advertising/advertising.php:215
+msgid "Mobile advertising script"
+msgstr "Naskah iklan Mobile"
+
+#: wptouch-pro-3/themes/foundation/modules/advertising/advertising.php:224
+msgid "Ad Presentation"
+msgstr "Tampilan Iklan"
+
+#: wptouch-pro-3/themes/foundation/modules/advertising/advertising.php:230
+msgid "Theme location"
+msgstr "Lokasi Tema"
+
+#: wptouch-pro-3/themes/foundation/modules/advertising/advertising.php:235
+msgid "In the header"
+msgstr "Dalam tajuk"
+
+#: wptouch-pro-3/themes/foundation/modules/advertising/advertising.php:236
+msgid "Above the page content"
+msgstr "Di atas konten halaman"
+
+#: wptouch-pro-3/themes/foundation/modules/advertising/advertising.php:237
+msgid "Below the page content"
+msgstr "Di bawah konten halaman"
+
+#: wptouch-pro-3/themes/foundation/modules/advertising/advertising.php:247
+msgid "Active Pages"
+msgstr "Halaman Aktif"
+
+#: wptouch-pro-3/themes/foundation/modules/advertising/advertising.php:250
+msgid "Blog listings"
+msgstr "Daftar Blog"
+
+#: wptouch-pro-3/themes/foundation/modules/advertising/advertising.php:251
+msgid "Single posts"
+msgstr "Kiriman tunggal"
+
+#: wptouch-pro-3/themes/foundation/modules/advertising/advertising.php:252
+msgid "Static pages"
+msgstr "Halaman statis"
+
+#: wptouch-pro-3/themes/foundation/modules/advertising/advertising.php:253
+msgid "Taxonomy"
+msgstr "Taksonomi"
+
+#: wptouch-pro-3/themes/foundation/modules/advertising/advertising.php:254
+msgid "Search results"
+msgstr "Hasil pencarian"
+
+#: wptouch-pro-3/themes/foundation/modules/base/base.php:69
+msgid "Loading"
+msgstr "Memuat"
+
+#: wptouch-pro-3/themes/foundation/modules/base/preview-bar.php:2
+msgid "Theme Preview"
+msgstr "Pratinjau Tema"
+
+#: wptouch-pro-3/themes/foundation/modules/base/preview-bar.php:3
+msgid "Reload"
+msgstr "Muat ulang"
+
+#: wptouch-pro-3/themes/foundation/modules/custom-posts/custom-posts.php:76
+msgid "Custom Post Support"
+msgstr "Dukungan Kiriman Tersuai"
+
+#: wptouch-pro-3/themes/foundation/modules/custom-posts/custom-posts.php:82
+msgid "Enable custom post-type support"
+msgstr "Aktifkan dukungan jenis-kiriman tersuai"
+
+#: wptouch-pro-3/themes/foundation/modules/custom-posts/custom-posts.php:90
+msgid "Show custom post taxonomy"
+msgstr "Tampilkan kiriman tersuai taksonomi"
+
+#: wptouch-pro-3/themes/foundation/modules/custom-posts/custom-posts.php:102
+msgid "Custom Post Types"
+msgstr "Tipe Kiriman Tersuai"
+
+#: wptouch-pro-3/themes/foundation/modules/featured/featured.php:231
+msgid "Featured Slider"
+msgstr "Penggeser Unggulan"
+
+#: wptouch-pro-3/themes/foundation/modules/featured/featured.php:237
+msgid "Enable featured slider"
+msgstr "Mengaktifkan penggeser unggulan"
+
+#: wptouch-pro-3/themes/foundation/modules/featured/featured.php:238
+msgid "Requires at least 2 entries to contain featured images"
+msgstr "Memerlukan paling tidak 2 entri mengandung gambar unggulan"
+
+#: wptouch-pro-3/themes/foundation/modules/featured/featured.php:245
+msgid "Maximum number of posts"
+msgstr "Jumlah maksimal kiriman"
+
+#: wptouch-pro-3/themes/foundation/modules/featured/featured.php:250
+msgid "3 posts"
+msgstr "3 kiriman"
+
+#: wptouch-pro-3/themes/foundation/modules/featured/featured.php:251
+msgid "5 posts"
+msgstr "5 kiriman"
+
+#: wptouch-pro-3/themes/foundation/modules/featured/featured.php:252
+msgid "10 posts"
+msgstr "10 kiriman"
+
+#: wptouch-pro-3/themes/foundation/modules/featured/featured.php:258
+msgid "Automatically slide"
+msgstr "Mengeser secara otomatis"
+
+#: wptouch-pro-3/themes/foundation/modules/featured/featured.php:266
+msgid "Continuously slide"
+msgstr "Geser terus menerus"
+
+#: wptouch-pro-3/themes/foundation/modules/featured/featured.php:274
+msgid "Grayscale images (CSS 3 effect)"
+msgstr "Gambar hitam putih (efek CSS 3)"
+
+#: wptouch-pro-3/themes/foundation/modules/featured/featured.php:275
+msgid "Featured slider images will be in grayscale for devices that support CSS filters."
+msgstr "Gambar penggeser unggulan akan dalam warna hitam putih untuk perangkat yang mendukung filter CSS."
+
+#: wptouch-pro-3/themes/foundation/modules/featured/featured.php:282
+msgid "Show title & date"
+msgstr "Tunjukkan judul & tanggal"
+
+#: wptouch-pro-3/themes/foundation/modules/featured/featured.php:283
+msgid "If disabled, the title and date will not be shown. Note: some themes do not show the date."
+msgstr "Jika dinonaktifkan, tajuk dan tanggal tidak akan ditampilkan.                                                                  Catatan: beberapa tema tidak menampilkan tanggal."
+
+#: wptouch-pro-3/themes/foundation/modules/featured/featured.php:290
+msgid "Featured slider posts also show in listings"
+msgstr "Kiriman geser pilihan juga muncul di dalam daftar"
+
+#: wptouch-pro-3/themes/foundation/modules/featured/featured.php:298
+msgid "Slide transition speed"
+msgstr "Kecepatan transisi geser"
+
+#: wptouch-pro-3/themes/foundation/modules/featured/featured.php:303
+msgid "Slow"
+msgstr "Lambat"
+
+#: wptouch-pro-3/themes/foundation/modules/featured/featured.php:304
+msgid "Normal"
+msgstr "Normal"
+
+#: wptouch-pro-3/themes/foundation/modules/featured/featured.php:305
+msgid "Fast"
+msgstr "Cepat"
+
+#: wptouch-pro-3/themes/foundation/modules/featured/featured.php:316
+msgid "Show latest posts"
+msgstr "Tampilkan kiriman terakhir"
+
+#: wptouch-pro-3/themes/foundation/modules/featured/featured.php:317
+msgid "Show posts from a specific tag"
+msgstr "Tampilkan kiriman dari label tertentu"
+
+#: wptouch-pro-3/themes/foundation/modules/featured/featured.php:318
+msgid "Show posts from a specific category"
+msgstr "Tampilkan kiriman dari kategori tertentu"
+
+#: wptouch-pro-3/themes/foundation/modules/featured/featured.php:319
+msgid "Show only specific posts or pages"
+msgstr "Hanya tampilkan kiriman atau halaman tertentu"
+
+#: wptouch-pro-3/themes/foundation/modules/featured/featured.php:325
+msgid "Only this tag"
+msgstr "Hanya label ini"
+
+#: wptouch-pro-3/themes/foundation/modules/featured/featured.php:334
+msgid "Only this category"
+msgstr "Hanya kategori ini"
+
+#: wptouch-pro-3/themes/foundation/modules/featured/featured.php:343
+msgid "Comma-separated list of post/page IDs"
+msgstr "Daftar ID kiriman/halaman yang dipisahkan-koma."
+
+#: wptouch-pro-3/themes/foundation/modules/google-fonts/google-fonts.php:10
+msgid "Browser Fonts"
+msgstr "Jenis Huruf Peramban"
+
+#: wptouch-pro-3/themes/foundation/modules/google-fonts/google-fonts.php:18
+msgid "Typography"
+msgstr "Tipografi"
+
+#: wptouch-pro-3/themes/foundation/modules/google-fonts/google-fonts.php:24
+msgid "Font style"
+msgstr "Jenis font"
+
+#: wptouch-pro-3/themes/foundation/modules/google-fonts/google-fonts.php:25
+msgid "Choose a Google font pairing designed for this theme, or default browser fonts."
+msgstr "Pilih penyesuaian jenis huruf Google yang didesain untuk tema ini, atau jenis huruf browser standar."
+
+#: wptouch-pro-3/themes/foundation/modules/login/login-html.php:7
+msgid "Remember Me"
+msgstr "Ingat Saya"
+
+#: wptouch-pro-3/themes/foundation/modules/login/login-html.php:9
+msgid "Log In"
+msgstr "Masuk"
+
+#: wptouch-pro-3/themes/foundation/modules/login/login-html.php:20
+#: wptouch-pro-3-extras/themes/classic-redux/default/header-bottom.php:51
+#: wptouch-pro-3-extras/themes/hammock/default/header-bottom.php:49
+#: wptouch-pro-3-extras/themes/simple/default/header-bottom.php:22
+msgid "Login"
+msgstr "Masuk"
+
+#: wptouch-pro-3/themes/foundation/modules/login/login-html.php:29
+#: wptouch-pro-3-extras/extensions/infinity-cache/infinity-cache.php:207
+msgid "Sign-up"
+msgstr "Daftar"
+
+#: wptouch-pro-3/themes/foundation/modules/login/login-html.php:30
+msgid "Lost password?"
+msgstr "Kehilangan kata sandi?"
+
+#: wptouch-pro-3/themes/foundation/modules/login/login.php:22
+msgid "Account Username"
+msgstr "Nama Pengguna Akun"
+
+#: wptouch-pro-3/themes/foundation/modules/login/login.php:23
+msgid "Account Password"
+msgstr "Kata Sandi Akun"
+
+#: wptouch-pro-3/themes/foundation/modules/login/login.php:32
+msgid "Login Form"
+msgstr "Formulir Masuk"
+
+#: wptouch-pro-3/themes/foundation/modules/login/login.php:38
+msgid "Use fly-in login form"
+msgstr "Gunakan formulir yang datang untuk masuk"
+
+#: wptouch-pro-3/themes/foundation/modules/login/login.php:39
+msgid "Will add login links and allow mobile visitors to login to your website from mobile devices"
+msgstr "Akan menambahkan tautan masuk dan memungkinkan pengunjung mobile untuk masuk ke situs web Anda dari perangkat mobile"
+
+#: wptouch-pro-3/themes/foundation/modules/login/login.php:46
+msgid "Show \"Sign-up\" and \"Lost Password?\" links"
+msgstr "Tunjukkan tautan \"Daftar\" dan \"Kata Sandi Hilang?\""
+
+#: wptouch-pro-3/themes/foundation/modules/media/media.php:48
+msgid "Video Handling"
+msgstr "Penanganan Video"
+
+#: wptouch-pro-3/themes/foundation/modules/media/media.php:60
+msgid "CSS only (HTML5 videos)"
+msgstr "CSS saja (video HTML5)"
+
+#: wptouch-pro-3/themes/foundation/modules/media/media.php:61
+msgid "FitVids Method"
+msgstr "Metode FitVids"
+
+#: wptouch-pro-3/themes/foundation/modules/media/media.php:62
+msgid "Fluid-Width Method"
+msgstr "Metode Fluid-Width"
+
+#: wptouch-pro-3/themes/foundation/modules/related-posts/related-posts.php:106
+msgid "Related Posts"
+msgstr "Kiriman Terkait"
+
+#: wptouch-pro-3/themes/foundation/modules/related-posts/related-posts.php:112
+msgid "Enable display of related posts"
+msgstr "Aktifkan tampilan kiriman terkait"
+
+#: wptouch-pro-3/themes/foundation/modules/related-posts/related-posts.php:120
+msgid "Maximum number of related posts to show"
+msgstr "Jumlah kiriman terkait maksimum untuk ditunjukkan"
+
+#: wptouch-pro-3/themes/foundation/modules/sharing/sharing-html.php:1
+#: wptouch-pro-3-extras/themes/hammock/default/sharing-html.php:2
+msgid "Share"
+msgstr "Bagikan"
+
+#: wptouch-pro-3/themes/foundation/modules/sharing/sharing-html.php:1
+#: wptouch-pro-3-extras/themes/hammock/default/sharing-html.php:3
+msgid "Tweet"
+msgstr "Mengirimkan tweet"
+
+#: wptouch-pro-3/themes/foundation/modules/sharing/sharing-html.php:1
+#: wptouch-pro-3-extras/themes/hammock/default/sharing-html.php:5
+msgid "Mail"
+msgstr "Email"
+
+#: wptouch-pro-3/themes/foundation/modules/sharing/sharing.php:81
+#: wptouch-pro-3-extras/themes/hammock/root-functions.php:317
+msgid "Sharing"
+msgstr "Berbagi"
+
+#: wptouch-pro-3/themes/foundation/modules/sharing/sharing.php:87
+#: wptouch-pro-3-extras/themes/hammock/root-functions.php:323
+msgid "Show sharing links"
+msgstr "Tampilkan tautan berbagi"
+
+#: wptouch-pro-3/themes/foundation/modules/sharing/sharing.php:88
+#: wptouch-pro-3-extras/themes/hammock/root-functions.php:324
+msgid "Will show Facebook, Twitter, Google+ and Email buttons on single posts."
+msgstr "Akan menampilkan tombol  Facebook, Twitter, Google+, dan Email pada kiriman tunggal."
+
+#: wptouch-pro-3/themes/foundation/modules/sharing/sharing.php:95
+msgid "Show sharing links on pages"
+msgstr "Tunjukkan tautan berbagi di halaman"
+
+#: wptouch-pro-3/themes/foundation/modules/sharing/sharing.php:96
+msgid "Will show Facebook, Twitter, Google+ and Email buttons on pages as well as single posts."
+msgstr "Akan menunjukkan tombol Facebook, Twitter, Google+ dan Email pada halaman juga sebagai kiriman tunggal."
+
+#: wptouch-pro-3/themes/foundation/modules/sharing/sharing.php:103
+msgid "Sharing links location"
+msgstr "Berbagi tautan lokasi"
+
+#: wptouch-pro-3/themes/foundation/modules/sharing/sharing.php:108
+msgid "Above post content"
+msgstr "Di atas konten kiriman"
+
+#: wptouch-pro-3/themes/foundation/modules/sharing/sharing.php:109
+msgid "Below post content"
+msgstr "Di bawah konten kiriman"
+
+#: wptouch-pro-3/themes/foundation/modules/sharing/sharing.php:115
+msgid "Color scheme"
+msgstr "Skema warna"
+
+#: wptouch-pro-3/themes/foundation/modules/sharing/sharing.php:120
+msgid "Theme colors"
+msgstr "Warna Tema"
+
+#: wptouch-pro-3/themes/foundation/modules/sharing/sharing.php:121
+msgid "Social network colors"
+msgstr "Warna jejaring sosial"
+
+#: wptouch-pro-3/themes/foundation/modules/social-links/social-links.php:8
+msgid "Footer Social Links"
+msgstr "Tautan Sosial Catatan Kaki"
+
+#: wptouch-pro-3/themes/foundation/modules/social-links/social-links.php:23
+msgid "Full URL to your Facebook page"
+msgstr "URL penuh ke halaman Facebook Anda"
+
+#: wptouch-pro-3/themes/foundation/modules/social-links/social-links.php:31
+msgid "Full URL to your Twitter profile"
+msgstr "URL penuh ke profil Twitter Anda"
+
+#: wptouch-pro-3/themes/foundation/modules/social-links/social-links.php:39
+msgid "Full URL to your Google+ profile"
+msgstr "URL penuh ke profil Google+ Anda"
+
+#: wptouch-pro-3/themes/foundation/modules/social-links/social-links.php:47
+msgid "Full URL to your Pinterest page"
+msgstr "URL penuh ke halaman Pinterest Anda"
+
+#: wptouch-pro-3/themes/foundation/modules/social-links/social-links.php:55
+msgid "Full URL to your Vimeo page"
+msgstr "URL penuh ke halaman Vimeo Anda"
+
+#: wptouch-pro-3/themes/foundation/modules/social-links/social-links.php:63
+msgid "Full URL to your %s profile"
+msgstr "URL lengkap ke profil %s Anda"
+
+#: wptouch-pro-3/themes/foundation/modules/social-links/social-links.php:70
+msgid "LinkedIn"
+msgstr "LinkedIn"
+
+#: wptouch-pro-3/themes/foundation/modules/social-links/social-links.php:71
+msgid "Full URL to your LinkedIn profile"
+msgstr "URL penuh ke profil LinkedIn"
+
+#: wptouch-pro-3/themes/foundation/modules/social-links/social-links.php:79
+msgid "E-Mail address"
+msgstr "Alamat email"
+
+#: wptouch-pro-3/themes/foundation/modules/social-links/social-links.php:87
+msgid "Full URL to your RSS feed"
+msgstr "URL penuh ke umpan RSS Anda"
+
+#: wptouch-pro-3/themes/foundation/modules/tablets/tablets.php:46
+msgid "iPad"
+msgstr "iPad"
+
+#: wptouch-pro-3/themes/foundation/modules/tablets/tablets.php:52
+#: wptouch-pro-3/themes/foundation/modules/webapp/webapp.php:268
+#: wptouch-pro-3/themes/foundation/modules/webapp/webapp.php:286
+#: wptouch-pro-3/themes/foundation/modules/webapp/webapp.php:304
+#: wptouch-pro-3/themes/foundation/modules/webapp/webapp.php:323
+#: wptouch-pro-3/themes/foundation/modules/webapp/webapp.php:331
+#: wptouch-pro-3/themes/foundation/modules/webapp/webapp.php:349
+#: wptouch-pro-3/themes/foundation/modules/webapp/webapp.php:357
+#: wptouch-pro-3/themes/foundation/root-functions.php:390
+#: wptouch-pro-3/themes/foundation/root-functions.php:408
+msgid "%d by %d pixels (PNG)"
+msgstr "%d x %d piksel (PNG)"
+
+#: wptouch-pro-3/themes/foundation/modules/twitter/twitter.php:66
+msgid "Disabled"
+msgstr "Dinonaktifkan"
+
+#: wptouch-pro-3/themes/foundation/modules/twitter/twitter.php:81
+msgid "Twitter account to use for Tweet display"
+msgstr "Akun Twitter digunakan untuk tampilan Tweet"
+
+#: wptouch-pro-3/themes/foundation/modules/webapp/webapp.php:122
+msgid "External link— open it in the browser?"
+msgstr "Tautan eksternal — buka dalam browser?"
+
+#: wptouch-pro-3/themes/foundation/modules/webapp/webapp.php:123
+msgid "File link— Do you want to open it in the browser?"
+msgstr "Tautam berkas— Anda ingin membukanya di dalam browser?"
+
+#: wptouch-pro-3/themes/foundation/modules/webapp/webapp.php:210
+msgid "Enable iOS Web-App Mode"
+msgstr "Aktifkan Mode Aplikasi Web iOS"
+
+#: wptouch-pro-3/themes/foundation/modules/webapp/webapp.php:214
+msgid "Enable persistence"
+msgstr "Aktifkan persistensi"
+
+#: wptouch-pro-3/themes/foundation/modules/webapp/webapp.php:215
+msgid "Loads the last visited URL for visitors on open."
+msgstr "Muat URL yang terakhir dikunjungi bagi pengunjung pada terbuka."
+
+#: wptouch-pro-3/themes/foundation/modules/webapp/webapp.php:222
+msgid "URLs to ignore in Web-App Mode"
+msgstr "URL untuk diabaikan dalam Mode Aplikasi-Web"
+
+#: wptouch-pro-3/themes/foundation/modules/webapp/webapp.php:235
+msgid "Notice Message"
+msgstr "Pesan Peringatan"
+
+#: wptouch-pro-3/themes/foundation/modules/webapp/webapp.php:238
+msgid "Show a notice message for iPhone, iPod touch & iPad visitors about my Web-App"
+msgstr "Tampilkan pesan pemberitahuan untuk pengunjung iPhone, iPod touch, & iPad tentang Aplikasi-Web saya"
+
+#: wptouch-pro-3/themes/foundation/modules/webapp/webapp.php:238
+msgid "WPtouch shows a notice bubble on 1st visit letting users know about your Web-App enabled website on iOS devices."
+msgstr "WPtouch menampilkan gelembung pemberitahuan pada kunjungan pertama untuk memberi tahu pengguna tentang situs web Anda yang mengaktifkan Aplikasi-Web pada perangkat iOS."
+
+#: wptouch-pro-3/themes/foundation/modules/webapp/webapp.php:239
+msgid "Notice message contents"
+msgstr "Konten isi pemberitahuan"
+
+#: wptouch-pro-3/themes/foundation/modules/webapp/webapp.php:239
+msgid "[device] and [icon] are dynamic and used to determine the device and iOS version. Do not remove these from your message."
+msgstr "[device] dan [icon] dinamis dan digunakan untuk menentukan perangkat dan versi iOS. Jangan menghilangkan ini dari pesan ini."
+
+#: wptouch-pro-3/themes/foundation/modules/webapp/webapp.php:243
+msgid "the notice message will be shown again for visitors"
+msgstr "pesan pemberitahuan tersebut akan ditampilkan lagi untuk pengunjung"
+
+#: wptouch-pro-3/themes/foundation/modules/webapp/webapp.php:248
+msgid "1 day until"
+msgstr "1 hari sampai"
+
+#: wptouch-pro-3/themes/foundation/modules/webapp/webapp.php:249
+msgid "7 days until"
+msgstr "7 hari sampai"
+
+#: wptouch-pro-3/themes/foundation/modules/webapp/webapp.php:250
+msgid "1 month until"
+msgstr "1 bulan sampai"
+
+#: wptouch-pro-3/themes/foundation/modules/webapp/webapp.php:251
+msgid "Every time"
+msgstr "Setiap waktu"
+
+#: wptouch-pro-3/themes/foundation/modules/webapp/webapp.php:262
+msgid "iPhone Startup Screen"
+msgstr "Layar Aktivasi iPhone"
+
+#: wptouch-pro-3/themes/foundation/modules/webapp/webapp.php:280
+msgid "Retina iPhone Startup Screen"
+msgstr "Layar Aktivasi Retina iPhone"
+
+#: wptouch-pro-3/themes/foundation/modules/webapp/webapp.php:298
+msgid "iPhone 5 Startup Screen"
+msgstr "Layar Pengaktifan iPhone 5"
+
+#: wptouch-pro-3/themes/foundation/modules/webapp/webapp.php:317
+msgid "iPad Mini and iPad Startup Screens"
+msgstr "Layar Aktivasi iPad Mini dan iPad"
+
+#: wptouch-pro-3/themes/foundation/modules/webapp/webapp.php:343
+msgid "Retina iPad Startup Screens"
+msgstr "Layar Memulai iPad Retina"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:11
+msgid "Branding"
+msgstr "Pencitraan Merek"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:12
+msgid "Media Handling"
+msgstr "Penanganan Media"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:13
+msgid "Web-App Mode"
+msgstr "Mode Aplikasi-Web"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:14
+msgid "Bookmark Icons"
+msgstr "Ikon Penanda"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:15
+msgid "Advertising"
+msgstr "Iklan"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:16
+msgid "Custom Content"
+msgstr "Konten Tersuai"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:113
+msgid "Install this Web-App on your [device]: tap [icon] then \"Add to Home Screen\""
+msgstr "Instal Aplikasi-Web ini pada [device] Anda: ketuk [icon] lalu \"Tambahkan ke Layar Beranda\""
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:304
+msgid "Number of posts in post listings"
+msgstr "Jumlah kiriman dalam daftar kiriman"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:305
+msgid "Overrides the WordPress Reading settings for \"Blog pages show at most\""
+msgstr "Menggantikan pengaturan Membaca WordPress untuk \"Halaman Blog  yang tampil tersering\""
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:312
+msgid "Excluded categories"
+msgstr "Kategori yang dikecualikan"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:313
+msgid "Comma separated by category name"
+msgstr "Koma dipisahkan dengan kategori nama"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:320
+msgid "Excluded tags"
+msgstr "Tag Terkecualikan"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:321
+msgid "Comma separated by tag name"
+msgstr "Koma dipisahkan dengan nama tag"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:331
+msgid "Blog"
+msgstr "Blog"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:342
+msgid "Show comments on pages"
+msgstr "Tampilkan komentar pada halaman"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:343
+msgid "Overrides the WordPress settings for showing comments on pages."
+msgstr "Ganti pengaturan Wordpress untuk menampilkan komentar pada halaman."
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:353
+#: wptouch-pro-3/themes/foundation/root-functions.php:1024
+msgid "Pages"
+msgstr "Halaman"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:366
+msgid "Icon Title"
+msgstr "Judul Ikon"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:372
+msgid "Icon title"
+msgstr "Judul ikon"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:373
+msgid "When visitors bookmark your website, this will be the title shown."
+msgstr "Saat  pengunjung menandai (bookmark) situs web Anda, ini akan menjadi judul yang ditampilkan."
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:384
+msgid "Android"
+msgstr "Android"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:402
+msgid "iPhone & iPod touch"
+msgstr "iPhone & iPod touch"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:438
+msgid "Theme Colors"
+msgstr "Warna Tema"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:448
+msgid "Site Logo"
+msgstr "Logo Situs"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:454
+msgid "(Scaled by themes to fit logo areas as needed)"
+msgstr "(Diukur berdasarkan tema untuk mengisi area logo jika diperlukan)"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:467
+msgid "Smart App Banner"
+msgstr "Spanduk Aplikasi Cerdas"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:473
+msgid "Enter your app's %sApp Store ID%s"
+msgstr "Masukkan %sApp Store ID%s aplikasi Anda"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:474
+msgid "Your app's unique identifier. Find your ID from the iTunes Link Maker: Search for your app. In the link it provides, your app ID is the nine-digit number in between id and ?mt. For example Angry Birds's ID is 343200656."
+msgstr "Identifikasi unik aplikasi Anda. Cari ID Anda dari iTunes Link Maker: Cari aplikasi Anda. Dalam tautan itu tersedia, ID aplikasi Anda adalah angka sembilan digit di antara id dan ?mt. Misalnya ID Angry Birds adalah 343200656."
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:486
+msgid "Theme Footer"
+msgstr "Catatan Kaki Tema"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:489
+msgid "Custom footer content (HTML is allowed)"
+msgstr "Konten catatan kaki tersuai (HTML diperbolehkan)"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:489
+msgid "You can add custom footer content that will be displayed below the switch link."
+msgstr "Anda dapat menambahkan konten catatan kaki khusus yang akan ditampilkan di bawah penukar tautan pemindah."
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:854
+msgid "search results for '%s'"
+msgstr "hasil pencarian untuk '%s'"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:856
+msgid "%sCategories &rsaquo;%s %s"
+msgstr "%sKategori &rsaquo;%s %s"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:858
+msgid "Tags &rsaquo; %s"
+msgstr "Label &rsaquo; %s"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:860
+#: wptouch-pro-3/themes/foundation/root-functions.php:862
+#: wptouch-pro-3/themes/foundation/root-functions.php:864
+msgid "Archives &rsaquo; %s"
+msgstr "Pencapaian &rsaquo; %s"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:879
+msgid "Load more from this category"
+msgstr "Muat lainnya dari kategori ini"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:881
+msgid "Load more tagged like this"
+msgstr "Muat lainnya yang ditandai seperti ini"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:883
+msgid "Load more from this day"
+msgstr "Muat lainnya dari hari ini"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:885
+msgid "Load more from this month"
+msgstr "Muat lainnya dari bulan ini"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:887
+msgid "Load more from this year"
+msgstr "Muat lainnya dari tahun ini"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:889
+msgid "Load more in this section"
+msgstr "Muat lainnya dalam bagian ini"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:891
+msgid "Load more entries"
+msgstr "Muat entri lainnya"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:973
+msgid "Post"
+msgstr "Kirim"
+
+#: wptouch-pro-3/themes/foundation/root-functions.php:975
+msgid "Page"
+msgstr "Halaman"
+
+#: wptouch-pro-3-extras/extensions/infinity-cache/infinity-cache.php:63
+#: wptouch-pro-3-extras/extensions/infinity-cache/infinity-cache.php:225
+msgid "Purge Page Cache"
+msgstr "Bersihkan Tembolok Halaman"
+
+#: wptouch-pro-3-extras/extensions/infinity-cache/infinity-cache.php:123
+msgid "Enable Infinity Cache"
+msgstr "Aktifkan Tembolok Selamanya"
+
+#: wptouch-pro-3-extras/extensions/infinity-cache/infinity-cache.php:131
+msgid "Create cache for desktop users"
+msgstr "Buat tembolok untuk pengguna desktop"
+
+#: wptouch-pro-3-extras/extensions/infinity-cache/infinity-cache.php:132
+msgid "If you are using another cache plugin such as W3, you can disable this."
+msgstr "Jika Anda menggunakan plugin tembolok lain seperti W3, Anda dapat menonaktifkan ini."
+
+#: wptouch-pro-3-extras/extensions/infinity-cache/infinity-cache.php:153
+msgid "Compress output using GZIP"
+msgstr "Kompres output dengan menggunakan GZIP"
+
+#: wptouch-pro-3-extras/extensions/infinity-cache/infinity-cache.php:163
+msgid "Maximum age of cached content"
+msgstr "Usia maksimum konten tembolok"
+
+#: wptouch-pro-3-extras/extensions/infinity-cache/infinity-cache.php:164
+msgid "Each cached page will automatically be regenerated after this period elapses"
+msgstr "Setiap halaman tembolok secara otomatis akan dibuat ulang setelah periode ini berlalu"
+
+#: wptouch-pro-3-extras/extensions/infinity-cache/infinity-cache.php:168
+#: wptouch-pro-3-extras/extensions/infinity-cache/infinity-cache.php:169
+#: wptouch-pro-3-extras/extensions/infinity-cache/infinity-cache.php:170
+#: wptouch-pro-3-extras/extensions/infinity-cache/infinity-cache.php:171
+#: wptouch-pro-3-extras/extensions/infinity-cache/infinity-cache.php:172
+msgid "%d hour"
+msgid_plural "%d hours"
+msgstr[0] "%d jam"
+msgstr[1] "%d jam"
+
+#: wptouch-pro-3-extras/extensions/infinity-cache/infinity-cache.php:179
+msgid "Remove stale cache file interval"
+msgstr "Hapus berkas interval tembolok yang basi"
+
+#: wptouch-pro-3-extras/extensions/infinity-cache/infinity-cache.php:184
+msgid "Hourly"
+msgstr "Setiap jam"
+
+#: wptouch-pro-3-extras/extensions/infinity-cache/infinity-cache.php:185
+msgid "Daily"
+msgstr "Setiap hari"
+
+#: wptouch-pro-3-extras/extensions/infinity-cache/infinity-cache.php:192
+msgid "Disable caching for any of these matched URL fragments"
+msgstr "Nonaktifkan penyimpanan cache untuk salah satu fragmen URL yang cocok"
+
+#: wptouch-pro-3-extras/extensions/infinity-cache/infinity-cache.php:193
+msgid "Add one URL fragment per line, i.e. %s, to not cache pages that contain each URL fragment"
+msgstr "Tambahkan satu fragmen URL per baris, yaitu %s, untuk tidak menyimpan tembolok halaman yang berisi setiap fragmen URL"
+
+#: wptouch-pro-3-extras/extensions/infinity-cache/infinity-cache.php:201
+msgid "Content Distribution Network Service"
+msgstr "Distribusi Konten Layanan Jaringan"
+
+#: wptouch-pro-3-extras/extensions/infinity-cache/infinity-cache.php:202
+msgid "Using a content distribution network (CDN) can significantly enhance the responsiveness of your website."
+msgstr "Menggunakan jaringan distribusi konten (CDN) dapat secara signifikan meningkatkan respon dari situs web Anda."
+
+#: wptouch-pro-3-extras/extensions/infinity-cache/infinity-cache.php:215
+msgid "URL %d"
+msgstr "URL %d"
+
+#: wptouch-pro-3-extras/extensions/infinity-cache/infinity-cache.php:216
+msgid "Add the URLs you have configured for your CDN, for example http://cdn%d.mysite.com"
+msgstr "Tambahkan URL yang telah dikonfigurasi untuk CDN Anda, misalnya http://cdn%d.mysite.com"
+
+#: wptouch-pro-3-extras/extensions/infinity-cache/infinity-cache.php:233
+msgid "Infinity Cache"
+msgstr "Tembolok Selamanya"
+
+#: wptouch-pro-3-extras/extensions/mobile-content/mobile-content.php:20
+msgid "WPtouch Alternate Mobile Content"
+msgstr "Konten Mobile Alternatif WPtouch"
+
+#: wptouch-pro-3-extras/extensions/mobile-content/mobile-content.php:38
+msgid "Mobile Content"
+msgstr "Konten Mobile"
+
+#: wptouch-pro-3-extras/extensions/mobile-content/mobile-content.php:44
+msgid "Enable mobile content display"
+msgstr "Aktifkan tampilan konten mobile"
+
+#: wptouch-pro-3-extras/extensions/responsive-images/responsive-images.php:92
+msgid "Responsive Images"
+msgstr "Gambar responsif"
+
+#: wptouch-pro-3-extras/extensions/responsive-images/responsive-images.php:98
+msgid "Include desktop optimizations for mobile devices"
+msgstr "Mencakup optimasi desktop untuk perangkat mobile"
+
+#: wptouch-pro-3-extras/extensions/responsive-images/responsive-images.php:99
+msgid "Normally only images on mobile are optimized"
+msgstr "Biasanya hanya gambar di mobile yang dioptimasi"
+
+#: wptouch-pro-3-extras/extensions/responsive-images/responsive-images.php:106
+msgid "Performance preference"
+msgstr "Preferensi kinerja"
+
+#: wptouch-pro-3-extras/extensions/responsive-images/responsive-images.php:111
+msgid "Optimize for page speed"
+msgstr "Optimalkan untuk kecepatan halaman"
+
+#: wptouch-pro-3-extras/extensions/responsive-images/responsive-images.php:112
+msgid "Optimize for quality"
+msgstr "Optimalkan untuk kualitas"
+
+#: wptouch-pro-3-extras/themes/bauhaus/default/header-bottom.php:21
+#: wptouch-pro-3-extras/themes/bio/default/header-bottom.php:24
+#: wptouch-pro-3-extras/themes/classic-redux/default/header-bottom.php:76
+#: wptouch-pro-3-extras/themes/hammock/default/header-bottom.php:84
+#: wptouch-pro-3-extras/themes/scaffold/default/header-bottom.php:24
+msgid "Search this website"
+msgstr "Cari situs web ini"
+
+#: wptouch-pro-3-extras/themes/bauhaus/default/header-bottom.php:22
+#: wptouch-pro-3-extras/themes/bio/default/header-bottom.php:14
+#: wptouch-pro-3-extras/themes/bio/default/header-bottom.php:25
+#: wptouch-pro-3-extras/themes/classic-redux/default/header-bottom.php:46
+#: wptouch-pro-3-extras/themes/classic-redux/default/header-bottom.php:78
+#: wptouch-pro-3-extras/themes/hammock/default/header-bottom.php:42
+#: wptouch-pro-3-extras/themes/scaffold/default/header-bottom.php:14
+#: wptouch-pro-3-extras/themes/scaffold/default/header-bottom.php:25
+msgid "Search"
+msgstr "Cari"
+
+#: wptouch-pro-3-extras/themes/bauhaus/default/header-bottom.php:40
+#: wptouch-pro-3-extras/themes/bauhaus/default/header-bottom.php:42
+#: wptouch-pro-3-extras/themes/classic-redux/default/header-bottom.php:53
+#: wptouch-pro-3-extras/themes/hammock/default/header-bottom.php:51
+#: wptouch-pro-3-extras/themes/simple/default/header-bottom.php:24
+msgid "Logout"
+msgstr "Keluar"
+
+#: wptouch-pro-3-extras/themes/bauhaus/default/post-loop.php:19
+#: wptouch-pro-3-extras/themes/bio/default/post-loop.php:19
+#: wptouch-pro-3-extras/themes/classic-redux/default/post-loop.php:24
+msgid "by"
+msgstr "oleh"
+
+#: wptouch-pro-3-extras/themes/bauhaus/default/search.php:14
+msgid "Show %s Results"
+msgstr "Tunjukkan Hasil %s"
+
+#: wptouch-pro-3-extras/themes/bauhaus/default/search.php:38
+msgid "No results found"
+msgstr "Tidak ditemukan hasil"
+
+#: wptouch-pro-3-extras/themes/bauhaus/default/single.php:25
+msgid "no comments"
+msgstr "tidak ada komentar"
+
+#: wptouch-pro-3-extras/themes/bauhaus/default/single.php:25
+msgid "1 comment"
+msgstr "1 komentar"
+
+#: wptouch-pro-3-extras/themes/bauhaus/default/single.php:25
+msgid "% comments"
+msgstr "% komentar"
+
+#: wptouch-pro-3-extras/themes/bauhaus/default/single.php:44
+#: wptouch-pro-3-extras/themes/classic-redux/default/header-bottom.php:35
+#: wptouch-pro-3-extras/themes/classic-redux/default/header-bottom.php:61
+#: wptouch-pro-3-extras/themes/hammock/default/header-bottom.php:39
+msgid "Categories"
+msgstr "Kategori"
+
+#: wptouch-pro-3-extras/themes/bauhaus/default/single.php:47
+#: wptouch-pro-3-extras/themes/classic-redux/default/header-bottom.php:39
+#: wptouch-pro-3-extras/themes/classic-redux/default/header-bottom.php:68
+msgid "Tags"
+msgstr "Tag"
+
+#: wptouch-pro-3-extras/themes/bauhaus/root-functions.php:118
+#: wptouch-pro-3-extras/themes/classic-redux/root-functions.php:97
+#: wptouch-pro-3-extras/themes/hammock/root-functions.php:72
+msgid "Header Menu"
+msgstr "Menu Kepala"
+
+#: wptouch-pro-3-extras/themes/bauhaus/root-functions.php:120
+#: wptouch-pro-3-extras/themes/bio/root-functions.php:89
+#: wptouch-pro-3-extras/themes/classic-redux/root-functions.php:99
+#: wptouch-pro-3-extras/themes/cms/root-functions.php:116
+#: wptouch-pro-3-extras/themes/cms/root-functions.php:125
+#: wptouch-pro-3-extras/themes/hammock/root-functions.php:74
+#: wptouch-pro-3-extras/themes/scaffold/root-functions.php:77
+#: wptouch-pro-3-extras/themes/simple/root-functions.php:60
+#: wptouch-pro-3-extras/themes/simple/root-functions.php:71
+msgid "Choose a menu"
+msgstr "Pilih menu"
+
+#: wptouch-pro-3-extras/themes/bauhaus/root-functions.php:121
+msgid "Main menu selection"
+msgstr "Pilihan menu utama"
+
+#: wptouch-pro-3-extras/themes/bauhaus/root-functions.php:128
+#: wptouch-pro-3-extras/themes/bio/root-functions.php:97
+#: wptouch-pro-3-extras/themes/classic-redux/root-functions.php:107
+#: wptouch-pro-3-extras/themes/cms/root-functions.php:132
+#: wptouch-pro-3-extras/themes/scaffold/root-functions.php:85
+#: wptouch-pro-3-extras/themes/simple/root-functions.php:79
+msgid "Theme background"
+msgstr "Latar belakang tema"
+
+#: wptouch-pro-3-extras/themes/bauhaus/root-functions.php:129
+msgid "Header & Menu"
+msgstr "Judul & Menu"
+
+#: wptouch-pro-3-extras/themes/bauhaus/root-functions.php:130
+#: wptouch-pro-3-extras/themes/bio/root-functions.php:98
+#: wptouch-pro-3-extras/themes/classic-redux/root-functions.php:108
+#: wptouch-pro-3-extras/themes/cms/root-functions.php:133
+#: wptouch-pro-3-extras/themes/hammock/root-functions.php:84
+#: wptouch-pro-3-extras/themes/scaffold/root-functions.php:86
+#: wptouch-pro-3-extras/themes/simple/root-functions.php:80
+msgid "Links"
+msgstr "Tautan"
+
+#: wptouch-pro-3-extras/themes/bauhaus/root-functions.php:131
+msgid "Post/Page Headers"
+msgstr "Tajuk Kiriman/Halaman"
+
+#: wptouch-pro-3-extras/themes/bauhaus/root-functions.php:232
+msgid "Theme Shapes"
+msgstr "Bentuk Tema"
+
+#: wptouch-pro-3-extras/themes/bauhaus/root-functions.php:238
+msgid "Theme shape style"
+msgstr "Gaya bentuk tema"
+
+#: wptouch-pro-3-extras/themes/bauhaus/root-functions.php:239
+msgid "Bauhaus will use this shape style throughout its appearance"
+msgstr "Bauhaus akan menggunakan gaya bentuk inii di seluruh penampilannya"
+
+#: wptouch-pro-3-extras/themes/bauhaus/root-functions.php:243
+msgid "Circles"
+msgstr "Lingkaran"
+
+#: wptouch-pro-3-extras/themes/bauhaus/root-functions.php:245
+msgid "Rounded squares"
+msgstr "Kotak yang dibulatkan"
+
+#: wptouch-pro-3-extras/themes/bauhaus/root-functions.php:264
+#: wptouch-pro-3-extras/themes/bio/root-functions.php:131
+#: wptouch-pro-3-extras/themes/classic-redux/root-functions.php:238
+msgid "Post thumbnails"
+msgstr "Kirim foto mini"
+
+#: wptouch-pro-3-extras/themes/bauhaus/root-functions.php:269
+#: wptouch-pro-3-extras/themes/bio/root-functions.php:136
+#: wptouch-pro-3-extras/themes/classic-redux/root-functions.php:243
+msgid "No thumbnails"
+msgstr "Tanpa foto mini"
+
+#: wptouch-pro-3-extras/themes/bauhaus/root-functions.php:270
+#: wptouch-pro-3-extras/themes/bio/root-functions.php:137
+#: wptouch-pro-3-extras/themes/classic-redux/root-functions.php:244
+#: wptouch-pro-3-extras/themes/hammock/root-functions.php:230
+msgid "Blog listing only"
+msgstr "Daftar blog saja"
+
+#: wptouch-pro-3-extras/themes/bauhaus/root-functions.php:271
+#: wptouch-pro-3-extras/themes/bio/root-functions.php:138
+#: wptouch-pro-3-extras/themes/classic-redux/root-functions.php:245
+#: wptouch-pro-3-extras/themes/hammock/root-functions.php:231
+msgid "Blog listing, single posts"
+msgstr "Daftar blog, kiriman tunggal"
+
+#: wptouch-pro-3-extras/themes/bauhaus/root-functions.php:272
+#: wptouch-pro-3-extras/themes/bio/root-functions.php:139
+msgid "Blog listing, single posts & pages"
+msgstr "Daftar blog, kiriman tunggal, & halaman"
+
+#: wptouch-pro-3-extras/themes/bauhaus/root-functions.php:273
+#: wptouch-pro-3-extras/themes/bio/root-functions.php:140
+msgid "All (blog, single, pages, search & archive)"
+msgstr "Semua (blog, kiriman tunggal, beberapa halaman, pencarian, & arsip)"
+
+#: wptouch-pro-3-extras/themes/bauhaus/root-functions.php:281
+#: wptouch-pro-3-extras/themes/bio/root-functions.php:148
+#: wptouch-pro-3-extras/themes/classic-redux/root-functions.php:254
+msgid "Thumbnail Selection"
+msgstr "Pilihan Gambar Mini"
+
+#: wptouch-pro-3-extras/themes/bauhaus/root-functions.php:286
+#: wptouch-pro-3-extras/themes/bio/root-functions.php:153
+#: wptouch-pro-3-extras/themes/classic-redux/root-functions.php:259
+msgid "Post featured image"
+msgstr "Kirim gambar pilihan"
+
+#: wptouch-pro-3-extras/themes/bauhaus/root-functions.php:287
+#: wptouch-pro-3-extras/themes/bio/root-functions.php:154
+#: wptouch-pro-3-extras/themes/classic-redux/root-functions.php:260
+msgid "Post custom field"
+msgstr "Kirim kolom kustom"
+
+#: wptouch-pro-3-extras/themes/bauhaus/root-functions.php:295
+#: wptouch-pro-3-extras/themes/bio/root-functions.php:162
+#: wptouch-pro-3-extras/themes/classic-redux/root-functions.php:268
+msgid "Thumbnail custom field name"
+msgstr "Nama bidang kustom gambar mini"
+
+#: wptouch-pro-3-extras/themes/bauhaus/root-functions.php:306
+#: wptouch-pro-3-extras/themes/classic-redux/root-functions.php:301
+#: wptouch-pro-3-extras/themes/hammock/root-functions.php:262
+msgid "Show post categories and tags"
+msgstr "Tampilkan kategori dan tag kiriman"
+
+#: wptouch-pro-3-extras/themes/bauhaus/root-functions.php:317
+#: wptouch-pro-3-extras/themes/bio/root-functions.php:173
+#: wptouch-pro-3-extras/themes/classic-redux/root-functions.php:279
+#: wptouch-pro-3-extras/themes/hammock/root-functions.php:240
+msgid "Show post date"
+msgstr "Tampilkan tanggal kiriman"
+
+#: wptouch-pro-3-extras/themes/bauhaus/root-functions.php:328
+#: wptouch-pro-3-extras/themes/bio/root-functions.php:184
+#: wptouch-pro-3-extras/themes/classic-redux/root-functions.php:290
+#: wptouch-pro-3-extras/themes/hammock/root-functions.php:251
+msgid "Show post author"
+msgstr "Tampilkan penulis kiriman"
+
+#: wptouch-pro-3-extras/themes/bauhaus/root-functions.php:339
+#: wptouch-pro-3-extras/themes/bio/root-functions.php:195
+msgid "Show search in header"
+msgstr "Tunjukkan pencarian di tajuk"
+
+#: wptouch-pro-3-extras/themes/bauhaus/root-functions.php:340
+#: wptouch-pro-3-extras/themes/bio/root-functions.php:196
+msgid "Adds Search capability in the site header."
+msgstr "Tambahkan kemampuan Pencarian di tajuk situs."
+
+#: wptouch-pro-3-extras/themes/bauhaus/root-functions.php:350
+#: wptouch-pro-3-extras/themes/bio/root-functions.php:206
+#: wptouch-pro-3-extras/themes/classic-redux/root-functions.php:312
+#: wptouch-pro-3-extras/themes/hammock/root-functions.php:285
+msgid "Use infinite scrolling for blog"
+msgstr "Gunakan bergulir tak terbatas untuk blog"
+
+#: wptouch-pro-3-extras/themes/bauhaus/root-functions.php:367
+msgid "Show featured slider on front page"
+msgstr "Tampilkan penggeser utama di halaman depan"
+
+#: wptouch-pro-3-extras/themes/bio/root-functions.php:87
+#: wptouch-pro-3-extras/themes/scaffold/root-functions.php:75
+msgid "Primary Menu"
+msgstr "Menu Utama"
+
+#: wptouch-pro-3-extras/themes/bio/root-functions.php:90
+#: wptouch-pro-3-extras/themes/scaffold/root-functions.php:78
+msgid "Menus are awesome!"
+msgstr "Menunya luar biasa!"
+
+#: wptouch-pro-3-extras/themes/classic-redux/default/header-bottom.php:43
+#: wptouch-pro-3-extras/themes/classic-redux/default/header-bottom.php:88
+msgid "Tweets"
+msgstr "Tweet"
+
+#: wptouch-pro-3-extras/themes/classic-redux/default/header-bottom.php:92
+msgid "Follow %s on Twitter"
+msgstr "ikuti %s di Twitter"
+
+#: wptouch-pro-3-extras/themes/classic-redux/default/post-loop.php:56
+msgid "Read This Post"
+msgstr "Baca Kiriman Ini"
+
+#: wptouch-pro-3-extras/themes/classic-redux/default/single.php:16
+msgid "%s at %s"
+msgstr "%s pada %s"
+
+#: wptouch-pro-3-extras/themes/classic-redux/default/single.php:18
+#: wptouch-pro-3-extras/themes/hammock/default/single.php:21
+msgid "Written by %s"
+msgstr "Ditulis oleh %s"
+
+#: wptouch-pro-3-extras/themes/classic-redux/root-functions.php:6
+#: wptouch-pro-3-extras/themes/classic-redux/root-functions.php:357
+msgid "Tablets"
+msgstr "Tablet"
+
+#: wptouch-pro-3-extras/themes/classic-redux/root-functions.php:106
+#: wptouch-pro-3-extras/themes/cms/root-functions.php:131
+#: wptouch-pro-3-extras/themes/simple/root-functions.php:78
+msgid "Header background"
+msgstr "Latar belakang kepala"
+
+#: wptouch-pro-3-extras/themes/classic-redux/root-functions.php:246
+#: wptouch-pro-3-extras/themes/hammock/root-functions.php:232
+msgid "All (blog, single, search and archive)"
+msgstr "Semua (blog, tunggal, pencarian, dan arsip)"
+
+#: wptouch-pro-3-extras/themes/classic-redux/root-functions.php:323
+msgid "Use rounded corners"
+msgstr "Gunakan sudut yang membulat"
+
+#: wptouch-pro-3-extras/themes/classic-redux/root-functions.php:341
+#: wptouch-pro-3-extras/themes/hammock/root-functions.php:302
+msgid "Show page title areas on pages"
+msgstr "Tampilkan area judul halaman pada halaman"
+
+#: wptouch-pro-3-extras/themes/classic-redux/root-functions.php:363
+msgid "Add tablet support"
+msgstr "Tambahkan dukungan tablet"
+
+#: wptouch-pro-3-extras/themes/classic-redux/root-functions.php:375
+#: wptouch-pro-3-extras/themes/hammock/root-functions.php:335
+msgid "Header Menu Area"
+msgstr "Area Menu Judul"
+
+#: wptouch-pro-3-extras/themes/classic-redux/root-functions.php:381
+#: wptouch-pro-3-extras/themes/hammock/root-functions.php:341
+msgid "Drop-down button says \"Menu\""
+msgstr "Tombol jatuh turun bertuliskan \"Menu\""
+
+#: wptouch-pro-3-extras/themes/classic-redux/root-functions.php:389
+msgid "Show tab bar"
+msgstr "Tampilkan bilah tab"
+
+#: wptouch-pro-3-extras/themes/classic-redux/root-functions.php:397
+msgid "Tab-bar shows categories or tags"
+msgstr "Bilah tab menampilkan kategori atau tag"
+
+#: wptouch-pro-3-extras/themes/classic-redux/root-functions.php:402
+msgid "Categories and tags"
+msgstr "Kategori dan tag"
+
+#: wptouch-pro-3-extras/themes/classic-redux/root-functions.php:403
+msgid "Categories only"
+msgstr "Kategori saja"
+
+#: wptouch-pro-3-extras/themes/classic-redux/root-functions.php:404
+msgid "Tags only"
+msgstr "Tag saja"
+
+#: wptouch-pro-3-extras/themes/classic-redux/root-functions.php:405
+msgid "No categories or tags"
+msgstr "Tanpa kategori atau tag"
+
+#: wptouch-pro-3-extras/themes/classic-redux/root-functions.php:411
+msgid "Max categories / tags"
+msgstr "Kategori/tag maks."
+
+#: wptouch-pro-3-extras/themes/classic-redux/root-functions.php:429
+#: wptouch-pro-3-extras/themes/cms/root-functions.php:242
+#: wptouch-pro-3-extras/themes/simple/root-functions.php:275
+msgid "CSS Effects"
+msgstr "Efek CSS"
+
+#: wptouch-pro-3-extras/themes/classic-redux/root-functions.php:435
+#: wptouch-pro-3-extras/themes/cms/root-functions.php:248
+msgid "Add a noise effect to the header and theme background"
+msgstr "Tambahkan efek suara di latar belakang kepala dan tema"
+
+#: wptouch-pro-3-extras/themes/classic-redux/root-functions.php:436
+#: wptouch-pro-3-extras/themes/cms/root-functions.php:249
+#: wptouch-pro-3-extras/themes/simple/root-functions.php:282
+msgid "Will apply the effect overtop of any background image you upload."
+msgstr "Akan menerapkan efek menimpa gambar latar belakang yang Anda unggah. ."
+
+#: wptouch-pro-3-extras/themes/cms/default/header-bottom.php:14
+msgid "menu"
+msgstr "menu"
+
+#: wptouch-pro-3-extras/themes/cms/default/header-bottom.php:21
+msgid "login"
+msgstr "masuk"
+
+#: wptouch-pro-3-extras/themes/cms/default/header-bottom.php:25
+msgid "logout"
+msgstr "keluar"
+
+#: wptouch-pro-3-extras/themes/cms/default/header-bottom.php:38
+#: wptouch-pro-3-extras/themes/simple/default/footer-top.php:3
+msgid "search this website"
+msgstr "cari situs web ini."
+
+#: wptouch-pro-3-extras/themes/cms/default/header-bottom.php:39
+#: wptouch-pro-3-extras/themes/simple/default/footer-top.php:5
+msgid "search"
+msgstr "Cari"
+
+#: wptouch-pro-3-extras/themes/cms/root-functions.php:49
+msgid "Alt Menu"
+msgstr "Menu Alt"
+
+#: wptouch-pro-3-extras/themes/cms/root-functions.php:114
+msgid "Main Menu"
+msgstr "Menu Utama"
+
+#: wptouch-pro-3-extras/themes/cms/root-functions.php:123
+msgid "Alternate Menu"
+msgstr "Menu Alternatif"
+
+#: wptouch-pro-3-extras/themes/cms/root-functions.php:171
+msgid "Show titles on pages"
+msgstr "Tunjukkan tajuk pada halaman"
+
+#: wptouch-pro-3-extras/themes/cms/root-functions.php:186
+msgid "Category Slider"
+msgstr "Penggeser Kategori"
+
+#: wptouch-pro-3-extras/themes/cms/root-functions.php:192
+msgid "Enable category slider"
+msgstr "Aktifkan penggeser kategori"
+
+#: wptouch-pro-3-extras/themes/cms/root-functions.php:205
+#: wptouch-pro-3-extras/themes/simple/root-functions.php:256
+msgid "Tiled Background Image"
+msgstr "Gambar Latar Belakang Kotak-kotak"
+
+#: wptouch-pro-3-extras/themes/cms/root-functions.php:211
+#: wptouch-pro-3-extras/themes/simple/root-functions.php:262
+msgid "(Scaled for retina displays)"
+msgstr "(Ditingkatkan untuk menampilkan retina)"
+
+#: wptouch-pro-3-extras/themes/cms/root-functions.php:223
+msgid "Alternate Menu Title"
+msgstr "Judul Menu Alternatif"
+
+#: wptouch-pro-3-extras/themes/cms/root-functions.php:229
+msgid "Alternate menu title (if used)"
+msgstr "Judul menu alternatif (jika dipakai)"
+
+#: wptouch-pro-3-extras/themes/cms/root-functions.php:230
+msgid "If you use a second menu in CMS, this text will be used for the drop-down button title."
+msgstr "Jika Anda menggunakan menu kedua di CMS, teks ini akan digunakan untuk judul tombol jatuh-turun."
+
+#: wptouch-pro-3-extras/themes/cms/root-functions.php:260
+msgid "Static Front Page"
+msgstr "Halaman Depan Statis"
+
+#: wptouch-pro-3-extras/themes/cms/root-functions.php:266
+msgid "Static front page alternate content"
+msgstr "Konten alternatif halaman depan statis"
+
+#: wptouch-pro-3-extras/themes/cms/root-functions.php:267
+msgid "Shows after the featured slider (if enabled), and replaces your Static Front Page content. HTML allowed."
+msgstr "Menampilkan setelah penggeser fitur (jika diaktifkan), dan menggantikan konten Halaman Depan Statis Anda. HTML diizinkan."
+
+#: wptouch-pro-3-extras/themes/hammock/default/header-bottom.php:34
+msgid "Recent"
+msgstr "Terakhir"
+
+#: wptouch-pro-3-extras/themes/hammock/default/header-bottom.php:44
+msgid "Size"
+msgstr "Ukuran"
+
+#: wptouch-pro-3-extras/themes/hammock/default/header-bottom.php:86
+msgid "Go"
+msgstr "Masuk"
+
+#: wptouch-pro-3-extras/themes/hammock/default/page-content.php:24
+#: wptouch-pro-3-extras/themes/hammock/default/single.php:48
+msgid "Comment on this post"
+msgstr "Berkomentar pada kiriman ini"
+
+#: wptouch-pro-3-extras/themes/hammock/default/page-content.php:26
+#: wptouch-pro-3-extras/themes/hammock/default/single.php:50
+msgid "View Discussion"
+msgstr "Lihat Diskusi"
+
+#: wptouch-pro-3-extras/themes/hammock/default/single.php:25
+msgid "%s"
+msgstr "%s"
+
+#: wptouch-pro-3-extras/themes/hammock/root-functions.php:81
+msgid "Site name"
+msgstr "Nama situs"
+
+#: wptouch-pro-3-extras/themes/hammock/root-functions.php:83
+msgid "Content background"
+msgstr "Latar belakang konten"
+
+#: wptouch-pro-3-extras/themes/hammock/root-functions.php:224
+msgid "Display featured image"
+msgstr "Tampilkan gambar yang difiturkan"
+
+#: wptouch-pro-3-extras/themes/hammock/root-functions.php:229
+msgid "Do not display featured image"
+msgstr "Jangan tampilkan gambar yang difiturkan"
+
+#: wptouch-pro-3-extras/themes/hammock/root-functions.php:274
+msgid "Show post excerpts in listings"
+msgstr "Tunjukkan cuplikan kiriman dalam daftar"
+
+#: wptouch-pro-3-extras/themes/hammock/root-functions.php:350
+msgid "Show category list in menu"
+msgstr "Tunjukkan daftar kategori dalam menu."
+
+#: wptouch-pro-3-extras/themes/simple/default/front-page.php:14
+msgid "Call Us"
+msgstr "Hubungi kami"
+
+#: wptouch-pro-3-extras/themes/simple/default/front-page.php:20
+msgid "Our Location"
+msgstr "Lokasi Kami"
+
+#: wptouch-pro-3-extras/themes/simple/default/header-bottom.php:15
+msgid "Toggle Menu"
+msgstr "Menu Toggle"
+
+#: wptouch-pro-3-extras/themes/simple/root-functions.php:58
+msgid "Site Menu (Pulldown)"
+msgstr "Menu Situs (Tarik ke bawah)"
+
+#: wptouch-pro-3-extras/themes/simple/root-functions.php:61
+msgid "Pull-down menu at top of pages"
+msgstr "Menu tarik-turun pada bagian atas halaman"
+
+#: wptouch-pro-3-extras/themes/simple/root-functions.php:69
+msgid "Front Page Menu"
+msgstr "Menu Halaman Depan"
+
+#: wptouch-pro-3-extras/themes/simple/root-functions.php:72
+msgid "Displayed below front page menu and content"
+msgstr "Ditampilkan di menu dan isi halaman depan"
+
+#: wptouch-pro-3-extras/themes/simple/root-functions.php:185
+msgid "Enable search on blog pages"
+msgstr "Aktifkan pencarian pada halaman blog"
+
+#: wptouch-pro-3-extras/themes/simple/root-functions.php:199
+msgid "Homepage Call Us"
+msgstr "Beranda Hubungi Kami"
+
+#: wptouch-pro-3-extras/themes/simple/root-functions.php:205
+msgid "Phone number"
+msgstr "Nomor telepon"
+
+#: wptouch-pro-3-extras/themes/simple/root-functions.php:206
+msgid "Enter a phone number and a homepage menu item for 'call us' will be shown."
+msgstr "Masukkan nomor telepon dan butir menu beranda untuk 'hubungi kami' akan muncul."
+
+#: wptouch-pro-3-extras/themes/simple/root-functions.php:218
+msgid "Homepage Location"
+msgstr "Lokasi Beranda"
+
+#: wptouch-pro-3-extras/themes/simple/root-functions.php:224
+msgid "Map address"
+msgstr "Alamat peta"
+
+#: wptouch-pro-3-extras/themes/simple/root-functions.php:225
+msgid "Enter an address and a homepage menu item for 'Our Location' will be shown."
+msgstr "Masukkan alamat dan butir menu beranda dari 'Lokasi Kami' akan ditampilkan"
+
+#: wptouch-pro-3-extras/themes/simple/root-functions.php:237
+msgid "Front Page Content"
+msgstr "Isi Halaman Depan"
+
+#: wptouch-pro-3-extras/themes/simple/root-functions.php:243
+msgid "Front page alternate content"
+msgstr "Konten alternatif halaman depan"
+
+#: wptouch-pro-3-extras/themes/simple/root-functions.php:244
+msgid "Shows above the front page menu (if enabled), HTML allowed."
+msgstr "Menampilkan di atas menu halaman depan (jika dimungkinkan), HTML diizinkan."
+
+#: wptouch-pro-3-extras/themes/simple/root-functions.php:281
+msgid "Add a light noise effect to the drop-down menu and theme background"
+msgstr "Tambahkan efek buram ke menu jatuh-turun dan latar belakang tema"
