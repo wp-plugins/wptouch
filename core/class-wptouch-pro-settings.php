@@ -24,7 +24,7 @@ class WPtouchDefaultSettings30 extends WPtouchSettings {
 
 		// Setup - General
 		$this->site_title = get_bloginfo( 'name' );
-		$this->show_wptouch_in_footer = true;
+		$this->show_wptouch_in_footer = false;
 
 		// Setup - Desktop / Mobile Switching
 		$this->desktop_is_first_view = false;

@@ -40,7 +40,11 @@ For more information visit the [WPtouch Pro 3 Product Page](http://www.bravenewc
 
 == Changelog ==
 
-= Version 3.1.8 (Feb 28th, 2013) =
+= Version 3.1.9 (March 8th, 2014) =
+
+* Changed: Updated Powered by link code
+
+= Version 3.1.8 (Feb 28th, 2014) =
 
 * Changed: Added caching to API requests to minimize external HTTP queries
 * Added: Firefox OS mobile support
