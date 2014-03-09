@@ -48,7 +48,7 @@ function wptouch_render_general_page( $page_options ) {
 			wptouch_add_setting( 
 				'text', 
 				'site_title', 
-				__( 'WPtouch Pro site title', 'wptouch-pro' ), 
+				__( 'WPtouch site title', 'wptouch-pro' ), 
 				__( 'If the title of your site is long, you can shorten it for display within WPtouch Pro themes.', 'wptouch-pro' ), 
 				WPTOUCH_SETTING_BASIC, 
 				'3.0' 
@@ -56,7 +56,7 @@ function wptouch_render_general_page( $page_options ) {
 			wptouch_add_setting( 
 				'checkbox', 
 				'show_wptouch_in_footer', 
-				sprintf( __( 'Display %sPowered by WPtouch Pro%s in footer', 'wptouch-pro' ), '&quot;', '&quot;' ), 
+				sprintf( __( 'Display %sPowered by WPtouch%s in footer', 'wptouch-pro' ), '&quot;', '&quot;' ), 
 				'', 
 				WPTOUCH_SETTING_BASIC, 
 				3.0 
@@ -122,7 +122,7 @@ function wptouch_render_general_page( $page_options ) {
 			wptouch_add_setting( 
 				'radiolist', 
 				'homepage_landing', 
-				__( 'WPtouch Pro landing page', 'wptouch-pro' ), 
+				__( 'WPtouch landing page', 'wptouch-pro' ), 
 				'',
 				WPTOUCH_SETTING_BASIC,
 				'3.0',
