@@ -2,7 +2,7 @@
 Contributors: bravenewcode, duanestorey, dalemugford
 Tags: wptouch, iphone, ipod, bravenewcode, mobile, android, blackberry, smartphone, responsive, design, mobile plugin, ios, mobile theme
 Requires at least: 3.6
-Stable tag: 3.1.9
+Stable tag: 3.2.1
 Tested up to: 3.8.1
 License: GPLv2
 
@@ -40,11 +40,15 @@ For more information visit the [WPtouch Pro 3 Product Page](http://www.bravenewc
 
 == Changelog ==
 
-= Version 3.1.9 (March 8th, 2014) =
+= Version 3.2.1 (March 20th, 2014) =
 
-* Changed: Updated footer link code
+* Added: Ability to enable/disable WPML language switcher
+* Added: WPML support
+* Fixed: Link to network plugins page for updating WPtouch on multisite
+* Changed: Spanish translation renamed to es_ES.mo/po - please verify selection in admin menu
+* Updated: Translations
 
-= Version 3.1.8 (Feb 28th, 2014) =
+= Version 3.1.8 (Feb 28th, 2013) =
 
 * Changed: Added caching to API requests to minimize external HTTP queries
 * Added: Firefox OS mobile support

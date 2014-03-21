@@ -196,6 +196,16 @@ function wptouchFdnSetupjQuery() {
 	});
 }
 
+function wptouchFdnSetupWPML() {
+	var wpmlLanguageSwitch = jQuery( '#wpml-language-chooser select' );
+	if ( wpmlLanguageSwitch.length ) {
+		wpmlLanguageSwitch.change( function() { 
+			var switchLink = wpmlLanguageSwitch.val();
+			document.location.href = switchLink;
+		});
+	}
+}
+
 function wptouchFdnBaseReady() {
 	wptouchFdnEscFrames();
 	wptouchFdnIfFixed();
@@ -211,6 +221,7 @@ function wptouchFdnBaseReady() {
 	wptouchFdnSwitchToggle();
 	wptouchFdnHandleShortcode();
 	wptouchFdnSetupjQuery();
+	wptouchFdnSetupWPML();
 }
 
 jQuery( document ).ready( function() { wptouchFdnBaseReady(); } );

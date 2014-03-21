@@ -63,6 +63,8 @@ function wptouch_check_api() {
 
 						$bnc_settings->license_accepted = false;
 						$bnc_settings->license_accepted_time = 0;
+						$bnc_settings->referral_user_id = false;
+
 						$bnc_settings->save();
 					}
 				}
@@ -71,6 +73,10 @@ function wptouch_check_api() {
 				$bnc_settings->failures = 0;
 				$bnc_settings->license_accepted = true;
 				$bnc_settings->license_accepted_time = $now;
+
+				if ( isset( $result[ 'user_id'] ) ) {
+					$bnc_settings->referral_user_id = $result[ 'user_id' ];
+				}
 			}
 		} else {
 			WPTOUCH_DEBUG( WPTOUCH_INFO, '...no info? ' . print_r( $result, true ) );

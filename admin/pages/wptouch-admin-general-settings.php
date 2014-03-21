@@ -11,7 +11,7 @@ function wptouch_admin_get_languages() {
 		'en_US' => 'English',
 		'fr_FR' => 'Français',
 		'it_IT' => 'Italiano',
-		'es' => 'Español',
+		'es_ES' => 'Español',
 		'sv_SE' => 'Svenska',
 		'de_DE' => 'Deutsch',
 		'el' => 'ελληνικά',
@@ -40,28 +40,41 @@ function wptouch_render_general_page( $page_options ) {
 	wptouch_add_sub_page( WPTOUCH_ADMIN_SETUP_GENERAL, 'setup-general-general', $page_options );
 	wptouch_add_sub_page( WPTOUCH_ADMIN_SETUP_COMPAT, 'setup-general-compat', $page_options );
 
+	$these_settings = array(
+		wptouch_add_setting( 
+			'text', 
+			'site_title', 
+			wptouchize_it( __( 'WPtouch Pro site title', 'wptouch-pro' ) ), 
+			__( 'If the title of your site is long, you can shorten it for display within WPtouch Pro themes.', 'wptouch-pro' ), 
+			WPTOUCH_SETTING_BASIC, 
+			'3.0' 
+		),
+		wptouch_add_setting( 
+			'checkbox', 
+			'show_wptouch_in_footer', 
+			wptouchize_it( sprintf( __( 'Display %sPowered by WPtouch Pro%s in footer', 'wptouch-pro' ), '&quot;', '&quot;' ) ), 
+			'', 
+			WPTOUCH_SETTING_BASIC, 
+			3.0 
+		)
+	);
+
+	if ( !defined( 'WPTOUCH_IS_FREE' ) ) {
+		$these_settings[] = wptouch_add_setting( 
+			'checkbox', 
+			'add_referral_code', 
+			__( 'Use my WPtouch Pro referral code to earn commission', 'wptouch-pro' ), 
+			__( 'Licensed users of WPtouch Pro can earn a commission for each sale they generate from their mobile website', 'wptouch-pro') , 
+			WPTOUCH_SETTING_BASIC, 
+			3.2
+		);
+	}
+
 	wptouch_add_page_section(
 		WPTOUCH_ADMIN_SETUP_GENERAL,
 		__( 'Site Title & Byline', 'wptouch-pro' ),
 		'setup-title-byline',
-		array(
-			wptouch_add_setting( 
-				'text', 
-				'site_title', 
-				__( 'WPtouch site title', 'wptouch-pro' ), 
-				__( 'If the title of your site is long, you can shorten it for display within WPtouch Pro themes.', 'wptouch-pro' ), 
-				WPTOUCH_SETTING_BASIC, 
-				'3.0' 
-			),
-			wptouch_add_setting( 
-				'checkbox', 
-				'show_wptouch_in_footer', 
-				sprintf( __( 'Display %sPowered by WPtouch%s in footer', 'wptouch-pro' ), '&quot;', '&quot;' ), 
-				'', 
-				WPTOUCH_SETTING_BASIC, 
-				3.0 
-			),
-		),
+		$these_settings,
 		$page_options
 	);
 
@@ -75,7 +88,7 @@ function wptouch_render_general_page( $page_options ) {
 				'list', 
 				'force_locale', 
 				__( 'Language', 'wptouch-pro' ), 
-				__( 'The WPtouch Pro admin panel &amp; supported themes will be shown in this locale.', 'wptouch-pro' ), 
+				wptouchize_it( __( 'The WPtouch Pro admin panel &amp; supported themes will be shown in this locale.', 'wptouch-pro' ) ), 
 				WPTOUCH_SETTING_BASIC, 
 				'3.0', 
 				wptouch_admin_get_languages()
@@ -122,7 +135,7 @@ function wptouch_render_general_page( $page_options ) {
 			wptouch_add_setting( 
 				'radiolist', 
 				'homepage_landing', 
-				__( 'WPtouch landing page', 'wptouch-pro' ), 
+				wptouchize_it( __( 'WPtouch Pro landing page', 'wptouch-pro' ) ), 
 				'',
 				WPTOUCH_SETTING_BASIC,
 				'3.0',
@@ -237,7 +250,7 @@ function wptouch_render_general_page( $page_options ) {
 			wptouch_add_setting( 
 				'text', 
 				'remove_shortcodes', 
-				__( 'Remove these shortcodes when WPtouch Pro is active', 'wptouch-pro' ), 
+				wptouchize_it( __( 'Remove these shortcodes when WPtouch Pro is active', 'wptouch-pro' ) ), 
 				__( 'Enter a comma separated list of shortcodes to remove.', 'wptouch-pro' ), 
 				WPTOUCH_SETTING_BASIC, 
 				'3.0' 
@@ -254,7 +267,7 @@ function wptouch_render_general_page( $page_options ) {
 			wptouch_add_setting( 
 				'textarea', 
 				'ignore_urls', 
-				__( 'Do not load WPtouch Pro on these URLs/Pages', 'wptouch-pro' ), 
+				wptouchize_it( __( 'Do not load WPtouch Pro on these URLs/Pages', 'wptouch-pro' ) ), 
 				__( 'Each permalink URL fragment should be on its own line and relative, e.g. "/about" or "/products/store"', 'wptouch-pro' ), 
 				WPTOUCH_SETTING_BASIC, 
 				'3.0' 
@@ -272,7 +285,7 @@ function wptouch_render_general_page( $page_options ) {
 				'checkbox', 
 				'include_functions_from_desktop_theme', 
 				__( 'Try to include desktop theme functions.php file', 'wptouch-pro' ), 
-				__( 'This may be required for desktop themes with unique features that are not showing when WPtouch Pro is active.', 'wptouch-pro' ), 
+				wptouchize_it( __( 'This may be required for desktop themes with unique features that are not showing when WPtouch Pro is active.', 'wptouch-pro' ) ), 
 				WPTOUCH_SETTING_ADVANCED, 
 				'3.0' 
 			),
@@ -301,7 +314,7 @@ function wptouch_render_general_page( $page_options ) {
 				'textarea', 
 				'custom_user_agents', 
 				__( 'User-agents (line separated)', 'wptouch-pro' ), 
-				__( 'Adding additional user-agents will force WPtouch Pro to be active for matching browsers.', 'wptouch-pro' ), 
+				wptouchize_it( __( 'Adding additional user-agents will force WPtouch Pro to be active for matching browsers.', 'wptouch-pro' ) ), 
 				WPTOUCH_SETTING_BASIC, 
 				'3.0' 
 			),
@@ -323,7 +336,7 @@ function wptouch_render_general_page( $page_options ) {
 				'automatically_backup_settings', 
 				sprintf( __( 'Automatically backup settings to the %s folder', 'wptouch-pro' ), 
 				'<em>/wptouch-data/backups</em>' ), 
-				__( 'WPtouch Pro backups your settings each time they are saved.', 'wptouch-pro' ), 
+				wptouchize_it( __( 'WPtouch Pro backups your settings each time they are saved.', 'wptouch-pro' ) ), 
 				WPTOUCH_SETTING_BASIC, 
 				'3.0' 
 			),
@@ -331,6 +344,8 @@ function wptouch_render_general_page( $page_options ) {
 		),
 		$page_options
 	);			
+
+	$page_options = apply_filters( 'wptouch_settings_compat', $page_options );
 
 	wptouch_add_page_section(
 		WPTOUCH_ADMIN_SETUP_GENERAL,

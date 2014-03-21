@@ -1103,12 +1103,17 @@ function wptouchLoadAddons() {
 	}
 }
 
+function wptouchAdminHandleGeneral() {
+	wptouchCheckToggle( '#show_wptouch_in_footer', '#setting-add_referral_code' );
+}
+
 function wptouchAdminReady() {
 	wptouchSetupAdminMenu();
 	wptouchTooltipSetup();
 	wptouchHandleLicensePanel();
 	wptouchHandleMenuArea();
 	wptouchHandleIconDragDrop();
+	wptouchAdminHandleGeneral();
 
 	wptouchSetupHomescreenUploaders();
 	wptouchHandleCustomIconUpload();

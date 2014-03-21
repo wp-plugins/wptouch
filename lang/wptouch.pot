@@ -2,9 +2,9 @@
 # This file is distributed under the same license as the WPtouch Mobile Plugin package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPtouch Mobile Plugin 3.1.8\n"
+"Project-Id-Version: WPtouch Mobile Plugin 3.2.1\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/wptouch\n"
-"POT-Creation-Date: 2014-02-28 19:09:09+00:00\n"
+"POT-Creation-Date: 2014-03-19 22:54:53+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -162,299 +162,309 @@ msgstr ""
 msgid "Auto-detect"
 msgstr ""
 
-#: admin/pages/wptouch-admin-general-settings.php:45
-msgid "Site Title & Byline"
-msgstr ""
-
-#: admin/pages/wptouch-admin-general-settings.php:51
+#: admin/pages/wptouch-admin-general-settings.php:47
 msgid "WPtouch Pro site title"
 msgstr ""
 
-#: admin/pages/wptouch-admin-general-settings.php:52
+#: admin/pages/wptouch-admin-general-settings.php:48
 msgid ""
 "If the title of your site is long, you can shorten it for display within "
 "WPtouch Pro themes."
 msgstr ""
 
-#: admin/pages/wptouch-admin-general-settings.php:59
+#: admin/pages/wptouch-admin-general-settings.php:55
 msgid "Display %sPowered by WPtouch Pro%s in footer"
 msgstr ""
 
-#: admin/pages/wptouch-admin-general-settings.php:71
+#: admin/pages/wptouch-admin-general-settings.php:66
+msgid "Use my WPtouch Pro referral code to earn commission"
+msgstr ""
+
+#: admin/pages/wptouch-admin-general-settings.php:67
+msgid ""
+"Licensed users of WPtouch Pro can earn a commission for each sale they "
+"generate from their mobile website"
+msgstr ""
+
+#: admin/pages/wptouch-admin-general-settings.php:75
+msgid "Site Title & Byline"
+msgstr ""
+
+#: admin/pages/wptouch-admin-general-settings.php:84
 msgid "Regionalization"
 msgstr ""
 
-#: admin/pages/wptouch-admin-general-settings.php:77
+#: admin/pages/wptouch-admin-general-settings.php:90
 msgid "Language"
 msgstr ""
 
-#: admin/pages/wptouch-admin-general-settings.php:78
+#: admin/pages/wptouch-admin-general-settings.php:91
 msgid ""
 "The WPtouch Pro admin panel &amp; supported themes will be shown in this "
 "locale."
 msgstr ""
 
-#: admin/pages/wptouch-admin-general-settings.php:86
+#: admin/pages/wptouch-admin-general-settings.php:99
 msgid "Translate administration panel text"
 msgstr ""
 
-#: admin/pages/wptouch-admin-general-settings.php:97
+#: admin/pages/wptouch-admin-general-settings.php:110
 msgid "Display Mode"
 msgstr ""
 
-#: admin/pages/wptouch-admin-general-settings.php:103
+#: admin/pages/wptouch-admin-general-settings.php:116
 msgid "Theme Display"
 msgstr ""
 
-#: admin/pages/wptouch-admin-general-settings.php:108
+#: admin/pages/wptouch-admin-general-settings.php:121
 msgid "Normal (active for all mobile visitors)"
 msgstr ""
 
-#: admin/pages/wptouch-admin-general-settings.php:109
+#: admin/pages/wptouch-admin-general-settings.php:122
 msgid "Preview (active only for logged-in site administrators)"
 msgstr ""
 
-#: admin/pages/wptouch-admin-general-settings.php:110
+#: admin/pages/wptouch-admin-general-settings.php:123
 msgid "Disabled (mobile theme will never show)"
 msgstr ""
 
-#: admin/pages/wptouch-admin-general-settings.php:119
+#: admin/pages/wptouch-admin-general-settings.php:132
 msgid "Landing Page"
 msgstr ""
 
-#: admin/pages/wptouch-admin-general-settings.php:125
+#: admin/pages/wptouch-admin-general-settings.php:138
 msgid "WPtouch Pro landing page"
 msgstr ""
 
-#: admin/pages/wptouch-admin-general-settings.php:130
+#: admin/pages/wptouch-admin-general-settings.php:143
 msgid "Default (same as WordPress)"
 msgstr ""
 
-#: admin/pages/wptouch-admin-general-settings.php:131
+#: admin/pages/wptouch-admin-general-settings.php:144
 msgid "Select from WordPress pages"
 msgstr ""
 
-#: admin/pages/wptouch-admin-general-settings.php:132
+#: admin/pages/wptouch-admin-general-settings.php:145
 msgctxt "Refers to a custom landing page"
 msgid "Custom"
 msgstr ""
 
-#: admin/pages/wptouch-admin-general-settings.php:139
+#: admin/pages/wptouch-admin-general-settings.php:152
 msgid "Custom Slug or URL"
 msgstr ""
 
-#: admin/pages/wptouch-admin-general-settings.php:140
+#: admin/pages/wptouch-admin-general-settings.php:153
 msgid "Enter a Slug (i.e. \"/home\") or a full URL path"
 msgstr ""
 
-#: admin/pages/wptouch-admin-general-settings.php:150
+#: admin/pages/wptouch-admin-general-settings.php:163
 msgid "Desktop / Mobile Switching"
 msgstr ""
 
-#: admin/pages/wptouch-admin-general-settings.php:156
+#: admin/pages/wptouch-admin-general-settings.php:169
 msgid "1st time visitors see desktop theme"
 msgstr ""
 
-#: admin/pages/wptouch-admin-general-settings.php:157
+#: admin/pages/wptouch-admin-general-settings.php:170
 msgid "Your regular theme will be shown to 1st time mobile visitors."
 msgstr ""
 
-#: admin/pages/wptouch-admin-general-settings.php:164
+#: admin/pages/wptouch-admin-general-settings.php:177
 msgid "Show switch link in mobile view"
 msgstr ""
 
-#: admin/pages/wptouch-admin-general-settings.php:165
+#: admin/pages/wptouch-admin-general-settings.php:178
 msgid ""
 "Will show toggle buttons in the theme's footer allowing users to switch to "
 "your desktop theme. Is not shown in Web-App Mode."
 msgstr ""
 
-#: admin/pages/wptouch-admin-general-settings.php:172
+#: admin/pages/wptouch-admin-general-settings.php:185
 msgid "Choose the target for the mobile switch link"
 msgstr ""
 
-#: admin/pages/wptouch-admin-general-settings.php:177
+#: admin/pages/wptouch-admin-general-settings.php:190
 msgid "Current page"
 msgstr ""
 
-#: admin/pages/wptouch-admin-general-settings.php:178
+#: admin/pages/wptouch-admin-general-settings.php:191
 msgid "Home page"
 msgstr ""
 
-#: admin/pages/wptouch-admin-general-settings.php:184
+#: admin/pages/wptouch-admin-general-settings.php:197
 msgid "Desktop theme switch buttons"
 msgstr ""
 
-#: admin/pages/wptouch-admin-general-settings.php:185
+#: admin/pages/wptouch-admin-general-settings.php:198
 msgid ""
 "Allows visitors to switch from your desktop theme to your mobile theme. You "
 "can also customize the placement of Switch buttons by placing the "
 "wptouch_desktop_switch_link() template tag somewhere in your desktop theme."
 msgstr ""
 
-#: admin/pages/wptouch-admin-general-settings.php:189
+#: admin/pages/wptouch-admin-general-settings.php:202
 msgid "Automatically inserted inline"
 msgstr ""
 
-#: admin/pages/wptouch-admin-general-settings.php:190
+#: admin/pages/wptouch-admin-general-settings.php:203
 msgid "Automatically inserted with AJAX (better for caching)"
 msgstr ""
 
-#: admin/pages/wptouch-admin-general-settings.php:191
+#: admin/pages/wptouch-admin-general-settings.php:204
 msgid "Template tag"
 msgstr ""
 
-#: admin/pages/wptouch-admin-general-settings.php:200
+#: admin/pages/wptouch-admin-general-settings.php:213
 msgid "Custom Code"
 msgstr ""
 
-#: admin/pages/wptouch-admin-general-settings.php:206
+#: admin/pages/wptouch-admin-general-settings.php:219
 msgid "HTML, JavaScript, statistics or custom code"
 msgstr ""
 
-#: admin/pages/wptouch-admin-general-settings.php:207
+#: admin/pages/wptouch-admin-general-settings.php:220
 msgid "Enter any custom code here to be output in the theme footer."
 msgstr ""
 
-#: admin/pages/wptouch-admin-general-settings.php:217
+#: admin/pages/wptouch-admin-general-settings.php:230
 msgid "Custom Stylesheet"
 msgstr ""
 
-#: admin/pages/wptouch-admin-general-settings.php:223
+#: admin/pages/wptouch-admin-general-settings.php:236
 msgid "URL to a custom CSS file to load"
 msgstr ""
 
-#: admin/pages/wptouch-admin-general-settings.php:224
+#: admin/pages/wptouch-admin-general-settings.php:237
 msgid "Useful if you have specific compatibility CSS you need to add."
 msgstr ""
 
-#: admin/pages/wptouch-admin-general-settings.php:234
+#: admin/pages/wptouch-admin-general-settings.php:247
 msgid "Shortcodes"
 msgstr ""
 
-#: admin/pages/wptouch-admin-general-settings.php:240
+#: admin/pages/wptouch-admin-general-settings.php:253
 msgid "Remove these shortcodes when WPtouch Pro is active"
 msgstr ""
 
-#: admin/pages/wptouch-admin-general-settings.php:241
+#: admin/pages/wptouch-admin-general-settings.php:254
 msgid "Enter a comma separated list of shortcodes to remove."
 msgstr ""
 
-#: admin/pages/wptouch-admin-general-settings.php:251
+#: admin/pages/wptouch-admin-general-settings.php:264
 msgid "Ignored URLs"
 msgstr ""
 
-#: admin/pages/wptouch-admin-general-settings.php:257
+#: admin/pages/wptouch-admin-general-settings.php:270
 msgid "Do not load WPtouch Pro on these URLs/Pages"
 msgstr ""
 
-#: admin/pages/wptouch-admin-general-settings.php:258
+#: admin/pages/wptouch-admin-general-settings.php:271
 msgid ""
 "Each permalink URL fragment should be on its own line and relative, e.g. \"/"
 "about\" or \"/products/store\""
 msgstr ""
 
-#: admin/pages/wptouch-admin-general-settings.php:268
+#: admin/pages/wptouch-admin-general-settings.php:281
 msgid "Desktop Theme"
 msgstr ""
 
-#: admin/pages/wptouch-admin-general-settings.php:274
+#: admin/pages/wptouch-admin-general-settings.php:287
 msgid "Try to include desktop theme functions.php file"
 msgstr ""
 
-#: admin/pages/wptouch-admin-general-settings.php:275
+#: admin/pages/wptouch-admin-general-settings.php:288
 msgid ""
 "This may be required for desktop themes with unique features that are not "
 "showing when WPtouch Pro is active."
 msgstr ""
 
-#: admin/pages/wptouch-admin-general-settings.php:282
+#: admin/pages/wptouch-admin-general-settings.php:295
 msgid "Method to load file"
 msgstr ""
 
-#: admin/pages/wptouch-admin-general-settings.php:287
+#: admin/pages/wptouch-admin-general-settings.php:300
 msgid "Include file directly"
 msgstr ""
 
-#: admin/pages/wptouch-admin-general-settings.php:288
+#: admin/pages/wptouch-admin-general-settings.php:301
 msgid "Translate and create new files"
 msgstr ""
 
-#: admin/pages/wptouch-admin-general-settings.php:297
+#: admin/pages/wptouch-admin-general-settings.php:310
 msgid "Custom User-Agents"
 msgstr ""
 
-#: admin/pages/wptouch-admin-general-settings.php:303
+#: admin/pages/wptouch-admin-general-settings.php:316
 msgid "User-agents (line separated)"
 msgstr ""
 
-#: admin/pages/wptouch-admin-general-settings.php:304
+#: admin/pages/wptouch-admin-general-settings.php:317
 msgid ""
 "Adding additional user-agents will force WPtouch Pro to be active for "
 "matching browsers."
 msgstr ""
 
-#: admin/pages/wptouch-admin-general-settings.php:318
+#: admin/pages/wptouch-admin-general-settings.php:331
 msgid "Backup &amp; Import"
 msgstr ""
 
-#: admin/pages/wptouch-admin-general-settings.php:324
+#: admin/pages/wptouch-admin-general-settings.php:337
 msgid "Automatically backup settings to the %s folder"
 msgstr ""
 
-#: admin/pages/wptouch-admin-general-settings.php:326
+#: admin/pages/wptouch-admin-general-settings.php:339
 msgid "WPtouch Pro backups your settings each time they are saved."
 msgstr ""
 
-#: admin/pages/wptouch-admin-general-settings.php:337
+#: admin/pages/wptouch-admin-general-settings.php:352
 msgid "Tools &amp; Debug"
 msgstr ""
 
-#: admin/pages/wptouch-admin-general-settings.php:343
+#: admin/pages/wptouch-admin-general-settings.php:358
 msgid ""
 "Use jQuery 2.0 in themes (faster for mobile devices) instead of WordPress' "
 "version"
 msgstr ""
 
-#: admin/pages/wptouch-admin-general-settings.php:344
+#: admin/pages/wptouch-admin-general-settings.php:359
 msgid ""
 "jQuery 2.0 is significantly smaller and faster than previous jQuery versions "
 "- may cause problems with other plugins, use carefully."
 msgstr ""
 
-#: admin/pages/wptouch-admin-general-settings.php:351
+#: admin/pages/wptouch-admin-general-settings.php:366
 msgid "Show load times and query counts in the footer"
 msgstr ""
 
-#: admin/pages/wptouch-admin-general-settings.php:352
+#: admin/pages/wptouch-admin-general-settings.php:367
 msgid "Helps you find slow pages/posts on your site."
 msgstr ""
 
-#: admin/pages/wptouch-admin-general-settings.php:359
+#: admin/pages/wptouch-admin-general-settings.php:374
 msgid "Enable debug log"
 msgstr ""
 
-#: admin/pages/wptouch-admin-general-settings.php:360
+#: admin/pages/wptouch-admin-general-settings.php:375
 msgid "Creates a debug file to help diagnose installation issues."
 msgstr ""
 
-#: admin/pages/wptouch-admin-general-settings.php:371
+#: admin/pages/wptouch-admin-general-settings.php:386
 msgid "WordPress Plugins"
 msgstr ""
 
-#: admin/pages/wptouch-admin-general-settings.php:384
+#: admin/pages/wptouch-admin-general-settings.php:399
 msgid "Admin Mode"
 msgstr ""
 
-#: admin/pages/wptouch-admin-general-settings.php:390
+#: admin/pages/wptouch-admin-general-settings.php:405
 msgid "Admin panel settings shown"
 msgstr ""
 
-#: admin/pages/wptouch-admin-general-settings.php:395
+#: admin/pages/wptouch-admin-general-settings.php:410
 msgid "Default"
 msgstr ""
 
-#: admin/pages/wptouch-admin-general-settings.php:396
+#: admin/pages/wptouch-admin-general-settings.php:411
 #: admin/settings/html/button.php:5 admin/settings/html/checkbox.php:6
 #: admin/settings/html/custom-latest-posts.php:4
 #: admin/settings/html/list.php:16 admin/settings/html/numeric.php:12
@@ -1001,7 +1011,7 @@ msgstr ""
 
 #: core/class-wptouch-pro.php:360
 msgid ""
-"You server setup is preventing WPtouch from installing your active theme "
+"Your server setup is preventing WPtouch from installing your active theme "
 "from the Cloud. Please visit %sthis article%s for more information on how to "
 "fix it."
 msgstr ""
@@ -1044,11 +1054,11 @@ msgstr ""
 msgid "%s Changelog"
 msgstr ""
 
-#: core/class-wptouch-pro.php:2302
+#: core/class-wptouch-pro.php:2305
 msgid "Directory Problem"
 msgstr ""
 
-#: core/class-wptouch-pro.php:2303
+#: core/class-wptouch-pro.php:2306
 msgid "One or more required directories could not be created"
 msgstr ""
 
@@ -1147,11 +1157,11 @@ msgstr ""
 msgid "Switch To Mobile Version"
 msgstr ""
 
-#: include/html/footer.php:2
+#: include/html/footer.php:8 include/html/footer.php:10
 msgid "Powered by %s%s%s"
 msgstr ""
 
-#: include/html/footer.php:3
+#: include/html/footer.php:12
 msgid "By %s"
 msgstr ""
 
@@ -1798,8 +1808,8 @@ msgid "iPad"
 msgstr ""
 
 #: themes/foundation/modules/tablets/tablets.php:52
-#: themes/foundation/root-functions.php:402
-#: themes/foundation/root-functions.php:420
+#: themes/foundation/root-functions.php:428
+#: themes/foundation/root-functions.php:446
 msgid "%d by %d pixels (PNG)"
 msgstr ""
 
@@ -1835,165 +1845,169 @@ msgstr ""
 msgid "Custom Content"
 msgstr ""
 
-#: themes/foundation/root-functions.php:113
+#: themes/foundation/root-functions.php:49
+msgid "Language: "
+msgstr ""
+
+#: themes/foundation/root-functions.php:139
 msgid ""
 "Install this Web-App on your [device]: tap [icon] then \"Add to Home Screen\""
 msgstr ""
 
-#: themes/foundation/root-functions.php:316
+#: themes/foundation/root-functions.php:342
 msgid "Number of posts in post listings"
 msgstr ""
 
-#: themes/foundation/root-functions.php:317
+#: themes/foundation/root-functions.php:343
 msgid ""
 "Overrides the WordPress Reading settings for \"Blog pages show at most\""
 msgstr ""
 
-#: themes/foundation/root-functions.php:324
+#: themes/foundation/root-functions.php:350
 msgid "Excluded categories"
 msgstr ""
 
-#: themes/foundation/root-functions.php:325
+#: themes/foundation/root-functions.php:351
 msgid "Comma separated by category name"
 msgstr ""
 
-#: themes/foundation/root-functions.php:332
+#: themes/foundation/root-functions.php:358
 msgid "Excluded tags"
 msgstr ""
 
-#: themes/foundation/root-functions.php:333
+#: themes/foundation/root-functions.php:359
 msgid "Comma separated by tag name"
 msgstr ""
 
-#: themes/foundation/root-functions.php:343
+#: themes/foundation/root-functions.php:369
 msgid "Blog"
 msgstr ""
 
-#: themes/foundation/root-functions.php:354
+#: themes/foundation/root-functions.php:380
 msgid "Show comments on pages"
 msgstr ""
 
-#: themes/foundation/root-functions.php:355
+#: themes/foundation/root-functions.php:381
 msgid "Overrides the WordPress settings for showing comments on pages."
 msgstr ""
 
-#: themes/foundation/root-functions.php:365
-#: themes/foundation/root-functions.php:1080
+#: themes/foundation/root-functions.php:391
+#: themes/foundation/root-functions.php:1106
 msgid "Pages"
 msgstr ""
 
-#: themes/foundation/root-functions.php:378
+#: themes/foundation/root-functions.php:404
 msgid "Icon Title"
 msgstr ""
 
-#: themes/foundation/root-functions.php:384
+#: themes/foundation/root-functions.php:410
 msgid "Icon title"
 msgstr ""
 
-#: themes/foundation/root-functions.php:385
+#: themes/foundation/root-functions.php:411
 msgid "When visitors bookmark your website, this will be the title shown."
 msgstr ""
 
-#: themes/foundation/root-functions.php:396
+#: themes/foundation/root-functions.php:422
 msgid "Android"
 msgstr ""
 
-#: themes/foundation/root-functions.php:414
+#: themes/foundation/root-functions.php:440
 msgid "iPhone & iPod touch"
 msgstr ""
 
-#: themes/foundation/root-functions.php:450
+#: themes/foundation/root-functions.php:476
 msgid "Theme Colors"
 msgstr ""
 
-#: themes/foundation/root-functions.php:460
+#: themes/foundation/root-functions.php:486
 msgid "Site Logo"
 msgstr ""
 
-#: themes/foundation/root-functions.php:466
+#: themes/foundation/root-functions.php:492
 msgid "(Scaled by themes to fit logo areas as needed)"
 msgstr ""
 
-#: themes/foundation/root-functions.php:479
+#: themes/foundation/root-functions.php:505
 msgid "Smart App Banner"
 msgstr ""
 
-#: themes/foundation/root-functions.php:485
+#: themes/foundation/root-functions.php:511
 msgid "Enter your app's %sApp Store ID%s"
 msgstr ""
 
-#: themes/foundation/root-functions.php:486
+#: themes/foundation/root-functions.php:512
 msgid ""
 "Your app's unique identifier. Find your ID from the iTunes Link Maker: "
 "Search for your app. In the link it provides, your app ID is the nine-digit "
 "number in between id and ?mt. For example Angry Birds's ID is 343200656."
 msgstr ""
 
-#: themes/foundation/root-functions.php:498
+#: themes/foundation/root-functions.php:524
 msgid "Theme Footer"
 msgstr ""
 
-#: themes/foundation/root-functions.php:501
+#: themes/foundation/root-functions.php:527
 msgid "Custom footer content (HTML is allowed)"
 msgstr ""
 
-#: themes/foundation/root-functions.php:501
+#: themes/foundation/root-functions.php:527
 msgid ""
 "You can add custom footer content that will be displayed below the switch "
 "link."
 msgstr ""
 
-#: themes/foundation/root-functions.php:866
+#: themes/foundation/root-functions.php:892
 msgid "search results for '%s'"
 msgstr ""
 
-#: themes/foundation/root-functions.php:868
+#: themes/foundation/root-functions.php:894
 msgid "%sCategories &rsaquo;%s %s"
 msgstr ""
 
-#: themes/foundation/root-functions.php:870
+#: themes/foundation/root-functions.php:896
 msgid "Tags &rsaquo; %s"
 msgstr ""
 
-#: themes/foundation/root-functions.php:872
-#: themes/foundation/root-functions.php:874
-#: themes/foundation/root-functions.php:876
+#: themes/foundation/root-functions.php:898
+#: themes/foundation/root-functions.php:900
+#: themes/foundation/root-functions.php:902
 msgid "Archives &rsaquo; %s"
 msgstr ""
 
-#: themes/foundation/root-functions.php:891
+#: themes/foundation/root-functions.php:917
 msgid "Load more from this category"
 msgstr ""
 
-#: themes/foundation/root-functions.php:893
+#: themes/foundation/root-functions.php:919
 msgid "Load more tagged like this"
 msgstr ""
 
-#: themes/foundation/root-functions.php:895
+#: themes/foundation/root-functions.php:921
 msgid "Load more from this day"
 msgstr ""
 
-#: themes/foundation/root-functions.php:897
+#: themes/foundation/root-functions.php:923
 msgid "Load more from this month"
 msgstr ""
 
-#: themes/foundation/root-functions.php:899
+#: themes/foundation/root-functions.php:925
 msgid "Load more from this year"
 msgstr ""
 
-#: themes/foundation/root-functions.php:901
+#: themes/foundation/root-functions.php:927
 msgid "Load more in this section"
 msgstr ""
 
-#: themes/foundation/root-functions.php:903
+#: themes/foundation/root-functions.php:929
 msgid "Load more entries"
 msgstr ""
 
-#: themes/foundation/root-functions.php:1029
+#: themes/foundation/root-functions.php:1055
 msgid "Post"
 msgstr ""
 
-#: themes/foundation/root-functions.php:1031
+#: themes/foundation/root-functions.php:1057
 msgid "Page"
 msgstr ""
 

@@ -1,6 +1,6 @@
 <?php
 
-define( 'BNC_API_VERSION', '3.5' );
+define( 'BNC_API_VERSION', '3.6' );
 define( 'BNC_API_URL', 'http://api.bravenewcode.com/v/' . BNC_API_VERSION );
 define( 'BNC_API_TIMEOUT', 10 );
 

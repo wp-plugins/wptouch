@@ -1102,3 +1102,25 @@ img#wpstats {
 	overflow: hidden
 }
 /* @end */
+
+/* @group WPML */
+
+#wpml-language-chooser-wrap {
+	text-align: center;
+	margin-top: 20px;
+}
+
+#wpml-language-chooser {
+	margin: auto;
+	font-size: 0.9em;
+}
+
+#wpml-language-chooser strong {
+}
+
+#wpml-language-chooser select {
+	font-size: 0.9em;
+}
+
+/* @end */
+

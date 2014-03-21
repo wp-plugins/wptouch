@@ -410,3 +410,11 @@ function wptouch_can_cloud_install( $theme = true ) {
 	return $wptouch_pro->can_perform_cloud_install( $theme );
 }
 
+function wptouchize_it( $str ) {
+	if ( defined( 'WPTOUCH_IS_FREE' ) ) {
+		return str_replace( 'WPtouch Pro', 'WPtouch', $str );
+	} else {
+		return $str;
+	}
+}
+

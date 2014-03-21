@@ -35,6 +35,32 @@ add_action( 'wptouch_pre_footer', 'foundation_handle_footer' );
 add_action( 'wptouch_parent_style_queued', 'foundation_enqueue_color_data' );
 add_action( 'wptouch_post_process_image_file', 'foundation_process_image_file', 10, 2 );
 
+add_action( 'wptouch_language_insert', 'foundation_add_wpml_lang_switcher', 20 );
+
+function foundation_add_wpml_lang_switcher() {
+	$settings = wptouch_get_settings();
+
+	// Check admin panel setting
+	if ( $settings->show_wpml_lang_switcher ) {
+		if ( function_exists( 'icl_get_languages' ) ) { 
+			$data = icl_get_languages( 'skip_missing=N&orderby=KEY&order=DIR&link_empty_to=str' ); 
+			if ( $data ) { 
+				echo '<div id="wpml-language-chooser-wrap"><div id="wpml-language-chooser">';
+				echo '<strong>' . __( 'Language: ', 'wptouch-pro' ) . '</strong>';
+				echo '<select>';
+				foreach( $data as $lang => $item ) {
+					echo '<option value="' . $item['url'] . '"';
+					if ( $item["active"] ) echo " selected";
+					echo '>' . $item['native_name'] . '</option>';
+				}
+				echo '</select>';		
+				echo '</div></div>';	
+			}
+		} 		
+	}
+
+}
+
 function foundation_setting_domain( $domains ) {
 	$domains[] = FOUNDATION_SETTING_DOMAIN;
 

@@ -2721,8 +2721,13 @@ textarea#homepage_message {
 	text-align: center;
 }
 
-.dropdown {
+.dropdown, #wptouch-settings-content .overview-right-wrap {
 	display: none;
+}
+
+#touchboard-left {
+	width: auto;
+	margin: auto;
 }
 
 }
