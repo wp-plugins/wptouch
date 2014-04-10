@@ -349,22 +349,22 @@ function foundation_featured_settings( $page_options ) {
 				)
 			),
 			wptouch_add_setting(
-				'list',
+				'text',
 				'featured_tag',
 				__( 'Only this tag', 'wptouch-pro' ),
-				'',
+				__( 'Enter the tag/category slug name', 'wptouch-pro' ),
 				WPTOUCH_SETTING_BASIC,
 				'1.0',
-				foundation_get_tag_list()
+				false //foundation_get_tag_list()
 			),
 			wptouch_add_setting(
-				'list',
+				'text',
 				'featured_category',
 				__( 'Only this category', 'wptouch-pro' ),
-				'',
+				__( 'Enter the tag/category slug name', 'wptouch-pro' ),
 				WPTOUCH_SETTING_BASIC,
 				'1.0',
-				foundation_get_category_list()
+				false //foundation_get_category_list()
 			),
 			wptouch_add_setting(
 				'text',

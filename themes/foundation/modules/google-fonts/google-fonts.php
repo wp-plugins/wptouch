@@ -18,19 +18,19 @@ function foundation_admin_panel( $page_options ) {
 			__( 'Typography', 'wptouch-pro' ),
 			'foundation-typography',
 			array(
-				wptouch_add_setting( 
-					'list', 
-					'typography_sets', 
-					__( 'Font style', 'wptouch-pro' ), 
-					__( 'Choose a Google font pairing designed for this theme, or default browser fonts.', 'wptouch-pro' ), 
-					WPTOUCH_SETTING_BASIC, 
+				wptouch_add_setting(
+					'list',
+					'typography_sets',
+					__( 'Font style', 'wptouch-pro' ),
+					__( 'Choose a Google font pairing designed for this theme, or default browser fonts.', 'wptouch-pro' ),
+					WPTOUCH_SETTING_BASIC,
 					'1.0',
 					$font_defaults
-				) 			
+				)
 			),
 			$page_options,
 			FOUNDATION_SETTING_DOMAIN
-		);					
+		);
 	}
 
 	return $page_options;
@@ -53,15 +53,17 @@ function foundation_google_fonts_get_selected_info() {
 
 function foundation_google_fonts_init() {
 	$settings = wptouch_get_settings( 'foundation' );
-	
+
 	if ( $settings->typography_sets != 'default' ) {
-		wp_enqueue_script( 
-			'foundation_google_fonts', 
+		wp_enqueue_script(
+			'foundation_google_fonts',
 			foundation_get_base_module_url() . '/google-fonts/google-fonts.js',
 			false,
 			md5( FOUNDATION_VERSION ),
 			true
 		);
+
+		add_filter( 'wptouch_body_classes', 'foundation_add_google_font_classes' );
 	}
 
 	$selected_font_info = foundation_google_fonts_get_selected_info();
@@ -80,7 +82,7 @@ function foundation_google_fonts_init() {
 				}
 
 				$new_families[] = $font_string;
-			
+
 				$inline_style_data .= "." . $font_info->selector . "-font" . " {\n";
 				$inline_style_data .= "\tfont-family: '" . $font_info->name . "', " . $font_info->fallback . ";\n";
 				$inline_style_data .= "}\n";
@@ -90,18 +92,18 @@ function foundation_google_fonts_init() {
 		}
 
 		if ( $family_string ) {
-			wp_enqueue_style( 
-				'foundation_google_fonts',		
+			wp_enqueue_style(
+				'foundation_google_fonts',
 				'http://fonts.googleapis.com/css?family=' . $family_string,
 				false,
 				FOUNDATION_VERSION,
 				false
-			);		
+			);
 
 			if ( $inline_style_data ) {
 				wp_add_inline_style( 'foundation_google_fonts', $inline_style_data );
-			}		
-		}		
+			}
+		}
 	}
 }
 
@@ -128,4 +130,12 @@ function foundation_register_google_font_pairing( $setting_value, $font1, $font2
 function foundation_get_google_font_pairings() {
 	global $wptouch_google_fonts;
 	return $wptouch_google_fonts;
+}
+
+function foundation_add_google_font_classes( $classes ) {
+	$settings = wptouch_get_settings( 'foundation' );
+
+	$classes[] = 'fonts-' . $settings->typography_sets;
+
+	return $classes;
 }
