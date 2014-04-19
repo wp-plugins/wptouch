@@ -1,11 +1,11 @@
 <?php
 /*
 	Plugin Name: WPtouch Mobile Plugin
-	Plugin URI: http://www.bravenewcode.com/product/wptouch-pro/
+	Plugin URI: http://www.wptouch.com/
 	Version: 3.2.2
 	Description: Create a slick mobile WordPress website with just a few clicks
 	Author: BraveNewCode Inc.
-	Author URI: http://www.bravenewcode.com/
+	Author URI: http://www.wptouch.com/
 	Text Domain: wptouch-pro
 	Domain Path: /lang
 	License: GNU General Public License 2.0 (GPL) http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
