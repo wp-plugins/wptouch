@@ -20,7 +20,7 @@ The theme also includes the ability for visitors to switch between the theme on 
 
 With 4 themes and 3 new extensions installed & updated right from our new BraveNewCloud service, it's the best WPtouch yet!
 
-For more information visit the [WPtouch.com](http://www.wptouch.com/?utm_campaign=wptouch-front-readme&utm_medium=web&utm_source=wordpressdotorg "WPtouch.com").
+For more information visit [WPtouch.com](http://www.wptouch.com/?utm_campaign=wptouch-front-readme&utm_medium=web&utm_source=wordpressdotorg "WPtouch.com").
 
 'WPtouch' & ’WPtouch Pro' are trademarks of BraveNewCode Inc.
 
