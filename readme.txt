@@ -2,7 +2,7 @@
 Contributors: bravenewcode, duanestorey, dalemugford
 Tags: wptouch, iphone, ipod, bravenewcode, mobile, android, blackberry, smartphone, responsive, design, mobile plugin, ios, mobile theme
 Requires at least: 3.6
-Stable tag: 3.2.2.1
+Stable tag: 3.2.3
 Tested up to: 3.9
 License: GPLv2
 
@@ -40,7 +40,7 @@ For more information visit the [WPtouch.com](http://www.wptouch.com/?utm_campaig
 
 == Changelog ==
 
-= Version 3.2.2.1 (April 19th, 2014) =
+= Version 3.2.3 (April 19th, 2014) =
 
 * Changed: Product links from bravenewcode.com to wptouch.com
 * Updated: Plugin compatibility to 3.9
