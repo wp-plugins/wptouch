@@ -40,6 +40,11 @@ For more information visit the [WPtouch.com](http://www.wptouch.com/?utm_campaig
 
 == Changelog ==
 
+= Version 3.2.2.1 (April 19th, 2014) =
+
+* Changed: Product links from bravenewcode.com to wptouch.com
+* Updated: Plugin compatibility to 3.9
+
 = Version 3.2.2 (April 9th, 2014) =
 
 * Fixed: Only show WPML switcher when WPML is installed and active
