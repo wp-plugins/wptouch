@@ -82,7 +82,7 @@ define( 'WPTOUCH_MULTISITE_LICENSED', 'wptouch_pro_licensed' );
 define( 'WPTOUCH_THUMBNAIL_SIZE', 144 );
 define( 'WPTOUCH_FEATURED_SIZE', 900 );
 define( 'WPTOUCH_EXCERPT_LENGTH', 24 );
-define( 'WPTOUCH_PRO_README_FILE', 'http://www.bravenewcode.com/wptouch-pro-3/readme.txt' );
+define( 'WPTOUCH_PRO_README_FILE', 'http://www.wptouch.com/wptouch-pro-3/readme.txt' );
 
 define( 'ADDON_SETTING_DOMAIN', 'addons' );
 

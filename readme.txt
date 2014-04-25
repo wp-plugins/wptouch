@@ -2,8 +2,8 @@
 Contributors: bravenewcode, duanestorey, dalemugford
 Tags: wptouch, iphone, ipod, bravenewcode, mobile, android, blackberry, smartphone, responsive, design, mobile plugin, ios, mobile theme
 Requires at least: 3.6
-Stable tag: 3.2.3
-Tested up to: 3.9
+Stable tag: 3.2.4
+Tested up to: 3.8.1
 License: GPLv2
 
 Create a slick mobile WordPress website with just a few clicks.
@@ -40,10 +40,14 @@ For more information visit [WPtouch.com](http://www.wptouch.com/?utm_campaign=wp
 
 == Changelog ==
 
-= Version 3.2.3 (April 19th, 2014) =
+= Version 3.2.4 (April 23nd, 2014) =
 
-* Changed: Product links from bravenewcode.com to wptouch.com
-* Updated: Plugin compatibility to 3.9
+* Added: Support for Windows Phone 8.1
+* Updated: product links from bravenewcode.com to wptouch.com
+
+= Version 3.2.3 (April 20nd, 2014) =
+
+* Intentionally skipped
 
 = Version 3.2.2 (April 9th, 2014) =
 
@@ -698,7 +702,7 @@ For more information visit [WPtouch.com](http://www.wptouch.com/?utm_campaign=wp
 * Added theme skin selection support, still no other skins enabled yet
 * Added post-options bar on single post page
 * Added new background selections
-* Updated plugin compatibility listing now loads from wptouch.com
+* Updated plugin compatibility listing now loads from bravenewcode.com
 * Updated style for comments, working on full support for WP 2.7 comments, Intense Debate
 * Updated success message for ajax comments
 * Updated font zoom replaced by font-size adjust button

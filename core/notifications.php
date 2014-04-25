@@ -144,7 +144,7 @@ function wptouch_notification_setup() {
 			'WordPress Permalinks',
 			__( 'WPtouch Pro prefers pretty permalinks to be enabled within WordPress.', 'wptouch-pro' ),
 			'warning',
-			'http://www.bravenewcode.com/support/knowledgebase/wordpress-permalinks/'
+			'http://www.wptouch.com/support/knowledgebase/wordpress-permalinks/'
 		);
 	}
 
@@ -154,7 +154,7 @@ function wptouch_notification_setup() {
 			'PHP Safe Mode',
 			__( 'WPtouch Pro will not work fully in safe mode.', 'wptouch-pro' ),
 			'warning',
-			'http://www.bravenewcode.com/support/knowledgebase/php-safe-mode/'
+			'http://www.wptouch.com/support/knowledgebase/php-safe-mode/'
 		);
 	}
 
@@ -164,7 +164,7 @@ function wptouch_notification_setup() {
 			'WP Super Cache',
 			__( 'Extra configuration is required. The plugin must be configured to exclude the user agents that WPtouch Pro uses.', 'wptouch-pro' ),
 			'warning',
-			'http://www.bravenewcode.com/support/knowledgebase/optimizing-caching-plugins-for-mobile-use/#supercache'
+			'http://www.wptouch.com/support/knowledgebase/optimizing-caching-plugins-for-mobile-use/#supercache'
 		);
 	}
 
@@ -174,7 +174,7 @@ function wptouch_notification_setup() {
 			'W3 Total Cache',
 			__( 'Extra configuration is required. The plugin must be configured to exclude the user agents that WPtouch Pro uses.', 'wptouch-pro' ),
 			'warning',
-			'http://www.bravenewcode.com/support/knowledgebase/optimizing-caching-plugins-for-mobile-use/#W3totalcache'
+			'http://www.wptouch.com/support/knowledgebase/optimizing-caching-plugins-for-mobile-use/#W3totalcache'
 		);
 	}
 
@@ -184,7 +184,7 @@ function wptouch_notification_setup() {
 			'Hyper Cache',
 			__( 'Extra configuration is required. The plugin must be configured to exclude the user agents that WPtouch Pro uses.', 'wptouch-pro' ),
 			'warning',
-			'http://www.bravenewcode.com/support/knowledgebase/optimizing-caching-plugins-for-mobile-use/#hypercache'
+			'http://www.wptouch.com/support/knowledgebase/optimizing-caching-plugins-for-mobile-use/#hypercache'
 			);
 	}
 
@@ -194,7 +194,7 @@ function wptouch_notification_setup() {
 			'WPMinify',
 			__( 'Extra configuration is required. Add paths to your active WPtouch Pro theme CSS and Javascript files as files to ignore in WPMinify.', 'wptouch-pro' ),
 			'warning',
-			'http://www.bravenewcode.com/support/knowledgebase/wpminify/'
+			'http://www.wptouch.com/support/knowledgebase/wpminify/'
 		);
 	}
 
@@ -204,7 +204,7 @@ function wptouch_notification_setup() {
 			'Lightbox 2',
 			__( 'This plugin may not work correctly in WPtouch Pro, and should be disabled in the Plugin Compatibility section.', 'wptouch-pro' ),
 			'warning',
-			'http://www.bravenewcode.com/support/knowledgebase/known-incompatibilities/#imageplugins'
+			'http://www.wptouch.com/support/knowledgebase/known-incompatibilities/#imageplugins'
 		);
 	}
 
@@ -214,7 +214,7 @@ function wptouch_notification_setup() {
 			__( 'Icon Installation Issue', 'wptouch-pro' ),
 			sprintf( __( 'The %s%s%s directory is not currently writable. %sPlease fix this issue to enable installation of additional icon sets.', 'wptouch-pro' ), '', 'wp-content/wptouch-data/icons', '', '' ),
 			'warning',
-			'http://www.bravenewcode.com/support/knowledgebase/server-setup/#permissions'
+			'http://www.wptouch.com/support/knowledgebase/server-setup/#permissions'
 		);
 	}
 
