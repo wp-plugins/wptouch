@@ -43,6 +43,7 @@ For more information visit [WPtouch.com](http://www.wptouch.com/?utm_campaign=wp
 = Version 3.2.4.1 (May 6th, 2014) =
 
 * Updated: HTML output
+* Updated: Language files
 
 = Version 3.2.4 (April 23nd, 2014) =
 
