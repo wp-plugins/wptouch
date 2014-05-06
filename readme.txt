@@ -40,6 +40,10 @@ For more information visit [WPtouch.com](http://www.wptouch.com/?utm_campaign=wp
 
 == Changelog ==
 
+= Version 3.2.4.1 (May 6th, 2014) =
+
+* Updated: HTML output
+
 = Version 3.2.4 (April 23nd, 2014) =
 
 * Added: Support for Windows Phone 8.1
