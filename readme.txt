@@ -2,7 +2,7 @@
 Contributors: bravenewcode, duanestorey, dalemugford
 Tags: wptouch, iphone, ipod, bravenewcode, mobile, android, blackberry, smartphone, responsive, design, mobile plugin, ios, mobile theme
 Requires at least: 3.6
-Stable tag: 3.4.1
+Stable tag: 3.4.2
 Tested up to: 3.9.1
 License: GPLv2
 
@@ -40,7 +40,7 @@ For more information visit [WPtouch.com](http://www.wptouch.com/?utm_campaign=wp
 
 == Changelog ==
 
-= Version 3.4.1 (June 27th, 2014) =
+= Version 3.4.2 (June 27th, 2014) =
 
 * Fixed: Issue with date/time in Bauhaus
 

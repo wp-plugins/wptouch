@@ -210,7 +210,7 @@ function wptouch_get_the_time( $format = false ) {
 		$format = $date_format;
 	}
 
-	return apply_filters( 'wptouch_get_the_time', the_time( $format) );
+	return apply_filters( 'wptouch_get_the_time', get_the_time( $format) );
 }
 
 function wptouch_has_tags() {
