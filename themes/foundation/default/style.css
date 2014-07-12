@@ -1158,40 +1158,6 @@ span.wpcf7-form-control-wrap {
 
 /* @end */
 
-/* @group Pushy */
-
-.pushy {
-	position: fixed;
-	height: 100%;
-	top: 0;
-	z-index: 99;
-	overflow: auto;
-	-webkit-overflow-scrolling: touch;
-}
-
-.csstransforms3d .pushy, .csstransforms3d .page-wrapper, .csstransforms3d .push {
-	-webkit-transition: -webkit-transform .330s cubic-bezier(.16, .68, .43, .99);
-	transition: transform .330s cubic-bezier(.16, .68, .43, .99);
-	-webkit-backface-visibility: hidden;
-	-webkit-perspective: 1000;
-}
-
-.site-overlay {
-	display: none;
-}
-
-.pushy-active .site-overlay {
-	display: block;
-	position: fixed;
-	left: 0;
-	right: 0;
-	top: 0;
-	bottom: 0;
-	z-index: 99;
-}
-
-/* @end */
-
 /* This CSS is only used/shown in the preview window */
 
 /* @group Preview Bar */

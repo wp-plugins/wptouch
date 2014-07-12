@@ -1,6 +1,6 @@
 <?php
 
-define( 'FOUNDATION_VERSION', '2.0.4' );
+define( 'FOUNDATION_VERSION', '2.1' );
 
 define( 'FOUNDATION_DIR', WPTOUCH_DIR . '/themes/foundation' );
 define( 'FOUNDATION_URL', WPTOUCH_URL . '/themes/foundation' );
@@ -552,23 +552,26 @@ function foundation_maybe_output_homescreen_icon( $image, $width, $height, $pixe
 
 function foundation_setup_homescreen_icons() {
 	$settings = foundation_get_settings();
+	$has_icon = $settings->android_others_icon;
+
 	if ( wptouch_is_device_real_ipad() ) {
+		// Default (if no icon added in admin, or icon isn't formatted correctly, and as a catch-all)
+		echo '<link rel="apple-touch-icon-precomposed" href="' . WPTOUCH_DEFAULT_HOMESCREEN_ICON . '" />' . "\n";
 		// iPad home screen icons
 		foundation_maybe_output_homescreen_icon( $settings->ipad_icon_retina, 152, 152, 2 );
 		foundation_maybe_output_homescreen_icon( $settings->ipad_icon_retina, 144, 144, 2 );
 		foundation_maybe_output_homescreen_icon( $settings->ipad_icon_retina, 57, 57, 1 );
-		// Default (if no icon added in admin, or icon isn't formatted correctly, and as a catch-all)
-		echo '<link rel="apple-touch-icon-precomposed" href="' . WPTOUCH_DEFAULT_HOMESCREEN_ICON . '" />' . "\n";
 	} else {
+		// Default (if no icon added in admin, or icon isn't formatted correctly, and as a catch-all)
 		// iPhone / Android home screen icons
 		foundation_maybe_output_homescreen_icon( $settings->iphone_icon_retina, 120, 120, 2 );
 		foundation_maybe_output_homescreen_icon( $settings->iphone_icon_retina, 114, 114, 2 );
 		foundation_maybe_output_homescreen_icon( $settings->android_others_icon, 57, 57, 1 );
-		// Default (if no icon added in admin, or icon isn't formatted correctly, and as a catch-all)
-		echo '<link rel="apple-touch-icon-precomposed" href="' . WPTOUCH_DEFAULT_HOMESCREEN_ICON . '" />' . "\n";
+
+		if ( !$has_icon ) {
+			echo '<link rel="apple-touch-icon-precomposed" href="' . WPTOUCH_DEFAULT_HOMESCREEN_ICON . '" />' . "\n";
+		}
 	}
-
-
 }
 
 function foundation_setup_smart_app_banner(){
@@ -687,6 +690,9 @@ function foundation_add_theme_support( $theme_support ) {
 }
 
 function foundation_body_classes( $classes ) {
+	global $wptouch_pro;
+	$global_settings = $wptouch_pro->get_settings();
+
 	$settings = foundation_get_settings();
 
 	if ( $settings->video_handling_type != 'none' ) {
@@ -730,6 +736,8 @@ function foundation_body_classes( $classes ) {
 	if ( wptouch_fdn_iOS_7() ) {
 		$classes[] = 'ios7';
 	}
+
+	$classes[] = $global_settings->current_theme_name;
 
 	return $classes;
 }

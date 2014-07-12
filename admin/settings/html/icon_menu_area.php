@@ -9,12 +9,24 @@
 			<?php _e( 'Menu', 'wptouch-pro' ); ?>
 
 			<select name="menu-list" id="menu-list">
-				<?php global $wptouch_pro; ?>
-				<?php foreach( $wptouch_pro->theme_menus as $menu_info ) { ?>
-					<?php $real_name = wptouch_get_menu_name_from_slug( $menu_info->setting_name ); ?>
-					<?php if ( $real_name == 'none' ) continue; ?>
-					<option value="menu-<?php echo wptouch_get_menu_name_from_slug( $menu_info->setting_name ); ?>"><?php echo $menu_info->friendly_name; ?></option>
-				<?php } ?>
+				<?php
+					global $wptouch_pro;
+					$menus = wptouch_get_custom_menu_list();
+					$rendered_menus = array();
+				?>
+
+				<?php
+					foreach( $wptouch_pro->theme_menus as $menu_info ) {
+						$menu_id = wptouch_get_menu_name_from_slug( $menu_info->setting_name );
+						if ( !in_array( $menu_id, $rendered_menus ) ) {
+							$rendered_menus[] = $menu_id;
+							if ( $menu_id == 'none' ) continue;
+				?>
+					<option value="menu-<?php echo $menu_id; ?>"><?php echo $menus[ $menu_id ]; ?></option>
+				<?php
+						}
+					}
+				?>
 			</select>
 			<i class="wptouch-tooltip icon-info-sign" data-original-title="<?php _e( 'Active menus used in this theme.', 'wptouch-pro' ); ?>"></i>
 		</div>

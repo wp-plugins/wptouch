@@ -8,8 +8,13 @@ function doBauhausReady() {
 	bauhausSearchToggle();
 	bauhausWebAppMenu();
 	bauhausVideoUnwrap();
+	bauhausHandleWebAppScrolling();
 	bauhausHandleSearch();
 	bauhausHandlePostImgs();
+	if ( jQuery.fn.pushIt ) {
+		jQuery( 'body' ).pushIt( { menuWidth: '270' } );
+		bauhausOffCanvasMenuBtn();
+	}
 }
 
 // Spice up the appearance of Foundation's Featured Slider
@@ -68,6 +73,25 @@ if ( pTags.parent().is( 'p' ) ) {
   }
 }
 
+function bauhausHandleWebAppScrolling(){
+	var startPosition = 0;
+	var backButton = jQuery( '.back-button' );
+
+	if ( backButton.is( 'div' ) ) {
+		jQuery( window ).scroll( function () {
+			var newPosition = jQuery( this ).scrollTop();
+			if ( newPosition > startPosition ) {
+				backButton.removeClass( 'visible' );
+			} else {
+				if ( !backButton.hasClass( 'visible' ) ) {
+					backButton.addClass( 'visible' );
+				}
+			}
+			startPosition = newPosition;
+		});
+	}
+}
+
 function bauhausHandlePostImgs(){
 var img = jQuery( '.post-page-content p img' );
 	jQuery( img ).each( function(){
@@ -86,6 +110,24 @@ function bauhausHandleSearch() {
 			e.preventDefault();
 		}).trigger( 'change' );
 	}
+}
+
+function bauhausOffCanvasMenuBtn(){
+	jQuery( 'body' ).on( 'touchend', '.menu-btn, .wptouch-menu span', function(){
+		setTimeout( function(){
+			if ( jQuery( 'body' ).hasClass( 'pushit-active' ) ) {
+				var menuHeight = jQuery( '#menu' ).height();
+				var windowHeight = jQuery( window ).height();
+				if ( menuHeight < windowHeight ) {
+					jQuery( 'body' ).on( 'touchmove.offcanvas', function( e ){
+						e.preventDefault();
+					});
+				} else {
+					jQuery( 'body' ).off( 'touchmove.offcanvas' );
+				}
+			}
+		}, 500 );
+	});
 }
 
 jQuery( document ).ready( function() { doBauhausReady(); } );

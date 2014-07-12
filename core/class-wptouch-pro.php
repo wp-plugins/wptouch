@@ -832,7 +832,7 @@ class WPtouchProThree {
 
 		header( 'HTTP/1.1 200 OK' );
 		$nonce = $this->post[ 'wp_nonce' ];
-		if( wp_verify_nonce( $nonce, 'wptouch_admin' ) ) {
+		if( wp_verify_nonce( $nonce, 'wptouch_admin' ) && current_user_can( 'manage_options' ) ) {
 			switch( $this->post[ 'file_type'] ) {
 				case 'homescreen_image':
 					WPTOUCH_DEBUG( WPTOUCH_INFO, 'Uploading new HOMESCREEN image' );

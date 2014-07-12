@@ -2,7 +2,7 @@
 Contributors: bravenewcode, duanestorey, dalemugford
 Tags: wptouch, iphone, ipod, bravenewcode, mobile, android, blackberry, smartphone, responsive, design, mobile plugin, ios, mobile theme
 Requires at least: 3.6
-Stable tag: 3.4.2
+Stable tag: 3.4.3
 Tested up to: 3.9.1
 License: GPLv2
 
@@ -39,6 +39,18 @@ For more information visit [WPtouch.com](http://www.wptouch.com/?utm_campaign=wp
 11. WPtouch admin - Menu Setup
 
 == Changelog ==
+
+= Version 3.4.3 (July 12th, 2014) =
+
+* Added: Bauhaus - off-canvas menu
+* Fixed: An issue with homescreen icons on Android
+* Fixed: Bauhaus: search and custom post types
+* Fixed: Minor admin issues
+* Fixed: Security issue with file uploads and authenticated users (found by Sucuri, Inc.)
+* Fixed: Custom post type support for customers whose web servers strip array indices from form fields
+* Updated: Custom post type content is included in category/taxonomy/tag archive listings
+* Updated: Fastclick js library to 1.0.2
+* Changed: Menu Setup in admin now refers to menus by name instead of location for consistency
 
 = Version 3.4.2 (June 27th, 2014) =
 
