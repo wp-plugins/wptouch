@@ -3,7 +3,7 @@
 
 	<?php if ( wptouch_get_comment_count() > 0 && comments_open() ) { ?>
 		<div class="comments">
-			<span><?php comments_number( '0', '1', '%' ); ?></span>
+			<span><?php wptouch_the_comment_count(); ?></span>
 		</div>
 	<?php } ?>
 	<?php if ( bauhaus_should_show_thumbnail() && wptouch_has_post_thumbnail() ) { ?>

@@ -1,3 +1,30 @@
+	<div class="pushit pushit-right">
+		<div id="menu" class="wptouch-menu show-hide-menu">
+			<?php if ( wptouch_has_menu( 'primary_menu' ) ) { wptouch_show_menu( 'primary_menu' ); } ?>
+
+			<?php if (  wptouch_fdn_show_login() ) { ?>
+				<ul class="menu-tree login-link">
+					<li>
+					<?php if ( !is_user_logged_in() ) { ?>
+					<a class="login-toggle tappable no-ajax" href="#">
+						<i class="icon-key"></i> Login
+					</a>
+				<?php } else { ?>
+					<a href="<?php echo wp_logout_url( $_SERVER['REQUEST_URI'] ); ?>" class="tappable" title="<?php _e( 'Logout', 'wptouch-pro' ); ?>">
+						<i class="icon-user"></i>
+						<?php _e( 'Logout', 'wptouch-pro' ); ?>
+					</a>
+				<?php } ?>
+					</li>
+				</ul>
+			<?php } ?>
+		</div>
+	</div>
+
+<!-- Back Button for Web-App Mode -->
+<div class="icon-arrow-left back-button tappable"><!-- css-button --></div>
+
+
 <div class="page-wrapper">
 
 	<header id="header-title-logo">
@@ -11,7 +38,7 @@
 				<h1 class="heading-font"><?php wptouch_bloginfo( 'site_title' ); ?></h1>
 			<?php } ?>
 		</a>
-		<div id="menu-toggle" class="show-hide-toggle tappable" data-effect-target="menu" role="button"><!--icon-reorder--></div>
+		<div id="menu-toggle" class="menu-btn tappable show-hide-toggle" data-effect-target="menu" data-menu-target="menu" role="button"><!--icon-reorder--></div>
 	</header>
 
 	<?php if ( bauhaus_should_show_search() ) { ?>
@@ -24,29 +51,6 @@
 		</div>
 	</div>
 	<?php } ?>
-
-	<div id="menu" class="wptouch-menu show-hide-menu">
-
-		<?php if ( wptouch_has_menu( 'primary_menu' ) ) { wptouch_show_menu( 'primary_menu' ); } ?>
-
-		<?php if (  wptouch_fdn_show_login() ) { ?>
-			<ul class="menu-tree login-link">
-				<li>
-				<?php if ( !is_user_logged_in() ) { ?>
-				<a class="login-toggle tappable no-ajax" href="#">
-					<i class="icon-key"></i> Login
-				</a>
-			<?php } else { ?>
-				<a href="<?php echo wp_logout_url( $_SERVER['REQUEST_URI'] ); ?>" class="tappable" title="<?php _e( 'Logout', 'wptouch-pro' ); ?>">
-					<i class="icon-user"></i>
-					<?php _e( 'Logout', 'wptouch-pro' ); ?>
-				</a>
-			<?php } ?>
-				</li>
-			</ul>
-		<?php } ?>
-
-	</div>
 
 	<?php do_action( 'wptouch_advertising_top' ); ?>
 

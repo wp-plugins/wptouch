@@ -1,3 +1,5 @@
+/* @override http://wptp3.local.com/wp-content/plugins/wptouch-pro-3/admin/css/wptouch-admin-3.css?ver=3.4.4 */
+
 /* @group General */
 
 #wpadminbar, #wptouch-settings-area {
@@ -38,8 +40,8 @@
 	font-size: 23px;
 	color: #174f69;
 	border-bottom: 1px solid #E5E5E5;
-	padding-bottom: 15px;
-	padding-left: 40px;
+	padding-bottom: 20px;
+	padding-left: 44px;
 	padding-top: 15px;
 	background: url(../images/title-icon.png) no-repeat 0 center;
 	letter-spacing: -1px;
@@ -408,22 +410,31 @@ html[xmlns] .clearfix {
 }
 
 .modal-body {
-	margin: 0 0 -20px;
 	padding: 0;
+	margin: 0;
+	height: 335px;
 }
 
 .modal-header {
-	background-color: #888;
+	background-color: #9f9f9f;
+	margin-bottom: -1px;
+	border-bottom-style: none;
+}
+
+.modal-footer {
+	background-color: rgba(0,0,0,.1);
+	border-top-style: none;
+	margin-top: -1px;
 }
 
 .wptouch-section .modal h3 {
 	float: none;
 	width: auto;
-	text-align: left;
 	background: none;
 	font-size: 220%;
 	letter-spacing: -1px;
 	color: #eee;
+	text-align: left;
 }
 
 .cloud-browser .carousel img {
@@ -468,6 +479,37 @@ html[xmlns] .clearfix {
 #wptouch-settings-content .carousel ul.dots li.active {
 	background-color: #2175a7;
 }
+
+/* @group Changelog */
+
+#change-log {
+	padding: 0;
+}
+
+#change-log h4 {
+	font-size: 115%;
+	padding-left: 20px;
+	background-color: rgba(0,0,0,.1);
+	padding-top: 15px;
+	margin: 0;
+	padding-bottom: 15px;
+	text-transform: uppercase;
+	letter-spacing: 0;
+}
+
+#change-log ul {
+	padding-bottom: 20px;
+}
+
+#change-log ul li {
+	list-style-type: disc;
+	list-style-position: inside;
+	text-indent: -10px;
+	margin: 0;
+	padding: 5px 25px 5px 30px;
+}
+
+/* @end */
 
 /* @end */
 
@@ -550,8 +592,8 @@ html[xmlns] .clearfix {
 	cursor: pointer;
 	display: none;
 	top: 17px;
-	font: bold 8px Tahoma, Geneva, sans-serif;
 	left: 7px;
+	font: 12px sans-serif;
 }
 
 #ajax-notifications li:hover .dismiss {
@@ -602,13 +644,6 @@ html[xmlns] .clearfix {
 }
 
 #notification-drop {
-	outline: 0;
-	position: relative;
-	/* background-image: none; */
-	/* border-color: #eee; */
-	-webkit-box-shadow: none;
-	box-shadow: none;
-	color: #999;
 	margin-top: 20px;
 	margin-right: 0;
 }
@@ -637,7 +672,7 @@ html[xmlns] .clearfix {
 }
 
 .notifications.dropdown {
-	width: 275px;
+	width: 300px;
 	text-align: right;
 	float: right;
 	margin-top: 0;
@@ -656,7 +691,7 @@ html[xmlns] .clearfix {
 }
 
 .dropdown-menu .notifications {
-	width: 275px;
+	width: 290px;
 	height: 450px;
 	margin: -5px 0;
 }
@@ -675,15 +710,8 @@ html[xmlns] .clearfix {
 }
 
 #wptouch-settings-area button#upgrade-to-pro {
-	color: #eee;
-	margin-top: 20px;
-	background: #0074a2;
-	text-shadow: 1px 1px #333;
-}
-
-#wptouch-settings-area button#upgrade-to-pro:hover {
 	color: #fff;
-	background: #3390B5;	
+	margin-top: 20px;
 }
 
 /* @end */
@@ -760,7 +788,7 @@ h3.popover-title {
 }
 
 #wptouch-settings-area .radio-group {
-	padding-bottom: 5px;
+	clear: both;
 }
 
 #wptouch-settings-area .radio-group label {
@@ -773,9 +801,9 @@ h3.popover-title {
 }
 
 #wptouch-settings-area input[type="radio"] {
-	margin-right: 5px;
+	margin-right: 8px;
 	vertical-align: top;
-	margin-top: 0;
+	margin-top: 1px;
 }
 
 #wptouch-settings-area input[type="checkbox"] {
@@ -812,21 +840,17 @@ input#preview.disabled {
 
 /* @group Sections */
 
-#wptouch-settings-area .wptouch-section {
-	color: #333;
-}
-
 .wptouch-section h3 {
 	width: 22%;
 	text-align: right;
 	margin-top: 0;
-	float: left;
 	padding-top: 10px;
-	padding-right: 20px;
-	color: #174f69;
+	padding-right: 18px;
 	padding-bottom: 10px;
 	font-weight: bold;
 	font-size: 15px;
+	text-transform: capitalize;
+	float: left;
 }
 
 #wptouch-settings-area .wptouch-section ul.padded {
@@ -917,37 +941,6 @@ input#preview.disabled {
 .overview-right-wrap {
 	float: right;
 }
-
-/* @group Changelog */
-
-#change-log {
-	padding: 0;
-}
-
-#change-log h4 {
-	font-size: 120%;
-	padding-left: 20px;
-	background-color: #f3f3f3;
-	padding-top: 15px;
-	margin: 0;
-	padding-bottom: 15px;
-	border-top: 1px solid #d0e5f0;
-	border-bottom: 1px solid #d0e5f0;
-}
-
-#change-log ul {
-	padding-bottom: 25px;
-}
-
-#change-log ul li {
-	list-style-type: disc;
-	list-style-position: inside;
-	text-indent: -10px;
-	margin: 0;
-	padding: 5px 25px 5px 30px;
-}
-
-/* @end */
 
 /* @group Free */
 
@@ -1131,7 +1124,8 @@ input#preview.disabled {
 
 .overview-right-wrap h3 i {
 	position: relative;
-	bottom: -1px;
+	bottom: 0;
+	font-size: 10px;
 }
 
 .overview-right-wrap h3:last-child i {
@@ -1867,11 +1861,13 @@ ul.manage-sets .error {
 
 ul.manage-sets .error {
 	color: darkorange;
+	margin-top: -6px;
 }
 
 ul.manage-sets .installed {
 	color: #198c1c;
 	background-image: none;
+	margin-top: -6px;
 }
 
 ul.manage-sets button {
@@ -2475,32 +2471,6 @@ textarea#homepage_message {
 /* @end */
 
 /* @group Selected Settings */
-
-.wptouch-free #section-setup-general-plugin-compat,
-.wptouch-free #section-desktop-theme-compatibility,
-.wptouch-free #setting-mobile_switch_link_target,
-.wptouch-free #setting-switch_link_method,
-.wptouch-free #section-setup-custom-styles,
-.wptouch-free #section-setup-backup {
-	/* display: none !important; */
-}
-
-.wptouch-free #setting-bauhaus_use_infinite_scroll,
-.wptouch-free #setting-featured_grayscale,
-.wptouch-free #setting-featured_speed,
-.wptouch-free #setting-featured_max_number_of_posts,
-.wptouch-free #setting-featured_continuous,
-.wptouch-free #section-foundation-smart-app-banner,
-.wptouch-free #section-theme-shapes,
-.wptouch-free #setting-share_on_pages,
-.wptouch-free #setting-social_pinterest_url,
-.wptouch-free #setting-social_vimeo_url,
-.wptouch-free #setting-social_youtube_url,
-.wptouch-free #setting-social_linkedin_url,
-.wptouch-free #section-foundation-media-settings,
-.wptouch-free #setting-bauhaus_thumbnail_type {
-	/* display: none !important; */
-}
 
 .wptouch-free span.new {
 	display: none !important;

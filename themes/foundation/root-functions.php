@@ -1,6 +1,6 @@
 <?php
 
-define( 'FOUNDATION_VERSION', '2.0.4' );
+define( 'FOUNDATION_VERSION', '2.1' );
 
 define( 'FOUNDATION_DIR', WPTOUCH_DIR . '/themes/foundation' );
 define( 'FOUNDATION_URL', WPTOUCH_URL . '/themes/foundation' );
@@ -481,21 +481,24 @@ function foundation_render_theme_settings( $page_options ) {
 		);
 	}
 
+	$foundation_logo_settings = array(
+		wptouch_add_setting(
+			'image-upload',
+			'logo_image',
+			__( '(Scaled by themes to fit logo areas as needed)', 'wptouch-pro' ),
+			'',
+			WPTOUCH_SETTING_BASIC,
+			'1.0'
+		)
+	);
+
+	$foundation_logo_settings = apply_filters( 'foundation_settings_logo', $foundation_logo_settings );
+
 	wptouch_add_page_section(
 		FOUNDATION_PAGE_BRANDING,
 		__( 'Site Logo', 'wptouch-pro' ),
 		'foundation-logo',
-		array(
-			wptouch_add_setting(
-				'image-upload',
-				'logo_image',
-				__( '(Scaled by themes to fit logo areas as needed)', 'wptouch-pro' ),
-				'',
-				WPTOUCH_SETTING_BASIC,
-				'1.0'
-			)
-		),
-
+		$foundation_logo_settings,
 		$page_options,
 		FOUNDATION_SETTING_DOMAIN
 	);
@@ -552,23 +555,26 @@ function foundation_maybe_output_homescreen_icon( $image, $width, $height, $pixe
 
 function foundation_setup_homescreen_icons() {
 	$settings = foundation_get_settings();
+	$has_icon = $settings->android_others_icon;
+
 	if ( wptouch_is_device_real_ipad() ) {
+		// Default (if no icon added in admin, or icon isn't formatted correctly, and as a catch-all)
+		echo '<link rel="apple-touch-icon-precomposed" href="' . WPTOUCH_DEFAULT_HOMESCREEN_ICON . '" />' . "\n";
 		// iPad home screen icons
 		foundation_maybe_output_homescreen_icon( $settings->ipad_icon_retina, 152, 152, 2 );
 		foundation_maybe_output_homescreen_icon( $settings->ipad_icon_retina, 144, 144, 2 );
 		foundation_maybe_output_homescreen_icon( $settings->ipad_icon_retina, 57, 57, 1 );
-		// Default (if no icon added in admin, or icon isn't formatted correctly, and as a catch-all)
-		echo '<link rel="apple-touch-icon-precomposed" href="' . WPTOUCH_DEFAULT_HOMESCREEN_ICON . '" />' . "\n";
 	} else {
 		// iPhone / Android home screen icons
 		foundation_maybe_output_homescreen_icon( $settings->iphone_icon_retina, 120, 120, 2 );
 		foundation_maybe_output_homescreen_icon( $settings->iphone_icon_retina, 114, 114, 2 );
 		foundation_maybe_output_homescreen_icon( $settings->android_others_icon, 57, 57, 1 );
+
 		// Default (if no icon added in admin, or icon isn't formatted correctly, and as a catch-all)
-		echo '<link rel="apple-touch-icon-precomposed" href="' . WPTOUCH_DEFAULT_HOMESCREEN_ICON . '" />' . "\n";
+		if ( !$has_icon ) {
+			echo '<link rel="apple-touch-icon-precomposed" href="' . WPTOUCH_DEFAULT_HOMESCREEN_ICON . '" />' . "\n";
+		}
 	}
-
-
 }
 
 function foundation_setup_smart_app_banner(){
@@ -687,6 +693,9 @@ function foundation_add_theme_support( $theme_support ) {
 }
 
 function foundation_body_classes( $classes ) {
+	global $wptouch_pro;
+	$global_settings = $wptouch_pro->get_settings();
+
 	$settings = foundation_get_settings();
 
 	if ( $settings->video_handling_type != 'none' ) {
@@ -730,6 +739,8 @@ function foundation_body_classes( $classes ) {
 	if ( wptouch_fdn_iOS_7() ) {
 		$classes[] = 'ios7';
 	}
+
+	$classes[] = 'theme-' . $global_settings->current_theme_name;
 
 	return $classes;
 }
@@ -943,7 +954,7 @@ function wptouch_fdn_archive_load_more_text() {
 	}
 }
 
-function wptouch_fdn_ordered_cat_list( $num, $include_count = true ) {
+function wptouch_fdn_ordered_cat_list( $num, $include_count = true, $taxonomy = 'category'  ) {
 	global $wpdb;
 
 	$settings = wptouch_get_settings( 'foundation' );
@@ -959,12 +970,18 @@ function wptouch_fdn_ordered_cat_list( $num, $include_count = true ) {
 	}
 
 	echo '<ul>';
-	$sql = $wpdb->get_results("SELECT * FROM {$wpdb->prefix}term_taxonomy INNER JOIN {$wpdb->prefix}terms ON {$wpdb->prefix}term_taxonomy.term_id = {$wpdb->prefix}terms.term_id WHERE taxonomy = 'category' AND {$wpdb->prefix}term_taxonomy.term_id NOT IN ($excluded_cats) AND count >= 1 ORDER BY count DESC LIMIT 0, $num");
+	$sql = $wpdb->get_results("SELECT * FROM {$wpdb->prefix}term_taxonomy INNER JOIN {$wpdb->prefix}terms ON {$wpdb->prefix}term_taxonomy.term_id = {$wpdb->prefix}terms.term_id WHERE taxonomy = '{$taxonomy}' AND {$wpdb->prefix}term_taxonomy.term_id NOT IN ($excluded_cats) AND count >= 1 ORDER BY count DESC LIMIT 0, $num");
 
 	if ( $sql ) {
 		foreach ( $sql as $result ) {
 			if ( $result ) {
-				echo "<li><a href=\"" . get_category_link( $result->term_id ) . "\">" . $result->name;
+				$link = get_term_link( (int) $result->term_id, $taxonomy );
+
+				if ( is_wp_error( $link ) ) {
+					continue;
+				}
+
+				echo "<li><a href=\"" . $link . "\">" . $result->name;
 
 				if ( $include_count ) {
 					echo " <span>(" . $result->count . ")</span></a>";

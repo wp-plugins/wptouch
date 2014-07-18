@@ -206,11 +206,10 @@ function wptouch_the_time( $format = false ) {
 function wptouch_get_the_time( $format = false ) {
 	if ( !$format ) {
 		$date_format = get_option( 'date_format' );
-
 		$format = $date_format;
 	}
 
-	return apply_filters( 'wptouch_get_the_time', get_the_time( $format) );
+	return apply_filters( 'wptouch_get_the_time', get_the_time( $format ) );	
 }
 
 function wptouch_has_tags() {

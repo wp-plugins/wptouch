@@ -58,6 +58,15 @@ header img {
 	top: 4px;
 }
 
+.drop-down #menu {
+	display: none;
+	position: absolute;
+	top: 54px;
+	z-index: 3;
+	right: 0;
+	left: 0;
+}
+
 #menu-toggle {
 	position: absolute;
 	right: 0;
@@ -94,16 +103,6 @@ header img {
 
 .login-link i {
 	margin-right: 5px;
-}
-
-#menu {
-	display: none;
-	position: absolute;
-	top: 54px;
-	z-index: 3;
-	right: 0;
-	left: 0;
-	display: none;
 }
 
 #wptouch-search-inner {
@@ -1023,6 +1022,18 @@ form#commentform input, form#commentform textarea {
 
 /* @group Web App Mode */
 
+.ios7.smartphone.web-app-mode #menu {
+	padding-top: 20px;
+}
+
+.drop-down.ios7.smartphone.web-app-mode #menu {
+	position: fixed;
+	top: 74px;
+	overflow: auto;
+	padding-top: 0;
+	-webkit-overflow-scrolling: touch;
+}
+
 .ios7.web-app-mode.has-fixed header {
 	position: -webkit-sticky;
 	opacity: 0.97;
@@ -1035,17 +1046,59 @@ form#commentform input, form#commentform textarea {
 	top: 74px;
 }
 
-.ios7.smartphone.web-app-mode #menu {
-	position: fixed;
-	top: 74px;
-	overflow: auto;
-	-webkit-overflow-scrolling: touch;
-}
-
 .ios7.web-app-mode #search-dropper {
 	position: -webkit-sticky;
 	top: 74px;
 	z-index: 3;
 }
+
+/* @group Back Button */
+
+.back-button,
+.smartphone.web-app-mode.pushit-active .back-button {
+	display: none;
+}
+
+.smartphone.web-app-mode .back-button {
+	background-color: rgba( 255, 255, 255, 0.2 );
+	color: rgba( 255, 255, 255, 0.3 );
+	border-radius: 35px;
+	display: block;
+	padding: 15px 18px 15px 15px;
+	position: fixed;
+	bottom: 30px;
+	left: 30px;
+	transition: background-color .5s linear;
+	z-index: 1;
+}
+
+.smartphone.web-app-mode .back-button.visible {
+	background-color: rgba( 255, 255, 255, 1 );
+	color: #000;
+	transition: background-color .5s linear;
+}
+
+.light-body.smartphone.web-app-mode .back-button {
+	background: rgba( 0, 0, 0, 0.1 );
+	color: rgba( 0, 0, 0, 0.3 );
+}
+
+.light-body.smartphone.web-app-mode .back-button.visible {
+	background-color: rgba( 0, 0, 0, 0.8 );
+	color: #fff;
+}
+
+/* @end */
+
+/* @end */
+
+/* @group Off-Canvas Login */
+
+.off-canvas .wptouch-login-wrap {
+	text-align: center;
+	font-size: 70%;
+}
+
+
 
 /* @end */

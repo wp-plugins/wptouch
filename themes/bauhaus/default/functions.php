@@ -3,12 +3,12 @@
 add_action( 'foundation_enqueue_scripts', 'bauhaus_enqueue_scripts' );
 
 function bauhaus_enqueue_scripts() {
-	wp_enqueue_script( 
-		'bauhaus-js', 
-		BAUHAUS_URL . '/default/bauhaus.js', 
-		array( 'jquery' ), 
-		BAUHAUS_THEME_VERSION, 
-		true 
+	wp_enqueue_script(
+		'bauhaus-js',
+		BAUHAUS_URL . '/default/bauhaus.js',
+		array( 'jquery' ),
+		BAUHAUS_THEME_VERSION,
+		true
 	);
 }
 
@@ -34,7 +34,7 @@ function bauhaus_should_show_thumbnail() {
 
 function bauhaus_should_show_taxonomy() {
 	$settings = bauhaus_get_settings();
-	
+
 	if ( $settings->bauhaus_show_taxonomy ) {
 		return true;
 	} else {
@@ -69,7 +69,7 @@ function bauhaus_should_show_search(){
 		return true;
 	} else {
 		return false;
-	}	
+	}
 }
 
 function bauhaus_should_show_comment_bubbles(){
@@ -79,5 +79,5 @@ function bauhaus_should_show_comment_bubbles(){
 		return true;
 	} else {
 		return false;
-	}	
+	}
 }

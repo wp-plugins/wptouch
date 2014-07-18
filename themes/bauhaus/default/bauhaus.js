@@ -8,8 +8,13 @@ function doBauhausReady() {
 	bauhausSearchToggle();
 	bauhausWebAppMenu();
 	bauhausVideoUnwrap();
+	bauhausHandleWebAppScrolling();
 	bauhausHandleSearch();
 	bauhausHandlePostImgs();
+	if ( jQuery.fn.pushIt ) {
+		jQuery( 'body' ).pushIt( { menuWidth: '270' } );
+		bauhausOffCanvasMods();
+	}
 }
 
 // Spice up the appearance of Foundation's Featured Slider
@@ -68,6 +73,25 @@ if ( pTags.parent().is( 'p' ) ) {
   }
 }
 
+function bauhausHandleWebAppScrolling(){
+	var startPosition = 0;
+	var backButton = jQuery( '.back-button' );
+
+	if ( backButton.is( 'div' ) ) {
+		jQuery( window ).scroll( function () {
+			var newPosition = jQuery( this ).scrollTop();
+			if ( newPosition > startPosition ) {
+				backButton.removeClass( 'visible' );
+			} else {
+				if ( !backButton.hasClass( 'visible' ) ) {
+					backButton.addClass( 'visible' );
+				}
+			}
+			startPosition = newPosition;
+		});
+	}
+}
+
 function bauhausHandlePostImgs(){
 var img = jQuery( '.post-page-content p img' );
 	jQuery( img ).each( function(){
@@ -86,6 +110,10 @@ function bauhausHandleSearch() {
 			e.preventDefault();
 		}).trigger( 'change' );
 	}
+}
+
+function bauhausOffCanvasMods(){
+	jQuery( '.wptouch-login-wrap' ).detach().appendTo( 'body' );
 }
 
 jQuery( document ).ready( function() { doBauhausReady(); } );
