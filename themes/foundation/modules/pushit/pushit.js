@@ -37,7 +37,7 @@ var prefix = (function() {
 		}
 
 		// Add the overlay div
-		jQuery( 'body' ).append( '<div id="pushit-overlay"></div>' );
+		settings.body.append( '<div id="pushit-overlay"></div>' );
 		var pushitOverlay = jQuery( '#pushit-overlay' );
 
 		// Setup default positioning and width
@@ -73,6 +73,27 @@ var prefix = (function() {
 			return direction;
 		}
 
+		function cleanUpPushit(){
+			setTimeout( function(){
+				// Cleanup memory usage!
+				settings.container
+					.css( prefix.css+'transform', '' )
+					.css( 'overflow', '' )
+					.css( 'height', '' );
+				pushitOverlay.css( 'z-index', '-1' );
+			}, settings.menuSpeed + 300 );
+		}
+
+		// Close menu when clicking container
+		function pushitCloseListener() {
+			pushitOverlay.one( 'click.pushit touchmove.pushit', function( e ){
+				e.preventDefault();
+				e.stopImmediatePropagation();
+				togglePushIt( settings.pushed );
+				pushitOverlay.off( 'click.pushit touchmove.pushit' );
+			}).css( 'z-index', '99' );
+		}
+
 		function togglePushIt( clicked ){
 			settings.pushed = clicked;
 			direction = whichPushIt( clicked );
@@ -99,7 +120,6 @@ var prefix = (function() {
 				}
 			// Closed
 			} else if ( side == '.pushit-left' && !activeSide.hasClass( 'pushit-open' ) ) {
-				cleanUpPushit();
 				if ( prefix.css != '' ){
 					activeSide.css( prefix.css+'transform', 'translate3d(0, 0, 0)' );
 					settings.container.css( prefix.css+'transform', 'translate3d(0, 0, 0)' );
@@ -107,6 +127,7 @@ var prefix = (function() {
 					activeSide.animate( { left: '-' + settings.menuWidth }, settings.menuSpeed );
 					settings.container.animate( { left: '0' }, settings.menuSpeed );
 				}
+				cleanUpPushit();
 			}
 			// Right Menus
 			// Open
@@ -129,7 +150,6 @@ var prefix = (function() {
 				}
 			// Closed
 			} else if ( side == '.pushit-right' && !jQuery( side ).hasClass( 'pushit-open' ) ) {
-				cleanUpPushit();
 				if ( prefix.css != '' ){
 					activeSide.css( prefix.css+'transform', 'translate3d(0, 0, 0)' );
 					settings.container.css( prefix.css+'transform', 'translate3d(0, 0, 0)' );
@@ -137,6 +157,7 @@ var prefix = (function() {
 					activeSide.animate( { left: settings.viewportWidth }, settings.menuSpeed );
 					settings.container.animate( { left: '0' }, settings.menuSpeed );
 				}
+				cleanUpPushit();
 			}
 
 			settings.container.toggleClass( whichPushIt( clicked ) );
@@ -158,31 +179,11 @@ var prefix = (function() {
 		});
 
 		// Toggle menu
-		settings.menuBtn.on( 'click', function( e ) {
-			pushitOverlay.one( 'touchmove.pushit', function( e ){ e.preventDefault(); } );
+		settings.menuBtn.on( 'click.pushit-button', function( e ) {
+			e.preventDefault();
 			e.stopImmediatePropagation();
 			menuTarget = '#' + jQuery( this ).attr( 'data-menu-target' );
 			togglePushIt( jQuery( menuTarget ).parent() );
 		});
-
-		// Close menu when clicking container
-		function pushitCloseListener() {
-			pushitOverlay.one( 'click.pushit', function( e ){
-				e.stopImmediatePropagation();
-				togglePushIt( settings.pushed );
-			});
-		}
-
-		function cleanUpPushit(){
-			setTimeout( function(){
-				// Cleanup memory usage!
-				settings.container
-					.css( prefix.css+'transform', '' )
-					.css( 'overflow', '' )
-					.css( 'height', '' );
-			}, settings.menuSpeed + 300 );
-
-		}
-
 	}
 })( jQuery );

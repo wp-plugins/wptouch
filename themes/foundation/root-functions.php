@@ -896,7 +896,7 @@ function wptouch_fdn_if_previous_post_link(){
 
 function wptouch_fdn_show_comments_on_pages() {
 	$settings = foundation_get_settings();
-	if ( comments_open() && !post_password_required() && $settings->show_comments_on_pages ) {
+	if ( ( comments_open() || wptouch_have_comments() ) && !post_password_required() && $settings->show_comments_on_pages ) {
 		return true;
 	} else {
 		return false;

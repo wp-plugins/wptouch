@@ -209,7 +209,7 @@ function wptouch_get_the_time( $format = false ) {
 		$format = $date_format;
 	}
 
-	return apply_filters( 'wptouch_get_the_time', get_the_time( $format ) );	
+	return apply_filters( 'wptouch_get_the_time', get_the_time( $format ) );
 }
 
 function wptouch_has_tags() {
@@ -294,6 +294,16 @@ function wptouch_the_footer_message() {
 function wptouch_get_the_footer_message() {
 	$settings = wptouch_get_settings();
 	return apply_filters( 'wptouch_footer_message', $settings->footer_message );
+}
+
+function wptouch_have_comments() {
+	$comment_count = wptouch_get_comment_count();
+
+	if ( $comment_count > 0 ) {
+		return true;
+	}
+
+	return false;
 }
 
 function wptouch_the_comment_count() {

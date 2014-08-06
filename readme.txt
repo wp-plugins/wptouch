@@ -2,7 +2,7 @@
 Contributors: bravenewcode, duanestorey, dalemugford, martin kuplens-ewart
 Tags: wptouch, iphone, ipod, bravenewcode, mobile, android, blackberry, smartphone, responsive, design, mobile plugin, ios, mobile theme
 Requires at least: 3.6
-Stable tag: 3.4.4
+Stable tag: 3.4.5
 Tested up to: 3.9.1
 License: GPLv2
 
@@ -40,7 +40,9 @@ For more information visit [WPtouch.com](http://www.wptouch.com/?utm_campaign=wp
 
 == Changelog ==
 
-= Version 3.4.4 (July 17th, 2014) =
+= Version 3.4.5 (August 6th, 2014) =
+
+* Fixed: Comments remain visible after commenting has been closed for a given post/page
 
 * Fixed: Custom Post Type module sometimes showed an error when searches were performed
 * Fixed: Featured Slider now shows posts from custom post types enabled for mobile display

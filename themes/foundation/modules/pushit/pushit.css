@@ -31,7 +31,3 @@ body {
 	bottom: 0;
 	z-index: -1;
 }
-
-.pushit-active #pushit-overlay {
-	z-index: 99;
-}

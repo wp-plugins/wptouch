@@ -1,15 +1,15 @@
 
 function wptouchFdnSetupMenu( menuContainer ) {
 
-	$menuContainer = jQuery( menuContainer );
+	menuContainer = jQuery( menuContainer );
 
-	$menuContainer.find( 'li.menu-item ul' ).each( function() {
+	menuContainer.find( 'li.menu-item ul' ).each( function() {
 		if ( !jQuery( this ).children().length > 0 ) {
 			jQuery( this ).remove();
 		}
 	});
 
-	$menuContainer.find( 'li.menu-item' ).has( 'ul' ).addClass( 'has_children' ).prepend( '<span></span>' );
+	menuContainer.find( 'li.menu-item' ).has( 'ul' ).addClass( 'has_children' ).prepend( '<span></span>' );
 
 	jQuery( 'ul li.has_children span', menuContainer ).on( 'click', function( e ) {
 		jQuery( this ).toggleClass( 'toggle' ).parent().toggleClass( 'open-tree' );
@@ -22,7 +22,7 @@ function wptouchFdnSetupMenu( menuContainer ) {
 	var noParentLinks = jQuery( 'ul.no-parent-links' );
 	if ( jQuery( noParentLinks ).length ) {
 
-		$menuContainer.each( function(){
+		menuContainer.each( function(){
 			jQuery( noParentLinks, this ).off().on( 'click', 'li.has_children > a', function( e ){
 				jQuery( this ).parent().find( 'span' ).trigger( 'click' );
 				e.preventDefault();
@@ -34,7 +34,7 @@ function wptouchFdnSetupMenu( menuContainer ) {
 
 // Setup show/hide menus
 function wptouchFdnSetupAllMenus() {
-	jQuery( '.show-hide-menu' ).each( function() {
+	jQuery( '.show-hide-menu, .slide-menu' ).each( function() {
 		var menuId = jQuery( this ).prop( 'id' );
 		if ( menuId ) {
 			wptouchFdnSetupMenu( '#' + menuId );
