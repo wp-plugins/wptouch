@@ -40,7 +40,7 @@ For more information visit [WPtouch.com](http://www.wptouch.com/?utm_campaign=wp
 
 == Changelog ==
 
-= Version 3.4.7 (August 27th, 2014)
+= Version 3.4.7 (August 27th, 2014) =
 
 * Changed: Only images (png, jpg, gif, svg) will be accepted for home screens and icons.
 * Fixed: Issue with internal version upgrade notification
