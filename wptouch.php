@@ -3,7 +3,7 @@
 	Plugin Name: WPtouch Mobile Plugin
 	Plugin URI: http://www.wptouch.com/
 	Version: 3.7.3
-	Description: Create a slick mobile WordPress website with just a few clicks
+	Description: Make your WordPress website mobile-friendly with just a few clicks
 	Author: BraveNewCode Inc.
 	Author URI: http://www.wptouch.com/
 	Text Domain: wptouch-pro
