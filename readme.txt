@@ -6,7 +6,7 @@ Stable tag: 3.7.3
 Tested up to: 4.1
 License: GPLv2
 
-Make your WordPress website mobile-friendly with just a few clicks.
+Create a slick mobile WordPress website with just a few clicks.
 
 == Description ==
 
@@ -16,11 +16,11 @@ The administration panel allows you to customize many aspects of its appearance,
 
 The theme also includes the ability for visitors to switch between the theme on your mobile WordPress website and your website's regular theme.
 
-**Go Pro for support and enhanced themes & features**
+**Now Available: WPtouch Pro + BraveNewCloud**
 
-WPtouch Pro includes a variety of enhanced themes for blogs, businesses, and WooCommerce retailers; extensions that add rich advertising options, advanced web font controls, caching, and more; and of course top-notch one-on-one support from our professional team.
+With six themes and three new extensions installed & updated right from our new BraveNewCloud service, it's the best WPtouch yet!
 
-For more information visit [WPtouch.com](http://www.wptouch.com/?utm_campaign=wptouch-front-readme&utm_medium=web&utm_source=wordpressdotorg "WPtouch.com"). You may also be interested in [Response](http://wpresponse.com/), a new BraveNewCode service that seamlessly integrates with WPtouch.
+For more information visit [WPtouch.com](http://www.wptouch.com/?utm_campaign=wptouch-front-readme&utm_medium=web&utm_source=wordpressdotorg "WPtouch.com").  You may also be interested in [Response](http://wpresponse.com/), a new BraveNewCode service that seamlessly integrates with WPtouch.
 
 'WPtouch' & ’WPtouch Pro' are trademarks of BraveNewCode Inc.
 
