@@ -42,12 +42,17 @@ For more information visit [WPtouch.com](http://www.wptouch.com/?utm_campaign=wp
 
 = Version 3.7.7 (April 27, 2015) =
 
-* Added: WordPress 4.2.1 compatibility
 * Added: New hook to perform actions when admin settings are saved
-* Fixed: In rare cases themes and extensions attempted to auto-update without a valid source URL (Pro only)
-* Fixed: An issue with Web App Mode persistence that stopped links from being clickable (Pro only)
+* Added: MobileStore - Improved compatibility with WooCommerce Checkout Manager fields (Pro Only)
+* Fixed: In rare cases themes and extensions attempted to auto-update without a valid source URL (Pro Only)
+* Fixed: An issue with Web App Mode persistence that stopped links from being clickable (Pro Only)
+* Fixed: Minor JavaScript issue in Advanced Type which could prevent saving settings in some scenarios (Pro Only)
 * Changed: Removed jQuery 2.x setting — caused too many issues with compatibility and older plugins and themes
-
+* Changed: URL filter allows filtering of homepage using the value '/'
+* Changed: Advanced Type Admin js for better compatibility (Pro Only)
+* Changed: Infinity Cache: automatically flush cache when WPtouch Pro settings are updated (Pro Only)
+* Changed: Extension settings layout (Infinity Cache, Mobile Content, Responsive Images - Pro Only)
+* Changed: Open - Adjusted menu filter to be more flexible. (Pro Only)
 
 = Version 3.7.6 (April 20, 2015) =
 
