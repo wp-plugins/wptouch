@@ -6,11 +6,9 @@ Stable tag: 3.7.9
 Tested up to: 4.2.2
 License: GPLv2
 
-Make your WordPress website mobile-friendly with just a few clicks.
-
 == Description ==
 
-WPtouch is a mobile plugin for WordPress that automatically adds a simple and elegant mobile theme for mobile visitors to your WordPress website. Recommended by Google, it will instantly enable a mobile-friendly version of your website that passes the Google Mobile test, and ensure your SEO rankings do not drop due to not having a mobile-friendly website. 
+WPtouch is a mobile plugin for WordPress that automatically adds a simple and elegant mobile theme for mobile visitors to your WordPress website. Recommended by Google, it will instantly enable a mobile-friendly version of your website that passes the Google Mobile test, and ensure your SEO rankings do not drop due to not having a mobile-friendly website.
 
 The administration panel allows you to customize many aspects of its appearance, and deliver a *fast*, user-friendly and stylish version of your site to your mobile visitors, without modifying *a single bit of code*.  Your regular desktop theme is left intact, and will continue to show for your non-mobile visitors.
 
@@ -18,7 +16,7 @@ The administration panel allows you to customize many aspects of its appearance,
 
 WPtouch Pro includes a variety of enhanced themes for blogs, businesses, and WooCommerce retailers; extensions that add rich advertising options, advanced web font controls, caching, and more; and of course, top-notch one-on-one support from our professional team.
 
-For more information visit [WPtouch.com](http://www.wptouch.com/?utm_campaign=wptouch-front-readme&utm_medium=web&utm_source=wordpressdotorg "WPtouch.com"). 
+For more information visit [WPtouch.com](http://www.wptouch.com/?utm_campaign=wptouch-front-readme&utm_medium=web&utm_source=wordpressdotorg "WPtouch.com").
 
 'WPtouch' & ’WPtouch Pro' are trademarks of BraveNewCode Inc.
 
@@ -1237,7 +1235,7 @@ If you are using a caching plugin, you will need to configure it to work properl
 
 1. If you have “Browser Cache” enabled, please disable ‘Set expires header’ in the Browser cache settings to prevent Desktop/Mobile switch link issues.
 2. Go to the “Page Cache” settings under the Performance tab.
-3. Copy the list of mobile user agents found in our list of “User agent list for configuring cache plugins“. 
+3. Copy the list of mobile user agents found in our list of “User agent list for configuring cache plugins“.
 4. If you have added support for additional mobile devices in WPtouch’s Compatibility > Custom User Agents field, you must also include those user agents in the “Rejected User 5. Agents” area in W3 Total Cache.
 5. Scroll down to the “Rejected User Agents” field and paste the list of WPtouch default user agents, adding one per line.
 Save your changes.
