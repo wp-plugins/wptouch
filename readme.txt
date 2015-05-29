@@ -1235,7 +1235,7 @@ If you are using a caching plugin, you will need to configure it to work properl
 
 1. If you have “Browser Cache” enabled, please disable ‘Set expires header’ in the Browser cache settings to prevent Desktop/Mobile switch link issues.
 2. Go to the “Page Cache” settings under the Performance tab.
-3. Copy the list of mobile user agents found in our list of “User agent list for configuring cache plugins“.
+3. Copy the list of mobile user agents found below.
 4. If you have added support for additional mobile devices in WPtouch’s Compatibility > Custom User Agents field, you must also include those user agents in the “Rejected User 5. Agents” area in W3 Total Cache.
 5. Scroll down to the “Rejected User Agents” field and paste the list of WPtouch default user agents, adding one per line.
 Save your changes.
@@ -1254,7 +1254,7 @@ Ensure that W3 Total Cache is selected in the plugins list in the Compatibility 
 Note: The native support for the free version of WPtouch found in WP Super Cache (under the “Plugins” tab) must be disabled to prevent conflicts in WPtouch.
 
 1. In the Advanced tab of the WP Super Cache settings select “Mobile Device Support”* and click “Update Status”.
-2. Still in the Advanced tab, scroll down to the “Rejected User Agents” area. Paste the entire list of mobile user agents found in our list of “User agent list for configuring cache plugins” into the field and click “Save UA Strings”.
+2. Still in the Advanced tab, scroll down to the “Rejected User Agents” area. Paste the entire list of mobile user agents found below into the field and click “Save UA Strings”.
 3. If you have added support for additional mobile devices in WPtouch’s Compatibility > Custom User Agents field, you must also include those user agents in the “Rejected User Agents” area in WP Super Cache.
 4. In the “Contents” tab, click “Delete Cache” and “Delete Expired” to delete pages that were likely cached before adding the new list of rejected user agents.
 5. Ensure that WP Super Cache is selected in the plugins list in the Compatibility section of the WPtouch admin panel.
@@ -1268,6 +1268,28 @@ Please see the user manual for additional information.
 = WP Engine =
 
 Please contact WPEngine and ask them to exclude the user agents found in the “User agent list for configuring cache plugins“.
+
+= User Agent List =
+
+Use the following to configure your cache plugin to work with WPtouch:
+
+iPhone & Mobile
+iPod & Mobile
+Android & Mobile
+BB & Mobile Safari
+BlackBerry & Mobile Safari
+webOS
+IEMobile/7.0
+IEMobile/9.0
+IEMobile/10.0
+MSIE 10.0 & Touch
+iPad
+PlayBook
+Xoom
+P160U
+SCH-I800
+Nexus 7
+
 
 == Upgrade Notice ==
 
