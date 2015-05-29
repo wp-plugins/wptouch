@@ -1273,23 +1273,23 @@ Please contact WPEngine and ask them to exclude the user agents found in the “
 
 Use the following to configure your cache plugin to work with WPtouch:
 
-iPhone & Mobile
-iPod & Mobile
-Android & Mobile
-BB & Mobile Safari
-BlackBerry & Mobile Safari
+iPhone
+iPod
+Android
+BB10
+BlackBerry
 webOS
 IEMobile/7.0
 IEMobile/9.0
 IEMobile/10.0
-MSIE 10.0 & Touch
+MSIE 10.0
 iPad
 PlayBook
-Xoom
+Xoom 
 P160U
 SCH-I800
 Nexus 7
-
+Touch
 
 == Upgrade Notice ==
 
