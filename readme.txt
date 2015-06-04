@@ -8,7 +8,7 @@ License: GPLv2
 
 == Description ==
 
-WPtouch is a mobile plugin for WordPress that automatically adds a simple and elegant mobile theme for mobile visitors to your WordPress website. Recommended by Google, it will instantly enable a mobile-friendly version of your website that passes the Google Mobile test, and ensure your SEO rankings do not drop due to not having a mobile-friendly website.
+WPtouch is a mobile plugin for WordPress that automatically adds a simple and elegant mobile theme for mobile visitors to your WordPress website. Recommended by Google, it will instantly enable a mobile-friendly version of your website that passes the Google Mobile test, and ensure your SEO rankings do not drop due to not having a mobile-friendly website. For more information about using WPtouch to achieve Google mobile-friendly status, please read our [comprehensive mobile-friendly guide](http://wptouch.s3.amazonaws.com/WPtouch%20-%20Make%20Your%20Website%20Mobile-Friendly.pdf).
 
 The administration panel allows you to customize many aspects of its appearance, and deliver a *fast*, user-friendly and stylish version of your site to your mobile visitors, without modifying *a single bit of code*.  Your regular desktop theme is left intact, and will continue to show for your non-mobile visitors.
 
